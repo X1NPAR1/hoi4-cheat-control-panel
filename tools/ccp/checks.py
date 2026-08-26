@@ -301,6 +301,24 @@ def check_no_vanilla_overrides(mod_dir: Path, game_dir: Path | None, report: Rep
             report.error(f"mod/{relative.as_posix()} overrides a vanilla file")
 
 
+LOC_LINE = re.compile(r'^ [A-Za-z0-9_.@\-]+:\d* ".*"$')
+
+
+def check_localisation_lines(mod_dir: Path, report: Report) -> None:
+    """Every entry must be one well-formed line.
+
+    Hearts of Iron IV stops reading a localisation file at the first line it cannot
+    parse, so one stray newline inside a value silently drops every key after it.
+    """
+    for path in sorted((mod_dir / "localisation").rglob("*.yml")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for number, line in enumerate(text.splitlines(), start=1):
+            if number == 1 or not line.strip() or line.lstrip().startswith("#"):
+                continue
+            if not LOC_LINE.match(line):
+                report.error(f"{path}:{number}: malformed localisation line `{line[:70]}`")
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -311,6 +329,7 @@ ALL_CHECKS = [
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),
+    ("localisation lines", lambda repo, mod, rep: check_localisation_lines(mod, rep)),
     ("localisation parity", lambda repo, mod, rep: check_localisation_parity(mod, rep)),
     ("localisation coverage", lambda repo, mod, rep: check_referenced_localisation_keys(mod, rep)),
     ("workshop payload", lambda repo, mod, rep: check_payload_is_clean(repo, rep)),

@@ -18,7 +18,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccp import theme
-from ccp.plates import build as build_plates, frames as frame_strip, plate
+from ccp.plates import STRETCHABLE, build as build_plates, frames as frame_strip, plate
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE = REPO_ROOT / "logo.png"
@@ -40,16 +40,30 @@ def sprite_name(filename: str) -> str:
     return f"GFX_{Path(filename).stem}"
 
 
-def emit_gfx(entries: list[tuple[str, int]]) -> str:
+def emit_gfx(entries: list[tuple[str, int]], sizes: dict[str, tuple[int, int]]) -> str:
+    """Plates that carry a border are nine-sliced so they stretch to any size."""
     lines = [BANNER.rstrip(), "", "spriteTypes = {"]
     for filename, frames in entries:
-        lines += [
-            "\tspriteType = {",
-            f'\t\tname = "{sprite_name(filename)}"',
-            f'\t\ttexturefile = "gfx/interface/ccp/{filename}"',
-            f"\t\tnoOfFrames = {frames}",
-            "\t}",
-        ]
+        width, height = sizes[filename]
+        if filename in STRETCHABLE:
+            lines += [
+                "\tcorneredTileSpriteType = {",
+                f'\t\tname = "{sprite_name(filename)}"',
+                f"\t\tsize = {{ x = {width} y = {height} }}",
+                f'\t\ttextureFile = "gfx/interface/ccp/{filename}"',
+                "\t\tborderSize = { x = 6 y = 6 }",
+                "\t\ttilingCenter = yes",
+                '\t\teffectFile = "gfx/FX/buttonstate.lua"',
+                "\t}",
+            ]
+        else:
+            lines += [
+                "\tspriteType = {",
+                f'\t\tname = "{sprite_name(filename)}"',
+                f'\t\ttexturefile = "gfx/interface/ccp/{filename}"',
+                f"\t\tnoOfFrames = {frames}",
+                "\t}",
+            ]
     lines += ["}", ""]
     return "\n".join(lines)
 
@@ -103,7 +117,10 @@ def main() -> int:
         image.save(GFX_DIR / filename, "PNG", optimize=True)
         entries.append((filename, frames))
 
-    GFX_FILE.write_text(emit_gfx(entries), encoding="utf-8", newline="\n")
+    sizes = {
+        filename: Image.open(GFX_DIR / filename).size for filename, _ in entries
+    }
+    GFX_FILE.write_text(emit_gfx(entries, sizes), encoding="utf-8", newline="\n")
 
     print(f"  {thumbnail_path.relative_to(REPO_ROOT).as_posix():<48} {THUMBNAIL_SIZE}x{THUMBNAIL_SIZE}")
     for filename, frames in entries:

@@ -54,6 +54,11 @@ def frames(*images: Image.Image) -> Image.Image:
     return strip
 
 
+def rounded(size: tuple[int, int], fill: RGB, border: RGB, shade: RGB | None = None) -> Image.Image:
+    """A single-state plate meant to be stretched by a nine-slice sprite."""
+    return plate(size, fill, border=border, shade=shade)
+
+
 def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
     """Every plate the interface needs, as `(filename, image, frame count)`."""
     t = theme
@@ -63,6 +68,7 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
         t.BG_PANEL,
         shade=t.BG_BASE,
     )
+    panel_body.putalpha(t.BODY_ALPHA)
     header = plate(
         (t.PANEL_WIDTH, t.HEADER_HEIGHT),
         t.BG_RAISED,
@@ -76,48 +82,17 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
     )
     footer = plate((t.PANEL_WIDTH, t.FOOTER_HEIGHT), t.BG_BASE, border=t.BORDER_STEEL)
 
-    sidebar_size = (t.SIDEBAR_ITEM_WIDTH, t.SIDEBAR_ITEM_HEIGHT)
-    sidebar_item = frames(
-        plate(sidebar_size, t.BG_BASE, border=None),
-        plate(sidebar_size, t.BG_RAISED, border=None, accent_edge=t.ACCENT_BRONZE_DIM),
-        plate(sidebar_size, t.BG_PANEL, border=None, accent_edge=t.ACCENT_BRONZE),
-    )
 
-    button_size = (t.BUTTON_WIDTH, t.BUTTON_HEIGHT)
-    button = frames(
-        plate(button_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.BORDER_STEEL),
-        plate(button_size, t.ACCENT_BRONZE_DIM, shade=t.BG_RAISED, border=t.ACCENT_BRONZE),
-        plate(button_size, t.BG_PANEL, shade=t.BG_BASE, border=t.ACCENT_BRONZE),
-        plate(button_size, t.BG_BASE, border=t.BORDER_STEEL),
-    )
-    button_danger = frames(
-        plate(button_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.DANGER),
-        plate(button_size, t.DANGER, shade=t.BG_RAISED, border=t.DANGER),
-        plate(button_size, t.BG_PANEL, shade=t.BG_BASE, border=t.DANGER),
-        plate(button_size, t.BG_BASE, border=t.BORDER_STEEL),
-    )
-    button_confirm = frames(
-        plate(button_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.ACCENT_OLIVE),
-        plate(button_size, t.ACCENT_OLIVE, shade=t.BG_RAISED, border=t.ACCENT_OLIVE),
-        plate(button_size, t.BG_PANEL, shade=t.BG_BASE, border=t.ACCENT_OLIVE),
-        plate(button_size, t.BG_BASE, border=t.BORDER_STEEL),
-    )
+    tile = (24, t.BUTTON_HEIGHT)
+    button = rounded(tile, t.BG_RAISED, t.BORDER_STEEL, shade=t.BG_PANEL)
+    button_danger = rounded(tile, t.BG_RAISED, t.DANGER, shade=t.BG_PANEL)
+    button_confirm = rounded(tile, t.BG_RAISED, t.ACCENT_OLIVE, shade=t.BG_PANEL)
 
-    small_size = (t.SMALL_BUTTON_WIDTH, t.SMALL_BUTTON_HEIGHT)
-    button_small = frames(
-        plate(small_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.BORDER_STEEL),
-        plate(small_size, t.ACCENT_BRONZE_DIM, shade=t.BG_RAISED, border=t.ACCENT_BRONZE),
-        plate(small_size, t.BG_PANEL, shade=t.BG_BASE, border=t.ACCENT_BRONZE),
-        plate(small_size, t.BG_BASE, border=t.BORDER_STEEL),
-    )
+    small_tile = (20, t.SMALL_BUTTON_HEIGHT)
+    button_small = rounded(small_tile, t.BG_RAISED, t.BORDER_STEEL, shade=t.BG_PANEL)
+    button_small_danger = rounded(small_tile, t.BG_RAISED, t.DANGER, shade=t.BG_PANEL)
 
-    key_size = (t.KEY_WIDTH, t.KEY_HEIGHT)
-    key = frames(
-        plate(key_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.BORDER_STEEL),
-        plate(key_size, t.ACCENT_BRONZE_DIM, shade=t.BG_RAISED, border=t.ACCENT_BRONZE),
-        plate(key_size, t.BG_PANEL, shade=t.BG_BASE, border=t.ACCENT_BRONZE),
-        plate(key_size, t.BG_BASE, border=t.BORDER_STEEL),
-    )
+    key = rounded((20, t.KEY_HEIGHT), t.BG_RAISED, t.BORDER_STEEL, shade=t.BG_PANEL)
 
     readout = plate(
         (t.READOUT_WIDTH, t.READOUT_HEIGHT),
@@ -131,48 +106,57 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
         border=t.BORDER_STEEL,
     )
 
-    chip_size = (t.CHIP_WIDTH, t.CHIP_HEIGHT)
-    chip = frames(
-        plate(chip_size, t.BG_BASE, border=t.BORDER_STEEL),
-        plate(chip_size, t.BG_RAISED, border=t.ACCENT_BRONZE),
-        plate(chip_size, t.ACCENT_BRONZE_DIM, border=t.ACCENT_BRONZE),
-        plate(chip_size, t.BG_BASE, border=t.BORDER_STEEL),
+    list_row = rounded((20, t.LIST_ROW_HEIGHT), t.BG_PANEL, t.BORDER_STEEL)
+    sidebar_tile = rounded((20, t.SIDEBAR_ITEM_HEIGHT), t.BG_BASE, t.BG_BASE)
+    sidebar_active = plate(
+        (20, t.SIDEBAR_ITEM_HEIGHT),
+        t.BG_PANEL,
+        border=t.ACCENT_BRONZE_DIM,
+        accent_edge=t.ACCENT_BRONZE,
     )
 
-    row_size = (t.LIST_ROW_WIDTH, t.LIST_ROW_HEIGHT)
-    list_row = frames(
-        plate(row_size, t.BG_PANEL, border=None),
-        plate(row_size, t.BG_RAISED, border=None, accent_edge=t.ACCENT_BRONZE_DIM, accent_edge_width=2),
-        plate(row_size, t.BG_RAISED, border=None, accent_edge=t.ACCENT_BRONZE, accent_edge_width=2),
-    )
-
-    modal_scrim = Image.new("RGBA", (t.PANEL_WIDTH, t.PANEL_HEIGHT), (*t.BG_BASE, 210))
+    modal_scrim = Image.new("RGBA", (t.PANEL_WIDTH, t.PANEL_HEIGHT), (*t.BG_BASE, t.SCRIM_ALPHA))
     modal = plate(
         (t.MODAL_WIDTH, t.MODAL_HEIGHT), t.BG_PANEL, shade=t.BG_RAISED, border=t.ACCENT_BRONZE
     )
 
     divider = plate((t.CONTENT_WIDTH - 48, 1), t.BORDER_STEEL, border=None)
     blank = Image.new("RGBA", (1, 1), (0, 0, 0, 0))
-    card = plate((320, 96), t.BG_PANEL, shade=t.BG_RAISED, border=t.BORDER_STEEL)
+    card = rounded((20, 20), t.BG_PANEL, t.BORDER_STEEL, shade=t.BG_RAISED)
 
     return [
         ("ccp_panel_body.png", panel_body, 1),
         ("ccp_panel_header.png", header, 1),
         ("ccp_panel_sidebar.png", sidebar, 1),
         ("ccp_panel_footer.png", footer, 1),
-        ("ccp_sidebar_item.png", sidebar_item, 3),
-        ("ccp_button.png", button, 4),
-        ("ccp_button_danger.png", button_danger, 4),
-        ("ccp_button_confirm.png", button_confirm, 4),
-        ("ccp_button_small.png", button_small, 4),
-        ("ccp_key.png", key, 4),
-        ("ccp_readout.png", readout, 1),
-        ("ccp_row.png", row_plate, 1),
-        ("ccp_chip.png", chip, 4),
-        ("ccp_list_row.png", list_row, 3),
         ("ccp_modal_scrim.png", modal_scrim, 1),
         ("ccp_modal.png", modal, 1),
+        ("ccp_readout.png", readout, 1),
+        ("ccp_row.png", row_plate, 1),
         ("ccp_divider.png", divider, 1),
         ("ccp_blank.png", blank, 1),
+        ("ccp_sidebar_item.png", sidebar_tile, 1),
+        ("ccp_sidebar_active.png", sidebar_active, 1),
+        ("ccp_button.png", button, 1),
+        ("ccp_button_danger.png", button_danger, 1),
+        ("ccp_button_confirm.png", button_confirm, 1),
+        ("ccp_button_small.png", button_small, 1),
+        ("ccp_button_small_danger.png", button_small_danger, 1),
+        ("ccp_key.png", key, 1),
+        ("ccp_list_row.png", list_row, 1),
         ("ccp_card.png", card, 1),
     ]
+
+
+STRETCHABLE = {
+    "ccp_sidebar_item.png",
+    "ccp_sidebar_active.png",
+    "ccp_button.png",
+    "ccp_button_danger.png",
+    "ccp_button_confirm.png",
+    "ccp_button_small.png",
+    "ccp_button_small_danger.png",
+    "ccp_key.png",
+    "ccp_list_row.png",
+    "ccp_card.png",
+}

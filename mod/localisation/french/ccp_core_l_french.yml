@@ -151,9 +151,7 @@
  CCP_HOTKEY_5_TOOLTIP:0 "Utiliser F8 (shared with the map mode) pour ouvrir et fermer le panneau."
  CCP_IRONMAN_OFF:0 "Partie hors Ironman. Sauvegardez avant les grandes modifications si vous voulez pouvoir revenir."
  CCP_IRONMAN_ON:0 "Cette partie est en Ironman. Les succès sont déjà désactivés par tout mod, et rien de ce que fait ce panneau n'est réversible."
- CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
-
-Ceci est irréversible. Le moteur ne permet aucune restauration."
+ CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]\n\nCeci est irréversible. Le moteur ne permet aucune restauration."
  CCP_MODAL_TITLE:0 "CONFIRMER ?"
  CCP_NATION_HELP:0 "Modifications de votre pays en un clic."
  CCP_PAD_BACK:0 "EFF"

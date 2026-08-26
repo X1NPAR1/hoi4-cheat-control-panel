@@ -151,9 +151,7 @@
  CCP_HOTKEY_5_TOOLTIP:0 "Use F8 (shared with the map mode) to open and close the panel."
  CCP_IRONMAN_OFF:0 "Not an Ironman game. Save before large changes if you want a way back."
  CCP_IRONMAN_ON:0 "This is an Ironman game. Achievements are already disabled by running any mod, and there is no way to undo what this panel does."
- CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
-
-This cannot be undone. The engine offers no way to restore the previous state."
+ CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]\n\nThis cannot be undone. The engine offers no way to restore the previous state."
  CCP_MODAL_TITLE:0 "ARE YOU SURE?"
  CCP_NATION_HELP:0 "One-click changes to your country as a whole."
  CCP_PAD_BACK:0 "DEL"

@@ -53,11 +53,15 @@ class Icon(Widget):
     sprite: str = ""
     frame: int | None = None
     orientation: str | None = None
+    width: int | None = None
+    height: int | None = None
 
     kind = "iconType"
 
     def properties(self) -> list[str]:
         out = [f'spriteType = "{self.sprite}"']
+        if self.width is not None and self.height is not None:
+            out.append(f"size = {{ x = {self.width} y = {self.height} }}")
         if self.frame is not None:
             out.append(f"frame = {self.frame}")
         if self.orientation:
@@ -101,11 +105,15 @@ class Button(Widget):
     shortcut: str | None = None
     click_sound: str | None = "click_default"
     orientation: str | None = None
+    width: int | None = None
+    height: int | None = None
 
     kind = "buttonType"
 
     def properties(self) -> list[str]:
         out = [f'quadTextureSprite = "{self.sprite}"']
+        if self.width is not None and self.height is not None:
+            out.append(f"size = {{ x = {self.width} y = {self.height} }}")
         if self.key:
             out += [f'buttonText = "{loc(self.key)}"', f'buttonFont = "{self.font}"']
         if self.tooltip:

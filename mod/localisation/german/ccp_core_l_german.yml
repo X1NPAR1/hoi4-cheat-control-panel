@@ -151,9 +151,7 @@
  CCP_HOTKEY_5_TOOLTIP:0 "Mit F8 (shared with the map mode) das Panel öffnen und schließen."
  CCP_IRONMAN_OFF:0 "Keine Ironman-Partie. Vor grossen Änderungen speichern, falls Sie zurückwollen."
  CCP_IRONMAN_ON:0 "Dies ist eine Ironman-Partie. Erfolge sind durch jeden Mod bereits deaktiviert, und nichts, was dieses Panel tut, lässt sich rückgängig machen."
- CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
-
-Dies lässt sich nicht rückgängig machen. Die Engine bietet keine Wiederherstellung."
+ CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]\n\nDies lässt sich nicht rückgängig machen. Die Engine bietet keine Wiederherstellung."
  CCP_MODAL_TITLE:0 "SIND SIE SICHER?"
  CCP_NATION_HELP:0 "Änderungen an Ihrem Land mit einem Klick."
  CCP_PAD_BACK:0 "LÖSCH"

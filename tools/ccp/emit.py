@@ -296,5 +296,6 @@ def emit_category_localisation(
     for name in group_by_category(catalogue):
         fallback = (name.replace("_", " ").title(),) * 2
         label = CATEGORY_LABELS.get(name, fallback)[index]
-        lines.append(f' CCP_EQCAT_{name.upper()}:0 "{label}"')
+        flattened = label.replace(chr(10), chr(92) + "n")
+        lines.append(f' CCP_EQCAT_{name.upper()}:0 "{flattened}"')
     return "\n".join(lines) + "\n"

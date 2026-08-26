@@ -1458,7 +1458,21 @@ def all_strings() -> dict[str, Row]:
     return strings
 
 
+def _one_line(key: str, value: str) -> str:
+    """A localisation entry must occupy exactly one line.
+
+    Hearts of Iron IV stops reading a file at the first line it cannot parse, so a
+    real newline inside a value silently drops every key after it. Line breaks are
+    written as the two-character escape the engine reads, and a stray quotation
+    mark is rejected here rather than shipped broken.
+    """
+    if '"' in value:
+        raise ValueError(f"{key}: localisation values cannot contain a quotation mark")
+    flattened = value.replace("\r\n", "\n").replace("\r", "\n").replace("\n", chr(92) + "n")
+    return f' {key}:0 "{flattened}"'
+
+
 def emit_localisation(language: str) -> str:
     lines = [f"l_{language}:"]
-    lines += [f' {key}:0 "{row[language]}"' for key, row in sorted(all_strings().items())]
+    lines += [_one_line(key, row[language]) for key, row in sorted(all_strings().items())]
     return "\n".join(lines) + "\n"

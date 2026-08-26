@@ -151,9 +151,7 @@
  CCP_HOTKEY_5_TOOLTIP:0 "Paneli açıp kapatmak için F8 (shared with the map mode) tuşunu kullanın."
  CCP_IRONMAN_OFF:0 "Ironman oyunu değil. Geri dönmek isterseniz büyük değişikliklerden önce kaydedin."
  CCP_IRONMAN_ON:0 "Bu bir Ironman oyunu. Herhangi bir mod çalıştırmak başarımları zaten kapatır ve bu panelin yaptıklarının geri dönüşü yoktur."
- CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
-
-Bu geri alınamaz. Engine önceki duruma dönmek için bir yol sunmuyor."
+ CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]\n\nBu geri alınamaz. Engine önceki duruma dönmek için bir yol sunmuyor."
  CCP_MODAL_TITLE:0 "EMİN MİSİNİZ?"
  CCP_NATION_HELP:0 "Ülkenizin geneline tek tıkla yapılan değişiklikler."
  CCP_PAD_BACK:0 "SİL"

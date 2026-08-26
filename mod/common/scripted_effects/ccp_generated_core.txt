@@ -11,7 +11,7 @@ CCP_ensure_settings = {
 		set_variable = { ccp_hotkey_id = 1 }
 		set_variable = { ccp_confirm_destructive = 1 }
 		set_variable = { ccp_section = 1 }
-		set_variable = { ccp_nav_highlight_y = 92 }
+		set_variable = { ccp_nav_highlight_y = 98 }
 		set_variable = { ccp_status = 0 }
 		set_variable = { ccp_amount = 1000 }
 		set_variable = { ccp_equipment_category = 1 }
@@ -62,21 +62,21 @@ CCP_toggle_panel = {
 
 CCP_show_dashboard = {
 	set_variable = { ccp_section = 1 }
-	set_variable = { ccp_nav_highlight_y = 92 }
+	set_variable = { ccp_nav_highlight_y = 98 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_resources = {
 	set_variable = { ccp_section = 2 }
-	set_variable = { ccp_nav_highlight_y = 126 }
+	set_variable = { ccp_nav_highlight_y = 134 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_equipment = {
 	set_variable = { ccp_section = 3 }
-	set_variable = { ccp_nav_highlight_y = 160 }
+	set_variable = { ccp_nav_highlight_y = 170 }
 	set_variable = { ccp_status = 0 }
 	CCP_equipment_load_page = yes
 	CCP_mark_dirty = yes
@@ -84,7 +84,7 @@ CCP_show_equipment = {
 
 CCP_show_research = {
 	set_variable = { ccp_section = 4 }
-	set_variable = { ccp_nav_highlight_y = 194 }
+	set_variable = { ccp_nav_highlight_y = 206 }
 	set_variable = { ccp_status = 0 }
 	CCP_research_load_page = yes
 	CCP_mark_dirty = yes
@@ -92,7 +92,7 @@ CCP_show_research = {
 
 CCP_show_country = {
 	set_variable = { ccp_section = 5 }
-	set_variable = { ccp_nav_highlight_y = 228 }
+	set_variable = { ccp_nav_highlight_y = 242 }
 	set_variable = { ccp_status = 0 }
 	CCP_country_rebuild = yes
 	CCP_mark_dirty = yes
@@ -100,7 +100,7 @@ CCP_show_country = {
 
 CCP_show_states = {
 	set_variable = { ccp_section = 6 }
-	set_variable = { ccp_nav_highlight_y = 262 }
+	set_variable = { ccp_nav_highlight_y = 278 }
 	set_variable = { ccp_status = 0 }
 	CCP_state_rebuild = yes
 	CCP_mark_dirty = yes
@@ -108,35 +108,35 @@ CCP_show_states = {
 
 CCP_show_nation = {
 	set_variable = { ccp_section = 7 }
-	set_variable = { ccp_nav_highlight_y = 296 }
+	set_variable = { ccp_nav_highlight_y = 314 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_construction = {
 	set_variable = { ccp_section = 8 }
-	set_variable = { ccp_nav_highlight_y = 330 }
+	set_variable = { ccp_nav_highlight_y = 350 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_commanders = {
 	set_variable = { ccp_section = 9 }
-	set_variable = { ccp_nav_highlight_y = 364 }
+	set_variable = { ccp_nav_highlight_y = 386 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_history = {
 	set_variable = { ccp_section = 10 }
-	set_variable = { ccp_nav_highlight_y = 398 }
+	set_variable = { ccp_nav_highlight_y = 422 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_settings = {
 	set_variable = { ccp_section = 11 }
-	set_variable = { ccp_nav_highlight_y = 432 }
+	set_variable = { ccp_nav_highlight_y = 458 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }

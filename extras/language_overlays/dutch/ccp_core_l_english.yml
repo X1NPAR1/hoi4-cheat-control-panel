@@ -151,9 +151,7 @@
  CCP_HOTKEY_5_TOOLTIP:0 "Gebruik F8 (shared with the map mode) om het paneel te openen en te sluiten."
  CCP_IRONMAN_OFF:0 "Geen Ironman-spel. Sla op vóór grote wijzigingen als je terug wilt kunnen."
  CCP_IRONMAN_ON:0 "Dit is een Ironman-spel. Prestaties zijn al uitgeschakeld door elke mod, en wat dit paneel doet is onomkeerbaar."
- CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
-
-Dit kan niet ongedaan worden gemaakt. De engine biedt geen herstel."
+ CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]\n\nDit kan niet ongedaan worden gemaakt. De engine biedt geen herstel."
  CCP_MODAL_TITLE:0 "WEET JE HET ZEKER?"
  CCP_NATION_HELP:0 "Wijzigingen aan je land met één klik."
  CCP_PAD_BACK:0 "WIS"

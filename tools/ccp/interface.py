@@ -4,6 +4,94 @@ from __future__ import annotations
 
 from . import theme as t
 from .layout import Button, Container, Grid, Icon, Text, Widget
+
+_LABELS: dict[str, dict[str, str]] | None = None
+
+SMALL_SPRITES = {"GFX_ccp_button_small", "GFX_ccp_button_small_danger"}
+
+
+def _labels() -> dict[str, dict[str, str]]:
+    global _LABELS
+    if _LABELS is None:
+        from .strings import all_strings
+
+        _LABELS = all_strings()
+    return _LABELS
+
+
+def label_width(key: str | None, font: str, padding: int, minimum: int) -> int:
+    """Wide enough for the longest translation of this label, in any language.
+
+    Buttons are sized here rather than left to a fixed sprite width, so a German
+    or Russian label cannot spill past its own button or collide with the next one.
+    """
+    if key is None:
+        return minimum
+    row = _labels().get(key)
+    if row is None:
+        return minimum
+    longest = max(t.text_width(value, font) for value in row.values())
+    return max(minimum, longest + padding)
+
+
+def button_width(key: str | None, sprite: str = "GFX_ccp_button") -> int:
+    if sprite in SMALL_SPRITES:
+        return label_width(key, "hoi_16mbs", t.SMALL_BUTTON_PADDING, t.SMALL_BUTTON_MIN_WIDTH)
+    return label_width(key, "hoi_16mbs", t.BUTTON_PADDING, t.BUTTON_MIN_WIDTH)
+
+
+def button_height(sprite: str = "GFX_ccp_button") -> int:
+    return t.SMALL_BUTTON_HEIGHT if sprite in SMALL_SPRITES else t.BUTTON_HEIGHT
+
+
+def action_button(name: str, x: int, y: int, key: str, sprite: str, tooltip: str) -> Button:
+    return Button(
+        name,
+        x,
+        y,
+        sprite=sprite,
+        key=key,
+        tooltip=tooltip,
+        width=button_width(key, sprite),
+        height=button_height(sprite),
+    )
+
+
+def right_aligned_row(
+    prefix: str,
+    entries: list[tuple[str, str, str, bool]],
+    right_edge: int,
+    y: int,
+    gap: int = 6,
+) -> tuple[list[Button], int]:
+    """Lay buttons out from the right edge using their real widths.
+
+    Returns the buttons and the width they occupy, so the label beside them can be
+    given exactly the space that is left instead of a guess.
+    """
+    sized = [
+        (slug, key, sprite, tooltip, button_width(key, sprite))
+        for slug, key, sprite, tooltip in entries
+    ]
+    total = sum(width for *_, width in sized) + gap * (len(sized) - 1 if sized else 0)
+    x = right_edge - total
+    buttons: list[Button] = []
+    for slug, key, sprite, tooltip, width in sized:
+        buttons.append(
+            Button(
+                f"{prefix}_{slug}",
+                x,
+                y,
+                sprite=sprite,
+                key=key,
+                tooltip=tooltip,
+                width=width,
+                height=button_height(sprite),
+            )
+        )
+        x += width + gap
+    return buttons, total
+
 from .actions import BY_SECTION as ACTION_SECTIONS
 from .countries import ACTIONS
 from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
@@ -38,12 +126,14 @@ def _header() -> list[Widget]:
         Text("ccp_header_subtitle", 64, 32, key="CCP_SUBTITLE", width=640, height=18),
         Button(
             "ccp_close",
-            -12 - t.BUTTON_WIDTH,
-            13,
+            -16 - button_width("CCP_BUTTON_CLOSE"),
+            16,
             key="CCP_BUTTON_CLOSE",
             tooltip="CCP_TOOLTIP_CLOSE",
             click_sound="click_close",
             orientation="upper_right",
+            width=button_width("CCP_BUTTON_CLOSE"),
+            height=t.BUTTON_HEIGHT,
         ),
     ]
 
@@ -59,7 +149,14 @@ def _sidebar() -> list[Widget]:
             width=t.SIDEBAR_WIDTH - 32,
             height=18,
         ),
-        Icon("ccp_nav_highlight", 0, NAV_TOP, sprite="GFX_ccp_sidebar_item", frame=3),
+        Icon(
+            "ccp_nav_highlight",
+            0,
+            NAV_TOP,
+            sprite="GFX_ccp_sidebar_active",
+            width=t.SIDEBAR_WIDTH,
+            height=t.SIDEBAR_ITEM_HEIGHT,
+        ),
     ]
     for index, section in enumerate(SECTIONS):
         widgets.append(
@@ -70,6 +167,8 @@ def _sidebar() -> list[Widget]:
                 sprite="GFX_ccp_sidebar_item",
                 key=section.key,
                 tooltip=f"{section.key}_TOOLTIP",
+                width=t.SIDEBAR_WIDTH,
+                height=t.SIDEBAR_ITEM_HEIGHT,
             )
         )
     return widgets
@@ -123,7 +222,14 @@ def _stat_card(name: str, column: int, row: int, label: str, value: str, tooltip
         height=CARD_HEIGHT,
     )
     return card.add(
-        Icon(f"ccp_card_{name}_plate", 0, 0, sprite="GFX_ccp_card"),
+        Icon(
+            f"ccp_card_{name}_plate",
+            0,
+            0,
+            sprite="GFX_ccp_card",
+            width=CARD_WIDTH,
+            height=CARD_HEIGHT,
+        ),
         Text(
             f"ccp_card_{name}_label",
             16,
@@ -189,16 +295,22 @@ def _settings() -> Container:
             height=18,
         ),
     )
+    x = CONTENT_X
     for index, (_, _, _label) in enumerate(HOTKEYS):
+        key = f"CCP_HOTKEY_{index + 1}"
+        width = button_width(key)
         section.add(
             Button(
                 f"ccp_hotkey_choice_{index + 1}",
-                CONTENT_X + index * (t.BUTTON_WIDTH + 8),
+                x,
                 BODY_TOP + 54,
-                key=f"CCP_HOTKEY_{index + 1}",
-                tooltip=f"CCP_HOTKEY_{index + 1}_TOOLTIP",
+                key=key,
+                tooltip=f"{key}_TOOLTIP",
+                width=width,
+                height=t.BUTTON_HEIGHT,
             )
         )
+        x += width + 8
     section.add(
         Text(
             "ccp_settings_hotkey_current",
@@ -231,6 +343,8 @@ def _settings() -> Container:
             BODY_TOP + 194,
             key="CCP_GetConfirmState",
             tooltip="CCP_SETTINGS_CONFIRM_TOOLTIP",
+            width=max(button_width("CCP_CONFIRM_ON"), button_width("CCP_CONFIRM_OFF")),
+            height=t.BUTTON_HEIGHT,
         ),
         Text(
             "ccp_settings_language_label",
@@ -279,6 +393,7 @@ def _settings() -> Container:
 
 
 PAD_X = t.PANEL_WIDTH - 24 - t.READOUT_WIDTH
+ROW_LABEL_WIDTH = 260
 ROW_WIDTH = PAD_X - CONTENT_X - 24
 
 DIGIT_ROWS = [("1", "2", "3"), ("4", "5", "6"), ("7", "8", "9")]
@@ -321,6 +436,8 @@ def _digit_pad() -> list[Widget]:
                     sprite="GFX_ccp_key",
                     key=f"CCP_PAD_DIGIT_{digit}",
                     tooltip="CCP_PAD_DIGIT_TOOLTIP",
+                    width=t.KEY_WIDTH,
+                    height=t.KEY_HEIGHT,
                 )
             )
 
@@ -333,6 +450,8 @@ def _digit_pad() -> list[Widget]:
             sprite="GFX_ccp_key",
             key="CCP_PAD_DIGIT_0",
             tooltip="CCP_PAD_DIGIT_TOOLTIP",
+            width=t.KEY_WIDTH,
+            height=t.KEY_HEIGHT,
         ),
         Button(
             "ccp_pad_back",
@@ -341,6 +460,8 @@ def _digit_pad() -> list[Widget]:
             sprite="GFX_ccp_key",
             key="CCP_PAD_BACK",
             tooltip="CCP_PAD_BACK_TOOLTIP",
+            width=t.KEY_WIDTH,
+            height=t.KEY_HEIGHT,
         ),
         Button(
             "ccp_pad_clear",
@@ -349,6 +470,8 @@ def _digit_pad() -> list[Widget]:
             sprite="GFX_ccp_key",
             key="CCP_PAD_CLEAR",
             tooltip="CCP_PAD_CLEAR_TOOLTIP",
+            width=t.KEY_WIDTH,
+            height=t.KEY_HEIGHT,
             click_sound="click_close",
         ),
         Text(
@@ -378,7 +501,7 @@ def _resource_row(index: int, resource) -> Container:
             12,
             8,
             key=resource.key,
-            width=240,
+            width=ROW_LABEL_WIDTH,
             height=18,
             font="hoi_18mbs",
             tooltip=f"{resource.key}_TOOLTIP",
@@ -388,35 +511,28 @@ def _resource_row(index: int, resource) -> Container:
             12,
             29,
             key=f"{resource.key}_VALUE",
-            width=240,
+            width=ROW_LABEL_WIDTH,
             height=18,
             tooltip=f"{resource.key}_TOOLTIP",
         ),
     )
 
-    step = t.SMALL_BUTTON_WIDTH + 8
-    first = ROW_WIDTH - 12 - 5 * step + 8
-    for slot, amount in enumerate(resource.presets):
-        row.add(
-            Button(
-                f"ccp_grant_{resource.slug}_{slot + 1}",
-                first + slot * step,
-                14,
-                sprite="GFX_ccp_button_small",
-                key=f"{resource.key}_P{slot + 1}",
-                tooltip=f"{resource.key}_P{slot + 1}_TOOLTIP",
-            )
+    entries = [
+        (
+            str(slot + 1),
+            f"{resource.key}_P{slot + 1}",
+            "GFX_ccp_button_small",
+            f"{resource.key}_P{slot + 1}_TOOLTIP",
         )
-    row.add(
-        Button(
-            f"ccp_grant_{resource.slug}_custom",
-            first + 4 * step,
-            14,
-            sprite="GFX_ccp_button_small",
-            key="CCP_BUTTON_CUSTOM",
-            tooltip=f"{resource.key}_CUSTOM_TOOLTIP",
-        )
+        for slot in range(len(resource.presets))
+    ]
+    entries.append(
+        ("custom", "CCP_BUTTON_CUSTOM", "GFX_ccp_button_small", f"{resource.key}_CUSTOM_TOOLTIP")
     )
+    buttons, used = right_aligned_row(
+        f"ccp_grant_{resource.slug}", entries, ROW_WIDTH - 12, 14
+    )
+    row.add(*buttons)
     return row
 
 
@@ -459,6 +575,8 @@ def _equipment(categories: list[str]) -> Container:
                 sprite="GFX_ccp_sidebar_item",
                 key=f"CCP_EQCAT_{name.upper()}",
                 tooltip="CCP_EQUIPMENT_CATEGORY_TOOLTIP",
+                width=CATEGORY_WIDTH,
+                height=CATEGORY_HEIGHT - 2,
             )
         )
 
@@ -484,29 +602,33 @@ def _equipment(categories: list[str]) -> Container:
             max_vertical=PAGE_SIZE,
         ),
         Button(
-            "ccp_equipment_prev",
+            f"ccp_equipment_prev",
             LIST_X,
             BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_PREV",
             tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
         Text(
             "ccp_equipment_page_label",
-            LIST_X + t.SMALL_BUTTON_WIDTH + 12,
+            LIST_X + button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") + 12,
             BODY_TOP + 37 + PAGE_SIZE * ENTRY_HEIGHT,
             key="CCP_EQUIPMENT_PAGE",
-            width=LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            width=LIST_WIDTH - button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small") - 24,
             height=18,
             align="centre",
         ),
         Button(
-            "ccp_equipment_next",
-            LIST_X + LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            f"ccp_equipment_next",
+            LIST_X + LIST_WIDTH - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
             BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_NEXT",
             tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
     )
     return section
@@ -515,33 +637,35 @@ def _equipment(categories: list[str]) -> Container:
 def equipment_entry_window() -> Container:
     """One row of the equipment list, instantiated per array element by the engine."""
     entry = Container("ccp_equipment_entry", 0, 0, width=LIST_WIDTH, height=ENTRY_HEIGHT)
-    return entry.add(
-        Icon("ccp_equipment_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+    buttons, used = right_aligned_row(
+        "ccp_equipment_entry",
+        [
+            ("latest", "CCP_EQUIPMENT_LATEST", "GFX_ccp_button_small", "CCP_EQUIPMENT_LATEST_TOOLTIP"),
+            ("add", "CCP_EQUIPMENT_ADD", "GFX_ccp_button_small", "CCP_EQUIPMENT_ADD_TOOLTIP"),
+        ],
+        LIST_WIDTH - 8,
+        2,
+    )
+    entry.add(
+        Icon(
+            "ccp_equipment_entry_plate",
+            0,
+            0,
+            sprite="GFX_ccp_list_row",
+            width=LIST_WIDTH,
+            height=ENTRY_HEIGHT - 2,
+        ),
         Text(
             "ccp_equipment_entry_name",
-            10,
+            12,
             7,
             key="CCP_GetEquipmentName",
-            width=LIST_WIDTH - 2 * t.SMALL_BUTTON_WIDTH - 40,
+            width=LIST_WIDTH - used - 28,
             height=18,
         ),
-        Button(
-            "ccp_equipment_entry_latest",
-            LIST_WIDTH - 2 * t.SMALL_BUTTON_WIDTH - 12,
-            2,
-            sprite="GFX_ccp_button_small",
-            key="CCP_EQUIPMENT_LATEST",
-            tooltip="CCP_EQUIPMENT_LATEST_TOOLTIP",
-        ),
-        Button(
-            "ccp_equipment_entry_add",
-            LIST_WIDTH - t.SMALL_BUTTON_WIDTH - 6,
-            2,
-            sprite="GFX_ccp_button_small",
-            key="CCP_EQUIPMENT_ADD",
-            tooltip="CCP_EQUIPMENT_ADD_TOOLTIP",
-        ),
     )
+    entry.add(*buttons)
+    return entry
 
 
 def _browser(
@@ -573,6 +697,8 @@ def _browser(
                 sprite="GFX_ccp_sidebar_item",
                 key=category_key(name),
                 tooltip="CCP_EQUIPMENT_CATEGORY_TOOLTIP",
+                width=CATEGORY_WIDTH,
+                height=CATEGORY_HEIGHT - 2,
             )
         )
 
@@ -607,16 +733,16 @@ def _browser(
         ),
         Text(
             f"ccp_{slug}_page_label",
-            LIST_X + t.SMALL_BUTTON_WIDTH + 12,
+            LIST_X + button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") + 12,
             BODY_TOP + 37 + PAGE_SIZE * ENTRY_HEIGHT,
             key=f"CCP_{slug.upper()}_PAGE",
-            width=LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            width=LIST_WIDTH - button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small") - 24,
             height=18,
             align="centre",
         ),
         Button(
             f"ccp_{slug}_next",
-            LIST_X + LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            LIST_X + LIST_WIDTH - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
             BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_NEXT",
@@ -641,13 +767,15 @@ def _research(folders: list[str]) -> Container:
                 BODY_TOP + 70 + PAGE_SIZE * ENTRY_HEIGHT,
                 key="CCP_RESEARCH_ALL",
                 tooltip="CCP_RESEARCH_ALL_TOOLTIP",
+                width=button_width("CCP_RESEARCH_ALL"),
+                height=t.BUTTON_HEIGHT,
             ),
             Text(
                 "ccp_research_all_help",
-                LIST_X + t.BUTTON_WIDTH + 12,
+                LIST_X + button_width("CCP_RESEARCH_ALL") + 12,
                 BODY_TOP + 76 + PAGE_SIZE * ENTRY_HEIGHT,
                 key="CCP_RESEARCH_ALL_HELP",
-                width=LIST_WIDTH - t.BUTTON_WIDTH - 12,
+                width=LIST_WIDTH - button_width("CCP_RESEARCH_ALL") - 12,
                 height=18,
             ),
         ],
@@ -656,25 +784,32 @@ def _research(folders: list[str]) -> Container:
 
 def research_entry_window() -> Container:
     entry = Container("ccp_research_entry", 0, 0, width=LIST_WIDTH, height=ENTRY_HEIGHT)
-    return entry.add(
-        Icon("ccp_research_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+    buttons, used = right_aligned_row(
+        "ccp_research_entry",
+        [("grant", "CCP_RESEARCH_GRANT", "GFX_ccp_button_small", "CCP_RESEARCH_GRANT_TOOLTIP")],
+        LIST_WIDTH - 8,
+        2,
+    )
+    entry.add(
+        Icon(
+            "ccp_research_entry_plate",
+            0,
+            0,
+            sprite="GFX_ccp_list_row",
+            width=LIST_WIDTH,
+            height=ENTRY_HEIGHT - 2,
+        ),
         Text(
             "ccp_research_entry_name",
-            10,
+            12,
             7,
             key="CCP_GetTechnologyName",
-            width=LIST_WIDTH - t.SMALL_BUTTON_WIDTH - 30,
+            width=LIST_WIDTH - used - 28,
             height=18,
         ),
-        Button(
-            "ccp_research_entry_grant",
-            LIST_WIDTH - t.SMALL_BUTTON_WIDTH - 6,
-            2,
-            sprite="GFX_ccp_button_small",
-            key="CCP_RESEARCH_GRANT",
-            tooltip="CCP_RESEARCH_GRANT_TOOLTIP",
-        ),
     )
+    entry.add(*buttons)
+    return entry
 
 
 COUNTRY_LIST_WIDTH = t.CONTENT_WIDTH - 48
@@ -704,29 +839,33 @@ def _country() -> Container:
             max_vertical=PAGE_SIZE,
         ),
         Button(
-            "ccp_country_prev",
+            f"ccp_country_prev",
             CONTENT_X,
             BODY_TOP + 34 + PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_PREV",
             tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
         Text(
             "ccp_country_page_label",
-            CONTENT_X + t.SMALL_BUTTON_WIDTH + 12,
+            CONTENT_X + button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") + 12,
             BODY_TOP + 39 + PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
             key="CCP_COUNTRY_PAGE",
-            width=COUNTRY_LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            width=COUNTRY_LIST_WIDTH - button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small") - 24,
             height=18,
             align="centre",
         ),
         Button(
-            "ccp_country_next",
-            CONTENT_X + COUNTRY_LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            f"ccp_country_next",
+            CONTENT_X + COUNTRY_LIST_WIDTH - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
             BODY_TOP + 34 + PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_NEXT",
             tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
     )
 
@@ -735,29 +874,39 @@ def country_entry_window() -> Container:
     entry = Container(
         "ccp_country_entry", 0, 0, width=COUNTRY_LIST_WIDTH, height=COUNTRY_ENTRY_HEIGHT
     )
+    buttons, used = right_aligned_row(
+        "ccp_country_entry",
+        [
+            (
+                action.slug,
+                action.key,
+                "GFX_ccp_button_small_danger" if action.destructive else "GFX_ccp_button_small",
+                f"{action.key}_TOOLTIP",
+            )
+            for action in ACTIONS
+        ],
+        COUNTRY_LIST_WIDTH - 8,
+        3,
+    )
     entry.add(
-        Icon("ccp_country_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+        Icon(
+            "ccp_country_entry_plate",
+            0,
+            0,
+            sprite="GFX_ccp_list_row",
+            width=COUNTRY_LIST_WIDTH,
+            height=COUNTRY_ENTRY_HEIGHT - 2,
+        ),
         Text(
             "ccp_country_entry_name",
-            10,
+            12,
             8,
             key="CCP_COUNTRY_ENTRY_NAME",
-            width=COUNTRY_LIST_WIDTH - len(ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) - 24,
+            width=COUNTRY_LIST_WIDTH - used - 28,
             height=18,
         ),
     )
-    first = COUNTRY_LIST_WIDTH - len(ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6)
-    for index, action in enumerate(ACTIONS):
-        entry.add(
-            Button(
-                f"ccp_country_entry_{action.slug}",
-                first + index * (t.SMALL_BUTTON_WIDTH + 6),
-                3,
-                sprite="GFX_ccp_button_danger" if action.destructive else "GFX_ccp_button_small",
-                key=action.key,
-                tooltip=f"{action.key}_TOOLTIP",
-            )
-        )
+    entry.add(*buttons)
     return entry
 
 
@@ -800,20 +949,27 @@ def modal_window() -> Container:
             key="CCP_BUTTON_CANCEL",
             tooltip="CCP_TOOLTIP_CANCEL",
             click_sound="click_close",
+            width=button_width("CCP_BUTTON_CANCEL"),
+            height=t.BUTTON_HEIGHT,
         ),
         Button(
             "ccp_modal_confirm",
-            modal_x + t.MODAL_WIDTH - 24 - t.BUTTON_WIDTH,
+            modal_x + t.MODAL_WIDTH - 24 - button_width("CCP_BUTTON_CONFIRM"),
             modal_y + t.MODAL_HEIGHT - 24 - t.BUTTON_HEIGHT,
             sprite="GFX_ccp_button_danger",
             key="CCP_BUTTON_CONFIRM",
             tooltip="CCP_TOOLTIP_CONFIRM",
             click_sound="click_ok",
+            width=button_width("CCP_BUTTON_CONFIRM"),
+            height=t.BUTTON_HEIGHT,
         ),
     )
 
 
 STATE_LIST_WIDTH = t.CONTENT_WIDTH - 48
+PICKER_TOGGLE_WIDTH = max(
+    button_width("CCP_STATE_PICKER_ON"), button_width("CCP_STATE_PICKER_OFF")
+)
 STATE_ENTRY_HEIGHT = 38
 
 
@@ -825,15 +981,17 @@ def _states() -> Container:
             CONTENT_X,
             BODY_TOP,
             key="CCP_STATE_HELP",
-            width=STATE_LIST_WIDTH - t.BUTTON_WIDTH - 16,
+            width=STATE_LIST_WIDTH - PICKER_TOGGLE_WIDTH - 16,
             height=36,
         ),
         Button(
             "ccp_state_picker_toggle",
-            CONTENT_X + STATE_LIST_WIDTH - t.BUTTON_WIDTH,
+            CONTENT_X + STATE_LIST_WIDTH - PICKER_TOGGLE_WIDTH,
             BODY_TOP,
             key="CCP_GetStatePickerState",
             tooltip="CCP_STATE_PICKER_TOOLTIP",
+            width=PICKER_TOGGLE_WIDTH,
+            height=t.BUTTON_HEIGHT,
         ),
         Grid(
             "ccp_state_list",
@@ -847,29 +1005,33 @@ def _states() -> Container:
             max_vertical=STATE_PAGE_SIZE,
         ),
         Button(
-            "ccp_state_prev",
+            f"ccp_state_prev",
             CONTENT_X,
             BODY_TOP + 52 + STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_PREV",
             tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
         Text(
             "ccp_state_page_label",
-            CONTENT_X + t.SMALL_BUTTON_WIDTH + 12,
+            CONTENT_X + button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") + 12,
             BODY_TOP + 57 + STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
             key="CCP_STATE_PAGE",
-            width=STATE_LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            width=STATE_LIST_WIDTH - button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small") - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small") - 24,
             height=18,
             align="centre",
         ),
         Button(
-            "ccp_state_next",
-            CONTENT_X + STATE_LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            f"ccp_state_next",
+            CONTENT_X + STATE_LIST_WIDTH - button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
             BODY_TOP + 52 + STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_NEXT",
             tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
     )
 
@@ -878,73 +1040,93 @@ def state_entry_window() -> Container:
     entry = Container(
         "ccp_state_entry", 0, 0, width=STATE_LIST_WIDTH, height=STATE_ENTRY_HEIGHT
     )
+    buttons, used = right_aligned_row(
+        "ccp_state_entry",
+        [
+            (
+                action.slug,
+                action.key,
+                "GFX_ccp_button_small_danger" if action.destructive else "GFX_ccp_button_small",
+                f"{action.key}_TOOLTIP",
+            )
+            for action in STATE_ACTIONS
+        ],
+        STATE_LIST_WIDTH - 8,
+        5,
+    )
+    label_width_available = STATE_LIST_WIDTH - used - 28
     entry.add(
-        Icon("ccp_state_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+        Icon(
+            "ccp_state_entry_plate",
+            0,
+            0,
+            sprite="GFX_ccp_list_row",
+            width=STATE_LIST_WIDTH,
+            height=STATE_ENTRY_HEIGHT - 2,
+        ),
         Text(
             "ccp_state_entry_name",
-            10,
-            3,
+            12,
+            4,
             key="CCP_STATE_ENTRY_NAME",
-            width=STATE_LIST_WIDTH - len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) - 24,
+            width=label_width_available,
             height=18,
         ),
         Text(
             "ccp_state_entry_owner",
-            10,
-            20,
+            12,
+            21,
             key="CCP_STATE_ENTRY_OWNER",
-            width=STATE_LIST_WIDTH - len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) - 24,
+            width=label_width_available,
             height=16,
         ),
     )
-    first = STATE_LIST_WIDTH - len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6)
-    for index, action in enumerate(STATE_ACTIONS):
-        entry.add(
-            Button(
-                f"ccp_state_entry_{action.slug}",
-                first + index * (t.SMALL_BUTTON_WIDTH + 6),
-                5,
-                sprite="GFX_ccp_button_danger" if action.destructive else "GFX_ccp_button_small",
-                key=action.key,
-                tooltip=f"{action.key}_TOOLTIP",
-            )
-        )
+    entry.add(*buttons)
     return entry
 
 
 def state_picker_window() -> Container:
     """Attached to the state view, so clicking a state on the map acts on it directly."""
-    width = len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) + 18
+    widths = [
+        button_width(action.key, "GFX_ccp_button_small") for action in STATE_ACTIONS
+    ]
+    width = sum(widths) + 6 * (len(widths) - 1) + 20
     window = Container(
         "ccp_state_picker_window",
         0,
         0,
         width=width,
-        height=64,
+        height=68,
         clipping=False,
     )
     window.add(
-        Icon("ccp_picker_plate", 0, 0, sprite="GFX_ccp_card"),
+        Icon("ccp_picker_plate", 0, 0, sprite="GFX_ccp_card", width=width, height=68),
         Text(
             "ccp_picker_title",
             10,
-            6,
+            7,
             key="CCP_STATE_PICKER_TITLE",
             width=width - 20,
             height=16,
         ),
     )
-    for index, action in enumerate(STATE_ACTIONS):
+    x = 10
+    for action, width_of in zip(STATE_ACTIONS, widths):
         window.add(
             Button(
                 f"ccp_picker_{action.slug}",
-                9 + index * (t.SMALL_BUTTON_WIDTH + 6),
-                26,
-                sprite="GFX_ccp_button_danger" if action.destructive else "GFX_ccp_button_small",
+                x,
+                30,
+                sprite="GFX_ccp_button_small_danger"
+                if action.destructive
+                else "GFX_ccp_button_small",
                 key=action.key,
                 tooltip=f"{action.key}_TOOLTIP",
+                width=width_of,
+                height=t.SMALL_BUTTON_HEIGHT,
             )
         )
+        x += width_of + 6
     return window
 
 
@@ -981,7 +1163,14 @@ def _action_section(slug: str) -> Container:
             height=ACTION_CARD_HEIGHT,
         )
         card.add(
-            Icon(f"ccp_action_{action.slug}_plate", 0, 0, sprite="GFX_ccp_card"),
+            Icon(
+                f"ccp_action_{action.slug}_plate",
+                0,
+                0,
+                sprite="GFX_ccp_card",
+                width=ACTION_CARD_WIDTH,
+                height=ACTION_CARD_HEIGHT,
+            ),
             Text(
                 f"ccp_action_{action.slug}_help",
                 12,
@@ -997,6 +1186,8 @@ def _action_section(slug: str) -> Container:
                 sprite="GFX_ccp_button_danger" if action.danger else "GFX_ccp_button",
                 key=action.key,
                 tooltip=f"{action.key}_TOOLTIP",
+                width=min(ACTION_CARD_WIDTH - 24, button_width(action.key)),
+                height=t.BUTTON_HEIGHT,
             ),
         )
         section.add(card)
@@ -1006,6 +1197,7 @@ def _action_section(slug: str) -> Container:
 HISTORY_LENGTH = 10
 HISTORY_ROW_HEIGHT = 34
 HISTORY_WIDTH = t.CONTENT_WIDTH - 48
+REPEAT_WIDTH = button_width("CCP_HISTORY_REPEAT", "GFX_ccp_button_small")
 
 
 def _history() -> Container:
@@ -1016,16 +1208,18 @@ def _history() -> Container:
             CONTENT_X,
             BODY_TOP,
             key="CCP_HISTORY_HELP",
-            width=HISTORY_WIDTH - t.BUTTON_WIDTH - 16,
+            width=HISTORY_WIDTH - button_width("CCP_HISTORY_CLEAR") - 16,
             height=36,
         ),
         Button(
             "ccp_history_clear",
-            CONTENT_X + HISTORY_WIDTH - t.BUTTON_WIDTH,
+            CONTENT_X + HISTORY_WIDTH - button_width("CCP_HISTORY_CLEAR"),
             BODY_TOP,
             sprite="GFX_ccp_button_danger",
             key="CCP_HISTORY_CLEAR",
             tooltip="CCP_HISTORY_CLEAR_TOOLTIP",
+            width=button_width("CCP_HISTORY_CLEAR"),
+            height=t.BUTTON_HEIGHT,
         ),
     )
     for slot in range(HISTORY_LENGTH):
@@ -1037,22 +1231,31 @@ def _history() -> Container:
             height=HISTORY_ROW_HEIGHT - 2,
         )
         row.add(
-            Icon(f"ccp_history_row_{slot + 1}_plate", 0, 0, sprite="GFX_ccp_list_row"),
+            Icon(
+                f"ccp_history_row_{slot + 1}_plate",
+                0,
+                0,
+                sprite="GFX_ccp_list_row",
+                width=HISTORY_WIDTH,
+                height=HISTORY_ROW_HEIGHT - 2,
+            ),
             Text(
                 f"ccp_history_row_{slot + 1}_text",
-                10,
+                12,
                 7,
                 key=f"CCP_HISTORY_ENTRY_{slot + 1}",
-                width=HISTORY_WIDTH - t.SMALL_BUTTON_WIDTH - 30,
+                width=HISTORY_WIDTH - REPEAT_WIDTH - 30,
                 height=18,
             ),
             Button(
                 f"ccp_history_repeat_{slot + 1}",
-                HISTORY_WIDTH - t.SMALL_BUTTON_WIDTH - 6,
-                2,
+                HISTORY_WIDTH - REPEAT_WIDTH - 8,
+                3,
                 sprite="GFX_ccp_button_small",
                 key="CCP_HISTORY_REPEAT",
                 tooltip="CCP_HISTORY_REPEAT_TOOLTIP",
+                width=REPEAT_WIDTH,
+                height=t.SMALL_BUTTON_HEIGHT,
             ),
         )
         section.add(row)

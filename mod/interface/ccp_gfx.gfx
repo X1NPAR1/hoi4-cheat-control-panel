@@ -33,34 +33,14 @@ spriteTypes = {
 		noOfFrames = 1
 	}
 	spriteType = {
-		name = "GFX_ccp_sidebar_item"
-		texturefile = "gfx/interface/ccp/ccp_sidebar_item.png"
-		noOfFrames = 3
+		name = "GFX_ccp_modal_scrim"
+		texturefile = "gfx/interface/ccp/ccp_modal_scrim.png"
+		noOfFrames = 1
 	}
 	spriteType = {
-		name = "GFX_ccp_button"
-		texturefile = "gfx/interface/ccp/ccp_button.png"
-		noOfFrames = 4
-	}
-	spriteType = {
-		name = "GFX_ccp_button_danger"
-		texturefile = "gfx/interface/ccp/ccp_button_danger.png"
-		noOfFrames = 4
-	}
-	spriteType = {
-		name = "GFX_ccp_button_confirm"
-		texturefile = "gfx/interface/ccp/ccp_button_confirm.png"
-		noOfFrames = 4
-	}
-	spriteType = {
-		name = "GFX_ccp_button_small"
-		texturefile = "gfx/interface/ccp/ccp_button_small.png"
-		noOfFrames = 4
-	}
-	spriteType = {
-		name = "GFX_ccp_key"
-		texturefile = "gfx/interface/ccp/ccp_key.png"
-		noOfFrames = 4
+		name = "GFX_ccp_modal"
+		texturefile = "gfx/interface/ccp/ccp_modal.png"
+		noOfFrames = 1
 	}
 	spriteType = {
 		name = "GFX_ccp_readout"
@@ -73,26 +53,6 @@ spriteTypes = {
 		noOfFrames = 1
 	}
 	spriteType = {
-		name = "GFX_ccp_chip"
-		texturefile = "gfx/interface/ccp/ccp_chip.png"
-		noOfFrames = 4
-	}
-	spriteType = {
-		name = "GFX_ccp_list_row"
-		texturefile = "gfx/interface/ccp/ccp_list_row.png"
-		noOfFrames = 3
-	}
-	spriteType = {
-		name = "GFX_ccp_modal_scrim"
-		texturefile = "gfx/interface/ccp/ccp_modal_scrim.png"
-		noOfFrames = 1
-	}
-	spriteType = {
-		name = "GFX_ccp_modal"
-		texturefile = "gfx/interface/ccp/ccp_modal.png"
-		noOfFrames = 1
-	}
-	spriteType = {
 		name = "GFX_ccp_divider"
 		texturefile = "gfx/interface/ccp/ccp_divider.png"
 		noOfFrames = 1
@@ -102,9 +62,84 @@ spriteTypes = {
 		texturefile = "gfx/interface/ccp/ccp_blank.png"
 		noOfFrames = 1
 	}
-	spriteType = {
+	corneredTileSpriteType = {
+		name = "GFX_ccp_sidebar_item"
+		size = { x = 20 y = 36 }
+		textureFile = "gfx/interface/ccp/ccp_sidebar_item.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_sidebar_active"
+		size = { x = 20 y = 36 }
+		textureFile = "gfx/interface/ccp/ccp_sidebar_active.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_button"
+		size = { x = 24 y = 30 }
+		textureFile = "gfx/interface/ccp/ccp_button.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_button_danger"
+		size = { x = 24 y = 30 }
+		textureFile = "gfx/interface/ccp/ccp_button_danger.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_button_confirm"
+		size = { x = 24 y = 30 }
+		textureFile = "gfx/interface/ccp/ccp_button_confirm.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_button_small"
+		size = { x = 20 y = 28 }
+		textureFile = "gfx/interface/ccp/ccp_button_small.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_button_small_danger"
+		size = { x = 20 y = 28 }
+		textureFile = "gfx/interface/ccp/ccp_button_small_danger.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_key"
+		size = { x = 20 y = 36 }
+		textureFile = "gfx/interface/ccp/ccp_key.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ccp_list_row"
+		size = { x = 20 y = 32 }
+		textureFile = "gfx/interface/ccp/ccp_list_row.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	corneredTileSpriteType = {
 		name = "GFX_ccp_card"
-		texturefile = "gfx/interface/ccp/ccp_card.png"
-		noOfFrames = 1
+		size = { x = 20 y = 20 }
+		textureFile = "gfx/interface/ccp/ccp_card.png"
+		borderSize = { x = 6 y = 6 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate.lua"
 	}
 }
