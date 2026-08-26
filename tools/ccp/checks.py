@@ -19,6 +19,18 @@ LOC_KEY = re.compile(r"^\s*([A-Za-z0-9_.@\-]+):\s*\d*\s*\"", re.MULTILINE)
 GENERATED_BANNER = "# GENERATED FILE - DO NOT EDIT"
 
 
+def _game_dir() -> Path | None:
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    try:
+        from generate_data import find_game_dir
+
+        return find_game_dir(None)
+    except SystemExit:
+        return None
+
+
 @dataclass
 class Report:
     errors: list[str] = field(default_factory=list)
@@ -247,11 +259,55 @@ def check_gui_element_references(mod_dir: Path, report: Report) -> None:
                     break
 
 
+EFFECT_CALL = re.compile(r"^\s*(CCP_[A-Za-z0-9_]+)\s*=\s*yes\s*$", re.MULTILINE)
+EFFECT_DEF = re.compile(r"^(CCP_[A-Za-z0-9_]+)\s*=\s*\{", re.MULTILINE)
+
+
+def check_effect_references(mod_dir: Path, report: Report) -> None:
+    """Every CCP_ effect the mod calls must be defined by the mod."""
+    defined: set[str] = set()
+    called: dict[str, Path] = {}
+
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        defined |= set(EFFECT_DEF.findall(text))
+        for name in EFFECT_CALL.findall(text):
+            called.setdefault(name, path)
+
+    for path in sorted((mod_dir / "common" / "scripted_guis").glob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for name in EFFECT_CALL.findall(text):
+            called.setdefault(name, path)
+
+    for name, path in sorted(called.items()):
+        if name not in defined:
+            report.error(f"{path}: calls `{name}`, which no scripted effect defines")
+
+    unused = sorted(defined - set(called))
+    for name in unused:
+        report.warn(f"`{name}` is defined but never called")
+
+
+def check_no_vanilla_overrides(mod_dir: Path, game_dir: Path | None, report: Report) -> None:
+    """The mod is additive: no file may share a path with a vanilla file."""
+    if game_dir is None or not game_dir.is_dir():
+        report.warn("game directory not found; vanilla override check skipped")
+        return
+    for path in sorted(mod_dir.rglob("*")):
+        if not path.is_file() or path.name == "descriptor.mod":
+            continue
+        relative = path.relative_to(mod_dir)
+        if (game_dir / relative).is_file():
+            report.error(f"mod/{relative.as_posix()} overrides a vanilla file")
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
     ("sprite references", lambda repo, mod, rep: check_sprite_references(mod, rep)),
     ("gui element references", lambda repo, mod, rep: check_gui_element_references(mod, rep)),
+    ("effect references", lambda repo, mod, rep: check_effect_references(mod, rep)),
+    ("vanilla overrides", lambda repo, mod, rep: check_no_vanilla_overrides(mod, _game_dir(), rep)),
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),
