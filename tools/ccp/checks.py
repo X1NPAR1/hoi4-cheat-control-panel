@@ -134,10 +134,22 @@ def _localisation_keys(mod_dir: Path) -> dict[str, set[str]]:
 
 
 def check_localisation_parity(mod_dir: Path, report: Report) -> None:
+    from .languages import NATIVE
+
     per_language = _localisation_keys(mod_dir)
     if "english" not in per_language:
         report.error("mod/localisation/english is missing or contains no keys")
         return
+
+    for language in NATIVE:
+        if language not in per_language:
+            report.error(f"mod/localisation/{language} is missing")
+    for language in per_language:
+        if language not in NATIVE:
+            report.error(
+                f"mod/localisation/{language} is not a language Hearts of Iron IV loads"
+            )
+
     english = per_language["english"]
     for language, keys in per_language.items():
         if language == "english":

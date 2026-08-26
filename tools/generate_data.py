@@ -16,13 +16,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccp.emit import (
-    LANGUAGE_INDEX,
     emit_category_localisation,
     emit_equipment_categories_localisation,
     emit_equipment_effects,
     emit_equipment_localisation,
 )
 from ccp.equipment import group_by_category, load_catalogue
+from ccp.languages import NATIVE, OVERLAY
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -89,13 +89,17 @@ def main() -> int:
         scripted_loc / "ccp_generated_equipment_categories_loc.txt",
         emit_equipment_categories_localisation(catalogue, version),
     )
-    for language in LANGUAGE_INDEX:
+    for language in NATIVE:
         write(
-            REPO_ROOT
-            / "mod"
-            / "localisation"
-            / language
+            REPO_ROOT / "mod" / "localisation" / language
             / f"ccp_generated_equipment_l_{language}.yml",
+            emit_category_localisation(catalogue, language, version),
+        )
+
+    for language in OVERLAY:
+        write(
+            REPO_ROOT / "extras" / "language_overlays" / language
+            / "ccp_generated_equipment_l_english.yml",
             emit_category_localisation(catalogue, language, version),
         )
     return 0

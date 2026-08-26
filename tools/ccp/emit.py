@@ -184,36 +184,43 @@ def emit_equipment_categories_localisation(
     return writer.text()
 
 
-CATEGORY_LABELS = {
-    "infantry": ("Infantry Equipment", "Piyade Teçhizatı"),
-    "support": ("Support Equipment", "Destek Teçhizatı"),
-    "artillery": ("Artillery", "Topçu"),
-    "anti_tank": ("Anti-Tank", "Tanksavar"),
-    "anti_air": ("Anti-Air", "Uçaksavar"),
-    "motorized": ("Motorized & Armored Cars", "Motorize ve Zırhlı Araçlar"),
-    "mechanized": ("Mechanized", "Mekanize"),
-    "armored_car": ("Armored Cars", "Zırhlı Araçlar"),
-    "armor": ("Tanks", "Tanklar"),
-    "railway_gun": ("Railway Guns", "Demiryolu Topları"),
-    "fighter": ("Fighters", "Avcı Uçakları"),
-    "cas": ("Close Air Support", "Yakın Hava Desteği"),
-    "naval_bomber": ("Naval Bombers", "Deniz Bombardıman Uçakları"),
-    "tactical_bomber": ("Tactical Bombers", "Taktik Bombardıman Uçakları"),
-    "strategic_bomber": ("Strategic Bombers", "Stratejik Bombardıman Uçakları"),
-    "transport_plane": ("Transport Planes", "Nakliye Uçakları"),
-    "helicopter": ("Helicopters", "Helikopterler"),
-    "capital_ship": ("Capital Ships", "Ana Muharebe Gemileri"),
-    "carrier": ("Carriers", "Uçak Gemileri"),
-    "screen_ship": ("Screen Ships", "Refakat Gemileri"),
-    "submarine": ("Submarines", "Denizaltılar"),
-    "convoy": ("Convoys & Support Ships", "Konvoylar ve Destek Gemileri"),
-    "train": ("Trains", "Trenler"),
-    "missile": ("Missiles", "Füzeler"),
-    "special": ("Special Equipment", "Özel Teçhizat"),
-    "other": ("Other", "Diğer"),
+CATEGORY_LABELS: dict[str, tuple[str, str, str, str, str, str]] = {
+    "infantry": ("Infantry Equipment", "Infanterieausrüstung", "Équipement d'infanterie", "Пехотное снаряжение", "Piyade Teçhizatı", "Infanterie-uitrusting"),
+    "support": ("Support Equipment", "Unterstützungsausrüstung", "Équipement de soutien", "Снаряжение поддержки", "Destek Teçhizatı", "Ondersteuningsuitrusting"),
+    "artillery": ("Artillery", "Artillerie", "Artillerie", "Артиллерия", "Topçu", "Artillerie"),
+    "anti_tank": ("Anti-Tank", "Panzerabwehr", "Antichar", "Противотанковые", "Tanksavar", "Antitank"),
+    "anti_air": ("Anti-Air", "Flugabwehr", "Antiaérien", "Зенитные", "Uçaksavar", "Luchtafweer"),
+    "motorized": ("Motorized & Armored Cars", "Motorisiert & Panzerwagen", "Motorisé et automitrailleuses", "Мотопехота и бронеавтомобили", "Motorize ve Zırhlı Araçlar", "Gemotoriseerd & pantserwagens"),
+    "mechanized": ("Mechanized", "Mechanisiert", "Mécanisé", "Механизированные", "Mekanize", "Gemechaniseerd"),
+    "armored_car": ("Armored Cars", "Panzerwagen", "Automitrailleuses", "Бронеавтомобили", "Zırhlı Araçlar", "Pantserwagens"),
+    "armor": ("Tanks", "Panzer", "Chars", "Танки", "Tanklar", "Tanks"),
+    "railway_gun": ("Railway Guns", "Eisenbahngeschütze", "Canons ferroviaires", "Железнодорожные орудия", "Demiryolu Topları", "Spoorweggeschut"),
+    "fighter": ("Fighters", "Jäger", "Chasseurs", "Истребители", "Avcı Uçakları", "Jagers"),
+    "cas": ("Close Air Support", "Nahunterstützung", "Appui aérien rapproché", "Штурмовики", "Yakın Hava Desteği", "Luchtsteun"),
+    "naval_bomber": ("Naval Bombers", "Marinebomber", "Bombardiers navals", "Морские бомбардировщики", "Deniz Bombardıman Uçakları", "Marinebommenwerpers"),
+    "tactical_bomber": ("Tactical Bombers", "Taktische Bomber", "Bombardiers tactiques", "Тактические бомбардировщики", "Taktik Bombardıman Uçakları", "Tactische bommenwerpers"),
+    "strategic_bomber": ("Strategic Bombers", "Strategische Bomber", "Bombardiers stratégiques", "Стратегические бомбардировщики", "Stratejik Bombardıman Uçakları", "Strategische bommenwerpers"),
+    "transport_plane": ("Transport Planes", "Transportflugzeuge", "Avions de transport", "Транспортные самолёты", "Nakliye Uçakları", "Transportvliegtuigen"),
+    "helicopter": ("Helicopters", "Hubschrauber", "Hélicoptères", "Вертолёты", "Helikopterler", "Helikopters"),
+    "capital_ship": ("Capital Ships", "Grosskampfschiffe", "Navires de ligne", "Крупные корабли", "Ana Muharebe Gemileri", "Grote schepen"),
+    "carrier": ("Carriers", "Flugzeugträger", "Porte-avions", "Авианосцы", "Uçak Gemileri", "Vliegdekschepen"),
+    "screen_ship": ("Screen Ships", "Sicherungsschiffe", "Navires d'escorte", "Корабли охранения", "Refakat Gemileri", "Escorteschepen"),
+    "submarine": ("Submarines", "U-Boote", "Sous-marins", "Подводные лодки", "Denizaltılar", "Onderzeeërs"),
+    "convoy": ("Convoys & Support Ships", "Konvois & Versorgungsschiffe", "Convois et navires de soutien", "Конвои и суда снабжения", "Konvoylar ve Destek Gemileri", "Konvooien & steunschepen"),
+    "train": ("Trains", "Züge", "Trains", "Поезда", "Trenler", "Treinen"),
+    "missile": ("Missiles", "Raketen", "Missiles", "Ракеты", "Füzeler", "Raketten"),
+    "special": ("Special Equipment", "Spezialausrüstung", "Équipement spécial", "Особое снаряжение", "Özel Teçhizat", "Speciale uitrusting"),
+    "other": ("Other", "Sonstige", "Autre", "Прочее", "Diğer", "Overig"),
 }
 
-LANGUAGE_INDEX = {"english": 0, "turkish": 1}
+LANGUAGE_INDEX = {
+    "english": 0,
+    "german": 1,
+    "french": 2,
+    "russian": 3,
+    "turkish": 4,
+    "dutch": 5,
+}
 
 
 def emit_category_localisation(
@@ -221,8 +228,9 @@ def emit_category_localisation(
 ) -> str:
     """A localisation file naming every equipment category present in this install."""
     index = LANGUAGE_INDEX[language]
+    label_language = "english" if language in ("turkish", "dutch") else language
     lines = [
-        f"l_{language}:",
+        f"l_{label_language}:",
         f"# GENERATED FILE - DO NOT EDIT (tools/generate_data.py, game {version})",
     ]
     for name in group_by_category(catalogue):

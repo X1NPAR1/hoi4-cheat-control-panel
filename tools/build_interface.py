@@ -17,11 +17,13 @@ from ccp import interface
 from ccp.layout import emit_file
 from ccp.meta import descriptor
 from ccp.scripts import emit_core_effects, emit_scripted_gui, emit_scripted_localisation
-from ccp.strings import LANGUAGES, emit_localisation
+from ccp.languages import NATIVE, OVERLAY
+from ccp.strings import emit_localisation
 from generate_data import find_game_dir, game_version
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MOD = REPO_ROOT / "mod"
+OVERLAYS = REPO_ROOT / "extras" / "language_overlays"
 
 
 def write(path: Path, content: str) -> None:
@@ -54,19 +56,24 @@ def main() -> int:
         emit_scripted_localisation(version),
     )
 
-    for language in LANGUAGES:
+    for language in NATIVE:
         write(
             MOD / "localisation" / language / f"ccp_core_l_{language}.yml",
             emit_localisation(language),
         )
 
-    for stale in (
-        MOD / "common" / "scripted_guis" / "ccp_main.txt",
-        MOD / "common" / "scripted_effects" / "ccp_core_effects.txt",
-    ):
-        if stale.is_file():
-            stale.unlink()
-            print(f"  removed superseded {stale.relative_to(REPO_ROOT).as_posix()}")
+    for language in OVERLAY:
+        write(
+            OVERLAYS / language / f"ccp_core_l_english.yml",
+            emit_localisation(language).replace(f"l_{language}:", "l_english:", 1),
+        )
+
+    for language_dir in sorted((MOD / "localisation").iterdir()):
+        if language_dir.is_dir() and language_dir.name not in NATIVE:
+            for stale in sorted(language_dir.iterdir()):
+                stale.unlink()
+            language_dir.rmdir()
+            print(f"  removed unsupported localisation/{language_dir.name}")
 
     return 0
 

@@ -59,6 +59,26 @@ using it would switch the map mode every time you opened the panel. You can chan
 hotkey to `F8`, `F11` or `F12` from the panel's **Settings** tab; the choice is stored in
 your save.
 
+## Languages
+
+The panel ships in **English, German, French and Russian**. It follows whatever
+language the game is set to — no configuration needed.
+
+**Turkish and Dutch are translated but cannot ship as languages.** Hearts of Iron IV
+loads exactly ten localisation folders, listed in the game's own
+`localisation/languages.yml`, and neither Turkish nor Dutch is among them; a
+`localisation/turkish/` folder is ignored by the engine. Both translations are
+therefore kept in `extras/language_overlays/` under English keys and applied on
+request:
+
+```bash
+python tools/install_local.py
+python tools/set_panel_language.py turkish    # or: dutch
+```
+
+That changes this panel only; the game stays in whatever language you had.
+Reinstalling resets the panel to English.
+
 ## Requirements
 
 - Hearts of Iron IV **1.19.x** (developed and tested against 1.19.2)
@@ -92,14 +112,20 @@ These are engine limits, verified against the shipped game files, not oversights
 | No state snapshot API | There is no undo. Destructive actions require confirmation instead |
 | Equipment and technology cannot be iterated at runtime | Their lists are generated from your game files at build time rather than live |
 | No keybind remapping API | The hotkey is chosen from a fixed set of options rather than freely bound |
+| Only ten localisation folders exist | Turkish and Dutch ship as an overlay rather than as selectable languages |
 
 ## Development
 
 ```bash
-python tools/generate_data.py    # regenerate script arrays from the installed game
-python tools/validate_mod.py     # release checklist
-python tools/build_release.py    # build a Workshop-clean package
+python tools/build_assets.py       # draw the interface plates and sprite definitions
+python tools/build_interface.py    # generate the .gui files, scripts, strings and descriptor
+python tools/generate_data.py      # derive the equipment catalogue from the installed game
+python tools/validate_mod.py       # release checklist
+python tools/install_local.py      # install into the game for testing
+python tools/enable_local_mod.py   # register it in the launcher playset
 ```
+
+Nothing under `mod/` is edited by hand — it is all generated from `tools/ccp/`.
 
 See `CLAUDE.md` for conventions, `CONTRIBUTING.md` for the contribution workflow, and
 `docs/` for architecture, modding notes, testing and the release process.

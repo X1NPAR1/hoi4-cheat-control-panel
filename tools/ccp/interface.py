@@ -229,6 +229,23 @@ def _settings() -> Container:
             key="CCP_GetConfirmState",
             tooltip="CCP_SETTINGS_CONFIRM_TOOLTIP",
         ),
+        Text(
+            "ccp_settings_language_label",
+            CONTENT_X,
+            BODY_TOP + 246,
+            key="CCP_SETTINGS_LANGUAGE",
+            width=t.CONTENT_WIDTH - 48,
+            height=20,
+            font="hoi_18mbs",
+        ),
+        Text(
+            "ccp_settings_language_help",
+            CONTENT_X,
+            BODY_TOP + 270,
+            key="CCP_SETTINGS_LANGUAGE_HELP",
+            width=t.CONTENT_WIDTH - 48,
+            height=72,
+        ),
     )
     return section
 
