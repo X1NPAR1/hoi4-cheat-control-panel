@@ -21,7 +21,10 @@ from ccp.emit import (
     emit_equipment_effects,
     emit_equipment_localisation,
 )
+from ccp.emit_research import emit_research_effects, emit_research_localisation
 from ccp.equipment import group_by_category, load_catalogue
+from ccp.technology import group_by_folder
+from ccp.technology import load_catalogue as load_technologies
 from ccp.languages import NATIVE, OVERLAY
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -102,6 +105,24 @@ def main() -> int:
             / "ccp_generated_equipment_l_english.yml",
             emit_category_localisation(catalogue, language, version),
         )
+    technologies = load_technologies(game_dir)
+    if not technologies:
+        raise SystemExit("No technologies were parsed. The game files may be unreadable.")
+    folders = group_by_folder(technologies)
+    print()
+    print(f"Technologies: {len(technologies)} across {len(folders)} folders")
+    for name, items in folders.items():
+        print(f"  {name:<26} {len(items):>4}")
+    print()
+
+    write(
+        effects / "ccp_generated_research.txt",
+        emit_research_effects(technologies, version),
+    )
+    write(
+        scripted_loc / "ccp_generated_research_loc.txt",
+        emit_research_localisation(technologies, version),
+    )
     return 0
 
 

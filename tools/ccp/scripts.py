@@ -51,6 +51,10 @@ def emit_core_effects(version: str) -> str:
     writer.line("set_variable = { ccp_equipment_page = 0 }")
     writer.line("set_variable = { ccp_equipment_pages_last = 0 }")
     writer.line("set_variable = { ccp_equipment_selected = -1 }")
+    writer.line("set_variable = { ccp_research_folder = 1 }")
+    writer.line("set_variable = { ccp_research_page = 0 }")
+    writer.line("set_variable = { ccp_research_pages_last = 0 }")
+    writer.line("set_variable = { ccp_research_selected = -1 }")
     writer.close()
     writer.close()
     writer.blank()
@@ -95,6 +99,8 @@ def emit_core_effects(version: str) -> str:
         writer.line(f"set_variable = {{ ccp_status = {STATUS_IDLE} }}")
         if section.slug == "equipment":
             writer.line("CCP_equipment_load_page = yes")
+        if section.slug == "research":
+            writer.line("CCP_research_load_page = yes")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -180,7 +186,7 @@ def emit_core_effects(version: str) -> str:
     return writer.text()
 
 
-def emit_scripted_gui(version: str, categories: list[str]) -> str:
+def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -> str:
     writer = Writer()
     _banner(writer, version)
     writer.open("scripted_gui")
@@ -287,11 +293,28 @@ def emit_scripted_gui(version: str, categories: list[str]) -> str:
     writer.line("set_variable = { ccp_equipment_selected = var:ccp_entry }")
     writer.line("CCP_equipment_grant_latest = yes")
     writer.close()
+    for index, name in enumerate(folders, start=1):
+        writer.open(f"ccp_research_category_{index}_click")
+        writer.line(f"CCP_research_select_{name} = yes")
+        writer.close()
+    writer.open("ccp_research_prev_click")
+    writer.line("CCP_research_prev_page = yes")
+    writer.close()
+    writer.open("ccp_research_next_click")
+    writer.line("CCP_research_next_page = yes")
+    writer.close()
+    writer.open("ccp_research_all_click")
+    writer.line("CCP_research_grant_folder = yes")
+    writer.close()
+    writer.open("ccp_research_entry_grant_click")
+    writer.line("set_variable = { ccp_research_selected = var:ccp_research_entry }")
+    writer.line("CCP_research_grant = yes")
+    writer.close()
     writer.close()
     writer.blank()
 
     writer.open("triggers")
-    containers = section_containers(categories)
+    containers = section_containers(categories, folders)
     for index, section in enumerate(SECTIONS, start=1):
         for leaf in containers[section.slug].leaves():
             writer.open(f"{leaf}_visible")
@@ -317,6 +340,12 @@ def emit_scripted_gui(version: str, categories: list[str]) -> str:
     writer.open("ccp_equipment_next_click_enabled")
     writer.line("check_variable = { ccp_equipment_page < ccp_equipment_pages_last }")
     writer.close()
+    writer.open("ccp_research_prev_click_enabled")
+    writer.line("check_variable = { ccp_research_page > 0 }")
+    writer.close()
+    writer.open("ccp_research_next_click_enabled")
+    writer.line("check_variable = { ccp_research_page < ccp_research_pages_last }")
+    writer.close()
     writer.close()
     writer.blank()
 
@@ -333,6 +362,12 @@ def emit_scripted_gui(version: str, categories: list[str]) -> str:
     writer.line("value = ccp_entry")
     writer.line("index = ccp_entry_index")
     writer.line('entry_container = "ccp_equipment_entry"')
+    writer.close()
+    writer.open("ccp_research_list")
+    writer.line("array = ccp_research_page_items")
+    writer.line("value = ccp_research_entry")
+    writer.line("index = ccp_research_entry_index")
+    writer.line('entry_container = "ccp_research_entry"')
     writer.close()
     writer.close()
 
@@ -381,6 +416,8 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {STATUS_CONFIRM_OFF} }}", "CCP_STATUS_CONFIRM_OFF"),
             (f"check_variable = {{ ccp_status = {STATUS_GRANTED} }}", "CCP_STATUS_GRANTED"),
             (f"check_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}", "CCP_STATUS_EQUIPMENT"),
+            (f"check_variable = {{ ccp_status = {status.TECH_GRANTED} }}", "CCP_STATUS_TECH"),
+            (f"check_variable = {{ ccp_status = {status.FOLDER_RESEARCHED} }}", "CCP_STATUS_FOLDER"),
         ],
         "CCP_STATUS_IDLE",
     )

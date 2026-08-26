@@ -1,0 +1,5028 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/generate_data.py from the installed game files.
+# Source game version: 1.19.2.0
+
+defined_text = {
+	name = CCP_GetTechnologyName
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 0 }
+		}
+		localization_key = armored_car1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 1 }
+		}
+		localization_key = infantry_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 2 }
+		}
+		localization_key = support_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 3 }
+		}
+		localization_key = infantry_weapons1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 4 }
+		}
+		localization_key = marines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 5 }
+		}
+		localization_key = motorised_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 6 }
+		}
+		localization_key = paratroopers
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 7 }
+		}
+		localization_key = rangers_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 8 }
+		}
+		localization_key = tech_mountaineers
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 9 }
+		}
+		localization_key = tech_trucks
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 10 }
+		}
+		localization_key = infantry_weapons2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 11 }
+		}
+		localization_key = support_weapons2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 12 }
+		}
+		localization_key = tech_special_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 13 }
+		}
+		localization_key = improved_infantry_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 14 }
+		}
+		localization_key = marines2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 15 }
+		}
+		localization_key = paratroopers2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 16 }
+		}
+		localization_key = rangers_tech2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 17 }
+		}
+		localization_key = tech_mountaineers2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 18 }
+		}
+		localization_key = advanced_special_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 19 }
+		}
+		localization_key = armored_car2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 20 }
+		}
+		localization_key = improved_infantry_weapons_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 21 }
+		}
+		localization_key = improved_special_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 22 }
+		}
+		localization_key = mechanised_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 23 }
+		}
+		localization_key = support_weapons3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 24 }
+		}
+		localization_key = amphibious_mechanized_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 25 }
+		}
+		localization_key = advanced_infantry_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 26 }
+		}
+		localization_key = armored_car3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 27 }
+		}
+		localization_key = extreme_environment_training
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 28 }
+		}
+		localization_key = infantry_at
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 29 }
+		}
+		localization_key = mechanised_infantry2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 30 }
+		}
+		localization_key = support_weapons4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 31 }
+		}
+		localization_key = survival_training
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 32 }
+		}
+		localization_key = amphibious_mechanized_infantry_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 33 }
+		}
+		localization_key = infantry_at2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 34 }
+		}
+		localization_key = marines3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 35 }
+		}
+		localization_key = night_vision
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 36 }
+		}
+		localization_key = paratroopers3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 37 }
+		}
+		localization_key = rangers_tech3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 38 }
+		}
+		localization_key = tech_mountaineers3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 39 }
+		}
+		localization_key = advanced_infantry_weapons2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 40 }
+		}
+		localization_key = elite_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 41 }
+		}
+		localization_key = mechanised_infantry3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 42 }
+		}
+		localization_key = night_vision2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 43 }
+		}
+		localization_key = basic_train
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 44 }
+		}
+		localization_key = tech_support
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 45 }
+		}
+		localization_key = armored_train
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 46 }
+		}
+		localization_key = railway_gun
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 47 }
+		}
+		localization_key = tech_engineers
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 48 }
+		}
+		localization_key = tech_field_hospital
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 49 }
+		}
+		localization_key = tech_logistics_company
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 50 }
+		}
+		localization_key = tech_maintenance_company
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 51 }
+		}
+		localization_key = tech_military_police
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 52 }
+		}
+		localization_key = tech_recon
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 53 }
+		}
+		localization_key = tech_signal_company
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 54 }
+		}
+		localization_key = sp_armored_engineer_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 55 }
+		}
+		localization_key = sp_armored_maintenance_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 56 }
+		}
+		localization_key = sp_armored_motorized_military_police_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 57 }
+		}
+		localization_key = sp_armored_signal_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 58 }
+		}
+		localization_key = sp_helicopter_artillery_observers_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 59 }
+		}
+		localization_key = sp_helicopter_med_evac_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 60 }
+		}
+		localization_key = sp_helicopter_transport_pods_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 61 }
+		}
+		localization_key = tech_engineers2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 62 }
+		}
+		localization_key = tech_field_hospital2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 63 }
+		}
+		localization_key = tech_logistics_company2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 64 }
+		}
+		localization_key = tech_maintenance_company2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 65 }
+		}
+		localization_key = tech_military_police2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 66 }
+		}
+		localization_key = tech_recon2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 67 }
+		}
+		localization_key = tech_signal_company2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 68 }
+		}
+		localization_key = wartime_train
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 69 }
+		}
+		localization_key = tech_engineers3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 70 }
+		}
+		localization_key = tech_field_hospital3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 71 }
+		}
+		localization_key = tech_logistics_company3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 72 }
+		}
+		localization_key = tech_maintenance_company3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 73 }
+		}
+		localization_key = tech_military_police3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 74 }
+		}
+		localization_key = tech_recon3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 75 }
+		}
+		localization_key = tech_signal_company3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 76 }
+		}
+		localization_key = tech_engineers4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 77 }
+		}
+		localization_key = tech_field_hospital4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 78 }
+		}
+		localization_key = tech_logistics_company4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 79 }
+		}
+		localization_key = tech_maintenance_company4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 80 }
+		}
+		localization_key = tech_military_police4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 81 }
+		}
+		localization_key = tech_recon4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 82 }
+		}
+		localization_key = tech_signal_company4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 83 }
+		}
+		localization_key = gw_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 84 }
+		}
+		localization_key = interwar_antiair
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 85 }
+		}
+		localization_key = interwar_antitank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 86 }
+		}
+		localization_key = interwar_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 87 }
+		}
+		localization_key = antiair1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 88 }
+		}
+		localization_key = antitank1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 89 }
+		}
+		localization_key = artillery1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 90 }
+		}
+		localization_key = antiair2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 91 }
+		}
+		localization_key = antitank2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 92 }
+		}
+		localization_key = artillery2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 93 }
+		}
+		localization_key = rocket_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 94 }
+		}
+		localization_key = sp_artillery_purpose_built_gun_motor_carriages_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 95 }
+		}
+		localization_key = sp_artillery_rocket_assisted_projectiles_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 96 }
+		}
+		localization_key = antiair3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 97 }
+		}
+		localization_key = antitank3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 98 }
+		}
+		localization_key = artillery3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 99 }
+		}
+		localization_key = rocket_artillery2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 100 }
+		}
+		localization_key = sp_shock_hardening_techniques
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 101 }
+		}
+		localization_key = antiair4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 102 }
+		}
+		localization_key = antitank4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 103 }
+		}
+		localization_key = artillery4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 104 }
+		}
+		localization_key = rocket_artillery3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 105 }
+		}
+		localization_key = sp_advance_sabot_shells
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 106 }
+		}
+		localization_key = sp_variable_time_fuze_shells
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 107 }
+		}
+		localization_key = antiair5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 108 }
+		}
+		localization_key = antitank5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 109 }
+		}
+		localization_key = artillery5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 110 }
+		}
+		localization_key = rocket_artillery4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 111 }
+		}
+		localization_key = early_battlecruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 112 }
+		}
+		localization_key = early_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 113 }
+		}
+		localization_key = early_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 114 }
+		}
+		localization_key = early_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 115 }
+		}
+		localization_key = early_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 116 }
+		}
+		localization_key = early_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 117 }
+		}
+		localization_key = early_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 118 }
+		}
+		localization_key = transport
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 119 }
+		}
+		localization_key = basic_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 120 }
+		}
+		localization_key = basic_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 121 }
+		}
+		localization_key = basic_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 122 }
+		}
+		localization_key = basic_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 123 }
+		}
+		localization_key = basic_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 124 }
+		}
+		localization_key = basic_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 125 }
+		}
+		localization_key = basic_battlecruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 126 }
+		}
+		localization_key = improved_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 127 }
+		}
+		localization_key = improved_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 128 }
+		}
+		localization_key = improved_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 129 }
+		}
+		localization_key = improved_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 130 }
+		}
+		localization_key = improved_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 131 }
+		}
+		localization_key = improved_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 132 }
+		}
+		localization_key = landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 133 }
+		}
+		localization_key = advanced_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 134 }
+		}
+		localization_key = advanced_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 135 }
+		}
+		localization_key = advanced_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 136 }
+		}
+		localization_key = advanced_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 137 }
+		}
+		localization_key = advanced_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 138 }
+		}
+		localization_key = advanced_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 139 }
+		}
+		localization_key = heavy_battleship2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 140 }
+		}
+		localization_key = tank_landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 141 }
+		}
+		localization_key = early_bomber
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 142 }
+		}
+		localization_key = early_fighter
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 143 }
+		}
+		localization_key = early_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 144 }
+		}
+		localization_key = CAS1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 145 }
+		}
+		localization_key = fighter1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 146 }
+		}
+		localization_key = heavy_fighter1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 147 }
+		}
+		localization_key = naval_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 148 }
+		}
+		localization_key = scout_plane1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 149 }
+		}
+		localization_key = strategic_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 150 }
+		}
+		localization_key = tactical_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 151 }
+		}
+		localization_key = CAS2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 152 }
+		}
+		localization_key = fighter2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 153 }
+		}
+		localization_key = heavy_fighter2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 154 }
+		}
+		localization_key = improved_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 155 }
+		}
+		localization_key = naval_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 156 }
+		}
+		localization_key = scout_plane2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 157 }
+		}
+		localization_key = strategic_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 158 }
+		}
+		localization_key = tactical_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 159 }
+		}
+		localization_key = CAS3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 160 }
+		}
+		localization_key = fighter3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 161 }
+		}
+		localization_key = heavy_fighter3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 162 }
+		}
+		localization_key = naval_bomber3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 163 }
+		}
+		localization_key = strategic_bomber3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 164 }
+		}
+		localization_key = tactical_bomber3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 165 }
+		}
+		localization_key = jet_fighter1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 166 }
+		}
+		localization_key = jet_tactical_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 167 }
+		}
+		localization_key = strategic_airlifter
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 168 }
+		}
+		localization_key = jet_fighter2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 169 }
+		}
+		localization_key = jet_strategic_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 170 }
+		}
+		localization_key = jet_tactical_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 171 }
+		}
+		localization_key = advanced_fire_control_system
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 172 }
+		}
+		localization_key = basic_fire_control_system
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 173 }
+		}
+		localization_key = basic_fortification_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 174 }
+		}
+		localization_key = coastal_fort_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 175 }
+		}
+		localization_key = electronic_mechanical_engineering
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 176 }
+		}
+		localization_key = improved_fire_control_system
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 177 }
+		}
+		localization_key = mechanical_computing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 178 }
+		}
+		localization_key = radio
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 179 }
+		}
+		localization_key = basic_decryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 180 }
+		}
+		localization_key = basic_encryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 181 }
+		}
+		localization_key = cavity_magnatron
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 182 }
+		}
+		localization_key = computing_machine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 183 }
+		}
+		localization_key = improved_radio
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 184 }
+		}
+		localization_key = land_fort_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 185 }
+		}
+		localization_key = atomic_research
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 186 }
+		}
+		localization_key = centimetric_radar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 187 }
+		}
+		localization_key = coastal_fort_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 188 }
+		}
+		localization_key = improved_computing_machine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 189 }
+		}
+		localization_key = improved_decryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 190 }
+		}
+		localization_key = improved_encryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 191 }
+		}
+		localization_key = land_fort_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 192 }
+		}
+		localization_key = advanced_radio
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 193 }
+		}
+		localization_key = phased_array
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 194 }
+		}
+		localization_key = advanced_computing_machine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 195 }
+		}
+		localization_key = advanced_decryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 196 }
+		}
+		localization_key = advanced_encryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 197 }
+		}
+		localization_key = experimental_rockets
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 198 }
+		}
+		localization_key = monopulse_radar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 199 }
+		}
+		localization_key = sp_rockets_improved_guidance
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 200 }
+		}
+		localization_key = sp_rockets_dual_chamber_rocket_engine_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 201 }
+		}
+		localization_key = sp_rockets_rocket_bomber
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 202 }
+		}
+		localization_key = sp_rockets_improved_rocket_bomber
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 203 }
+		}
+		localization_key = sp_rockets_dual_chamber_rocket_engine_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 204 }
+		}
+		localization_key = basic_machine_tools
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 205 }
+		}
+		localization_key = concentrated_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 206 }
+		}
+		localization_key = construction1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 207 }
+		}
+		localization_key = dispersed_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 208 }
+		}
+		localization_key = excavation1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 209 }
+		}
+		localization_key = fuel_refining
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 210 }
+		}
+		localization_key = fuel_silos
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 211 }
+		}
+		localization_key = synth_oil_experiments
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 212 }
+		}
+		localization_key = concentrated_industry2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 213 }
+		}
+		localization_key = construction2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 214 }
+		}
+		localization_key = dispersed_industry2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 215 }
+		}
+		localization_key = excavation2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 216 }
+		}
+		localization_key = fuel_refining2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 217 }
+		}
+		localization_key = improved_equipment_conversion
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 218 }
+		}
+		localization_key = improved_machine_tools
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 219 }
+		}
+		localization_key = oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 220 }
+		}
+		localization_key = rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 221 }
+		}
+		localization_key = advanced_equipment_conversion
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 222 }
+		}
+		localization_key = advanced_machine_tools
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 223 }
+		}
+		localization_key = concentrated_industry3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 224 }
+		}
+		localization_key = construction3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 225 }
+		}
+		localization_key = dispersed_industry3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 226 }
+		}
+		localization_key = excavation3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 227 }
+		}
+		localization_key = fuel_refining3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 228 }
+		}
+		localization_key = improved_oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 229 }
+		}
+		localization_key = improved_rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 230 }
+		}
+		localization_key = advanced_oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 231 }
+		}
+		localization_key = advanced_rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 232 }
+		}
+		localization_key = assembly_line_production
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 233 }
+		}
+		localization_key = concentrated_industry4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 234 }
+		}
+		localization_key = construction4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 235 }
+		}
+		localization_key = dispersed_industry4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 236 }
+		}
+		localization_key = excavation4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 237 }
+		}
+		localization_key = fuel_refining4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 238 }
+		}
+		localization_key = concentrated_industry5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 239 }
+		}
+		localization_key = construction5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 240 }
+		}
+		localization_key = dispersed_industry5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 241 }
+		}
+		localization_key = excavation5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 242 }
+		}
+		localization_key = flexible_line
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 243 }
+		}
+		localization_key = fuel_refining5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 244 }
+		}
+		localization_key = modern_oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 245 }
+		}
+		localization_key = modern_rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 246 }
+		}
+		localization_key = streamlined_line
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 247 }
+		}
+		localization_key = gwtank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 248 }
+		}
+		localization_key = gwtank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 249 }
+		}
+		localization_key = aa_lmg
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 250 }
+		}
+		localization_key = basic_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 251 }
+		}
+		localization_key = basic_cruiser_armor_scheme
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 252 }
+		}
+		localization_key = basic_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 253 }
+		}
+		localization_key = basic_naval_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 254 }
+		}
+		localization_key = basic_torpedo
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 255 }
+		}
+		localization_key = early_bombs
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 256 }
+		}
+		localization_key = early_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 257 }
+		}
+		localization_key = early_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 258 }
+		}
+		localization_key = early_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 259 }
+		}
+		localization_key = early_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 260 }
+		}
+		localization_key = early_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 261 }
+		}
+		localization_key = engines_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 262 }
+		}
+		localization_key = mtg_transport
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 263 }
+		}
+		localization_key = photo_reconnaisance
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 264 }
+		}
+		localization_key = smoke_generator
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 265 }
+		}
+		localization_key = sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 266 }
+		}
+		localization_key = submarine_mine_laying
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 267 }
+		}
+		localization_key = iw_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 268 }
+		}
+		localization_key = iw_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 269 }
+		}
+		localization_key = iw_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 270 }
+		}
+		localization_key = bba_early_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 271 }
+		}
+		localization_key = basic_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 272 }
+		}
+		localization_key = basic_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 273 }
+		}
+		localization_key = basic_light_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 274 }
+		}
+		localization_key = basic_light_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 275 }
+		}
+		localization_key = engine_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 276 }
+		}
+		localization_key = air_torpedoe_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 277 }
+		}
+		localization_key = aircraft_construction
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 278 }
+		}
+		localization_key = armor_piercing_bombs
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 279 }
+		}
+		localization_key = armor_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 280 }
+		}
+		localization_key = basic_heavy_armor_scheme
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 281 }
+		}
+		localization_key = basic_heavy_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 282 }
+		}
+		localization_key = basic_heavy_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 283 }
+		}
+		localization_key = basic_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 284 }
+		}
+		localization_key = basic_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 285 }
+		}
+		localization_key = basic_light_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 286 }
+		}
+		localization_key = basic_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 287 }
+		}
+		localization_key = basic_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 288 }
+		}
+		localization_key = basic_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 289 }
+		}
+		localization_key = basic_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 290 }
+		}
+		localization_key = basic_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 291 }
+		}
+		localization_key = basic_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 292 }
+		}
+		localization_key = basic_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 293 }
+		}
+		localization_key = damage_control_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 294 }
+		}
+		localization_key = damage_control_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 295 }
+		}
+		localization_key = damage_control_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 296 }
+		}
+		localization_key = engines_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 297 }
+		}
+		localization_key = fire_control_methods_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 298 }
+		}
+		localization_key = fire_control_methods_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 299 }
+		}
+		localization_key = fire_control_methods_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 300 }
+		}
+		localization_key = improved_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 301 }
+		}
+		localization_key = improved_heavy_armor_scheme
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 302 }
+		}
+		localization_key = improved_light_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 303 }
+		}
+		localization_key = improved_light_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 304 }
+		}
+		localization_key = improved_naval_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 305 }
+		}
+		localization_key = improved_ship_torpedo_launcher
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 306 }
+		}
+		localization_key = improved_sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 307 }
+		}
+		localization_key = magnetic_detonator
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 308 }
+		}
+		localization_key = range_improvements
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 309 }
+		}
+		localization_key = amphibious_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 310 }
+		}
+		localization_key = armor_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 311 }
+		}
+		localization_key = basic_medium_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 312 }
+		}
+		localization_key = degaussing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 313 }
+		}
+		localization_key = engine_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 314 }
+		}
+		localization_key = sp_multi_product_supply_ships
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 315 }
+		}
+		localization_key = aa_cannon_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 316 }
+		}
+		localization_key = aa_hmg
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 317 }
+		}
+		localization_key = advanced_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 318 }
+		}
+		localization_key = advanced_sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 319 }
+		}
+		localization_key = basic_dp_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 320 }
+		}
+		localization_key = basic_medium_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 321 }
+		}
+		localization_key = basic_submarine_snorkel
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 322 }
+		}
+		localization_key = improved_heavy_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 323 }
+		}
+		localization_key = improved_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 324 }
+		}
+		localization_key = improved_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 325 }
+		}
+		localization_key = improved_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 326 }
+		}
+		localization_key = improved_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 327 }
+		}
+		localization_key = improved_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 328 }
+		}
+		localization_key = improved_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 329 }
+		}
+		localization_key = sp_aip_engine_improved_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 330 }
+		}
+		localization_key = survivability_studies
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 331 }
+		}
+		localization_key = advanced_naval_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 332 }
+		}
+		localization_key = advanced_ship_torpedo_launcher
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 333 }
+		}
+		localization_key = air_torpedoe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 334 }
+		}
+		localization_key = amphibious_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 335 }
+		}
+		localization_key = bba_improved_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 336 }
+		}
+		localization_key = engines_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 337 }
+		}
+		localization_key = heavy_bombs
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 338 }
+		}
+		localization_key = improved_dp_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 339 }
+		}
+		localization_key = improved_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 340 }
+		}
+		localization_key = improved_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 341 }
+		}
+		localization_key = improved_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 342 }
+		}
+		localization_key = improved_medium_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 343 }
+		}
+		localization_key = improved_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 344 }
+		}
+		localization_key = improved_submarine_mine_laying
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 345 }
+		}
+		localization_key = mtg_landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 346 }
+		}
+		localization_key = advanced_light_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 347 }
+		}
+		localization_key = advanced_light_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 348 }
+		}
+		localization_key = amphibious_drive
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 349 }
+		}
+		localization_key = armor_tech_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 350 }
+		}
+		localization_key = engine_tech_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 351 }
+		}
+		localization_key = improved_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 352 }
+		}
+		localization_key = improved_medium_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 353 }
+		}
+		localization_key = sp_armored_advanced_flamethrower_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 354 }
+		}
+		localization_key = super_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 355 }
+		}
+		localization_key = super_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 356 }
+		}
+		localization_key = airdrop_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 357 }
+		}
+		localization_key = airdrop_mines_bba
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 358 }
+		}
+		localization_key = airsweep_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 359 }
+		}
+		localization_key = airsweep_mines_bba
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 360 }
+		}
+		localization_key = amphibious_tank_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 361 }
+		}
+		localization_key = homing_torpedo
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 362 }
+		}
+		localization_key = improved_heavy_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 363 }
+		}
+		localization_key = improved_light_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 364 }
+		}
+		localization_key = reinforced_wings_mothership
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 365 }
+		}
+		localization_key = sp_improved_repair_ship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 366 }
+		}
+		localization_key = sp_improved_support_ship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 367 }
+		}
+		localization_key = sp_refined_pykrete
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 368 }
+		}
+		localization_key = aa_cannon_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 369 }
+		}
+		localization_key = advanced_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 370 }
+		}
+		localization_key = advanced_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 371 }
+		}
+		localization_key = advanced_medium_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 372 }
+		}
+		localization_key = advanced_medium_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 373 }
+		}
+		localization_key = advanced_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 374 }
+		}
+		localization_key = advanced_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 375 }
+		}
+		localization_key = advanced_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 376 }
+		}
+		localization_key = advanced_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 377 }
+		}
+		localization_key = advanced_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 378 }
+		}
+		localization_key = improved_submarine_snorkel
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 379 }
+		}
+		localization_key = modern_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 380 }
+		}
+		localization_key = modern_sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 381 }
+		}
+		localization_key = sp_aip_engine_advanced_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 382 }
+		}
+		localization_key = sp_armored_lc_high_impact_obliterator_cannon_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 383 }
+		}
+		localization_key = sp_armored_lc_naval_engine_conversion_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 384 }
+		}
+		localization_key = sp_armored_lc_specialized_field_manuals_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 385 }
+		}
+		localization_key = sp_armored_lc_transmission_improvements_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 386 }
+		}
+		localization_key = sp_standard_tenshioned_replenishment_alongside_method
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 387 }
+		}
+		localization_key = advanced_dp_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 388 }
+		}
+		localization_key = advanced_heavy_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 389 }
+		}
+		localization_key = advanced_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 390 }
+		}
+		localization_key = advanced_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 391 }
+		}
+		localization_key = advanced_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 392 }
+		}
+		localization_key = advanced_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 393 }
+		}
+		localization_key = air_torpedoe_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 394 }
+		}
+		localization_key = armor_tech_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 395 }
+		}
+		localization_key = engine_tech_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 396 }
+		}
+		localization_key = engines_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 397 }
+		}
+		localization_key = miniature_fighters
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 398 }
+		}
+		localization_key = modern_ship_torpedo_launcher
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 399 }
+		}
+		localization_key = mtg_tank_landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 400 }
+		}
+		localization_key = sp_ice_composite_runawayas
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 401 }
+		}
+		localization_key = aa_cannon_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 402 }
+		}
+		localization_key = bba_strategic_airlifter
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 403 }
+		}
+		localization_key = main_battle_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 404 }
+		}
+		localization_key = main_battle_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 405 }
+		}
+		localization_key = modern_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 406 }
+		}
+		localization_key = modern_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 407 }
+		}
+		localization_key = modern_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 408 }
+		}
+		localization_key = sp_armored_lc_weapon_fire_control_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 409 }
+		}
+		localization_key = sp_centrifugal_jet_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_entry = 410 }
+		}
+		localization_key = aerial_hangars
+	}
+	text = {
+		localization_key = CCP_RESEARCH_UNKNOWN
+	}
+}
+
+defined_text = {
+	name = CCP_GetTechnologySelectedName
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 0 }
+		}
+		localization_key = armored_car1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 1 }
+		}
+		localization_key = infantry_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 2 }
+		}
+		localization_key = support_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 3 }
+		}
+		localization_key = infantry_weapons1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 4 }
+		}
+		localization_key = marines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 5 }
+		}
+		localization_key = motorised_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 6 }
+		}
+		localization_key = paratroopers
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 7 }
+		}
+		localization_key = rangers_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 8 }
+		}
+		localization_key = tech_mountaineers
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 9 }
+		}
+		localization_key = tech_trucks
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 10 }
+		}
+		localization_key = infantry_weapons2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 11 }
+		}
+		localization_key = support_weapons2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 12 }
+		}
+		localization_key = tech_special_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 13 }
+		}
+		localization_key = improved_infantry_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 14 }
+		}
+		localization_key = marines2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 15 }
+		}
+		localization_key = paratroopers2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 16 }
+		}
+		localization_key = rangers_tech2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 17 }
+		}
+		localization_key = tech_mountaineers2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 18 }
+		}
+		localization_key = advanced_special_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 19 }
+		}
+		localization_key = armored_car2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 20 }
+		}
+		localization_key = improved_infantry_weapons_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 21 }
+		}
+		localization_key = improved_special_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 22 }
+		}
+		localization_key = mechanised_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 23 }
+		}
+		localization_key = support_weapons3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 24 }
+		}
+		localization_key = amphibious_mechanized_infantry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 25 }
+		}
+		localization_key = advanced_infantry_weapons
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 26 }
+		}
+		localization_key = armored_car3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 27 }
+		}
+		localization_key = extreme_environment_training
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 28 }
+		}
+		localization_key = infantry_at
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 29 }
+		}
+		localization_key = mechanised_infantry2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 30 }
+		}
+		localization_key = support_weapons4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 31 }
+		}
+		localization_key = survival_training
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 32 }
+		}
+		localization_key = amphibious_mechanized_infantry_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 33 }
+		}
+		localization_key = infantry_at2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 34 }
+		}
+		localization_key = marines3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 35 }
+		}
+		localization_key = night_vision
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 36 }
+		}
+		localization_key = paratroopers3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 37 }
+		}
+		localization_key = rangers_tech3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 38 }
+		}
+		localization_key = tech_mountaineers3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 39 }
+		}
+		localization_key = advanced_infantry_weapons2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 40 }
+		}
+		localization_key = elite_forces
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 41 }
+		}
+		localization_key = mechanised_infantry3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 42 }
+		}
+		localization_key = night_vision2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 43 }
+		}
+		localization_key = basic_train
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 44 }
+		}
+		localization_key = tech_support
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 45 }
+		}
+		localization_key = armored_train
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 46 }
+		}
+		localization_key = railway_gun
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 47 }
+		}
+		localization_key = tech_engineers
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 48 }
+		}
+		localization_key = tech_field_hospital
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 49 }
+		}
+		localization_key = tech_logistics_company
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 50 }
+		}
+		localization_key = tech_maintenance_company
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 51 }
+		}
+		localization_key = tech_military_police
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 52 }
+		}
+		localization_key = tech_recon
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 53 }
+		}
+		localization_key = tech_signal_company
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 54 }
+		}
+		localization_key = sp_armored_engineer_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 55 }
+		}
+		localization_key = sp_armored_maintenance_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 56 }
+		}
+		localization_key = sp_armored_motorized_military_police_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 57 }
+		}
+		localization_key = sp_armored_signal_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 58 }
+		}
+		localization_key = sp_helicopter_artillery_observers_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 59 }
+		}
+		localization_key = sp_helicopter_med_evac_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 60 }
+		}
+		localization_key = sp_helicopter_transport_pods_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 61 }
+		}
+		localization_key = tech_engineers2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 62 }
+		}
+		localization_key = tech_field_hospital2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 63 }
+		}
+		localization_key = tech_logistics_company2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 64 }
+		}
+		localization_key = tech_maintenance_company2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 65 }
+		}
+		localization_key = tech_military_police2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 66 }
+		}
+		localization_key = tech_recon2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 67 }
+		}
+		localization_key = tech_signal_company2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 68 }
+		}
+		localization_key = wartime_train
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 69 }
+		}
+		localization_key = tech_engineers3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 70 }
+		}
+		localization_key = tech_field_hospital3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 71 }
+		}
+		localization_key = tech_logistics_company3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 72 }
+		}
+		localization_key = tech_maintenance_company3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 73 }
+		}
+		localization_key = tech_military_police3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 74 }
+		}
+		localization_key = tech_recon3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 75 }
+		}
+		localization_key = tech_signal_company3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 76 }
+		}
+		localization_key = tech_engineers4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 77 }
+		}
+		localization_key = tech_field_hospital4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 78 }
+		}
+		localization_key = tech_logistics_company4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 79 }
+		}
+		localization_key = tech_maintenance_company4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 80 }
+		}
+		localization_key = tech_military_police4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 81 }
+		}
+		localization_key = tech_recon4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 82 }
+		}
+		localization_key = tech_signal_company4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 83 }
+		}
+		localization_key = gw_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 84 }
+		}
+		localization_key = interwar_antiair
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 85 }
+		}
+		localization_key = interwar_antitank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 86 }
+		}
+		localization_key = interwar_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 87 }
+		}
+		localization_key = antiair1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 88 }
+		}
+		localization_key = antitank1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 89 }
+		}
+		localization_key = artillery1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 90 }
+		}
+		localization_key = antiair2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 91 }
+		}
+		localization_key = antitank2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 92 }
+		}
+		localization_key = artillery2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 93 }
+		}
+		localization_key = rocket_artillery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 94 }
+		}
+		localization_key = sp_artillery_purpose_built_gun_motor_carriages_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 95 }
+		}
+		localization_key = sp_artillery_rocket_assisted_projectiles_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 96 }
+		}
+		localization_key = antiair3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 97 }
+		}
+		localization_key = antitank3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 98 }
+		}
+		localization_key = artillery3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 99 }
+		}
+		localization_key = rocket_artillery2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 100 }
+		}
+		localization_key = sp_shock_hardening_techniques
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 101 }
+		}
+		localization_key = antiair4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 102 }
+		}
+		localization_key = antitank4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 103 }
+		}
+		localization_key = artillery4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 104 }
+		}
+		localization_key = rocket_artillery3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 105 }
+		}
+		localization_key = sp_advance_sabot_shells
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 106 }
+		}
+		localization_key = sp_variable_time_fuze_shells
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 107 }
+		}
+		localization_key = antiair5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 108 }
+		}
+		localization_key = antitank5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 109 }
+		}
+		localization_key = artillery5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 110 }
+		}
+		localization_key = rocket_artillery4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 111 }
+		}
+		localization_key = early_battlecruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 112 }
+		}
+		localization_key = early_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 113 }
+		}
+		localization_key = early_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 114 }
+		}
+		localization_key = early_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 115 }
+		}
+		localization_key = early_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 116 }
+		}
+		localization_key = early_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 117 }
+		}
+		localization_key = early_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 118 }
+		}
+		localization_key = transport
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 119 }
+		}
+		localization_key = basic_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 120 }
+		}
+		localization_key = basic_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 121 }
+		}
+		localization_key = basic_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 122 }
+		}
+		localization_key = basic_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 123 }
+		}
+		localization_key = basic_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 124 }
+		}
+		localization_key = basic_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 125 }
+		}
+		localization_key = basic_battlecruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 126 }
+		}
+		localization_key = improved_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 127 }
+		}
+		localization_key = improved_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 128 }
+		}
+		localization_key = improved_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 129 }
+		}
+		localization_key = improved_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 130 }
+		}
+		localization_key = improved_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 131 }
+		}
+		localization_key = improved_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 132 }
+		}
+		localization_key = landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 133 }
+		}
+		localization_key = advanced_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 134 }
+		}
+		localization_key = advanced_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 135 }
+		}
+		localization_key = advanced_destroyer
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 136 }
+		}
+		localization_key = advanced_heavy_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 137 }
+		}
+		localization_key = advanced_light_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 138 }
+		}
+		localization_key = advanced_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 139 }
+		}
+		localization_key = heavy_battleship2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 140 }
+		}
+		localization_key = tank_landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 141 }
+		}
+		localization_key = early_bomber
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 142 }
+		}
+		localization_key = early_fighter
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 143 }
+		}
+		localization_key = early_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 144 }
+		}
+		localization_key = CAS1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 145 }
+		}
+		localization_key = fighter1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 146 }
+		}
+		localization_key = heavy_fighter1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 147 }
+		}
+		localization_key = naval_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 148 }
+		}
+		localization_key = scout_plane1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 149 }
+		}
+		localization_key = strategic_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 150 }
+		}
+		localization_key = tactical_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 151 }
+		}
+		localization_key = CAS2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 152 }
+		}
+		localization_key = fighter2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 153 }
+		}
+		localization_key = heavy_fighter2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 154 }
+		}
+		localization_key = improved_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 155 }
+		}
+		localization_key = naval_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 156 }
+		}
+		localization_key = scout_plane2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 157 }
+		}
+		localization_key = strategic_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 158 }
+		}
+		localization_key = tactical_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 159 }
+		}
+		localization_key = CAS3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 160 }
+		}
+		localization_key = fighter3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 161 }
+		}
+		localization_key = heavy_fighter3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 162 }
+		}
+		localization_key = naval_bomber3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 163 }
+		}
+		localization_key = strategic_bomber3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 164 }
+		}
+		localization_key = tactical_bomber3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 165 }
+		}
+		localization_key = jet_fighter1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 166 }
+		}
+		localization_key = jet_tactical_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 167 }
+		}
+		localization_key = strategic_airlifter
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 168 }
+		}
+		localization_key = jet_fighter2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 169 }
+		}
+		localization_key = jet_strategic_bomber1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 170 }
+		}
+		localization_key = jet_tactical_bomber2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 171 }
+		}
+		localization_key = advanced_fire_control_system
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 172 }
+		}
+		localization_key = basic_fire_control_system
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 173 }
+		}
+		localization_key = basic_fortification_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 174 }
+		}
+		localization_key = coastal_fort_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 175 }
+		}
+		localization_key = electronic_mechanical_engineering
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 176 }
+		}
+		localization_key = improved_fire_control_system
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 177 }
+		}
+		localization_key = mechanical_computing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 178 }
+		}
+		localization_key = radio
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 179 }
+		}
+		localization_key = basic_decryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 180 }
+		}
+		localization_key = basic_encryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 181 }
+		}
+		localization_key = cavity_magnatron
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 182 }
+		}
+		localization_key = computing_machine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 183 }
+		}
+		localization_key = improved_radio
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 184 }
+		}
+		localization_key = land_fort_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 185 }
+		}
+		localization_key = atomic_research
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 186 }
+		}
+		localization_key = centimetric_radar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 187 }
+		}
+		localization_key = coastal_fort_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 188 }
+		}
+		localization_key = improved_computing_machine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 189 }
+		}
+		localization_key = improved_decryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 190 }
+		}
+		localization_key = improved_encryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 191 }
+		}
+		localization_key = land_fort_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 192 }
+		}
+		localization_key = advanced_radio
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 193 }
+		}
+		localization_key = phased_array
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 194 }
+		}
+		localization_key = advanced_computing_machine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 195 }
+		}
+		localization_key = advanced_decryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 196 }
+		}
+		localization_key = advanced_encryption
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 197 }
+		}
+		localization_key = experimental_rockets
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 198 }
+		}
+		localization_key = monopulse_radar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 199 }
+		}
+		localization_key = sp_rockets_improved_guidance
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 200 }
+		}
+		localization_key = sp_rockets_dual_chamber_rocket_engine_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 201 }
+		}
+		localization_key = sp_rockets_rocket_bomber
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 202 }
+		}
+		localization_key = sp_rockets_improved_rocket_bomber
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 203 }
+		}
+		localization_key = sp_rockets_dual_chamber_rocket_engine_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 204 }
+		}
+		localization_key = basic_machine_tools
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 205 }
+		}
+		localization_key = concentrated_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 206 }
+		}
+		localization_key = construction1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 207 }
+		}
+		localization_key = dispersed_industry
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 208 }
+		}
+		localization_key = excavation1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 209 }
+		}
+		localization_key = fuel_refining
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 210 }
+		}
+		localization_key = fuel_silos
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 211 }
+		}
+		localization_key = synth_oil_experiments
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 212 }
+		}
+		localization_key = concentrated_industry2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 213 }
+		}
+		localization_key = construction2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 214 }
+		}
+		localization_key = dispersed_industry2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 215 }
+		}
+		localization_key = excavation2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 216 }
+		}
+		localization_key = fuel_refining2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 217 }
+		}
+		localization_key = improved_equipment_conversion
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 218 }
+		}
+		localization_key = improved_machine_tools
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 219 }
+		}
+		localization_key = oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 220 }
+		}
+		localization_key = rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 221 }
+		}
+		localization_key = advanced_equipment_conversion
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 222 }
+		}
+		localization_key = advanced_machine_tools
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 223 }
+		}
+		localization_key = concentrated_industry3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 224 }
+		}
+		localization_key = construction3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 225 }
+		}
+		localization_key = dispersed_industry3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 226 }
+		}
+		localization_key = excavation3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 227 }
+		}
+		localization_key = fuel_refining3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 228 }
+		}
+		localization_key = improved_oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 229 }
+		}
+		localization_key = improved_rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 230 }
+		}
+		localization_key = advanced_oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 231 }
+		}
+		localization_key = advanced_rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 232 }
+		}
+		localization_key = assembly_line_production
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 233 }
+		}
+		localization_key = concentrated_industry4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 234 }
+		}
+		localization_key = construction4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 235 }
+		}
+		localization_key = dispersed_industry4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 236 }
+		}
+		localization_key = excavation4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 237 }
+		}
+		localization_key = fuel_refining4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 238 }
+		}
+		localization_key = concentrated_industry5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 239 }
+		}
+		localization_key = construction5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 240 }
+		}
+		localization_key = dispersed_industry5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 241 }
+		}
+		localization_key = excavation5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 242 }
+		}
+		localization_key = flexible_line
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 243 }
+		}
+		localization_key = fuel_refining5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 244 }
+		}
+		localization_key = modern_oil_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 245 }
+		}
+		localization_key = modern_rubber_processing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 246 }
+		}
+		localization_key = streamlined_line
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 247 }
+		}
+		localization_key = gwtank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 248 }
+		}
+		localization_key = gwtank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 249 }
+		}
+		localization_key = aa_lmg
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 250 }
+		}
+		localization_key = basic_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 251 }
+		}
+		localization_key = basic_cruiser_armor_scheme
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 252 }
+		}
+		localization_key = basic_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 253 }
+		}
+		localization_key = basic_naval_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 254 }
+		}
+		localization_key = basic_torpedo
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 255 }
+		}
+		localization_key = early_bombs
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 256 }
+		}
+		localization_key = early_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 257 }
+		}
+		localization_key = early_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 258 }
+		}
+		localization_key = early_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 259 }
+		}
+		localization_key = early_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 260 }
+		}
+		localization_key = early_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 261 }
+		}
+		localization_key = engines_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 262 }
+		}
+		localization_key = mtg_transport
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 263 }
+		}
+		localization_key = photo_reconnaisance
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 264 }
+		}
+		localization_key = smoke_generator
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 265 }
+		}
+		localization_key = sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 266 }
+		}
+		localization_key = submarine_mine_laying
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 267 }
+		}
+		localization_key = iw_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 268 }
+		}
+		localization_key = iw_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 269 }
+		}
+		localization_key = iw_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 270 }
+		}
+		localization_key = bba_early_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 271 }
+		}
+		localization_key = basic_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 272 }
+		}
+		localization_key = basic_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 273 }
+		}
+		localization_key = basic_light_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 274 }
+		}
+		localization_key = basic_light_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 275 }
+		}
+		localization_key = engine_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 276 }
+		}
+		localization_key = air_torpedoe_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 277 }
+		}
+		localization_key = aircraft_construction
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 278 }
+		}
+		localization_key = armor_piercing_bombs
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 279 }
+		}
+		localization_key = armor_tech_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 280 }
+		}
+		localization_key = basic_heavy_armor_scheme
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 281 }
+		}
+		localization_key = basic_heavy_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 282 }
+		}
+		localization_key = basic_heavy_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 283 }
+		}
+		localization_key = basic_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 284 }
+		}
+		localization_key = basic_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 285 }
+		}
+		localization_key = basic_light_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 286 }
+		}
+		localization_key = basic_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 287 }
+		}
+		localization_key = basic_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 288 }
+		}
+		localization_key = basic_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 289 }
+		}
+		localization_key = basic_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 290 }
+		}
+		localization_key = basic_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 291 }
+		}
+		localization_key = basic_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 292 }
+		}
+		localization_key = basic_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 293 }
+		}
+		localization_key = damage_control_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 294 }
+		}
+		localization_key = damage_control_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 295 }
+		}
+		localization_key = damage_control_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 296 }
+		}
+		localization_key = engines_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 297 }
+		}
+		localization_key = fire_control_methods_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 298 }
+		}
+		localization_key = fire_control_methods_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 299 }
+		}
+		localization_key = fire_control_methods_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 300 }
+		}
+		localization_key = improved_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 301 }
+		}
+		localization_key = improved_heavy_armor_scheme
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 302 }
+		}
+		localization_key = improved_light_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 303 }
+		}
+		localization_key = improved_light_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 304 }
+		}
+		localization_key = improved_naval_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 305 }
+		}
+		localization_key = improved_ship_torpedo_launcher
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 306 }
+		}
+		localization_key = improved_sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 307 }
+		}
+		localization_key = magnetic_detonator
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 308 }
+		}
+		localization_key = range_improvements
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 309 }
+		}
+		localization_key = amphibious_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 310 }
+		}
+		localization_key = armor_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 311 }
+		}
+		localization_key = basic_medium_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 312 }
+		}
+		localization_key = degaussing
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 313 }
+		}
+		localization_key = engine_tech_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 314 }
+		}
+		localization_key = sp_multi_product_supply_ships
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 315 }
+		}
+		localization_key = aa_cannon_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 316 }
+		}
+		localization_key = aa_hmg
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 317 }
+		}
+		localization_key = advanced_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 318 }
+		}
+		localization_key = advanced_sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 319 }
+		}
+		localization_key = basic_dp_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 320 }
+		}
+		localization_key = basic_medium_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 321 }
+		}
+		localization_key = basic_submarine_snorkel
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 322 }
+		}
+		localization_key = improved_heavy_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 323 }
+		}
+		localization_key = improved_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 324 }
+		}
+		localization_key = improved_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 325 }
+		}
+		localization_key = improved_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 326 }
+		}
+		localization_key = improved_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 327 }
+		}
+		localization_key = improved_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 328 }
+		}
+		localization_key = improved_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 329 }
+		}
+		localization_key = sp_aip_engine_improved_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 330 }
+		}
+		localization_key = survivability_studies
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 331 }
+		}
+		localization_key = advanced_naval_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 332 }
+		}
+		localization_key = advanced_ship_torpedo_launcher
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 333 }
+		}
+		localization_key = air_torpedoe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 334 }
+		}
+		localization_key = amphibious_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 335 }
+		}
+		localization_key = bba_improved_transport_plane
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 336 }
+		}
+		localization_key = engines_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 337 }
+		}
+		localization_key = heavy_bombs
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 338 }
+		}
+		localization_key = improved_dp_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 339 }
+		}
+		localization_key = improved_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 340 }
+		}
+		localization_key = improved_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 341 }
+		}
+		localization_key = improved_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 342 }
+		}
+		localization_key = improved_medium_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 343 }
+		}
+		localization_key = improved_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 344 }
+		}
+		localization_key = improved_submarine_mine_laying
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 345 }
+		}
+		localization_key = mtg_landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 346 }
+		}
+		localization_key = advanced_light_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 347 }
+		}
+		localization_key = advanced_light_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 348 }
+		}
+		localization_key = amphibious_drive
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 349 }
+		}
+		localization_key = armor_tech_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 350 }
+		}
+		localization_key = engine_tech_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 351 }
+		}
+		localization_key = improved_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 352 }
+		}
+		localization_key = improved_medium_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 353 }
+		}
+		localization_key = sp_armored_advanced_flamethrower_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 354 }
+		}
+		localization_key = super_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 355 }
+		}
+		localization_key = super_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 356 }
+		}
+		localization_key = airdrop_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 357 }
+		}
+		localization_key = airdrop_mines_bba
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 358 }
+		}
+		localization_key = airsweep_mines
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 359 }
+		}
+		localization_key = airsweep_mines_bba
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 360 }
+		}
+		localization_key = amphibious_tank_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 361 }
+		}
+		localization_key = homing_torpedo
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 362 }
+		}
+		localization_key = improved_heavy_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 363 }
+		}
+		localization_key = improved_light_shell
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 364 }
+		}
+		localization_key = reinforced_wings_mothership
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 365 }
+		}
+		localization_key = sp_improved_repair_ship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 366 }
+		}
+		localization_key = sp_improved_support_ship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 367 }
+		}
+		localization_key = sp_refined_pykrete
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 368 }
+		}
+		localization_key = aa_cannon_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 369 }
+		}
+		localization_key = advanced_heavy_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 370 }
+		}
+		localization_key = advanced_heavy_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 371 }
+		}
+		localization_key = advanced_medium_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 372 }
+		}
+		localization_key = advanced_medium_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 373 }
+		}
+		localization_key = advanced_ship_hull_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 374 }
+		}
+		localization_key = advanced_ship_hull_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 375 }
+		}
+		localization_key = advanced_ship_hull_heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 376 }
+		}
+		localization_key = advanced_ship_hull_light
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 377 }
+		}
+		localization_key = advanced_ship_hull_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 378 }
+		}
+		localization_key = improved_submarine_snorkel
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 379 }
+		}
+		localization_key = modern_depth_charges
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 380 }
+		}
+		localization_key = modern_sonar
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 381 }
+		}
+		localization_key = sp_aip_engine_advanced_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 382 }
+		}
+		localization_key = sp_armored_lc_high_impact_obliterator_cannon_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 383 }
+		}
+		localization_key = sp_armored_lc_naval_engine_conversion_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 384 }
+		}
+		localization_key = sp_armored_lc_specialized_field_manuals_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 385 }
+		}
+		localization_key = sp_armored_lc_transmission_improvements_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 386 }
+		}
+		localization_key = sp_standard_tenshioned_replenishment_alongside_method
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 387 }
+		}
+		localization_key = advanced_dp_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 388 }
+		}
+		localization_key = advanced_heavy_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 389 }
+		}
+		localization_key = advanced_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 390 }
+		}
+		localization_key = advanced_light_battery
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 391 }
+		}
+		localization_key = advanced_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 392 }
+		}
+		localization_key = advanced_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 393 }
+		}
+		localization_key = air_torpedoe_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 394 }
+		}
+		localization_key = armor_tech_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 395 }
+		}
+		localization_key = engine_tech_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 396 }
+		}
+		localization_key = engines_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 397 }
+		}
+		localization_key = miniature_fighters
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 398 }
+		}
+		localization_key = modern_ship_torpedo_launcher
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 399 }
+		}
+		localization_key = mtg_tank_landing_craft
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 400 }
+		}
+		localization_key = sp_ice_composite_runawayas
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 401 }
+		}
+		localization_key = aa_cannon_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 402 }
+		}
+		localization_key = bba_strategic_airlifter
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 403 }
+		}
+		localization_key = main_battle_tank
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 404 }
+		}
+		localization_key = main_battle_tank_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 405 }
+		}
+		localization_key = modern_large_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 406 }
+		}
+		localization_key = modern_medium_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 407 }
+		}
+		localization_key = modern_small_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 408 }
+		}
+		localization_key = sp_armored_lc_weapon_fire_control_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 409 }
+		}
+		localization_key = sp_centrifugal_jet_tech
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_selected = 410 }
+		}
+		localization_key = aerial_hangars
+	}
+	text = {
+		localization_key = CCP_RESEARCH_UNKNOWN
+	}
+}
+
+defined_text = {
+	name = CCP_GetResearchFolderName
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 1 }
+		}
+		localization_key = infantry_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 2 }
+		}
+		localization_key = support_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 3 }
+		}
+		localization_key = artillery_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 4 }
+		}
+		localization_key = naval_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 5 }
+		}
+		localization_key = air_techs_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 6 }
+		}
+		localization_key = electronics_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 7 }
+		}
+		localization_key = industry_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 8 }
+		}
+		localization_key = armour_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 9 }
+		}
+		localization_key = bba_air_techs_folder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 10 }
+		}
+		localization_key = mtgnavalfolder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 11 }
+		}
+		localization_key = mtgnavalsupportfolder
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_research_folder = 12 }
+		}
+		localization_key = nsb_armour_folder
+	}
+	text = {
+		localization_key = CCP_RESEARCH_UNKNOWN
+	}
+}

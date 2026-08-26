@@ -516,6 +516,139 @@ def equipment_entry_window() -> Container:
     )
 
 
+def _browser(
+    slug: str,
+    categories: list[str],
+    category_key,
+    heading_loc: str,
+    extra: list[Widget] | None = None,
+) -> Container:
+    """A category column beside a paged list — the shape Equipment and Research share."""
+    section = Container(f"ccp_section_{slug}", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+
+    section.add(
+        Text(
+            f"ccp_{slug}_category_heading",
+            CONTENT_X,
+            BODY_TOP,
+            key="CCP_EQUIPMENT_CATEGORIES",
+            width=CATEGORY_WIDTH,
+            height=18,
+        )
+    )
+    for index, name in enumerate(categories):
+        section.add(
+            Button(
+                f"ccp_{slug}_category_{index + 1}",
+                CONTENT_X,
+                BODY_TOP + 22 + index * CATEGORY_HEIGHT,
+                sprite="GFX_ccp_sidebar_item",
+                key=category_key(name),
+                tooltip="CCP_EQUIPMENT_CATEGORY_TOOLTIP",
+            )
+        )
+
+    section.add(
+        Text(
+            f"ccp_{slug}_list_heading",
+            LIST_X,
+            BODY_TOP,
+            key=heading_loc,
+            width=LIST_WIDTH,
+            height=18,
+            font="hoi_18mbs",
+        ),
+        Grid(
+            f"ccp_{slug}_list",
+            LIST_X,
+            BODY_TOP + 24,
+            width=LIST_WIDTH,
+            height=PAGE_SIZE * ENTRY_HEIGHT,
+            slot_width=LIST_WIDTH,
+            slot_height=ENTRY_HEIGHT,
+            max_horizontal=1,
+            max_vertical=PAGE_SIZE,
+        ),
+        Button(
+            f"ccp_{slug}_prev",
+            LIST_X,
+            BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_PREV",
+            tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+        ),
+        Text(
+            f"ccp_{slug}_page_label",
+            LIST_X + t.SMALL_BUTTON_WIDTH + 12,
+            BODY_TOP + 37 + PAGE_SIZE * ENTRY_HEIGHT,
+            key=f"CCP_{slug.upper()}_PAGE",
+            width=LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            height=18,
+            align="centre",
+        ),
+        Button(
+            f"ccp_{slug}_next",
+            LIST_X + LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_NEXT",
+            tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+        ),
+    )
+    if extra:
+        section.add(*extra)
+    return section
+
+
+def _research(folders: list[str]) -> Container:
+    return _browser(
+        "research",
+        folders,
+        lambda name: name,
+        "CCP_GetResearchFolderName",
+        extra=[
+            Button(
+                "ccp_research_all",
+                LIST_X,
+                BODY_TOP + 70 + PAGE_SIZE * ENTRY_HEIGHT,
+                key="CCP_RESEARCH_ALL",
+                tooltip="CCP_RESEARCH_ALL_TOOLTIP",
+            ),
+            Text(
+                "ccp_research_all_help",
+                LIST_X + t.BUTTON_WIDTH + 12,
+                BODY_TOP + 76 + PAGE_SIZE * ENTRY_HEIGHT,
+                key="CCP_RESEARCH_ALL_HELP",
+                width=LIST_WIDTH - t.BUTTON_WIDTH - 12,
+                height=18,
+            ),
+        ],
+    )
+
+
+def research_entry_window() -> Container:
+    entry = Container("ccp_research_entry", 0, 0, width=LIST_WIDTH, height=ENTRY_HEIGHT)
+    return entry.add(
+        Icon("ccp_research_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+        Text(
+            "ccp_research_entry_name",
+            10,
+            7,
+            key="CCP_GetTechnologyName",
+            width=LIST_WIDTH - t.SMALL_BUTTON_WIDTH - 30,
+            height=18,
+        ),
+        Button(
+            "ccp_research_entry_grant",
+            LIST_WIDTH - t.SMALL_BUTTON_WIDTH - 6,
+            2,
+            sprite="GFX_ccp_button_small",
+            key="CCP_RESEARCH_GRANT",
+            tooltip="CCP_RESEARCH_GRANT_TOOLTIP",
+        ),
+    )
+
+
 SECTION_BUILDERS = {
     "dashboard": _dashboard,
     "resources": _resources,
@@ -525,10 +658,11 @@ SECTION_BUILDERS = {
 PAD_SECTIONS = ("resources", "equipment")
 
 
-def section_containers(categories: list[str]) -> dict[str, Container]:
+def section_containers(categories: list[str], folders: list[str]) -> dict[str, Container]:
     """Each registered section, built once so layout and triggers see the same tree."""
     builders = dict(SECTION_BUILDERS)
     builders["equipment"] = lambda: _equipment(categories)
+    builders["research"] = lambda: _research(folders)
     return {section.slug: builders[section.slug]() for section in SECTIONS}
 
 
@@ -537,7 +671,7 @@ def pad_widgets() -> list[Widget]:
     return _digit_pad()
 
 
-def main_window(categories: list[str]) -> Container:
+def main_window(categories: list[str], folders: list[str]) -> Container:
     window = Container(
         "ccp_main_window",
         0,
@@ -549,7 +683,7 @@ def main_window(categories: list[str]) -> Container:
     )
     window.add(*_header(), *_sidebar(), *_content_shell(), *_footer())
     window.add(*pad_widgets())
-    window.add(*section_containers(categories).values())
+    window.add(*section_containers(categories, folders).values())
     return window
 
 

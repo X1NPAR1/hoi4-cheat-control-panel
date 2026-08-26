@@ -26,6 +26,12 @@ defined_text = {
 		trigger = {
 			check_variable = { ccp_section = 4 }
 		}
+		localization_key = CCP_SECTION_RESEARCH
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_section = 5 }
+		}
 		localization_key = CCP_SECTION_SETTINGS
 	}
 	text = {
@@ -64,6 +70,18 @@ defined_text = {
 			check_variable = { ccp_status = 5 }
 		}
 		localization_key = CCP_STATUS_EQUIPMENT
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_status = 6 }
+		}
+		localization_key = CCP_STATUS_TECH
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_status = 7 }
+		}
+		localization_key = CCP_STATUS_FOLDER
 	}
 	text = {
 		localization_key = CCP_STATUS_IDLE

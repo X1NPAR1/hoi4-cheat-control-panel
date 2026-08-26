@@ -117,6 +117,16 @@ guiTypes = {
 			name = "ccp_nav_4"
 			position = { x = 0 y = 194 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_RESEARCH"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_RESEARCH_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_5"
+			position = { x = 0 y = 228 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
 			buttonText = "CCP_SECTION_SETTINGS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
@@ -1449,6 +1459,213 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "ccp_section_research"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_research_category_heading"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_EQUIPMENT_CATEGORIES"
+				maxWidth = 200
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "ccp_research_category_1"
+				position = { x = 264 y = 144 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "infantry_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_2"
+				position = { x = 264 y = 170 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "support_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_3"
+				position = { x = 264 y = 196 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "artillery_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_4"
+				position = { x = 264 y = 222 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "naval_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_5"
+				position = { x = 264 y = 248 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "air_techs_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_6"
+				position = { x = 264 y = 274 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "electronics_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_7"
+				position = { x = 264 y = 300 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "industry_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_8"
+				position = { x = 264 y = 326 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "armour_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_9"
+				position = { x = 264 y = 352 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "bba_air_techs_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_10"
+				position = { x = 264 y = 378 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "mtgnavalfolder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_11"
+				position = { x = 264 y = 404 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "mtgnavalsupportfolder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_12"
+				position = { x = 264 y = 430 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "nsb_armour_folder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_research_list_heading"
+				position = { x = 480 y = 122 }
+				font = "hoi_18mbs"
+				text = "[CCP_GetResearchFolderName]"
+				maxWidth = 568
+				maxHeight = 18
+				format = left
+			}
+
+			gridboxType = {
+				name = "ccp_research_list"
+				position = { x = 480 y = 146 }
+				size = { width = 568 height = 512 }
+				slotsize = { width = 568 height = 32 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+				max_slots_vertical = 16
+			}
+
+			buttonType = {
+				name = "ccp_research_prev"
+				position = { x = 480 y = 666 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_PREV"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_PREV_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_research_page_label"
+				position = { x = 588 y = 671 }
+				font = "hoi_16mbs"
+				text = "CCP_RESEARCH_PAGE"
+				maxWidth = 352
+				maxHeight = 18
+				format = centre
+			}
+
+			buttonType = {
+				name = "ccp_research_next"
+				position = { x = 952 y = 666 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_NEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_all"
+				position = { x = 480 y = 704 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "CCP_RESEARCH_ALL"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_RESEARCH_ALL_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_research_all_help"
+				position = { x = 624 y = 710 }
+				font = "hoi_16mbs"
+				text = "CCP_RESEARCH_ALL_HELP"
+				maxWidth = 424
+				maxHeight = 18
+				format = left
+			}
+		}
+
+		containerWindowType = {
 			name = "ccp_section_settings"
 			position = { x = 0 y = 0 }
 			size = { width = 1280 height = 780 }
@@ -1625,6 +1842,39 @@ guiTypes = {
 			buttonText = "CCP_EQUIPMENT_ADD"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_EQUIPMENT_ADD_TOOLTIP"
+			clicksound = click_default
+		}
+	}
+
+	containerWindowType = {
+		name = "ccp_research_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 568 height = 32 }
+		moveable = no
+
+		iconType = {
+			name = "ccp_research_entry_plate"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_list_row"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_research_entry_name"
+			position = { x = 10 y = 7 }
+			font = "hoi_16mbs"
+			text = "[CCP_GetTechnologyName]"
+			maxWidth = 442
+			maxHeight = 18
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_research_entry_grant"
+			position = { x = 466 y = 2 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_RESEARCH_GRANT"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_RESEARCH_GRANT_TOOLTIP"
 			clicksound = click_default
 		}
 	}

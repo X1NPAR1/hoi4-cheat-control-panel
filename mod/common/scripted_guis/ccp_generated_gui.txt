@@ -100,6 +100,9 @@ scripted_gui = {
 				CCP_show_equipment = yes
 			}
 			ccp_nav_4_click = {
+				CCP_show_research = yes
+			}
+			ccp_nav_5_click = {
 				CCP_show_settings = yes
 			}
 			ccp_hotkey_choice_1_click = {
@@ -325,6 +328,55 @@ scripted_gui = {
 			ccp_equipment_entry_latest_click = {
 				set_variable = { ccp_equipment_selected = var:ccp_entry }
 				CCP_equipment_grant_latest = yes
+			}
+			ccp_research_category_1_click = {
+				CCP_research_select_infantry_folder = yes
+			}
+			ccp_research_category_2_click = {
+				CCP_research_select_support_folder = yes
+			}
+			ccp_research_category_3_click = {
+				CCP_research_select_artillery_folder = yes
+			}
+			ccp_research_category_4_click = {
+				CCP_research_select_naval_folder = yes
+			}
+			ccp_research_category_5_click = {
+				CCP_research_select_air_techs_folder = yes
+			}
+			ccp_research_category_6_click = {
+				CCP_research_select_electronics_folder = yes
+			}
+			ccp_research_category_7_click = {
+				CCP_research_select_industry_folder = yes
+			}
+			ccp_research_category_8_click = {
+				CCP_research_select_armour_folder = yes
+			}
+			ccp_research_category_9_click = {
+				CCP_research_select_bba_air_techs_folder = yes
+			}
+			ccp_research_category_10_click = {
+				CCP_research_select_mtgnavalfolder = yes
+			}
+			ccp_research_category_11_click = {
+				CCP_research_select_mtgnavalsupportfolder = yes
+			}
+			ccp_research_category_12_click = {
+				CCP_research_select_nsb_armour_folder = yes
+			}
+			ccp_research_prev_click = {
+				CCP_research_prev_page = yes
+			}
+			ccp_research_next_click = {
+				CCP_research_next_page = yes
+			}
+			ccp_research_all_click = {
+				CCP_research_grant_folder = yes
+			}
+			ccp_research_entry_grant_click = {
+				set_variable = { ccp_research_selected = var:ccp_research_entry }
+				CCP_research_grant = yes
 			}
 		}
 
@@ -638,44 +690,104 @@ scripted_gui = {
 			ccp_equipment_next_visible = {
 				check_variable = { ccp_section = 3 }
 			}
-			ccp_settings_hotkey_label_visible = {
+			ccp_research_category_heading_visible = {
 				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_1_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_2_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_3_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_4_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_5_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_6_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_7_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_8_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_9_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_10_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_11_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_category_12_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_list_heading_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_list_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_prev_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_page_label_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_next_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_all_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_research_all_help_visible = {
+				check_variable = { ccp_section = 4 }
+			}
+			ccp_settings_hotkey_label_visible = {
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_settings_hotkey_help_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_hotkey_choice_1_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_hotkey_choice_2_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_hotkey_choice_3_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_hotkey_choice_4_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_hotkey_choice_5_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_settings_hotkey_current_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_settings_confirm_label_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_settings_confirm_help_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_confirm_toggle_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_settings_language_label_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_settings_language_help_visible = {
-				check_variable = { ccp_section = 4 }
+				check_variable = { ccp_section = 5 }
 			}
 			ccp_hotkey_choice_1_click_enabled = {
 				NOT = { check_variable = { ccp_hotkey_id = 1 } }
@@ -794,6 +906,12 @@ scripted_gui = {
 			ccp_equipment_next_click_enabled = {
 				check_variable = { ccp_equipment_page < ccp_equipment_pages_last }
 			}
+			ccp_research_prev_click_enabled = {
+				check_variable = { ccp_research_page > 0 }
+			}
+			ccp_research_next_click_enabled = {
+				check_variable = { ccp_research_page < ccp_research_pages_last }
+			}
 		}
 
 		properties = {
@@ -808,6 +926,12 @@ scripted_gui = {
 				value = ccp_entry
 				index = ccp_entry_index
 				entry_container = "ccp_equipment_entry"
+			}
+			ccp_research_list = {
+				array = ccp_research_page_items
+				value = ccp_research_entry
+				index = ccp_research_entry_index
+				entry_container = "ccp_research_entry"
 			}
 		}
 	}

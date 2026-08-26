@@ -15,6 +15,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccp import interface
 from ccp.equipment import group_by_category, load_catalogue
+from ccp.technology import group_by_folder
+from ccp.technology import load_catalogue as load_technologies
 from ccp.layout import emit_file
 from ccp.meta import descriptor
 from ccp.scripts import emit_core_effects, emit_scripted_gui, emit_scripted_localisation
@@ -38,20 +40,25 @@ def main() -> int:
     game_dir = find_game_dir(None)
     version = game_version(game_dir)
     categories = list(group_by_category(load_catalogue(game_dir)))
+    folders = list(group_by_folder(load_technologies(game_dir)))
     print(f"Target game version: {version}\n")
 
     print("Written:")
     write(MOD / "descriptor.mod", descriptor())
     write(
         MOD / "interface" / "ccp_main.gui",
-        emit_file(interface.main_window(categories), interface.equipment_entry_window()),
+        emit_file(
+            interface.main_window(categories, folders),
+            interface.equipment_entry_window(),
+            interface.research_entry_window(),
+        ),
     )
     write(MOD / "interface" / "ccp_launcher.gui", emit_file(interface.launcher_window()))
     write(MOD / "interface" / "ccp_hotkeys.gui", emit_file(interface.hotkey_window()))
 
     write(
         MOD / "common" / "scripted_guis" / "ccp_generated_gui.txt",
-        emit_scripted_gui(version, categories),
+        emit_scripted_gui(version, categories, folders),
     )
     write(
         MOD / "common" / "scripted_effects" / "ccp_generated_core.txt",

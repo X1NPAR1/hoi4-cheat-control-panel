@@ -381,6 +381,65 @@ TRANSLATED: dict[str, Row] = {
         "[?ccp_amount|0] × [CCP_GetEquipmentSelectedName] eklendi.",
         "[?ccp_amount|0] × [CCP_GetEquipmentSelectedName] toegevoegd.",
     ),
+    "CCP_RESEARCH_GRANT": _row(
+        "RESEARCH", "ERFORSCHEN", "RECHERCHER", "ИЗУЧИТЬ", "ARAŞTIR", "ONDERZOEK"
+    ),
+    "CCP_RESEARCH_GRANT_TOOLTIP": _row(
+        "Complete this technology immediately.",
+        "Schliesst diese Technologie sofort ab.",
+        "Termine cette technologie immédiatement.",
+        "Мгновенно завершает эту технологию.",
+        "Bu teknolojiyi anında tamamlar.",
+        "Voltooit deze technologie onmiddellijk.",
+    ),
+    "CCP_RESEARCH_ALL": _row(
+        "RESEARCH FOLDER", "ORDNER ERFORSCHEN", "TOUT LE DOSSIER",
+        "ВСЮ ПАПКУ", "KLASÖRÜ ARAŞTIR", "HELE MAP",
+    ),
+    "CCP_RESEARCH_ALL_TOOLTIP": _row(
+        "Complete every technology in the selected folder.",
+        "Schliesst jede Technologie im gewählten Ordner ab.",
+        "Termine toutes les technologies du dossier sélectionné.",
+        "Завершает все технологии выбранной папки.",
+        "Seçili klasördeki tüm teknolojileri tamamlar.",
+        "Voltooit elke technologie in de gekozen map.",
+    ),
+    "CCP_RESEARCH_ALL_HELP": _row(
+        "Doctrines use a separate system and cannot be granted with this effect.",
+        "Doktrinen nutzen ein eigenes System und lassen sich damit nicht vergeben.",
+        "Les doctrines utilisent un système distinct et ne peuvent pas être accordées ici.",
+        "Доктрины используют отдельную систему и здесь недоступны.",
+        "Doktrinler ayrı bir sistem kullanır ve buradan verilemez.",
+        "Doctrines gebruiken een apart systeem en kunnen hier niet worden toegekend.",
+    ),
+    "CCP_RESEARCH_PAGE": _row(
+        "Page [?ccp_research_page|+0] of [?ccp_research_pages_last|+0]",
+        "Seite [?ccp_research_page|+0] von [?ccp_research_pages_last|+0]",
+        "Page [?ccp_research_page|+0] sur [?ccp_research_pages_last|+0]",
+        "Страница [?ccp_research_page|+0] из [?ccp_research_pages_last|+0]",
+        "Sayfa [?ccp_research_page|+0] / [?ccp_research_pages_last|+0]",
+        "Pagina [?ccp_research_page|+0] van [?ccp_research_pages_last|+0]",
+    ),
+    "CCP_RESEARCH_UNKNOWN": _row(
+        "Unknown technology", "Unbekannte Technologie", "Technologie inconnue",
+        "Неизвестная технология", "Bilinmeyen teknoloji", "Onbekende technologie",
+    ),
+    "CCP_STATUS_TECH": _row(
+        "Researched [CCP_GetTechnologySelectedName].",
+        "[CCP_GetTechnologySelectedName] erforscht.",
+        "[CCP_GetTechnologySelectedName] recherché.",
+        "Изучено: [CCP_GetTechnologySelectedName].",
+        "[CCP_GetTechnologySelectedName] araştırıldı.",
+        "[CCP_GetTechnologySelectedName] onderzocht.",
+    ),
+    "CCP_STATUS_FOLDER": _row(
+        "Researched every technology in [CCP_GetResearchFolderName].",
+        "Jede Technologie in [CCP_GetResearchFolderName] erforscht.",
+        "Toutes les technologies de [CCP_GetResearchFolderName] recherchées.",
+        "Изучены все технологии в разделе [CCP_GetResearchFolderName].",
+        "[CCP_GetResearchFolderName] içindeki tüm teknolojiler araştırıldı.",
+        "Elke technologie in [CCP_GetResearchFolderName] onderzocht.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",
@@ -431,6 +490,9 @@ SECTION_NAMES: dict[str, Row] = {
     "equipment": _row(
         "Equipment", "Ausrüstung", "Équipement", "Снаряжение", "Teçhizat", "Uitrusting"
     ),
+    "research": _row(
+        "Research", "Forschung", "Recherche", "Исследования", "Araştırma", "Onderzoek"
+    ),
     "settings": _row(
         "Settings", "Einstellungen", "Paramètres", "Настройки", "Ayarlar", "Instellingen"
     ),
@@ -460,6 +522,14 @@ SECTION_TOOLTIPS: dict[str, Row] = {
         "Добавляет на склад любое снаряжение из вашей установки.",
         "Kurulumunuzdaki her teçhizatı stoğa ekler.",
         "Voegt elke uitrusting uit je installatie toe aan de voorraad.",
+    ),
+    "research": _row(
+        "Grant technologies one at a time or a whole research folder at once.",
+        "Vergibt Technologien einzeln oder einen ganzen Forschungsordner auf einmal.",
+        "Accorde des technologies une par une ou un dossier de recherche entier.",
+        "Выдаёт технологии по одной или целую папку исследований сразу.",
+        "Teknolojileri tek tek ya da bir araştırma klasörünü topluca verir.",
+        "Kent technologieën één voor één of een hele onderzoeksmap in één keer toe.",
     ),
     "settings": _row(
         "Change the hotkey and the confirmation behaviour.",
