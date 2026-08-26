@@ -1,0 +1,75 @@
+"""Regenerates the panel's interface, scripts and hand-authored localisation.
+
+    python tools/build_interface.py
+
+Everything it writes is derived from the registries in tools/ccp/, so layout,
+navigation, effects and strings are guaranteed to agree with each other.
+"""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from ccp import interface
+from ccp.layout import emit_file
+from ccp.meta import descriptor
+from ccp.scripts import emit_core_effects, emit_scripted_gui, emit_scripted_localisation
+from ccp.strings import LANGUAGES, emit_localisation
+from generate_data import find_game_dir, game_version
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+MOD = REPO_ROOT / "mod"
+
+
+def write(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    encoding = "utf-8-sig" if path.suffix == ".yml" else "utf-8"
+    path.write_text(content, encoding=encoding, newline="\n")
+    print(f"  {path.relative_to(REPO_ROOT).as_posix():<62} {len(content.splitlines()):>5} lines")
+
+
+def main() -> int:
+    version = game_version(find_game_dir(None))
+    print(f"Target game version: {version}\n")
+
+    print("Written:")
+    write(MOD / "descriptor.mod", descriptor())
+    write(MOD / "interface" / "ccp_main.gui", emit_file(interface.main_window()))
+    write(MOD / "interface" / "ccp_launcher.gui", emit_file(interface.launcher_window()))
+    write(MOD / "interface" / "ccp_hotkeys.gui", emit_file(interface.hotkey_window()))
+
+    write(
+        MOD / "common" / "scripted_guis" / "ccp_generated_gui.txt",
+        emit_scripted_gui(version),
+    )
+    write(
+        MOD / "common" / "scripted_effects" / "ccp_generated_core.txt",
+        emit_core_effects(version),
+    )
+    write(
+        MOD / "common" / "scripted_localisation" / "ccp_generated_core_loc.txt",
+        emit_scripted_localisation(version),
+    )
+
+    for language in LANGUAGES:
+        write(
+            MOD / "localisation" / language / f"ccp_core_l_{language}.yml",
+            emit_localisation(language),
+        )
+
+    for stale in (
+        MOD / "common" / "scripted_guis" / "ccp_main.txt",
+        MOD / "common" / "scripted_effects" / "ccp_core_effects.txt",
+    ):
+        if stale.is_file():
+            stale.unlink()
+            print(f"  removed superseded {stale.relative_to(REPO_ROOT).as_posix()}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

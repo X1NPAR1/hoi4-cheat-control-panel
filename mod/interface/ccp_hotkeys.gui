@@ -1,9 +1,13 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/build_interface.py from tools/ccp/interface.py.
+
 guiTypes = {
 
 	containerWindowType = {
 		name = "ccp_hotkey_listener_window"
 		position = { x = 0 y = 0 }
 		size = { width = 8 height = 8 }
+		moveable = no
 		clipping = no
 
 		buttonType = {

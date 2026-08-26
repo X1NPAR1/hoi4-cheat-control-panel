@@ -1,3 +1,6 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/build_interface.py from tools/ccp/interface.py.
+
 guiTypes = {
 
 	containerWindowType = {
@@ -10,35 +13,35 @@ guiTypes = {
 
 		iconType = {
 			name = "ccp_body_plate"
-			spriteType = "GFX_ccp_panel_body"
 			position = { x = 0 y = 56 }
+			spriteType = "GFX_ccp_panel_body"
 		}
 
 		iconType = {
 			name = "ccp_header_plate"
-			spriteType = "GFX_ccp_panel_header"
 			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_panel_header"
 		}
 
 		iconType = {
 			name = "ccp_header_logo"
-			spriteType = "GFX_ccp_logo"
 			position = { x = 12 y = 8 }
+			spriteType = "GFX_ccp_logo"
 		}
 
 		instantTextBoxType = {
 			name = "ccp_header_title"
-			position = { x = 64 y = 12 }
+			position = { x = 64 y = 9 }
 			font = "hoi_20b"
 			text = "CCP_TITLE"
-			maxWidth = 480
+			maxWidth = 520
 			maxHeight = 24
 			format = left
 		}
 
 		instantTextBoxType = {
 			name = "ccp_header_subtitle"
-			position = { x = 64 y = 33 }
+			position = { x = 64 y = 32 }
 			font = "hoi_16mbs"
 			text = "CCP_SUBTITLE"
 			maxWidth = 640
@@ -49,18 +52,18 @@ guiTypes = {
 		buttonType = {
 			name = "ccp_close"
 			position = { x = -144 y = 13 }
-			orientation = upper_right
 			quadTextureSprite = "GFX_ccp_button"
 			buttonText = "CCP_BUTTON_CLOSE"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_TOOLTIP_CLOSE"
 			clicksound = click_close
+			orientation = upper_right
 		}
 
 		iconType = {
 			name = "ccp_sidebar_plate"
-			spriteType = "GFX_ccp_panel_sidebar"
 			position = { x = 0 y = 56 }
+			spriteType = "GFX_ccp_panel_sidebar"
 		}
 
 		instantTextBoxType = {
@@ -73,11 +76,38 @@ guiTypes = {
 			format = left
 		}
 
+		iconType = {
+			name = "ccp_nav_highlight"
+			position = { x = 0 y = 92 }
+			spriteType = "GFX_ccp_sidebar_item"
+			frame = 3
+		}
+
+		buttonType = {
+			name = "ccp_nav_1"
+			position = { x = 0 y = 92 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_DASHBOARD"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_DASHBOARD_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_2"
+			position = { x = 0 y = 126 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_SETTINGS"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
+			clicksound = click_default
+		}
+
 		instantTextBoxType = {
-			name = "ccp_content_placeholder"
+			name = "ccp_content_heading"
 			position = { x = 264 y = 76 }
-			font = "hoi_18mbs"
-			text = "CCP_DASHBOARD_HEADING"
+			font = "hoi_20b"
+			text = "[CCP_GetSectionName]"
 			maxWidth = 992
 			maxHeight = 24
 			format = left
@@ -85,45 +115,474 @@ guiTypes = {
 
 		iconType = {
 			name = "ccp_content_divider"
+			position = { x = 264 y = 106 }
 			spriteType = "GFX_ccp_divider"
-			position = { x = 264 y = 102 }
-		}
-
-		instantTextBoxType = {
-			name = "ccp_content_country"
-			position = { x = 264 y = 116 }
-			font = "hoi_16mbs"
-			text = "CCP_DASHBOARD_COUNTRY"
-			maxWidth = 992
-			maxHeight = 20
-			format = left
 		}
 
 		iconType = {
 			name = "ccp_footer_plate"
-			spriteType = "GFX_ccp_panel_footer"
 			position = { x = 0 y = 746 }
+			spriteType = "GFX_ccp_panel_footer"
 		}
 
 		instantTextBoxType = {
-			name = "ccp_footer_version"
+			name = "ccp_footer_status"
 			position = { x = 16 y = 754 }
 			font = "hoi_16mbs"
-			text = "CCP_FOOTER_VERSION"
-			maxWidth = 400
+			text = "[CCP_GetStatus]"
+			maxWidth = 760
 			maxHeight = 18
 			format = left
 		}
 
 		instantTextBoxType = {
 			name = "ccp_footer_hint"
-			position = { x = -520 y = 754 }
-			orientation = upper_right
+			position = { x = -496 y = 754 }
 			font = "hoi_16mbs"
 			text = "CCP_FOOTER_HINT"
-			maxWidth = 504
+			maxWidth = 480
 			maxHeight = 18
 			format = right
+			orientation = upper_right
+		}
+
+		containerWindowType = {
+			name = "ccp_section_dashboard"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			containerWindowType = {
+				name = "ccp_card_country"
+				position = { x = 264 y = 122 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_country_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_country_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_COUNTRY"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_COUNTRY_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_country_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_COUNTRY_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_COUNTRY_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_political_power"
+				position = { x = 600 y = 122 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_political_power_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_political_power_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_PP"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_PP_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_political_power_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_PP_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_PP_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_command_power"
+				position = { x = 936 y = 122 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_command_power_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_command_power_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_CP"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_CP_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_command_power_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_CP_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_CP_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_manpower"
+				position = { x = 264 y = 234 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_manpower_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_manpower_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_MANPOWER"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_MANPOWER_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_manpower_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_MANPOWER_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_MANPOWER_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_army_xp"
+				position = { x = 600 y = 234 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_army_xp_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_army_xp_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_ARMY_XP"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_ARMY_XP_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_army_xp_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_ARMY_XP_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_ARMY_XP_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_navy_xp"
+				position = { x = 936 y = 234 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_navy_xp_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_navy_xp_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_NAVY_XP"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_NAVY_XP_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_navy_xp_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_NAVY_XP_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_NAVY_XP_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_air_xp"
+				position = { x = 264 y = 346 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_air_xp_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_air_xp_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_AIR_XP"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_AIR_XP_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_air_xp_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_AIR_XP_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_AIR_XP_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_stability"
+				position = { x = 600 y = 346 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_stability_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_stability_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_STABILITY"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_STABILITY_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_stability_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_STABILITY_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_STABILITY_TOOLTIP"
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_card_factories"
+				position = { x = 936 y = 346 }
+				size = { width = 320 height = 96 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_card_factories_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_factories_label"
+					position = { x = 16 y = 14 }
+					font = "hoi_16mbs"
+					text = "CCP_CARD_FACTORIES"
+					maxWidth = 288
+					maxHeight = 18
+					format = left
+					pdx_tooltip = "CCP_CARD_FACTORIES_TOOLTIP"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_card_factories_value"
+					position = { x = 16 y = 40 }
+					font = "hoi_24header"
+					text = "CCP_CARD_FACTORIES_VALUE"
+					maxWidth = 288
+					maxHeight = 36
+					format = left
+					pdx_tooltip = "CCP_CARD_FACTORIES_TOOLTIP"
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "ccp_section_settings"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_settings_hotkey_label"
+				position = { x = 264 y = 122 }
+				font = "hoi_18mbs"
+				text = "CCP_SETTINGS_HOTKEY"
+				maxWidth = 992
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_hotkey_help"
+				position = { x = 264 y = 146 }
+				font = "hoi_16mbs"
+				text = "CCP_SETTINGS_HOTKEY_HELP"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "ccp_hotkey_choice_1"
+				position = { x = 264 y = 176 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "CCP_HOTKEY_1"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_HOTKEY_1_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_hotkey_choice_2"
+				position = { x = 404 y = 176 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "CCP_HOTKEY_2"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_HOTKEY_2_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_hotkey_choice_3"
+				position = { x = 544 y = 176 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "CCP_HOTKEY_3"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_HOTKEY_3_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_hotkey_choice_4"
+				position = { x = 684 y = 176 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "CCP_HOTKEY_4"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_HOTKEY_4_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_hotkey_choice_5"
+				position = { x = 824 y = 176 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "CCP_HOTKEY_5"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_HOTKEY_5_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_hotkey_current"
+				position = { x = 264 y = 216 }
+				font = "hoi_16mbs"
+				text = "CCP_SETTINGS_HOTKEY_CURRENT"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_confirm_label"
+				position = { x = 264 y = 262 }
+				font = "hoi_18mbs"
+				text = "CCP_SETTINGS_CONFIRM"
+				maxWidth = 992
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_confirm_help"
+				position = { x = 264 y = 286 }
+				font = "hoi_16mbs"
+				text = "CCP_SETTINGS_CONFIRM_HELP"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			buttonType = {
+				name = "ccp_confirm_toggle"
+				position = { x = 264 y = 316 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "[CCP_GetConfirmState]"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_SETTINGS_CONFIRM_TOOLTIP"
+				clicksound = click_default
+			}
 		}
 	}
 }

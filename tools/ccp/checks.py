@@ -181,9 +181,65 @@ def check_referenced_localisation_keys(mod_dir: Path, report: Report) -> None:
             report.error(f"{path}: `{key}` has no english localisation entry")
 
 
+SPRITE_DEFINITION = re.compile(r'name\s*=\s*"(GFX_[A-Za-z0-9_]+)"')
+SPRITE_TEXTURE = re.compile(r'texturefile\s*=\s*"([^"]+)"')
+SPRITE_USE = re.compile(r'(?:spriteType|quadTextureSprite)\s*=\s*"(GFX_[A-Za-z0-9_]+)"')
+WIDGET_NAME = re.compile(r'name\s*=\s*"(ccp_[A-Za-z0-9_]+)"')
+
+SCRIPTED_GUI_SUFFIXES = (
+    "_click",
+    "_click_enabled",
+    "_visible",
+    "_alt_click",
+    "_right_click",
+    "_shift_click",
+    "_control_click",
+    "_alt_right_click",
+)
+
+
+def check_sprite_references(mod_dir: Path, report: Report) -> None:
+    defined: set[str] = set()
+    for path in sorted(mod_dir.rglob("*.gfx")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        defined |= set(SPRITE_DEFINITION.findall(text))
+        for texture in SPRITE_TEXTURE.findall(text):
+            if not (mod_dir / texture).is_file():
+                report.error(f"{path}: texture `{texture}` does not exist")
+
+    for path in sorted(mod_dir.rglob("*.gui")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for sprite in sorted(set(SPRITE_USE.findall(text))):
+            if sprite.startswith("GFX_ccp_") and sprite not in defined:
+                report.error(f"{path}: `{sprite}` is not defined in any .gfx file")
+
+
+def check_gui_element_references(mod_dir: Path, report: Report) -> None:
+    """Scripted GUI effects, triggers and properties must name a widget that exists."""
+    widgets: set[str] = set()
+    for path in sorted(mod_dir.rglob("*.gui")):
+        widgets |= set(WIDGET_NAME.findall(path.read_text(encoding="utf-8-sig", errors="replace")))
+
+    handler = re.compile(r"^\s*(ccp_[A-Za-z0-9_]+)\s*=\s*\{", re.MULTILINE)
+    for path in sorted((mod_dir / "common" / "scripted_guis").glob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for name in sorted(set(handler.findall(text))):
+            for suffix in SCRIPTED_GUI_SUFFIXES:
+                if name.endswith(suffix):
+                    widget = name[: -len(suffix)]
+                    if widget not in widgets:
+                        report.error(
+                            f"{path}: `{name}` targets widget `{widget}`, "
+                            "which no .gui file defines"
+                        )
+                    break
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
+    ("sprite references", lambda repo, mod, rep: check_sprite_references(mod, rep)),
+    ("gui element references", lambda repo, mod, rep: check_gui_element_references(mod, rep)),
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),
