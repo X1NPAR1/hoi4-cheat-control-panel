@@ -106,9 +106,30 @@ CCP_show_states = {
 	CCP_mark_dirty = yes
 }
 
-CCP_show_settings = {
+CCP_show_nation = {
 	set_variable = { ccp_section = 7 }
 	set_variable = { ccp_nav_highlight_y = 296 }
+	set_variable = { ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_construction = {
+	set_variable = { ccp_section = 8 }
+	set_variable = { ccp_nav_highlight_y = 330 }
+	set_variable = { ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_commanders = {
+	set_variable = { ccp_section = 9 }
+	set_variable = { ccp_nav_highlight_y = 364 }
+	set_variable = { ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_settings = {
+	set_variable = { ccp_section = 10 }
+	set_variable = { ccp_nav_highlight_y = 398 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }

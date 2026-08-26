@@ -147,6 +147,36 @@ guiTypes = {
 			name = "ccp_nav_7"
 			position = { x = 0 y = 296 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_NATION"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_NATION_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_8"
+			position = { x = 0 y = 330 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_CONSTRUCTION"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_CONSTRUCTION_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_9"
+			position = { x = 0 y = 364 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_COMMANDERS"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_COMMANDERS_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_10"
+			position = { x = 0 y = 398 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
 			buttonText = "CCP_SECTION_SETTINGS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
@@ -1806,6 +1836,750 @@ guiTypes = {
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
 				clicksound = click_default
+			}
+		}
+
+		containerWindowType = {
+			name = "ccp_section_nation"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_nation_help"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_NATION_HELP"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			containerWindowType = {
+				name = "ccp_action_stability_max"
+				position = { x = 264 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_stability_max_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_stability_max_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_STABILITY_MAX_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_stability_max_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_STABILITY_MAX"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_STABILITY_MAX_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_war_support_max"
+				position = { x = 596 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_war_support_max_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_war_support_max_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_WAR_SUPPORT_MAX_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_war_support_max_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_WAR_SUPPORT_MAX"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_WAR_SUPPORT_MAX_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_stability_min"
+				position = { x = 928 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_stability_min_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_stability_min_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_STABILITY_MIN_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_stability_min_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button_danger"
+					buttonText = "CCP_ACTION_STABILITY_MIN"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_STABILITY_MIN_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_war_support_min"
+				position = { x = 264 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_war_support_min_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_war_support_min_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_WAR_SUPPORT_MIN_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_war_support_min_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button_danger"
+					buttonText = "CCP_ACTION_WAR_SUPPORT_MIN"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_WAR_SUPPORT_MIN_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_research_slots"
+				position = { x = 596 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_research_slots_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_research_slots_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_RESEARCH_SLOTS_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_research_slots_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_RESEARCH_SLOTS"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_RESEARCH_SLOTS_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_fuel"
+				position = { x = 928 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_fuel_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_fuel_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_FUEL_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_fuel_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_FUEL"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_FUEL_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "ccp_section_construction"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_construction_help"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_CONSTRUCTION_HELP"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			containerWindowType = {
+				name = "ccp_action_infrastructure"
+				position = { x = 264 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_infrastructure_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_infrastructure_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_INFRASTRUCTURE_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_infrastructure_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_INFRASTRUCTURE"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_INFRASTRUCTURE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_civilian"
+				position = { x = 596 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_civilian_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_civilian_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_CIVILIAN_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_civilian_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_CIVILIAN"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_CIVILIAN_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_military"
+				position = { x = 928 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_military_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_military_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_MILITARY_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_military_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_MILITARY"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_MILITARY_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_dockyard"
+				position = { x = 264 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_dockyard_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_dockyard_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_DOCKYARD_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_dockyard_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_DOCKYARD"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_DOCKYARD_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_airbase"
+				position = { x = 596 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_airbase_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_airbase_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_AIRBASE_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_airbase_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_AIRBASE"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_AIRBASE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_radar"
+				position = { x = 928 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_radar_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_radar_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_RADAR_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_radar_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_RADAR"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_RADAR_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_antiair"
+				position = { x = 264 y = 324 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_antiair_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_antiair_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_ANTIAIR_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_antiair_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_ANTIAIR"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_ANTIAIR_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_offsite_civilian"
+				position = { x = 596 y = 324 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_offsite_civilian_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_offsite_civilian_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_OFFSITE_CIVILIAN_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_offsite_civilian_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_OFFSITE_CIVILIAN"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_OFFSITE_CIVILIAN_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_offsite_military"
+				position = { x = 928 y = 324 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_offsite_military_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_offsite_military_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_OFFSITE_MILITARY_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_offsite_military_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_OFFSITE_MILITARY"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_OFFSITE_MILITARY_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "ccp_section_commanders"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_commanders_help"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_COMMANDERS_HELP"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			containerWindowType = {
+				name = "ccp_action_army_xp"
+				position = { x = 264 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_army_xp_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_army_xp_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_ARMY_XP_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_army_xp_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_ARMY_XP"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_ARMY_XP_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_navy_xp"
+				position = { x = 596 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_navy_xp_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_navy_xp_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_NAVY_XP_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_navy_xp_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_NAVY_XP"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_NAVY_XP_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_attack"
+				position = { x = 928 y = 152 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_attack_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_attack_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_ATTACK_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_attack_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_ATTACK"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_ATTACK_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_defense"
+				position = { x = 264 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_defense_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_defense_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_DEFENSE_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_defense_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_DEFENSE"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_DEFENSE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_planning"
+				position = { x = 596 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_planning_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_planning_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_PLANNING_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_planning_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_PLANNING"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_PLANNING_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_logistics"
+				position = { x = 928 y = 238 }
+				size = { width = 320 height = 74 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_logistics_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_card"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_logistics_help"
+					position = { x = 12 y = 8 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_LOGISTICS_HELP"
+					maxWidth = 296
+					maxHeight = 30
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_logistics_run"
+					position = { x = 12 y = 34 }
+					quadTextureSprite = "GFX_ccp_button"
+					buttonText = "CCP_ACTION_LOGISTICS"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_LOGISTICS_TOOLTIP"
+					clicksound = click_default
+				}
 			}
 		}
 

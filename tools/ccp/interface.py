@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from . import theme as t
 from .layout import Button, Container, Grid, Icon, Text, Widget
+from .actions import BY_SECTION as ACTION_SECTIONS
 from .countries import ACTIONS
 from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
 from .sections import HOTKEYS, SECTIONS
@@ -922,6 +923,61 @@ def state_picker_window() -> Container:
     return window
 
 
+ACTION_COLUMNS = 3
+ACTION_CARD_WIDTH = 320
+ACTION_CARD_HEIGHT = 74
+ACTION_CARD_GAP = 12
+
+
+def _action_section(slug: str) -> Container:
+    """A grid of one-click country actions, each with its own explanation."""
+    section = Container(f"ccp_section_{slug}", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+    section.add(
+        Text(
+            f"ccp_{slug}_help",
+            CONTENT_X,
+            BODY_TOP,
+            key=f"CCP_{slug.upper()}_HELP",
+            width=t.CONTENT_WIDTH - 48,
+            height=18,
+        )
+    )
+
+    for index, action in enumerate(ACTION_SECTIONS[slug]):
+        column = index % ACTION_COLUMNS
+        row = index // ACTION_COLUMNS
+        x = CONTENT_X + column * (ACTION_CARD_WIDTH + ACTION_CARD_GAP)
+        y = BODY_TOP + 30 + row * (ACTION_CARD_HEIGHT + ACTION_CARD_GAP)
+        card = Container(
+            f"ccp_action_{action.slug}",
+            x,
+            y,
+            width=ACTION_CARD_WIDTH,
+            height=ACTION_CARD_HEIGHT,
+        )
+        card.add(
+            Icon(f"ccp_action_{action.slug}_plate", 0, 0, sprite="GFX_ccp_card"),
+            Text(
+                f"ccp_action_{action.slug}_help",
+                12,
+                8,
+                key=f"{action.key}_HELP",
+                width=ACTION_CARD_WIDTH - 24,
+                height=30,
+            ),
+            Button(
+                f"ccp_action_{action.slug}_run",
+                12,
+                ACTION_CARD_HEIGHT - t.BUTTON_HEIGHT - 10,
+                sprite="GFX_ccp_button_danger" if action.danger else "GFX_ccp_button",
+                key=action.key,
+                tooltip=f"{action.key}_TOOLTIP",
+            ),
+        )
+        section.add(card)
+    return section
+
+
 SECTION_BUILDERS = {
     "dashboard": _dashboard,
     "resources": _resources,
@@ -938,6 +994,8 @@ def section_containers(categories: list[str], folders: list[str]) -> dict[str, C
     builders["research"] = lambda: _research(folders)
     builders["country"] = _country
     builders["states"] = _states
+    for slug in ACTION_SECTIONS:
+        builders[slug] = (lambda name: lambda: _action_section(name))(slug)
     return {section.slug: builders[section.slug]() for section in SECTIONS}
 
 

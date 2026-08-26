@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
+from .actions import ALL as COUNTRY_ACTIONS
 from .countries import ACTIONS, PAGE_SIZE as COUNTRY_PAGE_SIZE
 from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
 from .resources import AMOUNT_MAX, RESOURCES
@@ -398,6 +399,23 @@ def emit_state_effects(version: str) -> str:
     return writer.text()
 
 
+def emit_action_effects(version: str) -> str:
+    writer = Writer()
+    _banner(writer, version)
+
+    for action in COUNTRY_ACTIONS:
+        writer.open(f"CCP_action_{action.slug}")
+        for line in action.body:
+            writer.line(line)
+        writer.line(f"set_variable = {{ ccp_status = {status.NATION_ACTION} }}")
+        writer.line(f"set_variable = {{ ccp_last_action = {COUNTRY_ACTIONS.index(action) + 1} }}")
+        writer.line("CCP_mark_dirty = yes")
+        writer.close()
+        writer.blank()
+
+    return writer.text()
+
+
 def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -> str:
     writer = Writer()
     _banner(writer, version)
@@ -592,6 +610,10 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.open(f"ccp_state_entry_{action.slug}_click")
         writer.line(f"CCP_state_{action.slug} = yes")
         writer.close()
+    for action in COUNTRY_ACTIONS:
+        writer.open(f"ccp_action_{action.slug}_run_click")
+        writer.line(f"CCP_action_{action.slug} = yes")
+        writer.close()
     writer.close()
     writer.blank()
 
@@ -729,6 +751,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.COUNTRY_ACTION} }}", "CCP_STATUS_COUNTRY"),
             (f"check_variable = {{ ccp_status = {status.ACTION_CANCELLED} }}", "CCP_STATUS_CANCELLED"),
             (f"check_variable = {{ ccp_status = {status.STATE_ACTION} }}", "CCP_STATUS_STATE"),
+            (f"check_variable = {{ ccp_status = {status.NATION_ACTION} }}", "CCP_STATUS_ACTION"),
         ],
         "CCP_STATUS_IDLE",
     )
@@ -748,6 +771,16 @@ def emit_scripted_localisation(version: str) -> str:
             for resource in RESOURCES
         ],
         RESOURCES[0].key,
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetLastAction",
+        [
+            (f"check_variable = {{ ccp_last_action = {index} }}", action.key)
+            for index, action in enumerate(COUNTRY_ACTIONS, start=1)
+        ],
+        COUNTRY_ACTIONS[0].key,
     )
 
     _defined_text(

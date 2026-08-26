@@ -153,6 +153,15 @@ scripted_gui = {
 				CCP_show_states = yes
 			}
 			ccp_nav_7_click = {
+				CCP_show_nation = yes
+			}
+			ccp_nav_8_click = {
+				CCP_show_construction = yes
+			}
+			ccp_nav_9_click = {
+				CCP_show_commanders = yes
+			}
+			ccp_nav_10_click = {
 				CCP_show_settings = yes
 			}
 			ccp_hotkey_choice_1_click = {
@@ -478,6 +487,69 @@ scripted_gui = {
 			}
 			ccp_state_entry_claim_click = {
 				CCP_state_claim = yes
+			}
+			ccp_action_stability_max_run_click = {
+				CCP_action_stability_max = yes
+			}
+			ccp_action_war_support_max_run_click = {
+				CCP_action_war_support_max = yes
+			}
+			ccp_action_stability_min_run_click = {
+				CCP_action_stability_min = yes
+			}
+			ccp_action_war_support_min_run_click = {
+				CCP_action_war_support_min = yes
+			}
+			ccp_action_research_slots_run_click = {
+				CCP_action_research_slots = yes
+			}
+			ccp_action_fuel_run_click = {
+				CCP_action_fuel = yes
+			}
+			ccp_action_infrastructure_run_click = {
+				CCP_action_infrastructure = yes
+			}
+			ccp_action_civilian_run_click = {
+				CCP_action_civilian = yes
+			}
+			ccp_action_military_run_click = {
+				CCP_action_military = yes
+			}
+			ccp_action_dockyard_run_click = {
+				CCP_action_dockyard = yes
+			}
+			ccp_action_airbase_run_click = {
+				CCP_action_airbase = yes
+			}
+			ccp_action_radar_run_click = {
+				CCP_action_radar = yes
+			}
+			ccp_action_antiair_run_click = {
+				CCP_action_antiair = yes
+			}
+			ccp_action_offsite_civilian_run_click = {
+				CCP_action_offsite_civilian = yes
+			}
+			ccp_action_offsite_military_run_click = {
+				CCP_action_offsite_military = yes
+			}
+			ccp_action_army_xp_run_click = {
+				CCP_action_army_xp = yes
+			}
+			ccp_action_navy_xp_run_click = {
+				CCP_action_navy_xp = yes
+			}
+			ccp_action_attack_run_click = {
+				CCP_action_attack = yes
+			}
+			ccp_action_defense_run_click = {
+				CCP_action_defense = yes
+			}
+			ccp_action_planning_run_click = {
+				CCP_action_planning = yes
+			}
+			ccp_action_logistics_run_click = {
+				CCP_action_logistics = yes
 			}
 		}
 
@@ -884,44 +956,242 @@ scripted_gui = {
 			ccp_state_next_visible = {
 				check_variable = { ccp_section = 6 }
 			}
-			ccp_settings_hotkey_label_visible = {
+			ccp_nation_help_visible = {
 				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_stability_max_plate_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_stability_max_help_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_stability_max_run_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_war_support_max_plate_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_war_support_max_help_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_war_support_max_run_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_stability_min_plate_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_stability_min_help_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_stability_min_run_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_war_support_min_plate_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_war_support_min_help_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_war_support_min_run_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_research_slots_plate_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_research_slots_help_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_research_slots_run_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_fuel_plate_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_fuel_help_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_action_fuel_run_visible = {
+				check_variable = { ccp_section = 7 }
+			}
+			ccp_construction_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_infrastructure_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_infrastructure_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_infrastructure_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_civilian_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_civilian_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_civilian_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_military_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_military_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_military_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_dockyard_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_dockyard_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_dockyard_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_airbase_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_airbase_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_airbase_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_radar_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_radar_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_radar_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_antiair_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_antiair_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_antiair_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_offsite_civilian_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_offsite_civilian_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_offsite_civilian_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_offsite_military_plate_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_offsite_military_help_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_action_offsite_military_run_visible = {
+				check_variable = { ccp_section = 8 }
+			}
+			ccp_commanders_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_army_xp_plate_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_army_xp_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_army_xp_run_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_navy_xp_plate_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_navy_xp_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_navy_xp_run_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_attack_plate_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_attack_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_attack_run_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_defense_plate_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_defense_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_defense_run_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_planning_plate_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_planning_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_planning_run_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_logistics_plate_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_logistics_help_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_action_logistics_run_visible = {
+				check_variable = { ccp_section = 9 }
+			}
+			ccp_settings_hotkey_label_visible = {
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_settings_hotkey_help_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_hotkey_choice_1_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_hotkey_choice_2_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_hotkey_choice_3_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_hotkey_choice_4_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_hotkey_choice_5_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_settings_hotkey_current_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_settings_confirm_label_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_settings_confirm_help_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_confirm_toggle_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_settings_language_label_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_settings_language_help_visible = {
-				check_variable = { ccp_section = 7 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_hotkey_choice_1_click_enabled = {
 				NOT = { check_variable = { ccp_hotkey_id = 1 } }

@@ -645,6 +645,437 @@ TRANSLATED: dict[str, Row] = {
         "Eyalet güncellendi.",
         "Staat bijgewerkt.",
     ),
+    "CCP_NATION_HELP": _row(
+        "One-click changes to your country as a whole.",
+        "Änderungen an Ihrem Land mit einem Klick.",
+        "Modifications de votre pays en un clic.",
+        "Изменения вашей страны одним нажатием.",
+        "Ülkenizin geneline tek tıkla yapılan değişiklikler.",
+        "Wijzigingen aan je land met één klik.",
+    ),
+    "CCP_CONSTRUCTION_HELP": _row(
+        "Buildings are added to every state you own and finish instantly.",
+        "Gebäude werden in jedem Ihrer Staaten ergänzt und sofort fertiggestellt.",
+        "Les bâtiments sont ajoutés à tous vos États et achevés instantanément.",
+        "Здания добавляются во все ваши провинции и достраиваются мгновенно.",
+        "Binalar sahip olduğunuz her eyalete eklenir ve anında tamamlanır.",
+        "Gebouwen worden aan elke staat die je bezit toegevoegd en zijn meteen klaar.",
+    ),
+    "CCP_COMMANDERS_HELP": _row(
+        "Applies to every commander you currently have, not to future ones.",
+        "Gilt für alle derzeitigen Befehlshaber, nicht für künftige.",
+        "S'applique à tous vos commandants actuels, pas aux futurs.",
+        "Действует на текущих командующих, но не на будущих.",
+        "Şu anki tüm komutanlarınıza uygulanır, gelecektekilere değil.",
+        "Geldt voor al je huidige bevelhebbers, niet voor toekomstige.",
+    ),
+    "CCP_STATUS_ACTION": _row(
+        "[CCP_GetLastAction] applied.",
+        "[CCP_GetLastAction] ausgeführt.",
+        "[CCP_GetLastAction] appliqué.",
+        "Выполнено: [CCP_GetLastAction].",
+        "[CCP_GetLastAction] uygulandı.",
+        "[CCP_GetLastAction] uitgevoerd.",
+    ),
+    "CCP_ACTION_STABILITY_MAX": _row(
+        "STABILITY 100%", "STABILITÄT 100%", "STABILITÉ 100%", "СТАБИЛЬНОСТЬ 100%", "İSTİKRAR %100", "STABILITEIT 100%"
+    ),
+    "CCP_ACTION_STABILITY_MAX_HELP": _row(
+        "Set national stability to its maximum.",
+        "Setzt die Stabilität auf das Maximum.",
+        "Porte la stabilité au maximum.",
+        "Устанавливает максимальную стабильность.",
+        "Ulusal istikrarı en yükseğe çeker.",
+        "Zet de stabiliteit op het maximum.",
+    ),
+    "CCP_ACTION_STABILITY_MAX_TOOLTIP": _row(
+        "Set national stability to its maximum.",
+        "Setzt die Stabilität auf das Maximum.",
+        "Porte la stabilité au maximum.",
+        "Устанавливает максимальную стабильность.",
+        "Ulusal istikrarı en yükseğe çeker.",
+        "Zet de stabiliteit op het maximum.",
+    ),
+    "CCP_ACTION_WAR_SUPPORT_MAX": _row(
+        "WAR SUPPORT 100%", "KRIEGSUNTERST. 100%", "SOUTIEN 100%", "ПОДДЕРЖКА 100%", "SAVAŞ DESTEĞİ %100", "OORLOGSSTEUN 100%"
+    ),
+    "CCP_ACTION_WAR_SUPPORT_MAX_HELP": _row(
+        "Set war support to its maximum.",
+        "Setzt die Kriegsunterstützung auf das Maximum.",
+        "Porte le soutien à la guerre au maximum.",
+        "Устанавливает максимальную поддержку войны.",
+        "Savaş desteğini en yükseğe çeker.",
+        "Zet de oorlogssteun op het maximum.",
+    ),
+    "CCP_ACTION_WAR_SUPPORT_MAX_TOOLTIP": _row(
+        "Set war support to its maximum.",
+        "Setzt die Kriegsunterstützung auf das Maximum.",
+        "Porte le soutien à la guerre au maximum.",
+        "Устанавливает максимальную поддержку войны.",
+        "Savaş desteğini en yükseğe çeker.",
+        "Zet de oorlogssteun op het maximum.",
+    ),
+    "CCP_ACTION_STABILITY_MIN": _row(
+        "STABILITY 0%", "STABILITÄT 0%", "STABILITÉ 0%", "СТАБИЛЬНОСТЬ 0%", "İSTİKRAR %0", "STABILITEIT 0%"
+    ),
+    "CCP_ACTION_STABILITY_MIN_HELP": _row(
+        "Drop stability to zero. Useful for triggering civil wars.",
+        "Senkt die Stabilität auf null. Nützlich, um Bürgerkriege auszulösen.",
+        "Réduit la stabilité à zéro. Utile pour déclencher une guerre civile.",
+        "Обнуляет стабильность. Полезно для гражданской войны.",
+        "İstikrarı sıfıra düşürür. İç savaş tetiklemek için kullanışlı.",
+        "Zet de stabiliteit op nul. Handig om burgeroorlogen uit te lokken.",
+    ),
+    "CCP_ACTION_STABILITY_MIN_TOOLTIP": _row(
+        "Drop stability to zero. Useful for triggering civil wars.",
+        "Senkt die Stabilität auf null. Nützlich, um Bürgerkriege auszulösen.",
+        "Réduit la stabilité à zéro. Utile pour déclencher une guerre civile.",
+        "Обнуляет стабильность. Полезно для гражданской войны.",
+        "İstikrarı sıfıra düşürür. İç savaş tetiklemek için kullanışlı.",
+        "Zet de stabiliteit op nul. Handig om burgeroorlogen uit te lokken.",
+    ),
+    "CCP_ACTION_WAR_SUPPORT_MIN": _row(
+        "WAR SUPPORT 0%", "KRIEGSUNTERST. 0%", "SOUTIEN 0%", "ПОДДЕРЖКА 0%", "SAVAŞ DESTEĞİ %0", "OORLOGSSTEUN 0%"
+    ),
+    "CCP_ACTION_WAR_SUPPORT_MIN_HELP": _row(
+        "Drop war support to zero.",
+        "Senkt die Kriegsunterstützung auf null.",
+        "Réduit le soutien à la guerre à zéro.",
+        "Обнуляет поддержку войны.",
+        "Savaş desteğini sıfıra düşürür.",
+        "Zet de oorlogssteun op nul.",
+    ),
+    "CCP_ACTION_WAR_SUPPORT_MIN_TOOLTIP": _row(
+        "Drop war support to zero.",
+        "Senkt die Kriegsunterstützung auf null.",
+        "Réduit le soutien à la guerre à zéro.",
+        "Обнуляет поддержку войны.",
+        "Savaş desteğini sıfıra düşürür.",
+        "Zet de oorlogssteun op nul.",
+    ),
+    "CCP_ACTION_RESEARCH_SLOTS": _row(
+        "5 RESEARCH SLOTS", "5 FORSCHUNGSPLÄTZE", "5 EMPLACEMENTS", "5 СЛОТОВ", "5 ARAŞTIRMA YUVASI", "5 ONDERZOEKSPLEKKEN"
+    ),
+    "CCP_ACTION_RESEARCH_SLOTS_HELP": _row(
+        "Set your research slots to five, the maximum the game uses.",
+        "Setzt Ihre Forschungsplätze auf fünf, das Maximum des Spiels.",
+        "Porte vos emplacements de recherche à cinq, le maximum du jeu.",
+        "Устанавливает пять слотов исследований — максимум в игре.",
+        "Araştırma yuvalarınızı oyunun kullandığı en yüksek sayı olan beşe çıkarır.",
+        "Zet je onderzoeksplekken op vijf, het maximum in het spel.",
+    ),
+    "CCP_ACTION_RESEARCH_SLOTS_TOOLTIP": _row(
+        "Set your research slots to five, the maximum the game uses.",
+        "Setzt Ihre Forschungsplätze auf fünf, das Maximum des Spiels.",
+        "Porte vos emplacements de recherche à cinq, le maximum du jeu.",
+        "Устанавливает пять слотов исследований — максимум в игре.",
+        "Araştırma yuvalarınızı oyunun kullandığı en yüksek sayı olan beşe çıkarır.",
+        "Zet je onderzoeksplekken op vijf, het maximum in het spel.",
+    ),
+    "CCP_ACTION_FUEL": _row(
+        "+500K FUEL", "+500K TREIBSTOFF", "+500K CARBURANT", "+500K ТОПЛИВА", "+500K YAKIT", "+500K BRANDSTOF"
+    ),
+    "CCP_ACTION_FUEL_HELP": _row(
+        "Add half a million fuel to your reserves.",
+        "Fügt eine halbe Million Treibstoff hinzu.",
+        "Ajoute un demi-million de carburant.",
+        "Добавляет полмиллиона топлива.",
+        "Rezervlerinize yarım milyon yakıt ekler.",
+        "Voegt een half miljoen brandstof toe.",
+    ),
+    "CCP_ACTION_FUEL_TOOLTIP": _row(
+        "Add half a million fuel to your reserves.",
+        "Fügt eine halbe Million Treibstoff hinzu.",
+        "Ajoute un demi-million de carburant.",
+        "Добавляет полмиллиона топлива.",
+        "Rezervlerinize yarım milyon yakıt ekler.",
+        "Voegt een half miljoen brandstof toe.",
+    ),
+    "CCP_ACTION_INFRASTRUCTURE": _row(
+        "+5 INFRASTRUCTURE", "+5 INFRASTRUKTUR", "+5 INFRASTRUCTURE", "+5 ИНФРАСТРУКТУРЫ", "+5 ALTYAPI", "+5 INFRASTRUCTUUR"
+    ),
+    "CCP_ACTION_INFRASTRUCTURE_HELP": _row(
+        "Add five infrastructure to every state you own, built instantly.",
+        "Fügt jedem Ihrer Staaten fünf Infrastruktur hinzu, sofort gebaut.",
+        "Ajoute cinq d'infrastructure à chacun de vos États, construits instantanément.",
+        "Добавляет пять уровней инфраструктуры во все ваши провинции мгновенно.",
+        "Sahip olduğunuz her eyalete anında beş altyapı ekler.",
+        "Voegt vijf infrastructuur toe aan elke staat die je bezit, direct gebouwd.",
+    ),
+    "CCP_ACTION_INFRASTRUCTURE_TOOLTIP": _row(
+        "Add five infrastructure to every state you own, built instantly.",
+        "Fügt jedem Ihrer Staaten fünf Infrastruktur hinzu, sofort gebaut.",
+        "Ajoute cinq d'infrastructure à chacun de vos États, construits instantanément.",
+        "Добавляет пять уровней инфраструктуры во все ваши провинции мгновенно.",
+        "Sahip olduğunuz her eyalete anında beş altyapı ekler.",
+        "Voegt vijf infrastructuur toe aan elke staat die je bezit, direct gebouwd.",
+    ),
+    "CCP_ACTION_CIVILIAN": _row(
+        "+5 CIVILIAN", "+5 ZIVILFABRIKEN", "+5 USINES CIVILES", "+5 ГРАЖД. ЗАВОДОВ", "+5 SİVİL FABRİKA", "+5 CIVIELE FABRIEKEN"
+    ),
+    "CCP_ACTION_CIVILIAN_HELP": _row(
+        "Add five civilian factories to every state you own.",
+        "Fügt jedem Ihrer Staaten fünf Zivilfabriken hinzu.",
+        "Ajoute cinq usines civiles à chacun de vos États.",
+        "Добавляет пять гражданских заводов в каждую вашу провинцию.",
+        "Her eyaletinize beş sivil fabrika ekler.",
+        "Voegt vijf civiele fabrieken toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_CIVILIAN_TOOLTIP": _row(
+        "Add five civilian factories to every state you own.",
+        "Fügt jedem Ihrer Staaten fünf Zivilfabriken hinzu.",
+        "Ajoute cinq usines civiles à chacun de vos États.",
+        "Добавляет пять гражданских заводов в каждую вашу провинцию.",
+        "Her eyaletinize beş sivil fabrika ekler.",
+        "Voegt vijf civiele fabrieken toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_MILITARY": _row(
+        "+5 MILITARY", "+5 MILITÄRFABRIKEN", "+5 USINES MILIT.", "+5 ВОЕН. ЗАВОДОВ", "+5 ASKERİ FABRİKA", "+5 MILITAIRE FABR."
+    ),
+    "CCP_ACTION_MILITARY_HELP": _row(
+        "Add five military factories to every state you own.",
+        "Fügt jedem Ihrer Staaten fünf Militärfabriken hinzu.",
+        "Ajoute cinq usines militaires à chacun de vos États.",
+        "Добавляет пять военных заводов в каждую вашу провинцию.",
+        "Her eyaletinize beş askeri fabrika ekler.",
+        "Voegt vijf militaire fabrieken toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_MILITARY_TOOLTIP": _row(
+        "Add five military factories to every state you own.",
+        "Fügt jedem Ihrer Staaten fünf Militärfabriken hinzu.",
+        "Ajoute cinq usines militaires à chacun de vos États.",
+        "Добавляет пять военных заводов в каждую вашу провинцию.",
+        "Her eyaletinize beş askeri fabrika ekler.",
+        "Voegt vijf militaire fabrieken toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_DOCKYARD": _row(
+        "+3 DOCKYARDS", "+3 WERFTEN", "+3 CHANTIERS", "+3 ВЕРФИ", "+3 TERSANE", "+3 SCHEEPSWERVEN"
+    ),
+    "CCP_ACTION_DOCKYARD_HELP": _row(
+        "Add three dockyards to every coastal state you own.",
+        "Fügt jedem Ihrer Küstenstaaten drei Werften hinzu.",
+        "Ajoute trois chantiers navals à chacun de vos États côtiers.",
+        "Добавляет три верфи в каждую вашу прибрежную провинцию.",
+        "Sahip olduğunuz her kıyı eyaletine üç tersane ekler.",
+        "Voegt drie scheepswerven toe aan elke kuststaat die je bezit.",
+    ),
+    "CCP_ACTION_DOCKYARD_TOOLTIP": _row(
+        "Add three dockyards to every coastal state you own.",
+        "Fügt jedem Ihrer Küstenstaaten drei Werften hinzu.",
+        "Ajoute trois chantiers navals à chacun de vos États côtiers.",
+        "Добавляет три верфи в каждую вашу прибрежную провинцию.",
+        "Sahip olduğunuz her kıyı eyaletine üç tersane ekler.",
+        "Voegt drie scheepswerven toe aan elke kuststaat die je bezit.",
+    ),
+    "CCP_ACTION_AIRBASE": _row(
+        "+10 AIR BASE", "+10 FLUGPLATZ", "+10 BASE AÉR.", "+10 АЭРОДРОМ", "+10 HAVA ÜSSÜ", "+10 VLIEGBASIS"
+    ),
+    "CCP_ACTION_AIRBASE_HELP": _row(
+        "Add ten air base levels to every state you own.",
+        "Fügt jedem Ihrer Staaten zehn Flugplatzstufen hinzu.",
+        "Ajoute dix niveaux de base aérienne à chacun de vos États.",
+        "Добавляет десять уровней аэродрома в каждую вашу провинцию.",
+        "Her eyaletinize on seviye hava üssü ekler.",
+        "Voegt tien vliegbasisniveaus toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_AIRBASE_TOOLTIP": _row(
+        "Add ten air base levels to every state you own.",
+        "Fügt jedem Ihrer Staaten zehn Flugplatzstufen hinzu.",
+        "Ajoute dix niveaux de base aérienne à chacun de vos États.",
+        "Добавляет десять уровней аэродрома в каждую вашу провинцию.",
+        "Her eyaletinize on seviye hava üssü ekler.",
+        "Voegt tien vliegbasisniveaus toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_RADAR": _row(
+        "+3 RADAR", "+3 RADAR", "+3 RADAR", "+3 РАДАР", "+3 RADAR", "+3 RADAR"
+    ),
+    "CCP_ACTION_RADAR_HELP": _row(
+        "Add three radar levels to every state you own.",
+        "Fügt jedem Ihrer Staaten drei Radarstufen hinzu.",
+        "Ajoute trois niveaux de radar à chacun de vos États.",
+        "Добавляет три уровня радара в каждую вашу провинцию.",
+        "Her eyaletinize üç seviye radar ekler.",
+        "Voegt drie radarniveaus toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_RADAR_TOOLTIP": _row(
+        "Add three radar levels to every state you own.",
+        "Fügt jedem Ihrer Staaten drei Radarstufen hinzu.",
+        "Ajoute trois niveaux de radar à chacun de vos États.",
+        "Добавляет три уровня радара в каждую вашу провинцию.",
+        "Her eyaletinize üç seviye radar ekler.",
+        "Voegt drie radarniveaus toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_ANTIAIR": _row(
+        "+3 ANTI-AIR", "+3 FLUGABWEHR", "+3 ANTIAÉRIEN", "+3 ПВО", "+3 UÇAKSAVAR", "+3 LUCHTAFWEER"
+    ),
+    "CCP_ACTION_ANTIAIR_HELP": _row(
+        "Add three anti-air levels to every state you own.",
+        "Fügt jedem Ihrer Staaten drei Flugabwehrstufen hinzu.",
+        "Ajoute trois niveaux antiaériens à chacun de vos États.",
+        "Добавляет три уровня ПВО в каждую вашу провинцию.",
+        "Her eyaletinize üç seviye uçaksavar ekler.",
+        "Voegt drie luchtafweerniveaus toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_ANTIAIR_TOOLTIP": _row(
+        "Add three anti-air levels to every state you own.",
+        "Fügt jedem Ihrer Staaten drei Flugabwehrstufen hinzu.",
+        "Ajoute trois niveaux antiaériens à chacun de vos États.",
+        "Добавляет три уровня ПВО в каждую вашу провинцию.",
+        "Her eyaletinize üç seviye uçaksavar ekler.",
+        "Voegt drie luchtafweerniveaus toe aan elke staat die je bezit.",
+    ),
+    "CCP_ACTION_OFFSITE_CIVILIAN": _row(
+        "+20 OFFSITE CIV", "+20 EXTERN ZIVIL", "+20 HORS SITE CIV", "+20 ВНЕ КАРТЫ ГРАЖД", "+20 HARİCİ SİVİL", "+20 EXTERN CIVIEL"
+    ),
+    "CCP_ACTION_OFFSITE_CIVILIAN_HELP": _row(
+        "Add twenty civilian factories that sit outside the map and cannot be bombed.",
+        "Fügt zwanzig Zivilfabriken hinzu, die ausserhalb der Karte liegen und nicht bombardiert werden können.",
+        "Ajoute vingt usines civiles hors carte, à l'abri des bombardements.",
+        "Добавляет двадцать гражданских заводов вне карты — их нельзя бомбить.",
+        "Harita dışında duran ve bombalanamayan yirmi sivil fabrika ekler.",
+        "Voegt twintig civiele fabrieken buiten de kaart toe die niet gebombardeerd kunnen worden.",
+    ),
+    "CCP_ACTION_OFFSITE_CIVILIAN_TOOLTIP": _row(
+        "Add twenty civilian factories that sit outside the map and cannot be bombed.",
+        "Fügt zwanzig Zivilfabriken hinzu, die ausserhalb der Karte liegen und nicht bombardiert werden können.",
+        "Ajoute vingt usines civiles hors carte, à l'abri des bombardements.",
+        "Добавляет двадцать гражданских заводов вне карты — их нельзя бомбить.",
+        "Harita dışında duran ve bombalanamayan yirmi sivil fabrika ekler.",
+        "Voegt twintig civiele fabrieken buiten de kaart toe die niet gebombardeerd kunnen worden.",
+    ),
+    "CCP_ACTION_OFFSITE_MILITARY": _row(
+        "+20 OFFSITE MIL", "+20 EXTERN MILITÄR", "+20 HORS SITE MIL", "+20 ВНЕ КАРТЫ ВОЕН", "+20 HARİCİ ASKERİ", "+20 EXTERN MILITAIR"
+    ),
+    "CCP_ACTION_OFFSITE_MILITARY_HELP": _row(
+        "Add twenty military factories that sit outside the map and cannot be bombed.",
+        "Fügt zwanzig Militärfabriken hinzu, die ausserhalb der Karte liegen und nicht bombardiert werden können.",
+        "Ajoute vingt usines militaires hors carte, à l'abri des bombardements.",
+        "Добавляет двадцать военных заводов вне карты — их нельзя бомбить.",
+        "Harita dışında duran ve bombalanamayan yirmi askeri fabrika ekler.",
+        "Voegt twintig militaire fabrieken buiten de kaart toe die niet gebombardeerd kunnen worden.",
+    ),
+    "CCP_ACTION_OFFSITE_MILITARY_TOOLTIP": _row(
+        "Add twenty military factories that sit outside the map and cannot be bombed.",
+        "Fügt zwanzig Militärfabriken hinzu, die ausserhalb der Karte liegen und nicht bombardiert werden können.",
+        "Ajoute vingt usines militaires hors carte, à l'abri des bombardements.",
+        "Добавляет двадцать военных заводов вне карты — их нельзя бомбить.",
+        "Harita dışında duran ve bombalanamayan yirmi askeri fabrika ekler.",
+        "Voegt twintig militaire fabrieken buiten de kaart toe die niet gebombardeerd kunnen worden.",
+    ),
+    "CCP_ACTION_ARMY_XP": _row(
+        "+1 GENERAL SKILL", "+1 GENERALSSTUFE", "+1 NIVEAU GÉNÉRAL", "+1 УРОВЕНЬ ГЕН.", "+1 GENERAL SEVİYESİ", "+1 GENERAALNIVEAU"
+    ),
+    "CCP_ACTION_ARMY_XP_HELP": _row(
+        "Raise every general one skill level.",
+        "Erhöht jeden General um eine Fähigkeitsstufe.",
+        "Augmente chaque général d'un niveau de compétence.",
+        "Повышает каждого генерала на один уровень навыка.",
+        "Her generalin beceri seviyesini bir artırır.",
+        "Verhoogt elke generaal met één vaardigheidsniveau.",
+    ),
+    "CCP_ACTION_ARMY_XP_TOOLTIP": _row(
+        "Raise every general one skill level.",
+        "Erhöht jeden General um eine Fähigkeitsstufe.",
+        "Augmente chaque général d'un niveau de compétence.",
+        "Повышает каждого генерала на один уровень навыка.",
+        "Her generalin beceri seviyesini bir artırır.",
+        "Verhoogt elke generaal met één vaardigheidsniveau.",
+    ),
+    "CCP_ACTION_NAVY_XP": _row(
+        "+1 ADMIRAL SKILL", "+1 ADMIRALSSTUFE", "+1 NIVEAU AMIRAL", "+1 УРОВЕНЬ АДМ.", "+1 AMİRAL SEVİYESİ", "+1 ADMIRAALNIVEAU"
+    ),
+    "CCP_ACTION_NAVY_XP_HELP": _row(
+        "Raise every admiral one skill level.",
+        "Erhöht jeden Admiral um eine Fähigkeitsstufe.",
+        "Augmente chaque amiral d'un niveau de compétence.",
+        "Повышает каждого адмирала на один уровень навыка.",
+        "Her amiralin beceri seviyesini bir artırır.",
+        "Verhoogt elke admiraal met één vaardigheidsniveau.",
+    ),
+    "CCP_ACTION_NAVY_XP_TOOLTIP": _row(
+        "Raise every admiral one skill level.",
+        "Erhöht jeden Admiral um eine Fähigkeitsstufe.",
+        "Augmente chaque amiral d'un niveau de compétence.",
+        "Повышает каждого адмирала на один уровень навыка.",
+        "Her amiralin beceri seviyesini bir artırır.",
+        "Verhoogt elke admiraal met één vaardigheidsniveau.",
+    ),
+    "CCP_ACTION_ATTACK": _row(
+        "+1 ATTACK", "+1 ANGRIFF", "+1 ATTAQUE", "+1 АТАКА", "+1 SALDIRI", "+1 AANVAL"
+    ),
+    "CCP_ACTION_ATTACK_HELP": _row(
+        "Raise the attack skill of every general.",
+        "Erhöht den Angriffswert jedes Generals.",
+        "Augmente la compétence d'attaque de chaque général.",
+        "Повышает навык атаки каждого генерала.",
+        "Her generalin saldırı becerisini artırır.",
+        "Verhoogt de aanvalsvaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_ATTACK_TOOLTIP": _row(
+        "Raise the attack skill of every general.",
+        "Erhöht den Angriffswert jedes Generals.",
+        "Augmente la compétence d'attaque de chaque général.",
+        "Повышает навык атаки каждого генерала.",
+        "Her generalin saldırı becerisini artırır.",
+        "Verhoogt de aanvalsvaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_DEFENSE": _row(
+        "+1 DEFENSE", "+1 VERTEIDIGUNG", "+1 DÉFENSE", "+1 ЗАЩИТА", "+1 SAVUNMA", "+1 VERDEDIGING"
+    ),
+    "CCP_ACTION_DEFENSE_HELP": _row(
+        "Raise the defence skill of every general.",
+        "Erhöht den Verteidigungswert jedes Generals.",
+        "Augmente la compétence de défense de chaque général.",
+        "Повышает навык защиты каждого генерала.",
+        "Her generalin savunma becerisini artırır.",
+        "Verhoogt de verdedigingsvaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_DEFENSE_TOOLTIP": _row(
+        "Raise the defence skill of every general.",
+        "Erhöht den Verteidigungswert jedes Generals.",
+        "Augmente la compétence de défense de chaque général.",
+        "Повышает навык защиты каждого генерала.",
+        "Her generalin savunma becerisini artırır.",
+        "Verhoogt de verdedigingsvaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_PLANNING": _row(
+        "+1 PLANNING", "+1 PLANUNG", "+1 PLANIFICATION", "+1 ПЛАНИРОВАНИЕ", "+1 PLANLAMA", "+1 PLANNING"
+    ),
+    "CCP_ACTION_PLANNING_HELP": _row(
+        "Raise the planning skill of every general.",
+        "Erhöht den Planungswert jedes Generals.",
+        "Augmente la compétence de planification de chaque général.",
+        "Повышает навык планирования каждого генерала.",
+        "Her generalin planlama becerisini artırır.",
+        "Verhoogt de planningsvaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_PLANNING_TOOLTIP": _row(
+        "Raise the planning skill of every general.",
+        "Erhöht den Planungswert jedes Generals.",
+        "Augmente la compétence de planification de chaque général.",
+        "Повышает навык планирования каждого генерала.",
+        "Her generalin planlama becerisini artırır.",
+        "Verhoogt de planningsvaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_LOGISTICS": _row(
+        "+1 LOGISTICS", "+1 LOGISTIK", "+1 LOGISTIQUE", "+1 ЛОГИСТИКА", "+1 LOJİSTİK", "+1 LOGISTIEK"
+    ),
+    "CCP_ACTION_LOGISTICS_HELP": _row(
+        "Raise the logistics skill of every general.",
+        "Erhöht den Logistikwert jedes Generals.",
+        "Augmente la compétence logistique de chaque général.",
+        "Повышает навык логистики каждого генерала.",
+        "Her generalin lojistik becerisini artırır.",
+        "Verhoogt de logistieke vaardigheid van elke generaal.",
+    ),
+    "CCP_ACTION_LOGISTICS_TOOLTIP": _row(
+        "Raise the logistics skill of every general.",
+        "Erhöht den Logistikwert jedes Generals.",
+        "Augmente la compétence logistique de chaque général.",
+        "Повышает навык логистики каждого генерала.",
+        "Her generalin lojistik becerisini artırır.",
+        "Verhoogt de logistieke vaardigheid van elke generaal.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",
@@ -704,6 +1135,15 @@ SECTION_NAMES: dict[str, Row] = {
     "states": _row(
         "States", "Staaten", "États", "Провинции", "Eyaletler", "Staten"
     ),
+    "nation": _row(
+        "Nation", "Nation", "Nation", "Держава", "Ulus", "Natie"
+    ),
+    "construction": _row(
+        "Construction", "Bau", "Construction", "Строительство", "İnşaat", "Bouw"
+    ),
+    "commanders": _row(
+        "Commanders", "Befehlshaber", "Commandants", "Командующие", "Komutanlar", "Bevelhebbers"
+    ),
     "settings": _row(
         "Settings", "Einstellungen", "Paramètres", "Настройки", "Ayarlar", "Instellingen"
     ),
@@ -757,6 +1197,30 @@ SECTION_TOOLTIPS: dict[str, Row] = {
         "Забирать провинции, добавлять и снимать коренные территории, выдвигать притязания.",
         "Eyalet alın, core ekleyip kaldırın ve hak talebi oluşturun.",
         "Neem staten over, voeg kerngebied toe of verwijder het, en claim.",
+    ),
+    "nation": _row(
+        "Stability, war support, research slots and fuel.",
+        "Stabilität, Kriegsunterstützung, Forschungsplätze und Treibstoff.",
+        "Stabilité, soutien à la guerre, emplacements de recherche et carburant.",
+        "Стабильность, поддержка войны, слоты исследований и топливо.",
+        "İstikrar, savaş desteği, araştırma yuvaları ve yakıt.",
+        "Stabiliteit, oorlogssteun, onderzoeksplekken en brandstof.",
+    ),
+    "construction": _row(
+        "Build instantly across every state you own.",
+        "Baut sofort in jedem Ihrer Staaten.",
+        "Construit instantanément dans tous vos États.",
+        "Мгновенно строит во всех ваших провинциях.",
+        "Sahip olduğunuz her eyalette anında inşa eder.",
+        "Bouwt direct in elke staat die je bezit.",
+    ),
+    "commanders": _row(
+        "Raise the skills of every general and admiral you have.",
+        "Erhöht die Fähigkeiten aller Ihrer Generäle und Admirale.",
+        "Améliore les compétences de tous vos généraux et amiraux.",
+        "Повышает навыки всех ваших генералов и адмиралов.",
+        "Tüm generallerinizin ve amirallerinizin becerilerini artırır.",
+        "Verhoogt de vaardigheden van al je generaals en admiraals.",
     ),
     "settings": _row(
         "Change the hotkey and the confirmation behaviour.",

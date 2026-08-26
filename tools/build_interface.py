@@ -20,6 +20,7 @@ from ccp.technology import load_catalogue as load_technologies
 from ccp.layout import emit_file
 from ccp.meta import descriptor
 from ccp.scripts import (
+    emit_action_effects,
     emit_core_effects,
     emit_country_effects,
     emit_state_effects,
@@ -77,6 +78,10 @@ def main() -> int:
     write(
         MOD / "common" / "scripted_effects" / "ccp_generated_country.txt",
         emit_country_effects(version),
+    )
+    write(
+        MOD / "common" / "scripted_effects" / "ccp_generated_actions.txt",
+        emit_action_effects(version),
     )
     write(
         MOD / "common" / "scripted_effects" / "ccp_generated_state.txt",
