@@ -233,6 +233,158 @@ def _settings() -> Container:
     return section
 
 
+PAD_X = t.PANEL_WIDTH - 24 - t.READOUT_WIDTH
+ROW_WIDTH = PAD_X - CONTENT_X - 24
+
+DIGIT_ROWS = [("1", "2", "3"), ("4", "5", "6"), ("7", "8", "9")]
+
+
+def _digit_pad() -> list[Widget]:
+    widgets: list[Widget] = [
+        Text(
+            "ccp_pad_label",
+            PAD_X,
+            BODY_TOP,
+            key="CCP_PAD_LABEL",
+            width=t.READOUT_WIDTH,
+            height=18,
+        ),
+        Icon("ccp_pad_readout_plate", PAD_X, BODY_TOP + 22, sprite="GFX_ccp_readout"),
+        Text(
+            "ccp_pad_readout",
+            PAD_X + 10,
+            BODY_TOP + 31,
+            key="CCP_PAD_VALUE",
+            width=t.READOUT_WIDTH - 20,
+            height=22,
+            font="hoi_20b",
+            align="right",
+        ),
+    ]
+
+    top = BODY_TOP + 22 + t.READOUT_HEIGHT + 10
+    step_x = t.KEY_WIDTH + 8
+    step_y = t.KEY_HEIGHT + 8
+
+    for row, digits in enumerate(DIGIT_ROWS):
+        for column, digit in enumerate(digits):
+            widgets.append(
+                Button(
+                    f"ccp_pad_{digit}",
+                    PAD_X + column * step_x,
+                    top + row * step_y,
+                    sprite="GFX_ccp_key",
+                    key=f"CCP_PAD_DIGIT_{digit}",
+                    tooltip="CCP_PAD_DIGIT_TOOLTIP",
+                )
+            )
+
+    bottom = top + 3 * step_y
+    widgets += [
+        Button(
+            "ccp_pad_0",
+            PAD_X,
+            bottom,
+            sprite="GFX_ccp_key",
+            key="CCP_PAD_DIGIT_0",
+            tooltip="CCP_PAD_DIGIT_TOOLTIP",
+        ),
+        Button(
+            "ccp_pad_back",
+            PAD_X + step_x,
+            bottom,
+            sprite="GFX_ccp_key",
+            key="CCP_PAD_BACK",
+            tooltip="CCP_PAD_BACK_TOOLTIP",
+        ),
+        Button(
+            "ccp_pad_clear",
+            PAD_X + 2 * step_x,
+            bottom,
+            sprite="GFX_ccp_key",
+            key="CCP_PAD_CLEAR",
+            tooltip="CCP_PAD_CLEAR_TOOLTIP",
+            click_sound="click_close",
+        ),
+        Text(
+            "ccp_pad_help",
+            PAD_X,
+            bottom + t.KEY_HEIGHT + 12,
+            key="CCP_PAD_HELP",
+            width=t.READOUT_WIDTH,
+            height=72,
+        ),
+    ]
+    return widgets
+
+
+def _resource_row(index: int, resource) -> Container:
+    row = Container(
+        f"ccp_row_{resource.slug}",
+        CONTENT_X,
+        BODY_TOP + index * t.ROW_HEIGHT,
+        width=ROW_WIDTH,
+        height=t.ROW_HEIGHT - 8,
+    )
+    row.add(
+        Icon(f"ccp_row_{resource.slug}_plate", 0, 0, sprite="GFX_ccp_row"),
+        Text(
+            f"ccp_row_{resource.slug}_label",
+            12,
+            8,
+            key=resource.key,
+            width=240,
+            height=18,
+            font="hoi_18mbs",
+            tooltip=f"{resource.key}_TOOLTIP",
+        ),
+        Text(
+            f"ccp_row_{resource.slug}_value",
+            12,
+            29,
+            key=f"{resource.key}_VALUE",
+            width=240,
+            height=18,
+            tooltip=f"{resource.key}_TOOLTIP",
+        ),
+    )
+
+    step = t.SMALL_BUTTON_WIDTH + 8
+    first = ROW_WIDTH - 12 - 5 * step + 8
+    for slot, amount in enumerate(resource.presets):
+        row.add(
+            Button(
+                f"ccp_grant_{resource.slug}_{slot + 1}",
+                first + slot * step,
+                14,
+                sprite="GFX_ccp_button_small",
+                key=f"{resource.key}_P{slot + 1}",
+                tooltip=f"{resource.key}_P{slot + 1}_TOOLTIP",
+            )
+        )
+    row.add(
+        Button(
+            f"ccp_grant_{resource.slug}_custom",
+            first + 4 * step,
+            14,
+            sprite="GFX_ccp_button_small",
+            key="CCP_BUTTON_CUSTOM",
+            tooltip=f"{resource.key}_CUSTOM_TOOLTIP",
+        )
+    )
+    return row
+
+
+def _resources() -> Container:
+    from .resources import RESOURCES
+
+    section = Container("ccp_section_resources", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+    for index, resource in enumerate(RESOURCES):
+        section.add(_resource_row(index, resource))
+    section.add(*_digit_pad())
+    return section
+
+
 def main_window() -> Container:
     window = Container(
         "ccp_main_window",
@@ -244,7 +396,7 @@ def main_window() -> Container:
         origo="center",
     )
     window.add(*_header(), *_sidebar(), *_content_shell(), *_footer())
-    window.add(_dashboard(), _settings())
+    window.add(_dashboard(), _resources(), _settings())
     return window
 
 

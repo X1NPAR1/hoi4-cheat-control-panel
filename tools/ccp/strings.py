@@ -7,6 +7,7 @@ language and not the other, because there is only one place to add it.
 from __future__ import annotations
 
 from .meta import MOD_VERSION
+from .resources import RESOURCES, preset_label
 from .sections import HOTKEYS, SECTIONS
 
 LANGUAGES = ("english", "turkish")
@@ -128,10 +129,42 @@ CORE: dict[str, tuple[str, str]] = {
     ),
 }
 
+PAD: dict[str, tuple[str, str]] = {
+    "CCP_PAD_LABEL": ("CUSTOM AMOUNT", "ÖZEL MİKTAR"),
+    "CCP_PAD_VALUE": ("[?ccp_amount|0]", "[?ccp_amount|0]"),
+    "CCP_PAD_BACK": ("DEL", "SİL"),
+    "CCP_PAD_CLEAR": ("CLR", "TEMİZLE"),
+    "CCP_PAD_DIGIT_TOOLTIP": (
+        "Append this digit to the custom amount.",
+        "Bu rakamı özel miktarın sonuna ekler.",
+    ),
+    "CCP_PAD_BACK_TOOLTIP": (
+        "Remove the last digit.",
+        "Son rakamı siler.",
+    ),
+    "CCP_PAD_CLEAR_TOOLTIP": (
+        "Reset the custom amount to zero.",
+        "Özel miktarı sıfırlar.",
+    ),
+    "CCP_PAD_HELP": (
+        "Hearts of Iron IV cannot read a typed value back into script, so the amount is entered here instead. Each CUSTOM button grants this amount, capped at what that resource can usefully take.",
+        "Hearts of Iron IV, yazılan bir değeri script'e geri okuyamaz; bu yüzden miktar buradan girilir. Her CUSTOM butonu bu miktarı verir ve ilgili kaynağın anlamlı üst sınırında kırpılır.",
+    ),
+    "CCP_BUTTON_CUSTOM": ("CUSTOM", "ÖZEL"),
+    "CCP_STATUS_GRANTED": (
+        "Granted [?ccp_granted_amount|0] [CCP_GetGrantedResource].",
+        "[?ccp_granted_amount|0] [CCP_GetGrantedResource] eklendi.",
+    ),
+}
+
 SECTION_TOOLTIPS: dict[str, tuple[str, str]] = {
     "dashboard": (
         "A live summary of the country you are playing.",
         "Oynadığınız ülkenin canlı özeti.",
+    ),
+    "resources": (
+        "Grant political power, command power, manpower and experience.",
+        "Siyasi güç, komuta gücü, insan gücü ve tecrübe ekleyin.",
     ),
     "settings": (
         "Change the hotkey and the confirmation behaviour.",
@@ -152,6 +185,32 @@ def all_strings() -> dict[str, tuple[str, str]]:
         if tooltip is None:
             raise KeyError(f"section `{section.slug}` has no tooltip in SECTION_TOOLTIPS")
         strings[f"{section.key}_TOOLTIP"] = tooltip
+
+    strings.update(PAD)
+    for digit in range(10):
+        strings[f"CCP_PAD_DIGIT_{digit}"] = (str(digit), str(digit))
+
+    for resource in RESOURCES:
+        strings[resource.key] = (resource.english, resource.turkish)
+        strings[f"{resource.key}_VALUE"] = (
+            f"[?{resource.variable}|0]",
+            f"[?{resource.variable}|0]",
+        )
+        strings[f"{resource.key}_TOOLTIP"] = (
+            resource.english_help,
+            resource.turkish_help,
+        )
+        for slot, amount in enumerate(resource.presets, start=1):
+            label = preset_label(amount)
+            strings[f"{resource.key}_P{slot}"] = (label, label)
+            strings[f"{resource.key}_P{slot}_TOOLTIP"] = (
+                f"Add {amount:,} {resource.english.lower()}.",
+                f"{amount:,} {resource.turkish.lower()} ekler.",
+            )
+        strings[f"{resource.key}_CUSTOM_TOOLTIP"] = (
+            f"Add the custom amount, capped at {resource.safe_max:,}.",
+            f"Özel miktarı ekler, üst sınır {resource.safe_max:,}.",
+        )
 
     for index, (_, english, turkish) in enumerate(HOTKEYS, start=1):
         strings[f"CCP_HOTKEY_{index}"] = (english, turkish)

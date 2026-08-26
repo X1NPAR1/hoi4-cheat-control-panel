@@ -9,12 +9,16 @@ from __future__ import annotations
 
 from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP
+from .resources import AMOUNT_MAX, RESOURCES
 from .sections import HOTKEYS, SECTIONS
 
 STATUS_IDLE = 0
 STATUS_HOTKEY_CHANGED = 1
 STATUS_CONFIRM_ON = 2
 STATUS_CONFIRM_OFF = 3
+STATUS_GRANTED = 4
+
+RESOURCE_ID = {resource.slug: index for index, resource in enumerate(RESOURCES, start=1)}
 
 SETTINGS_VERSION = 2
 DEFAULT_HOTKEY = 1
@@ -40,6 +44,7 @@ def emit_core_effects(version: str) -> str:
     writer.line("set_variable = { ccp_section = 1 }")
     writer.line(f"set_variable = {{ ccp_nav_highlight_y = {NAV_TOP} }}")
     writer.line(f"set_variable = {{ ccp_status = {STATUS_IDLE} }}")
+    writer.line("set_variable = { ccp_amount = 1000 }")
     writer.close()
     writer.close()
     writer.blank()
@@ -90,6 +95,61 @@ def emit_core_effects(version: str) -> str:
         writer.open(f"CCP_set_hotkey_{index}")
         writer.line(f"set_variable = {{ ccp_hotkey_id = {index} }}")
         writer.line(f"set_variable = {{ ccp_status = {STATUS_HOTKEY_CHANGED} }}")
+        writer.line("CCP_mark_dirty = yes")
+        writer.close()
+        writer.blank()
+
+    writer.open("CCP_pad_clear")
+    writer.line("set_variable = { ccp_amount = 0 }")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    for digit in range(10):
+        writer.open(f"CCP_pad_digit_{digit}")
+        writer.open("if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ ccp_amount < {(AMOUNT_MAX - digit) // 10 + 1} }}")
+        writer.close()
+        writer.line("multiply_variable = { ccp_amount = 10 }")
+        if digit:
+            writer.line(f"add_to_variable = {{ ccp_amount = {digit} }}")
+        writer.close()
+        writer.line("CCP_mark_dirty = yes")
+        writer.close()
+        writer.blank()
+
+    writer.open("CCP_pad_backspace")
+    writer.line("set_temp_variable = { ccp_pad_last = var:ccp_amount }")
+    writer.line("modulo_temp_variable = { ccp_pad_last = 10 }")
+    writer.line("subtract_from_variable = { ccp_amount = var:ccp_pad_last }")
+    writer.line("divide_variable = { ccp_amount = 10 }")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    for resource in RESOURCES:
+        for slot, amount in enumerate(resource.presets, start=1):
+            writer.open(f"CCP_grant_{resource.slug}_{slot}")
+            writer.line(f"{resource.effect} = {amount}")
+            writer.line(f"set_variable = {{ ccp_status = {STATUS_GRANTED} }}")
+            writer.line(f"set_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}")
+            writer.line(f"set_variable = {{ ccp_granted_amount = {amount} }}")
+            writer.line("CCP_mark_dirty = yes")
+            writer.close()
+            writer.blank()
+
+        writer.open(f"CCP_grant_{resource.slug}_custom")
+        writer.line("set_temp_variable = { ccp_grant = var:ccp_amount }")
+        writer.open("clamp_temp_variable")
+        writer.line("var = ccp_grant")
+        writer.line("min = 0")
+        writer.line(f"max = {resource.safe_max}")
+        writer.close()
+        writer.line(f"{resource.effect} = var:ccp_grant")
+        writer.line(f"set_variable = {{ ccp_status = {STATUS_GRANTED} }}")
+        writer.line(f"set_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}")
+        writer.line("set_variable = { ccp_granted_amount = var:ccp_grant }")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -180,6 +240,24 @@ def emit_scripted_gui(version: str) -> str:
         writer.open(f"ccp_hotkey_choice_{index}_click")
         writer.line(f"CCP_set_hotkey_{index} = yes")
         writer.close()
+    for digit in range(10):
+        writer.open(f"ccp_pad_{digit}_click")
+        writer.line(f"CCP_pad_digit_{digit} = yes")
+        writer.close()
+    writer.open("ccp_pad_back_click")
+    writer.line("CCP_pad_backspace = yes")
+    writer.close()
+    writer.open("ccp_pad_clear_click")
+    writer.line("CCP_pad_clear = yes")
+    writer.close()
+    for resource in RESOURCES:
+        for slot in range(1, len(resource.presets) + 1):
+            writer.open(f"ccp_grant_{resource.slug}_{slot}_click")
+            writer.line(f"CCP_grant_{resource.slug}_{slot} = yes")
+            writer.close()
+        writer.open(f"ccp_grant_{resource.slug}_custom_click")
+        writer.line(f"CCP_grant_{resource.slug}_custom = yes")
+        writer.close()
     writer.open("ccp_confirm_toggle_click")
     writer.line("CCP_toggle_confirmations = yes")
     writer.close()
@@ -247,6 +325,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {STATUS_HOTKEY_CHANGED} }}", "CCP_STATUS_HOTKEY"),
             (f"check_variable = {{ ccp_status = {STATUS_CONFIRM_ON} }}", "CCP_STATUS_CONFIRM_ON"),
             (f"check_variable = {{ ccp_status = {STATUS_CONFIRM_OFF} }}", "CCP_STATUS_CONFIRM_OFF"),
+            (f"check_variable = {{ ccp_status = {STATUS_GRANTED} }}", "CCP_STATUS_GRANTED"),
         ],
         "CCP_STATUS_IDLE",
     )
@@ -256,6 +335,16 @@ def emit_scripted_localisation(version: str) -> str:
         "CCP_GetConfirmState",
         [("check_variable = { ccp_confirm_destructive = 1 }", "CCP_CONFIRM_ON")],
         "CCP_CONFIRM_OFF",
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetGrantedResource",
+        [
+            (f"check_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}", resource.key)
+            for resource in RESOURCES
+        ],
+        RESOURCES[0].key,
     )
 
     _defined_text(

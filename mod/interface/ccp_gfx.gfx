@@ -53,6 +53,26 @@ spriteTypes = {
 		noOfFrames = 4
 	}
 	spriteType = {
+		name = "GFX_ccp_button_small"
+		texturefile = "gfx/interface/ccp/ccp_button_small.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ccp_key"
+		texturefile = "gfx/interface/ccp/ccp_key.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ccp_readout"
+		texturefile = "gfx/interface/ccp/ccp_readout.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_row"
+		texturefile = "gfx/interface/ccp/ccp_row.png"
+		noOfFrames = 1
+	}
+	spriteType = {
 		name = "GFX_ccp_chip"
 		texturefile = "gfx/interface/ccp/ccp_chip.png"
 		noOfFrames = 4

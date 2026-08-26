@@ -103,6 +103,34 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
         plate(button_size, t.BG_BASE, border=t.BORDER_STEEL),
     )
 
+    small_size = (t.SMALL_BUTTON_WIDTH, t.SMALL_BUTTON_HEIGHT)
+    button_small = frames(
+        plate(small_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.BORDER_STEEL),
+        plate(small_size, t.ACCENT_BRONZE_DIM, shade=t.BG_RAISED, border=t.ACCENT_BRONZE),
+        plate(small_size, t.BG_PANEL, shade=t.BG_BASE, border=t.ACCENT_BRONZE),
+        plate(small_size, t.BG_BASE, border=t.BORDER_STEEL),
+    )
+
+    key_size = (t.KEY_WIDTH, t.KEY_HEIGHT)
+    key = frames(
+        plate(key_size, t.BG_RAISED, shade=t.BG_PANEL, border=t.BORDER_STEEL),
+        plate(key_size, t.ACCENT_BRONZE_DIM, shade=t.BG_RAISED, border=t.ACCENT_BRONZE),
+        plate(key_size, t.BG_PANEL, shade=t.BG_BASE, border=t.ACCENT_BRONZE),
+        plate(key_size, t.BG_BASE, border=t.BORDER_STEEL),
+    )
+
+    readout = plate(
+        (t.READOUT_WIDTH, t.READOUT_HEIGHT),
+        t.BG_BASE,
+        border=t.ACCENT_BRONZE_DIM,
+    )
+
+    row_plate = plate(
+        (t.CONTENT_WIDTH - 48 - t.READOUT_WIDTH - 48, t.ROW_HEIGHT - 8),
+        t.BG_PANEL,
+        border=t.BORDER_STEEL,
+    )
+
     chip_size = (t.CHIP_WIDTH, t.CHIP_HEIGHT)
     chip = frames(
         plate(chip_size, t.BG_BASE, border=t.BORDER_STEEL),
@@ -136,6 +164,10 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
         ("ccp_button.png", button, 4),
         ("ccp_button_danger.png", button_danger, 4),
         ("ccp_button_confirm.png", button_confirm, 4),
+        ("ccp_button_small.png", button_small, 4),
+        ("ccp_key.png", key, 4),
+        ("ccp_readout.png", readout, 1),
+        ("ccp_row.png", row_plate, 1),
         ("ccp_chip.png", chip, 4),
         ("ccp_list_row.png", list_row, 3),
         ("ccp_modal_scrim.png", modal_scrim, 1),
