@@ -311,7 +311,7 @@ Dies lässt sich nicht rückgängig machen. Die Engine bietet keine Wiederherste
  CCP_STATUS_FOLDER:0 "Jede Technologie in [CCP_GetResearchFolderName] erforscht."
  CCP_STATUS_GRANTED:0 "[?ccp_granted_amount|0] [CCP_GetGrantedResource] hinzugefügt."
  CCP_STATUS_HOTKEY:0 "Taste auf [CCP_GetHotkeyName] gesetzt."
- CCP_STATUS_IDLE:0 "Cheat-Kontrollpanel 0.2.0 · Hearts of Iron IV 1.19 · Einzelspieler"
+ CCP_STATUS_IDLE:0 "Cheat-Kontrollpanel 0.9.0 · Hearts of Iron IV 1.19 · Einzelspieler"
  CCP_STATUS_STATE:0 "Staat aktualisiert."
  CCP_STATUS_TECH:0 "[CCP_GetTechnologySelectedName] erforscht."
  CCP_SUBTITLE:0 "Einzelspieler-Werkzeug für Hearts of Iron IV"
