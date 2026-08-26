@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+*.gui   text eol=lf
+*.gfx   text eol=lf
+*.mod   text eol=lf
+*.yml   text eol=lf working-tree-encoding=UTF-8-BOM
+*.txt   text eol=lf
+
+*.png   binary
+*.dds   binary
+*.tga   binary
