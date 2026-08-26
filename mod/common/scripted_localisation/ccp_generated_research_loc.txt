@@ -1981,1969 +1981,1969 @@ defined_text = {
 	name = CCP_GetTechnologySelectedName
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 0 }
+			check_variable = { ccp_research_selected = 0 }
 		}
 		localization_key = armored_car1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 1 }
+			check_variable = { ccp_research_selected = 1 }
 		}
 		localization_key = infantry_weapons
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 2 }
+			check_variable = { ccp_research_selected = 2 }
 		}
 		localization_key = support_weapons
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 3 }
+			check_variable = { ccp_research_selected = 3 }
 		}
 		localization_key = marines
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 4 }
+			check_variable = { ccp_research_selected = 4 }
 		}
 		localization_key = motorised_infantry
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 5 }
+			check_variable = { ccp_research_selected = 5 }
 		}
 		localization_key = paratroopers
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 6 }
+			check_variable = { ccp_research_selected = 6 }
 		}
 		localization_key = rangers_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 7 }
+			check_variable = { ccp_research_selected = 7 }
 		}
 		localization_key = tech_mountaineers
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 8 }
+			check_variable = { ccp_research_selected = 8 }
 		}
 		localization_key = infantry_weapons2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 9 }
+			check_variable = { ccp_research_selected = 9 }
 		}
 		localization_key = support_weapons2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 10 }
+			check_variable = { ccp_research_selected = 10 }
 		}
 		localization_key = tech_special_forces
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 11 }
+			check_variable = { ccp_research_selected = 11 }
 		}
 		localization_key = marines2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 12 }
+			check_variable = { ccp_research_selected = 12 }
 		}
 		localization_key = paratroopers2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 13 }
+			check_variable = { ccp_research_selected = 13 }
 		}
 		localization_key = rangers_tech2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 14 }
+			check_variable = { ccp_research_selected = 14 }
 		}
 		localization_key = tech_mountaineers2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 15 }
+			check_variable = { ccp_research_selected = 15 }
 		}
 		localization_key = advanced_special_forces
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 16 }
+			check_variable = { ccp_research_selected = 16 }
 		}
 		localization_key = armored_car2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 17 }
+			check_variable = { ccp_research_selected = 17 }
 		}
 		localization_key = improved_infantry_weapons_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 18 }
+			check_variable = { ccp_research_selected = 18 }
 		}
 		localization_key = improved_special_forces
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 19 }
+			check_variable = { ccp_research_selected = 19 }
 		}
 		localization_key = support_weapons3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 20 }
+			check_variable = { ccp_research_selected = 20 }
 		}
 		localization_key = amphibious_mechanized_infantry
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 21 }
+			check_variable = { ccp_research_selected = 21 }
 		}
 		localization_key = armored_car3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 22 }
+			check_variable = { ccp_research_selected = 22 }
 		}
 		localization_key = extreme_environment_training
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 23 }
+			check_variable = { ccp_research_selected = 23 }
 		}
 		localization_key = infantry_at
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 24 }
+			check_variable = { ccp_research_selected = 24 }
 		}
 		localization_key = support_weapons4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 25 }
+			check_variable = { ccp_research_selected = 25 }
 		}
 		localization_key = survival_training
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 26 }
+			check_variable = { ccp_research_selected = 26 }
 		}
 		localization_key = amphibious_mechanized_infantry_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 27 }
+			check_variable = { ccp_research_selected = 27 }
 		}
 		localization_key = infantry_at2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 28 }
+			check_variable = { ccp_research_selected = 28 }
 		}
 		localization_key = marines3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 29 }
+			check_variable = { ccp_research_selected = 29 }
 		}
 		localization_key = night_vision
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 30 }
+			check_variable = { ccp_research_selected = 30 }
 		}
 		localization_key = paratroopers3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 31 }
+			check_variable = { ccp_research_selected = 31 }
 		}
 		localization_key = rangers_tech3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 32 }
+			check_variable = { ccp_research_selected = 32 }
 		}
 		localization_key = tech_mountaineers3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 33 }
+			check_variable = { ccp_research_selected = 33 }
 		}
 		localization_key = advanced_infantry_weapons2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 34 }
+			check_variable = { ccp_research_selected = 34 }
 		}
 		localization_key = elite_forces
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 35 }
+			check_variable = { ccp_research_selected = 35 }
 		}
 		localization_key = night_vision2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 36 }
+			check_variable = { ccp_research_selected = 36 }
 		}
 		localization_key = basic_train
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 37 }
+			check_variable = { ccp_research_selected = 37 }
 		}
 		localization_key = tech_support
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 38 }
+			check_variable = { ccp_research_selected = 38 }
 		}
 		localization_key = armored_train
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 39 }
+			check_variable = { ccp_research_selected = 39 }
 		}
 		localization_key = railway_gun
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 40 }
+			check_variable = { ccp_research_selected = 40 }
 		}
 		localization_key = tech_engineers
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 41 }
+			check_variable = { ccp_research_selected = 41 }
 		}
 		localization_key = tech_field_hospital
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 42 }
+			check_variable = { ccp_research_selected = 42 }
 		}
 		localization_key = tech_logistics_company
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 43 }
+			check_variable = { ccp_research_selected = 43 }
 		}
 		localization_key = tech_maintenance_company
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 44 }
+			check_variable = { ccp_research_selected = 44 }
 		}
 		localization_key = tech_military_police
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 45 }
+			check_variable = { ccp_research_selected = 45 }
 		}
 		localization_key = tech_recon
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 46 }
+			check_variable = { ccp_research_selected = 46 }
 		}
 		localization_key = tech_signal_company
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 47 }
+			check_variable = { ccp_research_selected = 47 }
 		}
 		localization_key = sp_armored_engineer_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 48 }
+			check_variable = { ccp_research_selected = 48 }
 		}
 		localization_key = sp_armored_maintenance_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 49 }
+			check_variable = { ccp_research_selected = 49 }
 		}
 		localization_key = sp_armored_motorized_military_police_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 50 }
+			check_variable = { ccp_research_selected = 50 }
 		}
 		localization_key = sp_armored_signal_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 51 }
+			check_variable = { ccp_research_selected = 51 }
 		}
 		localization_key = sp_helicopter_artillery_observers_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 52 }
+			check_variable = { ccp_research_selected = 52 }
 		}
 		localization_key = sp_helicopter_med_evac_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 53 }
+			check_variable = { ccp_research_selected = 53 }
 		}
 		localization_key = sp_helicopter_transport_pods_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 54 }
+			check_variable = { ccp_research_selected = 54 }
 		}
 		localization_key = tech_engineers2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 55 }
+			check_variable = { ccp_research_selected = 55 }
 		}
 		localization_key = tech_field_hospital2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 56 }
+			check_variable = { ccp_research_selected = 56 }
 		}
 		localization_key = tech_logistics_company2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 57 }
+			check_variable = { ccp_research_selected = 57 }
 		}
 		localization_key = tech_maintenance_company2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 58 }
+			check_variable = { ccp_research_selected = 58 }
 		}
 		localization_key = tech_military_police2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 59 }
+			check_variable = { ccp_research_selected = 59 }
 		}
 		localization_key = tech_recon2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 60 }
+			check_variable = { ccp_research_selected = 60 }
 		}
 		localization_key = tech_signal_company2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 61 }
+			check_variable = { ccp_research_selected = 61 }
 		}
 		localization_key = tech_engineers3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 62 }
+			check_variable = { ccp_research_selected = 62 }
 		}
 		localization_key = tech_field_hospital3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 63 }
+			check_variable = { ccp_research_selected = 63 }
 		}
 		localization_key = tech_logistics_company3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 64 }
+			check_variable = { ccp_research_selected = 64 }
 		}
 		localization_key = tech_maintenance_company3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 65 }
+			check_variable = { ccp_research_selected = 65 }
 		}
 		localization_key = tech_military_police3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 66 }
+			check_variable = { ccp_research_selected = 66 }
 		}
 		localization_key = tech_recon3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 67 }
+			check_variable = { ccp_research_selected = 67 }
 		}
 		localization_key = tech_signal_company3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 68 }
+			check_variable = { ccp_research_selected = 68 }
 		}
 		localization_key = tech_engineers4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 69 }
+			check_variable = { ccp_research_selected = 69 }
 		}
 		localization_key = tech_field_hospital4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 70 }
+			check_variable = { ccp_research_selected = 70 }
 		}
 		localization_key = tech_logistics_company4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 71 }
+			check_variable = { ccp_research_selected = 71 }
 		}
 		localization_key = tech_maintenance_company4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 72 }
+			check_variable = { ccp_research_selected = 72 }
 		}
 		localization_key = tech_military_police4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 73 }
+			check_variable = { ccp_research_selected = 73 }
 		}
 		localization_key = tech_recon4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 74 }
+			check_variable = { ccp_research_selected = 74 }
 		}
 		localization_key = tech_signal_company4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 75 }
+			check_variable = { ccp_research_selected = 75 }
 		}
 		localization_key = interwar_antiair
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 76 }
+			check_variable = { ccp_research_selected = 76 }
 		}
 		localization_key = interwar_antitank
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 77 }
+			check_variable = { ccp_research_selected = 77 }
 		}
 		localization_key = interwar_artillery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 78 }
+			check_variable = { ccp_research_selected = 78 }
 		}
 		localization_key = antiair1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 79 }
+			check_variable = { ccp_research_selected = 79 }
 		}
 		localization_key = antitank1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 80 }
+			check_variable = { ccp_research_selected = 80 }
 		}
 		localization_key = artillery1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 81 }
+			check_variable = { ccp_research_selected = 81 }
 		}
 		localization_key = antiair2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 82 }
+			check_variable = { ccp_research_selected = 82 }
 		}
 		localization_key = antitank2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 83 }
+			check_variable = { ccp_research_selected = 83 }
 		}
 		localization_key = artillery2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 84 }
+			check_variable = { ccp_research_selected = 84 }
 		}
 		localization_key = rocket_artillery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 85 }
+			check_variable = { ccp_research_selected = 85 }
 		}
 		localization_key = sp_artillery_purpose_built_gun_motor_carriages_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 86 }
+			check_variable = { ccp_research_selected = 86 }
 		}
 		localization_key = sp_artillery_rocket_assisted_projectiles_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 87 }
+			check_variable = { ccp_research_selected = 87 }
 		}
 		localization_key = antiair3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 88 }
+			check_variable = { ccp_research_selected = 88 }
 		}
 		localization_key = antitank3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 89 }
+			check_variable = { ccp_research_selected = 89 }
 		}
 		localization_key = artillery3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 90 }
+			check_variable = { ccp_research_selected = 90 }
 		}
 		localization_key = rocket_artillery2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 91 }
+			check_variable = { ccp_research_selected = 91 }
 		}
 		localization_key = sp_shock_hardening_techniques
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 92 }
+			check_variable = { ccp_research_selected = 92 }
 		}
 		localization_key = antiair4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 93 }
+			check_variable = { ccp_research_selected = 93 }
 		}
 		localization_key = antitank4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 94 }
+			check_variable = { ccp_research_selected = 94 }
 		}
 		localization_key = artillery4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 95 }
+			check_variable = { ccp_research_selected = 95 }
 		}
 		localization_key = rocket_artillery3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 96 }
+			check_variable = { ccp_research_selected = 96 }
 		}
 		localization_key = sp_advance_sabot_shells
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 97 }
+			check_variable = { ccp_research_selected = 97 }
 		}
 		localization_key = sp_variable_time_fuze_shells
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 98 }
+			check_variable = { ccp_research_selected = 98 }
 		}
 		localization_key = antiair5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 99 }
+			check_variable = { ccp_research_selected = 99 }
 		}
 		localization_key = antitank5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 100 }
+			check_variable = { ccp_research_selected = 100 }
 		}
 		localization_key = artillery5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 101 }
+			check_variable = { ccp_research_selected = 101 }
 		}
 		localization_key = rocket_artillery4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 102 }
+			check_variable = { ccp_research_selected = 102 }
 		}
 		localization_key = early_carrier
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 103 }
+			check_variable = { ccp_research_selected = 103 }
 		}
 		localization_key = transport
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 104 }
+			check_variable = { ccp_research_selected = 104 }
 		}
 		localization_key = basic_carrier
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 105 }
+			check_variable = { ccp_research_selected = 105 }
 		}
 		localization_key = basic_heavy_cruiser
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 106 }
+			check_variable = { ccp_research_selected = 106 }
 		}
 		localization_key = improved_destroyer
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 107 }
+			check_variable = { ccp_research_selected = 107 }
 		}
 		localization_key = landing_craft
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 108 }
+			check_variable = { ccp_research_selected = 108 }
 		}
 		localization_key = heavy_battleship2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 109 }
+			check_variable = { ccp_research_selected = 109 }
 		}
 		localization_key = tank_landing_craft
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 110 }
+			check_variable = { ccp_research_selected = 110 }
 		}
 		localization_key = naval_bomber1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 111 }
+			check_variable = { ccp_research_selected = 111 }
 		}
 		localization_key = scout_plane1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 112 }
+			check_variable = { ccp_research_selected = 112 }
 		}
 		localization_key = naval_bomber2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 113 }
+			check_variable = { ccp_research_selected = 113 }
 		}
 		localization_key = scout_plane2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 114 }
+			check_variable = { ccp_research_selected = 114 }
 		}
 		localization_key = naval_bomber3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 115 }
+			check_variable = { ccp_research_selected = 115 }
 		}
 		localization_key = advanced_fire_control_system
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 116 }
+			check_variable = { ccp_research_selected = 116 }
 		}
 		localization_key = basic_fire_control_system
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 117 }
+			check_variable = { ccp_research_selected = 117 }
 		}
 		localization_key = basic_fortification_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 118 }
+			check_variable = { ccp_research_selected = 118 }
 		}
 		localization_key = coastal_fort_tech_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 119 }
+			check_variable = { ccp_research_selected = 119 }
 		}
 		localization_key = electronic_mechanical_engineering
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 120 }
+			check_variable = { ccp_research_selected = 120 }
 		}
 		localization_key = improved_fire_control_system
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 121 }
+			check_variable = { ccp_research_selected = 121 }
 		}
 		localization_key = mechanical_computing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 122 }
+			check_variable = { ccp_research_selected = 122 }
 		}
 		localization_key = radio
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 123 }
+			check_variable = { ccp_research_selected = 123 }
 		}
 		localization_key = basic_decryption
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 124 }
+			check_variable = { ccp_research_selected = 124 }
 		}
 		localization_key = basic_encryption
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 125 }
+			check_variable = { ccp_research_selected = 125 }
 		}
 		localization_key = cavity_magnatron
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 126 }
+			check_variable = { ccp_research_selected = 126 }
 		}
 		localization_key = computing_machine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 127 }
+			check_variable = { ccp_research_selected = 127 }
 		}
 		localization_key = improved_radio
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 128 }
+			check_variable = { ccp_research_selected = 128 }
 		}
 		localization_key = land_fort_tech_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 129 }
+			check_variable = { ccp_research_selected = 129 }
 		}
 		localization_key = atomic_research
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 130 }
+			check_variable = { ccp_research_selected = 130 }
 		}
 		localization_key = centimetric_radar
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 131 }
+			check_variable = { ccp_research_selected = 131 }
 		}
 		localization_key = coastal_fort_tech_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 132 }
+			check_variable = { ccp_research_selected = 132 }
 		}
 		localization_key = improved_computing_machine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 133 }
+			check_variable = { ccp_research_selected = 133 }
 		}
 		localization_key = improved_decryption
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 134 }
+			check_variable = { ccp_research_selected = 134 }
 		}
 		localization_key = improved_encryption
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 135 }
+			check_variable = { ccp_research_selected = 135 }
 		}
 		localization_key = land_fort_tech_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 136 }
+			check_variable = { ccp_research_selected = 136 }
 		}
 		localization_key = advanced_radio
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 137 }
+			check_variable = { ccp_research_selected = 137 }
 		}
 		localization_key = phased_array
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 138 }
+			check_variable = { ccp_research_selected = 138 }
 		}
 		localization_key = advanced_computing_machine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 139 }
+			check_variable = { ccp_research_selected = 139 }
 		}
 		localization_key = advanced_decryption
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 140 }
+			check_variable = { ccp_research_selected = 140 }
 		}
 		localization_key = advanced_encryption
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 141 }
+			check_variable = { ccp_research_selected = 141 }
 		}
 		localization_key = experimental_rockets
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 142 }
+			check_variable = { ccp_research_selected = 142 }
 		}
 		localization_key = monopulse_radar
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 143 }
+			check_variable = { ccp_research_selected = 143 }
 		}
 		localization_key = sp_rockets_improved_guidance
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 144 }
+			check_variable = { ccp_research_selected = 144 }
 		}
 		localization_key = sp_rockets_dual_chamber_rocket_engine_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 145 }
+			check_variable = { ccp_research_selected = 145 }
 		}
 		localization_key = sp_rockets_rocket_bomber
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 146 }
+			check_variable = { ccp_research_selected = 146 }
 		}
 		localization_key = sp_rockets_improved_rocket_bomber
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 147 }
+			check_variable = { ccp_research_selected = 147 }
 		}
 		localization_key = sp_rockets_dual_chamber_rocket_engine_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 148 }
+			check_variable = { ccp_research_selected = 148 }
 		}
 		localization_key = basic_machine_tools
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 149 }
+			check_variable = { ccp_research_selected = 149 }
 		}
 		localization_key = concentrated_industry
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 150 }
+			check_variable = { ccp_research_selected = 150 }
 		}
 		localization_key = construction1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 151 }
+			check_variable = { ccp_research_selected = 151 }
 		}
 		localization_key = dispersed_industry
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 152 }
+			check_variable = { ccp_research_selected = 152 }
 		}
 		localization_key = excavation1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 153 }
+			check_variable = { ccp_research_selected = 153 }
 		}
 		localization_key = fuel_refining
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 154 }
+			check_variable = { ccp_research_selected = 154 }
 		}
 		localization_key = fuel_silos
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 155 }
+			check_variable = { ccp_research_selected = 155 }
 		}
 		localization_key = synth_oil_experiments
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 156 }
+			check_variable = { ccp_research_selected = 156 }
 		}
 		localization_key = concentrated_industry2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 157 }
+			check_variable = { ccp_research_selected = 157 }
 		}
 		localization_key = construction2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 158 }
+			check_variable = { ccp_research_selected = 158 }
 		}
 		localization_key = dispersed_industry2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 159 }
+			check_variable = { ccp_research_selected = 159 }
 		}
 		localization_key = excavation2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 160 }
+			check_variable = { ccp_research_selected = 160 }
 		}
 		localization_key = fuel_refining2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 161 }
+			check_variable = { ccp_research_selected = 161 }
 		}
 		localization_key = improved_equipment_conversion
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 162 }
+			check_variable = { ccp_research_selected = 162 }
 		}
 		localization_key = improved_machine_tools
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 163 }
+			check_variable = { ccp_research_selected = 163 }
 		}
 		localization_key = oil_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 164 }
+			check_variable = { ccp_research_selected = 164 }
 		}
 		localization_key = rubber_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 165 }
+			check_variable = { ccp_research_selected = 165 }
 		}
 		localization_key = advanced_equipment_conversion
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 166 }
+			check_variable = { ccp_research_selected = 166 }
 		}
 		localization_key = advanced_machine_tools
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 167 }
+			check_variable = { ccp_research_selected = 167 }
 		}
 		localization_key = concentrated_industry3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 168 }
+			check_variable = { ccp_research_selected = 168 }
 		}
 		localization_key = construction3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 169 }
+			check_variable = { ccp_research_selected = 169 }
 		}
 		localization_key = dispersed_industry3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 170 }
+			check_variable = { ccp_research_selected = 170 }
 		}
 		localization_key = excavation3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 171 }
+			check_variable = { ccp_research_selected = 171 }
 		}
 		localization_key = fuel_refining3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 172 }
+			check_variable = { ccp_research_selected = 172 }
 		}
 		localization_key = improved_oil_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 173 }
+			check_variable = { ccp_research_selected = 173 }
 		}
 		localization_key = improved_rubber_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 174 }
+			check_variable = { ccp_research_selected = 174 }
 		}
 		localization_key = advanced_oil_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 175 }
+			check_variable = { ccp_research_selected = 175 }
 		}
 		localization_key = advanced_rubber_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 176 }
+			check_variable = { ccp_research_selected = 176 }
 		}
 		localization_key = assembly_line_production
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 177 }
+			check_variable = { ccp_research_selected = 177 }
 		}
 		localization_key = concentrated_industry4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 178 }
+			check_variable = { ccp_research_selected = 178 }
 		}
 		localization_key = construction4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 179 }
+			check_variable = { ccp_research_selected = 179 }
 		}
 		localization_key = dispersed_industry4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 180 }
+			check_variable = { ccp_research_selected = 180 }
 		}
 		localization_key = excavation4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 181 }
+			check_variable = { ccp_research_selected = 181 }
 		}
 		localization_key = fuel_refining4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 182 }
+			check_variable = { ccp_research_selected = 182 }
 		}
 		localization_key = concentrated_industry5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 183 }
+			check_variable = { ccp_research_selected = 183 }
 		}
 		localization_key = construction5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 184 }
+			check_variable = { ccp_research_selected = 184 }
 		}
 		localization_key = dispersed_industry5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 185 }
+			check_variable = { ccp_research_selected = 185 }
 		}
 		localization_key = excavation5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 186 }
+			check_variable = { ccp_research_selected = 186 }
 		}
 		localization_key = flexible_line
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 187 }
+			check_variable = { ccp_research_selected = 187 }
 		}
 		localization_key = fuel_refining5
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 188 }
+			check_variable = { ccp_research_selected = 188 }
 		}
 		localization_key = modern_oil_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 189 }
+			check_variable = { ccp_research_selected = 189 }
 		}
 		localization_key = modern_rubber_processing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 190 }
+			check_variable = { ccp_research_selected = 190 }
 		}
 		localization_key = streamlined_line
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 191 }
+			check_variable = { ccp_research_selected = 191 }
 		}
 		localization_key = gwtank
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 192 }
+			check_variable = { ccp_research_selected = 192 }
 		}
 		localization_key = gwtank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 193 }
+			check_variable = { ccp_research_selected = 193 }
 		}
 		localization_key = aa_lmg
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 194 }
+			check_variable = { ccp_research_selected = 194 }
 		}
 		localization_key = basic_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 195 }
+			check_variable = { ccp_research_selected = 195 }
 		}
 		localization_key = basic_cruiser_armor_scheme
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 196 }
+			check_variable = { ccp_research_selected = 196 }
 		}
 		localization_key = basic_depth_charges
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 197 }
+			check_variable = { ccp_research_selected = 197 }
 		}
 		localization_key = basic_naval_mines
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 198 }
+			check_variable = { ccp_research_selected = 198 }
 		}
 		localization_key = basic_torpedo
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 199 }
+			check_variable = { ccp_research_selected = 199 }
 		}
 		localization_key = early_bombs
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 200 }
+			check_variable = { ccp_research_selected = 200 }
 		}
 		localization_key = early_ship_hull_carrier
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 201 }
+			check_variable = { ccp_research_selected = 201 }
 		}
 		localization_key = early_ship_hull_submarine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 202 }
+			check_variable = { ccp_research_selected = 202 }
 		}
 		localization_key = engines_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 203 }
+			check_variable = { ccp_research_selected = 203 }
 		}
 		localization_key = mtg_transport
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 204 }
+			check_variable = { ccp_research_selected = 204 }
 		}
 		localization_key = photo_reconnaisance
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 205 }
+			check_variable = { ccp_research_selected = 205 }
 		}
 		localization_key = smoke_generator
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 206 }
+			check_variable = { ccp_research_selected = 206 }
 		}
 		localization_key = sonar
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 207 }
+			check_variable = { ccp_research_selected = 207 }
 		}
 		localization_key = submarine_mine_laying
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 208 }
+			check_variable = { ccp_research_selected = 208 }
 		}
 		localization_key = iw_large_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 209 }
+			check_variable = { ccp_research_selected = 209 }
 		}
 		localization_key = iw_medium_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 210 }
+			check_variable = { ccp_research_selected = 210 }
 		}
 		localization_key = iw_small_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 211 }
+			check_variable = { ccp_research_selected = 211 }
 		}
 		localization_key = basic_heavy_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 212 }
+			check_variable = { ccp_research_selected = 212 }
 		}
 		localization_key = basic_light_tank
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 213 }
+			check_variable = { ccp_research_selected = 213 }
 		}
 		localization_key = basic_light_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 214 }
+			check_variable = { ccp_research_selected = 214 }
 		}
 		localization_key = engine_tech_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 215 }
+			check_variable = { ccp_research_selected = 215 }
 		}
 		localization_key = air_torpedoe_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 216 }
+			check_variable = { ccp_research_selected = 216 }
 		}
 		localization_key = aircraft_construction
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 217 }
+			check_variable = { ccp_research_selected = 217 }
 		}
 		localization_key = armor_piercing_bombs
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 218 }
+			check_variable = { ccp_research_selected = 218 }
 		}
 		localization_key = armor_tech_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 219 }
+			check_variable = { ccp_research_selected = 219 }
 		}
 		localization_key = basic_heavy_armor_scheme
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 220 }
+			check_variable = { ccp_research_selected = 220 }
 		}
 		localization_key = basic_heavy_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 221 }
+			check_variable = { ccp_research_selected = 221 }
 		}
 		localization_key = basic_heavy_shell
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 222 }
+			check_variable = { ccp_research_selected = 222 }
 		}
 		localization_key = basic_large_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 223 }
+			check_variable = { ccp_research_selected = 223 }
 		}
 		localization_key = basic_light_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 224 }
+			check_variable = { ccp_research_selected = 224 }
 		}
 		localization_key = basic_light_shell
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 225 }
+			check_variable = { ccp_research_selected = 225 }
 		}
 		localization_key = basic_medium_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 226 }
+			check_variable = { ccp_research_selected = 226 }
 		}
 		localization_key = basic_ship_hull_carrier
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 227 }
+			check_variable = { ccp_research_selected = 227 }
 		}
 		localization_key = basic_ship_hull_cruiser
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 228 }
+			check_variable = { ccp_research_selected = 228 }
 		}
 		localization_key = basic_ship_hull_heavy
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 229 }
+			check_variable = { ccp_research_selected = 229 }
 		}
 		localization_key = basic_ship_hull_submarine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 230 }
+			check_variable = { ccp_research_selected = 230 }
 		}
 		localization_key = basic_small_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 231 }
+			check_variable = { ccp_research_selected = 231 }
 		}
 		localization_key = damage_control_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 232 }
+			check_variable = { ccp_research_selected = 232 }
 		}
 		localization_key = damage_control_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 233 }
+			check_variable = { ccp_research_selected = 233 }
 		}
 		localization_key = damage_control_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 234 }
+			check_variable = { ccp_research_selected = 234 }
 		}
 		localization_key = engines_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 235 }
+			check_variable = { ccp_research_selected = 235 }
 		}
 		localization_key = fire_control_methods_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 236 }
+			check_variable = { ccp_research_selected = 236 }
 		}
 		localization_key = fire_control_methods_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 237 }
+			check_variable = { ccp_research_selected = 237 }
 		}
 		localization_key = fire_control_methods_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 238 }
+			check_variable = { ccp_research_selected = 238 }
 		}
 		localization_key = improved_depth_charges
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 239 }
+			check_variable = { ccp_research_selected = 239 }
 		}
 		localization_key = improved_heavy_armor_scheme
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 240 }
+			check_variable = { ccp_research_selected = 240 }
 		}
 		localization_key = improved_light_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 241 }
+			check_variable = { ccp_research_selected = 241 }
 		}
 		localization_key = improved_naval_mines
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 242 }
+			check_variable = { ccp_research_selected = 242 }
 		}
 		localization_key = improved_ship_torpedo_launcher
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 243 }
+			check_variable = { ccp_research_selected = 243 }
 		}
 		localization_key = improved_sonar
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 244 }
+			check_variable = { ccp_research_selected = 244 }
 		}
 		localization_key = magnetic_detonator
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 245 }
+			check_variable = { ccp_research_selected = 245 }
 		}
 		localization_key = range_improvements
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 246 }
+			check_variable = { ccp_research_selected = 246 }
 		}
 		localization_key = amphibious_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 247 }
+			check_variable = { ccp_research_selected = 247 }
 		}
 		localization_key = armor_tech_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 248 }
+			check_variable = { ccp_research_selected = 248 }
 		}
 		localization_key = basic_medium_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 249 }
+			check_variable = { ccp_research_selected = 249 }
 		}
 		localization_key = degaussing
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 250 }
+			check_variable = { ccp_research_selected = 250 }
 		}
 		localization_key = engine_tech_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 251 }
+			check_variable = { ccp_research_selected = 251 }
 		}
 		localization_key = sp_multi_product_supply_ships
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 252 }
+			check_variable = { ccp_research_selected = 252 }
 		}
 		localization_key = aa_cannon_1
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 253 }
+			check_variable = { ccp_research_selected = 253 }
 		}
 		localization_key = aa_hmg
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 254 }
+			check_variable = { ccp_research_selected = 254 }
 		}
 		localization_key = advanced_depth_charges
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 255 }
+			check_variable = { ccp_research_selected = 255 }
 		}
 		localization_key = advanced_sonar
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 256 }
+			check_variable = { ccp_research_selected = 256 }
 		}
 		localization_key = basic_dp_light_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 257 }
+			check_variable = { ccp_research_selected = 257 }
 		}
 		localization_key = basic_submarine_snorkel
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 258 }
+			check_variable = { ccp_research_selected = 258 }
 		}
 		localization_key = improved_heavy_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 259 }
+			check_variable = { ccp_research_selected = 259 }
 		}
 		localization_key = improved_light_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 260 }
+			check_variable = { ccp_research_selected = 260 }
 		}
 		localization_key = improved_ship_hull_submarine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 261 }
+			check_variable = { ccp_research_selected = 261 }
 		}
 		localization_key = sp_aip_engine_improved_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 262 }
+			check_variable = { ccp_research_selected = 262 }
 		}
 		localization_key = survivability_studies
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 263 }
+			check_variable = { ccp_research_selected = 263 }
 		}
 		localization_key = advanced_naval_mines
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 264 }
+			check_variable = { ccp_research_selected = 264 }
 		}
 		localization_key = advanced_ship_torpedo_launcher
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 265 }
+			check_variable = { ccp_research_selected = 265 }
 		}
 		localization_key = air_torpedoe_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 266 }
+			check_variable = { ccp_research_selected = 266 }
 		}
 		localization_key = amphibious_tank
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 267 }
+			check_variable = { ccp_research_selected = 267 }
 		}
 		localization_key = engines_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 268 }
+			check_variable = { ccp_research_selected = 268 }
 		}
 		localization_key = heavy_bombs
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 269 }
+			check_variable = { ccp_research_selected = 269 }
 		}
 		localization_key = improved_dp_light_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 270 }
+			check_variable = { ccp_research_selected = 270 }
 		}
 		localization_key = improved_heavy_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 271 }
+			check_variable = { ccp_research_selected = 271 }
 		}
 		localization_key = improved_large_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 272 }
+			check_variable = { ccp_research_selected = 272 }
 		}
 		localization_key = improved_medium_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 273 }
+			check_variable = { ccp_research_selected = 273 }
 		}
 		localization_key = improved_medium_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 274 }
+			check_variable = { ccp_research_selected = 274 }
 		}
 		localization_key = improved_small_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 275 }
+			check_variable = { ccp_research_selected = 275 }
 		}
 		localization_key = improved_submarine_mine_laying
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 276 }
+			check_variable = { ccp_research_selected = 276 }
 		}
 		localization_key = mtg_landing_craft
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 277 }
+			check_variable = { ccp_research_selected = 277 }
 		}
 		localization_key = advanced_light_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 278 }
+			check_variable = { ccp_research_selected = 278 }
 		}
 		localization_key = amphibious_drive
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 279 }
+			check_variable = { ccp_research_selected = 279 }
 		}
 		localization_key = armor_tech_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 280 }
+			check_variable = { ccp_research_selected = 280 }
 		}
 		localization_key = engine_tech_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 281 }
+			check_variable = { ccp_research_selected = 281 }
 		}
 		localization_key = sp_armored_advanced_flamethrower_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 282 }
+			check_variable = { ccp_research_selected = 282 }
 		}
 		localization_key = super_heavy_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 283 }
+			check_variable = { ccp_research_selected = 283 }
 		}
 		localization_key = airdrop_mines
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 284 }
+			check_variable = { ccp_research_selected = 284 }
 		}
 		localization_key = airdrop_mines_bba
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 285 }
+			check_variable = { ccp_research_selected = 285 }
 		}
 		localization_key = airsweep_mines
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 286 }
+			check_variable = { ccp_research_selected = 286 }
 		}
 		localization_key = airsweep_mines_bba
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 287 }
+			check_variable = { ccp_research_selected = 287 }
 		}
 		localization_key = amphibious_tank_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 288 }
+			check_variable = { ccp_research_selected = 288 }
 		}
 		localization_key = homing_torpedo
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 289 }
+			check_variable = { ccp_research_selected = 289 }
 		}
 		localization_key = improved_heavy_shell
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 290 }
+			check_variable = { ccp_research_selected = 290 }
 		}
 		localization_key = improved_light_shell
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 291 }
+			check_variable = { ccp_research_selected = 291 }
 		}
 		localization_key = reinforced_wings_mothership
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 292 }
+			check_variable = { ccp_research_selected = 292 }
 		}
 		localization_key = sp_refined_pykrete
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 293 }
+			check_variable = { ccp_research_selected = 293 }
 		}
 		localization_key = aa_cannon_2
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 294 }
+			check_variable = { ccp_research_selected = 294 }
 		}
 		localization_key = advanced_heavy_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 295 }
+			check_variable = { ccp_research_selected = 295 }
 		}
 		localization_key = advanced_medium_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 296 }
+			check_variable = { ccp_research_selected = 296 }
 		}
 		localization_key = advanced_ship_hull_submarine
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 297 }
+			check_variable = { ccp_research_selected = 297 }
 		}
 		localization_key = improved_submarine_snorkel
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 298 }
+			check_variable = { ccp_research_selected = 298 }
 		}
 		localization_key = modern_depth_charges
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 299 }
+			check_variable = { ccp_research_selected = 299 }
 		}
 		localization_key = modern_sonar
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 300 }
+			check_variable = { ccp_research_selected = 300 }
 		}
 		localization_key = sp_aip_engine_advanced_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 301 }
+			check_variable = { ccp_research_selected = 301 }
 		}
 		localization_key = sp_armored_lc_high_impact_obliterator_cannon_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 302 }
+			check_variable = { ccp_research_selected = 302 }
 		}
 		localization_key = sp_armored_lc_naval_engine_conversion_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 303 }
+			check_variable = { ccp_research_selected = 303 }
 		}
 		localization_key = sp_armored_lc_specialized_field_manuals_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 304 }
+			check_variable = { ccp_research_selected = 304 }
 		}
 		localization_key = sp_armored_lc_transmission_improvements_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 305 }
+			check_variable = { ccp_research_selected = 305 }
 		}
 		localization_key = sp_standard_tenshioned_replenishment_alongside_method
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 306 }
+			check_variable = { ccp_research_selected = 306 }
 		}
 		localization_key = advanced_dp_light_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 307 }
+			check_variable = { ccp_research_selected = 307 }
 		}
 		localization_key = advanced_heavy_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 308 }
+			check_variable = { ccp_research_selected = 308 }
 		}
 		localization_key = advanced_large_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 309 }
+			check_variable = { ccp_research_selected = 309 }
 		}
 		localization_key = advanced_light_battery
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 310 }
+			check_variable = { ccp_research_selected = 310 }
 		}
 		localization_key = advanced_medium_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 311 }
+			check_variable = { ccp_research_selected = 311 }
 		}
 		localization_key = advanced_small_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 312 }
+			check_variable = { ccp_research_selected = 312 }
 		}
 		localization_key = air_torpedoe_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 313 }
+			check_variable = { ccp_research_selected = 313 }
 		}
 		localization_key = armor_tech_4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 314 }
+			check_variable = { ccp_research_selected = 314 }
 		}
 		localization_key = engine_tech_4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 315 }
+			check_variable = { ccp_research_selected = 315 }
 		}
 		localization_key = engines_4
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 316 }
+			check_variable = { ccp_research_selected = 316 }
 		}
 		localization_key = miniature_fighters
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 317 }
+			check_variable = { ccp_research_selected = 317 }
 		}
 		localization_key = modern_ship_torpedo_launcher
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 318 }
+			check_variable = { ccp_research_selected = 318 }
 		}
 		localization_key = mtg_tank_landing_craft
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 319 }
+			check_variable = { ccp_research_selected = 319 }
 		}
 		localization_key = sp_ice_composite_runawayas
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 320 }
+			check_variable = { ccp_research_selected = 320 }
 		}
 		localization_key = aa_cannon_3
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 321 }
+			check_variable = { ccp_research_selected = 321 }
 		}
 		localization_key = main_battle_tank_chassis
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 322 }
+			check_variable = { ccp_research_selected = 322 }
 		}
 		localization_key = modern_large_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 323 }
+			check_variable = { ccp_research_selected = 323 }
 		}
 		localization_key = modern_medium_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 324 }
+			check_variable = { ccp_research_selected = 324 }
 		}
 		localization_key = modern_small_airframe
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 325 }
+			check_variable = { ccp_research_selected = 325 }
 		}
 		localization_key = sp_armored_lc_weapon_fire_control_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 326 }
+			check_variable = { ccp_research_selected = 326 }
 		}
 		localization_key = sp_centrifugal_jet_tech
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_selected = 327 }
+			check_variable = { ccp_research_selected = 327 }
 		}
 		localization_key = aerial_hangars
 	}
@@ -3956,73 +3956,73 @@ defined_text = {
 	name = CCP_GetResearchFolderName
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 1 }
+			check_variable = { ccp_research_folder = 1 }
 		}
 		localization_key = infantry_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 2 }
+			check_variable = { ccp_research_folder = 2 }
 		}
 		localization_key = support_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 3 }
+			check_variable = { ccp_research_folder = 3 }
 		}
 		localization_key = artillery_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 4 }
+			check_variable = { ccp_research_folder = 4 }
 		}
 		localization_key = naval_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 5 }
+			check_variable = { ccp_research_folder = 5 }
 		}
 		localization_key = air_techs_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 6 }
+			check_variable = { ccp_research_folder = 6 }
 		}
 		localization_key = electronics_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 7 }
+			check_variable = { ccp_research_folder = 7 }
 		}
 		localization_key = industry_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 8 }
+			check_variable = { ccp_research_folder = 8 }
 		}
 		localization_key = armour_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 9 }
+			check_variable = { ccp_research_folder = 9 }
 		}
 		localization_key = bba_air_techs_folder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 10 }
+			check_variable = { ccp_research_folder = 10 }
 		}
 		localization_key = mtgnavalfolder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 11 }
+			check_variable = { ccp_research_folder = 11 }
 		}
 		localization_key = mtgnavalsupportfolder
 	}
 	text = {
 		trigger = {
-			check_variable = { global.ccp_research_folder = 12 }
+			check_variable = { ccp_research_folder = 12 }
 		}
 		localization_key = nsb_armour_folder
 	}

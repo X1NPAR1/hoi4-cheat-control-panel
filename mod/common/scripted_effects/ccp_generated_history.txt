@@ -3,26 +3,26 @@
 # Source game version: 1.19.2.0
 
 CCP_history_record = {
-	add_to_array = { array = global.ccp_history value = var:global.ccp_last_action }
+	add_to_array = { array = ccp_history value = var:ccp_last_action }
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 10 }
+			check_variable = { ccp_history^num > 10 }
 		}
-		remove_from_array = { array = global.ccp_history index = 0 }
+		remove_from_array = { array = ccp_history index = 0 }
 	}
 }
 
 CCP_history_clear = {
-	clear_array = global.ccp_history
+	clear_array = ccp_history
 	CCP_mark_dirty = yes
 }
 
 CCP_history_repeat_1 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 0 }
+			check_variable = { ccp_history^num > 0 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^0 }
+		set_variable = { ccp_last_action = ccp_history^0 }
 		CCP_action_replay = yes
 	}
 }
@@ -30,9 +30,9 @@ CCP_history_repeat_1 = {
 CCP_history_repeat_2 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 1 }
+			check_variable = { ccp_history^num > 1 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^1 }
+		set_variable = { ccp_last_action = ccp_history^1 }
 		CCP_action_replay = yes
 	}
 }
@@ -40,9 +40,9 @@ CCP_history_repeat_2 = {
 CCP_history_repeat_3 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 2 }
+			check_variable = { ccp_history^num > 2 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^2 }
+		set_variable = { ccp_last_action = ccp_history^2 }
 		CCP_action_replay = yes
 	}
 }
@@ -50,9 +50,9 @@ CCP_history_repeat_3 = {
 CCP_history_repeat_4 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 3 }
+			check_variable = { ccp_history^num > 3 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^3 }
+		set_variable = { ccp_last_action = ccp_history^3 }
 		CCP_action_replay = yes
 	}
 }
@@ -60,9 +60,9 @@ CCP_history_repeat_4 = {
 CCP_history_repeat_5 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 4 }
+			check_variable = { ccp_history^num > 4 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^4 }
+		set_variable = { ccp_last_action = ccp_history^4 }
 		CCP_action_replay = yes
 	}
 }
@@ -70,9 +70,9 @@ CCP_history_repeat_5 = {
 CCP_history_repeat_6 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 5 }
+			check_variable = { ccp_history^num > 5 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^5 }
+		set_variable = { ccp_last_action = ccp_history^5 }
 		CCP_action_replay = yes
 	}
 }
@@ -80,9 +80,9 @@ CCP_history_repeat_6 = {
 CCP_history_repeat_7 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 6 }
+			check_variable = { ccp_history^num > 6 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^6 }
+		set_variable = { ccp_last_action = ccp_history^6 }
 		CCP_action_replay = yes
 	}
 }
@@ -90,9 +90,9 @@ CCP_history_repeat_7 = {
 CCP_history_repeat_8 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 7 }
+			check_variable = { ccp_history^num > 7 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^7 }
+		set_variable = { ccp_last_action = ccp_history^7 }
 		CCP_action_replay = yes
 	}
 }
@@ -100,9 +100,9 @@ CCP_history_repeat_8 = {
 CCP_history_repeat_9 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 8 }
+			check_variable = { ccp_history^num > 8 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^8 }
+		set_variable = { ccp_last_action = ccp_history^8 }
 		CCP_action_replay = yes
 	}
 }
@@ -110,9 +110,9 @@ CCP_history_repeat_9 = {
 CCP_history_repeat_10 = {
 	if = {
 		limit = {
-			check_variable = { global.global.ccp_history^num > 9 }
+			check_variable = { ccp_history^num > 9 }
 		}
-		set_variable = { global.ccp_last_action = global.ccp_history^9 }
+		set_variable = { ccp_last_action = ccp_history^9 }
 		CCP_action_replay = yes
 	}
 }
@@ -120,127 +120,127 @@ CCP_history_repeat_10 = {
 CCP_action_replay = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 1 }
+			check_variable = { ccp_last_action = 1 }
 		}
 		CCP_action_stability_max = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 2 }
+			check_variable = { ccp_last_action = 2 }
 		}
 		CCP_action_war_support_max = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 3 }
+			check_variable = { ccp_last_action = 3 }
 		}
 		CCP_action_stability_min = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 4 }
+			check_variable = { ccp_last_action = 4 }
 		}
 		CCP_action_war_support_min = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 5 }
+			check_variable = { ccp_last_action = 5 }
 		}
 		CCP_action_research_slots = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 6 }
+			check_variable = { ccp_last_action = 6 }
 		}
 		CCP_action_fuel = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 7 }
+			check_variable = { ccp_last_action = 7 }
 		}
 		CCP_action_infrastructure = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 8 }
+			check_variable = { ccp_last_action = 8 }
 		}
 		CCP_action_civilian = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 9 }
+			check_variable = { ccp_last_action = 9 }
 		}
 		CCP_action_military = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 10 }
+			check_variable = { ccp_last_action = 10 }
 		}
 		CCP_action_dockyard = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 11 }
+			check_variable = { ccp_last_action = 11 }
 		}
 		CCP_action_airbase = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 12 }
+			check_variable = { ccp_last_action = 12 }
 		}
 		CCP_action_radar = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 13 }
+			check_variable = { ccp_last_action = 13 }
 		}
 		CCP_action_antiair = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 14 }
+			check_variable = { ccp_last_action = 14 }
 		}
 		CCP_action_offsite_civilian = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 15 }
+			check_variable = { ccp_last_action = 15 }
 		}
 		CCP_action_offsite_military = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 16 }
+			check_variable = { ccp_last_action = 16 }
 		}
 		CCP_action_army_xp = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 17 }
+			check_variable = { ccp_last_action = 17 }
 		}
 		CCP_action_navy_xp = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 18 }
+			check_variable = { ccp_last_action = 18 }
 		}
 		CCP_action_attack = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 19 }
+			check_variable = { ccp_last_action = 19 }
 		}
 		CCP_action_defense = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 20 }
+			check_variable = { ccp_last_action = 20 }
 		}
 		CCP_action_planning = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_last_action = 21 }
+			check_variable = { ccp_last_action = 21 }
 		}
 		CCP_action_logistics = yes
 	}

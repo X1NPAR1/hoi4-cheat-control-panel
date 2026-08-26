@@ -113,7 +113,7 @@ def emit_core_effects(version: str) -> str:
     writer.blank()
 
     writer.open("CCP_mark_dirty")
-    writer.line("add_to_variable = { ccp_ui_revision = 1 }")
+    writer.line("var:ccp_player = { add_to_variable = { ccp_ui_revision = 1 } }")
     writer.close()
     writer.blank()
 

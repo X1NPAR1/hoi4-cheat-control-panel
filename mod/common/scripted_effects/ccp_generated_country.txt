@@ -3,43 +3,43 @@
 # Source game version: 1.19.2.0
 
 CCP_country_rebuild = {
-	clear_array = global.ccp_country_all
+	clear_array = ccp_country_all
 	every_country = {
 		limit = {
 			exists = yes
 			NOT = { tag = ROOT }
 		}
-		ROOT = { add_to_array = { array = global.ccp_country_all value = PREV } }
+		ROOT = { add_to_array = { array = ccp_country_all value = PREV } }
 	}
-	set_variable = { global.ccp_country_count = global.ccp_country_all^num }
+	set_variable = { ccp_country_count = ccp_country_all^num }
 	CCP_country_recount_pages = yes
-	set_variable = { global.ccp_country_page = 0 }
+	set_variable = { ccp_country_page = 0 }
 	CCP_country_load_page = yes
 }
 
 CCP_country_recount_pages = {
-	set_variable = { global.ccp_country_pages_last = global.ccp_country_count }
-	subtract_from_variable = { global.ccp_country_pages_last = 1 }
-	clamp_variable = { var = global.ccp_country_pages_last min = 0 }
-	set_temp_variable = { ccp_page_remainder = global.ccp_country_pages_last }
+	set_variable = { ccp_country_pages_last = ccp_country_count }
+	subtract_from_variable = { ccp_country_pages_last = 1 }
+	clamp_variable = { var = ccp_country_pages_last min = 0 }
+	set_temp_variable = { ccp_page_remainder = ccp_country_pages_last }
 	modulo_temp_variable = { ccp_page_remainder = 16 }
-	subtract_from_variable = { global.ccp_country_pages_last = var:ccp_page_remainder }
-	divide_variable = { global.ccp_country_pages_last = 16 }
+	subtract_from_variable = { ccp_country_pages_last = var:ccp_page_remainder }
+	divide_variable = { ccp_country_pages_last = 16 }
 }
 
 CCP_country_load_page = {
-	clear_array = global.ccp_country_page_items
-	set_variable = { global.ccp_country_page_shown = global.ccp_country_page }
-	add_to_variable = { global.ccp_country_page_shown = 1 }
-	set_variable = { global.ccp_country_pages_shown = global.ccp_country_pages_last }
-	add_to_variable = { global.ccp_country_pages_shown = 1 }
-	set_temp_variable = { ccp_page_first = var:global.ccp_country_page }
+	clear_array = ccp_country_page_items
+	set_variable = { ccp_country_page_shown = ccp_country_page }
+	add_to_variable = { ccp_country_page_shown = 1 }
+	set_variable = { ccp_country_pages_shown = ccp_country_pages_last }
+	add_to_variable = { ccp_country_pages_shown = 1 }
+	set_temp_variable = { ccp_page_first = var:ccp_country_page }
 	multiply_temp_variable = { ccp_page_first = 16 }
 	set_temp_variable = { ccp_page_last = var:ccp_page_first }
 	add_to_temp_variable = { ccp_page_last = 15 }
 	for_loop_effect = {
 		start = 0
-		end = global.ccp_country_count
+		end = ccp_country_count
 		value = ccp_slot
 		if = {
 			limit = {
@@ -47,8 +47,8 @@ CCP_country_load_page = {
 				check_variable = { ccp_slot <= ccp_page_last }
 			}
 			add_to_array = {
-				array = global.ccp_country_page_items
-				value = global.ccp_country_all^ccp_slot
+				array = ccp_country_page_items
+				value = ccp_country_all^ccp_slot
 			}
 		}
 	}
@@ -58,9 +58,9 @@ CCP_country_load_page = {
 CCP_country_next_page = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_country_page < ccp_country_pages_last }
+			check_variable = { ccp_country_page < ccp_country_pages_last }
 		}
-		add_to_variable = { global.ccp_country_page = 1 }
+		add_to_variable = { ccp_country_page = 1 }
 		CCP_country_load_page = yes
 	}
 }
@@ -68,9 +68,9 @@ CCP_country_next_page = {
 CCP_country_prev_page = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_country_page > 0 }
+			check_variable = { ccp_country_page > 0 }
 		}
-		subtract_from_variable = { global.ccp_country_page = 1 }
+		subtract_from_variable = { ccp_country_page = 1 }
 		CCP_country_load_page = yes
 	}
 }

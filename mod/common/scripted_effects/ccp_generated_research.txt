@@ -3,176 +3,176 @@
 # Source game version: 1.19.2.0
 
 CCP_research_select_infantry_folder = {
-	set_variable = { global.ccp_research_folder = 1 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 2 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 1 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 2 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_support_folder = {
-	set_variable = { global.ccp_research_folder = 2 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 2 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 2 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 2 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_artillery_folder = {
-	set_variable = { global.ccp_research_folder = 3 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 1 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 3 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 1 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_naval_folder = {
-	set_variable = { global.ccp_research_folder = 4 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 0 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 4 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 0 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_air_techs_folder = {
-	set_variable = { global.ccp_research_folder = 5 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 0 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 5 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 0 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_electronics_folder = {
-	set_variable = { global.ccp_research_folder = 6 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 2 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 6 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 2 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_industry_folder = {
-	set_variable = { global.ccp_research_folder = 7 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 2 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 7 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 2 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_armour_folder = {
-	set_variable = { global.ccp_research_folder = 8 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 0 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 8 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 0 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_bba_air_techs_folder = {
-	set_variable = { global.ccp_research_folder = 9 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 2 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 9 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 2 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_mtgnavalfolder = {
-	set_variable = { global.ccp_research_folder = 10 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 1 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 10 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 1 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_mtgnavalsupportfolder = {
-	set_variable = { global.ccp_research_folder = 11 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 2 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 11 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 2 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_select_nsb_armour_folder = {
-	set_variable = { global.ccp_research_folder = 12 }
-	set_variable = { global.ccp_research_page = 0 }
-	set_variable = { global.ccp_research_pages_last = 1 }
-	set_variable = { global.ccp_research_selected = -1 }
+	set_variable = { ccp_research_folder = 12 }
+	set_variable = { ccp_research_page = 0 }
+	set_variable = { ccp_research_pages_last = 1 }
+	set_variable = { ccp_research_selected = -1 }
 	CCP_research_load_page = yes
 }
 
 CCP_research_load_page = {
-	clear_array = global.ccp_research_page_items
-	set_variable = { global.ccp_research_page_shown = global.ccp_research_page }
-	add_to_variable = { global.ccp_research_page_shown = 1 }
-	set_variable = { global.ccp_research_pages_shown = global.ccp_research_pages_last }
-	add_to_variable = { global.ccp_research_pages_shown = 1 }
+	clear_array = ccp_research_page_items
+	set_variable = { ccp_research_page_shown = ccp_research_page }
+	add_to_variable = { ccp_research_page_shown = 1 }
+	set_variable = { ccp_research_pages_shown = ccp_research_pages_last }
+	add_to_variable = { ccp_research_pages_shown = 1 }
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 1 }
+			check_variable = { ccp_research_folder = 1 }
 		}
 		CCP_research_load_infantry_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 2 }
+			check_variable = { ccp_research_folder = 2 }
 		}
 		CCP_research_load_support_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 3 }
+			check_variable = { ccp_research_folder = 3 }
 		}
 		CCP_research_load_artillery_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 4 }
+			check_variable = { ccp_research_folder = 4 }
 		}
 		CCP_research_load_naval_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 5 }
+			check_variable = { ccp_research_folder = 5 }
 		}
 		CCP_research_load_air_techs_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 6 }
+			check_variable = { ccp_research_folder = 6 }
 		}
 		CCP_research_load_electronics_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 7 }
+			check_variable = { ccp_research_folder = 7 }
 		}
 		CCP_research_load_industry_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 8 }
+			check_variable = { ccp_research_folder = 8 }
 		}
 		CCP_research_load_armour_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 9 }
+			check_variable = { ccp_research_folder = 9 }
 		}
 		CCP_research_load_bba_air_techs_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 10 }
+			check_variable = { ccp_research_folder = 10 }
 		}
 		CCP_research_load_mtgnavalfolder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 11 }
+			check_variable = { ccp_research_folder = 11 }
 		}
 		CCP_research_load_mtgnavalsupportfolder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 12 }
+			check_variable = { ccp_research_folder = 12 }
 		}
 		CCP_research_load_nsb_armour_folder = yes
 	}
@@ -182,549 +182,549 @@ CCP_research_load_page = {
 CCP_research_load_infantry_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 0 }
-		add_to_array = { array = global.ccp_research_page_items value = 1 }
-		add_to_array = { array = global.ccp_research_page_items value = 2 }
-		add_to_array = { array = global.ccp_research_page_items value = 3 }
-		add_to_array = { array = global.ccp_research_page_items value = 4 }
-		add_to_array = { array = global.ccp_research_page_items value = 5 }
-		add_to_array = { array = global.ccp_research_page_items value = 6 }
-		add_to_array = { array = global.ccp_research_page_items value = 7 }
-		add_to_array = { array = global.ccp_research_page_items value = 8 }
-		add_to_array = { array = global.ccp_research_page_items value = 9 }
-		add_to_array = { array = global.ccp_research_page_items value = 10 }
-		add_to_array = { array = global.ccp_research_page_items value = 11 }
-		add_to_array = { array = global.ccp_research_page_items value = 12 }
-		add_to_array = { array = global.ccp_research_page_items value = 13 }
-		add_to_array = { array = global.ccp_research_page_items value = 14 }
-		add_to_array = { array = global.ccp_research_page_items value = 15 }
+		add_to_array = { array = ccp_research_page_items value = 0 }
+		add_to_array = { array = ccp_research_page_items value = 1 }
+		add_to_array = { array = ccp_research_page_items value = 2 }
+		add_to_array = { array = ccp_research_page_items value = 3 }
+		add_to_array = { array = ccp_research_page_items value = 4 }
+		add_to_array = { array = ccp_research_page_items value = 5 }
+		add_to_array = { array = ccp_research_page_items value = 6 }
+		add_to_array = { array = ccp_research_page_items value = 7 }
+		add_to_array = { array = ccp_research_page_items value = 8 }
+		add_to_array = { array = ccp_research_page_items value = 9 }
+		add_to_array = { array = ccp_research_page_items value = 10 }
+		add_to_array = { array = ccp_research_page_items value = 11 }
+		add_to_array = { array = ccp_research_page_items value = 12 }
+		add_to_array = { array = ccp_research_page_items value = 13 }
+		add_to_array = { array = ccp_research_page_items value = 14 }
+		add_to_array = { array = ccp_research_page_items value = 15 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 16 }
-		add_to_array = { array = global.ccp_research_page_items value = 17 }
-		add_to_array = { array = global.ccp_research_page_items value = 18 }
-		add_to_array = { array = global.ccp_research_page_items value = 19 }
-		add_to_array = { array = global.ccp_research_page_items value = 20 }
-		add_to_array = { array = global.ccp_research_page_items value = 21 }
-		add_to_array = { array = global.ccp_research_page_items value = 22 }
-		add_to_array = { array = global.ccp_research_page_items value = 23 }
-		add_to_array = { array = global.ccp_research_page_items value = 24 }
-		add_to_array = { array = global.ccp_research_page_items value = 25 }
-		add_to_array = { array = global.ccp_research_page_items value = 26 }
-		add_to_array = { array = global.ccp_research_page_items value = 27 }
-		add_to_array = { array = global.ccp_research_page_items value = 28 }
-		add_to_array = { array = global.ccp_research_page_items value = 29 }
-		add_to_array = { array = global.ccp_research_page_items value = 30 }
-		add_to_array = { array = global.ccp_research_page_items value = 31 }
+		add_to_array = { array = ccp_research_page_items value = 16 }
+		add_to_array = { array = ccp_research_page_items value = 17 }
+		add_to_array = { array = ccp_research_page_items value = 18 }
+		add_to_array = { array = ccp_research_page_items value = 19 }
+		add_to_array = { array = ccp_research_page_items value = 20 }
+		add_to_array = { array = ccp_research_page_items value = 21 }
+		add_to_array = { array = ccp_research_page_items value = 22 }
+		add_to_array = { array = ccp_research_page_items value = 23 }
+		add_to_array = { array = ccp_research_page_items value = 24 }
+		add_to_array = { array = ccp_research_page_items value = 25 }
+		add_to_array = { array = ccp_research_page_items value = 26 }
+		add_to_array = { array = ccp_research_page_items value = 27 }
+		add_to_array = { array = ccp_research_page_items value = 28 }
+		add_to_array = { array = ccp_research_page_items value = 29 }
+		add_to_array = { array = ccp_research_page_items value = 30 }
+		add_to_array = { array = ccp_research_page_items value = 31 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 2 }
+			check_variable = { ccp_research_page = 2 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 32 }
-		add_to_array = { array = global.ccp_research_page_items value = 33 }
-		add_to_array = { array = global.ccp_research_page_items value = 34 }
-		add_to_array = { array = global.ccp_research_page_items value = 35 }
+		add_to_array = { array = ccp_research_page_items value = 32 }
+		add_to_array = { array = ccp_research_page_items value = 33 }
+		add_to_array = { array = ccp_research_page_items value = 34 }
+		add_to_array = { array = ccp_research_page_items value = 35 }
 	}
 }
 
 CCP_research_load_support_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 36 }
-		add_to_array = { array = global.ccp_research_page_items value = 37 }
-		add_to_array = { array = global.ccp_research_page_items value = 38 }
-		add_to_array = { array = global.ccp_research_page_items value = 39 }
-		add_to_array = { array = global.ccp_research_page_items value = 40 }
-		add_to_array = { array = global.ccp_research_page_items value = 41 }
-		add_to_array = { array = global.ccp_research_page_items value = 42 }
-		add_to_array = { array = global.ccp_research_page_items value = 43 }
-		add_to_array = { array = global.ccp_research_page_items value = 44 }
-		add_to_array = { array = global.ccp_research_page_items value = 45 }
-		add_to_array = { array = global.ccp_research_page_items value = 46 }
-		add_to_array = { array = global.ccp_research_page_items value = 47 }
-		add_to_array = { array = global.ccp_research_page_items value = 48 }
-		add_to_array = { array = global.ccp_research_page_items value = 49 }
-		add_to_array = { array = global.ccp_research_page_items value = 50 }
-		add_to_array = { array = global.ccp_research_page_items value = 51 }
+		add_to_array = { array = ccp_research_page_items value = 36 }
+		add_to_array = { array = ccp_research_page_items value = 37 }
+		add_to_array = { array = ccp_research_page_items value = 38 }
+		add_to_array = { array = ccp_research_page_items value = 39 }
+		add_to_array = { array = ccp_research_page_items value = 40 }
+		add_to_array = { array = ccp_research_page_items value = 41 }
+		add_to_array = { array = ccp_research_page_items value = 42 }
+		add_to_array = { array = ccp_research_page_items value = 43 }
+		add_to_array = { array = ccp_research_page_items value = 44 }
+		add_to_array = { array = ccp_research_page_items value = 45 }
+		add_to_array = { array = ccp_research_page_items value = 46 }
+		add_to_array = { array = ccp_research_page_items value = 47 }
+		add_to_array = { array = ccp_research_page_items value = 48 }
+		add_to_array = { array = ccp_research_page_items value = 49 }
+		add_to_array = { array = ccp_research_page_items value = 50 }
+		add_to_array = { array = ccp_research_page_items value = 51 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 52 }
-		add_to_array = { array = global.ccp_research_page_items value = 53 }
-		add_to_array = { array = global.ccp_research_page_items value = 54 }
-		add_to_array = { array = global.ccp_research_page_items value = 55 }
-		add_to_array = { array = global.ccp_research_page_items value = 56 }
-		add_to_array = { array = global.ccp_research_page_items value = 57 }
-		add_to_array = { array = global.ccp_research_page_items value = 58 }
-		add_to_array = { array = global.ccp_research_page_items value = 59 }
-		add_to_array = { array = global.ccp_research_page_items value = 60 }
-		add_to_array = { array = global.ccp_research_page_items value = 61 }
-		add_to_array = { array = global.ccp_research_page_items value = 62 }
-		add_to_array = { array = global.ccp_research_page_items value = 63 }
-		add_to_array = { array = global.ccp_research_page_items value = 64 }
-		add_to_array = { array = global.ccp_research_page_items value = 65 }
-		add_to_array = { array = global.ccp_research_page_items value = 66 }
-		add_to_array = { array = global.ccp_research_page_items value = 67 }
+		add_to_array = { array = ccp_research_page_items value = 52 }
+		add_to_array = { array = ccp_research_page_items value = 53 }
+		add_to_array = { array = ccp_research_page_items value = 54 }
+		add_to_array = { array = ccp_research_page_items value = 55 }
+		add_to_array = { array = ccp_research_page_items value = 56 }
+		add_to_array = { array = ccp_research_page_items value = 57 }
+		add_to_array = { array = ccp_research_page_items value = 58 }
+		add_to_array = { array = ccp_research_page_items value = 59 }
+		add_to_array = { array = ccp_research_page_items value = 60 }
+		add_to_array = { array = ccp_research_page_items value = 61 }
+		add_to_array = { array = ccp_research_page_items value = 62 }
+		add_to_array = { array = ccp_research_page_items value = 63 }
+		add_to_array = { array = ccp_research_page_items value = 64 }
+		add_to_array = { array = ccp_research_page_items value = 65 }
+		add_to_array = { array = ccp_research_page_items value = 66 }
+		add_to_array = { array = ccp_research_page_items value = 67 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 2 }
+			check_variable = { ccp_research_page = 2 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 68 }
-		add_to_array = { array = global.ccp_research_page_items value = 69 }
-		add_to_array = { array = global.ccp_research_page_items value = 70 }
-		add_to_array = { array = global.ccp_research_page_items value = 71 }
-		add_to_array = { array = global.ccp_research_page_items value = 72 }
-		add_to_array = { array = global.ccp_research_page_items value = 73 }
-		add_to_array = { array = global.ccp_research_page_items value = 74 }
+		add_to_array = { array = ccp_research_page_items value = 68 }
+		add_to_array = { array = ccp_research_page_items value = 69 }
+		add_to_array = { array = ccp_research_page_items value = 70 }
+		add_to_array = { array = ccp_research_page_items value = 71 }
+		add_to_array = { array = ccp_research_page_items value = 72 }
+		add_to_array = { array = ccp_research_page_items value = 73 }
+		add_to_array = { array = ccp_research_page_items value = 74 }
 	}
 }
 
 CCP_research_load_artillery_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 75 }
-		add_to_array = { array = global.ccp_research_page_items value = 76 }
-		add_to_array = { array = global.ccp_research_page_items value = 77 }
-		add_to_array = { array = global.ccp_research_page_items value = 78 }
-		add_to_array = { array = global.ccp_research_page_items value = 79 }
-		add_to_array = { array = global.ccp_research_page_items value = 80 }
-		add_to_array = { array = global.ccp_research_page_items value = 81 }
-		add_to_array = { array = global.ccp_research_page_items value = 82 }
-		add_to_array = { array = global.ccp_research_page_items value = 83 }
-		add_to_array = { array = global.ccp_research_page_items value = 84 }
-		add_to_array = { array = global.ccp_research_page_items value = 85 }
-		add_to_array = { array = global.ccp_research_page_items value = 86 }
-		add_to_array = { array = global.ccp_research_page_items value = 87 }
-		add_to_array = { array = global.ccp_research_page_items value = 88 }
-		add_to_array = { array = global.ccp_research_page_items value = 89 }
-		add_to_array = { array = global.ccp_research_page_items value = 90 }
+		add_to_array = { array = ccp_research_page_items value = 75 }
+		add_to_array = { array = ccp_research_page_items value = 76 }
+		add_to_array = { array = ccp_research_page_items value = 77 }
+		add_to_array = { array = ccp_research_page_items value = 78 }
+		add_to_array = { array = ccp_research_page_items value = 79 }
+		add_to_array = { array = ccp_research_page_items value = 80 }
+		add_to_array = { array = ccp_research_page_items value = 81 }
+		add_to_array = { array = ccp_research_page_items value = 82 }
+		add_to_array = { array = ccp_research_page_items value = 83 }
+		add_to_array = { array = ccp_research_page_items value = 84 }
+		add_to_array = { array = ccp_research_page_items value = 85 }
+		add_to_array = { array = ccp_research_page_items value = 86 }
+		add_to_array = { array = ccp_research_page_items value = 87 }
+		add_to_array = { array = ccp_research_page_items value = 88 }
+		add_to_array = { array = ccp_research_page_items value = 89 }
+		add_to_array = { array = ccp_research_page_items value = 90 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 91 }
-		add_to_array = { array = global.ccp_research_page_items value = 92 }
-		add_to_array = { array = global.ccp_research_page_items value = 93 }
-		add_to_array = { array = global.ccp_research_page_items value = 94 }
-		add_to_array = { array = global.ccp_research_page_items value = 95 }
-		add_to_array = { array = global.ccp_research_page_items value = 96 }
-		add_to_array = { array = global.ccp_research_page_items value = 97 }
-		add_to_array = { array = global.ccp_research_page_items value = 98 }
-		add_to_array = { array = global.ccp_research_page_items value = 99 }
-		add_to_array = { array = global.ccp_research_page_items value = 100 }
-		add_to_array = { array = global.ccp_research_page_items value = 101 }
+		add_to_array = { array = ccp_research_page_items value = 91 }
+		add_to_array = { array = ccp_research_page_items value = 92 }
+		add_to_array = { array = ccp_research_page_items value = 93 }
+		add_to_array = { array = ccp_research_page_items value = 94 }
+		add_to_array = { array = ccp_research_page_items value = 95 }
+		add_to_array = { array = ccp_research_page_items value = 96 }
+		add_to_array = { array = ccp_research_page_items value = 97 }
+		add_to_array = { array = ccp_research_page_items value = 98 }
+		add_to_array = { array = ccp_research_page_items value = 99 }
+		add_to_array = { array = ccp_research_page_items value = 100 }
+		add_to_array = { array = ccp_research_page_items value = 101 }
 	}
 }
 
 CCP_research_load_naval_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 102 }
-		add_to_array = { array = global.ccp_research_page_items value = 103 }
-		add_to_array = { array = global.ccp_research_page_items value = 104 }
-		add_to_array = { array = global.ccp_research_page_items value = 105 }
-		add_to_array = { array = global.ccp_research_page_items value = 106 }
-		add_to_array = { array = global.ccp_research_page_items value = 107 }
-		add_to_array = { array = global.ccp_research_page_items value = 108 }
-		add_to_array = { array = global.ccp_research_page_items value = 109 }
+		add_to_array = { array = ccp_research_page_items value = 102 }
+		add_to_array = { array = ccp_research_page_items value = 103 }
+		add_to_array = { array = ccp_research_page_items value = 104 }
+		add_to_array = { array = ccp_research_page_items value = 105 }
+		add_to_array = { array = ccp_research_page_items value = 106 }
+		add_to_array = { array = ccp_research_page_items value = 107 }
+		add_to_array = { array = ccp_research_page_items value = 108 }
+		add_to_array = { array = ccp_research_page_items value = 109 }
 	}
 }
 
 CCP_research_load_air_techs_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 110 }
-		add_to_array = { array = global.ccp_research_page_items value = 111 }
-		add_to_array = { array = global.ccp_research_page_items value = 112 }
-		add_to_array = { array = global.ccp_research_page_items value = 113 }
-		add_to_array = { array = global.ccp_research_page_items value = 114 }
+		add_to_array = { array = ccp_research_page_items value = 110 }
+		add_to_array = { array = ccp_research_page_items value = 111 }
+		add_to_array = { array = ccp_research_page_items value = 112 }
+		add_to_array = { array = ccp_research_page_items value = 113 }
+		add_to_array = { array = ccp_research_page_items value = 114 }
 	}
 }
 
 CCP_research_load_electronics_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 115 }
-		add_to_array = { array = global.ccp_research_page_items value = 116 }
-		add_to_array = { array = global.ccp_research_page_items value = 117 }
-		add_to_array = { array = global.ccp_research_page_items value = 118 }
-		add_to_array = { array = global.ccp_research_page_items value = 119 }
-		add_to_array = { array = global.ccp_research_page_items value = 120 }
-		add_to_array = { array = global.ccp_research_page_items value = 121 }
-		add_to_array = { array = global.ccp_research_page_items value = 122 }
-		add_to_array = { array = global.ccp_research_page_items value = 123 }
-		add_to_array = { array = global.ccp_research_page_items value = 124 }
-		add_to_array = { array = global.ccp_research_page_items value = 125 }
-		add_to_array = { array = global.ccp_research_page_items value = 126 }
-		add_to_array = { array = global.ccp_research_page_items value = 127 }
-		add_to_array = { array = global.ccp_research_page_items value = 128 }
-		add_to_array = { array = global.ccp_research_page_items value = 129 }
-		add_to_array = { array = global.ccp_research_page_items value = 130 }
+		add_to_array = { array = ccp_research_page_items value = 115 }
+		add_to_array = { array = ccp_research_page_items value = 116 }
+		add_to_array = { array = ccp_research_page_items value = 117 }
+		add_to_array = { array = ccp_research_page_items value = 118 }
+		add_to_array = { array = ccp_research_page_items value = 119 }
+		add_to_array = { array = ccp_research_page_items value = 120 }
+		add_to_array = { array = ccp_research_page_items value = 121 }
+		add_to_array = { array = ccp_research_page_items value = 122 }
+		add_to_array = { array = ccp_research_page_items value = 123 }
+		add_to_array = { array = ccp_research_page_items value = 124 }
+		add_to_array = { array = ccp_research_page_items value = 125 }
+		add_to_array = { array = ccp_research_page_items value = 126 }
+		add_to_array = { array = ccp_research_page_items value = 127 }
+		add_to_array = { array = ccp_research_page_items value = 128 }
+		add_to_array = { array = ccp_research_page_items value = 129 }
+		add_to_array = { array = ccp_research_page_items value = 130 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 131 }
-		add_to_array = { array = global.ccp_research_page_items value = 132 }
-		add_to_array = { array = global.ccp_research_page_items value = 133 }
-		add_to_array = { array = global.ccp_research_page_items value = 134 }
-		add_to_array = { array = global.ccp_research_page_items value = 135 }
-		add_to_array = { array = global.ccp_research_page_items value = 136 }
-		add_to_array = { array = global.ccp_research_page_items value = 137 }
-		add_to_array = { array = global.ccp_research_page_items value = 138 }
-		add_to_array = { array = global.ccp_research_page_items value = 139 }
-		add_to_array = { array = global.ccp_research_page_items value = 140 }
-		add_to_array = { array = global.ccp_research_page_items value = 141 }
-		add_to_array = { array = global.ccp_research_page_items value = 142 }
-		add_to_array = { array = global.ccp_research_page_items value = 143 }
-		add_to_array = { array = global.ccp_research_page_items value = 144 }
-		add_to_array = { array = global.ccp_research_page_items value = 145 }
-		add_to_array = { array = global.ccp_research_page_items value = 146 }
+		add_to_array = { array = ccp_research_page_items value = 131 }
+		add_to_array = { array = ccp_research_page_items value = 132 }
+		add_to_array = { array = ccp_research_page_items value = 133 }
+		add_to_array = { array = ccp_research_page_items value = 134 }
+		add_to_array = { array = ccp_research_page_items value = 135 }
+		add_to_array = { array = ccp_research_page_items value = 136 }
+		add_to_array = { array = ccp_research_page_items value = 137 }
+		add_to_array = { array = ccp_research_page_items value = 138 }
+		add_to_array = { array = ccp_research_page_items value = 139 }
+		add_to_array = { array = ccp_research_page_items value = 140 }
+		add_to_array = { array = ccp_research_page_items value = 141 }
+		add_to_array = { array = ccp_research_page_items value = 142 }
+		add_to_array = { array = ccp_research_page_items value = 143 }
+		add_to_array = { array = ccp_research_page_items value = 144 }
+		add_to_array = { array = ccp_research_page_items value = 145 }
+		add_to_array = { array = ccp_research_page_items value = 146 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 2 }
+			check_variable = { ccp_research_page = 2 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 147 }
+		add_to_array = { array = ccp_research_page_items value = 147 }
 	}
 }
 
 CCP_research_load_industry_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 148 }
-		add_to_array = { array = global.ccp_research_page_items value = 149 }
-		add_to_array = { array = global.ccp_research_page_items value = 150 }
-		add_to_array = { array = global.ccp_research_page_items value = 151 }
-		add_to_array = { array = global.ccp_research_page_items value = 152 }
-		add_to_array = { array = global.ccp_research_page_items value = 153 }
-		add_to_array = { array = global.ccp_research_page_items value = 154 }
-		add_to_array = { array = global.ccp_research_page_items value = 155 }
-		add_to_array = { array = global.ccp_research_page_items value = 156 }
-		add_to_array = { array = global.ccp_research_page_items value = 157 }
-		add_to_array = { array = global.ccp_research_page_items value = 158 }
-		add_to_array = { array = global.ccp_research_page_items value = 159 }
-		add_to_array = { array = global.ccp_research_page_items value = 160 }
-		add_to_array = { array = global.ccp_research_page_items value = 161 }
-		add_to_array = { array = global.ccp_research_page_items value = 162 }
-		add_to_array = { array = global.ccp_research_page_items value = 163 }
+		add_to_array = { array = ccp_research_page_items value = 148 }
+		add_to_array = { array = ccp_research_page_items value = 149 }
+		add_to_array = { array = ccp_research_page_items value = 150 }
+		add_to_array = { array = ccp_research_page_items value = 151 }
+		add_to_array = { array = ccp_research_page_items value = 152 }
+		add_to_array = { array = ccp_research_page_items value = 153 }
+		add_to_array = { array = ccp_research_page_items value = 154 }
+		add_to_array = { array = ccp_research_page_items value = 155 }
+		add_to_array = { array = ccp_research_page_items value = 156 }
+		add_to_array = { array = ccp_research_page_items value = 157 }
+		add_to_array = { array = ccp_research_page_items value = 158 }
+		add_to_array = { array = ccp_research_page_items value = 159 }
+		add_to_array = { array = ccp_research_page_items value = 160 }
+		add_to_array = { array = ccp_research_page_items value = 161 }
+		add_to_array = { array = ccp_research_page_items value = 162 }
+		add_to_array = { array = ccp_research_page_items value = 163 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 164 }
-		add_to_array = { array = global.ccp_research_page_items value = 165 }
-		add_to_array = { array = global.ccp_research_page_items value = 166 }
-		add_to_array = { array = global.ccp_research_page_items value = 167 }
-		add_to_array = { array = global.ccp_research_page_items value = 168 }
-		add_to_array = { array = global.ccp_research_page_items value = 169 }
-		add_to_array = { array = global.ccp_research_page_items value = 170 }
-		add_to_array = { array = global.ccp_research_page_items value = 171 }
-		add_to_array = { array = global.ccp_research_page_items value = 172 }
-		add_to_array = { array = global.ccp_research_page_items value = 173 }
-		add_to_array = { array = global.ccp_research_page_items value = 174 }
-		add_to_array = { array = global.ccp_research_page_items value = 175 }
-		add_to_array = { array = global.ccp_research_page_items value = 176 }
-		add_to_array = { array = global.ccp_research_page_items value = 177 }
-		add_to_array = { array = global.ccp_research_page_items value = 178 }
-		add_to_array = { array = global.ccp_research_page_items value = 179 }
+		add_to_array = { array = ccp_research_page_items value = 164 }
+		add_to_array = { array = ccp_research_page_items value = 165 }
+		add_to_array = { array = ccp_research_page_items value = 166 }
+		add_to_array = { array = ccp_research_page_items value = 167 }
+		add_to_array = { array = ccp_research_page_items value = 168 }
+		add_to_array = { array = ccp_research_page_items value = 169 }
+		add_to_array = { array = ccp_research_page_items value = 170 }
+		add_to_array = { array = ccp_research_page_items value = 171 }
+		add_to_array = { array = ccp_research_page_items value = 172 }
+		add_to_array = { array = ccp_research_page_items value = 173 }
+		add_to_array = { array = ccp_research_page_items value = 174 }
+		add_to_array = { array = ccp_research_page_items value = 175 }
+		add_to_array = { array = ccp_research_page_items value = 176 }
+		add_to_array = { array = ccp_research_page_items value = 177 }
+		add_to_array = { array = ccp_research_page_items value = 178 }
+		add_to_array = { array = ccp_research_page_items value = 179 }
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 2 }
+			check_variable = { ccp_research_page = 2 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 180 }
-		add_to_array = { array = global.ccp_research_page_items value = 181 }
-		add_to_array = { array = global.ccp_research_page_items value = 182 }
-		add_to_array = { array = global.ccp_research_page_items value = 183 }
-		add_to_array = { array = global.ccp_research_page_items value = 184 }
-		add_to_array = { array = global.ccp_research_page_items value = 185 }
-		add_to_array = { array = global.ccp_research_page_items value = 186 }
-		add_to_array = { array = global.ccp_research_page_items value = 187 }
-		add_to_array = { array = global.ccp_research_page_items value = 188 }
-		add_to_array = { array = global.ccp_research_page_items value = 189 }
-		add_to_array = { array = global.ccp_research_page_items value = 190 }
+		add_to_array = { array = ccp_research_page_items value = 180 }
+		add_to_array = { array = ccp_research_page_items value = 181 }
+		add_to_array = { array = ccp_research_page_items value = 182 }
+		add_to_array = { array = ccp_research_page_items value = 183 }
+		add_to_array = { array = ccp_research_page_items value = 184 }
+		add_to_array = { array = ccp_research_page_items value = 185 }
+		add_to_array = { array = ccp_research_page_items value = 186 }
+		add_to_array = { array = ccp_research_page_items value = 187 }
+		add_to_array = { array = ccp_research_page_items value = 188 }
+		add_to_array = { array = ccp_research_page_items value = 189 }
+		add_to_array = { array = ccp_research_page_items value = 190 }
 	}
 }
 
 CCP_research_load_armour_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
-		add_to_array = { array = global.ccp_research_page_items value = 191 }
-		add_to_array = { array = global.ccp_research_page_items value = 212 }
-		add_to_array = { array = global.ccp_research_page_items value = 266 }
-		add_to_array = { array = global.ccp_research_page_items value = 287 }
+		add_to_array = { array = ccp_research_page_items value = 191 }
+		add_to_array = { array = ccp_research_page_items value = 212 }
+		add_to_array = { array = ccp_research_page_items value = 266 }
+		add_to_array = { array = ccp_research_page_items value = 287 }
 	}
 }
 
 CCP_research_load_bba_air_techs_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 193 }
+			add_to_array = { array = ccp_research_page_items value = 193 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 199 }
+			add_to_array = { array = ccp_research_page_items value = 199 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 202 }
+			add_to_array = { array = ccp_research_page_items value = 202 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 204 }
+			add_to_array = { array = ccp_research_page_items value = 204 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 208 }
+			add_to_array = { array = ccp_research_page_items value = 208 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 209 }
+			add_to_array = { array = ccp_research_page_items value = 209 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 210 }
+			add_to_array = { array = ccp_research_page_items value = 210 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 215 }
+			add_to_array = { array = ccp_research_page_items value = 215 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 216 }
+			add_to_array = { array = ccp_research_page_items value = 216 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 217 }
+			add_to_array = { array = ccp_research_page_items value = 217 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 222 }
+			add_to_array = { array = ccp_research_page_items value = 222 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 225 }
+			add_to_array = { array = ccp_research_page_items value = 225 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 230 }
+			add_to_array = { array = ccp_research_page_items value = 230 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 234 }
+			add_to_array = { array = ccp_research_page_items value = 234 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 245 }
+			add_to_array = { array = ccp_research_page_items value = 245 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 252 }
+			add_to_array = { array = ccp_research_page_items value = 252 }
 		}
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 253 }
+			add_to_array = { array = ccp_research_page_items value = 253 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 262 }
+			add_to_array = { array = ccp_research_page_items value = 262 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 265 }
+			add_to_array = { array = ccp_research_page_items value = 265 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 267 }
+			add_to_array = { array = ccp_research_page_items value = 267 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 268 }
+			add_to_array = { array = ccp_research_page_items value = 268 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 271 }
+			add_to_array = { array = ccp_research_page_items value = 271 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 272 }
+			add_to_array = { array = ccp_research_page_items value = 272 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 274 }
+			add_to_array = { array = ccp_research_page_items value = 274 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 291 }
+			add_to_array = { array = ccp_research_page_items value = 291 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 293 }
+			add_to_array = { array = ccp_research_page_items value = 293 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 308 }
+			add_to_array = { array = ccp_research_page_items value = 308 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 310 }
+			add_to_array = { array = ccp_research_page_items value = 310 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 311 }
+			add_to_array = { array = ccp_research_page_items value = 311 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 312 }
+			add_to_array = { array = ccp_research_page_items value = 312 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 315 }
+			add_to_array = { array = ccp_research_page_items value = 315 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 316 }
+			add_to_array = { array = ccp_research_page_items value = 316 }
 		}
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 2 }
+			check_variable = { ccp_research_page = 2 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 320 }
+			add_to_array = { array = ccp_research_page_items value = 320 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 322 }
+			add_to_array = { array = ccp_research_page_items value = 322 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 323 }
+			add_to_array = { array = ccp_research_page_items value = 323 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 324 }
+			add_to_array = { array = ccp_research_page_items value = 324 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 326 }
+			add_to_array = { array = ccp_research_page_items value = 326 }
 		}
 		if = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 327 }
+			add_to_array = { array = ccp_research_page_items value = 327 }
 		}
 	}
 }
@@ -732,168 +732,168 @@ CCP_research_load_bba_air_techs_folder = {
 CCP_research_load_mtgnavalfolder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 195 }
+			add_to_array = { array = ccp_research_page_items value = 195 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 196 }
+			add_to_array = { array = ccp_research_page_items value = 196 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 200 }
+			add_to_array = { array = ccp_research_page_items value = 200 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 201 }
+			add_to_array = { array = ccp_research_page_items value = 201 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 205 }
+			add_to_array = { array = ccp_research_page_items value = 205 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 206 }
+			add_to_array = { array = ccp_research_page_items value = 206 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 219 }
+			add_to_array = { array = ccp_research_page_items value = 219 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 226 }
+			add_to_array = { array = ccp_research_page_items value = 226 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 227 }
+			add_to_array = { array = ccp_research_page_items value = 227 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 228 }
+			add_to_array = { array = ccp_research_page_items value = 228 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 229 }
+			add_to_array = { array = ccp_research_page_items value = 229 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 238 }
+			add_to_array = { array = ccp_research_page_items value = 238 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 239 }
+			add_to_array = { array = ccp_research_page_items value = 239 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 243 }
+			add_to_array = { array = ccp_research_page_items value = 243 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 254 }
+			add_to_array = { array = ccp_research_page_items value = 254 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 255 }
+			add_to_array = { array = ccp_research_page_items value = 255 }
 		}
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 257 }
+			add_to_array = { array = ccp_research_page_items value = 257 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 260 }
+			add_to_array = { array = ccp_research_page_items value = 260 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 261 }
+			add_to_array = { array = ccp_research_page_items value = 261 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 292 }
+			add_to_array = { array = ccp_research_page_items value = 292 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 296 }
+			add_to_array = { array = ccp_research_page_items value = 296 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 297 }
+			add_to_array = { array = ccp_research_page_items value = 297 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 298 }
+			add_to_array = { array = ccp_research_page_items value = 298 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 299 }
+			add_to_array = { array = ccp_research_page_items value = 299 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 300 }
+			add_to_array = { array = ccp_research_page_items value = 300 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 319 }
+			add_to_array = { array = ccp_research_page_items value = 319 }
 		}
 	}
 }
@@ -901,263 +901,263 @@ CCP_research_load_mtgnavalfolder = {
 CCP_research_load_mtgnavalsupportfolder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 194 }
+			add_to_array = { array = ccp_research_page_items value = 194 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 197 }
+			add_to_array = { array = ccp_research_page_items value = 197 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 198 }
+			add_to_array = { array = ccp_research_page_items value = 198 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 203 }
+			add_to_array = { array = ccp_research_page_items value = 203 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 207 }
+			add_to_array = { array = ccp_research_page_items value = 207 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 220 }
+			add_to_array = { array = ccp_research_page_items value = 220 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 221 }
+			add_to_array = { array = ccp_research_page_items value = 221 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 223 }
+			add_to_array = { array = ccp_research_page_items value = 223 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 224 }
+			add_to_array = { array = ccp_research_page_items value = 224 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 231 }
+			add_to_array = { array = ccp_research_page_items value = 231 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 232 }
+			add_to_array = { array = ccp_research_page_items value = 232 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 233 }
+			add_to_array = { array = ccp_research_page_items value = 233 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 235 }
+			add_to_array = { array = ccp_research_page_items value = 235 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 236 }
+			add_to_array = { array = ccp_research_page_items value = 236 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 237 }
+			add_to_array = { array = ccp_research_page_items value = 237 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 241 }
+			add_to_array = { array = ccp_research_page_items value = 241 }
 		}
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 242 }
+			add_to_array = { array = ccp_research_page_items value = 242 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 244 }
+			add_to_array = { array = ccp_research_page_items value = 244 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 249 }
+			add_to_array = { array = ccp_research_page_items value = 249 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 251 }
+			add_to_array = { array = ccp_research_page_items value = 251 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 256 }
+			add_to_array = { array = ccp_research_page_items value = 256 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 258 }
+			add_to_array = { array = ccp_research_page_items value = 258 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 259 }
+			add_to_array = { array = ccp_research_page_items value = 259 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 263 }
+			add_to_array = { array = ccp_research_page_items value = 263 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 264 }
+			add_to_array = { array = ccp_research_page_items value = 264 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 269 }
+			add_to_array = { array = ccp_research_page_items value = 269 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 275 }
+			add_to_array = { array = ccp_research_page_items value = 275 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 276 }
+			add_to_array = { array = ccp_research_page_items value = 276 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 283 }
+			add_to_array = { array = ccp_research_page_items value = 283 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 284 }
+			add_to_array = { array = ccp_research_page_items value = 284 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 285 }
+			add_to_array = { array = ccp_research_page_items value = 285 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 286 }
+			add_to_array = { array = ccp_research_page_items value = 286 }
 		}
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 2 }
+			check_variable = { ccp_research_page = 2 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 288 }
+			add_to_array = { array = ccp_research_page_items value = 288 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 289 }
+			add_to_array = { array = ccp_research_page_items value = 289 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 290 }
+			add_to_array = { array = ccp_research_page_items value = 290 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 305 }
+			add_to_array = { array = ccp_research_page_items value = 305 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 306 }
+			add_to_array = { array = ccp_research_page_items value = 306 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 307 }
+			add_to_array = { array = ccp_research_page_items value = 307 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 309 }
+			add_to_array = { array = ccp_research_page_items value = 309 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 317 }
+			add_to_array = { array = ccp_research_page_items value = 317 }
 		}
 		if = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 318 }
+			add_to_array = { array = ccp_research_page_items value = 318 }
 		}
 	}
 }
@@ -1165,180 +1165,180 @@ CCP_research_load_mtgnavalsupportfolder = {
 CCP_research_load_nsb_armour_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 0 }
+			check_variable = { ccp_research_page = 0 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 192 }
+			add_to_array = { array = ccp_research_page_items value = 192 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 211 }
+			add_to_array = { array = ccp_research_page_items value = 211 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 213 }
+			add_to_array = { array = ccp_research_page_items value = 213 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 214 }
+			add_to_array = { array = ccp_research_page_items value = 214 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 218 }
+			add_to_array = { array = ccp_research_page_items value = 218 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 240 }
+			add_to_array = { array = ccp_research_page_items value = 240 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 246 }
+			add_to_array = { array = ccp_research_page_items value = 246 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 247 }
+			add_to_array = { array = ccp_research_page_items value = 247 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 248 }
+			add_to_array = { array = ccp_research_page_items value = 248 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 250 }
+			add_to_array = { array = ccp_research_page_items value = 250 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 270 }
+			add_to_array = { array = ccp_research_page_items value = 270 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 273 }
+			add_to_array = { array = ccp_research_page_items value = 273 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 277 }
+			add_to_array = { array = ccp_research_page_items value = 277 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 278 }
+			add_to_array = { array = ccp_research_page_items value = 278 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 279 }
+			add_to_array = { array = ccp_research_page_items value = 279 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 280 }
+			add_to_array = { array = ccp_research_page_items value = 280 }
 		}
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_page = 1 }
+			check_variable = { ccp_research_page = 1 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 281 }
+			add_to_array = { array = ccp_research_page_items value = 281 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 282 }
+			add_to_array = { array = ccp_research_page_items value = 282 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 294 }
+			add_to_array = { array = ccp_research_page_items value = 294 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 295 }
+			add_to_array = { array = ccp_research_page_items value = 295 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 301 }
+			add_to_array = { array = ccp_research_page_items value = 301 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 302 }
+			add_to_array = { array = ccp_research_page_items value = 302 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 303 }
+			add_to_array = { array = ccp_research_page_items value = 303 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 304 }
+			add_to_array = { array = ccp_research_page_items value = 304 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 313 }
+			add_to_array = { array = ccp_research_page_items value = 313 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 314 }
+			add_to_array = { array = ccp_research_page_items value = 314 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 321 }
+			add_to_array = { array = ccp_research_page_items value = 321 }
 		}
 		if = {
 			limit = {
 				has_dlc = "No Step Back"
 			}
-			add_to_array = { array = global.ccp_research_page_items value = 325 }
+			add_to_array = { array = ccp_research_page_items value = 325 }
 		}
 	}
 }
@@ -1346,9 +1346,9 @@ CCP_research_load_nsb_armour_folder = {
 CCP_research_next_page = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page < ccp_research_pages_last }
+			check_variable = { ccp_research_page < ccp_research_pages_last }
 		}
-		add_to_variable = { global.ccp_research_page = 1 }
+		add_to_variable = { ccp_research_page = 1 }
 		CCP_research_load_page = yes
 	}
 }
@@ -1356,9 +1356,9 @@ CCP_research_next_page = {
 CCP_research_prev_page = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_page > 0 }
+			check_variable = { ccp_research_page > 0 }
 		}
-		subtract_from_variable = { global.ccp_research_page = 1 }
+		subtract_from_variable = { ccp_research_page = 1 }
 		CCP_research_load_page = yes
 	}
 }
@@ -1367,73 +1367,73 @@ CCP_research_grant = {
 	set_variable = { global.ccp_status = 14 }
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 1 }
+			check_variable = { ccp_research_folder = 1 }
 		}
 		CCP_research_grant_infantry_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 2 }
+			check_variable = { ccp_research_folder = 2 }
 		}
 		CCP_research_grant_support_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 3 }
+			check_variable = { ccp_research_folder = 3 }
 		}
 		CCP_research_grant_artillery_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 4 }
+			check_variable = { ccp_research_folder = 4 }
 		}
 		CCP_research_grant_naval_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 5 }
+			check_variable = { ccp_research_folder = 5 }
 		}
 		CCP_research_grant_air_techs_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 6 }
+			check_variable = { ccp_research_folder = 6 }
 		}
 		CCP_research_grant_electronics_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 7 }
+			check_variable = { ccp_research_folder = 7 }
 		}
 		CCP_research_grant_industry_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 8 }
+			check_variable = { ccp_research_folder = 8 }
 		}
 		CCP_research_grant_armour_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 9 }
+			check_variable = { ccp_research_folder = 9 }
 		}
 		CCP_research_grant_bba_air_techs_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 10 }
+			check_variable = { ccp_research_folder = 10 }
 		}
 		CCP_research_grant_mtgnavalfolder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 11 }
+			check_variable = { ccp_research_folder = 11 }
 		}
 		CCP_research_grant_mtgnavalsupportfolder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 12 }
+			check_variable = { ccp_research_folder = 12 }
 		}
 		CCP_research_grant_nsb_armour_folder = yes
 	}
@@ -1443,7 +1443,7 @@ CCP_research_grant = {
 CCP_research_grant_infantry_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 0 }
+			check_variable = { ccp_research_selected = 0 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1453,7 +1453,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 1 }
+			check_variable = { ccp_research_selected = 1 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1463,7 +1463,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 2 }
+			check_variable = { ccp_research_selected = 2 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1473,7 +1473,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 3 }
+			check_variable = { ccp_research_selected = 3 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1483,7 +1483,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 4 }
+			check_variable = { ccp_research_selected = 4 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1493,7 +1493,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 5 }
+			check_variable = { ccp_research_selected = 5 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1503,7 +1503,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 6 }
+			check_variable = { ccp_research_selected = 6 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1513,7 +1513,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 7 }
+			check_variable = { ccp_research_selected = 7 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1523,7 +1523,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 8 }
+			check_variable = { ccp_research_selected = 8 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1533,7 +1533,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 9 }
+			check_variable = { ccp_research_selected = 9 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1543,7 +1543,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 10 }
+			check_variable = { ccp_research_selected = 10 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1553,7 +1553,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 11 }
+			check_variable = { ccp_research_selected = 11 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1563,7 +1563,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 12 }
+			check_variable = { ccp_research_selected = 12 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1573,7 +1573,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 13 }
+			check_variable = { ccp_research_selected = 13 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1583,7 +1583,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 14 }
+			check_variable = { ccp_research_selected = 14 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1593,7 +1593,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 15 }
+			check_variable = { ccp_research_selected = 15 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1603,7 +1603,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 16 }
+			check_variable = { ccp_research_selected = 16 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1613,7 +1613,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 17 }
+			check_variable = { ccp_research_selected = 17 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1623,7 +1623,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 18 }
+			check_variable = { ccp_research_selected = 18 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1633,7 +1633,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 19 }
+			check_variable = { ccp_research_selected = 19 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1643,7 +1643,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 20 }
+			check_variable = { ccp_research_selected = 20 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1653,7 +1653,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 21 }
+			check_variable = { ccp_research_selected = 21 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1663,7 +1663,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 22 }
+			check_variable = { ccp_research_selected = 22 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1673,7 +1673,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 23 }
+			check_variable = { ccp_research_selected = 23 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1683,7 +1683,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 24 }
+			check_variable = { ccp_research_selected = 24 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1693,7 +1693,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 25 }
+			check_variable = { ccp_research_selected = 25 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1703,7 +1703,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 26 }
+			check_variable = { ccp_research_selected = 26 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1713,7 +1713,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 27 }
+			check_variable = { ccp_research_selected = 27 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1723,7 +1723,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 28 }
+			check_variable = { ccp_research_selected = 28 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1733,7 +1733,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 29 }
+			check_variable = { ccp_research_selected = 29 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1743,7 +1743,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 30 }
+			check_variable = { ccp_research_selected = 30 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1753,7 +1753,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 31 }
+			check_variable = { ccp_research_selected = 31 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1763,7 +1763,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 32 }
+			check_variable = { ccp_research_selected = 32 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1773,7 +1773,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 33 }
+			check_variable = { ccp_research_selected = 33 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1783,7 +1783,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 34 }
+			check_variable = { ccp_research_selected = 34 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1793,7 +1793,7 @@ CCP_research_grant_infantry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 35 }
+			check_variable = { ccp_research_selected = 35 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1806,7 +1806,7 @@ CCP_research_grant_infantry_folder = {
 CCP_research_grant_support_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 36 }
+			check_variable = { ccp_research_selected = 36 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1816,7 +1816,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 37 }
+			check_variable = { ccp_research_selected = 37 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1826,7 +1826,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 38 }
+			check_variable = { ccp_research_selected = 38 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1836,7 +1836,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 39 }
+			check_variable = { ccp_research_selected = 39 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1846,7 +1846,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 40 }
+			check_variable = { ccp_research_selected = 40 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1856,7 +1856,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 41 }
+			check_variable = { ccp_research_selected = 41 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1866,7 +1866,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 42 }
+			check_variable = { ccp_research_selected = 42 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1876,7 +1876,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 43 }
+			check_variable = { ccp_research_selected = 43 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1886,7 +1886,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 44 }
+			check_variable = { ccp_research_selected = 44 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1896,7 +1896,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 45 }
+			check_variable = { ccp_research_selected = 45 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1906,7 +1906,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 46 }
+			check_variable = { ccp_research_selected = 46 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1916,7 +1916,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 47 }
+			check_variable = { ccp_research_selected = 47 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1926,7 +1926,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 48 }
+			check_variable = { ccp_research_selected = 48 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1936,7 +1936,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 49 }
+			check_variable = { ccp_research_selected = 49 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1946,7 +1946,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 50 }
+			check_variable = { ccp_research_selected = 50 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1956,7 +1956,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 51 }
+			check_variable = { ccp_research_selected = 51 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1966,7 +1966,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 52 }
+			check_variable = { ccp_research_selected = 52 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1976,7 +1976,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 53 }
+			check_variable = { ccp_research_selected = 53 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1986,7 +1986,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 54 }
+			check_variable = { ccp_research_selected = 54 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -1996,7 +1996,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 55 }
+			check_variable = { ccp_research_selected = 55 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2006,7 +2006,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 56 }
+			check_variable = { ccp_research_selected = 56 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2016,7 +2016,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 57 }
+			check_variable = { ccp_research_selected = 57 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2026,7 +2026,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 58 }
+			check_variable = { ccp_research_selected = 58 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2036,7 +2036,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 59 }
+			check_variable = { ccp_research_selected = 59 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2046,7 +2046,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 60 }
+			check_variable = { ccp_research_selected = 60 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2056,7 +2056,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 61 }
+			check_variable = { ccp_research_selected = 61 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2066,7 +2066,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 62 }
+			check_variable = { ccp_research_selected = 62 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2076,7 +2076,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 63 }
+			check_variable = { ccp_research_selected = 63 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2086,7 +2086,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 64 }
+			check_variable = { ccp_research_selected = 64 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2096,7 +2096,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 65 }
+			check_variable = { ccp_research_selected = 65 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2106,7 +2106,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 66 }
+			check_variable = { ccp_research_selected = 66 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2116,7 +2116,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 67 }
+			check_variable = { ccp_research_selected = 67 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2126,7 +2126,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 68 }
+			check_variable = { ccp_research_selected = 68 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2136,7 +2136,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 69 }
+			check_variable = { ccp_research_selected = 69 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2146,7 +2146,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 70 }
+			check_variable = { ccp_research_selected = 70 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2156,7 +2156,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 71 }
+			check_variable = { ccp_research_selected = 71 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2166,7 +2166,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 72 }
+			check_variable = { ccp_research_selected = 72 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2176,7 +2176,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 73 }
+			check_variable = { ccp_research_selected = 73 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2186,7 +2186,7 @@ CCP_research_grant_support_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 74 }
+			check_variable = { ccp_research_selected = 74 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2199,7 +2199,7 @@ CCP_research_grant_support_folder = {
 CCP_research_grant_artillery_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 75 }
+			check_variable = { ccp_research_selected = 75 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2209,7 +2209,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 76 }
+			check_variable = { ccp_research_selected = 76 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2219,7 +2219,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 77 }
+			check_variable = { ccp_research_selected = 77 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2229,7 +2229,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 78 }
+			check_variable = { ccp_research_selected = 78 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2239,7 +2239,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 79 }
+			check_variable = { ccp_research_selected = 79 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2249,7 +2249,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 80 }
+			check_variable = { ccp_research_selected = 80 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2259,7 +2259,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 81 }
+			check_variable = { ccp_research_selected = 81 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2269,7 +2269,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 82 }
+			check_variable = { ccp_research_selected = 82 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2279,7 +2279,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 83 }
+			check_variable = { ccp_research_selected = 83 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2289,7 +2289,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 84 }
+			check_variable = { ccp_research_selected = 84 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2299,7 +2299,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 85 }
+			check_variable = { ccp_research_selected = 85 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2309,7 +2309,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 86 }
+			check_variable = { ccp_research_selected = 86 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2319,7 +2319,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 87 }
+			check_variable = { ccp_research_selected = 87 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2329,7 +2329,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 88 }
+			check_variable = { ccp_research_selected = 88 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2339,7 +2339,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 89 }
+			check_variable = { ccp_research_selected = 89 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2349,7 +2349,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 90 }
+			check_variable = { ccp_research_selected = 90 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2359,7 +2359,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 91 }
+			check_variable = { ccp_research_selected = 91 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2369,7 +2369,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 92 }
+			check_variable = { ccp_research_selected = 92 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2379,7 +2379,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 93 }
+			check_variable = { ccp_research_selected = 93 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2389,7 +2389,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 94 }
+			check_variable = { ccp_research_selected = 94 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2399,7 +2399,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 95 }
+			check_variable = { ccp_research_selected = 95 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2409,7 +2409,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 96 }
+			check_variable = { ccp_research_selected = 96 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2419,7 +2419,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 97 }
+			check_variable = { ccp_research_selected = 97 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2429,7 +2429,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 98 }
+			check_variable = { ccp_research_selected = 98 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2439,7 +2439,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 99 }
+			check_variable = { ccp_research_selected = 99 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2449,7 +2449,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 100 }
+			check_variable = { ccp_research_selected = 100 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2459,7 +2459,7 @@ CCP_research_grant_artillery_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 101 }
+			check_variable = { ccp_research_selected = 101 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2472,7 +2472,7 @@ CCP_research_grant_artillery_folder = {
 CCP_research_grant_naval_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 102 }
+			check_variable = { ccp_research_selected = 102 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2482,7 +2482,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 103 }
+			check_variable = { ccp_research_selected = 103 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2492,7 +2492,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 104 }
+			check_variable = { ccp_research_selected = 104 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2502,7 +2502,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 105 }
+			check_variable = { ccp_research_selected = 105 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2512,7 +2512,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 106 }
+			check_variable = { ccp_research_selected = 106 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2522,7 +2522,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 107 }
+			check_variable = { ccp_research_selected = 107 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2532,7 +2532,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 108 }
+			check_variable = { ccp_research_selected = 108 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2542,7 +2542,7 @@ CCP_research_grant_naval_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 109 }
+			check_variable = { ccp_research_selected = 109 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2555,7 +2555,7 @@ CCP_research_grant_naval_folder = {
 CCP_research_grant_air_techs_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 110 }
+			check_variable = { ccp_research_selected = 110 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2565,7 +2565,7 @@ CCP_research_grant_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 111 }
+			check_variable = { ccp_research_selected = 111 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2575,7 +2575,7 @@ CCP_research_grant_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 112 }
+			check_variable = { ccp_research_selected = 112 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2585,7 +2585,7 @@ CCP_research_grant_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 113 }
+			check_variable = { ccp_research_selected = 113 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2595,7 +2595,7 @@ CCP_research_grant_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 114 }
+			check_variable = { ccp_research_selected = 114 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2608,7 +2608,7 @@ CCP_research_grant_air_techs_folder = {
 CCP_research_grant_electronics_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 115 }
+			check_variable = { ccp_research_selected = 115 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2618,7 +2618,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 116 }
+			check_variable = { ccp_research_selected = 116 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2628,7 +2628,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 117 }
+			check_variable = { ccp_research_selected = 117 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2638,7 +2638,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 118 }
+			check_variable = { ccp_research_selected = 118 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2648,7 +2648,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 119 }
+			check_variable = { ccp_research_selected = 119 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2658,7 +2658,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 120 }
+			check_variable = { ccp_research_selected = 120 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2668,7 +2668,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 121 }
+			check_variable = { ccp_research_selected = 121 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2678,7 +2678,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 122 }
+			check_variable = { ccp_research_selected = 122 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2688,7 +2688,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 123 }
+			check_variable = { ccp_research_selected = 123 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2698,7 +2698,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 124 }
+			check_variable = { ccp_research_selected = 124 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2708,7 +2708,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 125 }
+			check_variable = { ccp_research_selected = 125 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2718,7 +2718,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 126 }
+			check_variable = { ccp_research_selected = 126 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2728,7 +2728,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 127 }
+			check_variable = { ccp_research_selected = 127 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2738,7 +2738,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 128 }
+			check_variable = { ccp_research_selected = 128 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2748,7 +2748,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 129 }
+			check_variable = { ccp_research_selected = 129 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2758,7 +2758,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 130 }
+			check_variable = { ccp_research_selected = 130 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2768,7 +2768,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 131 }
+			check_variable = { ccp_research_selected = 131 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2778,7 +2778,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 132 }
+			check_variable = { ccp_research_selected = 132 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2788,7 +2788,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 133 }
+			check_variable = { ccp_research_selected = 133 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2798,7 +2798,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 134 }
+			check_variable = { ccp_research_selected = 134 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2808,7 +2808,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 135 }
+			check_variable = { ccp_research_selected = 135 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2818,7 +2818,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 136 }
+			check_variable = { ccp_research_selected = 136 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2828,7 +2828,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 137 }
+			check_variable = { ccp_research_selected = 137 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2838,7 +2838,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 138 }
+			check_variable = { ccp_research_selected = 138 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2848,7 +2848,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 139 }
+			check_variable = { ccp_research_selected = 139 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2858,7 +2858,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 140 }
+			check_variable = { ccp_research_selected = 140 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2868,7 +2868,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 141 }
+			check_variable = { ccp_research_selected = 141 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2878,7 +2878,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 142 }
+			check_variable = { ccp_research_selected = 142 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2888,7 +2888,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 143 }
+			check_variable = { ccp_research_selected = 143 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2898,7 +2898,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 144 }
+			check_variable = { ccp_research_selected = 144 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2908,7 +2908,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 145 }
+			check_variable = { ccp_research_selected = 145 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2918,7 +2918,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 146 }
+			check_variable = { ccp_research_selected = 146 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2928,7 +2928,7 @@ CCP_research_grant_electronics_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 147 }
+			check_variable = { ccp_research_selected = 147 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2941,7 +2941,7 @@ CCP_research_grant_electronics_folder = {
 CCP_research_grant_industry_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 148 }
+			check_variable = { ccp_research_selected = 148 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2951,7 +2951,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 149 }
+			check_variable = { ccp_research_selected = 149 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2961,7 +2961,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 150 }
+			check_variable = { ccp_research_selected = 150 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2971,7 +2971,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 151 }
+			check_variable = { ccp_research_selected = 151 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2981,7 +2981,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 152 }
+			check_variable = { ccp_research_selected = 152 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -2991,7 +2991,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 153 }
+			check_variable = { ccp_research_selected = 153 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3001,7 +3001,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 154 }
+			check_variable = { ccp_research_selected = 154 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3011,7 +3011,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 155 }
+			check_variable = { ccp_research_selected = 155 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3021,7 +3021,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 156 }
+			check_variable = { ccp_research_selected = 156 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3031,7 +3031,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 157 }
+			check_variable = { ccp_research_selected = 157 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3041,7 +3041,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 158 }
+			check_variable = { ccp_research_selected = 158 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3051,7 +3051,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 159 }
+			check_variable = { ccp_research_selected = 159 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3061,7 +3061,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 160 }
+			check_variable = { ccp_research_selected = 160 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3071,7 +3071,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 161 }
+			check_variable = { ccp_research_selected = 161 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3081,7 +3081,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 162 }
+			check_variable = { ccp_research_selected = 162 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3091,7 +3091,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 163 }
+			check_variable = { ccp_research_selected = 163 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3101,7 +3101,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 164 }
+			check_variable = { ccp_research_selected = 164 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3111,7 +3111,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 165 }
+			check_variable = { ccp_research_selected = 165 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3121,7 +3121,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 166 }
+			check_variable = { ccp_research_selected = 166 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3131,7 +3131,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 167 }
+			check_variable = { ccp_research_selected = 167 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3141,7 +3141,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 168 }
+			check_variable = { ccp_research_selected = 168 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3151,7 +3151,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 169 }
+			check_variable = { ccp_research_selected = 169 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3161,7 +3161,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 170 }
+			check_variable = { ccp_research_selected = 170 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3171,7 +3171,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 171 }
+			check_variable = { ccp_research_selected = 171 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3181,7 +3181,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 172 }
+			check_variable = { ccp_research_selected = 172 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3191,7 +3191,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 173 }
+			check_variable = { ccp_research_selected = 173 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3201,7 +3201,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 174 }
+			check_variable = { ccp_research_selected = 174 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3211,7 +3211,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 175 }
+			check_variable = { ccp_research_selected = 175 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3221,7 +3221,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 176 }
+			check_variable = { ccp_research_selected = 176 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3231,7 +3231,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 177 }
+			check_variable = { ccp_research_selected = 177 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3241,7 +3241,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 178 }
+			check_variable = { ccp_research_selected = 178 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3251,7 +3251,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 179 }
+			check_variable = { ccp_research_selected = 179 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3261,7 +3261,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 180 }
+			check_variable = { ccp_research_selected = 180 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3271,7 +3271,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 181 }
+			check_variable = { ccp_research_selected = 181 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3281,7 +3281,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 182 }
+			check_variable = { ccp_research_selected = 182 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3291,7 +3291,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 183 }
+			check_variable = { ccp_research_selected = 183 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3301,7 +3301,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 184 }
+			check_variable = { ccp_research_selected = 184 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3311,7 +3311,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 185 }
+			check_variable = { ccp_research_selected = 185 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3321,7 +3321,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 186 }
+			check_variable = { ccp_research_selected = 186 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3331,7 +3331,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 187 }
+			check_variable = { ccp_research_selected = 187 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3341,7 +3341,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 188 }
+			check_variable = { ccp_research_selected = 188 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3351,7 +3351,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 189 }
+			check_variable = { ccp_research_selected = 189 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3361,7 +3361,7 @@ CCP_research_grant_industry_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 190 }
+			check_variable = { ccp_research_selected = 190 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3374,7 +3374,7 @@ CCP_research_grant_industry_folder = {
 CCP_research_grant_armour_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 191 }
+			check_variable = { ccp_research_selected = 191 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3384,7 +3384,7 @@ CCP_research_grant_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 212 }
+			check_variable = { ccp_research_selected = 212 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3394,7 +3394,7 @@ CCP_research_grant_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 266 }
+			check_variable = { ccp_research_selected = 266 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3404,7 +3404,7 @@ CCP_research_grant_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 287 }
+			check_variable = { ccp_research_selected = 287 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3417,7 +3417,7 @@ CCP_research_grant_armour_folder = {
 CCP_research_grant_bba_air_techs_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 193 }
+			check_variable = { ccp_research_selected = 193 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3427,7 +3427,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 199 }
+			check_variable = { ccp_research_selected = 199 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3437,7 +3437,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 202 }
+			check_variable = { ccp_research_selected = 202 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3447,7 +3447,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 204 }
+			check_variable = { ccp_research_selected = 204 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3457,7 +3457,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 208 }
+			check_variable = { ccp_research_selected = 208 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3467,7 +3467,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 209 }
+			check_variable = { ccp_research_selected = 209 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3477,7 +3477,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 210 }
+			check_variable = { ccp_research_selected = 210 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3487,7 +3487,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 215 }
+			check_variable = { ccp_research_selected = 215 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3497,7 +3497,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 216 }
+			check_variable = { ccp_research_selected = 216 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3507,7 +3507,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 217 }
+			check_variable = { ccp_research_selected = 217 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3517,7 +3517,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 222 }
+			check_variable = { ccp_research_selected = 222 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3527,7 +3527,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 225 }
+			check_variable = { ccp_research_selected = 225 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3537,7 +3537,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 230 }
+			check_variable = { ccp_research_selected = 230 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3547,7 +3547,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 234 }
+			check_variable = { ccp_research_selected = 234 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3557,7 +3557,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 245 }
+			check_variable = { ccp_research_selected = 245 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3567,7 +3567,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 252 }
+			check_variable = { ccp_research_selected = 252 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3577,7 +3577,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 253 }
+			check_variable = { ccp_research_selected = 253 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3587,7 +3587,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 262 }
+			check_variable = { ccp_research_selected = 262 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3597,7 +3597,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 265 }
+			check_variable = { ccp_research_selected = 265 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3607,7 +3607,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 267 }
+			check_variable = { ccp_research_selected = 267 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3617,7 +3617,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 268 }
+			check_variable = { ccp_research_selected = 268 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3627,7 +3627,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 271 }
+			check_variable = { ccp_research_selected = 271 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3637,7 +3637,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 272 }
+			check_variable = { ccp_research_selected = 272 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3647,7 +3647,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 274 }
+			check_variable = { ccp_research_selected = 274 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3657,7 +3657,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 291 }
+			check_variable = { ccp_research_selected = 291 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3667,7 +3667,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 293 }
+			check_variable = { ccp_research_selected = 293 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3677,7 +3677,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 308 }
+			check_variable = { ccp_research_selected = 308 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3687,7 +3687,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 310 }
+			check_variable = { ccp_research_selected = 310 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3697,7 +3697,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 311 }
+			check_variable = { ccp_research_selected = 311 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3707,7 +3707,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 312 }
+			check_variable = { ccp_research_selected = 312 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3717,7 +3717,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 315 }
+			check_variable = { ccp_research_selected = 315 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3727,7 +3727,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 316 }
+			check_variable = { ccp_research_selected = 316 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3737,7 +3737,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 320 }
+			check_variable = { ccp_research_selected = 320 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3747,7 +3747,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 322 }
+			check_variable = { ccp_research_selected = 322 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3757,7 +3757,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 323 }
+			check_variable = { ccp_research_selected = 323 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3767,7 +3767,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 324 }
+			check_variable = { ccp_research_selected = 324 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3777,7 +3777,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 326 }
+			check_variable = { ccp_research_selected = 326 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3787,7 +3787,7 @@ CCP_research_grant_bba_air_techs_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 327 }
+			check_variable = { ccp_research_selected = 327 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3800,7 +3800,7 @@ CCP_research_grant_bba_air_techs_folder = {
 CCP_research_grant_mtgnavalfolder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 195 }
+			check_variable = { ccp_research_selected = 195 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3810,7 +3810,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 196 }
+			check_variable = { ccp_research_selected = 196 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3820,7 +3820,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 200 }
+			check_variable = { ccp_research_selected = 200 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3830,7 +3830,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 201 }
+			check_variable = { ccp_research_selected = 201 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3840,7 +3840,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 205 }
+			check_variable = { ccp_research_selected = 205 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3850,7 +3850,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 206 }
+			check_variable = { ccp_research_selected = 206 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3860,7 +3860,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 219 }
+			check_variable = { ccp_research_selected = 219 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3870,7 +3870,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 226 }
+			check_variable = { ccp_research_selected = 226 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3880,7 +3880,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 227 }
+			check_variable = { ccp_research_selected = 227 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3890,7 +3890,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 228 }
+			check_variable = { ccp_research_selected = 228 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3900,7 +3900,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 229 }
+			check_variable = { ccp_research_selected = 229 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3910,7 +3910,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 238 }
+			check_variable = { ccp_research_selected = 238 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3920,7 +3920,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 239 }
+			check_variable = { ccp_research_selected = 239 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3930,7 +3930,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 243 }
+			check_variable = { ccp_research_selected = 243 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3940,7 +3940,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 254 }
+			check_variable = { ccp_research_selected = 254 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3950,7 +3950,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 255 }
+			check_variable = { ccp_research_selected = 255 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3960,7 +3960,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 257 }
+			check_variable = { ccp_research_selected = 257 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3970,7 +3970,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 260 }
+			check_variable = { ccp_research_selected = 260 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3980,7 +3980,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 261 }
+			check_variable = { ccp_research_selected = 261 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -3990,7 +3990,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 292 }
+			check_variable = { ccp_research_selected = 292 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4000,7 +4000,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 296 }
+			check_variable = { ccp_research_selected = 296 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4010,7 +4010,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 297 }
+			check_variable = { ccp_research_selected = 297 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4020,7 +4020,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 298 }
+			check_variable = { ccp_research_selected = 298 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4030,7 +4030,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 299 }
+			check_variable = { ccp_research_selected = 299 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4040,7 +4040,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 300 }
+			check_variable = { ccp_research_selected = 300 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4050,7 +4050,7 @@ CCP_research_grant_mtgnavalfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 319 }
+			check_variable = { ccp_research_selected = 319 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4063,7 +4063,7 @@ CCP_research_grant_mtgnavalfolder = {
 CCP_research_grant_mtgnavalsupportfolder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 194 }
+			check_variable = { ccp_research_selected = 194 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4073,7 +4073,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 197 }
+			check_variable = { ccp_research_selected = 197 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4083,7 +4083,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 198 }
+			check_variable = { ccp_research_selected = 198 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4093,7 +4093,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 203 }
+			check_variable = { ccp_research_selected = 203 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4103,7 +4103,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 207 }
+			check_variable = { ccp_research_selected = 207 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4113,7 +4113,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 220 }
+			check_variable = { ccp_research_selected = 220 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4123,7 +4123,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 221 }
+			check_variable = { ccp_research_selected = 221 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4133,7 +4133,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 223 }
+			check_variable = { ccp_research_selected = 223 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4143,7 +4143,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 224 }
+			check_variable = { ccp_research_selected = 224 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4153,7 +4153,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 231 }
+			check_variable = { ccp_research_selected = 231 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4163,7 +4163,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 232 }
+			check_variable = { ccp_research_selected = 232 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4173,7 +4173,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 233 }
+			check_variable = { ccp_research_selected = 233 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4183,7 +4183,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 235 }
+			check_variable = { ccp_research_selected = 235 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4193,7 +4193,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 236 }
+			check_variable = { ccp_research_selected = 236 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4203,7 +4203,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 237 }
+			check_variable = { ccp_research_selected = 237 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4213,7 +4213,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 241 }
+			check_variable = { ccp_research_selected = 241 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4223,7 +4223,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 242 }
+			check_variable = { ccp_research_selected = 242 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4233,7 +4233,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 244 }
+			check_variable = { ccp_research_selected = 244 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4243,7 +4243,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 249 }
+			check_variable = { ccp_research_selected = 249 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4253,7 +4253,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 251 }
+			check_variable = { ccp_research_selected = 251 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4263,7 +4263,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 256 }
+			check_variable = { ccp_research_selected = 256 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4273,7 +4273,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 258 }
+			check_variable = { ccp_research_selected = 258 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4283,7 +4283,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 259 }
+			check_variable = { ccp_research_selected = 259 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4293,7 +4293,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 263 }
+			check_variable = { ccp_research_selected = 263 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4303,7 +4303,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 264 }
+			check_variable = { ccp_research_selected = 264 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4313,7 +4313,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 269 }
+			check_variable = { ccp_research_selected = 269 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4323,7 +4323,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 275 }
+			check_variable = { ccp_research_selected = 275 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4333,7 +4333,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 276 }
+			check_variable = { ccp_research_selected = 276 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4343,7 +4343,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 283 }
+			check_variable = { ccp_research_selected = 283 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4353,7 +4353,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 284 }
+			check_variable = { ccp_research_selected = 284 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4363,7 +4363,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 285 }
+			check_variable = { ccp_research_selected = 285 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4373,7 +4373,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 286 }
+			check_variable = { ccp_research_selected = 286 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4383,7 +4383,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 288 }
+			check_variable = { ccp_research_selected = 288 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4393,7 +4393,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 289 }
+			check_variable = { ccp_research_selected = 289 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4403,7 +4403,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 290 }
+			check_variable = { ccp_research_selected = 290 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4413,7 +4413,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 305 }
+			check_variable = { ccp_research_selected = 305 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4423,7 +4423,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 306 }
+			check_variable = { ccp_research_selected = 306 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4433,7 +4433,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 307 }
+			check_variable = { ccp_research_selected = 307 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4443,7 +4443,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 309 }
+			check_variable = { ccp_research_selected = 309 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4453,7 +4453,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 317 }
+			check_variable = { ccp_research_selected = 317 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4463,7 +4463,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 318 }
+			check_variable = { ccp_research_selected = 318 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4476,7 +4476,7 @@ CCP_research_grant_mtgnavalsupportfolder = {
 CCP_research_grant_nsb_armour_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 192 }
+			check_variable = { ccp_research_selected = 192 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4486,7 +4486,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 211 }
+			check_variable = { ccp_research_selected = 211 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4496,7 +4496,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 213 }
+			check_variable = { ccp_research_selected = 213 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4506,7 +4506,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 214 }
+			check_variable = { ccp_research_selected = 214 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4516,7 +4516,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 218 }
+			check_variable = { ccp_research_selected = 218 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4526,7 +4526,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 240 }
+			check_variable = { ccp_research_selected = 240 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4536,7 +4536,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 246 }
+			check_variable = { ccp_research_selected = 246 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4546,7 +4546,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 247 }
+			check_variable = { ccp_research_selected = 247 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4556,7 +4556,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 248 }
+			check_variable = { ccp_research_selected = 248 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4566,7 +4566,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 250 }
+			check_variable = { ccp_research_selected = 250 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4576,7 +4576,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 270 }
+			check_variable = { ccp_research_selected = 270 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4586,7 +4586,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 273 }
+			check_variable = { ccp_research_selected = 273 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4596,7 +4596,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 277 }
+			check_variable = { ccp_research_selected = 277 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4606,7 +4606,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 278 }
+			check_variable = { ccp_research_selected = 278 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4616,7 +4616,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 279 }
+			check_variable = { ccp_research_selected = 279 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4626,7 +4626,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 280 }
+			check_variable = { ccp_research_selected = 280 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4636,7 +4636,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 281 }
+			check_variable = { ccp_research_selected = 281 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4646,7 +4646,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 282 }
+			check_variable = { ccp_research_selected = 282 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4656,7 +4656,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 294 }
+			check_variable = { ccp_research_selected = 294 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4666,7 +4666,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 295 }
+			check_variable = { ccp_research_selected = 295 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4676,7 +4676,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 301 }
+			check_variable = { ccp_research_selected = 301 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4686,7 +4686,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 302 }
+			check_variable = { ccp_research_selected = 302 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4696,7 +4696,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 303 }
+			check_variable = { ccp_research_selected = 303 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4706,7 +4706,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 304 }
+			check_variable = { ccp_research_selected = 304 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4716,7 +4716,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 313 }
+			check_variable = { ccp_research_selected = 313 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4726,7 +4726,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 314 }
+			check_variable = { ccp_research_selected = 314 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4736,7 +4736,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 321 }
+			check_variable = { ccp_research_selected = 321 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4746,7 +4746,7 @@ CCP_research_grant_nsb_armour_folder = {
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_selected = 325 }
+			check_variable = { ccp_research_selected = 325 }
 		}
 		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
 		hidden_effect = {
@@ -4776,73 +4776,73 @@ CCP_research_grant_everything = {
 CCP_research_grant_folder = {
 	if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 1 }
+			check_variable = { ccp_research_folder = 1 }
 		}
 		CCP_research_all_infantry_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 2 }
+			check_variable = { ccp_research_folder = 2 }
 		}
 		CCP_research_all_support_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 3 }
+			check_variable = { ccp_research_folder = 3 }
 		}
 		CCP_research_all_artillery_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 4 }
+			check_variable = { ccp_research_folder = 4 }
 		}
 		CCP_research_all_naval_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 5 }
+			check_variable = { ccp_research_folder = 5 }
 		}
 		CCP_research_all_air_techs_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 6 }
+			check_variable = { ccp_research_folder = 6 }
 		}
 		CCP_research_all_electronics_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 7 }
+			check_variable = { ccp_research_folder = 7 }
 		}
 		CCP_research_all_industry_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 8 }
+			check_variable = { ccp_research_folder = 8 }
 		}
 		CCP_research_all_armour_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 9 }
+			check_variable = { ccp_research_folder = 9 }
 		}
 		CCP_research_all_bba_air_techs_folder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 10 }
+			check_variable = { ccp_research_folder = 10 }
 		}
 		CCP_research_all_mtgnavalfolder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 11 }
+			check_variable = { ccp_research_folder = 11 }
 		}
 		CCP_research_all_mtgnavalsupportfolder = yes
 	}
 	else_if = {
 		limit = {
-			check_variable = { global.ccp_research_folder = 12 }
+			check_variable = { ccp_research_folder = 12 }
 		}
 		CCP_research_all_nsb_armour_folder = yes
 	}
