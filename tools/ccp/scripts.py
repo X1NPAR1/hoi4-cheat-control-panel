@@ -8,7 +8,7 @@ cannot disagree.
 from __future__ import annotations
 
 from .emit import BANNER, Writer
-from .interface import NAV_STEP, NAV_TOP
+from .interface import NAV_STEP, NAV_TOP, section_containers
 from .resources import AMOUNT_MAX, RESOURCES
 from .sections import HOTKEYS, SECTIONS
 
@@ -265,10 +265,12 @@ def emit_scripted_gui(version: str) -> str:
     writer.blank()
 
     writer.open("triggers")
+    containers = section_containers()
     for index, section in enumerate(SECTIONS, start=1):
-        writer.open(f"{section.window}_visible")
-        writer.line(f"check_variable = {{ ccp_section = {index} }}")
-        writer.close()
+        for leaf in containers[section.slug].leaves():
+            writer.open(f"{leaf}_visible")
+            writer.line(f"check_variable = {{ ccp_section = {index} }}")
+            writer.close()
     for index in range(1, len(HOTKEYS) + 1):
         writer.open(f"ccp_hotkey_choice_{index}_click_enabled")
         writer.line(f"NOT = {{ check_variable = {{ ccp_hotkey_id = {index} }} }}")

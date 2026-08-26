@@ -246,13 +246,310 @@ scripted_gui = {
 		}
 
 		triggers = {
-			ccp_section_dashboard_visible = {
+			ccp_card_country_plate_visible = {
 				check_variable = { ccp_section = 1 }
 			}
-			ccp_section_resources_visible = {
+			ccp_card_country_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_country_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_political_power_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_political_power_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_political_power_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_command_power_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_command_power_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_command_power_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_manpower_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_manpower_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_manpower_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_army_xp_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_army_xp_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_army_xp_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_navy_xp_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_navy_xp_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_navy_xp_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_air_xp_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_air_xp_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_air_xp_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_stability_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_stability_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_stability_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_factories_plate_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_factories_label_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_card_factories_value_visible = {
+				check_variable = { ccp_section = 1 }
+			}
+			ccp_row_political_power_plate_visible = {
 				check_variable = { ccp_section = 2 }
 			}
-			ccp_section_settings_visible = {
+			ccp_row_political_power_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_political_power_value_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_political_power_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_political_power_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_political_power_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_political_power_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_political_power_custom_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_command_power_plate_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_command_power_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_command_power_value_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_command_power_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_command_power_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_command_power_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_command_power_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_command_power_custom_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_manpower_plate_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_manpower_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_manpower_value_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_manpower_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_manpower_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_manpower_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_manpower_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_manpower_custom_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_army_experience_plate_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_army_experience_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_army_experience_value_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_army_experience_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_army_experience_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_army_experience_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_army_experience_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_army_experience_custom_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_navy_experience_plate_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_navy_experience_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_navy_experience_value_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_navy_experience_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_navy_experience_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_navy_experience_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_navy_experience_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_navy_experience_custom_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_air_experience_plate_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_air_experience_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_row_air_experience_value_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_air_experience_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_air_experience_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_air_experience_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_air_experience_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_grant_air_experience_custom_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_label_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_readout_plate_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_readout_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_1_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_2_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_3_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_4_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_5_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_6_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_7_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_8_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_9_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_0_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_back_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_clear_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_pad_help_visible = {
+				check_variable = { ccp_section = 2 }
+			}
+			ccp_settings_hotkey_label_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_settings_hotkey_help_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_hotkey_choice_1_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_hotkey_choice_2_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_hotkey_choice_3_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_hotkey_choice_4_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_hotkey_choice_5_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_settings_hotkey_current_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_settings_confirm_label_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_settings_confirm_help_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_confirm_toggle_visible = {
 				check_variable = { ccp_section = 3 }
 			}
 			ccp_hotkey_choice_1_click_enabled = {

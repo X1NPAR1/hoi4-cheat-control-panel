@@ -160,6 +160,20 @@ class Container(Widget):
         self.children.extend(widgets)
         return self
 
+    def leaves(self) -> list[str]:
+        """Names of every drawable descendant.
+
+        Visibility triggers apply to drawable elements, not to containers, so a
+        section is hidden by hiding each of its leaves.
+        """
+        names: list[str] = []
+        for child in self.children:
+            if isinstance(child, Container):
+                names += child.leaves()
+            else:
+                names.append(child.name)
+        return names
+
     def emit(self, depth: int) -> list[str]:
         body = [f'name = "{self.name}"']
         if self.orientation:

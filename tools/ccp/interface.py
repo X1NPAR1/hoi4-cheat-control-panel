@@ -385,6 +385,18 @@ def _resources() -> Container:
     return section
 
 
+SECTION_BUILDERS = {
+    "dashboard": _dashboard,
+    "resources": _resources,
+    "settings": _settings,
+}
+
+
+def section_containers() -> dict[str, Container]:
+    """Each registered section, built once so layout and triggers see the same tree."""
+    return {section.slug: SECTION_BUILDERS[section.slug]() for section in SECTIONS}
+
+
 def main_window() -> Container:
     window = Container(
         "ccp_main_window",
@@ -396,7 +408,7 @@ def main_window() -> Container:
         origo="center",
     )
     window.add(*_header(), *_sidebar(), *_content_shell(), *_footer())
-    window.add(_dashboard(), _resources(), _settings())
+    window.add(*section_containers().values())
     return window
 
 
