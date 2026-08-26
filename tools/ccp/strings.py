@@ -1076,6 +1076,35 @@ TRANSLATED: dict[str, Row] = {
         "Her generalin lojistik becerisini artırır.",
         "Verhoogt de logistieke vaardigheid van elke generaal.",
     ),
+    "CCP_HISTORY_HELP": _row(
+        "This panel calls the game's own effects rather than typing console commands, so what is recorded here is the action, not a command line. Repeat runs it again exactly as before.",
+        "Dieses Panel ruft die Spieleffekte direkt auf, statt Konsolenbefehle zu tippen; aufgezeichnet wird daher die Aktion, keine Befehlszeile. Wiederholen führt sie erneut aus.",
+        "Ce panneau appelle les effets du jeu au lieu de taper des commandes console : ce qui est enregistré est l'action, pas une ligne de commande. Répéter la relance à l'identique.",
+        "Панель вызывает эффекты игры напрямую, а не набирает консольные команды, поэтому здесь записано действие, а не строка команды. Повтор выполняет его снова.",
+        "Bu panel konsol komutu yazmak yerine oyunun kendi efektlerini çağırır; burada kaydedilen şey komut satırı değil, işlemin kendisidir. Tekrarla aynı işlemi yeniden çalıştırır.",
+        "Dit paneel roept de effecten van het spel aan in plaats van consolecommando's te typen, dus wat hier staat is de actie, geen commandoregel. Herhalen voert die opnieuw uit.",
+    ),
+    "CCP_HISTORY_EMPTY": _row(
+        "Empty", "Leer", "Vide", "Пусто", "Boş", "Leeg"
+    ),
+    "CCP_HISTORY_CLEAR": _row("CLEAR", "LEEREN", "VIDER", "ОЧИСТИТЬ", "TEMİZLE", "WISSEN"),
+    "CCP_HISTORY_CLEAR_TOOLTIP": _row(
+        "Empty the history. Nothing that was already applied is undone.",
+        "Leert den Verlauf. Bereits Ausgeführtes wird nicht rückgängig gemacht.",
+        "Vide l'historique. Rien de déjà appliqué n'est annulé.",
+        "Очищает историю. Уже выполненное не отменяется.",
+        "Geçmişi boşaltır. Zaten uygulanmış hiçbir şey geri alınmaz.",
+        "Leegt de geschiedenis. Reeds uitgevoerde acties worden niet ongedaan gemaakt.",
+    ),
+    "CCP_HISTORY_REPEAT": _row("REPEAT", "ERNEUT", "RÉPÉTER", "ПОВТОР", "TEKRARLA", "HERHAAL"),
+    "CCP_HISTORY_REPEAT_TOOLTIP": _row(
+        "Run this action again.",
+        "Führt diese Aktion erneut aus.",
+        "Relance cette action.",
+        "Выполняет действие снова.",
+        "Bu işlemi yeniden çalıştırır.",
+        "Voert deze actie opnieuw uit.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",
@@ -1143,6 +1172,9 @@ SECTION_NAMES: dict[str, Row] = {
     ),
     "commanders": _row(
         "Commanders", "Befehlshaber", "Commandants", "Командующие", "Komutanlar", "Bevelhebbers"
+    ),
+    "history": _row(
+        "History", "Verlauf", "Historique", "История", "Geçmiş", "Geschiedenis"
     ),
     "settings": _row(
         "Settings", "Einstellungen", "Paramètres", "Настройки", "Ayarlar", "Instellingen"
@@ -1221,6 +1253,14 @@ SECTION_TOOLTIPS: dict[str, Row] = {
         "Повышает навыки всех ваших генералов и адмиралов.",
         "Tüm generallerinizin ve amirallerinizin becerilerini artırır.",
         "Verhoogt de vaardigheden van al je generaals en admiraals.",
+    ),
+    "history": _row(
+        "The last ten actions this panel applied, each repeatable.",
+        "Die letzten zehn Aktionen dieses Panels, jede wiederholbar.",
+        "Les dix dernières actions du panneau, toutes répétables.",
+        "Последние десять действий панели, каждое можно повторить.",
+        "Panelin uyguladığı son on işlem, her biri tekrarlanabilir.",
+        "De laatste tien acties van dit paneel, elk herhaalbaar.",
     ),
     "settings": _row(
         "Change the hotkey and the confirmation behaviour.",
@@ -1345,9 +1385,15 @@ def _same(value: str) -> Row:
     return {language: value for language in ALL}
 
 
+HISTORY_LENGTH = 10
+
+
 def all_strings() -> dict[str, Row]:
     strings: dict[str, Row] = {key: _same(value) for key, value in NEUTRAL.items()}
     strings.update(TRANSLATED)
+
+    for slot in range(1, HISTORY_LENGTH + 1):
+        strings[f"CCP_HISTORY_ENTRY_{slot}"] = _same(f"[CCP_GetHistory{slot}]")
 
     for digit in range(10):
         strings[f"CCP_PAD_DIGIT_{digit}"] = _same(str(digit))

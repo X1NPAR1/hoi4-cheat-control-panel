@@ -127,9 +127,16 @@ CCP_show_commanders = {
 	CCP_mark_dirty = yes
 }
 
-CCP_show_settings = {
+CCP_show_history = {
 	set_variable = { ccp_section = 10 }
 	set_variable = { ccp_nav_highlight_y = 398 }
+	set_variable = { ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_settings = {
+	set_variable = { ccp_section = 11 }
+	set_variable = { ccp_nav_highlight_y = 432 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }

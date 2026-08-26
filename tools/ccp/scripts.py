@@ -409,9 +409,59 @@ def emit_action_effects(version: str) -> str:
             writer.line(line)
         writer.line(f"set_variable = {{ ccp_status = {status.NATION_ACTION} }}")
         writer.line(f"set_variable = {{ ccp_last_action = {COUNTRY_ACTIONS.index(action) + 1} }}")
+        writer.line("CCP_history_record = yes")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
+
+    return writer.text()
+
+
+HISTORY_LENGTH = 10
+
+
+def emit_history_effects(version: str) -> str:
+    writer = Writer()
+    _banner(writer, version)
+
+    writer.open("CCP_history_record")
+    writer.line("add_to_array = { array = ccp_history value = var:ccp_last_action }")
+    writer.open("if")
+    writer.open("limit")
+    writer.line(f"check_variable = {{ ccp_history^num > {HISTORY_LENGTH} }}")
+    writer.close()
+    writer.line("remove_from_array = { array = ccp_history index = 0 }")
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_history_clear")
+    writer.line("clear_array = ccp_history")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    for slot in range(HISTORY_LENGTH):
+        writer.open(f"CCP_history_repeat_{slot + 1}")
+        writer.open("if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ ccp_history^num > {slot} }}")
+        writer.close()
+        writer.line(f"set_variable = {{ ccp_last_action = ccp_history^{slot} }}")
+        writer.line("CCP_action_replay = yes")
+        writer.close()
+        writer.close()
+        writer.blank()
+
+    writer.open("CCP_action_replay")
+    for index, action in enumerate(COUNTRY_ACTIONS, start=1):
+        writer.open("if" if index == 1 else "else_if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ ccp_last_action = {index} }}")
+        writer.close()
+        writer.line(f"CCP_action_{action.slug} = yes")
+        writer.close()
+    writer.close()
 
     return writer.text()
 
@@ -614,6 +664,13 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.open(f"ccp_action_{action.slug}_run_click")
         writer.line(f"CCP_action_{action.slug} = yes")
         writer.close()
+    writer.open("ccp_history_clear_click")
+    writer.line("CCP_history_clear = yes")
+    writer.close()
+    for slot in range(HISTORY_LENGTH):
+        writer.open(f"ccp_history_repeat_{slot + 1}_click")
+        writer.line(f"CCP_history_repeat_{slot + 1} = yes")
+        writer.close()
     writer.close()
     writer.blank()
 
@@ -656,6 +713,17 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("ccp_country_next_click_enabled")
     writer.line("check_variable = { ccp_country_page < ccp_country_pages_last }")
     writer.close()
+    for slot in range(HISTORY_LENGTH):
+        for suffix in ("_plate", "_text"):
+            writer.open(f"ccp_history_row_{slot + 1}{suffix}_visible")
+            writer.line(f"check_variable = {{ ccp_history^num > {slot} }}")
+            writer.line(f"check_variable = {{ ccp_section = {section_index('history')} }}")
+            writer.close()
+        writer.open(f"ccp_history_repeat_{slot + 1}_visible")
+        writer.line(f"check_variable = {{ ccp_history^num > {slot} }}")
+        writer.line(f"check_variable = {{ ccp_section = {section_index('history')} }}")
+        writer.close()
+
     writer.open("ccp_state_prev_click_enabled")
     writer.line("check_variable = { ccp_state_page > 0 }")
     writer.close()
@@ -772,6 +840,17 @@ def emit_scripted_localisation(version: str) -> str:
         ],
         RESOURCES[0].key,
     )
+
+    for slot in range(HISTORY_LENGTH):
+        _defined_text(
+            writer,
+            f"CCP_GetHistory{slot + 1}",
+            [
+                (f"check_variable = {{ ccp_history^{slot} = {index} }}", action.key)
+                for index, action in enumerate(COUNTRY_ACTIONS, start=1)
+            ],
+            "CCP_HISTORY_EMPTY",
+        )
 
     _defined_text(
         writer,

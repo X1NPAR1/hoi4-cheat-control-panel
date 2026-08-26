@@ -162,6 +162,9 @@ scripted_gui = {
 				CCP_show_commanders = yes
 			}
 			ccp_nav_10_click = {
+				CCP_show_history = yes
+			}
+			ccp_nav_11_click = {
 				CCP_show_settings = yes
 			}
 			ccp_hotkey_choice_1_click = {
@@ -550,6 +553,39 @@ scripted_gui = {
 			}
 			ccp_action_logistics_run_click = {
 				CCP_action_logistics = yes
+			}
+			ccp_history_clear_click = {
+				CCP_history_clear = yes
+			}
+			ccp_history_repeat_1_click = {
+				CCP_history_repeat_1 = yes
+			}
+			ccp_history_repeat_2_click = {
+				CCP_history_repeat_2 = yes
+			}
+			ccp_history_repeat_3_click = {
+				CCP_history_repeat_3 = yes
+			}
+			ccp_history_repeat_4_click = {
+				CCP_history_repeat_4 = yes
+			}
+			ccp_history_repeat_5_click = {
+				CCP_history_repeat_5 = yes
+			}
+			ccp_history_repeat_6_click = {
+				CCP_history_repeat_6 = yes
+			}
+			ccp_history_repeat_7_click = {
+				CCP_history_repeat_7 = yes
+			}
+			ccp_history_repeat_8_click = {
+				CCP_history_repeat_8 = yes
+			}
+			ccp_history_repeat_9_click = {
+				CCP_history_repeat_9 = yes
+			}
+			ccp_history_repeat_10_click = {
+				CCP_history_repeat_10 = yes
 			}
 		}
 
@@ -1154,44 +1190,140 @@ scripted_gui = {
 			ccp_action_logistics_run_visible = {
 				check_variable = { ccp_section = 9 }
 			}
-			ccp_settings_hotkey_label_visible = {
+			ccp_history_help_visible = {
 				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_clear_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_1_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_1_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_1_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_2_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_2_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_2_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_3_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_3_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_3_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_4_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_4_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_4_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_5_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_5_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_5_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_6_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_6_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_6_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_7_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_7_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_7_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_8_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_8_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_8_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_9_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_9_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_9_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_10_plate_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_10_text_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_10_visible = {
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_settings_hotkey_label_visible = {
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_settings_hotkey_help_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_hotkey_choice_1_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_hotkey_choice_2_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_hotkey_choice_3_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_hotkey_choice_4_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_hotkey_choice_5_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_settings_hotkey_current_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_settings_confirm_label_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_settings_confirm_help_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_confirm_toggle_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_settings_language_label_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_settings_language_help_visible = {
-				check_variable = { ccp_section = 10 }
+				check_variable = { ccp_section = 11 }
 			}
 			ccp_hotkey_choice_1_click_enabled = {
 				NOT = { check_variable = { ccp_hotkey_id = 1 } }
@@ -1321,6 +1453,126 @@ scripted_gui = {
 			}
 			ccp_country_next_click_enabled = {
 				check_variable = { ccp_country_page < ccp_country_pages_last }
+			}
+			ccp_history_row_1_plate_visible = {
+				check_variable = { ccp_history^num > 0 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_1_text_visible = {
+				check_variable = { ccp_history^num > 0 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_1_visible = {
+				check_variable = { ccp_history^num > 0 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_2_plate_visible = {
+				check_variable = { ccp_history^num > 1 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_2_text_visible = {
+				check_variable = { ccp_history^num > 1 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_2_visible = {
+				check_variable = { ccp_history^num > 1 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_3_plate_visible = {
+				check_variable = { ccp_history^num > 2 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_3_text_visible = {
+				check_variable = { ccp_history^num > 2 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_3_visible = {
+				check_variable = { ccp_history^num > 2 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_4_plate_visible = {
+				check_variable = { ccp_history^num > 3 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_4_text_visible = {
+				check_variable = { ccp_history^num > 3 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_4_visible = {
+				check_variable = { ccp_history^num > 3 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_5_plate_visible = {
+				check_variable = { ccp_history^num > 4 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_5_text_visible = {
+				check_variable = { ccp_history^num > 4 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_5_visible = {
+				check_variable = { ccp_history^num > 4 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_6_plate_visible = {
+				check_variable = { ccp_history^num > 5 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_6_text_visible = {
+				check_variable = { ccp_history^num > 5 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_6_visible = {
+				check_variable = { ccp_history^num > 5 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_7_plate_visible = {
+				check_variable = { ccp_history^num > 6 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_7_text_visible = {
+				check_variable = { ccp_history^num > 6 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_7_visible = {
+				check_variable = { ccp_history^num > 6 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_8_plate_visible = {
+				check_variable = { ccp_history^num > 7 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_8_text_visible = {
+				check_variable = { ccp_history^num > 7 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_8_visible = {
+				check_variable = { ccp_history^num > 7 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_9_plate_visible = {
+				check_variable = { ccp_history^num > 8 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_9_text_visible = {
+				check_variable = { ccp_history^num > 8 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_9_visible = {
+				check_variable = { ccp_history^num > 8 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_10_plate_visible = {
+				check_variable = { ccp_history^num > 9 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_row_10_text_visible = {
+				check_variable = { ccp_history^num > 9 }
+				check_variable = { ccp_section = 10 }
+			}
+			ccp_history_repeat_10_visible = {
+				check_variable = { ccp_history^num > 9 }
+				check_variable = { ccp_section = 10 }
 			}
 			ccp_state_prev_click_enabled = {
 				check_variable = { ccp_state_page > 0 }

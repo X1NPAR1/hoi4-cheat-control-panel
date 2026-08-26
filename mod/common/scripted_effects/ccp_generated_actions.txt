@@ -6,6 +6,7 @@ CCP_action_stability_max = {
 	set_stability = 1
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 1 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -13,6 +14,7 @@ CCP_action_war_support_max = {
 	set_war_support = 1
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 2 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -20,6 +22,7 @@ CCP_action_stability_min = {
 	set_stability = 0
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 3 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -27,6 +30,7 @@ CCP_action_war_support_min = {
 	set_war_support = 0
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 4 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -34,6 +38,7 @@ CCP_action_research_slots = {
 	set_research_slots = 5
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 5 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -41,6 +46,7 @@ CCP_action_fuel = {
 	add_fuel = 500000
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 6 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -50,6 +56,7 @@ CCP_action_infrastructure = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 7 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -59,6 +66,7 @@ CCP_action_civilian = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 8 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -68,6 +76,7 @@ CCP_action_military = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 9 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -78,6 +87,7 @@ CCP_action_dockyard = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 10 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -87,6 +97,7 @@ CCP_action_airbase = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 11 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -96,6 +107,7 @@ CCP_action_radar = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 12 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -105,6 +117,7 @@ CCP_action_antiair = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 13 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -112,6 +125,7 @@ CCP_action_offsite_civilian = {
 	add_offsite_building = { type = industrial_complex level = 20 }
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 14 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -119,6 +133,7 @@ CCP_action_offsite_military = {
 	add_offsite_building = { type = arms_factory level = 20 }
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 15 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -128,6 +143,7 @@ CCP_action_army_xp = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 16 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -137,6 +153,7 @@ CCP_action_navy_xp = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 17 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -146,6 +163,7 @@ CCP_action_attack = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 18 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -155,6 +173,7 @@ CCP_action_defense = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 19 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -164,6 +183,7 @@ CCP_action_planning = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 20 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
 
@@ -173,5 +193,6 @@ CCP_action_logistics = {
 	}
 	set_variable = { ccp_status = 11 }
 	set_variable = { ccp_last_action = 21 }
+	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }

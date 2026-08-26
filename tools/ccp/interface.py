@@ -978,6 +978,62 @@ def _action_section(slug: str) -> Container:
     return section
 
 
+HISTORY_LENGTH = 10
+HISTORY_ROW_HEIGHT = 34
+HISTORY_WIDTH = t.CONTENT_WIDTH - 48
+
+
+def _history() -> Container:
+    section = Container("ccp_section_history", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+    section.add(
+        Text(
+            "ccp_history_help",
+            CONTENT_X,
+            BODY_TOP,
+            key="CCP_HISTORY_HELP",
+            width=HISTORY_WIDTH - t.BUTTON_WIDTH - 16,
+            height=36,
+        ),
+        Button(
+            "ccp_history_clear",
+            CONTENT_X + HISTORY_WIDTH - t.BUTTON_WIDTH,
+            BODY_TOP,
+            sprite="GFX_ccp_button_danger",
+            key="CCP_HISTORY_CLEAR",
+            tooltip="CCP_HISTORY_CLEAR_TOOLTIP",
+        ),
+    )
+    for slot in range(HISTORY_LENGTH):
+        row = Container(
+            f"ccp_history_row_{slot + 1}",
+            CONTENT_X,
+            BODY_TOP + 48 + slot * HISTORY_ROW_HEIGHT,
+            width=HISTORY_WIDTH,
+            height=HISTORY_ROW_HEIGHT - 2,
+        )
+        row.add(
+            Icon(f"ccp_history_row_{slot + 1}_plate", 0, 0, sprite="GFX_ccp_list_row"),
+            Text(
+                f"ccp_history_row_{slot + 1}_text",
+                10,
+                7,
+                key=f"CCP_HISTORY_ENTRY_{slot + 1}",
+                width=HISTORY_WIDTH - t.SMALL_BUTTON_WIDTH - 30,
+                height=18,
+            ),
+            Button(
+                f"ccp_history_repeat_{slot + 1}",
+                HISTORY_WIDTH - t.SMALL_BUTTON_WIDTH - 6,
+                2,
+                sprite="GFX_ccp_button_small",
+                key="CCP_HISTORY_REPEAT",
+                tooltip="CCP_HISTORY_REPEAT_TOOLTIP",
+            ),
+        )
+        section.add(row)
+    return section
+
+
 SECTION_BUILDERS = {
     "dashboard": _dashboard,
     "resources": _resources,
@@ -994,6 +1050,7 @@ def section_containers(categories: list[str], folders: list[str]) -> dict[str, C
     builders["research"] = lambda: _research(folders)
     builders["country"] = _country
     builders["states"] = _states
+    builders["history"] = _history
     for slug in ACTION_SECTIONS:
         builders[slug] = (lambda name: lambda: _action_section(name))(slug)
     return {section.slug: builders[section.slug]() for section in SECTIONS}

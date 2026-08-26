@@ -177,6 +177,16 @@ guiTypes = {
 			name = "ccp_nav_10"
 			position = { x = 0 y = 398 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_HISTORY"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_HISTORY_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_11"
+			position = { x = 0 y = 432 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
 			buttonText = "CCP_SECTION_SETTINGS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
@@ -2578,6 +2588,363 @@ guiTypes = {
 					buttonText = "CCP_ACTION_LOGISTICS"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_ACTION_LOGISTICS_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "ccp_section_history"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_history_help"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_HISTORY_HELP"
+				maxWidth = 844
+				maxHeight = 36
+				format = left
+			}
+
+			buttonType = {
+				name = "ccp_history_clear"
+				position = { x = 1124 y = 122 }
+				quadTextureSprite = "GFX_ccp_button_danger"
+				buttonText = "CCP_HISTORY_CLEAR"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_HISTORY_CLEAR_TOOLTIP"
+				clicksound = click_default
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_1"
+				position = { x = 264 y = 170 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_1_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_1_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_1"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_1"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_2"
+				position = { x = 264 y = 204 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_2_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_2_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_2"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_2"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_3"
+				position = { x = 264 y = 238 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_3_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_3_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_3"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_3"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_4"
+				position = { x = 264 y = 272 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_4_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_4_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_4"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_4"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_5"
+				position = { x = 264 y = 306 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_5_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_5_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_5"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_5"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_6"
+				position = { x = 264 y = 340 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_6_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_6_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_6"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_6"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_7"
+				position = { x = 264 y = 374 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_7_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_7_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_7"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_7"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_8"
+				position = { x = 264 y = 408 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_8_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_8_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_8"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_8"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_9"
+				position = { x = 264 y = 442 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_9_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_9_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_9"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_9"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_history_row_10"
+				position = { x = 264 y = 476 }
+				size = { width = 992 height = 32 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_history_row_10_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_list_row"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_history_row_10_text"
+					position = { x = 10 y = 7 }
+					font = "hoi_16mbs"
+					text = "CCP_HISTORY_ENTRY_10"
+					maxWidth = 866
+					maxHeight = 18
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_history_repeat_10"
+					position = { x = 890 y = 2 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					buttonText = "CCP_HISTORY_REPEAT"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
 					clicksound = click_default
 				}
 			}
