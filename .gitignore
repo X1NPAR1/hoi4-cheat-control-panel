@@ -16,3 +16,12 @@ desktop.ini
 
 logs/
 *.log
+
+# Working documents that are not part of the published project
+CLAUDE.md
+MEMORY.md
+CHANGELOG.md
+CONTRIBUTING.md
+prompt.md
+docs/
+tests/
