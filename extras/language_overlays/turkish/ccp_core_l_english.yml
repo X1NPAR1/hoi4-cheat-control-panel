@@ -310,6 +310,7 @@
  CCP_STATUS_GRANTED:0 "[?ccp_granted_amount|0] [CCP_GetGrantedResource] eklendi."
  CCP_STATUS_HOTKEY:0 "Kısayol [CCP_GetHotkeyName] olarak ayarlandı."
  CCP_STATUS_IDLE:0 "Cheat Control Panel 0.9.0 · Hearts of Iron IV 1.19 · tek oyunculu"
+ CCP_STATUS_OVERFLOW:0 "İnsan gücü, oyunun saklayabileceği sınıra çoktan yaklaştı. Daha fazlası değeri negatife çevirir, bu yüzden hiçbir şey eklenmedi."
  CCP_STATUS_STATE:0 "Eyalet güncellendi."
  CCP_STATUS_TECH:0 "[CCP_GetTechnologySelectedName] araştırıldı."
  CCP_SUBTITLE:0 "Hearts of Iron IV için tek oyunculu yardımcı araç"

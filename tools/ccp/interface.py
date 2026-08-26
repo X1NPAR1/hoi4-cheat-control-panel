@@ -106,9 +106,9 @@ BODY_TOP = DIVIDER_Y + 16
 NAV_TOP = t.HEADER_HEIGHT + 36
 NAV_STEP = t.SIDEBAR_ITEM_HEIGHT
 
-CARD_WIDTH = 320
-CARD_HEIGHT = 96
 CARD_GAP = 16
+CARD_WIDTH = (t.CONTENT_WIDTH - 48 - 2 * CARD_GAP) // 3
+CARD_HEIGHT = 104
 
 FOOTER_TOP = t.PANEL_HEIGHT - t.FOOTER_HEIGHT
 
@@ -233,7 +233,7 @@ def _stat_card(name: str, column: int, row: int, label: str, value: str, tooltip
         Text(
             f"ccp_card_{name}_label",
             16,
-            14,
+            16,
             key=label,
             width=CARD_WIDTH - 32,
             height=18,
@@ -242,7 +242,7 @@ def _stat_card(name: str, column: int, row: int, label: str, value: str, tooltip
         Text(
             f"ccp_card_{name}_value",
             16,
-            40,
+            44,
             key=value,
             width=CARD_WIDTH - 32,
             height=36,
@@ -730,6 +730,8 @@ def _browser(
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_PREV",
             tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_PREV", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
         Text(
             f"ccp_{slug}_page_label",
@@ -747,6 +749,8 @@ def _browser(
             sprite="GFX_ccp_button_small",
             key="CCP_EQUIPMENT_NEXT",
             tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+            width=button_width("CCP_EQUIPMENT_NEXT", "GFX_ccp_button_small"),
+            height=t.SMALL_BUTTON_HEIGHT,
         ),
     )
     if extra:
@@ -1131,9 +1135,9 @@ def state_picker_window() -> Container:
 
 
 ACTION_COLUMNS = 3
-ACTION_CARD_WIDTH = 320
-ACTION_CARD_HEIGHT = 74
-ACTION_CARD_GAP = 12
+ACTION_CARD_GAP = 16
+ACTION_CARD_WIDTH = (t.CONTENT_WIDTH - 48 - 2 * ACTION_CARD_GAP) // 3
+ACTION_CARD_HEIGHT = 118
 
 
 def _action_section(slug: str) -> Container:
@@ -1173,16 +1177,16 @@ def _action_section(slug: str) -> Container:
             ),
             Text(
                 f"ccp_action_{action.slug}_help",
+                14,
                 12,
-                8,
                 key=f"{action.key}_HELP",
-                width=ACTION_CARD_WIDTH - 24,
-                height=30,
+                width=ACTION_CARD_WIDTH - 28,
+                height=ACTION_CARD_HEIGHT - t.BUTTON_HEIGHT - 30,
             ),
             Button(
                 f"ccp_action_{action.slug}_run",
-                12,
-                ACTION_CARD_HEIGHT - t.BUTTON_HEIGHT - 10,
+                14,
+                ACTION_CARD_HEIGHT - t.BUTTON_HEIGHT - 12,
                 sprite="GFX_ccp_button_danger" if action.danger else "GFX_ccp_button",
                 key=action.key,
                 tooltip=f"{action.key}_TOOLTIP",

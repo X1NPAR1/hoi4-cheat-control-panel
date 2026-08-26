@@ -1132,6 +1132,14 @@ TRANSLATED: dict[str, Row] = {
         "Ironman oyunu değil. Geri dönmek isterseniz büyük değişikliklerden önce kaydedin.",
         "Geen Ironman-spel. Sla op vóór grote wijzigingen als je terug wilt kunnen.",
     ),
+    "CCP_STATUS_OVERFLOW": _row(
+        "Manpower is already near the limit the game can store. Adding more would turn it negative, so nothing was added.",
+        "Die Rekruten sind bereits nahe am speicherbaren Maximum. Mehr würde den Wert negativ machen, daher wurde nichts hinzugefügt.",
+        "Les effectifs sont déjà proches de la limite que le jeu peut stocker. En ajouter rendrait la valeur négative, rien n a donc été ajouté.",
+        "Людские ресурсы уже близки к пределу хранения. Добавление сделало бы значение отрицательным, поэтому ничего не добавлено.",
+        "İnsan gücü, oyunun saklayabileceği sınıra çoktan yaklaştı. Daha fazlası değeri negatife çevirir, bu yüzden hiçbir şey eklenmedi.",
+        "Manschappen zitten al tegen de opslaggrens aan. Meer toevoegen zou de waarde negatief maken, dus er is niets toegevoegd.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",

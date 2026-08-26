@@ -425,22 +425,22 @@ guiTypes = {
 			containerWindowType = {
 				name = "ccp_card_country"
 				position = { x = 274 y = 128 }
-				size = { width = 320 height = 96 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_country_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_country_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_COUNTRY"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_COUNTRY_TOOLTIP"
@@ -448,10 +448,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_country_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_COUNTRY_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_COUNTRY_TOOLTIP"
@@ -460,23 +460,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_political_power"
-				position = { x = 610 y = 128 }
-				size = { width = 320 height = 96 }
+				position = { x = 680 y = 128 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_political_power_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_political_power_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_PP"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_PP_TOOLTIP"
@@ -484,10 +484,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_political_power_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_PP_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_PP_TOOLTIP"
@@ -496,23 +496,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_command_power"
-				position = { x = 946 y = 128 }
-				size = { width = 320 height = 96 }
+				position = { x = 1086 y = 128 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_command_power_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_command_power_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_CP"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_CP_TOOLTIP"
@@ -520,10 +520,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_command_power_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_CP_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_CP_TOOLTIP"
@@ -532,23 +532,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_manpower"
-				position = { x = 274 y = 240 }
-				size = { width = 320 height = 96 }
+				position = { x = 274 y = 248 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_manpower_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_manpower_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_MANPOWER"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_MANPOWER_TOOLTIP"
@@ -556,10 +556,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_manpower_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_MANPOWER_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_MANPOWER_TOOLTIP"
@@ -568,23 +568,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_army_xp"
-				position = { x = 610 y = 240 }
-				size = { width = 320 height = 96 }
+				position = { x = 680 y = 248 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_army_xp_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_army_xp_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_ARMY_XP"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_ARMY_XP_TOOLTIP"
@@ -592,10 +592,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_army_xp_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_ARMY_XP_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_ARMY_XP_TOOLTIP"
@@ -604,23 +604,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_navy_xp"
-				position = { x = 946 y = 240 }
-				size = { width = 320 height = 96 }
+				position = { x = 1086 y = 248 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_navy_xp_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_navy_xp_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_NAVY_XP"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_NAVY_XP_TOOLTIP"
@@ -628,10 +628,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_navy_xp_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_NAVY_XP_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_NAVY_XP_TOOLTIP"
@@ -640,23 +640,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_air_xp"
-				position = { x = 274 y = 352 }
-				size = { width = 320 height = 96 }
+				position = { x = 274 y = 368 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_air_xp_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_air_xp_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_AIR_XP"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_AIR_XP_TOOLTIP"
@@ -664,10 +664,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_air_xp_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_AIR_XP_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_AIR_XP_TOOLTIP"
@@ -676,23 +676,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_stability"
-				position = { x = 610 y = 352 }
-				size = { width = 320 height = 96 }
+				position = { x = 680 y = 368 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_stability_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_stability_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_STABILITY"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_STABILITY_TOOLTIP"
@@ -700,10 +700,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_stability_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_STABILITY_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_STABILITY_TOOLTIP"
@@ -712,23 +712,23 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_card_factories"
-				position = { x = 946 y = 352 }
-				size = { width = 320 height = 96 }
+				position = { x = 1086 y = 368 }
+				size = { width = 390 height = 104 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_card_factories_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 96 }
+					size = { x = 390 y = 104 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_card_factories_label"
-					position = { x = 16 y = 14 }
+					position = { x = 16 y = 16 }
 					font = "hoi_16mbs"
 					text = "CCP_CARD_FACTORIES"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 18
 					format = left
 					pdx_tooltip = "CCP_CARD_FACTORIES_TOOLTIP"
@@ -736,10 +736,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "ccp_card_factories_value"
-					position = { x = 16 y = 40 }
+					position = { x = 16 y = 44 }
 					font = "hoi_24header"
 					text = "CCP_CARD_FACTORIES_VALUE"
-					maxWidth = 288
+					maxWidth = 358
 					maxHeight = 36
 					format = left
 					pdx_tooltip = "CCP_CARD_FACTORIES_TOOLTIP"
@@ -1777,6 +1777,7 @@ guiTypes = {
 				name = "ccp_research_prev"
 				position = { x = 490 y = 672 }
 				quadTextureSprite = "GFX_ccp_button_small"
+				size = { x = 62 y = 28 }
 				buttonText = "CCP_EQUIPMENT_PREV"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_PREV_TOOLTIP"
@@ -1797,6 +1798,7 @@ guiTypes = {
 				name = "ccp_research_next"
 				position = { x = 1192 y = 672 }
 				quadTextureSprite = "GFX_ccp_button_small"
+				size = { x = 76 y = 28 }
 				buttonText = "CCP_EQUIPMENT_NEXT"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
@@ -1973,29 +1975,29 @@ guiTypes = {
 			containerWindowType = {
 				name = "ccp_action_stability_max"
 				position = { x = 274 y = 158 }
-				size = { width = 320 height = 74 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_stability_max_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_stability_max_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_STABILITY_MAX_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_stability_max_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 146 y = 30 }
 					buttonText = "CCP_ACTION_STABILITY_MAX"
@@ -2007,30 +2009,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_war_support_max"
-				position = { x = 606 y = 158 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 158 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_war_support_max_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_war_support_max_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_WAR_SUPPORT_MAX_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_war_support_max_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 160 y = 30 }
 					buttonText = "CCP_ACTION_WAR_SUPPORT_MAX"
@@ -2042,30 +2044,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_stability_min"
-				position = { x = 938 y = 158 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 158 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_stability_min_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_stability_min_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_STABILITY_MIN_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_stability_min_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button_danger"
 					size = { x = 132 y = 30 }
 					buttonText = "CCP_ACTION_STABILITY_MIN"
@@ -2077,30 +2079,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_war_support_min"
-				position = { x = 274 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 274 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_war_support_min_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_war_support_min_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_WAR_SUPPORT_MIN_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_war_support_min_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button_danger"
 					size = { x = 146 y = 30 }
 					buttonText = "CCP_ACTION_WAR_SUPPORT_MIN"
@@ -2112,30 +2114,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_research_slots"
-				position = { x = 606 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_research_slots_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_research_slots_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_RESEARCH_SLOTS_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_research_slots_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 160 y = 30 }
 					buttonText = "CCP_ACTION_RESEARCH_SLOTS"
@@ -2147,30 +2149,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_fuel"
-				position = { x = 938 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_fuel_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_fuel_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_FUEL_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_fuel_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 139 y = 30 }
 					buttonText = "CCP_ACTION_FUEL"
@@ -2200,29 +2202,29 @@ guiTypes = {
 			containerWindowType = {
 				name = "ccp_action_infrastructure"
 				position = { x = 274 y = 158 }
-				size = { width = 320 height = 74 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_infrastructure_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_infrastructure_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_INFRASTRUCTURE_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_infrastructure_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 146 y = 30 }
 					buttonText = "CCP_ACTION_INFRASTRUCTURE"
@@ -2234,30 +2236,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_civilian"
-				position = { x = 606 y = 158 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 158 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_civilian_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_civilian_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_CIVILIAN_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_civilian_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 168 y = 30 }
 					buttonText = "CCP_ACTION_CIVILIAN"
@@ -2269,30 +2271,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_military"
-				position = { x = 938 y = 158 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 158 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_military_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_military_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_MILITARY_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_military_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 153 y = 30 }
 					buttonText = "CCP_ACTION_MILITARY"
@@ -2304,30 +2306,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_dockyard"
-				position = { x = 274 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 274 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_dockyard_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_dockyard_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_DOCKYARD_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_dockyard_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 139 y = 30 }
 					buttonText = "CCP_ACTION_DOCKYARD"
@@ -2339,30 +2341,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_airbase"
-				position = { x = 606 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_airbase_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_airbase_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_AIRBASE_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_airbase_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 125 y = 30 }
 					buttonText = "CCP_ACTION_AIRBASE"
@@ -2374,30 +2376,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_radar"
-				position = { x = 938 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_radar_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_radar_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_RADAR_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_radar_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 82 y = 30 }
 					buttonText = "CCP_ACTION_RADAR"
@@ -2409,30 +2411,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_antiair"
-				position = { x = 274 y = 330 }
-				size = { width = 320 height = 74 }
+				position = { x = 274 y = 426 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_antiair_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_antiair_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_ANTIAIR_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_antiair_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 125 y = 30 }
 					buttonText = "CCP_ACTION_ANTIAIR"
@@ -2444,30 +2446,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_offsite_civilian"
-				position = { x = 606 y = 330 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 426 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_offsite_civilian_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_offsite_civilian_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_OFFSITE_CIVILIAN_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_offsite_civilian_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 160 y = 30 }
 					buttonText = "CCP_ACTION_OFFSITE_CIVILIAN"
@@ -2479,30 +2481,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_offsite_military"
-				position = { x = 938 y = 330 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 426 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_offsite_military_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_offsite_military_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_OFFSITE_MILITARY_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_offsite_military_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 160 y = 30 }
 					buttonText = "CCP_ACTION_OFFSITE_MILITARY"
@@ -2532,29 +2534,29 @@ guiTypes = {
 			containerWindowType = {
 				name = "ccp_action_army_xp"
 				position = { x = 274 y = 158 }
-				size = { width = 320 height = 74 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_army_xp_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_army_xp_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_ARMY_XP_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_army_xp_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 160 y = 30 }
 					buttonText = "CCP_ACTION_ARMY_XP"
@@ -2566,30 +2568,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_navy_xp"
-				position = { x = 606 y = 158 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 158 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_navy_xp_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_navy_xp_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_NAVY_XP_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_navy_xp_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 153 y = 30 }
 					buttonText = "CCP_ACTION_NAVY_XP"
@@ -2601,30 +2603,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_attack"
-				position = { x = 938 y = 158 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 158 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_attack_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_attack_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_ATTACK_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_attack_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 97 y = 30 }
 					buttonText = "CCP_ACTION_ATTACK"
@@ -2636,30 +2638,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_defense"
-				position = { x = 274 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 274 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_defense_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_defense_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_DEFENSE_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_defense_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 132 y = 30 }
 					buttonText = "CCP_ACTION_DEFENSE"
@@ -2671,30 +2673,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_planning"
-				position = { x = 606 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 680 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_planning_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_planning_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_PLANNING_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_planning_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 139 y = 30 }
 					buttonText = "CCP_ACTION_PLANNING"
@@ -2706,30 +2708,30 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_logistics"
-				position = { x = 938 y = 244 }
-				size = { width = 320 height = 74 }
+				position = { x = 1086 y = 292 }
+				size = { width = 390 height = 118 }
 				moveable = no
 
 				iconType = {
 					name = "ccp_action_logistics_plate"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_ccp_card"
-					size = { x = 320 y = 74 }
+					size = { x = 390 y = 118 }
 				}
 
 				instantTextBoxType = {
 					name = "ccp_action_logistics_help"
-					position = { x = 12 y = 8 }
+					position = { x = 14 y = 12 }
 					font = "hoi_16mbs"
 					text = "CCP_ACTION_LOGISTICS_HELP"
-					maxWidth = 296
-					maxHeight = 30
+					maxWidth = 362
+					maxHeight = 58
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_action_logistics_run"
-					position = { x = 12 y = 34 }
+					position = { x = 14 y = 76 }
 					quadTextureSprite = "GFX_ccp_button"
 					size = { x = 118 y = 30 }
 					buttonText = "CCP_ACTION_LOGISTICS"

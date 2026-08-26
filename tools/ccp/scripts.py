@@ -34,6 +34,30 @@ def _banner(writer: Writer, version: str) -> None:
     writer.blank()
 
 
+OVERFLOW_CEILING = 1_000_000_000
+
+
+def _grant_body(writer: Writer, resource, apply) -> None:
+    """Apply a grant, refusing it when the counter is about to wrap.
+
+    Manpower is stored in a 32-bit counter. Pushing past its range makes the value
+    go negative, which is worse than declining the grant and saying so.
+    """
+    if resource.slug != "manpower":
+        apply()
+        return
+
+    writer.open("if")
+    writer.open("limit")
+    writer.line(f"check_variable = {{ manpower < {OVERFLOW_CEILING} }}")
+    writer.close()
+    apply()
+    writer.close()
+    writer.open("else")
+    writer.line(f"set_variable = {{ ccp_status = {status.OVERFLOW_BLOCKED} }}")
+    writer.close()
+
+
 def emit_core_effects(version: str) -> str:
     writer = Writer()
     _banner(writer, version)
@@ -159,25 +183,37 @@ def emit_core_effects(version: str) -> str:
     for resource in RESOURCES:
         for slot, amount in enumerate(resource.presets, start=1):
             writer.open(f"CCP_grant_{resource.slug}_{slot}")
-            writer.line(f"{resource.effect} = {amount}")
-            writer.line(f"set_variable = {{ ccp_status = {STATUS_GRANTED} }}")
-            writer.line(f"set_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}")
-            writer.line(f"set_variable = {{ ccp_granted_amount = {amount} }}")
+
+            def apply(resource=resource, amount=amount) -> None:
+                writer.line(f"{resource.effect} = {amount}")
+                writer.line(f"set_variable = {{ ccp_status = {STATUS_GRANTED} }}")
+                writer.line(
+                    f"set_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}"
+                )
+                writer.line(f"set_variable = {{ ccp_granted_amount = {amount} }}")
+
+            _grant_body(writer, resource, apply)
             writer.line("CCP_mark_dirty = yes")
             writer.close()
             writer.blank()
 
         writer.open(f"CCP_grant_{resource.slug}_custom")
-        writer.line("set_temp_variable = { ccp_grant = var:ccp_amount }")
-        writer.open("clamp_temp_variable")
-        writer.line("var = ccp_grant")
-        writer.line("min = 0")
-        writer.line(f"max = {resource.safe_max}")
-        writer.close()
-        writer.line(f"{resource.effect} = var:ccp_grant")
-        writer.line(f"set_variable = {{ ccp_status = {STATUS_GRANTED} }}")
-        writer.line(f"set_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}")
-        writer.line("set_variable = { ccp_granted_amount = var:ccp_grant }")
+
+        def apply_custom(resource=resource) -> None:
+            writer.line("set_temp_variable = { ccp_grant = var:ccp_amount }")
+            writer.open("clamp_temp_variable")
+            writer.line("var = ccp_grant")
+            writer.line("min = 0")
+            writer.line(f"max = {resource.safe_max}")
+            writer.close()
+            writer.line(f"{resource.effect} = var:ccp_grant")
+            writer.line(f"set_variable = {{ ccp_status = {STATUS_GRANTED} }}")
+            writer.line(
+                f"set_variable = {{ ccp_granted_resource = {RESOURCE_ID[resource.slug]} }}"
+            )
+            writer.line("set_variable = { ccp_granted_amount = var:ccp_grant }")
+
+        _grant_body(writer, resource, apply_custom)
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -676,6 +712,24 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
 
     writer.open("triggers")
     containers = section_containers(categories, folders)
+
+    # A dynamic list draws its entries regardless of the grid box that holds them,
+    # so the entry template's own widgets carry the section's visibility trigger too.
+    from . import interface as ui
+
+    entry_windows = {
+        "equipment": ui.equipment_entry_window(),
+        "research": ui.research_entry_window(),
+        "country": ui.country_entry_window(),
+        "states": ui.state_entry_window(),
+    }
+    for slug, window in entry_windows.items():
+        index = section_index(slug)
+        for leaf in window.leaves():
+            writer.open(f"{leaf}_visible")
+            writer.line(f"check_variable = {{ ccp_section = {index} }}")
+            writer.line("check_variable = { ccp_panel_open = 1 }")
+            writer.close()
     for index, section in enumerate(SECTIONS, start=1):
         for leaf in containers[section.slug].leaves():
             writer.open(f"{leaf}_visible")
@@ -820,6 +874,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.ACTION_CANCELLED} }}", "CCP_STATUS_CANCELLED"),
             (f"check_variable = {{ ccp_status = {status.STATE_ACTION} }}", "CCP_STATUS_STATE"),
             (f"check_variable = {{ ccp_status = {status.NATION_ACTION} }}", "CCP_STATUS_ACTION"),
+            (f"check_variable = {{ ccp_status = {status.OVERFLOW_BLOCKED} }}", "CCP_STATUS_OVERFLOW"),
         ],
         "CCP_STATUS_IDLE",
     )

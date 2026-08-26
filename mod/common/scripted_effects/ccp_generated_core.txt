@@ -386,48 +386,88 @@ CCP_grant_command_power_custom = {
 }
 
 CCP_grant_manpower_1 = {
-	add_manpower = 10000
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 3 }
-	set_variable = { ccp_granted_amount = 10000 }
+	if = {
+		limit = {
+			check_variable = { manpower < 1000000000 }
+		}
+		add_manpower = 10000
+		set_variable = { ccp_status = 4 }
+		set_variable = { ccp_granted_resource = 3 }
+		set_variable = { ccp_granted_amount = 10000 }
+	}
+	else = {
+		set_variable = { ccp_status = 12 }
+	}
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_manpower_2 = {
-	add_manpower = 100000
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 3 }
-	set_variable = { ccp_granted_amount = 100000 }
+	if = {
+		limit = {
+			check_variable = { manpower < 1000000000 }
+		}
+		add_manpower = 100000
+		set_variable = { ccp_status = 4 }
+		set_variable = { ccp_granted_resource = 3 }
+		set_variable = { ccp_granted_amount = 100000 }
+	}
+	else = {
+		set_variable = { ccp_status = 12 }
+	}
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_manpower_3 = {
-	add_manpower = 1000000
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 3 }
-	set_variable = { ccp_granted_amount = 1000000 }
+	if = {
+		limit = {
+			check_variable = { manpower < 1000000000 }
+		}
+		add_manpower = 1000000
+		set_variable = { ccp_status = 4 }
+		set_variable = { ccp_granted_resource = 3 }
+		set_variable = { ccp_granted_amount = 1000000 }
+	}
+	else = {
+		set_variable = { ccp_status = 12 }
+	}
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_manpower_4 = {
-	add_manpower = 5000000
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 3 }
-	set_variable = { ccp_granted_amount = 5000000 }
+	if = {
+		limit = {
+			check_variable = { manpower < 1000000000 }
+		}
+		add_manpower = 5000000
+		set_variable = { ccp_status = 4 }
+		set_variable = { ccp_granted_resource = 3 }
+		set_variable = { ccp_granted_amount = 5000000 }
+	}
+	else = {
+		set_variable = { ccp_status = 12 }
+	}
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_manpower_custom = {
-	set_temp_variable = { ccp_grant = var:ccp_amount }
-	clamp_temp_variable = {
-		var = ccp_grant
-		min = 0
-		max = 50000000
+	if = {
+		limit = {
+			check_variable = { manpower < 1000000000 }
+		}
+		set_temp_variable = { ccp_grant = var:ccp_amount }
+		clamp_temp_variable = {
+			var = ccp_grant
+			min = 0
+			max = 50000000
+		}
+		add_manpower = var:ccp_grant
+		set_variable = { ccp_status = 4 }
+		set_variable = { ccp_granted_resource = 3 }
+		set_variable = { ccp_granted_amount = var:ccp_grant }
 	}
-	add_manpower = var:ccp_grant
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 3 }
-	set_variable = { ccp_granted_amount = var:ccp_grant }
+	else = {
+		set_variable = { ccp_status = 12 }
+	}
 	CCP_mark_dirty = yes
 }
 

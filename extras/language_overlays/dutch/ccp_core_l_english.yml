@@ -310,6 +310,7 @@
  CCP_STATUS_GRANTED:0 "[?ccp_granted_amount|0] [CCP_GetGrantedResource] toegevoegd."
  CCP_STATUS_HOTKEY:0 "Sneltoets ingesteld op [CCP_GetHotkeyName]."
  CCP_STATUS_IDLE:0 "Cheat-bedieningspaneel 0.9.0 · Hearts of Iron IV 1.19 · singleplayer"
+ CCP_STATUS_OVERFLOW:0 "Manschappen zitten al tegen de opslaggrens aan. Meer toevoegen zou de waarde negatief maken, dus er is niets toegevoegd."
  CCP_STATUS_STATE:0 "Staat bijgewerkt."
  CCP_STATUS_TECH:0 "[CCP_GetTechnologySelectedName] onderzocht."
  CCP_SUBTITLE:0 "Singleplayer-hulpmiddel voor Hearts of Iron IV"
