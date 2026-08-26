@@ -137,6 +137,16 @@ guiTypes = {
 			name = "ccp_nav_6"
 			position = { x = 0 y = 262 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_STATES"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_STATES_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_7"
+			position = { x = 0 y = 296 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
 			buttonText = "CCP_SECTION_SETTINGS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
@@ -1733,6 +1743,73 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "ccp_section_states"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_state_help"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_STATE_HELP"
+				maxWidth = 844
+				maxHeight = 36
+				format = left
+			}
+
+			buttonType = {
+				name = "ccp_state_picker_toggle"
+				position = { x = 1124 y = 122 }
+				quadTextureSprite = "GFX_ccp_button"
+				buttonText = "[CCP_GetStatePickerState]"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_STATE_PICKER_TOOLTIP"
+				clicksound = click_default
+			}
+
+			gridboxType = {
+				name = "ccp_state_list"
+				position = { x = 264 y = 166 }
+				size = { width = 992 height = 532 }
+				slotsize = { width = 992 height = 38 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+				max_slots_vertical = 14
+			}
+
+			buttonType = {
+				name = "ccp_state_prev"
+				position = { x = 264 y = 706 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_PREV"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_PREV_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_state_page_label"
+				position = { x = 372 y = 711 }
+				font = "hoi_16mbs"
+				text = "CCP_STATE_PAGE"
+				maxWidth = 776
+				maxHeight = 18
+				format = centre
+			}
+
+			buttonType = {
+				name = "ccp_state_next"
+				position = { x = 1160 y = 706 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_NEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
+				clicksound = click_default
+			}
+		}
+
+		containerWindowType = {
 			name = "ccp_section_settings"
 			position = { x = 0 y = 0 }
 			size = { width = 1280 height = 780 }
@@ -2015,6 +2092,143 @@ guiTypes = {
 			buttonText = "CCP_COUNTRY_PLAYAS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_COUNTRY_PLAYAS_TOOLTIP"
+			clicksound = click_default
+		}
+	}
+
+	containerWindowType = {
+		name = "ccp_state_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 992 height = 38 }
+		moveable = no
+
+		iconType = {
+			name = "ccp_state_entry_plate"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_list_row"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_state_entry_name"
+			position = { x = 10 y = 3 }
+			font = "hoi_16mbs"
+			text = "CCP_STATE_ENTRY_NAME"
+			maxWidth = 560
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ccp_state_entry_owner"
+			position = { x = 10 y = 20 }
+			font = "hoi_16mbs"
+			text = "CCP_STATE_ENTRY_OWNER"
+			maxWidth = 560
+			maxHeight = 16
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_take"
+			position = { x = 584 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_STATE_TAKE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_TAKE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_core"
+			position = { x = 686 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_STATE_CORE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_CORE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_uncore"
+			position = { x = 788 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_STATE_UNCORE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_UNCORE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_claim"
+			position = { x = 890 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_STATE_CLAIM"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_CLAIM_TOOLTIP"
+			clicksound = click_default
+		}
+	}
+
+	containerWindowType = {
+		name = "ccp_state_picker_window"
+		position = { x = 0 y = 0 }
+		size = { width = 426 height = 64 }
+		moveable = no
+		clipping = no
+
+		iconType = {
+			name = "ccp_picker_plate"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_card"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_picker_title"
+			position = { x = 10 y = 6 }
+			font = "hoi_16mbs"
+			text = "CCP_STATE_PICKER_TITLE"
+			maxWidth = 406
+			maxHeight = 16
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_picker_take"
+			position = { x = 9 y = 26 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_STATE_TAKE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_TAKE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_core"
+			position = { x = 111 y = 26 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_STATE_CORE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_CORE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_uncore"
+			position = { x = 213 y = 26 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_STATE_UNCORE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_UNCORE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_claim"
+			position = { x = 315 y = 26 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_STATE_CLAIM"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_CLAIM_TOOLTIP"
 			clicksound = click_default
 		}
 	}

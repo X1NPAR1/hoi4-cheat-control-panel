@@ -10,6 +10,7 @@ from __future__ import annotations
 from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
 from .countries import ACTIONS, PAGE_SIZE as COUNTRY_PAGE_SIZE
+from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
 from .resources import AMOUNT_MAX, RESOURCES
 from .sections import HOTKEYS, SECTIONS, section_id as section_index
 
@@ -60,6 +61,9 @@ def emit_core_effects(version: str) -> str:
     writer.line("set_variable = { ccp_country_pages_last = 0 }")
     writer.line("set_variable = { ccp_pending_action = 0 }")
     writer.line("set_variable = { ccp_modal_open = 0 }")
+    writer.line("set_variable = { ccp_state_page = 0 }")
+    writer.line("set_variable = { ccp_state_pages_last = 0 }")
+    writer.line("set_variable = { ccp_state_picker_on = 0 }")
     writer.close()
     writer.close()
     writer.blank()
@@ -108,6 +112,8 @@ def emit_core_effects(version: str) -> str:
             writer.line("CCP_research_load_page = yes")
         if section.slug == "country":
             writer.line("CCP_country_rebuild = yes")
+        if section.slug == "states":
+            writer.line("CCP_state_rebuild = yes")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -311,6 +317,87 @@ def emit_country_effects(version: str) -> str:
     return writer.text()
 
 
+def emit_state_effects(version: str) -> str:
+    writer = Writer()
+    _banner(writer, version)
+
+    writer.open("CCP_state_rebuild")
+    writer.line("clear_array = ccp_state_all")
+    writer.open("every_state")
+    writer.line("ROOT = { add_to_array = { array = ccp_state_all value = PREV } }")
+    writer.close()
+    writer.line("set_variable = { ccp_state_count = ccp_state_all^num }")
+    writer.line("CCP_state_recount_pages = yes")
+    writer.line("set_variable = { ccp_state_page = 0 }")
+    writer.line("CCP_state_load_page = yes")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_state_recount_pages")
+    writer.line("set_variable = { ccp_state_pages_last = ccp_state_count }")
+    writer.line("subtract_from_variable = { ccp_state_pages_last = 1 }")
+    writer.line("clamp_variable = { var = ccp_state_pages_last min = 0 }")
+    writer.line("set_temp_variable = { ccp_page_remainder = ccp_state_pages_last }")
+    writer.line(f"modulo_temp_variable = {{ ccp_page_remainder = {STATE_PAGE_SIZE} }}")
+    writer.line("subtract_from_variable = { ccp_state_pages_last = var:ccp_page_remainder }")
+    writer.line(f"divide_variable = {{ ccp_state_pages_last = {STATE_PAGE_SIZE} }}")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_state_load_page")
+    writer.line("clear_array = ccp_state_page_items")
+    writer.line("set_temp_variable = { ccp_page_first = var:ccp_state_page }")
+    writer.line(f"multiply_temp_variable = {{ ccp_page_first = {STATE_PAGE_SIZE} }}")
+    writer.line("set_temp_variable = { ccp_page_last = var:ccp_page_first }")
+    writer.line(f"add_to_temp_variable = {{ ccp_page_last = {STATE_PAGE_SIZE - 1} }}")
+    writer.open("for_loop_effect")
+    writer.line("start = 0")
+    writer.line("end = ccp_state_count")
+    writer.line("value = ccp_slot")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_slot >= ccp_page_first }")
+    writer.line("check_variable = { ccp_slot <= ccp_page_last }")
+    writer.close()
+    writer.open("add_to_array")
+    writer.line("array = ccp_state_page_items")
+    writer.line("value = ccp_state_all^ccp_slot")
+    writer.close()
+    writer.close()
+    writer.close()
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    for name, comparison, step in (
+        ("next", "ccp_state_page < ccp_state_pages_last", "add_to_variable"),
+        ("prev", "ccp_state_page > 0", "subtract_from_variable"),
+    ):
+        writer.open(f"CCP_state_{name}_page")
+        writer.open("if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ {comparison} }}")
+        writer.close()
+        writer.line(f"{step} = {{ ccp_state_page = 1 }}")
+        writer.line("CCP_state_load_page = yes")
+        writer.close()
+        writer.close()
+        writer.blank()
+
+    for action in STATE_ACTIONS:
+        writer.open(f"CCP_state_{action.slug}")
+        for line in action.body:
+            writer.line(line)
+        writer.open("ROOT")
+        writer.line(f"set_variable = {{ ccp_status = {status.STATE_ACTION} }}")
+        writer.line("CCP_mark_dirty = yes")
+        writer.close()
+        writer.close()
+        writer.blank()
+
+    return writer.text()
+
+
 def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -> str:
     writer = Writer()
     _banner(writer, version)
@@ -351,6 +438,23 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.close()
         writer.line("CCP_toggle_panel = yes")
         writer.close()
+        writer.close()
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    writer.open("ccp_state_picker")
+    writer.line("context_type = selected_state_context")
+    writer.line('window_name = "ccp_state_picker_window"')
+    writer.blank()
+    writer.open("visible")
+    writer.line("ROOT = { check_variable = { ccp_state_picker_on = 1 } }")
+    writer.close()
+    writer.blank()
+    writer.open("effects")
+    for action in STATE_ACTIONS:
+        writer.open(f"ccp_picker_{action.slug}_click")
+        writer.line(f"CCP_state_{action.slug} = yes")
         writer.close()
     writer.close()
     writer.close()
@@ -466,6 +570,28 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.open(f"ccp_country_entry_{action.slug}_click")
         writer.line(f"CCP_country_request_{action.slug} = yes")
         writer.close()
+    writer.open("ccp_state_picker_toggle_click")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_state_picker_on = 1 }")
+    writer.close()
+    writer.line("set_variable = { ccp_state_picker_on = 0 }")
+    writer.close()
+    writer.open("else")
+    writer.line("set_variable = { ccp_state_picker_on = 1 }")
+    writer.close()
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.open("ccp_state_prev_click")
+    writer.line("CCP_state_prev_page = yes")
+    writer.close()
+    writer.open("ccp_state_next_click")
+    writer.line("CCP_state_next_page = yes")
+    writer.close()
+    for action in STATE_ACTIONS:
+        writer.open(f"ccp_state_entry_{action.slug}_click")
+        writer.line(f"CCP_state_{action.slug} = yes")
+        writer.close()
     writer.close()
     writer.blank()
 
@@ -508,6 +634,12 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("ccp_country_next_click_enabled")
     writer.line("check_variable = { ccp_country_page < ccp_country_pages_last }")
     writer.close()
+    writer.open("ccp_state_prev_click_enabled")
+    writer.line("check_variable = { ccp_state_page > 0 }")
+    writer.close()
+    writer.open("ccp_state_next_click_enabled")
+    writer.line("check_variable = { ccp_state_page < ccp_state_pages_last }")
+    writer.close()
     writer.close()
     writer.blank()
 
@@ -530,6 +662,13 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line("value = ccp_research_entry")
     writer.line("index = ccp_research_entry_index")
     writer.line('entry_container = "ccp_research_entry"')
+    writer.close()
+    writer.open("ccp_state_list")
+    writer.line("array = ccp_state_page_items")
+    writer.line("value = ccp_state_entry_value")
+    writer.line("index = ccp_state_entry_index")
+    writer.line("change_scope = yes")
+    writer.line('entry_container = "ccp_state_entry"')
     writer.close()
     writer.open("ccp_country_list")
     writer.line("array = ccp_country_page_items")
@@ -589,6 +728,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.FOLDER_RESEARCHED} }}", "CCP_STATUS_FOLDER"),
             (f"check_variable = {{ ccp_status = {status.COUNTRY_ACTION} }}", "CCP_STATUS_COUNTRY"),
             (f"check_variable = {{ ccp_status = {status.ACTION_CANCELLED} }}", "CCP_STATUS_CANCELLED"),
+            (f"check_variable = {{ ccp_status = {status.STATE_ACTION} }}", "CCP_STATUS_STATE"),
         ],
         "CCP_STATUS_IDLE",
     )
@@ -608,6 +748,13 @@ def emit_scripted_localisation(version: str) -> str:
             for resource in RESOURCES
         ],
         RESOURCES[0].key,
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetStatePickerState",
+        [("check_variable = { ccp_state_picker_on = 1 }", "CCP_STATE_PICKER_ON")],
+        "CCP_STATE_PICKER_OFF",
     )
 
     _defined_text(

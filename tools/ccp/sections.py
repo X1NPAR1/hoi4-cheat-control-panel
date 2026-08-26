@@ -34,6 +34,7 @@ SECTIONS: list[Section] = [
     Section("equipment", "Equipment", "Teçhizat"),
     Section("research", "Research", "Araştırma"),
     Section("country", "Countries", "Ülkeler"),
+    Section("states", "States", "Eyaletler"),
     Section("settings", "Settings", "Ayarlar"),
 ]
 

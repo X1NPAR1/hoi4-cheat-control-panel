@@ -5,6 +5,7 @@ from __future__ import annotations
 from . import theme as t
 from .layout import Button, Container, Grid, Icon, Text, Widget
 from .countries import ACTIONS
+from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
 from .sections import HOTKEYS, SECTIONS
 
 CONTENT_X = t.SIDEBAR_WIDTH + 24
@@ -786,6 +787,141 @@ def modal_window() -> Container:
     )
 
 
+STATE_LIST_WIDTH = t.CONTENT_WIDTH - 48
+STATE_ENTRY_HEIGHT = 38
+
+
+def _states() -> Container:
+    section = Container("ccp_section_states", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+    return section.add(
+        Text(
+            "ccp_state_help",
+            CONTENT_X,
+            BODY_TOP,
+            key="CCP_STATE_HELP",
+            width=STATE_LIST_WIDTH - t.BUTTON_WIDTH - 16,
+            height=36,
+        ),
+        Button(
+            "ccp_state_picker_toggle",
+            CONTENT_X + STATE_LIST_WIDTH - t.BUTTON_WIDTH,
+            BODY_TOP,
+            key="CCP_GetStatePickerState",
+            tooltip="CCP_STATE_PICKER_TOOLTIP",
+        ),
+        Grid(
+            "ccp_state_list",
+            CONTENT_X,
+            BODY_TOP + 44,
+            width=STATE_LIST_WIDTH,
+            height=STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
+            slot_width=STATE_LIST_WIDTH,
+            slot_height=STATE_ENTRY_HEIGHT,
+            max_horizontal=1,
+            max_vertical=STATE_PAGE_SIZE,
+        ),
+        Button(
+            "ccp_state_prev",
+            CONTENT_X,
+            BODY_TOP + 52 + STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_PREV",
+            tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+        ),
+        Text(
+            "ccp_state_page_label",
+            CONTENT_X + t.SMALL_BUTTON_WIDTH + 12,
+            BODY_TOP + 57 + STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
+            key="CCP_STATE_PAGE",
+            width=STATE_LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            height=18,
+            align="centre",
+        ),
+        Button(
+            "ccp_state_next",
+            CONTENT_X + STATE_LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            BODY_TOP + 52 + STATE_PAGE_SIZE * STATE_ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_NEXT",
+            tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+        ),
+    )
+
+
+def state_entry_window() -> Container:
+    entry = Container(
+        "ccp_state_entry", 0, 0, width=STATE_LIST_WIDTH, height=STATE_ENTRY_HEIGHT
+    )
+    entry.add(
+        Icon("ccp_state_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+        Text(
+            "ccp_state_entry_name",
+            10,
+            3,
+            key="CCP_STATE_ENTRY_NAME",
+            width=STATE_LIST_WIDTH - len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) - 24,
+            height=18,
+        ),
+        Text(
+            "ccp_state_entry_owner",
+            10,
+            20,
+            key="CCP_STATE_ENTRY_OWNER",
+            width=STATE_LIST_WIDTH - len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) - 24,
+            height=16,
+        ),
+    )
+    first = STATE_LIST_WIDTH - len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6)
+    for index, action in enumerate(STATE_ACTIONS):
+        entry.add(
+            Button(
+                f"ccp_state_entry_{action.slug}",
+                first + index * (t.SMALL_BUTTON_WIDTH + 6),
+                5,
+                sprite="GFX_ccp_button_danger" if action.destructive else "GFX_ccp_button_small",
+                key=action.key,
+                tooltip=f"{action.key}_TOOLTIP",
+            )
+        )
+    return entry
+
+
+def state_picker_window() -> Container:
+    """Attached to the state view, so clicking a state on the map acts on it directly."""
+    width = len(STATE_ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) + 18
+    window = Container(
+        "ccp_state_picker_window",
+        0,
+        0,
+        width=width,
+        height=64,
+        clipping=False,
+    )
+    window.add(
+        Icon("ccp_picker_plate", 0, 0, sprite="GFX_ccp_card"),
+        Text(
+            "ccp_picker_title",
+            10,
+            6,
+            key="CCP_STATE_PICKER_TITLE",
+            width=width - 20,
+            height=16,
+        ),
+    )
+    for index, action in enumerate(STATE_ACTIONS):
+        window.add(
+            Button(
+                f"ccp_picker_{action.slug}",
+                9 + index * (t.SMALL_BUTTON_WIDTH + 6),
+                26,
+                sprite="GFX_ccp_button_danger" if action.destructive else "GFX_ccp_button_small",
+                key=action.key,
+                tooltip=f"{action.key}_TOOLTIP",
+            )
+        )
+    return window
+
+
 SECTION_BUILDERS = {
     "dashboard": _dashboard,
     "resources": _resources,
@@ -801,6 +937,7 @@ def section_containers(categories: list[str], folders: list[str]) -> dict[str, C
     builders["equipment"] = lambda: _equipment(categories)
     builders["research"] = lambda: _research(folders)
     builders["country"] = _country
+    builders["states"] = _states
     return {section.slug: builders[section.slug]() for section in SECTIONS}
 
 

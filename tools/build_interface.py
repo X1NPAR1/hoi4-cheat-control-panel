@@ -22,6 +22,7 @@ from ccp.meta import descriptor
 from ccp.scripts import (
     emit_core_effects,
     emit_country_effects,
+    emit_state_effects,
     emit_scripted_gui,
     emit_scripted_localisation,
 )
@@ -57,6 +58,8 @@ def main() -> int:
             interface.equipment_entry_window(),
             interface.research_entry_window(),
             interface.country_entry_window(),
+            interface.state_entry_window(),
+            interface.state_picker_window(),
             interface.modal_window(),
         ),
     )
@@ -74,6 +77,10 @@ def main() -> int:
     write(
         MOD / "common" / "scripted_effects" / "ccp_generated_country.txt",
         emit_country_effects(version),
+    )
+    write(
+        MOD / "common" / "scripted_effects" / "ccp_generated_state.txt",
+        emit_state_effects(version),
     )
     write(
         MOD / "common" / "scripted_localisation" / "ccp_generated_core_loc.txt",

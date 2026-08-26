@@ -26,6 +26,9 @@ CCP_ensure_settings = {
 		set_variable = { ccp_country_pages_last = 0 }
 		set_variable = { ccp_pending_action = 0 }
 		set_variable = { ccp_modal_open = 0 }
+		set_variable = { ccp_state_page = 0 }
+		set_variable = { ccp_state_pages_last = 0 }
+		set_variable = { ccp_state_picker_on = 0 }
 	}
 }
 
@@ -95,9 +98,17 @@ CCP_show_country = {
 	CCP_mark_dirty = yes
 }
 
-CCP_show_settings = {
+CCP_show_states = {
 	set_variable = { ccp_section = 6 }
 	set_variable = { ccp_nav_highlight_y = 262 }
+	set_variable = { ccp_status = 0 }
+	CCP_state_rebuild = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_show_settings = {
+	set_variable = { ccp_section = 7 }
+	set_variable = { ccp_nav_highlight_y = 296 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }

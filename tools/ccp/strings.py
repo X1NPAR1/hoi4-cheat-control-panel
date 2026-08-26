@@ -553,6 +553,98 @@ TRANSLATED: dict[str, Row] = {
         "İşlem iptal edildi. Hiçbir şey değişmedi.",
         "Actie geannuleerd. Er is niets gewijzigd.",
     ),
+    "CCP_STATE_HELP": _row(
+        "Every state in the game. You can also turn on map picking and left-click a state directly.",
+        "Jeder Staat im Spiel. Alternativ die Kartenauswahl aktivieren und einen Staat anklicken.",
+        "Tous les États du jeu. Vous pouvez aussi activer la sélection sur la carte et cliquer un État.",
+        "Все провинции в игре. Можно также включить выбор на карте и кликнуть по провинции.",
+        "Oyundaki tüm eyaletler. Harita seçimini açıp bir eyalete doğrudan tıklayabilirsiniz de.",
+        "Elke staat in het spel. Je kunt ook kaartselectie aanzetten en een staat aanklikken.",
+    ),
+    "CCP_STATE_PICKER_TOOLTIP": _row(
+        "When map picking is on, left-clicking a state shows these actions on the state view.",
+        "Bei aktiver Kartenauswahl erscheinen diese Aktionen beim Anklicken eines Staates.",
+        "Avec la sélection carte activée, cliquer un État affiche ces actions sur sa vue.",
+        "При включённом выборе на карте клик по провинции показывает эти действия.",
+        "Harita seçimi açıkken bir eyalete tıklamak bu işlemleri eyalet görünümünde gösterir.",
+        "Met kaartselectie aan toont een klik op een staat deze acties in de staatweergave.",
+    ),
+    "CCP_STATE_PICKER_ON": _row(
+        "MAP PICKING: ON", "KARTENAUSWAHL: AN", "SÉLECTION CARTE : ON",
+        "ВЫБОР НА КАРТЕ: ВКЛ", "HARİTA SEÇİMİ: AÇIK", "KAARTSELECTIE: AAN",
+    ),
+    "CCP_STATE_PICKER_OFF": _row(
+        "MAP PICKING: OFF", "KARTENAUSWAHL: AUS", "SÉLECTION CARTE : OFF",
+        "ВЫБОР НА КАРТЕ: ВЫКЛ", "HARİTA SEÇİMİ: KAPALI", "KAARTSELECTIE: UIT",
+    ),
+    "CCP_STATE_PICKER_TITLE": _row(
+        "CHEAT CONTROL PANEL", "CHEAT-KONTROLLPANEL", "PANNEAU DE TRICHE",
+        "ПАНЕЛЬ ЧИТОВ", "HİLE KONTROL PANELİ", "CHEAT-PANEEL",
+    ),
+    "CCP_STATE_ENTRY_NAME": _row(
+        "[THIS.GetName]", "[THIS.GetName]", "[THIS.GetName]",
+        "[THIS.GetName]", "[THIS.GetName]", "[THIS.GetName]",
+    ),
+    "CCP_STATE_ENTRY_OWNER": _row(
+        "Owner [THIS.Owner.GetNameDefCap] · controller [THIS.Controller.GetNameDefCap]",
+        "Besitzer [THIS.Owner.GetNameDefCap] · Kontrolle [THIS.Controller.GetNameDefCap]",
+        "Propriétaire [THIS.Owner.GetNameDefCap] · contrôle [THIS.Controller.GetNameDefCap]",
+        "Владелец [THIS.Owner.GetNameDefCap] · контроль [THIS.Controller.GetNameDefCap]",
+        "Sahip [THIS.Owner.GetNameDefCap] · kontrol [THIS.Controller.GetNameDefCap]",
+        "Eigenaar [THIS.Owner.GetNameDefCap] · controle [THIS.Controller.GetNameDefCap]",
+    ),
+    "CCP_STATE_PAGE": _row(
+        "Page [?ccp_state_page|+0] of [?ccp_state_pages_last|+0] · [?ccp_state_count|0] states",
+        "Seite [?ccp_state_page|+0] von [?ccp_state_pages_last|+0] · [?ccp_state_count|0] Staaten",
+        "Page [?ccp_state_page|+0] sur [?ccp_state_pages_last|+0] · [?ccp_state_count|0] États",
+        "Страница [?ccp_state_page|+0] из [?ccp_state_pages_last|+0] · провинций: [?ccp_state_count|0]",
+        "Sayfa [?ccp_state_page|+0] / [?ccp_state_pages_last|+0] · [?ccp_state_count|0] eyalet",
+        "Pagina [?ccp_state_page|+0] van [?ccp_state_pages_last|+0] · [?ccp_state_count|0] staten",
+    ),
+    "CCP_STATE_TAKE": _row("TAKE", "NEHMEN", "PRENDRE", "ЗАБРАТЬ", "AL", "NEEM"),
+    "CCP_STATE_TAKE_TOOLTIP": _row(
+        "Become owner and controller of this state.",
+        "Macht Sie zum Besitzer und Kontrolleur dieses Staates.",
+        "Vous devenez propriétaire et contrôleur de cet État.",
+        "Вы становитесь владельцем и контролёром провинции.",
+        "Bu eyaletin sahibi ve kontrolörü olursunuz.",
+        "Je wordt eigenaar en controleur van deze staat.",
+    ),
+    "CCP_STATE_CORE": _row("CORE", "KERN", "CŒUR", "ЯДРО", "CORE", "KERN"),
+    "CCP_STATE_CORE_TOOLTIP": _row(
+        "Add your core to this state.",
+        "Fügt Ihr Kerngebiet zu diesem Staat hinzu.",
+        "Ajoute votre territoire national sur cet État.",
+        "Добавляет вашу коренную территорию.",
+        "Bu eyalete core ekler.",
+        "Voegt jouw kerngebied toe aan deze staat.",
+    ),
+    "CCP_STATE_UNCORE": _row("UNCORE", "KERN WEG", "RETIRER", "СНЯТЬ", "CORE SİL", "KERN WEG"),
+    "CCP_STATE_UNCORE_TOOLTIP": _row(
+        "Remove your core from this state. There is no undo.",
+        "Entfernt Ihr Kerngebiet. Es gibt kein Rückgängig.",
+        "Retire votre territoire national. Aucune annulation.",
+        "Снимает вашу коренную территорию. Отменить нельзя.",
+        "Core kaydınızı kaldırır. Geri alınamaz.",
+        "Verwijdert jouw kerngebied. Er is geen ongedaan maken.",
+    ),
+    "CCP_STATE_CLAIM": _row("CLAIM", "ANSPRUCH", "REVENDIQ", "ПРИТЯЗ", "HAK TALEBİ", "CLAIM"),
+    "CCP_STATE_CLAIM_TOOLTIP": _row(
+        "Add your claim to this state.",
+        "Erhebt Anspruch auf diesen Staat.",
+        "Revendique cet État.",
+        "Выдвигает притязание на провинцию.",
+        "Bu eyalet üzerinde hak talebi oluşturur.",
+        "Legt een claim op deze staat.",
+    ),
+    "CCP_STATUS_STATE": _row(
+        "State updated.",
+        "Staat aktualisiert.",
+        "État mis à jour.",
+        "Провинция обновлена.",
+        "Eyalet güncellendi.",
+        "Staat bijgewerkt.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",
@@ -609,6 +701,9 @@ SECTION_NAMES: dict[str, Row] = {
     "country": _row(
         "Countries", "Länder", "Pays", "Страны", "Ülkeler", "Landen"
     ),
+    "states": _row(
+        "States", "Staaten", "États", "Провинции", "Eyaletler", "Staten"
+    ),
     "settings": _row(
         "Settings", "Einstellungen", "Paramètres", "Настройки", "Ayarlar", "Instellingen"
     ),
@@ -654,6 +749,14 @@ SECTION_TOOLTIPS: dict[str, Row] = {
         "Аннексировать, сделать марионеткой, объявить войну или переключиться на любую страну.",
         "Herhangi bir ülkeyi ilhak edin, kukla yapın, savaş ilan edin veya o ülkeye geçin.",
         "Annexeer, maak vazal, verklaar de oorlog of speel verder als een ander land.",
+    ),
+    "states": _row(
+        "Take states, add or remove cores, and add claims.",
+        "Staaten übernehmen, Kerngebiete setzen oder entfernen und Ansprüche erheben.",
+        "Prendre des États, ajouter ou retirer des territoires nationaux, revendiquer.",
+        "Забирать провинции, добавлять и снимать коренные территории, выдвигать притязания.",
+        "Eyalet alın, core ekleyip kaldırın ve hak talebi oluşturun.",
+        "Neem staten over, voeg kerngebied toe of verwijder het, en claim.",
     ),
     "settings": _row(
         "Change the hotkey and the confirmation behaviour.",

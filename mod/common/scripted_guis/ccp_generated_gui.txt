@@ -76,6 +76,30 @@ scripted_gui = {
 		}
 	}
 
+	ccp_state_picker = {
+		context_type = selected_state_context
+		window_name = "ccp_state_picker_window"
+
+		visible = {
+			ROOT = { check_variable = { ccp_state_picker_on = 1 } }
+		}
+
+		effects = {
+			ccp_picker_take_click = {
+				CCP_state_take = yes
+			}
+			ccp_picker_core_click = {
+				CCP_state_core = yes
+			}
+			ccp_picker_uncore_click = {
+				CCP_state_uncore = yes
+			}
+			ccp_picker_claim_click = {
+				CCP_state_claim = yes
+			}
+		}
+	}
+
 	ccp_modal = {
 		context_type = player_context
 		window_name = "ccp_modal_window"
@@ -126,6 +150,9 @@ scripted_gui = {
 				CCP_show_country = yes
 			}
 			ccp_nav_6_click = {
+				CCP_show_states = yes
+			}
+			ccp_nav_7_click = {
 				CCP_show_settings = yes
 			}
 			ccp_hotkey_choice_1_click = {
@@ -421,6 +448,36 @@ scripted_gui = {
 			}
 			ccp_country_entry_playas_click = {
 				CCP_country_request_playas = yes
+			}
+			ccp_state_picker_toggle_click = {
+				if = {
+					limit = {
+						check_variable = { ccp_state_picker_on = 1 }
+					}
+					set_variable = { ccp_state_picker_on = 0 }
+				}
+				else = {
+					set_variable = { ccp_state_picker_on = 1 }
+				}
+				CCP_mark_dirty = yes
+			}
+			ccp_state_prev_click = {
+				CCP_state_prev_page = yes
+			}
+			ccp_state_next_click = {
+				CCP_state_next_page = yes
+			}
+			ccp_state_entry_take_click = {
+				CCP_state_take = yes
+			}
+			ccp_state_entry_core_click = {
+				CCP_state_core = yes
+			}
+			ccp_state_entry_uncore_click = {
+				CCP_state_uncore = yes
+			}
+			ccp_state_entry_claim_click = {
+				CCP_state_claim = yes
 			}
 		}
 
@@ -809,44 +866,62 @@ scripted_gui = {
 			ccp_country_next_visible = {
 				check_variable = { ccp_section = 5 }
 			}
-			ccp_settings_hotkey_label_visible = {
+			ccp_state_help_visible = {
 				check_variable = { ccp_section = 6 }
+			}
+			ccp_state_picker_toggle_visible = {
+				check_variable = { ccp_section = 6 }
+			}
+			ccp_state_list_visible = {
+				check_variable = { ccp_section = 6 }
+			}
+			ccp_state_prev_visible = {
+				check_variable = { ccp_section = 6 }
+			}
+			ccp_state_page_label_visible = {
+				check_variable = { ccp_section = 6 }
+			}
+			ccp_state_next_visible = {
+				check_variable = { ccp_section = 6 }
+			}
+			ccp_settings_hotkey_label_visible = {
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_settings_hotkey_help_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_hotkey_choice_1_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_hotkey_choice_2_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_hotkey_choice_3_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_hotkey_choice_4_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_hotkey_choice_5_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_settings_hotkey_current_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_settings_confirm_label_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_settings_confirm_help_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_confirm_toggle_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_settings_language_label_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_settings_language_help_visible = {
-				check_variable = { ccp_section = 6 }
+				check_variable = { ccp_section = 7 }
 			}
 			ccp_hotkey_choice_1_click_enabled = {
 				NOT = { check_variable = { ccp_hotkey_id = 1 } }
@@ -977,6 +1052,12 @@ scripted_gui = {
 			ccp_country_next_click_enabled = {
 				check_variable = { ccp_country_page < ccp_country_pages_last }
 			}
+			ccp_state_prev_click_enabled = {
+				check_variable = { ccp_state_page > 0 }
+			}
+			ccp_state_next_click_enabled = {
+				check_variable = { ccp_state_page < ccp_state_pages_last }
+			}
 		}
 
 		properties = {
@@ -997,6 +1078,13 @@ scripted_gui = {
 				value = ccp_research_entry
 				index = ccp_research_entry_index
 				entry_container = "ccp_research_entry"
+			}
+			ccp_state_list = {
+				array = ccp_state_page_items
+				value = ccp_state_entry_value
+				index = ccp_state_entry_index
+				change_scope = yes
+				entry_container = "ccp_state_entry"
 			}
 			ccp_country_list = {
 				array = ccp_country_page_items
