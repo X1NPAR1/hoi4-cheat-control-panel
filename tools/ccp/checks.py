@@ -113,8 +113,8 @@ def check_generated_banners(mod_dir: Path, report: Report) -> None:
     for path in sorted(mod_dir.rglob("*generated*")):
         if not path.is_file():
             continue
-        head = path.read_text(encoding="utf-8-sig", errors="replace")[: len(GENERATED_BANNER) + 8]
-        if GENERATED_BANNER not in head:
+        head = path.read_text(encoding="utf-8-sig", errors="replace").splitlines()[:3]
+        if not any(GENERATED_BANNER in line for line in head):
             report.error(f"{path}: generated file is missing its DO-NOT-EDIT banner")
 
 

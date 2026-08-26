@@ -1,0 +1,129 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ccp_main_window"
+		orientation = center
+		origo = center
+		position = { x = 0 y = 0 }
+		size = { width = 1280 height = 780 }
+		moveable = no
+
+		iconType = {
+			name = "ccp_body_plate"
+			spriteType = "GFX_ccp_panel_body"
+			position = { x = 0 y = 56 }
+		}
+
+		iconType = {
+			name = "ccp_header_plate"
+			spriteType = "GFX_ccp_panel_header"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "ccp_header_logo"
+			spriteType = "GFX_ccp_logo"
+			position = { x = 12 y = 8 }
+		}
+
+		instantTextBoxType = {
+			name = "ccp_header_title"
+			position = { x = 64 y = 12 }
+			font = "hoi_20b"
+			text = "CCP_TITLE"
+			maxWidth = 480
+			maxHeight = 24
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ccp_header_subtitle"
+			position = { x = 64 y = 33 }
+			font = "hoi_16mbs"
+			text = "CCP_SUBTITLE"
+			maxWidth = 640
+			maxHeight = 18
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_close"
+			position = { x = -144 y = 13 }
+			orientation = upper_right
+			quadTextureSprite = "GFX_ccp_button"
+			buttonText = "CCP_BUTTON_CLOSE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_TOOLTIP_CLOSE"
+			clicksound = click_close
+		}
+
+		iconType = {
+			name = "ccp_sidebar_plate"
+			spriteType = "GFX_ccp_panel_sidebar"
+			position = { x = 0 y = 56 }
+		}
+
+		instantTextBoxType = {
+			name = "ccp_sidebar_heading"
+			position = { x = 16 y = 68 }
+			font = "hoi_16mbs"
+			text = "CCP_SIDEBAR_HEADING"
+			maxWidth = 208
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ccp_content_placeholder"
+			position = { x = 264 y = 76 }
+			font = "hoi_18mbs"
+			text = "CCP_DASHBOARD_HEADING"
+			maxWidth = 992
+			maxHeight = 24
+			format = left
+		}
+
+		iconType = {
+			name = "ccp_content_divider"
+			spriteType = "GFX_ccp_divider"
+			position = { x = 264 y = 102 }
+		}
+
+		instantTextBoxType = {
+			name = "ccp_content_country"
+			position = { x = 264 y = 116 }
+			font = "hoi_16mbs"
+			text = "CCP_DASHBOARD_COUNTRY"
+			maxWidth = 992
+			maxHeight = 20
+			format = left
+		}
+
+		iconType = {
+			name = "ccp_footer_plate"
+			spriteType = "GFX_ccp_panel_footer"
+			position = { x = 0 y = 746 }
+		}
+
+		instantTextBoxType = {
+			name = "ccp_footer_version"
+			position = { x = 16 y = 754 }
+			font = "hoi_16mbs"
+			text = "CCP_FOOTER_VERSION"
+			maxWidth = 400
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ccp_footer_hint"
+			position = { x = -520 y = 754 }
+			orientation = upper_right
+			font = "hoi_16mbs"
+			text = "CCP_FOOTER_HINT"
+			maxWidth = 504
+			maxHeight = 18
+			format = right
+		}
+	}
+}

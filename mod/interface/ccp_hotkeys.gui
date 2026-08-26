@@ -1,0 +1,37 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ccp_hotkey_listener_window"
+		position = { x = 0 y = 0 }
+		size = { width = 0 height = 0 }
+		clipping = no
+
+		buttonType = {
+			name = "ccp_hotkey_1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_ccp_blank"
+			shortcut = "ctrl+F8"
+		}
+
+		buttonType = {
+			name = "ccp_hotkey_2"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_ccp_blank"
+			shortcut = "F8"
+		}
+
+		buttonType = {
+			name = "ccp_hotkey_3"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_ccp_blank"
+			shortcut = "F11"
+		}
+
+		buttonType = {
+			name = "ccp_hotkey_4"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_ccp_blank"
+			shortcut = "F12"
+		}
+	}
+}

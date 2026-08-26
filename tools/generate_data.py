@@ -16,6 +16,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccp.emit import (
+    LANGUAGE_INDEX,
+    emit_category_localisation,
     emit_equipment_categories_localisation,
     emit_equipment_effects,
     emit_equipment_localisation,
@@ -49,7 +51,8 @@ def game_version(game_dir: Path) -> str:
 
 def write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8", newline="\n")
+    encoding = "utf-8-sig" if path.suffix == ".yml" else "utf-8"
+    path.write_text(content, encoding=encoding, newline="\n")
     print(f"  {path.relative_to(REPO_ROOT).as_posix():<70} {len(content.splitlines()):>6} lines")
 
 
@@ -86,6 +89,15 @@ def main() -> int:
         scripted_loc / "ccp_generated_equipment_categories_loc.txt",
         emit_equipment_categories_localisation(catalogue, version),
     )
+    for language in LANGUAGE_INDEX:
+        write(
+            REPO_ROOT
+            / "mod"
+            / "localisation"
+            / language
+            / f"ccp_generated_equipment_l_{language}.yml",
+            emit_category_localisation(catalogue, language, version),
+        )
     return 0
 
 

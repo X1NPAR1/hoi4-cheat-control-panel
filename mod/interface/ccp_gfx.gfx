@@ -1,0 +1,85 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/build_assets.py alongside the textures it references.
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ccp_logo"
+		texturefile = "gfx/interface/ccp/ccp_logo.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_panel_body"
+		texturefile = "gfx/interface/ccp/ccp_panel_body.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_panel_header"
+		texturefile = "gfx/interface/ccp/ccp_panel_header.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_panel_sidebar"
+		texturefile = "gfx/interface/ccp/ccp_panel_sidebar.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_panel_footer"
+		texturefile = "gfx/interface/ccp/ccp_panel_footer.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_sidebar_item"
+		texturefile = "gfx/interface/ccp/ccp_sidebar_item.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ccp_button"
+		texturefile = "gfx/interface/ccp/ccp_button.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ccp_button_danger"
+		texturefile = "gfx/interface/ccp/ccp_button_danger.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ccp_button_confirm"
+		texturefile = "gfx/interface/ccp/ccp_button_confirm.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ccp_chip"
+		texturefile = "gfx/interface/ccp/ccp_chip.png"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_ccp_list_row"
+		texturefile = "gfx/interface/ccp/ccp_list_row.png"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_ccp_modal_scrim"
+		texturefile = "gfx/interface/ccp/ccp_modal_scrim.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_modal"
+		texturefile = "gfx/interface/ccp/ccp_modal.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_divider"
+		texturefile = "gfx/interface/ccp/ccp_divider.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_blank"
+		texturefile = "gfx/interface/ccp/ccp_blank.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_card"
+		texturefile = "gfx/interface/ccp/ccp_card.png"
+		noOfFrames = 1
+	}
+}

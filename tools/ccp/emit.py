@@ -184,37 +184,49 @@ def emit_equipment_categories_localisation(
     return writer.text()
 
 
-def category_localisation_keys(catalogue: list[Equipment]) -> list[tuple[str, str]]:
-    """`(key, english default)` pairs for every equipment category in the catalogue."""
-    labels = {
-        "infantry": "Infantry Equipment",
-        "support": "Support Equipment",
-        "artillery": "Artillery",
-        "anti_tank": "Anti-Tank",
-        "anti_air": "Anti-Air",
-        "motorized": "Motorized & Armored Cars",
-        "mechanized": "Mechanized",
-        "armored_car": "Armored Cars",
-        "armor": "Tanks",
-        "railway_gun": "Railway Guns",
-        "fighter": "Fighters",
-        "cas": "Close Air Support",
-        "naval_bomber": "Naval Bombers",
-        "tactical_bomber": "Tactical Bombers",
-        "strategic_bomber": "Strategic Bombers",
-        "transport_plane": "Transport Planes",
-        "helicopter": "Helicopters",
-        "capital_ship": "Capital Ships",
-        "carrier": "Carriers",
-        "screen_ship": "Screen Ships",
-        "submarine": "Submarines",
-        "convoy": "Convoys & Support Ships",
-        "train": "Trains",
-        "missile": "Missiles",
-        "special": "Special Equipment",
-        "other": "Other",
-    }
-    return [
-        (f"CCP_EQCAT_{name.upper()}", labels.get(name, name.replace("_", " ").title()))
-        for name in group_by_category(catalogue)
+CATEGORY_LABELS = {
+    "infantry": ("Infantry Equipment", "Piyade Teçhizatı"),
+    "support": ("Support Equipment", "Destek Teçhizatı"),
+    "artillery": ("Artillery", "Topçu"),
+    "anti_tank": ("Anti-Tank", "Tanksavar"),
+    "anti_air": ("Anti-Air", "Uçaksavar"),
+    "motorized": ("Motorized & Armored Cars", "Motorize ve Zırhlı Araçlar"),
+    "mechanized": ("Mechanized", "Mekanize"),
+    "armored_car": ("Armored Cars", "Zırhlı Araçlar"),
+    "armor": ("Tanks", "Tanklar"),
+    "railway_gun": ("Railway Guns", "Demiryolu Topları"),
+    "fighter": ("Fighters", "Avcı Uçakları"),
+    "cas": ("Close Air Support", "Yakın Hava Desteği"),
+    "naval_bomber": ("Naval Bombers", "Deniz Bombardıman Uçakları"),
+    "tactical_bomber": ("Tactical Bombers", "Taktik Bombardıman Uçakları"),
+    "strategic_bomber": ("Strategic Bombers", "Stratejik Bombardıman Uçakları"),
+    "transport_plane": ("Transport Planes", "Nakliye Uçakları"),
+    "helicopter": ("Helicopters", "Helikopterler"),
+    "capital_ship": ("Capital Ships", "Ana Muharebe Gemileri"),
+    "carrier": ("Carriers", "Uçak Gemileri"),
+    "screen_ship": ("Screen Ships", "Refakat Gemileri"),
+    "submarine": ("Submarines", "Denizaltılar"),
+    "convoy": ("Convoys & Support Ships", "Konvoylar ve Destek Gemileri"),
+    "train": ("Trains", "Trenler"),
+    "missile": ("Missiles", "Füzeler"),
+    "special": ("Special Equipment", "Özel Teçhizat"),
+    "other": ("Other", "Diğer"),
+}
+
+LANGUAGE_INDEX = {"english": 0, "turkish": 1}
+
+
+def emit_category_localisation(
+    catalogue: list[Equipment], language: str, version: str
+) -> str:
+    """A localisation file naming every equipment category present in this install."""
+    index = LANGUAGE_INDEX[language]
+    lines = [
+        f"l_{language}:",
+        f"# GENERATED FILE - DO NOT EDIT (tools/generate_data.py, game {version})",
     ]
+    for name in group_by_category(catalogue):
+        fallback = (name.replace("_", " ").title(),) * 2
+        label = CATEGORY_LABELS.get(name, fallback)[index]
+        lines.append(f' CCP_EQCAT_{name.upper()}:0 "{label}"')
+    return "\n".join(lines) + "\n"
