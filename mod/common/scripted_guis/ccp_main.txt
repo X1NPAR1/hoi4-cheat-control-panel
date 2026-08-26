@@ -11,20 +11,40 @@ scripted_gui = {
 
 		effects = {
 			ccp_hotkey_1_click = {
-				set_temp_variable = { ccp_hotkey_pressed = 1 }
-				CCP_handle_hotkey = yes
+				CCP_ensure_settings = yes
+				if = {
+					limit = {
+						check_variable = { ccp_hotkey_id = 1 }
+					}
+					CCP_toggle_panel = yes
+				}
 			}
 			ccp_hotkey_2_click = {
-				set_temp_variable = { ccp_hotkey_pressed = 2 }
-				CCP_handle_hotkey = yes
+				CCP_ensure_settings = yes
+				if = {
+					limit = {
+						check_variable = { ccp_hotkey_id = 2 }
+					}
+					CCP_toggle_panel = yes
+				}
 			}
 			ccp_hotkey_3_click = {
-				set_temp_variable = { ccp_hotkey_pressed = 3 }
-				CCP_handle_hotkey = yes
+				CCP_ensure_settings = yes
+				if = {
+					limit = {
+						check_variable = { ccp_hotkey_id = 3 }
+					}
+					CCP_toggle_panel = yes
+				}
 			}
 			ccp_hotkey_4_click = {
-				set_temp_variable = { ccp_hotkey_pressed = 4 }
-				CCP_handle_hotkey = yes
+				CCP_ensure_settings = yes
+				if = {
+					limit = {
+						check_variable = { ccp_hotkey_id = 4 }
+					}
+					CCP_toggle_panel = yes
+				}
 			}
 		}
 	}

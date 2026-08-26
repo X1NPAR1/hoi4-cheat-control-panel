@@ -40,18 +40,3 @@ CCP_toggle_panel = {
 		CCP_open_panel = yes
 	}
 }
-
-CCP_handle_hotkey = {
-	CCP_ensure_settings = yes
-	if = {
-		limit = {
-			check_variable = { ccp_hotkey_id = var:ccp_hotkey_pressed }
-		}
-		CCP_toggle_panel = yes
-	}
-}
-
-CCP_select_section = {
-	set_variable = { ccp_section = var:ccp_section_requested }
-	CCP_mark_dirty = yes
-}
