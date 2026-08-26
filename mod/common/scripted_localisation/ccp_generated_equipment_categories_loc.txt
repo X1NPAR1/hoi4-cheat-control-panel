@@ -1,0 +1,142 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/generate_data.py from the installed game files.
+# Source game version: 1.19.2.0
+
+defined_text = {
+	name = CCP_GetEquipmentCategoryName
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 1 }
+		}
+		localization_key = CCP_EQCAT_INFANTRY
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 2 }
+		}
+		localization_key = CCP_EQCAT_SUPPORT
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 3 }
+		}
+		localization_key = CCP_EQCAT_ARTILLERY
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 4 }
+		}
+		localization_key = CCP_EQCAT_ANTI_TANK
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 5 }
+		}
+		localization_key = CCP_EQCAT_ANTI_AIR
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 6 }
+		}
+		localization_key = CCP_EQCAT_MOTORIZED
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 7 }
+		}
+		localization_key = CCP_EQCAT_MECHANIZED
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 8 }
+		}
+		localization_key = CCP_EQCAT_ARMOR
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 9 }
+		}
+		localization_key = CCP_EQCAT_RAILWAY_GUN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 10 }
+		}
+		localization_key = CCP_EQCAT_FIGHTER
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 11 }
+		}
+		localization_key = CCP_EQCAT_CAS
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 12 }
+		}
+		localization_key = CCP_EQCAT_NAVAL_BOMBER
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 13 }
+		}
+		localization_key = CCP_EQCAT_TACTICAL_BOMBER
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 14 }
+		}
+		localization_key = CCP_EQCAT_STRATEGIC_BOMBER
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 15 }
+		}
+		localization_key = CCP_EQCAT_CAPITAL_SHIP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 16 }
+		}
+		localization_key = CCP_EQCAT_CARRIER
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 17 }
+		}
+		localization_key = CCP_EQCAT_SCREEN_SHIP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 18 }
+		}
+		localization_key = CCP_EQCAT_SUBMARINE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 19 }
+		}
+		localization_key = CCP_EQCAT_CONVOY
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 20 }
+		}
+		localization_key = CCP_EQCAT_TRAIN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 21 }
+		}
+		localization_key = CCP_EQCAT_MISSILE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_equipment_category = 22 }
+		}
+		localization_key = CCP_EQCAT_SPECIAL
+	}
+	text = {
+		localization_key = CCP_EQUIPMENT_UNKNOWN
+	}
+}

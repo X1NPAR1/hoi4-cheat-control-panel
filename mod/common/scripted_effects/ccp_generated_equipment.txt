@@ -1,0 +1,4104 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/generate_data.py from the installed game files.
+# Source game version: 1.19.2.0
+
+CCP_equipment_load_list = {
+	clear_array = ccp_equipment_list
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 1 }
+		}
+		CCP_equipment_load_infantry = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 2 }
+		}
+		CCP_equipment_load_support = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 3 }
+		}
+		CCP_equipment_load_artillery = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 4 }
+		}
+		CCP_equipment_load_anti_tank = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 5 }
+		}
+		CCP_equipment_load_anti_air = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 6 }
+		}
+		CCP_equipment_load_motorized = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 7 }
+		}
+		CCP_equipment_load_mechanized = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 8 }
+		}
+		CCP_equipment_load_armor = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 9 }
+		}
+		CCP_equipment_load_railway_gun = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 10 }
+		}
+		CCP_equipment_load_fighter = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 11 }
+		}
+		CCP_equipment_load_cas = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 12 }
+		}
+		CCP_equipment_load_naval_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 13 }
+		}
+		CCP_equipment_load_tactical_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 14 }
+		}
+		CCP_equipment_load_strategic_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 15 }
+		}
+		CCP_equipment_load_capital_ship = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 16 }
+		}
+		CCP_equipment_load_carrier = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 17 }
+		}
+		CCP_equipment_load_screen_ship = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 18 }
+		}
+		CCP_equipment_load_submarine = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 19 }
+		}
+		CCP_equipment_load_convoy = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 20 }
+		}
+		CCP_equipment_load_train = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 21 }
+		}
+		CCP_equipment_load_missile = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 22 }
+		}
+		CCP_equipment_load_special = yes
+	}
+}
+
+CCP_equipment_load_infantry = {
+	add_to_array = { array = ccp_equipment_list value = 0 }
+	add_to_array = { array = ccp_equipment_list value = 1 }
+	add_to_array = { array = ccp_equipment_list value = 2 }
+	add_to_array = { array = ccp_equipment_list value = 3 }
+}
+
+CCP_equipment_load_support = {
+	add_to_array = { array = ccp_equipment_list value = 4 }
+	add_to_array = { array = ccp_equipment_list value = 5 }
+	add_to_array = { array = ccp_equipment_list value = 6 }
+}
+
+CCP_equipment_load_artillery = {
+	add_to_array = { array = ccp_equipment_list value = 7 }
+	add_to_array = { array = ccp_equipment_list value = 8 }
+	add_to_array = { array = ccp_equipment_list value = 9 }
+	add_to_array = { array = ccp_equipment_list value = 10 }
+	add_to_array = { array = ccp_equipment_list value = 11 }
+	add_to_array = { array = ccp_equipment_list value = 12 }
+	add_to_array = { array = ccp_equipment_list value = 13 }
+	add_to_array = { array = ccp_equipment_list value = 14 }
+}
+
+CCP_equipment_load_anti_tank = {
+	add_to_array = { array = ccp_equipment_list value = 15 }
+	add_to_array = { array = ccp_equipment_list value = 16 }
+	add_to_array = { array = ccp_equipment_list value = 17 }
+}
+
+CCP_equipment_load_anti_air = {
+	add_to_array = { array = ccp_equipment_list value = 18 }
+	add_to_array = { array = ccp_equipment_list value = 19 }
+	add_to_array = { array = ccp_equipment_list value = 20 }
+}
+
+CCP_equipment_load_motorized = {
+	add_to_array = { array = ccp_equipment_list value = 21 }
+	add_to_array = { array = ccp_equipment_list value = 22 }
+	add_to_array = { array = ccp_equipment_list value = 23 }
+	add_to_array = { array = ccp_equipment_list value = 24 }
+	add_to_array = { array = ccp_equipment_list value = 25 }
+	add_to_array = { array = ccp_equipment_list value = 26 }
+}
+
+CCP_equipment_load_mechanized = {
+	add_to_array = { array = ccp_equipment_list value = 27 }
+	add_to_array = { array = ccp_equipment_list value = 28 }
+	add_to_array = { array = ccp_equipment_list value = 29 }
+	add_to_array = { array = ccp_equipment_list value = 30 }
+	add_to_array = { array = ccp_equipment_list value = 31 }
+}
+
+CCP_equipment_load_armor = {
+	add_to_array = { array = ccp_equipment_list value = 32 }
+	add_to_array = { array = ccp_equipment_list value = 33 }
+	add_to_array = { array = ccp_equipment_list value = 34 }
+	add_to_array = { array = ccp_equipment_list value = 35 }
+	add_to_array = { array = ccp_equipment_list value = 36 }
+	add_to_array = { array = ccp_equipment_list value = 37 }
+	add_to_array = { array = ccp_equipment_list value = 38 }
+	add_to_array = { array = ccp_equipment_list value = 39 }
+	add_to_array = { array = ccp_equipment_list value = 40 }
+	add_to_array = { array = ccp_equipment_list value = 41 }
+	add_to_array = { array = ccp_equipment_list value = 42 }
+	add_to_array = { array = ccp_equipment_list value = 43 }
+	add_to_array = { array = ccp_equipment_list value = 44 }
+	add_to_array = { array = ccp_equipment_list value = 45 }
+	add_to_array = { array = ccp_equipment_list value = 46 }
+	add_to_array = { array = ccp_equipment_list value = 47 }
+	add_to_array = { array = ccp_equipment_list value = 48 }
+	add_to_array = { array = ccp_equipment_list value = 49 }
+	add_to_array = { array = ccp_equipment_list value = 50 }
+	add_to_array = { array = ccp_equipment_list value = 51 }
+	add_to_array = { array = ccp_equipment_list value = 52 }
+	add_to_array = { array = ccp_equipment_list value = 53 }
+	add_to_array = { array = ccp_equipment_list value = 54 }
+	add_to_array = { array = ccp_equipment_list value = 55 }
+	add_to_array = { array = ccp_equipment_list value = 56 }
+	add_to_array = { array = ccp_equipment_list value = 57 }
+	add_to_array = { array = ccp_equipment_list value = 58 }
+	add_to_array = { array = ccp_equipment_list value = 59 }
+	add_to_array = { array = ccp_equipment_list value = 60 }
+	add_to_array = { array = ccp_equipment_list value = 61 }
+	add_to_array = { array = ccp_equipment_list value = 62 }
+	add_to_array = { array = ccp_equipment_list value = 63 }
+	add_to_array = { array = ccp_equipment_list value = 64 }
+	add_to_array = { array = ccp_equipment_list value = 65 }
+	add_to_array = { array = ccp_equipment_list value = 66 }
+	add_to_array = { array = ccp_equipment_list value = 67 }
+	add_to_array = { array = ccp_equipment_list value = 68 }
+	add_to_array = { array = ccp_equipment_list value = 69 }
+	add_to_array = { array = ccp_equipment_list value = 70 }
+	add_to_array = { array = ccp_equipment_list value = 71 }
+	add_to_array = { array = ccp_equipment_list value = 72 }
+	add_to_array = { array = ccp_equipment_list value = 73 }
+	add_to_array = { array = ccp_equipment_list value = 74 }
+	add_to_array = { array = ccp_equipment_list value = 75 }
+	add_to_array = { array = ccp_equipment_list value = 76 }
+	add_to_array = { array = ccp_equipment_list value = 77 }
+	add_to_array = { array = ccp_equipment_list value = 78 }
+	add_to_array = { array = ccp_equipment_list value = 79 }
+	add_to_array = { array = ccp_equipment_list value = 80 }
+	add_to_array = { array = ccp_equipment_list value = 81 }
+	add_to_array = { array = ccp_equipment_list value = 82 }
+	add_to_array = { array = ccp_equipment_list value = 83 }
+	add_to_array = { array = ccp_equipment_list value = 84 }
+	add_to_array = { array = ccp_equipment_list value = 85 }
+	add_to_array = { array = ccp_equipment_list value = 86 }
+	add_to_array = { array = ccp_equipment_list value = 87 }
+	add_to_array = { array = ccp_equipment_list value = 88 }
+	add_to_array = { array = ccp_equipment_list value = 89 }
+	add_to_array = { array = ccp_equipment_list value = 90 }
+	add_to_array = { array = ccp_equipment_list value = 91 }
+	add_to_array = { array = ccp_equipment_list value = 92 }
+	add_to_array = { array = ccp_equipment_list value = 93 }
+	add_to_array = { array = ccp_equipment_list value = 94 }
+	add_to_array = { array = ccp_equipment_list value = 95 }
+	add_to_array = { array = ccp_equipment_list value = 96 }
+	add_to_array = { array = ccp_equipment_list value = 97 }
+	add_to_array = { array = ccp_equipment_list value = 98 }
+	add_to_array = { array = ccp_equipment_list value = 99 }
+	add_to_array = { array = ccp_equipment_list value = 100 }
+	add_to_array = { array = ccp_equipment_list value = 101 }
+	add_to_array = { array = ccp_equipment_list value = 102 }
+}
+
+CCP_equipment_load_railway_gun = {
+	add_to_array = { array = ccp_equipment_list value = 103 }
+	add_to_array = { array = ccp_equipment_list value = 104 }
+}
+
+CCP_equipment_load_fighter = {
+	add_to_array = { array = ccp_equipment_list value = 105 }
+	add_to_array = { array = ccp_equipment_list value = 106 }
+	add_to_array = { array = ccp_equipment_list value = 107 }
+	add_to_array = { array = ccp_equipment_list value = 108 }
+	add_to_array = { array = ccp_equipment_list value = 109 }
+	add_to_array = { array = ccp_equipment_list value = 110 }
+	add_to_array = { array = ccp_equipment_list value = 111 }
+	add_to_array = { array = ccp_equipment_list value = 112 }
+	add_to_array = { array = ccp_equipment_list value = 113 }
+	add_to_array = { array = ccp_equipment_list value = 114 }
+	add_to_array = { array = ccp_equipment_list value = 115 }
+	add_to_array = { array = ccp_equipment_list value = 116 }
+	add_to_array = { array = ccp_equipment_list value = 117 }
+	add_to_array = { array = ccp_equipment_list value = 118 }
+	add_to_array = { array = ccp_equipment_list value = 119 }
+	add_to_array = { array = ccp_equipment_list value = 120 }
+	add_to_array = { array = ccp_equipment_list value = 121 }
+	add_to_array = { array = ccp_equipment_list value = 122 }
+	add_to_array = { array = ccp_equipment_list value = 123 }
+	add_to_array = { array = ccp_equipment_list value = 124 }
+	add_to_array = { array = ccp_equipment_list value = 125 }
+	add_to_array = { array = ccp_equipment_list value = 126 }
+	add_to_array = { array = ccp_equipment_list value = 127 }
+	add_to_array = { array = ccp_equipment_list value = 128 }
+	add_to_array = { array = ccp_equipment_list value = 129 }
+	add_to_array = { array = ccp_equipment_list value = 130 }
+	add_to_array = { array = ccp_equipment_list value = 131 }
+	add_to_array = { array = ccp_equipment_list value = 132 }
+	add_to_array = { array = ccp_equipment_list value = 133 }
+	add_to_array = { array = ccp_equipment_list value = 134 }
+	add_to_array = { array = ccp_equipment_list value = 135 }
+	add_to_array = { array = ccp_equipment_list value = 136 }
+	add_to_array = { array = ccp_equipment_list value = 137 }
+	add_to_array = { array = ccp_equipment_list value = 138 }
+	add_to_array = { array = ccp_equipment_list value = 139 }
+	add_to_array = { array = ccp_equipment_list value = 140 }
+	add_to_array = { array = ccp_equipment_list value = 141 }
+	add_to_array = { array = ccp_equipment_list value = 142 }
+}
+
+CCP_equipment_load_cas = {
+	add_to_array = { array = ccp_equipment_list value = 143 }
+	add_to_array = { array = ccp_equipment_list value = 144 }
+	add_to_array = { array = ccp_equipment_list value = 145 }
+	add_to_array = { array = ccp_equipment_list value = 146 }
+	add_to_array = { array = ccp_equipment_list value = 147 }
+	add_to_array = { array = ccp_equipment_list value = 148 }
+}
+
+CCP_equipment_load_naval_bomber = {
+	add_to_array = { array = ccp_equipment_list value = 149 }
+	add_to_array = { array = ccp_equipment_list value = 150 }
+	add_to_array = { array = ccp_equipment_list value = 151 }
+	add_to_array = { array = ccp_equipment_list value = 152 }
+	add_to_array = { array = ccp_equipment_list value = 153 }
+	add_to_array = { array = ccp_equipment_list value = 154 }
+}
+
+CCP_equipment_load_tactical_bomber = {
+	add_to_array = { array = ccp_equipment_list value = 155 }
+	add_to_array = { array = ccp_equipment_list value = 156 }
+	add_to_array = { array = ccp_equipment_list value = 157 }
+	add_to_array = { array = ccp_equipment_list value = 158 }
+	add_to_array = { array = ccp_equipment_list value = 159 }
+	add_to_array = { array = ccp_equipment_list value = 160 }
+	add_to_array = { array = ccp_equipment_list value = 161 }
+	add_to_array = { array = ccp_equipment_list value = 162 }
+	add_to_array = { array = ccp_equipment_list value = 163 }
+	add_to_array = { array = ccp_equipment_list value = 164 }
+	add_to_array = { array = ccp_equipment_list value = 165 }
+}
+
+CCP_equipment_load_strategic_bomber = {
+	add_to_array = { array = ccp_equipment_list value = 166 }
+	add_to_array = { array = ccp_equipment_list value = 167 }
+	add_to_array = { array = ccp_equipment_list value = 168 }
+	add_to_array = { array = ccp_equipment_list value = 169 }
+	add_to_array = { array = ccp_equipment_list value = 170 }
+	add_to_array = { array = ccp_equipment_list value = 171 }
+	add_to_array = { array = ccp_equipment_list value = 172 }
+	add_to_array = { array = ccp_equipment_list value = 173 }
+	add_to_array = { array = ccp_equipment_list value = 174 }
+	add_to_array = { array = ccp_equipment_list value = 175 }
+}
+
+CCP_equipment_load_capital_ship = {
+	add_to_array = { array = ccp_equipment_list value = 176 }
+	add_to_array = { array = ccp_equipment_list value = 177 }
+	add_to_array = { array = ccp_equipment_list value = 178 }
+	add_to_array = { array = ccp_equipment_list value = 179 }
+	add_to_array = { array = ccp_equipment_list value = 180 }
+	add_to_array = { array = ccp_equipment_list value = 181 }
+	add_to_array = { array = ccp_equipment_list value = 182 }
+	add_to_array = { array = ccp_equipment_list value = 183 }
+	add_to_array = { array = ccp_equipment_list value = 184 }
+	add_to_array = { array = ccp_equipment_list value = 185 }
+	add_to_array = { array = ccp_equipment_list value = 186 }
+	add_to_array = { array = ccp_equipment_list value = 187 }
+	add_to_array = { array = ccp_equipment_list value = 188 }
+	add_to_array = { array = ccp_equipment_list value = 189 }
+	add_to_array = { array = ccp_equipment_list value = 190 }
+	add_to_array = { array = ccp_equipment_list value = 191 }
+	add_to_array = { array = ccp_equipment_list value = 192 }
+}
+
+CCP_equipment_load_carrier = {
+	add_to_array = { array = ccp_equipment_list value = 193 }
+	add_to_array = { array = ccp_equipment_list value = 194 }
+	add_to_array = { array = ccp_equipment_list value = 195 }
+	add_to_array = { array = ccp_equipment_list value = 196 }
+	add_to_array = { array = ccp_equipment_list value = 197 }
+	add_to_array = { array = ccp_equipment_list value = 198 }
+	add_to_array = { array = ccp_equipment_list value = 199 }
+	add_to_array = { array = ccp_equipment_list value = 200 }
+	add_to_array = { array = ccp_equipment_list value = 201 }
+	add_to_array = { array = ccp_equipment_list value = 202 }
+	add_to_array = { array = ccp_equipment_list value = 203 }
+	add_to_array = { array = ccp_equipment_list value = 204 }
+	add_to_array = { array = ccp_equipment_list value = 205 }
+	add_to_array = { array = ccp_equipment_list value = 206 }
+	add_to_array = { array = ccp_equipment_list value = 207 }
+	add_to_array = { array = ccp_equipment_list value = 208 }
+}
+
+CCP_equipment_load_screen_ship = {
+	add_to_array = { array = ccp_equipment_list value = 209 }
+	add_to_array = { array = ccp_equipment_list value = 210 }
+	add_to_array = { array = ccp_equipment_list value = 211 }
+	add_to_array = { array = ccp_equipment_list value = 212 }
+	add_to_array = { array = ccp_equipment_list value = 213 }
+	add_to_array = { array = ccp_equipment_list value = 214 }
+	add_to_array = { array = ccp_equipment_list value = 215 }
+	add_to_array = { array = ccp_equipment_list value = 216 }
+	add_to_array = { array = ccp_equipment_list value = 217 }
+	add_to_array = { array = ccp_equipment_list value = 218 }
+	add_to_array = { array = ccp_equipment_list value = 219 }
+	add_to_array = { array = ccp_equipment_list value = 220 }
+	add_to_array = { array = ccp_equipment_list value = 221 }
+	add_to_array = { array = ccp_equipment_list value = 222 }
+	add_to_array = { array = ccp_equipment_list value = 223 }
+	add_to_array = { array = ccp_equipment_list value = 224 }
+	add_to_array = { array = ccp_equipment_list value = 225 }
+	add_to_array = { array = ccp_equipment_list value = 226 }
+	add_to_array = { array = ccp_equipment_list value = 227 }
+	add_to_array = { array = ccp_equipment_list value = 228 }
+	add_to_array = { array = ccp_equipment_list value = 229 }
+	add_to_array = { array = ccp_equipment_list value = 230 }
+	add_to_array = { array = ccp_equipment_list value = 231 }
+	add_to_array = { array = ccp_equipment_list value = 232 }
+	add_to_array = { array = ccp_equipment_list value = 233 }
+	add_to_array = { array = ccp_equipment_list value = 234 }
+	add_to_array = { array = ccp_equipment_list value = 235 }
+	add_to_array = { array = ccp_equipment_list value = 236 }
+}
+
+CCP_equipment_load_submarine = {
+	add_to_array = { array = ccp_equipment_list value = 237 }
+	add_to_array = { array = ccp_equipment_list value = 238 }
+	add_to_array = { array = ccp_equipment_list value = 239 }
+	add_to_array = { array = ccp_equipment_list value = 240 }
+	add_to_array = { array = ccp_equipment_list value = 241 }
+	add_to_array = { array = ccp_equipment_list value = 242 }
+	add_to_array = { array = ccp_equipment_list value = 243 }
+	add_to_array = { array = ccp_equipment_list value = 244 }
+	add_to_array = { array = ccp_equipment_list value = 245 }
+	add_to_array = { array = ccp_equipment_list value = 246 }
+	add_to_array = { array = ccp_equipment_list value = 247 }
+	add_to_array = { array = ccp_equipment_list value = 248 }
+	add_to_array = { array = ccp_equipment_list value = 249 }
+	add_to_array = { array = ccp_equipment_list value = 250 }
+	add_to_array = { array = ccp_equipment_list value = 251 }
+	add_to_array = { array = ccp_equipment_list value = 252 }
+	add_to_array = { array = ccp_equipment_list value = 253 }
+	add_to_array = { array = ccp_equipment_list value = 254 }
+}
+
+CCP_equipment_load_convoy = {
+	add_to_array = { array = ccp_equipment_list value = 255 }
+	add_to_array = { array = ccp_equipment_list value = 256 }
+}
+
+CCP_equipment_load_train = {
+	add_to_array = { array = ccp_equipment_list value = 257 }
+	add_to_array = { array = ccp_equipment_list value = 258 }
+	add_to_array = { array = ccp_equipment_list value = 259 }
+}
+
+CCP_equipment_load_missile = {
+	add_to_array = { array = ccp_equipment_list value = 260 }
+	add_to_array = { array = ccp_equipment_list value = 261 }
+	add_to_array = { array = ccp_equipment_list value = 262 }
+	add_to_array = { array = ccp_equipment_list value = 263 }
+}
+
+CCP_equipment_load_special = {
+	add_to_array = { array = ccp_equipment_list value = 264 }
+	add_to_array = { array = ccp_equipment_list value = 265 }
+	add_to_array = { array = ccp_equipment_list value = 266 }
+	add_to_array = { array = ccp_equipment_list value = 267 }
+	add_to_array = { array = ccp_equipment_list value = 268 }
+}
+
+CCP_equipment_grant = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 1 }
+		}
+		CCP_equipment_grant_infantry = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 2 }
+		}
+		CCP_equipment_grant_support = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 3 }
+		}
+		CCP_equipment_grant_artillery = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 4 }
+		}
+		CCP_equipment_grant_anti_tank = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 5 }
+		}
+		CCP_equipment_grant_anti_air = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 6 }
+		}
+		CCP_equipment_grant_motorized = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 7 }
+		}
+		CCP_equipment_grant_mechanized = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 8 }
+		}
+		CCP_equipment_grant_armor = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 9 }
+		}
+		CCP_equipment_grant_railway_gun = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 10 }
+		}
+		CCP_equipment_grant_fighter = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 11 }
+		}
+		CCP_equipment_grant_cas = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 12 }
+		}
+		CCP_equipment_grant_naval_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 13 }
+		}
+		CCP_equipment_grant_tactical_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 14 }
+		}
+		CCP_equipment_grant_strategic_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 15 }
+		}
+		CCP_equipment_grant_capital_ship = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 16 }
+		}
+		CCP_equipment_grant_carrier = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 17 }
+		}
+		CCP_equipment_grant_screen_ship = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 18 }
+		}
+		CCP_equipment_grant_submarine = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 19 }
+		}
+		CCP_equipment_grant_convoy = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 20 }
+		}
+		CCP_equipment_grant_train = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 21 }
+		}
+		CCP_equipment_grant_missile = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 22 }
+		}
+		CCP_equipment_grant_special = yes
+	}
+}
+
+CCP_equipment_grant_infantry = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 0 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 1 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 2 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 3 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_support = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 4 }
+		}
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 5 }
+		}
+		add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 6 }
+		}
+		add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_artillery = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 7 }
+		}
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 8 }
+		}
+		add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 9 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 10 }
+		}
+		add_equipment_to_stockpile = { type = artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 11 }
+		}
+		add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 12 }
+		}
+		add_equipment_to_stockpile = { type = rocket_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 13 }
+		}
+		add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 14 }
+		}
+		add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_anti_tank = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 15 }
+		}
+		add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 16 }
+		}
+		add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 17 }
+		}
+		add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_anti_air = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 18 }
+		}
+		add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 19 }
+		}
+		add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 20 }
+		}
+		add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_motorized = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 21 }
+		}
+		add_equipment_to_stockpile = { type = gw_armored_car_equipment amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 22 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 23 }
+		}
+		add_equipment_to_stockpile = { type = motorized_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 24 }
+		}
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 25 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_at_equipment amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 26 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_mechanized = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 27 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 28 }
+		}
+		add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 29 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 30 }
+		}
+		add_equipment_to_stockpile = { type = mechanized_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 31 }
+		}
+		add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_armor = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 32 }
+		}
+		add_equipment_to_stockpile = { type = gw_tank_equipment amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 33 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_amphibious_chassis amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 34 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_chassis_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 35 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_flame_chassis amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 36 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_amphibious_chassis amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 37 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 38 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_flame_chassis amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 39 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_amphibious_chassis amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 40 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_chassis_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 41 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_flame_chassis amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 42 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 43 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 44 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 45 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 46 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 47 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 48 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 49 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 50 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 51 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 52 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 53 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_aa_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 54 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 55 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 56 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 57 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 58 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 59 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 60 }
+		}
+		add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 61 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 62 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 63 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 64 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 65 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 66 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_chassis_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 67 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 68 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 69 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 70 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 71 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 72 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 73 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 74 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 75 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 76 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_aa_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 77 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 78 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 79 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 80 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 81 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 82 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 83 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 84 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 85 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 86 }
+		}
+		add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 87 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 88 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 89 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 90 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 91 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 92 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 93 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 94 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 95 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 96 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 97 }
+		}
+		add_equipment_to_stockpile = { type = land_cruiser_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 98 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 99 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 100 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 101 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 102 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_railway_gun = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 103 }
+		}
+		add_equipment_to_stockpile = { type = railway_gun_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 104 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_railway_gun_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_fighter = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 105 }
+		}
+		add_equipment_to_stockpile = { type = cv_fighter_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 106 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 107 }
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 108 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 109 }
+		}
+		add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 110 }
+		}
+		add_equipment_to_stockpile = { type = cv_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 111 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 112 }
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 113 }
+		}
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 114 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 115 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 116 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 117 }
+		}
+		add_equipment_to_stockpile = { type = cv_fighter_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 118 }
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 119 }
+		}
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 120 }
+		}
+		add_equipment_to_stockpile = { type = transport_plane_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 121 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 122 }
+		}
+		add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 123 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 124 }
+		}
+		add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 125 }
+		}
+		add_equipment_to_stockpile = { type = ballistic_missile_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 126 }
+		}
+		add_equipment_to_stockpile = { type = cv_fighter_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 127 }
+		}
+		add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 128 }
+		}
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 129 }
+		}
+		add_equipment_to_stockpile = { type = rocket_interceptor_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 130 }
+		}
+		add_equipment_to_stockpile = { type = ballistic_missile_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 131 }
+		}
+		add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 132 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 133 }
+		}
+		add_equipment_to_stockpile = { type = jet_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 134 }
+		}
+		add_equipment_to_stockpile = { type = nuclear_missile_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 135 }
+		}
+		add_equipment_to_stockpile = { type = rocket_interceptor_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 136 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 137 }
+		}
+		add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 138 }
+		}
+		add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 139 }
+		}
+		add_equipment_to_stockpile = { type = jet_fighter_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 140 }
+		}
+		add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 141 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 142 }
+		}
+		add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_cas = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 143 }
+		}
+		add_equipment_to_stockpile = { type = CAS_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 144 }
+		}
+		add_equipment_to_stockpile = { type = cv_CAS_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 145 }
+		}
+		add_equipment_to_stockpile = { type = CAS_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 146 }
+		}
+		add_equipment_to_stockpile = { type = cv_CAS_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 147 }
+		}
+		add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 148 }
+		}
+		add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_naval_bomber = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 149 }
+		}
+		add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 150 }
+		}
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 151 }
+		}
+		add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 152 }
+		}
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 153 }
+		}
+		add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 154 }
+		}
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_tactical_bomber = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 155 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 156 }
+		}
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 157 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 158 }
+		}
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 159 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 160 }
+		}
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 161 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 162 }
+		}
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 163 }
+		}
+		add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 164 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 165 }
+		}
+		add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_strategic_bomber = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 166 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 167 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 168 }
+		}
+		add_equipment_to_stockpile = { type = strat_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 169 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 170 }
+		}
+		add_equipment_to_stockpile = { type = strat_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 171 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 172 }
+		}
+		add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 173 }
+		}
+		add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 174 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 175 }
+		}
+		add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_capital_ship = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 176 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_pre_dreadnought amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 177 }
+		}
+		add_equipment_to_stockpile = { type = battle_cruiser_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 178 }
+		}
+		add_equipment_to_stockpile = { type = battleship_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 179 }
+		}
+		add_equipment_to_stockpile = { type = heavy_cruiser_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 180 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 181 }
+		}
+		add_equipment_to_stockpile = { type = SH_battleship_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 182 }
+		}
+		add_equipment_to_stockpile = { type = battleship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 183 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 184 }
+		}
+		add_equipment_to_stockpile = { type = battle_cruiser_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 185 }
+		}
+		add_equipment_to_stockpile = { type = battleship_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 186 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 187 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_super_heavy_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 188 }
+		}
+		add_equipment_to_stockpile = { type = SH_battleship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 189 }
+		}
+		add_equipment_to_stockpile = { type = battleship_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 190 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 191 }
+		}
+		add_equipment_to_stockpile = { type = modern_battleship amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 192 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_carrier = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 193 }
+		}
+		add_equipment_to_stockpile = { type = carrier_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 194 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_conversion_bb amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 195 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_conversion_ca amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 196 }
+		}
+		add_equipment_to_stockpile = { type = carrier_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 197 }
+		}
+		add_equipment_to_stockpile = { type = escort_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 198 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 199 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_escort_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 200 }
+		}
+		add_equipment_to_stockpile = { type = carrier_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 201 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 202 }
+		}
+		add_equipment_to_stockpile = { type = carrier_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 203 }
+		}
+		add_equipment_to_stockpile = { type = mega_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 204 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 205 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 206 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_mega_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 207 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_carrier_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 208 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_screen_ship = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 209 }
+		}
+		add_equipment_to_stockpile = { type = destroyer_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 210 }
+		}
+		add_equipment_to_stockpile = { type = light_cruiser_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 211 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 212 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 213 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_coastal_defense_ship amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 214 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_panzerschiff amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 215 }
+		}
+		add_equipment_to_stockpile = { type = destroyer_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 216 }
+		}
+		add_equipment_to_stockpile = { type = heavy_cruiser_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 217 }
+		}
+		add_equipment_to_stockpile = { type = light_cruiser_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 218 }
+		}
+		add_equipment_to_stockpile = { type = repair_ship_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 219 }
+		}
+		add_equipment_to_stockpile = { type = repair_ship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 220 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 221 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 222 }
+		}
+		add_equipment_to_stockpile = { type = support_ship_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 223 }
+		}
+		add_equipment_to_stockpile = { type = support_ship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 224 }
+		}
+		add_equipment_to_stockpile = { type = destroyer_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 225 }
+		}
+		add_equipment_to_stockpile = { type = heavy_cruiser_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 226 }
+		}
+		add_equipment_to_stockpile = { type = light_cruiser_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 227 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 228 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 229 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_torpedo_cruiser amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 230 }
+		}
+		add_equipment_to_stockpile = { type = torpedo_cruiser amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 231 }
+		}
+		add_equipment_to_stockpile = { type = destroyer_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 232 }
+		}
+		add_equipment_to_stockpile = { type = heavy_cruiser_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 233 }
+		}
+		add_equipment_to_stockpile = { type = light_cruiser_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 234 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 235 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 236 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_submarine = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 237 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_submarine_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 238 }
+		}
+		add_equipment_to_stockpile = { type = submarine_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 239 }
+		}
+		add_equipment_to_stockpile = { type = cruiser_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 240 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_submarine_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 241 }
+		}
+		add_equipment_to_stockpile = { type = submarine_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 242 }
+		}
+		add_equipment_to_stockpile = { type = fleet_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 243 }
+		}
+		add_equipment_to_stockpile = { type = midget_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 244 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 245 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_fleet_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 246 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_midget_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 247 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_submarine_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 248 }
+		}
+		add_equipment_to_stockpile = { type = submarine_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 249 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_submarine_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 250 }
+		}
+		add_equipment_to_stockpile = { type = submarine_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 251 }
+		}
+		add_equipment_to_stockpile = { type = rocket_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 252 }
+		}
+		add_equipment_to_stockpile = { type = nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 253 }
+		}
+		add_equipment_to_stockpile = { type = nuclear_missile_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 254 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_convoy = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 255 }
+		}
+		add_equipment_to_stockpile = { type = convoy_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 256 }
+		}
+		add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_train = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 257 }
+		}
+		add_equipment_to_stockpile = { type = train_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 258 }
+		}
+		add_equipment_to_stockpile = { type = train_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 259 }
+		}
+		add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_missile = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 260 }
+		}
+		add_equipment_to_stockpile = { type = guided_missile_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 261 }
+		}
+		add_equipment_to_stockpile = { type = guided_missile_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 262 }
+		}
+		add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 263 }
+		}
+		add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_special = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 264 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_suicide_airframe amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 265 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_maritime_patrol_plane_airframe amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 266 }
+		}
+		add_equipment_to_stockpile = { type = scout_plane_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 267 }
+		}
+		add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 268 }
+		}
+		add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 1 }
+		}
+		CCP_equipment_grant_latest_infantry = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 2 }
+		}
+		CCP_equipment_grant_latest_support = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 3 }
+		}
+		CCP_equipment_grant_latest_artillery = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 4 }
+		}
+		CCP_equipment_grant_latest_anti_tank = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 5 }
+		}
+		CCP_equipment_grant_latest_anti_air = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 6 }
+		}
+		CCP_equipment_grant_latest_motorized = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 7 }
+		}
+		CCP_equipment_grant_latest_mechanized = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 8 }
+		}
+		CCP_equipment_grant_latest_armor = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 9 }
+		}
+		CCP_equipment_grant_latest_railway_gun = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 10 }
+		}
+		CCP_equipment_grant_latest_fighter = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 11 }
+		}
+		CCP_equipment_grant_latest_cas = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 12 }
+		}
+		CCP_equipment_grant_latest_naval_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 13 }
+		}
+		CCP_equipment_grant_latest_tactical_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 14 }
+		}
+		CCP_equipment_grant_latest_strategic_bomber = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 15 }
+		}
+		CCP_equipment_grant_latest_capital_ship = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 16 }
+		}
+		CCP_equipment_grant_latest_carrier = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 17 }
+		}
+		CCP_equipment_grant_latest_screen_ship = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 18 }
+		}
+		CCP_equipment_grant_latest_submarine = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 19 }
+		}
+		CCP_equipment_grant_latest_convoy = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 20 }
+		}
+		CCP_equipment_grant_latest_train = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 21 }
+		}
+		CCP_equipment_grant_latest_missile = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_category = 22 }
+		}
+		CCP_equipment_grant_latest_special = yes
+	}
+}
+
+CCP_equipment_grant_latest_infantry = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 0 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 1 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 2 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 3 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_support = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 4 }
+		}
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 5 }
+		}
+		add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 6 }
+		}
+		add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_artillery = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 7 }
+		}
+		add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 8 }
+		}
+		add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 9 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 10 }
+		}
+		add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 11 }
+		}
+		add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 12 }
+		}
+		add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 13 }
+		}
+		add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 14 }
+		}
+		add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_anti_tank = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 15 }
+		}
+		add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 16 }
+		}
+		add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 17 }
+		}
+		add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_anti_air = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 18 }
+		}
+		add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 19 }
+		}
+		add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 20 }
+		}
+		add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_motorized = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 21 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 22 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 23 }
+		}
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 24 }
+		}
+		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 25 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 26 }
+		}
+		add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_mechanized = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 27 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 28 }
+		}
+		add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 29 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 30 }
+		}
+		add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 31 }
+		}
+		add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_armor = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 32 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 33 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 34 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 35 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 36 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 37 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 38 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 39 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 40 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 41 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 42 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 43 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 44 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 45 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 46 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 47 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 48 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 49 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 50 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 51 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 52 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 53 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 54 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 55 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 56 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 57 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 58 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 59 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 60 }
+		}
+		add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 61 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 62 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 63 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 64 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 65 }
+		}
+		add_equipment_to_stockpile = { type = amphibious_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 66 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 67 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 68 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 69 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 70 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 71 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 72 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 73 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 74 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 75 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 76 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 77 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 78 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 79 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 80 }
+		}
+		add_equipment_to_stockpile = { type = light_tank_chassis_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 81 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 82 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 83 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 84 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 85 }
+		}
+		add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 86 }
+		}
+		add_equipment_to_stockpile = { type = land_cruiser_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 87 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 88 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 89 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 90 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 91 }
+		}
+		add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 92 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 93 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 94 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 95 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 96 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 97 }
+		}
+		add_equipment_to_stockpile = { type = land_cruiser_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 98 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 99 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 100 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 101 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 102 }
+		}
+		add_equipment_to_stockpile = { type = modern_tank_chassis_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_railway_gun = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 103 }
+		}
+		add_equipment_to_stockpile = { type = railway_gun_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 104 }
+		}
+		add_equipment_to_stockpile = { type = super_heavy_railway_gun_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_fighter = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 105 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 106 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 107 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 108 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 109 }
+		}
+		add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 110 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 111 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 112 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 113 }
+		}
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 114 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 115 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 116 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 117 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 118 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 119 }
+		}
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 120 }
+		}
+		add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 121 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 122 }
+		}
+		add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 123 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 124 }
+		}
+		add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 125 }
+		}
+		add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 126 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 127 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 128 }
+		}
+		add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 129 }
+		}
+		add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 130 }
+		}
+		add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 131 }
+		}
+		add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 132 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 133 }
+		}
+		add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 134 }
+		}
+		add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 135 }
+		}
+		add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 136 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 137 }
+		}
+		add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 138 }
+		}
+		add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 139 }
+		}
+		add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 140 }
+		}
+		add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 141 }
+		}
+		add_equipment_to_stockpile = { type = small_plane_airframe_5 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 142 }
+		}
+		add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_cas = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 143 }
+		}
+		add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 144 }
+		}
+		add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 145 }
+		}
+		add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 146 }
+		}
+		add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 147 }
+		}
+		add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 148 }
+		}
+		add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_naval_bomber = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 149 }
+		}
+		add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 150 }
+		}
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 151 }
+		}
+		add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 152 }
+		}
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 153 }
+		}
+		add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 154 }
+		}
+		add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_tactical_bomber = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 155 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 156 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 157 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 158 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 159 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 160 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 161 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 162 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 163 }
+		}
+		add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 164 }
+		}
+		add_equipment_to_stockpile = { type = medium_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 165 }
+		}
+		add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_strategic_bomber = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 166 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 167 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 168 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 169 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 170 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 171 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 172 }
+		}
+		add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 173 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 174 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 175 }
+		}
+		add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_capital_ship = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 176 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 177 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 178 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 179 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 180 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 181 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 182 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 183 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 184 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 185 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 186 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 187 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 188 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 189 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 190 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 191 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 192 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_heavy_modern amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_carrier = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 193 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 194 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 195 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 196 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 197 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 198 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 199 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 200 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 201 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 202 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 203 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 204 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 205 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 206 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 207 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 208 }
+		}
+		add_equipment_to_stockpile = { type = modern_carrier amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_screen_ship = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 209 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 210 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 211 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 212 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 213 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 214 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 215 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 216 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 217 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 218 }
+		}
+		add_equipment_to_stockpile = { type = repair_ship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 219 }
+		}
+		add_equipment_to_stockpile = { type = repair_ship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 220 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 221 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 222 }
+		}
+		add_equipment_to_stockpile = { type = support_ship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 223 }
+		}
+		add_equipment_to_stockpile = { type = support_ship_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 224 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 225 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 226 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 227 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 228 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 229 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 230 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 231 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 232 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 233 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 234 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 235 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_light_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 236 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_cruiser_modern_aa amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_submarine = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 237 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 238 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 239 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 240 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 241 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 242 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 243 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 244 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 245 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 246 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 247 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 248 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 249 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 250 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 251 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 252 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 253 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 254 }
+		}
+		add_equipment_to_stockpile = { type = ship_hull_nuclear_submarine amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_convoy = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 255 }
+		}
+		add_equipment_to_stockpile = { type = convoy_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 256 }
+		}
+		add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_train = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 257 }
+		}
+		add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 258 }
+		}
+		add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 259 }
+		}
+		add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_missile = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 260 }
+		}
+		add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 261 }
+		}
+		add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 262 }
+		}
+		add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 263 }
+		}
+		add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_equipment_amount }
+	}
+}
+
+CCP_equipment_grant_latest_special = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 264 }
+		}
+		add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 265 }
+		}
+		add_equipment_to_stockpile = { type = large_plane_airframe_4 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 266 }
+		}
+		add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 267 }
+		}
+		add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_equipment_amount }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 268 }
+		}
+		add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ccp_equipment_amount }
+	}
+}

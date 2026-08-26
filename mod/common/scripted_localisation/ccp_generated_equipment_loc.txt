@@ -1,0 +1,1624 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/generate_data.py from the installed game files.
+# Source game version: 1.19.2.0
+
+defined_text = {
+	name = CCP_GetEquipmentName
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 0 }
+		}
+		localization_key = infantry_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 1 }
+		}
+		localization_key = infantry_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 2 }
+		}
+		localization_key = infantry_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 3 }
+		}
+		localization_key = infantry_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 4 }
+		}
+		localization_key = support_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 5 }
+		}
+		localization_key = helicopter_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 6 }
+		}
+		localization_key = motorbike_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 7 }
+		}
+		localization_key = artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 8 }
+		}
+		localization_key = self_propelled_super_heavy_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 9 }
+		}
+		localization_key = super_heavy_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 10 }
+		}
+		localization_key = artillery_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 11 }
+		}
+		localization_key = motorized_rocket_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 12 }
+		}
+		localization_key = rocket_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 13 }
+		}
+		localization_key = artillery_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 14 }
+		}
+		localization_key = rocket_artillery_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 15 }
+		}
+		localization_key = anti_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 16 }
+		}
+		localization_key = anti_tank_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 17 }
+		}
+		localization_key = anti_tank_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 18 }
+		}
+		localization_key = anti_air_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 19 }
+		}
+		localization_key = anti_air_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 20 }
+		}
+		localization_key = anti_air_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 21 }
+		}
+		localization_key = gw_armored_car_equipment
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 22 }
+		}
+		localization_key = armored_car_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 23 }
+		}
+		localization_key = motorized_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 24 }
+		}
+		localization_key = motorized_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 25 }
+		}
+		localization_key = armored_car_at_equipment
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 26 }
+		}
+		localization_key = armored_car_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 27 }
+		}
+		localization_key = amphibious_mechanized_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 28 }
+		}
+		localization_key = mechanized_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 29 }
+		}
+		localization_key = amphibious_mechanized_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 30 }
+		}
+		localization_key = mechanized_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 31 }
+		}
+		localization_key = mechanized_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 32 }
+		}
+		localization_key = gw_tank_equipment
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 33 }
+		}
+		localization_key = heavy_tank_amphibious_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 34 }
+		}
+		localization_key = heavy_tank_chassis_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 35 }
+		}
+		localization_key = heavy_tank_flame_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 36 }
+		}
+		localization_key = light_tank_amphibious_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 37 }
+		}
+		localization_key = light_tank_chassis_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 38 }
+		}
+		localization_key = light_tank_flame_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 39 }
+		}
+		localization_key = medium_tank_amphibious_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 40 }
+		}
+		localization_key = medium_tank_chassis_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 41 }
+		}
+		localization_key = medium_tank_flame_chassis
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 42 }
+		}
+		localization_key = amphibious_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 43 }
+		}
+		localization_key = heavy_tank_aa_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 44 }
+		}
+		localization_key = heavy_tank_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 45 }
+		}
+		localization_key = heavy_tank_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 46 }
+		}
+		localization_key = heavy_tank_destroyer_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 47 }
+		}
+		localization_key = heavy_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 48 }
+		}
+		localization_key = light_tank_aa_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 49 }
+		}
+		localization_key = light_tank_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 50 }
+		}
+		localization_key = light_tank_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 51 }
+		}
+		localization_key = light_tank_destroyer_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 52 }
+		}
+		localization_key = light_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 53 }
+		}
+		localization_key = light_tank_aa_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 54 }
+		}
+		localization_key = light_tank_artillery_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 55 }
+		}
+		localization_key = light_tank_chassis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 56 }
+		}
+		localization_key = light_tank_destroyer_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 57 }
+		}
+		localization_key = light_tank_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 58 }
+		}
+		localization_key = medium_tank_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 59 }
+		}
+		localization_key = amphibious_tank_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 60 }
+		}
+		localization_key = armored_support_vehicle_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 61 }
+		}
+		localization_key = medium_tank_aa_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 62 }
+		}
+		localization_key = medium_tank_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 63 }
+		}
+		localization_key = medium_tank_destroyer_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 64 }
+		}
+		localization_key = medium_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 65 }
+		}
+		localization_key = amphibious_tank_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 66 }
+		}
+		localization_key = heavy_tank_chassis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 67 }
+		}
+		localization_key = medium_tank_chassis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 68 }
+		}
+		localization_key = heavy_tank_aa_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 69 }
+		}
+		localization_key = heavy_tank_artillery_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 70 }
+		}
+		localization_key = heavy_tank_destroyer_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 71 }
+		}
+		localization_key = heavy_tank_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 72 }
+		}
+		localization_key = light_tank_aa_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 73 }
+		}
+		localization_key = light_tank_artillery_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 74 }
+		}
+		localization_key = light_tank_destroyer_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 75 }
+		}
+		localization_key = light_tank_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 76 }
+		}
+		localization_key = medium_tank_aa_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 77 }
+		}
+		localization_key = medium_tank_artillery_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 78 }
+		}
+		localization_key = medium_tank_destroyer_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 79 }
+		}
+		localization_key = medium_tank_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 80 }
+		}
+		localization_key = light_tank_chassis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 81 }
+		}
+		localization_key = heavy_tank_aa_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 82 }
+		}
+		localization_key = heavy_tank_artillery_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 83 }
+		}
+		localization_key = heavy_tank_chassis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 84 }
+		}
+		localization_key = heavy_tank_destroyer_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 85 }
+		}
+		localization_key = heavy_tank_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 86 }
+		}
+		localization_key = land_cruiser_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 87 }
+		}
+		localization_key = medium_tank_aa_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 88 }
+		}
+		localization_key = medium_tank_artillery_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 89 }
+		}
+		localization_key = medium_tank_chassis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 90 }
+		}
+		localization_key = medium_tank_destroyer_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 91 }
+		}
+		localization_key = medium_tank_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 92 }
+		}
+		localization_key = super_heavy_tank_aa_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 93 }
+		}
+		localization_key = super_heavy_tank_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 94 }
+		}
+		localization_key = super_heavy_tank_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 95 }
+		}
+		localization_key = super_heavy_tank_destroyer_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 96 }
+		}
+		localization_key = super_heavy_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 97 }
+		}
+		localization_key = land_cruiser_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 98 }
+		}
+		localization_key = modern_tank_aa_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 99 }
+		}
+		localization_key = modern_tank_artillery_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 100 }
+		}
+		localization_key = modern_tank_destroyer_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 101 }
+		}
+		localization_key = modern_tank_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 102 }
+		}
+		localization_key = modern_tank_chassis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 103 }
+		}
+		localization_key = railway_gun_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 104 }
+		}
+		localization_key = super_heavy_railway_gun_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 105 }
+		}
+		localization_key = cv_fighter_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 106 }
+		}
+		localization_key = cv_small_plane_airframe_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 107 }
+		}
+		localization_key = fighter_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 108 }
+		}
+		localization_key = small_plane_airframe_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 109 }
+		}
+		localization_key = transport_plane_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 110 }
+		}
+		localization_key = cv_fighter_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 111 }
+		}
+		localization_key = cv_small_plane_airframe_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 112 }
+		}
+		localization_key = fighter_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 113 }
+		}
+		localization_key = heavy_fighter_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 114 }
+		}
+		localization_key = small_plane_airframe_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 115 }
+		}
+		localization_key = cv_small_plane_airframe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 116 }
+		}
+		localization_key = small_plane_airframe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 117 }
+		}
+		localization_key = cv_fighter_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 118 }
+		}
+		localization_key = fighter_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 119 }
+		}
+		localization_key = heavy_fighter_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 120 }
+		}
+		localization_key = transport_plane_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 121 }
+		}
+		localization_key = cv_small_plane_airframe_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 122 }
+		}
+		localization_key = mothership_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 123 }
+		}
+		localization_key = small_plane_airframe_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 124 }
+		}
+		localization_key = explosive_ammo_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 125 }
+		}
+		localization_key = ballistic_missile_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 126 }
+		}
+		localization_key = cv_fighter_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 127 }
+		}
+		localization_key = fighter_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 128 }
+		}
+		localization_key = heavy_fighter_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 129 }
+		}
+		localization_key = rocket_interceptor_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 130 }
+		}
+		localization_key = ballistic_missile_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 131 }
+		}
+		localization_key = ballistic_missile_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 132 }
+		}
+		localization_key = cv_small_plane_airframe_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 133 }
+		}
+		localization_key = jet_fighter_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 134 }
+		}
+		localization_key = nuclear_missile_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 135 }
+		}
+		localization_key = rocket_interceptor_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 136 }
+		}
+		localization_key = small_plane_airframe_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 137 }
+		}
+		localization_key = rocket_interceptor_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 138 }
+		}
+		localization_key = transport_plane_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 139 }
+		}
+		localization_key = jet_fighter_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 140 }
+		}
+		localization_key = nuclear_missile_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 141 }
+		}
+		localization_key = small_plane_airframe_5
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 142 }
+		}
+		localization_key = supersonic_fighter_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 143 }
+		}
+		localization_key = CAS_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 144 }
+		}
+		localization_key = cv_CAS_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 145 }
+		}
+		localization_key = CAS_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 146 }
+		}
+		localization_key = cv_CAS_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 147 }
+		}
+		localization_key = CAS_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 148 }
+		}
+		localization_key = cv_CAS_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 149 }
+		}
+		localization_key = cv_nav_bomber_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 150 }
+		}
+		localization_key = nav_bomber_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 151 }
+		}
+		localization_key = cv_nav_bomber_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 152 }
+		}
+		localization_key = nav_bomber_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 153 }
+		}
+		localization_key = cv_nav_bomber_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 154 }
+		}
+		localization_key = nav_bomber_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 155 }
+		}
+		localization_key = medium_plane_airframe_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 156 }
+		}
+		localization_key = tac_bomber_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 157 }
+		}
+		localization_key = medium_plane_airframe_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 158 }
+		}
+		localization_key = tac_bomber_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 159 }
+		}
+		localization_key = medium_plane_airframe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 160 }
+		}
+		localization_key = tac_bomber_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 161 }
+		}
+		localization_key = medium_plane_airframe_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 162 }
+		}
+		localization_key = tac_bomber_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 163 }
+		}
+		localization_key = jet_tac_bomber_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 164 }
+		}
+		localization_key = medium_plane_airframe_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 165 }
+		}
+		localization_key = jet_tac_bomber_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 166 }
+		}
+		localization_key = large_plane_airframe_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 167 }
+		}
+		localization_key = large_plane_airframe_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 168 }
+		}
+		localization_key = strat_bomber_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 169 }
+		}
+		localization_key = large_plane_airframe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 170 }
+		}
+		localization_key = strat_bomber_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 171 }
+		}
+		localization_key = large_plane_airframe_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 172 }
+		}
+		localization_key = strat_bomber_intercontinental_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 173 }
+		}
+		localization_key = strat_bomber_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 174 }
+		}
+		localization_key = large_plane_airframe_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 175 }
+		}
+		localization_key = jet_strat_bomber_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 176 }
+		}
+		localization_key = ship_hull_pre_dreadnought
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 177 }
+		}
+		localization_key = battle_cruiser_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 178 }
+		}
+		localization_key = battleship_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 179 }
+		}
+		localization_key = heavy_cruiser_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 180 }
+		}
+		localization_key = ship_hull_heavy_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 181 }
+		}
+		localization_key = SH_battleship_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 182 }
+		}
+		localization_key = battleship_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 183 }
+		}
+		localization_key = ship_hull_heavy_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 184 }
+		}
+		localization_key = battle_cruiser_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 185 }
+		}
+		localization_key = battleship_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 186 }
+		}
+		localization_key = ship_hull_heavy_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 187 }
+		}
+		localization_key = ship_hull_super_heavy_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 188 }
+		}
+		localization_key = SH_battleship_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 189 }
+		}
+		localization_key = battleship_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 190 }
+		}
+		localization_key = ship_hull_heavy_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 191 }
+		}
+		localization_key = modern_battleship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 192 }
+		}
+		localization_key = ship_hull_heavy_modern
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 193 }
+		}
+		localization_key = carrier_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 194 }
+		}
+		localization_key = ship_hull_carrier_conversion_bb
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 195 }
+		}
+		localization_key = ship_hull_carrier_conversion_ca
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 196 }
+		}
+		localization_key = carrier_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 197 }
+		}
+		localization_key = escort_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 198 }
+		}
+		localization_key = ship_hull_carrier_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 199 }
+		}
+		localization_key = ship_hull_escort_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 200 }
+		}
+		localization_key = carrier_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 201 }
+		}
+		localization_key = ship_hull_carrier_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 202 }
+		}
+		localization_key = carrier_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 203 }
+		}
+		localization_key = mega_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 204 }
+		}
+		localization_key = ship_hull_carrier_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 205 }
+		}
+		localization_key = ship_hull_carrier_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 206 }
+		}
+		localization_key = ship_hull_mega_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 207 }
+		}
+		localization_key = ship_hull_carrier_modern
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 208 }
+		}
+		localization_key = modern_carrier
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 209 }
+		}
+		localization_key = destroyer_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 210 }
+		}
+		localization_key = light_cruiser_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 211 }
+		}
+		localization_key = ship_hull_cruiser_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 212 }
+		}
+		localization_key = ship_hull_light_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 213 }
+		}
+		localization_key = ship_hull_cruiser_coastal_defense_ship
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 214 }
+		}
+		localization_key = ship_hull_cruiser_panzerschiff
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 215 }
+		}
+		localization_key = destroyer_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 216 }
+		}
+		localization_key = heavy_cruiser_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 217 }
+		}
+		localization_key = light_cruiser_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 218 }
+		}
+		localization_key = repair_ship_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 219 }
+		}
+		localization_key = repair_ship_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 220 }
+		}
+		localization_key = ship_hull_cruiser_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 221 }
+		}
+		localization_key = ship_hull_light_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 222 }
+		}
+		localization_key = support_ship_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 223 }
+		}
+		localization_key = support_ship_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 224 }
+		}
+		localization_key = destroyer_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 225 }
+		}
+		localization_key = heavy_cruiser_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 226 }
+		}
+		localization_key = light_cruiser_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 227 }
+		}
+		localization_key = ship_hull_cruiser_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 228 }
+		}
+		localization_key = ship_hull_light_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 229 }
+		}
+		localization_key = ship_hull_torpedo_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 230 }
+		}
+		localization_key = torpedo_cruiser
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 231 }
+		}
+		localization_key = destroyer_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 232 }
+		}
+		localization_key = heavy_cruiser_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 233 }
+		}
+		localization_key = light_cruiser_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 234 }
+		}
+		localization_key = ship_hull_cruiser_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 235 }
+		}
+		localization_key = ship_hull_light_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 236 }
+		}
+		localization_key = ship_hull_cruiser_modern_aa
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 237 }
+		}
+		localization_key = ship_hull_submarine_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 238 }
+		}
+		localization_key = submarine_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 239 }
+		}
+		localization_key = cruiser_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 240 }
+		}
+		localization_key = ship_hull_submarine_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 241 }
+		}
+		localization_key = submarine_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 242 }
+		}
+		localization_key = fleet_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 243 }
+		}
+		localization_key = midget_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 244 }
+		}
+		localization_key = ship_hull_cruiser_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 245 }
+		}
+		localization_key = ship_hull_fleet_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 246 }
+		}
+		localization_key = ship_hull_midget_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 247 }
+		}
+		localization_key = ship_hull_submarine_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 248 }
+		}
+		localization_key = submarine_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 249 }
+		}
+		localization_key = ship_hull_submarine_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 250 }
+		}
+		localization_key = submarine_4
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 251 }
+		}
+		localization_key = rocket_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 252 }
+		}
+		localization_key = nuclear_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 253 }
+		}
+		localization_key = nuclear_missile_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 254 }
+		}
+		localization_key = ship_hull_nuclear_submarine
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 255 }
+		}
+		localization_key = convoy_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 256 }
+		}
+		localization_key = floating_harbor_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 257 }
+		}
+		localization_key = train_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 258 }
+		}
+		localization_key = train_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 259 }
+		}
+		localization_key = train_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 260 }
+		}
+		localization_key = guided_missile_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 261 }
+		}
+		localization_key = guided_missile_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 262 }
+		}
+		localization_key = sam_missile_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 263 }
+		}
+		localization_key = guided_missile_equipment_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 264 }
+		}
+		localization_key = cv_small_plane_suicide_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 265 }
+		}
+		localization_key = large_plane_maritime_patrol_plane_airframe
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 266 }
+		}
+		localization_key = scout_plane_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 267 }
+		}
+		localization_key = scout_plane_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_entry = 268 }
+		}
+		localization_key = rocket_suicide_equipment_1
+	}
+	text = {
+		localization_key = CCP_EQUIPMENT_UNKNOWN
+	}
+}
