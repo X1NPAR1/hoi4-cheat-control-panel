@@ -72,33 +72,58 @@ CCP_state_prev_page = {
 }
 
 CCP_state_take = {
-	set_state_owner = var:global.ccp_player
-	set_state_controller = var:global.ccp_player
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			set_state_owner_to = PREV
+			set_state_controller_to = PREV
+		}
+	}
 	set_variable = { global.ccp_status = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_state_give = {
-	set_state_owner = var:global.ccp_target_country
-	set_state_controller = var:global.ccp_target_country
-	set_variable = { global.ccp_status = 10 }
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_target_country = {
+		var:global.ccp_state = {
+			set_state_owner_to = PREV
+			set_state_controller_to = PREV
+		}
+	}
+	set_variable = { global.ccp_status = 17 }
 	CCP_mark_dirty = yes
 }
 
 CCP_state_core = {
-	add_core_of = var:global.ccp_player
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			add_core_of = PREV
+		}
+	}
 	set_variable = { global.ccp_status = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_state_uncore = {
-	remove_core_of = var:global.ccp_player
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			remove_core_of = PREV
+		}
+	}
 	set_variable = { global.ccp_status = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_state_claim = {
-	add_claim_by = var:global.ccp_player
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			add_claim_by = PREV
+		}
+	}
 	set_variable = { global.ccp_status = 10 }
 	CCP_mark_dirty = yes
 }

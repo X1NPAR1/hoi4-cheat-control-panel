@@ -163,6 +163,30 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			check_variable = { global.ccp_status = 21 }
+		}
+		localization_key = CCP_STATUS_GOODWILL_OFF
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 20 }
+		}
+		localization_key = CCP_STATUS_GOODWILL_ON
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 19 }
+		}
+		localization_key = CCP_STATUS_DIPLO_OFF
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 18 }
+		}
+		localization_key = CCP_STATUS_DIPLO_ON
+	}
+	text = {
+		trigger = {
 			check_variable = { global.ccp_status = 17 }
 		}
 		localization_key = CCP_STATUS_GIVEN
@@ -181,6 +205,32 @@ defined_text = {
 	}
 	text = {
 		localization_key = CCP_STATUS_IDLE
+	}
+}
+
+defined_text = {
+	name = CCP_GetDiploRulesState
+	text = {
+		trigger = {
+			check_variable = { global.ccp_diplo_rules = 1 }
+		}
+		localization_key = CCP_DIPLO_ON
+	}
+	text = {
+		localization_key = CCP_DIPLO_OFF
+	}
+}
+
+defined_text = {
+	name = CCP_GetGoodwillState
+	text = {
+		trigger = {
+			check_variable = { global.ccp_ai_goodwill = 1 }
+		}
+		localization_key = CCP_GOODWILL_ON
+	}
+	text = {
+		localization_key = CCP_GOODWILL_OFF
 	}
 }
 

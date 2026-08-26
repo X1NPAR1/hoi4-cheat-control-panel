@@ -11,6 +11,21 @@ from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
 from .actions import ALL as COUNTRY_ACTIONS
 from .countries import ACTIONS, PAGE_SIZE as COUNTRY_PAGE_SIZE
+
+# The permissive half of the diplomacy rules the engine exposes to script. This is
+# what the console's allowdiplo is used for; the console switch itself is out of
+# reach, but these rules are the restrictions it lifts.
+DIPLO_RULES = [
+    "can_create_factions",
+    "can_join_factions",
+    "can_declare_war_on_same_ideology",
+    "can_guarantee_other_ideologies",
+    "can_puppet",
+    "can_send_volunteers",
+    "can_boost_other_ideologies",
+    "can_access_market",
+    "can_create_collaboration_government",
+]
 from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
 from .resources import AMOUNT_MAX, RESOURCES
 from .sections import HOTKEYS, SECTIONS, section_id as section_index
@@ -63,6 +78,7 @@ def emit_core_effects(version: str) -> str:
     _banner(writer, version)
 
     writer.open("CCP_ensure_settings")
+    writer.line("set_variable = { ccp_player = THIS }")
     writer.open("if")
     writer.open("limit")
     writer.line(f"check_variable = {{ ccp_settings_version < {SETTINGS_VERSION} }}")
@@ -74,6 +90,9 @@ def emit_core_effects(version: str) -> str:
     writer.line(f"set_variable = {{ ccp_nav_highlight_y = {NAV_TOP} }}")
     writer.line(f"set_variable = {{ ccp_status = {STATUS_IDLE} }}")
     writer.line("set_variable = { ccp_amount = 1000 }")
+    writer.line("set_variable = { ccp_target_country = THIS }")
+    writer.line("set_variable = { ccp_diplo_rules = 0 }")
+    writer.line("set_variable = { ccp_ai_goodwill = 0 }")
     writer.line("set_variable = { ccp_equipment_category = 1 }")
     writer.line("set_variable = { ccp_equipment_page = 0 }")
     writer.line("set_variable = { ccp_equipment_pages_last = 0 }")
@@ -218,6 +237,59 @@ def emit_core_effects(version: str) -> str:
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
+
+    writer.open("CCP_toggle_diplo_rules")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_diplo_rules = 1 }")
+    writer.close()
+    writer.line("set_variable = { ccp_diplo_rules = 0 }")
+    writer.open("set_rule")
+    for rule in DIPLO_RULES:
+        writer.line(f"{rule} = no")
+    writer.close()
+    writer.line(f"set_variable = {{ ccp_status = {status.DIPLO_OFF} }}")
+    writer.close()
+    writer.open("else")
+    writer.line("set_variable = { ccp_diplo_rules = 1 }")
+    writer.open("set_rule")
+    for rule in DIPLO_RULES:
+        writer.line(f"{rule} = yes")
+    writer.close()
+    writer.line(f"set_variable = {{ ccp_status = {status.DIPLO_ON} }}")
+    writer.close()
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_toggle_ai_goodwill")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_ai_goodwill = 1 }")
+    writer.close()
+    writer.line("set_variable = { ccp_ai_goodwill = 0 }")
+    writer.open("every_country")
+    writer.open("limit")
+    writer.line("NOT = { tag = ROOT }")
+    writer.close()
+    writer.line("remove_opinion_modifier = { target = ROOT modifier = ccp_goodwill }")
+    writer.close()
+    writer.line(f"set_variable = {{ ccp_status = {status.GOODWILL_OFF} }}")
+    writer.close()
+    writer.open("else")
+    writer.line("set_variable = { ccp_ai_goodwill = 1 }")
+    writer.open("every_country")
+    writer.open("limit")
+    writer.line("NOT = { tag = ROOT }")
+    writer.close()
+    writer.line("add_opinion_modifier = { target = ROOT modifier = ccp_goodwill }")
+    writer.line("add_ai_strategy = { type = befriend id = ROOT value = 200 }")
+    writer.close()
+    writer.line(f"set_variable = {{ ccp_status = {status.GOODWILL_ON} }}")
+    writer.close()
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
 
     writer.open("CCP_toggle_confirmations")
     writer.open("if")
@@ -439,9 +511,15 @@ def emit_state_effects(version: str) -> str:
 
     for action in STATE_ACTIONS:
         writer.open(f"CCP_state_{action.slug}")
+        writer.line("set_variable = { ccp_state = THIS }")
+        writer.open(action.actor)
+        writer.open("var:ccp_state")
         for line in action.body:
             writer.line(line)
-        writer.line(f"set_variable = {{ ccp_status = {status.STATE_ACTION} }}")
+        writer.close()
+        writer.close()
+        code = status.STATE_GIVEN if action.slug == "give" else status.STATE_ACTION
+        writer.line(f"set_variable = {{ ccp_status = {code} }}")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -642,6 +720,12 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.close()
     writer.open("ccp_confirm_toggle_click")
     writer.line("CCP_toggle_confirmations = yes")
+    writer.close()
+    writer.open("ccp_diplo_rules_toggle_click")
+    writer.line("CCP_toggle_diplo_rules = yes")
+    writer.close()
+    writer.open("ccp_ai_goodwill_toggle_click")
+    writer.line("CCP_toggle_ai_goodwill = yes")
     writer.close()
     for index, name in enumerate(categories, start=1):
         writer.open(f"ccp_equipment_category_{index}_click")
@@ -915,11 +999,29 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.OVERFLOW_BLOCKED} }}", "CCP_STATUS_OVERFLOW"),
             (f"check_variable = {{ ccp_status = {status.CATEGORY_GRANTED} }}", "CCP_STATUS_CATEGORY"),
             (f"check_variable = {{ ccp_status = {status.SELECTION_FAILED} }}", "CCP_STATUS_SELECTION"),
+            (f"check_variable = {{ ccp_status = {status.GOODWILL_OFF} }}", "CCP_STATUS_GOODWILL_OFF"),
+            (f"check_variable = {{ ccp_status = {status.GOODWILL_ON} }}", "CCP_STATUS_GOODWILL_ON"),
+            (f"check_variable = {{ ccp_status = {status.DIPLO_OFF} }}", "CCP_STATUS_DIPLO_OFF"),
+            (f"check_variable = {{ ccp_status = {status.DIPLO_ON} }}", "CCP_STATUS_DIPLO_ON"),
             (f"check_variable = {{ ccp_status = {status.STATE_GIVEN} }}", "CCP_STATUS_GIVEN"),
             (f"check_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}", "CCP_STATUS_EVERYTHING"),
             (f"check_variable = {{ ccp_status = {status.TARGET_PICKED} }}", "CCP_STATUS_TARGET"),
         ],
         "CCP_STATUS_IDLE",
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetDiploRulesState",
+        [("check_variable = { ccp_diplo_rules = 1 }", "CCP_DIPLO_ON")],
+        "CCP_DIPLO_OFF",
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetGoodwillState",
+        [("check_variable = { ccp_ai_goodwill = 1 }", "CCP_GOODWILL_ON")],
+        "CCP_GOODWILL_OFF",
     )
 
     _defined_text(

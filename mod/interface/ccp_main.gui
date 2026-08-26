@@ -3261,8 +3261,50 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "ccp_settings_language_label"
+				name = "ccp_settings_diplo_label"
 				position = { x = 274 y = 374 }
+				font = "hoi_18mbs"
+				text = "CCP_SETTINGS_DIPLO"
+				maxWidth = 1202
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_diplo_help"
+				position = { x = 274 y = 398 }
+				font = "hoi_16mbs"
+				text = "CCP_SETTINGS_DIPLO_HELP"
+				maxWidth = 1202
+				maxHeight = 36
+				format = left
+			}
+
+			buttonType = {
+				name = "ccp_diplo_rules_toggle"
+				position = { x = 274 y = 438 }
+				quadTextureSprite = "GFX_ccp_button"
+				size = { x = 217 y = 30 }
+				buttonText = "[CCP_GetDiploRulesState]"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_SETTINGS_DIPLO_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_ai_goodwill_toggle"
+				position = { x = 501 y = 438 }
+				quadTextureSprite = "GFX_ccp_button"
+				size = { x = 231 y = 30 }
+				buttonText = "[CCP_GetGoodwillState]"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_SETTINGS_GOODWILL_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_language_label"
+				position = { x = 274 y = 480 }
 				font = "hoi_18mbs"
 				text = "CCP_SETTINGS_LANGUAGE"
 				maxWidth = 1202
@@ -3272,7 +3314,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ccp_settings_compat_label"
-				position = { x = 274 y = 468 }
+				position = { x = 274 y = 524 }
 				font = "hoi_18mbs"
 				text = "CCP_SETTINGS_COMPAT"
 				maxWidth = 1202
@@ -3282,7 +3324,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ccp_settings_compat_help"
-				position = { x = 274 y = 492 }
+				position = { x = 274 y = 548 }
 				font = "hoi_16mbs"
 				text = "CCP_SETTINGS_COMPAT_HELP"
 				maxWidth = 1202
@@ -3292,7 +3334,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ccp_settings_ironman"
-				position = { x = 274 y = 568 }
+				position = { x = 274 y = 624 }
 				font = "hoi_16mbs"
 				text = "[CCP_GetIronmanNotice]"
 				maxWidth = 1202
@@ -3302,7 +3344,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ccp_settings_language_help"
-				position = { x = 274 y = 398 }
+				position = { x = 274 y = 504 }
 				font = "hoi_16mbs"
 				text = "CCP_SETTINGS_LANGUAGE_HELP"
 				maxWidth = 1202

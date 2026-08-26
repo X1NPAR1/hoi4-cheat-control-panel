@@ -314,6 +314,12 @@ scripted_gui = {
 			ccp_confirm_toggle_click = {
 				CCP_toggle_confirmations = yes
 			}
+			ccp_diplo_rules_toggle_click = {
+				CCP_toggle_diplo_rules = yes
+			}
+			ccp_ai_goodwill_toggle_click = {
+				CCP_toggle_ai_goodwill = yes
+			}
 			ccp_equipment_category_1_click = {
 				CCP_equipment_select_infantry = yes
 			}
@@ -1597,6 +1603,18 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 11 }
 			}
 			ccp_confirm_toggle_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_settings_diplo_label_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_settings_diplo_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_diplo_rules_toggle_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_ai_goodwill_toggle_visible = {
 				check_variable = { global.ccp_section = 11 }
 			}
 			ccp_settings_language_label_visible = {

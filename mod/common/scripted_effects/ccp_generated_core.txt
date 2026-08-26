@@ -3,6 +3,7 @@
 # Source game version: 1.19.2.0
 
 CCP_ensure_settings = {
+	set_variable = { global.ccp_player = THIS }
 	if = {
 		limit = {
 			check_variable = { global.ccp_settings_version < 2 }
@@ -14,6 +15,9 @@ CCP_ensure_settings = {
 		set_variable = { global.ccp_nav_highlight_y = 98 }
 		set_variable = { global.ccp_status = 0 }
 		set_variable = { global.ccp_amount = 1000 }
+		set_variable = { global.ccp_target_country = THIS }
+		set_variable = { global.ccp_diplo_rules = 0 }
+		set_variable = { global.ccp_ai_goodwill = 0 }
 		set_variable = { global.ccp_equipment_category = 1 }
 		set_variable = { global.ccp_equipment_page = 0 }
 		set_variable = { global.ccp_equipment_pages_last = 0 }
@@ -607,6 +611,71 @@ CCP_grant_air_experience_custom = {
 	set_variable = { global.ccp_status = 4 }
 	set_variable = { global.ccp_granted_resource = 6 }
 	set_variable = { global.ccp_granted_amount = var:ccp_grant }
+	CCP_mark_dirty = yes
+}
+
+CCP_toggle_diplo_rules = {
+	if = {
+		limit = {
+			check_variable = { global.ccp_diplo_rules = 1 }
+		}
+		set_variable = { global.ccp_diplo_rules = 0 }
+		set_rule = {
+			can_create_factions = no
+			can_join_factions = no
+			can_declare_war_on_same_ideology = no
+			can_guarantee_other_ideologies = no
+			can_puppet = no
+			can_send_volunteers = no
+			can_boost_other_ideologies = no
+			can_access_market = no
+			can_create_collaboration_government = no
+		}
+		set_variable = { global.ccp_status = 19 }
+	}
+	else = {
+		set_variable = { global.ccp_diplo_rules = 1 }
+		set_rule = {
+			can_create_factions = yes
+			can_join_factions = yes
+			can_declare_war_on_same_ideology = yes
+			can_guarantee_other_ideologies = yes
+			can_puppet = yes
+			can_send_volunteers = yes
+			can_boost_other_ideologies = yes
+			can_access_market = yes
+			can_create_collaboration_government = yes
+		}
+		set_variable = { global.ccp_status = 18 }
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_toggle_ai_goodwill = {
+	if = {
+		limit = {
+			check_variable = { global.ccp_ai_goodwill = 1 }
+		}
+		set_variable = { global.ccp_ai_goodwill = 0 }
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+			}
+			remove_opinion_modifier = { target = ROOT modifier = global.ccp_goodwill }
+		}
+		set_variable = { global.ccp_status = 21 }
+	}
+	else = {
+		set_variable = { global.ccp_ai_goodwill = 1 }
+		every_country = {
+			limit = {
+				NOT = { tag = ROOT }
+			}
+			add_opinion_modifier = { target = ROOT modifier = global.ccp_goodwill }
+			add_ai_strategy = { type = befriend id = ROOT value = 200 }
+		}
+		set_variable = { global.ccp_status = 20 }
+	}
 	CCP_mark_dirty = yes
 }
 
