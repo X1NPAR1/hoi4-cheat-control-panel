@@ -17,7 +17,8 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from ccp.plates import build as build_plates
+from ccp import theme
+from ccp.plates import build as build_plates, frames as frame_strip, plate
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE = REPO_ROOT / "logo.png"
@@ -26,6 +27,8 @@ GFX_FILE = REPO_ROOT / "mod" / "interface" / "ccp_gfx.gfx"
 
 THUMBNAIL_SIZE = 512
 PANEL_LOGO_HEIGHT = 40
+LAUNCHER_BUTTON_SIZE = 46
+LAUNCHER_LOGO_SIZE = 38
 
 BANNER = (
     "# GENERATED FILE - DO NOT EDIT\n"
@@ -51,6 +54,23 @@ def emit_gfx(entries: list[tuple[str, int]]) -> str:
     return "\n".join(lines)
 
 
+def _launcher_button(source: Image.Image) -> Image.Image:
+    """A four-state top-left button carrying the logo, the panel's always-visible entry point."""
+    size = (LAUNCHER_BUTTON_SIZE, LAUNCHER_BUTTON_SIZE)
+    borders = [theme.BORDER_STEEL, theme.ACCENT_BRONZE, theme.ACCENT_BRONZE, theme.BORDER_STEEL]
+    fills = [theme.BG_PANEL, theme.BG_RAISED, theme.BG_BASE, theme.BG_BASE]
+
+    badge = source.resize((LAUNCHER_LOGO_SIZE, LAUNCHER_LOGO_SIZE), Image.LANCZOS)
+    offset = (LAUNCHER_BUTTON_SIZE - LAUNCHER_LOGO_SIZE) // 2
+
+    states = []
+    for fill, border in zip(fills, borders):
+        state = plate(size, fill, border=border, shade=theme.BG_BASE)
+        state.alpha_composite(badge, (offset, offset))
+        states.append(state)
+    return frame_strip(*states)
+
+
 def main() -> int:
     if not SOURCE.is_file():
         print(f"{SOURCE} not found", file=sys.stderr)
@@ -72,7 +92,13 @@ def main() -> int:
     )
     logo.save(GFX_DIR / "ccp_logo.png", "PNG", optimize=True)
 
-    entries: list[tuple[str, int]] = [("ccp_logo.png", 1)]
+    launcher = _launcher_button(source)
+    launcher.save(GFX_DIR / "ccp_launcher_button.png", "PNG", optimize=True)
+
+    entries: list[tuple[str, int]] = [
+        ("ccp_logo.png", 1),
+        ("ccp_launcher_button.png", 4),
+    ]
     for filename, image, frames in build_plates(GFX_DIR):
         image.save(GFX_DIR / filename, "PNG", optimize=True)
         entries.append((filename, frames))

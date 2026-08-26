@@ -8,6 +8,11 @@ spriteTypes = {
 		noOfFrames = 1
 	}
 	spriteType = {
+		name = "GFX_ccp_launcher_button"
+		texturefile = "gfx/interface/ccp/ccp_launcher_button.png"
+		noOfFrames = 4
+	}
+	spriteType = {
 		name = "GFX_ccp_panel_body"
 		texturefile = "gfx/interface/ccp/ccp_panel_body.png"
 		noOfFrames = 1

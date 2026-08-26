@@ -1,8 +1,22 @@
 scripted_gui = {
 
+	ccp_launcher_button = {
+		context_type = player_context
+		window_name = "ccp_launcher_window"
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			ccp_launcher_click = {
+				CCP_toggle_panel = yes
+			}
+		}
+	}
+
 	ccp_hotkey_listener = {
 		context_type = player_context
-		parent_window_token = top_bar
 		window_name = "ccp_hotkey_listener_window"
 
 		visible = {
@@ -51,7 +65,6 @@ scripted_gui = {
 
 	ccp_main_panel = {
 		context_type = player_context
-		parent_window_token = top_bar
 		window_name = "ccp_main_window"
 
 		visible = {
