@@ -42,6 +42,10 @@ def emit_research_effects(catalogue: list[Technology], version: str) -> str:
 
     writer.open("CCP_research_load_page")
     writer.line("clear_array = ccp_research_page_items")
+    writer.line("set_variable = { ccp_research_page_shown = ccp_research_page }")
+    writer.line("add_to_variable = { ccp_research_page_shown = 1 }")
+    writer.line("set_variable = { ccp_research_pages_shown = ccp_research_pages_last }")
+    writer.line("add_to_variable = { ccp_research_pages_shown = 1 }")
     _folder_router(writer, folders, "CCP_research_load")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
@@ -92,8 +96,8 @@ def emit_research_effects(catalogue: list[Technology], version: str) -> str:
     writer.blank()
 
     writer.open("CCP_research_grant")
+    writer.line(f"set_variable = {{ ccp_status = {status.SELECTION_FAILED} }}")
     _folder_router(writer, folders, "CCP_research_grant")
-    writer.line(f"set_variable = {{ ccp_status = {status.TECH_GRANTED} }}")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
@@ -106,7 +110,11 @@ def emit_research_effects(catalogue: list[Technology], version: str) -> str:
             writer.open("limit")
             writer.line(f"check_variable = {{ ccp_research_selected = {index_of[item.key]} }}")
             writer.close()
+            writer.line("custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP")
+            writer.open("hidden_effect")
             writer.line(f"set_technology = {{ {item.key} = 1 popup = no }}")
+            writer.line(f"set_variable = {{ ccp_status = {status.TECH_GRANTED} }}")
+            writer.close()
             writer.close()
         writer.close()
         writer.blank()
@@ -149,7 +157,7 @@ def emit_research_localisation(catalogue: list[Technology], version: str) -> str
     writer.blank()
 
     for name, variable in (
-        ("CCP_GetTechnologyName", "ccp_research_entry"),
+        ("CCP_GetTechnologyName", "v"),
         ("CCP_GetTechnologySelectedName", "ccp_research_selected"),
     ):
         writer.open("defined_text")

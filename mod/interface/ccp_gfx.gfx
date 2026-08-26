@@ -126,20 +126,54 @@ spriteTypes = {
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	corneredTileSpriteType = {
+	spriteType = {
 		name = "GFX_ccp_list_row"
-		size = { x = 20 y = 32 }
-		textureFile = "gfx/interface/ccp/ccp_list_row.png"
-		borderSize = { x = 6 y = 6 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate.lua"
+		texturefile = "gfx/interface/ccp/ccp_list_row.png"
+		noOfFrames = 1
 	}
-	corneredTileSpriteType = {
+	spriteType = {
 		name = "GFX_ccp_card"
-		size = { x = 20 y = 20 }
-		textureFile = "gfx/interface/ccp/ccp_card.png"
-		borderSize = { x = 6 y = 6 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate.lua"
+		texturefile = "gfx/interface/ccp/ccp_card.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_card"
+		texturefile = "gfx/interface/ccp/ccp_plate_card.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_action"
+		texturefile = "gfx/interface/ccp/ccp_plate_action.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_row_equipment"
+		texturefile = "gfx/interface/ccp/ccp_plate_row_equipment.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_row_country"
+		texturefile = "gfx/interface/ccp/ccp_plate_row_country.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_row_state"
+		texturefile = "gfx/interface/ccp/ccp_plate_row_state.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_row_history"
+		texturefile = "gfx/interface/ccp/ccp_plate_row_history.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_row_resource"
+		texturefile = "gfx/interface/ccp/ccp_plate_row_resource.png"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_ccp_plate_picker"
+		texturefile = "gfx/interface/ccp/ccp_plate_picker.png"
+		noOfFrames = 1
 	}
 }

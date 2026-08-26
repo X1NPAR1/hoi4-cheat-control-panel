@@ -431,8 +431,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_country_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -467,8 +466,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_political_power_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -503,8 +501,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_command_power_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -539,8 +536,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_manpower_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -575,8 +571,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_army_xp_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -611,8 +606,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_navy_xp_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -647,8 +641,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_air_xp_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -683,8 +676,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_stability_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -719,8 +711,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_card_factories_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 104 }
+					spriteType = "GFX_ccp_plate_card"
 				}
 
 				instantTextBoxType = {
@@ -762,7 +753,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_row_political_power_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_row"
+					spriteType = "GFX_ccp_plate_row_resource"
 				}
 
 				instantTextBoxType = {
@@ -852,7 +843,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_row_command_power_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_row"
+					spriteType = "GFX_ccp_plate_row_resource"
 				}
 
 				instantTextBoxType = {
@@ -942,7 +933,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_row_manpower_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_row"
+					spriteType = "GFX_ccp_plate_row_resource"
 				}
 
 				instantTextBoxType = {
@@ -1032,7 +1023,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_row_army_experience_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_row"
+					spriteType = "GFX_ccp_plate_row_resource"
 				}
 
 				instantTextBoxType = {
@@ -1122,7 +1113,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_row_navy_experience_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_row"
+					spriteType = "GFX_ccp_plate_row_resource"
 				}
 
 				instantTextBoxType = {
@@ -1212,7 +1203,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_row_air_experience_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_row"
+					spriteType = "GFX_ccp_plate_row_resource"
 				}
 
 				instantTextBoxType = {
@@ -1603,6 +1594,27 @@ guiTypes = {
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
 				clicksound = click_default
 			}
+
+			buttonType = {
+				name = "ccp_equipment_all"
+				position = { x = 490 y = 710 }
+				quadTextureSprite = "GFX_ccp_button"
+				size = { x = 160 y = 30 }
+				buttonText = "CCP_EQUIPMENT_ALL"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_ALL_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_equipment_all_help"
+				position = { x = 662 y = 716 }
+				font = "hoi_16mbs"
+				text = "CCP_EQUIPMENT_ALL_HELP"
+				maxWidth = 606
+				maxHeight = 18
+				format = left
+			}
 		}
 
 		containerWindowType = {
@@ -1981,8 +1993,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_stability_max_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2016,8 +2027,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_war_support_max_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2051,8 +2061,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_stability_min_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2086,8 +2095,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_war_support_min_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2121,8 +2129,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_research_slots_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2156,8 +2163,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_fuel_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2208,8 +2214,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_infrastructure_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2243,8 +2248,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_civilian_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2278,8 +2282,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_military_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2313,8 +2316,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_dockyard_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2348,8 +2350,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_airbase_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2383,8 +2384,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_radar_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2418,8 +2418,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_antiair_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2453,8 +2452,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_offsite_civilian_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2488,8 +2486,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_offsite_military_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2540,8 +2537,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_army_xp_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2575,8 +2571,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_navy_xp_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2610,8 +2605,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_attack_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2645,8 +2639,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_defense_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2680,8 +2673,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_planning_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2715,8 +2707,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_action_logistics_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_card"
-					size = { x = 390 y = 118 }
+					spriteType = "GFX_ccp_plate_action"
 				}
 
 				instantTextBoxType = {
@@ -2778,8 +2769,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_1_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -2813,8 +2803,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_2_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -2848,8 +2837,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_3_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -2883,8 +2871,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_4_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -2918,8 +2905,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_5_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -2953,8 +2939,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_6_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -2988,8 +2973,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_7_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -3023,8 +3007,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_8_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -3058,8 +3041,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_9_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -3093,8 +3075,7 @@ guiTypes = {
 				iconType = {
 					name = "ccp_history_row_10_plate"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_list_row"
-					size = { x = 1202 y = 32 }
+					spriteType = "GFX_ccp_plate_row_history"
 				}
 
 				instantTextBoxType = {
@@ -3303,8 +3284,7 @@ guiTypes = {
 		iconType = {
 			name = "ccp_equipment_entry_plate"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_ccp_list_row"
-			size = { x = 778 y = 30 }
+			spriteType = "GFX_ccp_plate_row_equipment"
 		}
 
 		instantTextBoxType = {
@@ -3312,9 +3292,20 @@ guiTypes = {
 			position = { x = 12 y = 7 }
 			font = "hoi_16mbs"
 			text = "[CCP_GetEquipmentName]"
-			maxWidth = 599
+			maxWidth = 495
 			maxHeight = 18
 			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ccp_equipment_entry_stock"
+			position = { x = 515 y = 7 }
+			font = "hoi_16mbs"
+			text = "[CCP_GetEquipmentStock]"
+			maxWidth = 96
+			maxHeight = 18
+			format = right
+			pdx_tooltip = "CCP_EQUIPMENT_STOCK_TOOLTIP"
 		}
 
 		buttonType = {
@@ -3349,8 +3340,7 @@ guiTypes = {
 		iconType = {
 			name = "ccp_research_entry_plate"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_ccp_list_row"
-			size = { x = 778 y = 30 }
+			spriteType = "GFX_ccp_plate_row_equipment"
 		}
 
 		instantTextBoxType = {
@@ -3384,8 +3374,7 @@ guiTypes = {
 		iconType = {
 			name = "ccp_country_entry_plate"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_ccp_list_row"
-			size = { x = 1202 y = 32 }
+			spriteType = "GFX_ccp_plate_row_country"
 		}
 
 		instantTextBoxType = {
@@ -3463,8 +3452,7 @@ guiTypes = {
 		iconType = {
 			name = "ccp_state_entry_plate"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_ccp_list_row"
-			size = { x = 1202 y = 36 }
+			spriteType = "GFX_ccp_plate_row_state"
 		}
 
 		instantTextBoxType = {
@@ -3542,8 +3530,7 @@ guiTypes = {
 		iconType = {
 			name = "ccp_picker_plate"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_ccp_card"
-			size = { x = 332 y = 68 }
+			spriteType = "GFX_ccp_plate_picker"
 		}
 
 		instantTextBoxType = {

@@ -269,6 +269,10 @@ def emit_country_effects(version: str) -> str:
 
     writer.open("CCP_country_load_page")
     writer.line("clear_array = ccp_country_page_items")
+    writer.line("set_variable = { ccp_country_page_shown = ccp_country_page }")
+    writer.line("add_to_variable = { ccp_country_page_shown = 1 }")
+    writer.line("set_variable = { ccp_country_pages_shown = ccp_country_pages_last }")
+    writer.line("add_to_variable = { ccp_country_pages_shown = 1 }")
     writer.line("set_temp_variable = { ccp_page_first = var:ccp_country_page }")
     writer.line(f"multiply_temp_variable = {{ ccp_page_first = {COUNTRY_PAGE_SIZE} }}")
     writer.line("set_temp_variable = { ccp_page_last = var:ccp_page_first }")
@@ -383,6 +387,10 @@ def emit_state_effects(version: str) -> str:
 
     writer.open("CCP_state_load_page")
     writer.line("clear_array = ccp_state_page_items")
+    writer.line("set_variable = { ccp_state_page_shown = ccp_state_page }")
+    writer.line("add_to_variable = { ccp_state_page_shown = 1 }")
+    writer.line("set_variable = { ccp_state_pages_shown = ccp_state_pages_last }")
+    writer.line("add_to_variable = { ccp_state_pages_shown = 1 }")
     writer.line("set_temp_variable = { ccp_page_first = var:ccp_state_page }")
     writer.line(f"multiply_temp_variable = {{ ccp_page_first = {STATE_PAGE_SIZE} }}")
     writer.line("set_temp_variable = { ccp_page_last = var:ccp_page_first }")
@@ -640,12 +648,15 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line("CCP_equipment_next_page = yes")
     writer.close()
     writer.open("ccp_equipment_entry_add_click")
-    writer.line("set_variable = { ccp_equipment_selected = var:ccp_entry }")
+    writer.line("set_variable = { ccp_equipment_selected = var:v }")
     writer.line("CCP_equipment_grant = yes")
     writer.close()
     writer.open("ccp_equipment_entry_latest_click")
-    writer.line("set_variable = { ccp_equipment_selected = var:ccp_entry }")
+    writer.line("set_variable = { ccp_equipment_selected = var:v }")
     writer.line("CCP_equipment_grant_latest = yes")
+    writer.close()
+    writer.open("ccp_equipment_all_click")
+    writer.line("CCP_equipment_grant_category = yes")
     writer.close()
     for index, name in enumerate(folders, start=1):
         writer.open(f"ccp_research_category_{index}_click")
@@ -661,7 +672,7 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line("CCP_research_grant_folder = yes")
     writer.close()
     writer.open("ccp_research_entry_grant_click")
-    writer.line("set_variable = { ccp_research_selected = var:ccp_research_entry }")
+    writer.line("set_variable = { ccp_research_selected = var:v }")
     writer.line("CCP_research_grant = yes")
     writer.close()
     writer.open("ccp_country_prev_click")
@@ -718,17 +729,21 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     from . import interface as ui
 
     entry_windows = {
-        "equipment": ui.equipment_entry_window(),
-        "research": ui.research_entry_window(),
-        "country": ui.country_entry_window(),
-        "states": ui.state_entry_window(),
+        "equipment": (ui.equipment_entry_window(), False),
+        "research": (ui.research_entry_window(), False),
+        "country": (ui.country_entry_window(), True),
+        "states": (ui.state_entry_window(), True),
     }
-    for slug, window in entry_windows.items():
+    for slug, (window, scoped) in entry_windows.items():
         index = section_index(slug)
         for leaf in window.leaves():
             writer.open(f"{leaf}_visible")
-            writer.line(f"check_variable = {{ ccp_section = {index} }}")
-            writer.line("check_variable = { ccp_panel_open = 1 }")
+            if scoped:
+                writer.line(f"ROOT = {{ check_variable = {{ ccp_section = {index} }} }}")
+                writer.line("ROOT = { check_variable = { ccp_panel_open = 1 } }")
+            else:
+                writer.line(f"check_variable = {{ ccp_section = {index} }}")
+                writer.line("check_variable = { ccp_panel_open = 1 }")
             writer.close()
     for index, section in enumerate(SECTIONS, start=1):
         for leaf in containers[section.slug].leaves():
@@ -797,27 +812,19 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("dynamic_lists")
     writer.open("ccp_equipment_list")
     writer.line("array = ccp_equipment_page_items")
-    writer.line("value = ccp_entry")
-    writer.line("index = ccp_entry_index")
     writer.line('entry_container = "ccp_equipment_entry"')
     writer.close()
     writer.open("ccp_research_list")
     writer.line("array = ccp_research_page_items")
-    writer.line("value = ccp_research_entry")
-    writer.line("index = ccp_research_entry_index")
     writer.line('entry_container = "ccp_research_entry"')
     writer.close()
     writer.open("ccp_state_list")
     writer.line("array = ccp_state_page_items")
-    writer.line("value = ccp_state_entry_value")
-    writer.line("index = ccp_state_entry_index")
     writer.line("change_scope = yes")
     writer.line('entry_container = "ccp_state_entry"')
     writer.close()
     writer.open("ccp_country_list")
     writer.line("array = ccp_country_page_items")
-    writer.line("value = ccp_country_entry_value")
-    writer.line("index = ccp_country_entry_index")
     writer.line("change_scope = yes")
     writer.line('entry_container = "ccp_country_entry"')
     writer.close()
@@ -875,6 +882,8 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.STATE_ACTION} }}", "CCP_STATUS_STATE"),
             (f"check_variable = {{ ccp_status = {status.NATION_ACTION} }}", "CCP_STATUS_ACTION"),
             (f"check_variable = {{ ccp_status = {status.OVERFLOW_BLOCKED} }}", "CCP_STATUS_OVERFLOW"),
+            (f"check_variable = {{ ccp_status = {status.CATEGORY_GRANTED} }}", "CCP_STATUS_CATEGORY"),
+            (f"check_variable = {{ ccp_status = {status.SELECTION_FAILED} }}", "CCP_STATUS_SELECTION"),
         ],
         "CCP_STATUS_IDLE",
     )

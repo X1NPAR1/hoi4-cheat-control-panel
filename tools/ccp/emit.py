@@ -76,6 +76,10 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
 
     writer.open("CCP_equipment_load_page")
     writer.line("clear_array = ccp_equipment_page_items")
+    writer.line("set_variable = { ccp_equipment_page_shown = ccp_equipment_page }")
+    writer.line("add_to_variable = { ccp_equipment_page_shown = 1 }")
+    writer.line("set_variable = { ccp_equipment_pages_shown = ccp_equipment_pages_last }")
+    writer.line("add_to_variable = { ccp_equipment_pages_shown = 1 }")
     _emit_category_router(writer, categories, category_id, "CCP_equipment_load")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
@@ -126,8 +130,8 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
     writer.blank()
 
     writer.open("CCP_equipment_grant")
+    writer.line(f"set_variable = {{ ccp_status = {status.SELECTION_FAILED} }}")
     _emit_category_router(writer, categories, category_id, "CCP_equipment_grant")
-    writer.line(f"set_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
@@ -140,17 +144,42 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
             writer.open("limit")
             writer.line(f"check_variable = {{ ccp_equipment_selected = {index_of[item.key]} }}")
             writer.close()
+            writer.line("custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP")
+            writer.open("hidden_effect")
             writer.line(
                 f"add_equipment_to_stockpile = {{ type = {item.key} "
                 "amount = var:ccp_amount }"
             )
+            writer.line(f"set_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}")
+            writer.close()
             writer.close()
         writer.close()
         writer.blank()
 
+    writer.open("CCP_equipment_grant_category")
+    _emit_category_router(writer, categories, category_id, "CCP_equipment_all")
+    writer.line(f"set_variable = {{ ccp_status = {status.CATEGORY_GRANTED} }}")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    for name, items in grouped.items():
+        writer.open(f"CCP_equipment_all_{name}")
+        for item in items:
+            _dlc_limit(
+                writer,
+                item.dlc,
+                lambda item=item: writer.line(
+                    f"add_equipment_to_stockpile = {{ type = {item.key} "
+                    "amount = var:ccp_amount }"
+                ),
+            )
+        writer.close()
+        writer.blank()
+
     writer.open("CCP_equipment_grant_latest")
+    writer.line(f"set_variable = {{ ccp_status = {status.SELECTION_FAILED} }}")
     _emit_category_router(writer, categories, category_id, "CCP_equipment_grant_latest")
-    writer.line(f"set_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
@@ -164,10 +193,14 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
             writer.open("limit")
             writer.line(f"check_variable = {{ ccp_equipment_selected = {index_of[item.key]} }}")
             writer.close()
+            writer.line("custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP")
+            writer.open("hidden_effect")
             writer.line(
                 f"add_equipment_to_stockpile = {{ type = {newest.key} "
                 "amount = var:ccp_amount }"
             )
+            writer.line(f"set_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}")
+            writer.close()
             writer.close()
         writer.close()
         writer.blank()
@@ -194,7 +227,8 @@ def emit_equipment_localisation(catalogue: list[Equipment], version: str) -> str
     writer.blank()
 
     for name, variable in (
-        ("CCP_GetEquipmentName", "ccp_entry"),
+        ("CCP_GetEquipmentName", "v"),
+        ("CCP_GetEquipmentStock", "v"),
         ("CCP_GetEquipmentSelectedName", "ccp_equipment_selected"),
     ):
         _equipment_names(writer, catalogue, name, variable)
@@ -203,6 +237,7 @@ def emit_equipment_localisation(catalogue: list[Equipment], version: str) -> str
 
 
 def _equipment_names(writer: Writer, catalogue, name: str, variable: str) -> None:
+    stock = name.endswith("Stock")
     writer.open("defined_text")
     writer.line(f"name = {name}")
     for index, item in enumerate(catalogue):
@@ -210,7 +245,9 @@ def _equipment_names(writer: Writer, catalogue, name: str, variable: str) -> Non
         writer.open("trigger")
         writer.line(f"check_variable = {{ {variable} = {index} }}")
         writer.close()
-        writer.line(f"localization_key = {item.key}")
+        writer.line(
+            f"localization_key = CCP_EQSTOCK_{index}" if stock else f"localization_key = {item.key}"
+        )
         writer.close()
     writer.open("text")
     writer.line("localization_key = CCP_EQUIPMENT_UNKNOWN")
@@ -298,4 +335,7 @@ def emit_category_localisation(
         label = CATEGORY_LABELS.get(name, fallback)[index]
         flattened = label.replace(chr(10), chr(92) + "n")
         lines.append(f' CCP_EQCAT_{name.upper()}:0 "{flattened}"')
+
+    for position, item in enumerate(catalogue):
+        lines.append(f' CCP_EQSTOCK_{position}:0 "[?num_equipment@{item.key}|0]"')
     return "\n".join(lines) + "\n"

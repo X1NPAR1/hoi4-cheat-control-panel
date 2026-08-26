@@ -226,9 +226,7 @@ def _stat_card(name: str, column: int, row: int, label: str, value: str, tooltip
             f"ccp_card_{name}_plate",
             0,
             0,
-            sprite="GFX_ccp_card",
-            width=CARD_WIDTH,
-            height=CARD_HEIGHT,
+            sprite="GFX_ccp_plate_card",
         ),
         Text(
             f"ccp_card_{name}_label",
@@ -495,7 +493,7 @@ def _resource_row(index: int, resource) -> Container:
         height=t.ROW_HEIGHT - 8,
     )
     row.add(
-        Icon(f"ccp_row_{resource.slug}_plate", 0, 0, sprite="GFX_ccp_row"),
+        Icon(f"ccp_row_{resource.slug}_plate", 0, 0, sprite="GFX_ccp_plate_row_resource"),
         Text(
             f"ccp_row_{resource.slug}_label",
             12,
@@ -551,9 +549,38 @@ LIST_X = CONTENT_X + CATEGORY_WIDTH + 16
 LIST_WIDTH = PAD_X - LIST_X - 24
 ENTRY_HEIGHT = 32
 PAGE_SIZE = 16
+STOCK_WIDTH = 96
 
 
 def _equipment(categories: list[str]) -> Container:
+    return _browser(
+        "equipment",
+        categories,
+        lambda name: f"CCP_EQCAT_{name.upper()}",
+        "CCP_GetEquipmentCategoryName",
+        extra=[
+            Button(
+                "ccp_equipment_all",
+                LIST_X,
+                BODY_TOP + 70 + PAGE_SIZE * ENTRY_HEIGHT,
+                key="CCP_EQUIPMENT_ALL",
+                tooltip="CCP_EQUIPMENT_ALL_TOOLTIP",
+                width=button_width("CCP_EQUIPMENT_ALL"),
+                height=t.BUTTON_HEIGHT,
+            ),
+            Text(
+                "ccp_equipment_all_help",
+                LIST_X + button_width("CCP_EQUIPMENT_ALL") + 12,
+                BODY_TOP + 76 + PAGE_SIZE * ENTRY_HEIGHT,
+                key="CCP_EQUIPMENT_ALL_HELP",
+                width=LIST_WIDTH - button_width("CCP_EQUIPMENT_ALL") - 12,
+                height=18,
+            ),
+        ],
+    )
+
+
+def _equipment_unused(categories: list[str]) -> Container:
     section = Container("ccp_section_equipment", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
 
     section.add(
@@ -651,17 +678,25 @@ def equipment_entry_window() -> Container:
             "ccp_equipment_entry_plate",
             0,
             0,
-            sprite="GFX_ccp_list_row",
-            width=LIST_WIDTH,
-            height=ENTRY_HEIGHT - 2,
+            sprite="GFX_ccp_plate_row_equipment",
         ),
         Text(
             "ccp_equipment_entry_name",
             12,
             7,
             key="CCP_GetEquipmentName",
-            width=LIST_WIDTH - used - 28,
+            width=LIST_WIDTH - used - STOCK_WIDTH - 36,
             height=18,
+        ),
+        Text(
+            "ccp_equipment_entry_stock",
+            LIST_WIDTH - used - STOCK_WIDTH - 16,
+            7,
+            key="CCP_GetEquipmentStock",
+            width=STOCK_WIDTH,
+            height=18,
+            align="right",
+            tooltip="CCP_EQUIPMENT_STOCK_TOOLTIP",
         ),
     )
     entry.add(*buttons)
@@ -799,9 +834,7 @@ def research_entry_window() -> Container:
             "ccp_research_entry_plate",
             0,
             0,
-            sprite="GFX_ccp_list_row",
-            width=LIST_WIDTH,
-            height=ENTRY_HEIGHT - 2,
+            sprite="GFX_ccp_plate_row_equipment",
         ),
         Text(
             "ccp_research_entry_name",
@@ -897,9 +930,7 @@ def country_entry_window() -> Container:
             "ccp_country_entry_plate",
             0,
             0,
-            sprite="GFX_ccp_list_row",
-            width=COUNTRY_LIST_WIDTH,
-            height=COUNTRY_ENTRY_HEIGHT - 2,
+            sprite="GFX_ccp_plate_row_country",
         ),
         Text(
             "ccp_country_entry_name",
@@ -1064,9 +1095,7 @@ def state_entry_window() -> Container:
             "ccp_state_entry_plate",
             0,
             0,
-            sprite="GFX_ccp_list_row",
-            width=STATE_LIST_WIDTH,
-            height=STATE_ENTRY_HEIGHT - 2,
+            sprite="GFX_ccp_plate_row_state",
         ),
         Text(
             "ccp_state_entry_name",
@@ -1089,12 +1118,19 @@ def state_entry_window() -> Container:
     return entry
 
 
+def picker_width() -> int:
+    widths = [
+        button_width(action.key, "GFX_ccp_button_small") for action in STATE_ACTIONS
+    ]
+    return sum(widths) + 6 * (len(widths) - 1) + 20
+
+
 def state_picker_window() -> Container:
     """Attached to the state view, so clicking a state on the map acts on it directly."""
     widths = [
         button_width(action.key, "GFX_ccp_button_small") for action in STATE_ACTIONS
     ]
-    width = sum(widths) + 6 * (len(widths) - 1) + 20
+    width = picker_width()
     window = Container(
         "ccp_state_picker_window",
         0,
@@ -1104,7 +1140,7 @@ def state_picker_window() -> Container:
         clipping=False,
     )
     window.add(
-        Icon("ccp_picker_plate", 0, 0, sprite="GFX_ccp_card", width=width, height=68),
+        Icon("ccp_picker_plate", 0, 0, sprite="GFX_ccp_plate_picker"),
         Text(
             "ccp_picker_title",
             10,
@@ -1171,9 +1207,7 @@ def _action_section(slug: str) -> Container:
                 f"ccp_action_{action.slug}_plate",
                 0,
                 0,
-                sprite="GFX_ccp_card",
-                width=ACTION_CARD_WIDTH,
-                height=ACTION_CARD_HEIGHT,
+                sprite="GFX_ccp_plate_action",
             ),
             Text(
                 f"ccp_action_{action.slug}_help",
@@ -1239,9 +1273,7 @@ def _history() -> Container:
                 f"ccp_history_row_{slot + 1}_plate",
                 0,
                 0,
-                sprite="GFX_ccp_list_row",
-                width=HISTORY_WIDTH,
-                height=HISTORY_ROW_HEIGHT - 2,
+                sprite="GFX_ccp_plate_row_history",
             ),
             Text(
                 f"ccp_history_row_{slot + 1}_text",

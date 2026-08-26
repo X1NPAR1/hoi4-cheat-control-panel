@@ -100,6 +100,10 @@ CCP_research_select_nsb_armour_folder = {
 
 CCP_research_load_page = {
 	clear_array = ccp_research_page_items
+	set_variable = { ccp_research_page_shown = ccp_research_page }
+	add_to_variable = { ccp_research_page_shown = 1 }
+	set_variable = { ccp_research_pages_shown = ccp_research_pages_last }
+	add_to_variable = { ccp_research_pages_shown = 1 }
 	if = {
 		limit = {
 			check_variable = { ccp_research_folder = 1 }
@@ -1543,6 +1547,7 @@ CCP_research_prev_page = {
 }
 
 CCP_research_grant = {
+	set_variable = { ccp_status = 14 }
 	if = {
 		limit = {
 			check_variable = { ccp_research_folder = 1 }
@@ -1615,7 +1620,6 @@ CCP_research_grant = {
 		}
 		CCP_research_grant_nsb_armour_folder = yes
 	}
-	set_variable = { ccp_status = 6 }
 	CCP_mark_dirty = yes
 }
 
@@ -1624,259 +1628,431 @@ CCP_research_grant_infantry_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 0 }
 		}
-		set_technology = { armored_car1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armored_car1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 1 }
 		}
-		set_technology = { infantry_weapons = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { infantry_weapons = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 2 }
 		}
-		set_technology = { support_weapons = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { support_weapons = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 3 }
 		}
-		set_technology = { infantry_weapons1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { infantry_weapons1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 4 }
 		}
-		set_technology = { marines = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { marines = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 5 }
 		}
-		set_technology = { motorised_infantry = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { motorised_infantry = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 6 }
 		}
-		set_technology = { paratroopers = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { paratroopers = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 7 }
 		}
-		set_technology = { rangers_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rangers_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 8 }
 		}
-		set_technology = { tech_mountaineers = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_mountaineers = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 9 }
 		}
-		set_technology = { tech_trucks = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_trucks = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 10 }
 		}
-		set_technology = { infantry_weapons2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { infantry_weapons2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 11 }
 		}
-		set_technology = { support_weapons2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { support_weapons2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 12 }
 		}
-		set_technology = { tech_special_forces = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_special_forces = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 13 }
 		}
-		set_technology = { improved_infantry_weapons = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_infantry_weapons = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 14 }
 		}
-		set_technology = { marines2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { marines2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 15 }
 		}
-		set_technology = { paratroopers2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { paratroopers2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 16 }
 		}
-		set_technology = { rangers_tech2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rangers_tech2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 17 }
 		}
-		set_technology = { tech_mountaineers2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_mountaineers2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 18 }
 		}
-		set_technology = { advanced_special_forces = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_special_forces = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 19 }
 		}
-		set_technology = { armored_car2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armored_car2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 20 }
 		}
-		set_technology = { improved_infantry_weapons_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_infantry_weapons_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 21 }
 		}
-		set_technology = { improved_special_forces = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_special_forces = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 22 }
 		}
-		set_technology = { mechanised_infantry = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mechanised_infantry = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 23 }
 		}
-		set_technology = { support_weapons3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { support_weapons3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 24 }
 		}
-		set_technology = { amphibious_mechanized_infantry = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { amphibious_mechanized_infantry = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 25 }
 		}
-		set_technology = { advanced_infantry_weapons = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_infantry_weapons = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 26 }
 		}
-		set_technology = { armored_car3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armored_car3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 27 }
 		}
-		set_technology = { extreme_environment_training = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { extreme_environment_training = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 28 }
 		}
-		set_technology = { infantry_at = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { infantry_at = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 29 }
 		}
-		set_technology = { mechanised_infantry2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mechanised_infantry2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 30 }
 		}
-		set_technology = { support_weapons4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { support_weapons4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 31 }
 		}
-		set_technology = { survival_training = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { survival_training = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 32 }
 		}
-		set_technology = { amphibious_mechanized_infantry_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { amphibious_mechanized_infantry_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 33 }
 		}
-		set_technology = { infantry_at2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { infantry_at2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 34 }
 		}
-		set_technology = { marines3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { marines3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 35 }
 		}
-		set_technology = { night_vision = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { night_vision = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 36 }
 		}
-		set_technology = { paratroopers3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { paratroopers3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 37 }
 		}
-		set_technology = { rangers_tech3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rangers_tech3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 38 }
 		}
-		set_technology = { tech_mountaineers3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_mountaineers3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 39 }
 		}
-		set_technology = { advanced_infantry_weapons2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_infantry_weapons2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 40 }
 		}
-		set_technology = { elite_forces = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { elite_forces = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 41 }
 		}
-		set_technology = { mechanised_infantry3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mechanised_infantry3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 42 }
 		}
-		set_technology = { night_vision2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { night_vision2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -1885,241 +2061,401 @@ CCP_research_grant_support_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 43 }
 		}
-		set_technology = { basic_train = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_train = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 44 }
 		}
-		set_technology = { tech_support = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_support = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 45 }
 		}
-		set_technology = { armored_train = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armored_train = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 46 }
 		}
-		set_technology = { railway_gun = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { railway_gun = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 47 }
 		}
-		set_technology = { tech_engineers = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_engineers = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 48 }
 		}
-		set_technology = { tech_field_hospital = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_field_hospital = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 49 }
 		}
-		set_technology = { tech_logistics_company = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_logistics_company = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 50 }
 		}
-		set_technology = { tech_maintenance_company = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_maintenance_company = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 51 }
 		}
-		set_technology = { tech_military_police = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_military_police = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 52 }
 		}
-		set_technology = { tech_recon = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_recon = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 53 }
 		}
-		set_technology = { tech_signal_company = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_signal_company = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 54 }
 		}
-		set_technology = { sp_armored_engineer_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_engineer_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 55 }
 		}
-		set_technology = { sp_armored_maintenance_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_maintenance_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 56 }
 		}
-		set_technology = { sp_armored_motorized_military_police_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_motorized_military_police_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 57 }
 		}
-		set_technology = { sp_armored_signal_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_signal_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 58 }
 		}
-		set_technology = { sp_helicopter_artillery_observers_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_helicopter_artillery_observers_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 59 }
 		}
-		set_technology = { sp_helicopter_med_evac_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_helicopter_med_evac_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 60 }
 		}
-		set_technology = { sp_helicopter_transport_pods_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_helicopter_transport_pods_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 61 }
 		}
-		set_technology = { tech_engineers2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_engineers2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 62 }
 		}
-		set_technology = { tech_field_hospital2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_field_hospital2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 63 }
 		}
-		set_technology = { tech_logistics_company2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_logistics_company2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 64 }
 		}
-		set_technology = { tech_maintenance_company2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_maintenance_company2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 65 }
 		}
-		set_technology = { tech_military_police2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_military_police2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 66 }
 		}
-		set_technology = { tech_recon2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_recon2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 67 }
 		}
-		set_technology = { tech_signal_company2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_signal_company2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 68 }
 		}
-		set_technology = { wartime_train = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { wartime_train = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 69 }
 		}
-		set_technology = { tech_engineers3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_engineers3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 70 }
 		}
-		set_technology = { tech_field_hospital3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_field_hospital3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 71 }
 		}
-		set_technology = { tech_logistics_company3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_logistics_company3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 72 }
 		}
-		set_technology = { tech_maintenance_company3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_maintenance_company3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 73 }
 		}
-		set_technology = { tech_military_police3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_military_police3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 74 }
 		}
-		set_technology = { tech_recon3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_recon3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 75 }
 		}
-		set_technology = { tech_signal_company3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_signal_company3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 76 }
 		}
-		set_technology = { tech_engineers4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_engineers4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 77 }
 		}
-		set_technology = { tech_field_hospital4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_field_hospital4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 78 }
 		}
-		set_technology = { tech_logistics_company4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_logistics_company4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 79 }
 		}
-		set_technology = { tech_maintenance_company4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_maintenance_company4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 80 }
 		}
-		set_technology = { tech_military_police4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_military_police4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 81 }
 		}
-		set_technology = { tech_recon4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_recon4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 82 }
 		}
-		set_technology = { tech_signal_company4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tech_signal_company4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -2128,169 +2464,281 @@ CCP_research_grant_artillery_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 83 }
 		}
-		set_technology = { gw_artillery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { gw_artillery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 84 }
 		}
-		set_technology = { interwar_antiair = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { interwar_antiair = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 85 }
 		}
-		set_technology = { interwar_antitank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { interwar_antitank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 86 }
 		}
-		set_technology = { interwar_artillery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { interwar_artillery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 87 }
 		}
-		set_technology = { antiair1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antiair1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 88 }
 		}
-		set_technology = { antitank1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antitank1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 89 }
 		}
-		set_technology = { artillery1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { artillery1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 90 }
 		}
-		set_technology = { antiair2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antiair2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 91 }
 		}
-		set_technology = { antitank2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antitank2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 92 }
 		}
-		set_technology = { artillery2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { artillery2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 93 }
 		}
-		set_technology = { rocket_artillery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rocket_artillery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 94 }
 		}
-		set_technology = { sp_artillery_purpose_built_gun_motor_carriages_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_artillery_purpose_built_gun_motor_carriages_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 95 }
 		}
-		set_technology = { sp_artillery_rocket_assisted_projectiles_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_artillery_rocket_assisted_projectiles_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 96 }
 		}
-		set_technology = { antiair3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antiair3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 97 }
 		}
-		set_technology = { antitank3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antitank3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 98 }
 		}
-		set_technology = { artillery3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { artillery3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 99 }
 		}
-		set_technology = { rocket_artillery2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rocket_artillery2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 100 }
 		}
-		set_technology = { sp_shock_hardening_techniques = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_shock_hardening_techniques = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 101 }
 		}
-		set_technology = { antiair4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antiair4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 102 }
 		}
-		set_technology = { antitank4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antitank4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 103 }
 		}
-		set_technology = { artillery4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { artillery4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 104 }
 		}
-		set_technology = { rocket_artillery3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rocket_artillery3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 105 }
 		}
-		set_technology = { sp_advance_sabot_shells = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_advance_sabot_shells = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 106 }
 		}
-		set_technology = { sp_variable_time_fuze_shells = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_variable_time_fuze_shells = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 107 }
 		}
-		set_technology = { antiair5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antiair5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 108 }
 		}
-		set_technology = { antitank5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { antitank5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 109 }
 		}
-		set_technology = { artillery5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { artillery5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 110 }
 		}
-		set_technology = { rocket_artillery4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rocket_artillery4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -2299,181 +2747,301 @@ CCP_research_grant_naval_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 111 }
 		}
-		set_technology = { early_battlecruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_battlecruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 112 }
 		}
-		set_technology = { early_battleship = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_battleship = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 113 }
 		}
-		set_technology = { early_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 114 }
 		}
-		set_technology = { early_destroyer = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_destroyer = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 115 }
 		}
-		set_technology = { early_heavy_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_heavy_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 116 }
 		}
-		set_technology = { early_light_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_light_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 117 }
 		}
-		set_technology = { early_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 118 }
 		}
-		set_technology = { transport = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { transport = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 119 }
 		}
-		set_technology = { basic_battleship = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_battleship = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 120 }
 		}
-		set_technology = { basic_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 121 }
 		}
-		set_technology = { basic_destroyer = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_destroyer = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 122 }
 		}
-		set_technology = { basic_heavy_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_heavy_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 123 }
 		}
-		set_technology = { basic_light_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_light_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 124 }
 		}
-		set_technology = { basic_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 125 }
 		}
-		set_technology = { basic_battlecruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_battlecruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 126 }
 		}
-		set_technology = { improved_battleship = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_battleship = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 127 }
 		}
-		set_technology = { improved_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 128 }
 		}
-		set_technology = { improved_destroyer = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_destroyer = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 129 }
 		}
-		set_technology = { improved_heavy_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_heavy_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 130 }
 		}
-		set_technology = { improved_light_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_light_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 131 }
 		}
-		set_technology = { improved_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 132 }
 		}
-		set_technology = { landing_craft = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { landing_craft = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 133 }
 		}
-		set_technology = { advanced_battleship = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_battleship = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 134 }
 		}
-		set_technology = { advanced_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 135 }
 		}
-		set_technology = { advanced_destroyer = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_destroyer = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 136 }
 		}
-		set_technology = { advanced_heavy_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_heavy_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 137 }
 		}
-		set_technology = { advanced_light_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_light_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 138 }
 		}
-		set_technology = { advanced_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 139 }
 		}
-		set_technology = { heavy_battleship2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { heavy_battleship2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 140 }
 		}
-		set_technology = { tank_landing_craft = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tank_landing_craft = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -2482,181 +3050,301 @@ CCP_research_grant_air_techs_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 141 }
 		}
-		set_technology = { early_bomber = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_bomber = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 142 }
 		}
-		set_technology = { early_fighter = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_fighter = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 143 }
 		}
-		set_technology = { early_transport_plane = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_transport_plane = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 144 }
 		}
-		set_technology = { CAS1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { CAS1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 145 }
 		}
-		set_technology = { fighter1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fighter1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 146 }
 		}
-		set_technology = { heavy_fighter1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { heavy_fighter1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 147 }
 		}
-		set_technology = { naval_bomber1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { naval_bomber1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 148 }
 		}
-		set_technology = { scout_plane1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { scout_plane1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 149 }
 		}
-		set_technology = { strategic_bomber1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { strategic_bomber1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 150 }
 		}
-		set_technology = { tactical_bomber1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tactical_bomber1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 151 }
 		}
-		set_technology = { CAS2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { CAS2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 152 }
 		}
-		set_technology = { fighter2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fighter2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 153 }
 		}
-		set_technology = { heavy_fighter2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { heavy_fighter2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 154 }
 		}
-		set_technology = { improved_transport_plane = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_transport_plane = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 155 }
 		}
-		set_technology = { naval_bomber2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { naval_bomber2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 156 }
 		}
-		set_technology = { scout_plane2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { scout_plane2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 157 }
 		}
-		set_technology = { strategic_bomber2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { strategic_bomber2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 158 }
 		}
-		set_technology = { tactical_bomber2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tactical_bomber2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 159 }
 		}
-		set_technology = { CAS3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { CAS3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 160 }
 		}
-		set_technology = { fighter3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fighter3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 161 }
 		}
-		set_technology = { heavy_fighter3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { heavy_fighter3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 162 }
 		}
-		set_technology = { naval_bomber3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { naval_bomber3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 163 }
 		}
-		set_technology = { strategic_bomber3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { strategic_bomber3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 164 }
 		}
-		set_technology = { tactical_bomber3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { tactical_bomber3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 165 }
 		}
-		set_technology = { jet_fighter1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { jet_fighter1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 166 }
 		}
-		set_technology = { jet_tactical_bomber1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { jet_tactical_bomber1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 167 }
 		}
-		set_technology = { strategic_airlifter = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { strategic_airlifter = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 168 }
 		}
-		set_technology = { jet_fighter2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { jet_fighter2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 169 }
 		}
-		set_technology = { jet_strategic_bomber1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { jet_strategic_bomber1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 170 }
 		}
-		set_technology = { jet_tactical_bomber2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { jet_tactical_bomber2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -2665,199 +3353,331 @@ CCP_research_grant_electronics_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 171 }
 		}
-		set_technology = { advanced_fire_control_system = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_fire_control_system = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 172 }
 		}
-		set_technology = { basic_fire_control_system = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_fire_control_system = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 173 }
 		}
-		set_technology = { basic_fortification_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_fortification_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 174 }
 		}
-		set_technology = { coastal_fort_tech_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { coastal_fort_tech_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 175 }
 		}
-		set_technology = { electronic_mechanical_engineering = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { electronic_mechanical_engineering = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 176 }
 		}
-		set_technology = { improved_fire_control_system = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_fire_control_system = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 177 }
 		}
-		set_technology = { mechanical_computing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mechanical_computing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 178 }
 		}
-		set_technology = { radio = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { radio = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 179 }
 		}
-		set_technology = { basic_decryption = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_decryption = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 180 }
 		}
-		set_technology = { basic_encryption = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_encryption = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 181 }
 		}
-		set_technology = { cavity_magnatron = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { cavity_magnatron = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 182 }
 		}
-		set_technology = { computing_machine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { computing_machine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 183 }
 		}
-		set_technology = { improved_radio = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_radio = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 184 }
 		}
-		set_technology = { land_fort_tech_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { land_fort_tech_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 185 }
 		}
-		set_technology = { atomic_research = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { atomic_research = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 186 }
 		}
-		set_technology = { centimetric_radar = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { centimetric_radar = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 187 }
 		}
-		set_technology = { coastal_fort_tech_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { coastal_fort_tech_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 188 }
 		}
-		set_technology = { improved_computing_machine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_computing_machine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 189 }
 		}
-		set_technology = { improved_decryption = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_decryption = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 190 }
 		}
-		set_technology = { improved_encryption = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_encryption = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 191 }
 		}
-		set_technology = { land_fort_tech_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { land_fort_tech_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 192 }
 		}
-		set_technology = { advanced_radio = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_radio = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 193 }
 		}
-		set_technology = { phased_array = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { phased_array = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 194 }
 		}
-		set_technology = { advanced_computing_machine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_computing_machine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 195 }
 		}
-		set_technology = { advanced_decryption = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_decryption = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 196 }
 		}
-		set_technology = { advanced_encryption = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_encryption = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 197 }
 		}
-		set_technology = { experimental_rockets = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { experimental_rockets = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 198 }
 		}
-		set_technology = { monopulse_radar = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { monopulse_radar = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 199 }
 		}
-		set_technology = { sp_rockets_improved_guidance = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_rockets_improved_guidance = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 200 }
 		}
-		set_technology = { sp_rockets_dual_chamber_rocket_engine_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_rockets_dual_chamber_rocket_engine_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 201 }
 		}
-		set_technology = { sp_rockets_rocket_bomber = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_rockets_rocket_bomber = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 202 }
 		}
-		set_technology = { sp_rockets_improved_rocket_bomber = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_rockets_improved_rocket_bomber = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 203 }
 		}
-		set_technology = { sp_rockets_dual_chamber_rocket_engine_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_rockets_dual_chamber_rocket_engine_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -2866,259 +3686,431 @@ CCP_research_grant_industry_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 204 }
 		}
-		set_technology = { basic_machine_tools = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_machine_tools = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 205 }
 		}
-		set_technology = { concentrated_industry = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { concentrated_industry = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 206 }
 		}
-		set_technology = { construction1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { construction1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 207 }
 		}
-		set_technology = { dispersed_industry = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { dispersed_industry = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 208 }
 		}
-		set_technology = { excavation1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { excavation1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 209 }
 		}
-		set_technology = { fuel_refining = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fuel_refining = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 210 }
 		}
-		set_technology = { fuel_silos = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fuel_silos = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 211 }
 		}
-		set_technology = { synth_oil_experiments = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { synth_oil_experiments = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 212 }
 		}
-		set_technology = { concentrated_industry2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { concentrated_industry2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 213 }
 		}
-		set_technology = { construction2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { construction2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 214 }
 		}
-		set_technology = { dispersed_industry2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { dispersed_industry2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 215 }
 		}
-		set_technology = { excavation2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { excavation2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 216 }
 		}
-		set_technology = { fuel_refining2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fuel_refining2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 217 }
 		}
-		set_technology = { improved_equipment_conversion = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_equipment_conversion = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 218 }
 		}
-		set_technology = { improved_machine_tools = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_machine_tools = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 219 }
 		}
-		set_technology = { oil_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { oil_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 220 }
 		}
-		set_technology = { rubber_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { rubber_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 221 }
 		}
-		set_technology = { advanced_equipment_conversion = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_equipment_conversion = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 222 }
 		}
-		set_technology = { advanced_machine_tools = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_machine_tools = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 223 }
 		}
-		set_technology = { concentrated_industry3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { concentrated_industry3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 224 }
 		}
-		set_technology = { construction3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { construction3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 225 }
 		}
-		set_technology = { dispersed_industry3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { dispersed_industry3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 226 }
 		}
-		set_technology = { excavation3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { excavation3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 227 }
 		}
-		set_technology = { fuel_refining3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fuel_refining3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 228 }
 		}
-		set_technology = { improved_oil_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_oil_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 229 }
 		}
-		set_technology = { improved_rubber_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_rubber_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 230 }
 		}
-		set_technology = { advanced_oil_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_oil_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 231 }
 		}
-		set_technology = { advanced_rubber_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_rubber_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 232 }
 		}
-		set_technology = { assembly_line_production = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { assembly_line_production = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 233 }
 		}
-		set_technology = { concentrated_industry4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { concentrated_industry4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 234 }
 		}
-		set_technology = { construction4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { construction4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 235 }
 		}
-		set_technology = { dispersed_industry4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { dispersed_industry4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 236 }
 		}
-		set_technology = { excavation4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { excavation4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 237 }
 		}
-		set_technology = { fuel_refining4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fuel_refining4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 238 }
 		}
-		set_technology = { concentrated_industry5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { concentrated_industry5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 239 }
 		}
-		set_technology = { construction5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { construction5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 240 }
 		}
-		set_technology = { dispersed_industry5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { dispersed_industry5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 241 }
 		}
-		set_technology = { excavation5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { excavation5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 242 }
 		}
-		set_technology = { flexible_line = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { flexible_line = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 243 }
 		}
-		set_technology = { fuel_refining5 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fuel_refining5 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 244 }
 		}
-		set_technology = { modern_oil_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_oil_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 245 }
 		}
-		set_technology = { modern_rubber_processing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_rubber_processing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 246 }
 		}
-		set_technology = { streamlined_line = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { streamlined_line = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -3127,85 +4119,141 @@ CCP_research_grant_armour_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 247 }
 		}
-		set_technology = { gwtank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { gwtank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 271 }
 		}
-		set_technology = { basic_heavy_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_heavy_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 273 }
 		}
-		set_technology = { basic_light_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_light_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 302 }
 		}
-		set_technology = { improved_light_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_light_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 320 }
 		}
-		set_technology = { basic_medium_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_medium_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 334 }
 		}
-		set_technology = { amphibious_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { amphibious_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 346 }
 		}
-		set_technology = { advanced_light_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_light_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 351 }
 		}
-		set_technology = { improved_heavy_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_heavy_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 352 }
 		}
-		set_technology = { improved_medium_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_medium_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 354 }
 		}
-		set_technology = { super_heavy_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { super_heavy_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 360 }
 		}
-		set_technology = { amphibious_tank_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { amphibious_tank_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 369 }
 		}
-		set_technology = { advanced_heavy_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_heavy_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 371 }
 		}
-		set_technology = { advanced_medium_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_medium_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 403 }
 		}
-		set_technology = { main_battle_tank = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { main_battle_tank = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -3214,247 +4262,411 @@ CCP_research_grant_bba_air_techs_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 249 }
 		}
-		set_technology = { aa_lmg = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aa_lmg = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 255 }
 		}
-		set_technology = { early_bombs = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_bombs = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 261 }
 		}
-		set_technology = { engines_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engines_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 263 }
 		}
-		set_technology = { photo_reconnaisance = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { photo_reconnaisance = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 267 }
 		}
-		set_technology = { iw_large_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { iw_large_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 268 }
 		}
-		set_technology = { iw_medium_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { iw_medium_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 269 }
 		}
-		set_technology = { iw_small_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { iw_small_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 270 }
 		}
-		set_technology = { bba_early_transport_plane = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { bba_early_transport_plane = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 276 }
 		}
-		set_technology = { air_torpedoe_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { air_torpedoe_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 277 }
 		}
-		set_technology = { aircraft_construction = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aircraft_construction = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 278 }
 		}
-		set_technology = { armor_piercing_bombs = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armor_piercing_bombs = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 283 }
 		}
-		set_technology = { basic_large_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_large_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 286 }
 		}
-		set_technology = { basic_medium_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_medium_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 292 }
 		}
-		set_technology = { basic_small_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_small_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 296 }
 		}
-		set_technology = { engines_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engines_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 308 }
 		}
-		set_technology = { range_improvements = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { range_improvements = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 315 }
 		}
-		set_technology = { aa_cannon_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aa_cannon_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 316 }
 		}
-		set_technology = { aa_hmg = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aa_hmg = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 330 }
 		}
-		set_technology = { survivability_studies = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { survivability_studies = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 333 }
 		}
-		set_technology = { air_torpedoe_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { air_torpedoe_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 335 }
 		}
-		set_technology = { bba_improved_transport_plane = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { bba_improved_transport_plane = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 336 }
 		}
-		set_technology = { engines_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engines_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 337 }
 		}
-		set_technology = { heavy_bombs = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { heavy_bombs = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 340 }
 		}
-		set_technology = { improved_large_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_large_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 341 }
 		}
-		set_technology = { improved_medium_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_medium_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 343 }
 		}
-		set_technology = { improved_small_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_small_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 364 }
 		}
-		set_technology = { reinforced_wings_mothership = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { reinforced_wings_mothership = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 368 }
 		}
-		set_technology = { aa_cannon_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aa_cannon_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 389 }
 		}
-		set_technology = { advanced_large_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_large_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 391 }
 		}
-		set_technology = { advanced_medium_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_medium_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 392 }
 		}
-		set_technology = { advanced_small_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_small_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 393 }
 		}
-		set_technology = { air_torpedoe_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { air_torpedoe_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 396 }
 		}
-		set_technology = { engines_4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engines_4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 397 }
 		}
-		set_technology = { miniature_fighters = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { miniature_fighters = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 401 }
 		}
-		set_technology = { aa_cannon_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aa_cannon_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 402 }
 		}
-		set_technology = { bba_strategic_airlifter = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { bba_strategic_airlifter = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 405 }
 		}
-		set_technology = { modern_large_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_large_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 406 }
 		}
-		set_technology = { modern_medium_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_medium_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 407 }
 		}
-		set_technology = { modern_small_airframe = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_small_airframe = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 409 }
 		}
-		set_technology = { sp_centrifugal_jet_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_centrifugal_jet_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 410 }
 		}
-		set_technology = { aerial_hangars = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { aerial_hangars = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -3463,229 +4675,381 @@ CCP_research_grant_mtgnavalfolder = {
 		limit = {
 			check_variable = { ccp_research_selected = 251 }
 		}
-		set_technology = { basic_cruiser_armor_scheme = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_cruiser_armor_scheme = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 252 }
 		}
-		set_technology = { basic_depth_charges = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_depth_charges = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 256 }
 		}
-		set_technology = { early_ship_hull_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_ship_hull_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 257 }
 		}
-		set_technology = { early_ship_hull_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_ship_hull_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 258 }
 		}
-		set_technology = { early_ship_hull_heavy = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_ship_hull_heavy = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 259 }
 		}
-		set_technology = { early_ship_hull_light = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_ship_hull_light = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 260 }
 		}
-		set_technology = { early_ship_hull_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { early_ship_hull_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 264 }
 		}
-		set_technology = { smoke_generator = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { smoke_generator = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 265 }
 		}
-		set_technology = { sonar = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sonar = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 280 }
 		}
-		set_technology = { basic_heavy_armor_scheme = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_heavy_armor_scheme = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 287 }
 		}
-		set_technology = { basic_ship_hull_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_ship_hull_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 288 }
 		}
-		set_technology = { basic_ship_hull_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_ship_hull_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 289 }
 		}
-		set_technology = { basic_ship_hull_heavy = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_ship_hull_heavy = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 290 }
 		}
-		set_technology = { basic_ship_hull_light = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_ship_hull_light = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 291 }
 		}
-		set_technology = { basic_ship_hull_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_ship_hull_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 300 }
 		}
-		set_technology = { improved_depth_charges = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_depth_charges = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 301 }
 		}
-		set_technology = { improved_heavy_armor_scheme = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_heavy_armor_scheme = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 306 }
 		}
-		set_technology = { improved_sonar = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_sonar = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 317 }
 		}
-		set_technology = { advanced_depth_charges = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_depth_charges = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 318 }
 		}
-		set_technology = { advanced_sonar = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_sonar = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 321 }
 		}
-		set_technology = { basic_submarine_snorkel = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_submarine_snorkel = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 324 }
 		}
-		set_technology = { improved_ship_hull_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_ship_hull_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 325 }
 		}
-		set_technology = { improved_ship_hull_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_ship_hull_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 326 }
 		}
-		set_technology = { improved_ship_hull_heavy = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_ship_hull_heavy = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 327 }
 		}
-		set_technology = { improved_ship_hull_light = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_ship_hull_light = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 328 }
 		}
-		set_technology = { improved_ship_hull_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_ship_hull_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 329 }
 		}
-		set_technology = { sp_aip_engine_improved_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_aip_engine_improved_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 367 }
 		}
-		set_technology = { sp_refined_pykrete = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_refined_pykrete = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 373 }
 		}
-		set_technology = { advanced_ship_hull_carrier = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_ship_hull_carrier = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 374 }
 		}
-		set_technology = { advanced_ship_hull_cruiser = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_ship_hull_cruiser = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 375 }
 		}
-		set_technology = { advanced_ship_hull_heavy = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_ship_hull_heavy = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 376 }
 		}
-		set_technology = { advanced_ship_hull_light = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_ship_hull_light = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 377 }
 		}
-		set_technology = { advanced_ship_hull_submarine = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_ship_hull_submarine = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 378 }
 		}
-		set_technology = { improved_submarine_snorkel = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_submarine_snorkel = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 379 }
 		}
-		set_technology = { modern_depth_charges = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_depth_charges = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 380 }
 		}
-		set_technology = { modern_sonar = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_sonar = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 381 }
 		}
-		set_technology = { sp_aip_engine_advanced_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_aip_engine_advanced_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 400 }
 		}
-		set_technology = { sp_ice_composite_runawayas = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_ice_composite_runawayas = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -3694,259 +5058,431 @@ CCP_research_grant_mtgnavalsupportfolder = {
 		limit = {
 			check_variable = { ccp_research_selected = 250 }
 		}
-		set_technology = { basic_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 253 }
 		}
-		set_technology = { basic_naval_mines = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_naval_mines = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 254 }
 		}
-		set_technology = { basic_torpedo = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_torpedo = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 262 }
 		}
-		set_technology = { mtg_transport = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mtg_transport = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 266 }
 		}
-		set_technology = { submarine_mine_laying = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { submarine_mine_laying = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 281 }
 		}
-		set_technology = { basic_heavy_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_heavy_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 282 }
 		}
-		set_technology = { basic_heavy_shell = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_heavy_shell = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 284 }
 		}
-		set_technology = { basic_light_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_light_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 285 }
 		}
-		set_technology = { basic_light_shell = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_light_shell = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 293 }
 		}
-		set_technology = { damage_control_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { damage_control_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 294 }
 		}
-		set_technology = { damage_control_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { damage_control_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 295 }
 		}
-		set_technology = { damage_control_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { damage_control_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 297 }
 		}
-		set_technology = { fire_control_methods_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fire_control_methods_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 298 }
 		}
-		set_technology = { fire_control_methods_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fire_control_methods_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 299 }
 		}
-		set_technology = { fire_control_methods_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { fire_control_methods_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 304 }
 		}
-		set_technology = { improved_naval_mines = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_naval_mines = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 305 }
 		}
-		set_technology = { improved_ship_torpedo_launcher = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_ship_torpedo_launcher = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 307 }
 		}
-		set_technology = { magnetic_detonator = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { magnetic_detonator = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 312 }
 		}
-		set_technology = { degaussing = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { degaussing = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 314 }
 		}
-		set_technology = { sp_multi_product_supply_ships = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_multi_product_supply_ships = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 319 }
 		}
-		set_technology = { basic_dp_light_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_dp_light_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 322 }
 		}
-		set_technology = { improved_heavy_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_heavy_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 323 }
 		}
-		set_technology = { improved_light_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_light_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 331 }
 		}
-		set_technology = { advanced_naval_mines = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_naval_mines = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 332 }
 		}
-		set_technology = { advanced_ship_torpedo_launcher = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_ship_torpedo_launcher = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 338 }
 		}
-		set_technology = { improved_dp_light_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_dp_light_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 344 }
 		}
-		set_technology = { improved_submarine_mine_laying = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_submarine_mine_laying = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 345 }
 		}
-		set_technology = { mtg_landing_craft = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mtg_landing_craft = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 356 }
 		}
-		set_technology = { airdrop_mines = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { airdrop_mines = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 357 }
 		}
-		set_technology = { airdrop_mines_bba = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { airdrop_mines_bba = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 358 }
 		}
-		set_technology = { airsweep_mines = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { airsweep_mines = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 359 }
 		}
-		set_technology = { airsweep_mines_bba = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { airsweep_mines_bba = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 361 }
 		}
-		set_technology = { homing_torpedo = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { homing_torpedo = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 362 }
 		}
-		set_technology = { improved_heavy_shell = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_heavy_shell = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 363 }
 		}
-		set_technology = { improved_light_shell = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_light_shell = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 365 }
 		}
-		set_technology = { sp_improved_repair_ship = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_improved_repair_ship = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 366 }
 		}
-		set_technology = { sp_improved_support_ship = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_improved_support_ship = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 386 }
 		}
-		set_technology = { sp_standard_tenshioned_replenishment_alongside_method = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_standard_tenshioned_replenishment_alongside_method = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 387 }
 		}
-		set_technology = { advanced_dp_light_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_dp_light_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 388 }
 		}
-		set_technology = { advanced_heavy_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_heavy_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 390 }
 		}
-		set_technology = { advanced_light_battery = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_light_battery = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 398 }
 		}
-		set_technology = { modern_ship_torpedo_launcher = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { modern_ship_torpedo_launcher = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 399 }
 		}
-		set_technology = { mtg_tank_landing_craft = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { mtg_tank_landing_craft = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 
@@ -3955,169 +5491,281 @@ CCP_research_grant_nsb_armour_folder = {
 		limit = {
 			check_variable = { ccp_research_selected = 248 }
 		}
-		set_technology = { gwtank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { gwtank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 272 }
 		}
-		set_technology = { basic_heavy_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_heavy_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 274 }
 		}
-		set_technology = { basic_light_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_light_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 275 }
 		}
-		set_technology = { engine_tech_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engine_tech_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 279 }
 		}
-		set_technology = { armor_tech_1 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armor_tech_1 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 303 }
 		}
-		set_technology = { improved_light_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_light_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 309 }
 		}
-		set_technology = { amphibious_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { amphibious_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 310 }
 		}
-		set_technology = { armor_tech_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armor_tech_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 311 }
 		}
-		set_technology = { basic_medium_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { basic_medium_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 313 }
 		}
-		set_technology = { engine_tech_2 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engine_tech_2 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 339 }
 		}
-		set_technology = { improved_heavy_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_heavy_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 342 }
 		}
-		set_technology = { improved_medium_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { improved_medium_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 347 }
 		}
-		set_technology = { advanced_light_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_light_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 348 }
 		}
-		set_technology = { amphibious_drive = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { amphibious_drive = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 349 }
 		}
-		set_technology = { armor_tech_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armor_tech_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 350 }
 		}
-		set_technology = { engine_tech_3 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engine_tech_3 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 353 }
 		}
-		set_technology = { sp_armored_advanced_flamethrower_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_advanced_flamethrower_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 355 }
 		}
-		set_technology = { super_heavy_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { super_heavy_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 370 }
 		}
-		set_technology = { advanced_heavy_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_heavy_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 372 }
 		}
-		set_technology = { advanced_medium_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { advanced_medium_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 382 }
 		}
-		set_technology = { sp_armored_lc_high_impact_obliterator_cannon_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_lc_high_impact_obliterator_cannon_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 383 }
 		}
-		set_technology = { sp_armored_lc_naval_engine_conversion_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_lc_naval_engine_conversion_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 384 }
 		}
-		set_technology = { sp_armored_lc_specialized_field_manuals_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_lc_specialized_field_manuals_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 385 }
 		}
-		set_technology = { sp_armored_lc_transmission_improvements_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_lc_transmission_improvements_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 394 }
 		}
-		set_technology = { armor_tech_4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { armor_tech_4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 395 }
 		}
-		set_technology = { engine_tech_4 = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { engine_tech_4 = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 404 }
 		}
-		set_technology = { main_battle_tank_chassis = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { main_battle_tank_chassis = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_research_selected = 408 }
 		}
-		set_technology = { sp_armored_lc_weapon_fire_control_tech = 1 popup = no }
+		custom_effect_tooltip = CCP_RESEARCH_GRANT_TOOLTIP
+		hidden_effect = {
+			set_technology = { sp_armored_lc_weapon_fire_control_tech = 1 popup = no }
+			set_variable = { ccp_status = 6 }
+		}
 	}
 }
 

@@ -29,6 +29,10 @@ CCP_country_recount_pages = {
 
 CCP_country_load_page = {
 	clear_array = ccp_country_page_items
+	set_variable = { ccp_country_page_shown = ccp_country_page }
+	add_to_variable = { ccp_country_page_shown = 1 }
+	set_variable = { ccp_country_pages_shown = ccp_country_pages_last }
+	add_to_variable = { ccp_country_pages_shown = 1 }
 	set_temp_variable = { ccp_page_first = var:ccp_country_page }
 	multiply_temp_variable = { ccp_page_first = 16 }
 	set_temp_variable = { ccp_page_last = var:ccp_page_first }

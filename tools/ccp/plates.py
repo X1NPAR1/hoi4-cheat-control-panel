@@ -7,6 +7,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from . import theme
+from . import theme as t_theme
 
 RGB = tuple[int, int, int]
 
@@ -157,6 +158,24 @@ STRETCHABLE = {
     "ccp_button_small.png",
     "ccp_button_small_danger.png",
     "ccp_key.png",
-    "ccp_list_row.png",
-    "ccp_card.png",
 }
+
+
+def exact_plates() -> list[tuple[str, Image.Image, int]]:
+    """Plates an iconType draws, each at the exact size that icon occupies."""
+    from . import interface as ui
+
+    sizes = {
+        "ccp_plate_card": (ui.CARD_WIDTH, ui.CARD_HEIGHT),
+        "ccp_plate_action": (ui.ACTION_CARD_WIDTH, ui.ACTION_CARD_HEIGHT),
+        "ccp_plate_row_equipment": (ui.LIST_WIDTH, ui.ENTRY_HEIGHT - 2),
+        "ccp_plate_row_country": (ui.COUNTRY_LIST_WIDTH, ui.COUNTRY_ENTRY_HEIGHT - 2),
+        "ccp_plate_row_state": (ui.STATE_LIST_WIDTH, ui.STATE_ENTRY_HEIGHT - 2),
+        "ccp_plate_row_history": (ui.HISTORY_WIDTH, ui.HISTORY_ROW_HEIGHT - 2),
+        "ccp_plate_row_resource": (ui.ROW_WIDTH, t_theme.ROW_HEIGHT - 8),
+        "ccp_plate_picker": (ui.picker_width(), 68),
+    }
+    return [
+        (f"{name}.png", rounded(size, t_theme.BG_PANEL, t_theme.BORDER_STEEL, shade=t_theme.BG_RAISED), 1)
+        for name, size in sizes.items()
+    ]

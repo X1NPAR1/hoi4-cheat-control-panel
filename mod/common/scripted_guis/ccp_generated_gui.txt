@@ -384,12 +384,15 @@ scripted_gui = {
 				CCP_equipment_next_page = yes
 			}
 			ccp_equipment_entry_add_click = {
-				set_variable = { ccp_equipment_selected = var:ccp_entry }
+				set_variable = { ccp_equipment_selected = var:v }
 				CCP_equipment_grant = yes
 			}
 			ccp_equipment_entry_latest_click = {
-				set_variable = { ccp_equipment_selected = var:ccp_entry }
+				set_variable = { ccp_equipment_selected = var:v }
 				CCP_equipment_grant_latest = yes
+			}
+			ccp_equipment_all_click = {
+				CCP_equipment_grant_category = yes
 			}
 			ccp_research_category_1_click = {
 				CCP_research_select_infantry_folder = yes
@@ -437,7 +440,7 @@ scripted_gui = {
 				CCP_research_grant_folder = yes
 			}
 			ccp_research_entry_grant_click = {
-				set_variable = { ccp_research_selected = var:ccp_research_entry }
+				set_variable = { ccp_research_selected = var:v }
 				CCP_research_grant = yes
 			}
 			ccp_country_prev_click = {
@@ -598,6 +601,10 @@ scripted_gui = {
 				check_variable = { ccp_section = 3 }
 				check_variable = { ccp_panel_open = 1 }
 			}
+			ccp_equipment_entry_stock_visible = {
+				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_panel_open = 1 }
+			}
 			ccp_equipment_entry_latest_visible = {
 				check_variable = { ccp_section = 3 }
 				check_variable = { ccp_panel_open = 1 }
@@ -619,60 +626,60 @@ scripted_gui = {
 				check_variable = { ccp_panel_open = 1 }
 			}
 			ccp_country_entry_plate_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_country_entry_name_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_country_entry_annex_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_country_entry_puppet_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_country_entry_war_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_country_entry_peace_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_country_entry_playas_visible = {
-				check_variable = { ccp_section = 5 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 5 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_plate_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_name_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_owner_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_take_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_core_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_uncore_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_state_entry_claim_visible = {
-				check_variable = { ccp_section = 6 }
-				check_variable = { ccp_panel_open = 1 }
+				ROOT = { check_variable = { ccp_section = 6 } }
+				ROOT = { check_variable = { ccp_panel_open = 1 } }
 			}
 			ccp_card_country_plate_visible = {
 				check_variable = { ccp_section = 1 }
@@ -981,6 +988,12 @@ scripted_gui = {
 				check_variable = { ccp_section = 3 }
 			}
 			ccp_equipment_next_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_all_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_all_help_visible = {
 				check_variable = { ccp_section = 3 }
 			}
 			ccp_research_category_heading_visible = {
@@ -1684,27 +1697,19 @@ scripted_gui = {
 		dynamic_lists = {
 			ccp_equipment_list = {
 				array = ccp_equipment_page_items
-				value = ccp_entry
-				index = ccp_entry_index
 				entry_container = "ccp_equipment_entry"
 			}
 			ccp_research_list = {
 				array = ccp_research_page_items
-				value = ccp_research_entry
-				index = ccp_research_entry_index
 				entry_container = "ccp_research_entry"
 			}
 			ccp_state_list = {
 				array = ccp_state_page_items
-				value = ccp_state_entry_value
-				index = ccp_state_entry_index
 				change_scope = yes
 				entry_container = "ccp_state_entry"
 			}
 			ccp_country_list = {
 				array = ccp_country_page_items
-				value = ccp_country_entry_value
-				index = ccp_country_entry_index
 				change_scope = yes
 				entry_container = "ccp_country_entry"
 			}

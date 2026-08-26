@@ -25,6 +25,10 @@ CCP_state_recount_pages = {
 
 CCP_state_load_page = {
 	clear_array = ccp_state_page_items
+	set_variable = { ccp_state_page_shown = ccp_state_page }
+	add_to_variable = { ccp_state_page_shown = 1 }
+	set_variable = { ccp_state_pages_shown = ccp_state_pages_last }
+	add_to_variable = { ccp_state_pages_shown = 1 }
 	set_temp_variable = { ccp_page_first = var:ccp_state_page }
 	multiply_temp_variable = { ccp_page_first = 14 }
 	set_temp_variable = { ccp_page_last = var:ccp_page_first }

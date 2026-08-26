@@ -18,7 +18,13 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccp import theme
-from ccp.plates import STRETCHABLE, build as build_plates, frames as frame_strip, plate
+from ccp.plates import (
+    STRETCHABLE,
+    build as build_plates,
+    exact_plates,
+    frames as frame_strip,
+    plate,
+)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE = REPO_ROOT / "logo.png"
@@ -113,7 +119,7 @@ def main() -> int:
         ("ccp_logo.png", 1),
         ("ccp_launcher_button.png", 4),
     ]
-    for filename, image, frames in build_plates(GFX_DIR):
+    for filename, image, frames in build_plates(GFX_DIR) + exact_plates():
         image.save(GFX_DIR / filename, "PNG", optimize=True)
         entries.append((filename, frames))
 
