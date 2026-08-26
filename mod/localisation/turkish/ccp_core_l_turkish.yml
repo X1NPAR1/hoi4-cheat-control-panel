@@ -7,7 +7,7 @@
  CCP_DASHBOARD_HEADING:0 "GENEL BAKIŞ"
  CCP_DASHBOARD_COUNTRY:0 "Oynanan ülke: [ROOT.GetNameDefCap]"
  CCP_FOOTER_VERSION:0 "Cheat Control Panel 0.1.0 · Hearts of Iron IV 1.19"
- CCP_FOOTER_HINT:0 "Ctrl+F8 bu paneli açar/kapatır · tuşu Ayarlar'dan değiştirin"
+ CCP_FOOTER_HINT:0 "Insert bu paneli açar/kapatır · tuşu Ayarlar'dan değiştirin"
  CCP_EQUIPMENT_UNKNOWN:0 "Bilinmeyen teçhizat"
  CCP_TOOLTIP_LAUNCHER:0 "Cheat Control Panel'i açar.
 Kısayol: Ctrl+F8 — Ayarlar'dan değiştirilebilir."

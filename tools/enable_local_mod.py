@@ -132,6 +132,17 @@ def main() -> int:
                 )
                 print(f"Enabled in playset `{playset_name}`")
 
+        active = connection.execute(
+            "select count(*) from playsets where isActive = 1 and isRemoved = 0"
+        ).fetchone()[0]
+        if active == 0:
+            chosen = playsets[0][0]
+            connection.execute("update playsets set isActive = 1 where id = ?", (chosen,))
+            print(
+                f"Activated playset `{playsets[0][1]}` - no playset was active, "
+                "which makes the launcher start the game with no mods at all"
+            )
+
         connection.commit()
     finally:
         connection.close()

@@ -60,6 +60,15 @@ scripted_gui = {
 					CCP_toggle_panel = yes
 				}
 			}
+			ccp_hotkey_5_click = {
+				CCP_ensure_settings = yes
+				if = {
+					limit = {
+						check_variable = { ccp_hotkey_id = 5 }
+					}
+					CCP_toggle_panel = yes
+				}
+			}
 		}
 	}
 

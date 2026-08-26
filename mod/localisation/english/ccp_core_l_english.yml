@@ -7,7 +7,7 @@
  CCP_DASHBOARD_HEADING:0 "DASHBOARD"
  CCP_DASHBOARD_COUNTRY:0 "Playing as [ROOT.GetNameDefCap]"
  CCP_FOOTER_VERSION:0 "Cheat Control Panel 0.1.0 · Hearts of Iron IV 1.19"
- CCP_FOOTER_HINT:0 "Ctrl+F8 toggles this panel · change the key in Settings"
+ CCP_FOOTER_HINT:0 "Insert toggles this panel · change the key in Settings"
  CCP_EQUIPMENT_UNKNOWN:0 "Unknown equipment"
  CCP_TOOLTIP_LAUNCHER:0 "Open the Cheat Control Panel.
 Hotkey: Ctrl+F8 — change it in Settings."
