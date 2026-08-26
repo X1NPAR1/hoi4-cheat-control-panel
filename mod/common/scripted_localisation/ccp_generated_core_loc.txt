@@ -1668,6 +1668,19 @@ defined_text = {
 }
 
 defined_text = {
+	name = CCP_GetIronmanNotice
+	text = {
+		trigger = {
+			is_ironman = yes
+		}
+		localization_key = CCP_IRONMAN_ON
+	}
+	text = {
+		localization_key = CCP_IRONMAN_OFF
+	}
+}
+
+defined_text = {
 	name = CCP_GetStatePickerState
 	text = {
 		trigger = {

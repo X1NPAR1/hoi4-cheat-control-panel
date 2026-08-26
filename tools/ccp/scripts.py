@@ -864,6 +864,13 @@ def emit_scripted_localisation(version: str) -> str:
 
     _defined_text(
         writer,
+        "CCP_GetIronmanNotice",
+        [("is_ironman = yes", "CCP_IRONMAN_ON")],
+        "CCP_IRONMAN_OFF",
+    )
+
+    _defined_text(
+        writer,
         "CCP_GetStatePickerState",
         [("check_variable = { ccp_state_picker_on = 1 }", "CCP_STATE_PICKER_ON")],
         "CCP_STATE_PICKER_OFF",

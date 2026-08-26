@@ -3077,6 +3077,36 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
+				name = "ccp_settings_compat_label"
+				position = { x = 264 y = 462 }
+				font = "hoi_18mbs"
+				text = "CCP_SETTINGS_COMPAT"
+				maxWidth = 992
+				maxHeight = 20
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_compat_help"
+				position = { x = 264 y = 486 }
+				font = "hoi_16mbs"
+				text = "CCP_SETTINGS_COMPAT_HELP"
+				maxWidth = 992
+				maxHeight = 72
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_settings_ironman"
+				position = { x = 264 y = 562 }
+				font = "hoi_16mbs"
+				text = "[CCP_GetIronmanNotice]"
+				maxWidth = 992
+				maxHeight = 36
+				format = left
+			}
+
+			instantTextBoxType = {
 				name = "ccp_settings_language_help"
 				position = { x = 264 y = 392 }
 				font = "hoi_16mbs"

@@ -149,6 +149,8 @@
  CCP_HOTKEY_4_TOOLTIP:0 "Paneli açıp kapatmak için Ctrl+F8 tuşunu kullanın."
  CCP_HOTKEY_5:0 "F8 (shared with the map mode)"
  CCP_HOTKEY_5_TOOLTIP:0 "Paneli açıp kapatmak için F8 (shared with the map mode) tuşunu kullanın."
+ CCP_IRONMAN_OFF:0 "Ironman oyunu değil. Geri dönmek isterseniz büyük değişikliklerden önce kaydedin."
+ CCP_IRONMAN_ON:0 "Bu bir Ironman oyunu. Herhangi bir mod çalıştırmak başarımları zaten kapatır ve bu panelin yaptıklarının geri dönüşü yoktur."
  CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
 
 Bu geri alınamaz. Engine önceki duruma dönmek için bir yol sunmuyor."
@@ -273,6 +275,8 @@ Bu geri alınamaz. Engine önceki duruma dönmek için bir yol sunmuyor."
  CCP_SECTION_SETTINGS_TOOLTIP:0 "Kısayol tuşunu ve onay davranışını değiştirin."
  CCP_SECTION_STATES:0 "Eyaletler"
  CCP_SECTION_STATES_TOOLTIP:0 "Eyalet alın, core ekleyip kaldırın ve hak talebi oluşturun."
+ CCP_SETTINGS_COMPAT:0 "UYUMLULUK"
+ CCP_SETTINGS_COMPAT_HELP:0 "Bu mod hiçbir vanilla dosyasını ezmez ve tanımladığı her ad ccp_ ile başlar; bu yüzden diğer modlarla çakışmak yerine yanlarında durur. Tek oyunculu için tasarlandı: engine, script'e çok oyunculu oturumu tespit etme imkânı vermiyor, dolayısıyla burada hiçbir şey otomatik gizlenemez ve ülke değiştirme, ilhak ve eyalet devri çok oyunculu bir oyunu desenkronize edebilir."
  CCP_SETTINGS_CONFIRM:0 "ONAY İSTEMİ"
  CCP_SETTINGS_CONFIRM_HELP:0 "Geri alınamaz işlemler uygulanmadan önce sorar. Geri alma özelliği yok, açık bırakmak daha güvenlidir."
  CCP_SETTINGS_CONFIRM_TOOLTIP:0 "İlhak, eyalet devri ve core kaldırma öncesi gösterilen onay istemini açıp kapatır."

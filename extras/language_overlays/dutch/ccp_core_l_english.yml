@@ -149,6 +149,8 @@
  CCP_HOTKEY_4_TOOLTIP:0 "Gebruik Ctrl+F8 om het paneel te openen en te sluiten."
  CCP_HOTKEY_5:0 "F8 (shared with the map mode)"
  CCP_HOTKEY_5_TOOLTIP:0 "Gebruik F8 (shared with the map mode) om het paneel te openen en te sluiten."
+ CCP_IRONMAN_OFF:0 "Geen Ironman-spel. Sla op vóór grote wijzigingen als je terug wilt kunnen."
+ CCP_IRONMAN_ON:0 "Dit is een Ironman-spel. Prestaties zijn al uitgeschakeld door elke mod, en wat dit paneel doet is onomkeerbaar."
  CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
 
 Dit kan niet ongedaan worden gemaakt. De engine biedt geen herstel."
@@ -273,6 +275,8 @@ Dit kan niet ongedaan worden gemaakt. De engine biedt geen herstel."
  CCP_SECTION_SETTINGS_TOOLTIP:0 "Wijzigt de sneltoets en het bevestigingsgedrag."
  CCP_SECTION_STATES:0 "Staten"
  CCP_SECTION_STATES_TOOLTIP:0 "Neem staten over, voeg kerngebied toe of verwijder het, en claim."
+ CCP_SETTINGS_COMPAT:0 "COMPATIBILITEIT"
+ CCP_SETTINGS_COMPAT_HELP:0 "Deze mod overschrijft geen enkel vanilla-bestand en elke naam begint met ccp_, dus hij staat naast andere mods in plaats van ermee te botsen. Hij is voor singleplayer gemaakt: script kan een multiplayersessie niet detecteren, dus niets kan automatisch worden verborgen, en van land wisselen, annexeren en staten overdragen kunnen een multiplayerspel desynchroniseren."
  CCP_SETTINGS_CONFIRM:0 "BEVESTIGINGEN"
  CCP_SETTINGS_CONFIRM_HELP:0 "Onomkeerbare acties vragen eerst om bevestiging. Er is geen ongedaan maken, dus aan laten is veiliger."
  CCP_SETTINGS_CONFIRM_TOOLTIP:0 "Schakelt de bevestiging vóór annexaties, staatsoverdrachten en het verwijderen van kerngebied."

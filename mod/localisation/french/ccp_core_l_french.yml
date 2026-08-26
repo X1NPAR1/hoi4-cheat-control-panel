@@ -149,6 +149,8 @@
  CCP_HOTKEY_4_TOOLTIP:0 "Utiliser Ctrl+F8 pour ouvrir et fermer le panneau."
  CCP_HOTKEY_5:0 "F8 (shared with the map mode)"
  CCP_HOTKEY_5_TOOLTIP:0 "Utiliser F8 (shared with the map mode) pour ouvrir et fermer le panneau."
+ CCP_IRONMAN_OFF:0 "Partie hors Ironman. Sauvegardez avant les grandes modifications si vous voulez pouvoir revenir."
+ CCP_IRONMAN_ON:0 "Cette partie est en Ironman. Les succès sont déjà désactivés par tout mod, et rien de ce que fait ce panneau n'est réversible."
  CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
 
 Ceci est irréversible. Le moteur ne permet aucune restauration."
@@ -273,6 +275,8 @@ Ceci est irréversible. Le moteur ne permet aucune restauration."
  CCP_SECTION_SETTINGS_TOOLTIP:0 "Modifie le raccourci et le comportement des confirmations."
  CCP_SECTION_STATES:0 "États"
  CCP_SECTION_STATES_TOOLTIP:0 "Prendre des États, ajouter ou retirer des territoires nationaux, revendiquer."
+ CCP_SETTINGS_COMPAT:0 "COMPATIBILITÉ"
+ CCP_SETTINGS_COMPAT_HELP:0 "Ce mod ne remplace aucun fichier vanilla et tous ses identifiants commencent par ccp_ ; il cohabite donc avec les autres mods. Il est conçu pour le solo : le script ne peut pas détecter une partie multijoueur, rien ne peut donc être masqué automatiquement, et changer de pays, annexer ou transférer des États peut désynchroniser une partie multijoueur."
  CCP_SETTINGS_CONFIRM:0 "CONFIRMATIONS"
  CCP_SETTINGS_CONFIRM_HELP:0 "Les actions irréversibles demandent confirmation. Il n'y a pas d'annulation, mieux vaut les laisser actives."
  CCP_SETTINGS_CONFIRM_TOOLTIP:0 "Active ou désactive la confirmation avant annexions, transferts d'État et retraits de territoire national."

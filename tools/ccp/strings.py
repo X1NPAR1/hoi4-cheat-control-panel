@@ -1105,6 +1105,33 @@ TRANSLATED: dict[str, Row] = {
         "Bu işlemi yeniden çalıştırır.",
         "Voert deze actie opnieuw uit.",
     ),
+    "CCP_SETTINGS_COMPAT": _row(
+        "COMPATIBILITY", "KOMPATIBILITÄT", "COMPATIBILITÉ", "СОВМЕСТИМОСТЬ", "UYUMLULUK", "COMPATIBILITEIT"
+    ),
+    "CCP_SETTINGS_COMPAT_HELP": _row(
+        "This mod overrides no vanilla file and every name it defines is prefixed ccp_, so it sits alongside other mods rather than fighting them. It is built for singleplayer: the engine gives script no way to detect a multiplayer session, so nothing here can be hidden automatically, and country switching, annexation and state transfers can desync a multiplayer game.",
+        "Dieser Mod überschreibt keine Vanilla-Datei und alle Bezeichner beginnen mit ccp_, er steht also neben anderen Mods, statt mit ihnen zu kollidieren. Er ist für den Einzelspieler gedacht: Skript kann eine Mehrspielerpartie nicht erkennen, also lässt sich hier nichts automatisch ausblenden, und Länderwechsel, Annexionen und Staatsübergaben können eine Mehrspielerpartie desynchronisieren.",
+        "Ce mod ne remplace aucun fichier vanilla et tous ses identifiants commencent par ccp_ ; il cohabite donc avec les autres mods. Il est conçu pour le solo : le script ne peut pas détecter une partie multijoueur, rien ne peut donc être masqué automatiquement, et changer de pays, annexer ou transférer des États peut désynchroniser une partie multijoueur.",
+        "Мод не переопределяет ванильные файлы, а все его имена начинаются с ccp_, поэтому он уживается с другими модами. Он рассчитан на одиночную игру: скрипт не может определить сетевую сессию, поэтому ничего нельзя скрыть автоматически, а смена страны, аннексия и передача провинций могут вызвать рассинхрон в сетевой игре.",
+        "Bu mod hiçbir vanilla dosyasını ezmez ve tanımladığı her ad ccp_ ile başlar; bu yüzden diğer modlarla çakışmak yerine yanlarında durur. Tek oyunculu için tasarlandı: engine, script'e çok oyunculu oturumu tespit etme imkânı vermiyor, dolayısıyla burada hiçbir şey otomatik gizlenemez ve ülke değiştirme, ilhak ve eyalet devri çok oyunculu bir oyunu desenkronize edebilir.",
+        "Deze mod overschrijft geen enkel vanilla-bestand en elke naam begint met ccp_, dus hij staat naast andere mods in plaats van ermee te botsen. Hij is voor singleplayer gemaakt: script kan een multiplayersessie niet detecteren, dus niets kan automatisch worden verborgen, en van land wisselen, annexeren en staten overdragen kunnen een multiplayerspel desynchroniseren.",
+    ),
+    "CCP_IRONMAN_ON": _row(
+        "This is an Ironman game. Achievements are already disabled by running any mod, and there is no way to undo what this panel does.",
+        "Dies ist eine Ironman-Partie. Erfolge sind durch jeden Mod bereits deaktiviert, und nichts, was dieses Panel tut, lässt sich rückgängig machen.",
+        "Cette partie est en Ironman. Les succès sont déjà désactivés par tout mod, et rien de ce que fait ce panneau n'est réversible.",
+        "Это игра в режиме Ironman. Достижения уже отключены любым модом, а действия панели необратимы.",
+        "Bu bir Ironman oyunu. Herhangi bir mod çalıştırmak başarımları zaten kapatır ve bu panelin yaptıklarının geri dönüşü yoktur.",
+        "Dit is een Ironman-spel. Prestaties zijn al uitgeschakeld door elke mod, en wat dit paneel doet is onomkeerbaar.",
+    ),
+    "CCP_IRONMAN_OFF": _row(
+        "Not an Ironman game. Save before large changes if you want a way back.",
+        "Keine Ironman-Partie. Vor grossen Änderungen speichern, falls Sie zurückwollen.",
+        "Partie hors Ironman. Sauvegardez avant les grandes modifications si vous voulez pouvoir revenir.",
+        "Не игра Ironman. Сохранитесь перед крупными изменениями, если хотите иметь путь назад.",
+        "Ironman oyunu değil. Geri dönmek isterseniz büyük değişikliklerden önce kaydedin.",
+        "Geen Ironman-spel. Sla op vóór grote wijzigingen als je terug wilt kunnen.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",

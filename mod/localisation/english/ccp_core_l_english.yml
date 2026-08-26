@@ -149,6 +149,8 @@
  CCP_HOTKEY_4_TOOLTIP:0 "Use Ctrl+F8 to open and close the panel."
  CCP_HOTKEY_5:0 "F8 (shared with the map mode)"
  CCP_HOTKEY_5_TOOLTIP:0 "Use F8 (shared with the map mode) to open and close the panel."
+ CCP_IRONMAN_OFF:0 "Not an Ironman game. Save before large changes if you want a way back."
+ CCP_IRONMAN_ON:0 "This is an Ironman game. Achievements are already disabled by running any mod, and there is no way to undo what this panel does."
  CCP_MODAL_BODY:0 "[CCP_GetPendingAction] · [?ccp_pending_country.GetNameDefCap]
 
 This cannot be undone. The engine offers no way to restore the previous state."
@@ -273,6 +275,8 @@ This cannot be undone. The engine offers no way to restore the previous state."
  CCP_SECTION_SETTINGS_TOOLTIP:0 "Change the hotkey and the confirmation behaviour."
  CCP_SECTION_STATES:0 "States"
  CCP_SECTION_STATES_TOOLTIP:0 "Take states, add or remove cores, and add claims."
+ CCP_SETTINGS_COMPAT:0 "COMPATIBILITY"
+ CCP_SETTINGS_COMPAT_HELP:0 "This mod overrides no vanilla file and every name it defines is prefixed ccp_, so it sits alongside other mods rather than fighting them. It is built for singleplayer: the engine gives script no way to detect a multiplayer session, so nothing here can be hidden automatically, and country switching, annexation and state transfers can desync a multiplayer game."
  CCP_SETTINGS_CONFIRM:0 "CONFIRMATIONS"
  CCP_SETTINGS_CONFIRM_HELP:0 "Destructive actions ask before they apply. There is no undo, so leaving this on is safer."
  CCP_SETTINGS_CONFIRM_TOOLTIP:0 "Toggle the confirmation prompt shown before annexations, state transfers and core removal."
