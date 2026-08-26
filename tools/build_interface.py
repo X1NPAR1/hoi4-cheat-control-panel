@@ -32,6 +32,8 @@ from ccp.languages import NATIVE, OVERLAY
 from ccp.strings import emit_localisation
 from generate_data import find_game_dir, game_version
 
+from ccp.globals import globalise_localisation, globalise_script
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MOD = REPO_ROOT / "mod"
 OVERLAYS = REPO_ROOT / "extras" / "language_overlays"
@@ -39,6 +41,10 @@ OVERLAYS = REPO_ROOT / "extras" / "language_overlays"
 
 def write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.suffix == ".txt":
+        content = globalise_script(content)
+    elif path.suffix == ".yml":
+        content = globalise_localisation(content)
     encoding = "utf-8-sig" if path.suffix == ".yml" else "utf-8"
     path.write_text(content, encoding=encoding, newline="\n")
     print(f"  {path.relative_to(REPO_ROOT).as_posix():<62} {len(content.splitlines()):>5} lines")

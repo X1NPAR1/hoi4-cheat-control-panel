@@ -26,10 +26,21 @@ class StateAction:
 ACTIONS: list[StateAction] = [
     StateAction(
         "take",
-        ["set_state_owner = ROOT", "set_state_controller = ROOT"],
+        [
+            "set_state_owner = var:ccp_player",
+            "set_state_controller = var:ccp_player",
+        ],
         destructive=True,
     ),
-    StateAction("core", ["add_core_of = ROOT"], destructive=False),
-    StateAction("uncore", ["remove_core_of = ROOT"], destructive=True),
-    StateAction("claim", ["add_claim_by = ROOT"], destructive=False),
+    StateAction(
+        "give",
+        [
+            "set_state_owner = var:ccp_target_country",
+            "set_state_controller = var:ccp_target_country",
+        ],
+        destructive=True,
+    ),
+    StateAction("core", ["add_core_of = var:ccp_player"], destructive=False),
+    StateAction("uncore", ["remove_core_of = var:ccp_player"], destructive=True),
+    StateAction("claim", ["add_claim_by = var:ccp_player"], destructive=False),
 ]

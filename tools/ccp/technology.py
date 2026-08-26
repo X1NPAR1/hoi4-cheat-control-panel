@@ -10,6 +10,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from .gameloc import english_keys
 from .paradox import Node, parse_file
 
 FOLDER_ORDER = [
@@ -85,6 +86,9 @@ def load_catalogue(game_dir: Path) -> list[Technology]:
                 catalogue.append(
                     Technology(key=entry.key, folder=folder, year=_year(entry), dlc=dlc)
                 )
+
+    named = english_keys(game_dir)
+    catalogue = [item for item in catalogue if item.key in named]
 
     order = {name: index for index, name in enumerate(FOLDER_ORDER)}
     catalogue.sort(key=lambda item: (order.get(item.folder, len(order)), item.year, item.key))

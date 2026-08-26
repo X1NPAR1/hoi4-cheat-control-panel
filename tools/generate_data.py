@@ -27,6 +27,8 @@ from ccp.technology import group_by_folder
 from ccp.technology import load_catalogue as load_technologies
 from ccp.languages import NATIVE, OVERLAY
 
+from ccp.globals import globalise_localisation, globalise_script
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 DEFAULT_GAME_DIRS = [
@@ -54,6 +56,10 @@ def game_version(game_dir: Path) -> str:
 
 def write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.suffix == ".txt":
+        content = globalise_script(content)
+    elif path.suffix == ".yml":
+        content = globalise_localisation(content)
     encoding = "utf-8-sig" if path.suffix == ".yml" else "utf-8"
     path.write_text(content, encoding=encoding, newline="\n")
     print(f"  {path.relative_to(REPO_ROOT).as_posix():<70} {len(content.splitlines()):>6} lines")

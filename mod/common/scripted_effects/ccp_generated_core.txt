@@ -5,45 +5,46 @@
 CCP_ensure_settings = {
 	if = {
 		limit = {
-			check_variable = { ccp_settings_version < 2 }
+			check_variable = { global.ccp_settings_version < 2 }
 		}
-		set_variable = { ccp_settings_version = 2 }
-		set_variable = { ccp_hotkey_id = 1 }
-		set_variable = { ccp_confirm_destructive = 1 }
-		set_variable = { ccp_section = 1 }
-		set_variable = { ccp_nav_highlight_y = 98 }
-		set_variable = { ccp_status = 0 }
-		set_variable = { ccp_amount = 1000 }
-		set_variable = { ccp_equipment_category = 1 }
-		set_variable = { ccp_equipment_page = 0 }
-		set_variable = { ccp_equipment_pages_last = 0 }
-		set_variable = { ccp_equipment_selected = -1 }
-		set_variable = { ccp_research_folder = 1 }
-		set_variable = { ccp_research_page = 0 }
-		set_variable = { ccp_research_pages_last = 0 }
-		set_variable = { ccp_research_selected = -1 }
-		set_variable = { ccp_country_page = 0 }
-		set_variable = { ccp_country_pages_last = 0 }
-		set_variable = { ccp_pending_action = 0 }
-		set_variable = { ccp_modal_open = 0 }
-		set_variable = { ccp_state_page = 0 }
-		set_variable = { ccp_state_pages_last = 0 }
-		set_variable = { ccp_state_picker_on = 0 }
+		set_variable = { global.ccp_settings_version = 2 }
+		set_variable = { global.ccp_hotkey_id = 1 }
+		set_variable = { global.ccp_confirm_destructive = 1 }
+		set_variable = { global.ccp_section = 1 }
+		set_variable = { global.ccp_nav_highlight_y = 98 }
+		set_variable = { global.ccp_status = 0 }
+		set_variable = { global.ccp_amount = 1000 }
+		set_variable = { global.ccp_equipment_category = 1 }
+		set_variable = { global.ccp_equipment_page = 0 }
+		set_variable = { global.ccp_equipment_pages_last = 0 }
+		set_variable = { global.ccp_equipment_selected = -1 }
+		set_variable = { global.ccp_research_folder = 1 }
+		set_variable = { global.ccp_research_page = 0 }
+		set_variable = { global.ccp_research_pages_last = 0 }
+		set_variable = { global.ccp_research_selected = -1 }
+		set_variable = { global.ccp_country_page = 0 }
+		set_variable = { global.ccp_country_pages_last = 0 }
+		set_variable = { global.ccp_pending_action = 0 }
+		set_variable = { global.ccp_modal_open = 0 }
+		set_variable = { global.ccp_state_page = 0 }
+		set_variable = { global.ccp_state_pages_last = 0 }
+		set_variable = { global.ccp_state_picker_on = 0 }
 	}
 }
 
 CCP_mark_dirty = {
-	add_to_variable = { ccp_ui_revision = 1 }
+	add_to_variable = { global.ccp_ui_revision = 1 }
 }
 
 CCP_open_panel = {
 	CCP_ensure_settings = yes
-	set_variable = { ccp_panel_open = 1 }
+	set_variable = { global.ccp_player = THIS }
+	set_variable = { global.ccp_panel_open = 1 }
 	CCP_mark_dirty = yes
 }
 
 CCP_close_panel = {
-	set_variable = { ccp_panel_open = 0 }
+	set_variable = { global.ccp_panel_open = 0 }
 	CCP_mark_dirty = yes
 }
 
@@ -51,7 +52,7 @@ CCP_toggle_panel = {
 	CCP_ensure_settings = yes
 	if = {
 		limit = {
-			check_variable = { ccp_panel_open = 1 }
+			check_variable = { global.ccp_panel_open = 1 }
 		}
 		CCP_close_panel = yes
 	}
@@ -61,127 +62,127 @@ CCP_toggle_panel = {
 }
 
 CCP_show_dashboard = {
-	set_variable = { ccp_section = 1 }
-	set_variable = { ccp_nav_highlight_y = 98 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 1 }
+	set_variable = { global.ccp_nav_highlight_y = 98 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_resources = {
-	set_variable = { ccp_section = 2 }
-	set_variable = { ccp_nav_highlight_y = 134 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 2 }
+	set_variable = { global.ccp_nav_highlight_y = 134 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_equipment = {
-	set_variable = { ccp_section = 3 }
-	set_variable = { ccp_nav_highlight_y = 170 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 3 }
+	set_variable = { global.ccp_nav_highlight_y = 170 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_equipment_load_page = yes
 	CCP_mark_dirty = yes
 }
 
 CCP_show_research = {
-	set_variable = { ccp_section = 4 }
-	set_variable = { ccp_nav_highlight_y = 206 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 4 }
+	set_variable = { global.ccp_nav_highlight_y = 206 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_research_load_page = yes
 	CCP_mark_dirty = yes
 }
 
 CCP_show_country = {
-	set_variable = { ccp_section = 5 }
-	set_variable = { ccp_nav_highlight_y = 242 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 5 }
+	set_variable = { global.ccp_nav_highlight_y = 242 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_country_rebuild = yes
 	CCP_mark_dirty = yes
 }
 
 CCP_show_states = {
-	set_variable = { ccp_section = 6 }
-	set_variable = { ccp_nav_highlight_y = 278 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 6 }
+	set_variable = { global.ccp_nav_highlight_y = 278 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_state_rebuild = yes
 	CCP_mark_dirty = yes
 }
 
 CCP_show_nation = {
-	set_variable = { ccp_section = 7 }
-	set_variable = { ccp_nav_highlight_y = 314 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 7 }
+	set_variable = { global.ccp_nav_highlight_y = 314 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_construction = {
-	set_variable = { ccp_section = 8 }
-	set_variable = { ccp_nav_highlight_y = 350 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 8 }
+	set_variable = { global.ccp_nav_highlight_y = 350 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_commanders = {
-	set_variable = { ccp_section = 9 }
-	set_variable = { ccp_nav_highlight_y = 386 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 9 }
+	set_variable = { global.ccp_nav_highlight_y = 386 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_history = {
-	set_variable = { ccp_section = 10 }
-	set_variable = { ccp_nav_highlight_y = 422 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 10 }
+	set_variable = { global.ccp_nav_highlight_y = 422 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_show_settings = {
-	set_variable = { ccp_section = 11 }
-	set_variable = { ccp_nav_highlight_y = 458 }
-	set_variable = { ccp_status = 0 }
+	set_variable = { global.ccp_section = 11 }
+	set_variable = { global.ccp_nav_highlight_y = 458 }
+	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_set_hotkey_1 = {
-	set_variable = { ccp_hotkey_id = 1 }
-	set_variable = { ccp_status = 1 }
+	set_variable = { global.ccp_hotkey_id = 1 }
+	set_variable = { global.ccp_status = 1 }
 	CCP_mark_dirty = yes
 }
 
 CCP_set_hotkey_2 = {
-	set_variable = { ccp_hotkey_id = 2 }
-	set_variable = { ccp_status = 1 }
+	set_variable = { global.ccp_hotkey_id = 2 }
+	set_variable = { global.ccp_status = 1 }
 	CCP_mark_dirty = yes
 }
 
 CCP_set_hotkey_3 = {
-	set_variable = { ccp_hotkey_id = 3 }
-	set_variable = { ccp_status = 1 }
+	set_variable = { global.ccp_hotkey_id = 3 }
+	set_variable = { global.ccp_status = 1 }
 	CCP_mark_dirty = yes
 }
 
 CCP_set_hotkey_4 = {
-	set_variable = { ccp_hotkey_id = 4 }
-	set_variable = { ccp_status = 1 }
+	set_variable = { global.ccp_hotkey_id = 4 }
+	set_variable = { global.ccp_status = 1 }
 	CCP_mark_dirty = yes
 }
 
 CCP_set_hotkey_5 = {
-	set_variable = { ccp_hotkey_id = 5 }
-	set_variable = { ccp_status = 1 }
+	set_variable = { global.ccp_hotkey_id = 5 }
+	set_variable = { global.ccp_status = 1 }
 	CCP_mark_dirty = yes
 }
 
 CCP_pad_clear = {
-	set_variable = { ccp_amount = 0 }
+	set_variable = { global.ccp_amount = 0 }
 	CCP_mark_dirty = yes
 }
 
 CCP_pad_digit_0 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000001 }
+			check_variable = { global.ccp_amount < 5000001 }
 		}
-		multiply_variable = { ccp_amount = 10 }
+		multiply_variable = { global.ccp_amount = 10 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -189,10 +190,10 @@ CCP_pad_digit_0 = {
 CCP_pad_digit_1 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 1 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 1 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -200,10 +201,10 @@ CCP_pad_digit_1 = {
 CCP_pad_digit_2 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 2 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 2 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -211,10 +212,10 @@ CCP_pad_digit_2 = {
 CCP_pad_digit_3 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 3 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 3 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -222,10 +223,10 @@ CCP_pad_digit_3 = {
 CCP_pad_digit_4 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 4 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 4 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -233,10 +234,10 @@ CCP_pad_digit_4 = {
 CCP_pad_digit_5 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 5 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 5 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -244,10 +245,10 @@ CCP_pad_digit_5 = {
 CCP_pad_digit_6 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 6 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 6 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -255,10 +256,10 @@ CCP_pad_digit_6 = {
 CCP_pad_digit_7 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 7 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 7 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -266,10 +267,10 @@ CCP_pad_digit_7 = {
 CCP_pad_digit_8 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 8 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 8 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -277,111 +278,111 @@ CCP_pad_digit_8 = {
 CCP_pad_digit_9 = {
 	if = {
 		limit = {
-			check_variable = { ccp_amount < 5000000 }
+			check_variable = { global.ccp_amount < 5000000 }
 		}
-		multiply_variable = { ccp_amount = 10 }
-		add_to_variable = { ccp_amount = 9 }
+		multiply_variable = { global.ccp_amount = 10 }
+		add_to_variable = { global.ccp_amount = 9 }
 	}
 	CCP_mark_dirty = yes
 }
 
 CCP_pad_backspace = {
-	set_temp_variable = { ccp_pad_last = var:ccp_amount }
+	set_temp_variable = { ccp_pad_last = var:global.ccp_amount }
 	modulo_temp_variable = { ccp_pad_last = 10 }
-	subtract_from_variable = { ccp_amount = var:ccp_pad_last }
-	divide_variable = { ccp_amount = 10 }
+	subtract_from_variable = { global.ccp_amount = var:ccp_pad_last }
+	divide_variable = { global.ccp_amount = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_political_power_1 = {
 	add_political_power = 100
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 1 }
-	set_variable = { ccp_granted_amount = 100 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 1 }
+	set_variable = { global.ccp_granted_amount = 100 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_political_power_2 = {
 	add_political_power = 500
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 1 }
-	set_variable = { ccp_granted_amount = 500 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 1 }
+	set_variable = { global.ccp_granted_amount = 500 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_political_power_3 = {
 	add_political_power = 1000
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 1 }
-	set_variable = { ccp_granted_amount = 1000 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 1 }
+	set_variable = { global.ccp_granted_amount = 1000 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_political_power_4 = {
 	add_political_power = 5000
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 1 }
-	set_variable = { ccp_granted_amount = 5000 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 1 }
+	set_variable = { global.ccp_granted_amount = 5000 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_political_power_custom = {
-	set_temp_variable = { ccp_grant = var:ccp_amount }
+	set_temp_variable = { ccp_grant = var:global.ccp_amount }
 	clamp_temp_variable = {
 		var = ccp_grant
 		min = 0
 		max = 1000000
 	}
 	add_political_power = var:ccp_grant
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 1 }
-	set_variable = { ccp_granted_amount = var:ccp_grant }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 1 }
+	set_variable = { global.ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_command_power_1 = {
 	add_command_power = 10
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 2 }
-	set_variable = { ccp_granted_amount = 10 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 2 }
+	set_variable = { global.ccp_granted_amount = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_command_power_2 = {
 	add_command_power = 25
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 2 }
-	set_variable = { ccp_granted_amount = 25 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 2 }
+	set_variable = { global.ccp_granted_amount = 25 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_command_power_3 = {
 	add_command_power = 50
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 2 }
-	set_variable = { ccp_granted_amount = 50 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 2 }
+	set_variable = { global.ccp_granted_amount = 50 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_command_power_4 = {
 	add_command_power = 100
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 2 }
-	set_variable = { ccp_granted_amount = 100 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 2 }
+	set_variable = { global.ccp_granted_amount = 100 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_command_power_custom = {
-	set_temp_variable = { ccp_grant = var:ccp_amount }
+	set_temp_variable = { ccp_grant = var:global.ccp_amount }
 	clamp_temp_variable = {
 		var = ccp_grant
 		min = 0
 		max = 100
 	}
 	add_command_power = var:ccp_grant
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 2 }
-	set_variable = { ccp_granted_amount = var:ccp_grant }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 2 }
+	set_variable = { global.ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
@@ -391,12 +392,12 @@ CCP_grant_manpower_1 = {
 			check_variable = { manpower < 1000000000 }
 		}
 		add_manpower = 10000
-		set_variable = { ccp_status = 4 }
-		set_variable = { ccp_granted_resource = 3 }
-		set_variable = { ccp_granted_amount = 10000 }
+		set_variable = { global.ccp_status = 4 }
+		set_variable = { global.ccp_granted_resource = 3 }
+		set_variable = { global.ccp_granted_amount = 10000 }
 	}
 	else = {
-		set_variable = { ccp_status = 12 }
+		set_variable = { global.ccp_status = 12 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -407,12 +408,12 @@ CCP_grant_manpower_2 = {
 			check_variable = { manpower < 1000000000 }
 		}
 		add_manpower = 100000
-		set_variable = { ccp_status = 4 }
-		set_variable = { ccp_granted_resource = 3 }
-		set_variable = { ccp_granted_amount = 100000 }
+		set_variable = { global.ccp_status = 4 }
+		set_variable = { global.ccp_granted_resource = 3 }
+		set_variable = { global.ccp_granted_amount = 100000 }
 	}
 	else = {
-		set_variable = { ccp_status = 12 }
+		set_variable = { global.ccp_status = 12 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -423,12 +424,12 @@ CCP_grant_manpower_3 = {
 			check_variable = { manpower < 1000000000 }
 		}
 		add_manpower = 1000000
-		set_variable = { ccp_status = 4 }
-		set_variable = { ccp_granted_resource = 3 }
-		set_variable = { ccp_granted_amount = 1000000 }
+		set_variable = { global.ccp_status = 4 }
+		set_variable = { global.ccp_granted_resource = 3 }
+		set_variable = { global.ccp_granted_amount = 1000000 }
 	}
 	else = {
-		set_variable = { ccp_status = 12 }
+		set_variable = { global.ccp_status = 12 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -439,12 +440,12 @@ CCP_grant_manpower_4 = {
 			check_variable = { manpower < 1000000000 }
 		}
 		add_manpower = 5000000
-		set_variable = { ccp_status = 4 }
-		set_variable = { ccp_granted_resource = 3 }
-		set_variable = { ccp_granted_amount = 5000000 }
+		set_variable = { global.ccp_status = 4 }
+		set_variable = { global.ccp_granted_resource = 3 }
+		set_variable = { global.ccp_granted_amount = 5000000 }
 	}
 	else = {
-		set_variable = { ccp_status = 12 }
+		set_variable = { global.ccp_status = 12 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -454,172 +455,172 @@ CCP_grant_manpower_custom = {
 		limit = {
 			check_variable = { manpower < 1000000000 }
 		}
-		set_temp_variable = { ccp_grant = var:ccp_amount }
+		set_temp_variable = { ccp_grant = var:global.ccp_amount }
 		clamp_temp_variable = {
 			var = ccp_grant
 			min = 0
 			max = 50000000
 		}
 		add_manpower = var:ccp_grant
-		set_variable = { ccp_status = 4 }
-		set_variable = { ccp_granted_resource = 3 }
-		set_variable = { ccp_granted_amount = var:ccp_grant }
+		set_variable = { global.ccp_status = 4 }
+		set_variable = { global.ccp_granted_resource = 3 }
+		set_variable = { global.ccp_granted_amount = var:ccp_grant }
 	}
 	else = {
-		set_variable = { ccp_status = 12 }
+		set_variable = { global.ccp_status = 12 }
 	}
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_army_experience_1 = {
 	army_experience = 10
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 4 }
-	set_variable = { ccp_granted_amount = 10 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 4 }
+	set_variable = { global.ccp_granted_amount = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_army_experience_2 = {
 	army_experience = 50
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 4 }
-	set_variable = { ccp_granted_amount = 50 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 4 }
+	set_variable = { global.ccp_granted_amount = 50 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_army_experience_3 = {
 	army_experience = 100
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 4 }
-	set_variable = { ccp_granted_amount = 100 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 4 }
+	set_variable = { global.ccp_granted_amount = 100 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_army_experience_4 = {
 	army_experience = 500
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 4 }
-	set_variable = { ccp_granted_amount = 500 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 4 }
+	set_variable = { global.ccp_granted_amount = 500 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_army_experience_custom = {
-	set_temp_variable = { ccp_grant = var:ccp_amount }
+	set_temp_variable = { ccp_grant = var:global.ccp_amount }
 	clamp_temp_variable = {
 		var = ccp_grant
 		min = 0
 		max = 100000
 	}
 	army_experience = var:ccp_grant
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 4 }
-	set_variable = { ccp_granted_amount = var:ccp_grant }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 4 }
+	set_variable = { global.ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_navy_experience_1 = {
 	navy_experience = 10
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 5 }
-	set_variable = { ccp_granted_amount = 10 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 5 }
+	set_variable = { global.ccp_granted_amount = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_navy_experience_2 = {
 	navy_experience = 50
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 5 }
-	set_variable = { ccp_granted_amount = 50 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 5 }
+	set_variable = { global.ccp_granted_amount = 50 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_navy_experience_3 = {
 	navy_experience = 100
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 5 }
-	set_variable = { ccp_granted_amount = 100 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 5 }
+	set_variable = { global.ccp_granted_amount = 100 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_navy_experience_4 = {
 	navy_experience = 500
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 5 }
-	set_variable = { ccp_granted_amount = 500 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 5 }
+	set_variable = { global.ccp_granted_amount = 500 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_navy_experience_custom = {
-	set_temp_variable = { ccp_grant = var:ccp_amount }
+	set_temp_variable = { ccp_grant = var:global.ccp_amount }
 	clamp_temp_variable = {
 		var = ccp_grant
 		min = 0
 		max = 100000
 	}
 	navy_experience = var:ccp_grant
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 5 }
-	set_variable = { ccp_granted_amount = var:ccp_grant }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 5 }
+	set_variable = { global.ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_air_experience_1 = {
 	air_experience = 10
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 6 }
-	set_variable = { ccp_granted_amount = 10 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 6 }
+	set_variable = { global.ccp_granted_amount = 10 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_air_experience_2 = {
 	air_experience = 50
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 6 }
-	set_variable = { ccp_granted_amount = 50 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 6 }
+	set_variable = { global.ccp_granted_amount = 50 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_air_experience_3 = {
 	air_experience = 100
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 6 }
-	set_variable = { ccp_granted_amount = 100 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 6 }
+	set_variable = { global.ccp_granted_amount = 100 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_air_experience_4 = {
 	air_experience = 500
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 6 }
-	set_variable = { ccp_granted_amount = 500 }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 6 }
+	set_variable = { global.ccp_granted_amount = 500 }
 	CCP_mark_dirty = yes
 }
 
 CCP_grant_air_experience_custom = {
-	set_temp_variable = { ccp_grant = var:ccp_amount }
+	set_temp_variable = { ccp_grant = var:global.ccp_amount }
 	clamp_temp_variable = {
 		var = ccp_grant
 		min = 0
 		max = 100000
 	}
 	air_experience = var:ccp_grant
-	set_variable = { ccp_status = 4 }
-	set_variable = { ccp_granted_resource = 6 }
-	set_variable = { ccp_granted_amount = var:ccp_grant }
+	set_variable = { global.ccp_status = 4 }
+	set_variable = { global.ccp_granted_resource = 6 }
+	set_variable = { global.ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
 CCP_toggle_confirmations = {
 	if = {
 		limit = {
-			check_variable = { ccp_confirm_destructive = 1 }
+			check_variable = { global.ccp_confirm_destructive = 1 }
 		}
-		set_variable = { ccp_confirm_destructive = 0 }
-		set_variable = { ccp_status = 3 }
+		set_variable = { global.ccp_confirm_destructive = 0 }
+		set_variable = { global.ccp_status = 3 }
 	}
 	else = {
-		set_variable = { ccp_confirm_destructive = 1 }
-		set_variable = { ccp_status = 2 }
+		set_variable = { global.ccp_confirm_destructive = 1 }
+		set_variable = { global.ccp_status = 2 }
 	}
 	CCP_mark_dirty = yes
 }

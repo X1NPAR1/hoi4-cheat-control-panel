@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from .gameloc import english_keys
 from .paradox import Node, parse_file
 
 CATEGORY_ORDER = [
@@ -229,6 +230,9 @@ def load_catalogue(game_dir: Path) -> list[Equipment]:
                 types=_inherited_list(entries, key, "type"),
             )
         )
+
+    named = english_keys(game_dir)
+    catalogue = [item for item in catalogue if item.key in named]
 
     order = {name: index for index, name in enumerate(CATEGORY_ORDER)}
     catalogue.sort(key=lambda item: (order.get(item.category, len(order)), item.year, item.key))

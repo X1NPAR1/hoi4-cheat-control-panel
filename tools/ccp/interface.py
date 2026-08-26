@@ -265,6 +265,23 @@ DASHBOARD_CARDS = [
 
 def _dashboard() -> Container:
     section = Container("ccp_section_dashboard", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+    section.add(
+        Icon(
+            "ccp_ironman_plate",
+            CONTENT_X,
+            BODY_TOP,
+            sprite="GFX_ccp_plate_action",
+        ),
+        Text(
+            "ccp_ironman_notice",
+            CONTENT_X + 16,
+            BODY_TOP + 16,
+            key="CCP_IRONMAN_LOCKED",
+            width=t.CONTENT_WIDTH - 80,
+            height=86,
+            font="hoi_18mbs",
+        ),
+    )
     for index, (name, label, value) in enumerate(DASHBOARD_CARDS):
         section.add(
             _stat_card(name, index % 3, index // 3, label, value, f"{label}_TOOLTIP")
@@ -809,12 +826,22 @@ def _research(folders: list[str]) -> Container:
                 width=button_width("CCP_RESEARCH_ALL"),
                 height=t.BUTTON_HEIGHT,
             ),
+            Button(
+                "ccp_research_everything",
+                LIST_X + button_width("CCP_RESEARCH_ALL") + 10,
+                BODY_TOP + 70 + PAGE_SIZE * ENTRY_HEIGHT,
+                sprite="GFX_ccp_button_confirm",
+                key="CCP_RESEARCH_EVERYTHING",
+                tooltip="CCP_RESEARCH_EVERYTHING_TOOLTIP",
+                width=button_width("CCP_RESEARCH_EVERYTHING"),
+                height=t.BUTTON_HEIGHT,
+            ),
             Text(
                 "ccp_research_all_help",
-                LIST_X + button_width("CCP_RESEARCH_ALL") + 12,
-                BODY_TOP + 76 + PAGE_SIZE * ENTRY_HEIGHT,
+                LIST_X,
+                BODY_TOP + 106 + PAGE_SIZE * ENTRY_HEIGHT,
                 key="CCP_RESEARCH_ALL_HELP",
-                width=LIST_WIDTH - button_width("CCP_RESEARCH_ALL") - 12,
+                width=LIST_WIDTH,
                 height=18,
             ),
         ],
@@ -911,19 +938,20 @@ def country_entry_window() -> Container:
     entry = Container(
         "ccp_country_entry", 0, 0, width=COUNTRY_LIST_WIDTH, height=COUNTRY_ENTRY_HEIGHT
     )
+    entries = [
+        ("target", "CCP_COUNTRY_TARGET", "GFX_ccp_button_small", "CCP_COUNTRY_TARGET_TOOLTIP")
+    ]
+    entries += [
+        (
+            action.slug,
+            action.key,
+            "GFX_ccp_button_small_danger" if action.destructive else "GFX_ccp_button_small",
+            f"{action.key}_TOOLTIP",
+        )
+        for action in ACTIONS
+    ]
     buttons, used = right_aligned_row(
-        "ccp_country_entry",
-        [
-            (
-                action.slug,
-                action.key,
-                "GFX_ccp_button_small_danger" if action.destructive else "GFX_ccp_button_small",
-                f"{action.key}_TOOLTIP",
-            )
-            for action in ACTIONS
-        ],
-        COUNTRY_LIST_WIDTH - 8,
-        3,
+        "ccp_country_entry", entries, COUNTRY_LIST_WIDTH - 8, 3
     )
     entry.add(
         Icon(
@@ -1017,7 +1045,15 @@ def _states() -> Container:
             BODY_TOP,
             key="CCP_STATE_HELP",
             width=STATE_LIST_WIDTH - PICKER_TOGGLE_WIDTH - 16,
-            height=36,
+            height=22,
+        ),
+        Text(
+            "ccp_state_target",
+            CONTENT_X,
+            BODY_TOP + 22,
+            key="CCP_STATE_TARGET",
+            width=STATE_LIST_WIDTH - PICKER_TOGGLE_WIDTH - 16,
+            height=18,
         ),
         Button(
             "ccp_state_picker_toggle",

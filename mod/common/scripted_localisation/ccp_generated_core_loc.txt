@@ -6,67 +6,67 @@ defined_text = {
 	name = CCP_GetSectionName
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 1 }
+			check_variable = { global.ccp_section = 1 }
 		}
 		localization_key = CCP_SECTION_DASHBOARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 2 }
+			check_variable = { global.ccp_section = 2 }
 		}
 		localization_key = CCP_SECTION_RESOURCES
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 3 }
+			check_variable = { global.ccp_section = 3 }
 		}
 		localization_key = CCP_SECTION_EQUIPMENT
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 4 }
+			check_variable = { global.ccp_section = 4 }
 		}
 		localization_key = CCP_SECTION_RESEARCH
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 5 }
+			check_variable = { global.ccp_section = 5 }
 		}
 		localization_key = CCP_SECTION_COUNTRY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 6 }
+			check_variable = { global.ccp_section = 6 }
 		}
 		localization_key = CCP_SECTION_STATES
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 7 }
+			check_variable = { global.ccp_section = 7 }
 		}
 		localization_key = CCP_SECTION_NATION
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 8 }
+			check_variable = { global.ccp_section = 8 }
 		}
 		localization_key = CCP_SECTION_CONSTRUCTION
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 9 }
+			check_variable = { global.ccp_section = 9 }
 		}
 		localization_key = CCP_SECTION_COMMANDERS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 10 }
+			check_variable = { global.ccp_section = 10 }
 		}
 		localization_key = CCP_SECTION_HISTORY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_section = 11 }
+			check_variable = { global.ccp_section = 11 }
 		}
 		localization_key = CCP_SECTION_SETTINGS
 	}
@@ -79,87 +79,105 @@ defined_text = {
 	name = CCP_GetStatus
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 1 }
+			check_variable = { global.ccp_status = 1 }
 		}
 		localization_key = CCP_STATUS_HOTKEY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 2 }
+			check_variable = { global.ccp_status = 2 }
 		}
 		localization_key = CCP_STATUS_CONFIRM_ON
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 3 }
+			check_variable = { global.ccp_status = 3 }
 		}
 		localization_key = CCP_STATUS_CONFIRM_OFF
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 4 }
+			check_variable = { global.ccp_status = 4 }
 		}
 		localization_key = CCP_STATUS_GRANTED
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 5 }
+			check_variable = { global.ccp_status = 5 }
 		}
 		localization_key = CCP_STATUS_EQUIPMENT
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 6 }
+			check_variable = { global.ccp_status = 6 }
 		}
 		localization_key = CCP_STATUS_TECH
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 7 }
+			check_variable = { global.ccp_status = 7 }
 		}
 		localization_key = CCP_STATUS_FOLDER
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 8 }
+			check_variable = { global.ccp_status = 8 }
 		}
 		localization_key = CCP_STATUS_COUNTRY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 9 }
+			check_variable = { global.ccp_status = 9 }
 		}
 		localization_key = CCP_STATUS_CANCELLED
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 10 }
+			check_variable = { global.ccp_status = 10 }
 		}
 		localization_key = CCP_STATUS_STATE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 11 }
+			check_variable = { global.ccp_status = 11 }
 		}
 		localization_key = CCP_STATUS_ACTION
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 12 }
+			check_variable = { global.ccp_status = 12 }
 		}
 		localization_key = CCP_STATUS_OVERFLOW
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 13 }
+			check_variable = { global.ccp_status = 13 }
 		}
 		localization_key = CCP_STATUS_CATEGORY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_status = 14 }
+			check_variable = { global.ccp_status = 14 }
 		}
 		localization_key = CCP_STATUS_SELECTION
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 17 }
+		}
+		localization_key = CCP_STATUS_GIVEN
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 16 }
+		}
+		localization_key = CCP_STATUS_EVERYTHING
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 15 }
+		}
+		localization_key = CCP_STATUS_TARGET
 	}
 	text = {
 		localization_key = CCP_STATUS_IDLE
@@ -170,7 +188,7 @@ defined_text = {
 	name = CCP_GetConfirmState
 	text = {
 		trigger = {
-			check_variable = { ccp_confirm_destructive = 1 }
+			check_variable = { global.ccp_confirm_destructive = 1 }
 		}
 		localization_key = CCP_CONFIRM_ON
 	}
@@ -183,37 +201,37 @@ defined_text = {
 	name = CCP_GetGrantedResource
 	text = {
 		trigger = {
-			check_variable = { ccp_granted_resource = 1 }
+			check_variable = { global.ccp_granted_resource = 1 }
 		}
 		localization_key = CCP_RES_POLITICAL_POWER
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_granted_resource = 2 }
+			check_variable = { global.ccp_granted_resource = 2 }
 		}
 		localization_key = CCP_RES_COMMAND_POWER
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_granted_resource = 3 }
+			check_variable = { global.ccp_granted_resource = 3 }
 		}
 		localization_key = CCP_RES_MANPOWER
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_granted_resource = 4 }
+			check_variable = { global.ccp_granted_resource = 4 }
 		}
 		localization_key = CCP_RES_ARMY_EXPERIENCE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_granted_resource = 5 }
+			check_variable = { global.ccp_granted_resource = 5 }
 		}
 		localization_key = CCP_RES_NAVY_EXPERIENCE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_granted_resource = 6 }
+			check_variable = { global.ccp_granted_resource = 6 }
 		}
 		localization_key = CCP_RES_AIR_EXPERIENCE
 	}
@@ -226,127 +244,127 @@ defined_text = {
 	name = CCP_GetHistory1
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 1 }
+			check_variable = { global.global.ccp_history^0 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 2 }
+			check_variable = { global.global.ccp_history^0 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 3 }
+			check_variable = { global.global.ccp_history^0 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 4 }
+			check_variable = { global.global.ccp_history^0 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 5 }
+			check_variable = { global.global.ccp_history^0 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 6 }
+			check_variable = { global.global.ccp_history^0 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 7 }
+			check_variable = { global.global.ccp_history^0 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 8 }
+			check_variable = { global.global.ccp_history^0 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 9 }
+			check_variable = { global.global.ccp_history^0 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 10 }
+			check_variable = { global.global.ccp_history^0 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 11 }
+			check_variable = { global.global.ccp_history^0 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 12 }
+			check_variable = { global.global.ccp_history^0 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 13 }
+			check_variable = { global.global.ccp_history^0 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 14 }
+			check_variable = { global.global.ccp_history^0 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 15 }
+			check_variable = { global.global.ccp_history^0 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 16 }
+			check_variable = { global.global.ccp_history^0 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 17 }
+			check_variable = { global.global.ccp_history^0 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 18 }
+			check_variable = { global.global.ccp_history^0 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 19 }
+			check_variable = { global.global.ccp_history^0 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 20 }
+			check_variable = { global.global.ccp_history^0 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^0 = 21 }
+			check_variable = { global.global.ccp_history^0 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -359,127 +377,127 @@ defined_text = {
 	name = CCP_GetHistory2
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 1 }
+			check_variable = { global.global.ccp_history^1 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 2 }
+			check_variable = { global.global.ccp_history^1 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 3 }
+			check_variable = { global.global.ccp_history^1 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 4 }
+			check_variable = { global.global.ccp_history^1 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 5 }
+			check_variable = { global.global.ccp_history^1 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 6 }
+			check_variable = { global.global.ccp_history^1 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 7 }
+			check_variable = { global.global.ccp_history^1 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 8 }
+			check_variable = { global.global.ccp_history^1 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 9 }
+			check_variable = { global.global.ccp_history^1 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 10 }
+			check_variable = { global.global.ccp_history^1 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 11 }
+			check_variable = { global.global.ccp_history^1 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 12 }
+			check_variable = { global.global.ccp_history^1 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 13 }
+			check_variable = { global.global.ccp_history^1 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 14 }
+			check_variable = { global.global.ccp_history^1 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 15 }
+			check_variable = { global.global.ccp_history^1 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 16 }
+			check_variable = { global.global.ccp_history^1 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 17 }
+			check_variable = { global.global.ccp_history^1 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 18 }
+			check_variable = { global.global.ccp_history^1 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 19 }
+			check_variable = { global.global.ccp_history^1 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 20 }
+			check_variable = { global.global.ccp_history^1 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^1 = 21 }
+			check_variable = { global.global.ccp_history^1 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -492,127 +510,127 @@ defined_text = {
 	name = CCP_GetHistory3
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 1 }
+			check_variable = { global.global.ccp_history^2 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 2 }
+			check_variable = { global.global.ccp_history^2 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 3 }
+			check_variable = { global.global.ccp_history^2 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 4 }
+			check_variable = { global.global.ccp_history^2 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 5 }
+			check_variable = { global.global.ccp_history^2 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 6 }
+			check_variable = { global.global.ccp_history^2 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 7 }
+			check_variable = { global.global.ccp_history^2 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 8 }
+			check_variable = { global.global.ccp_history^2 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 9 }
+			check_variable = { global.global.ccp_history^2 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 10 }
+			check_variable = { global.global.ccp_history^2 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 11 }
+			check_variable = { global.global.ccp_history^2 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 12 }
+			check_variable = { global.global.ccp_history^2 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 13 }
+			check_variable = { global.global.ccp_history^2 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 14 }
+			check_variable = { global.global.ccp_history^2 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 15 }
+			check_variable = { global.global.ccp_history^2 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 16 }
+			check_variable = { global.global.ccp_history^2 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 17 }
+			check_variable = { global.global.ccp_history^2 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 18 }
+			check_variable = { global.global.ccp_history^2 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 19 }
+			check_variable = { global.global.ccp_history^2 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 20 }
+			check_variable = { global.global.ccp_history^2 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^2 = 21 }
+			check_variable = { global.global.ccp_history^2 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -625,127 +643,127 @@ defined_text = {
 	name = CCP_GetHistory4
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 1 }
+			check_variable = { global.global.ccp_history^3 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 2 }
+			check_variable = { global.global.ccp_history^3 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 3 }
+			check_variable = { global.global.ccp_history^3 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 4 }
+			check_variable = { global.global.ccp_history^3 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 5 }
+			check_variable = { global.global.ccp_history^3 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 6 }
+			check_variable = { global.global.ccp_history^3 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 7 }
+			check_variable = { global.global.ccp_history^3 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 8 }
+			check_variable = { global.global.ccp_history^3 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 9 }
+			check_variable = { global.global.ccp_history^3 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 10 }
+			check_variable = { global.global.ccp_history^3 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 11 }
+			check_variable = { global.global.ccp_history^3 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 12 }
+			check_variable = { global.global.ccp_history^3 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 13 }
+			check_variable = { global.global.ccp_history^3 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 14 }
+			check_variable = { global.global.ccp_history^3 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 15 }
+			check_variable = { global.global.ccp_history^3 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 16 }
+			check_variable = { global.global.ccp_history^3 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 17 }
+			check_variable = { global.global.ccp_history^3 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 18 }
+			check_variable = { global.global.ccp_history^3 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 19 }
+			check_variable = { global.global.ccp_history^3 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 20 }
+			check_variable = { global.global.ccp_history^3 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^3 = 21 }
+			check_variable = { global.global.ccp_history^3 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -758,127 +776,127 @@ defined_text = {
 	name = CCP_GetHistory5
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 1 }
+			check_variable = { global.global.ccp_history^4 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 2 }
+			check_variable = { global.global.ccp_history^4 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 3 }
+			check_variable = { global.global.ccp_history^4 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 4 }
+			check_variable = { global.global.ccp_history^4 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 5 }
+			check_variable = { global.global.ccp_history^4 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 6 }
+			check_variable = { global.global.ccp_history^4 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 7 }
+			check_variable = { global.global.ccp_history^4 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 8 }
+			check_variable = { global.global.ccp_history^4 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 9 }
+			check_variable = { global.global.ccp_history^4 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 10 }
+			check_variable = { global.global.ccp_history^4 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 11 }
+			check_variable = { global.global.ccp_history^4 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 12 }
+			check_variable = { global.global.ccp_history^4 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 13 }
+			check_variable = { global.global.ccp_history^4 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 14 }
+			check_variable = { global.global.ccp_history^4 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 15 }
+			check_variable = { global.global.ccp_history^4 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 16 }
+			check_variable = { global.global.ccp_history^4 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 17 }
+			check_variable = { global.global.ccp_history^4 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 18 }
+			check_variable = { global.global.ccp_history^4 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 19 }
+			check_variable = { global.global.ccp_history^4 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 20 }
+			check_variable = { global.global.ccp_history^4 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^4 = 21 }
+			check_variable = { global.global.ccp_history^4 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -891,127 +909,127 @@ defined_text = {
 	name = CCP_GetHistory6
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 1 }
+			check_variable = { global.global.ccp_history^5 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 2 }
+			check_variable = { global.global.ccp_history^5 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 3 }
+			check_variable = { global.global.ccp_history^5 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 4 }
+			check_variable = { global.global.ccp_history^5 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 5 }
+			check_variable = { global.global.ccp_history^5 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 6 }
+			check_variable = { global.global.ccp_history^5 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 7 }
+			check_variable = { global.global.ccp_history^5 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 8 }
+			check_variable = { global.global.ccp_history^5 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 9 }
+			check_variable = { global.global.ccp_history^5 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 10 }
+			check_variable = { global.global.ccp_history^5 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 11 }
+			check_variable = { global.global.ccp_history^5 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 12 }
+			check_variable = { global.global.ccp_history^5 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 13 }
+			check_variable = { global.global.ccp_history^5 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 14 }
+			check_variable = { global.global.ccp_history^5 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 15 }
+			check_variable = { global.global.ccp_history^5 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 16 }
+			check_variable = { global.global.ccp_history^5 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 17 }
+			check_variable = { global.global.ccp_history^5 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 18 }
+			check_variable = { global.global.ccp_history^5 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 19 }
+			check_variable = { global.global.ccp_history^5 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 20 }
+			check_variable = { global.global.ccp_history^5 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^5 = 21 }
+			check_variable = { global.global.ccp_history^5 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -1024,127 +1042,127 @@ defined_text = {
 	name = CCP_GetHistory7
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 1 }
+			check_variable = { global.global.ccp_history^6 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 2 }
+			check_variable = { global.global.ccp_history^6 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 3 }
+			check_variable = { global.global.ccp_history^6 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 4 }
+			check_variable = { global.global.ccp_history^6 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 5 }
+			check_variable = { global.global.ccp_history^6 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 6 }
+			check_variable = { global.global.ccp_history^6 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 7 }
+			check_variable = { global.global.ccp_history^6 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 8 }
+			check_variable = { global.global.ccp_history^6 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 9 }
+			check_variable = { global.global.ccp_history^6 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 10 }
+			check_variable = { global.global.ccp_history^6 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 11 }
+			check_variable = { global.global.ccp_history^6 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 12 }
+			check_variable = { global.global.ccp_history^6 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 13 }
+			check_variable = { global.global.ccp_history^6 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 14 }
+			check_variable = { global.global.ccp_history^6 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 15 }
+			check_variable = { global.global.ccp_history^6 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 16 }
+			check_variable = { global.global.ccp_history^6 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 17 }
+			check_variable = { global.global.ccp_history^6 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 18 }
+			check_variable = { global.global.ccp_history^6 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 19 }
+			check_variable = { global.global.ccp_history^6 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 20 }
+			check_variable = { global.global.ccp_history^6 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^6 = 21 }
+			check_variable = { global.global.ccp_history^6 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -1157,127 +1175,127 @@ defined_text = {
 	name = CCP_GetHistory8
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 1 }
+			check_variable = { global.global.ccp_history^7 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 2 }
+			check_variable = { global.global.ccp_history^7 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 3 }
+			check_variable = { global.global.ccp_history^7 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 4 }
+			check_variable = { global.global.ccp_history^7 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 5 }
+			check_variable = { global.global.ccp_history^7 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 6 }
+			check_variable = { global.global.ccp_history^7 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 7 }
+			check_variable = { global.global.ccp_history^7 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 8 }
+			check_variable = { global.global.ccp_history^7 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 9 }
+			check_variable = { global.global.ccp_history^7 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 10 }
+			check_variable = { global.global.ccp_history^7 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 11 }
+			check_variable = { global.global.ccp_history^7 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 12 }
+			check_variable = { global.global.ccp_history^7 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 13 }
+			check_variable = { global.global.ccp_history^7 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 14 }
+			check_variable = { global.global.ccp_history^7 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 15 }
+			check_variable = { global.global.ccp_history^7 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 16 }
+			check_variable = { global.global.ccp_history^7 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 17 }
+			check_variable = { global.global.ccp_history^7 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 18 }
+			check_variable = { global.global.ccp_history^7 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 19 }
+			check_variable = { global.global.ccp_history^7 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 20 }
+			check_variable = { global.global.ccp_history^7 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^7 = 21 }
+			check_variable = { global.global.ccp_history^7 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -1290,127 +1308,127 @@ defined_text = {
 	name = CCP_GetHistory9
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 1 }
+			check_variable = { global.global.ccp_history^8 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 2 }
+			check_variable = { global.global.ccp_history^8 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 3 }
+			check_variable = { global.global.ccp_history^8 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 4 }
+			check_variable = { global.global.ccp_history^8 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 5 }
+			check_variable = { global.global.ccp_history^8 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 6 }
+			check_variable = { global.global.ccp_history^8 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 7 }
+			check_variable = { global.global.ccp_history^8 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 8 }
+			check_variable = { global.global.ccp_history^8 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 9 }
+			check_variable = { global.global.ccp_history^8 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 10 }
+			check_variable = { global.global.ccp_history^8 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 11 }
+			check_variable = { global.global.ccp_history^8 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 12 }
+			check_variable = { global.global.ccp_history^8 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 13 }
+			check_variable = { global.global.ccp_history^8 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 14 }
+			check_variable = { global.global.ccp_history^8 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 15 }
+			check_variable = { global.global.ccp_history^8 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 16 }
+			check_variable = { global.global.ccp_history^8 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 17 }
+			check_variable = { global.global.ccp_history^8 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 18 }
+			check_variable = { global.global.ccp_history^8 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 19 }
+			check_variable = { global.global.ccp_history^8 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 20 }
+			check_variable = { global.global.ccp_history^8 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^8 = 21 }
+			check_variable = { global.global.ccp_history^8 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -1423,127 +1441,127 @@ defined_text = {
 	name = CCP_GetHistory10
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 1 }
+			check_variable = { global.global.ccp_history^9 = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 2 }
+			check_variable = { global.global.ccp_history^9 = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 3 }
+			check_variable = { global.global.ccp_history^9 = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 4 }
+			check_variable = { global.global.ccp_history^9 = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 5 }
+			check_variable = { global.global.ccp_history^9 = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 6 }
+			check_variable = { global.global.ccp_history^9 = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 7 }
+			check_variable = { global.global.ccp_history^9 = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 8 }
+			check_variable = { global.global.ccp_history^9 = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 9 }
+			check_variable = { global.global.ccp_history^9 = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 10 }
+			check_variable = { global.global.ccp_history^9 = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 11 }
+			check_variable = { global.global.ccp_history^9 = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 12 }
+			check_variable = { global.global.ccp_history^9 = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 13 }
+			check_variable = { global.global.ccp_history^9 = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 14 }
+			check_variable = { global.global.ccp_history^9 = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 15 }
+			check_variable = { global.global.ccp_history^9 = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 16 }
+			check_variable = { global.global.ccp_history^9 = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 17 }
+			check_variable = { global.global.ccp_history^9 = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 18 }
+			check_variable = { global.global.ccp_history^9 = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 19 }
+			check_variable = { global.global.ccp_history^9 = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 20 }
+			check_variable = { global.global.ccp_history^9 = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_history^9 = 21 }
+			check_variable = { global.global.ccp_history^9 = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -1556,127 +1574,127 @@ defined_text = {
 	name = CCP_GetLastAction
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 1 }
+			check_variable = { global.ccp_last_action = 1 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 2 }
+			check_variable = { global.ccp_last_action = 2 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MAX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 3 }
+			check_variable = { global.ccp_last_action = 3 }
 		}
 		localization_key = CCP_ACTION_STABILITY_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 4 }
+			check_variable = { global.ccp_last_action = 4 }
 		}
 		localization_key = CCP_ACTION_WAR_SUPPORT_MIN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 5 }
+			check_variable = { global.ccp_last_action = 5 }
 		}
 		localization_key = CCP_ACTION_RESEARCH_SLOTS
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 6 }
+			check_variable = { global.ccp_last_action = 6 }
 		}
 		localization_key = CCP_ACTION_FUEL
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 7 }
+			check_variable = { global.ccp_last_action = 7 }
 		}
 		localization_key = CCP_ACTION_INFRASTRUCTURE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 8 }
+			check_variable = { global.ccp_last_action = 8 }
 		}
 		localization_key = CCP_ACTION_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 9 }
+			check_variable = { global.ccp_last_action = 9 }
 		}
 		localization_key = CCP_ACTION_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 10 }
+			check_variable = { global.ccp_last_action = 10 }
 		}
 		localization_key = CCP_ACTION_DOCKYARD
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 11 }
+			check_variable = { global.ccp_last_action = 11 }
 		}
 		localization_key = CCP_ACTION_AIRBASE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 12 }
+			check_variable = { global.ccp_last_action = 12 }
 		}
 		localization_key = CCP_ACTION_RADAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 13 }
+			check_variable = { global.ccp_last_action = 13 }
 		}
 		localization_key = CCP_ACTION_ANTIAIR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 14 }
+			check_variable = { global.ccp_last_action = 14 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_CIVILIAN
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 15 }
+			check_variable = { global.ccp_last_action = 15 }
 		}
 		localization_key = CCP_ACTION_OFFSITE_MILITARY
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 16 }
+			check_variable = { global.ccp_last_action = 16 }
 		}
 		localization_key = CCP_ACTION_ARMY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 17 }
+			check_variable = { global.ccp_last_action = 17 }
 		}
 		localization_key = CCP_ACTION_NAVY_XP
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 18 }
+			check_variable = { global.ccp_last_action = 18 }
 		}
 		localization_key = CCP_ACTION_ATTACK
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 19 }
+			check_variable = { global.ccp_last_action = 19 }
 		}
 		localization_key = CCP_ACTION_DEFENSE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 20 }
+			check_variable = { global.ccp_last_action = 20 }
 		}
 		localization_key = CCP_ACTION_PLANNING
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_last_action = 21 }
+			check_variable = { global.ccp_last_action = 21 }
 		}
 		localization_key = CCP_ACTION_LOGISTICS
 	}
@@ -1702,7 +1720,7 @@ defined_text = {
 	name = CCP_GetStatePickerState
 	text = {
 		trigger = {
-			check_variable = { ccp_state_picker_on = 1 }
+			check_variable = { global.ccp_state_picker_on = 1 }
 		}
 		localization_key = CCP_STATE_PICKER_ON
 	}
@@ -1715,31 +1733,31 @@ defined_text = {
 	name = CCP_GetPendingAction
 	text = {
 		trigger = {
-			check_variable = { ccp_pending_action = 1 }
+			check_variable = { global.ccp_pending_action = 1 }
 		}
 		localization_key = CCP_COUNTRY_ANNEX
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_pending_action = 2 }
+			check_variable = { global.ccp_pending_action = 2 }
 		}
 		localization_key = CCP_COUNTRY_PUPPET
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_pending_action = 3 }
+			check_variable = { global.ccp_pending_action = 3 }
 		}
 		localization_key = CCP_COUNTRY_WAR
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_pending_action = 4 }
+			check_variable = { global.ccp_pending_action = 4 }
 		}
 		localization_key = CCP_COUNTRY_PEACE
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_pending_action = 5 }
+			check_variable = { global.ccp_pending_action = 5 }
 		}
 		localization_key = CCP_COUNTRY_PLAYAS
 	}
@@ -1752,31 +1770,31 @@ defined_text = {
 	name = CCP_GetHotkeyName
 	text = {
 		trigger = {
-			check_variable = { ccp_hotkey_id = 1 }
+			check_variable = { global.ccp_hotkey_id = 1 }
 		}
 		localization_key = CCP_HOTKEY_1
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_hotkey_id = 2 }
+			check_variable = { global.ccp_hotkey_id = 2 }
 		}
 		localization_key = CCP_HOTKEY_2
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_hotkey_id = 3 }
+			check_variable = { global.ccp_hotkey_id = 3 }
 		}
 		localization_key = CCP_HOTKEY_3
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_hotkey_id = 4 }
+			check_variable = { global.ccp_hotkey_id = 4 }
 		}
 		localization_key = CCP_HOTKEY_4
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_hotkey_id = 5 }
+			check_variable = { global.ccp_hotkey_id = 5 }
 		}
 		localization_key = CCP_HOTKEY_5
 	}

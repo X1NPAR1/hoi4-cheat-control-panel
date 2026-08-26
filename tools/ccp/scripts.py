@@ -100,6 +100,7 @@ def emit_core_effects(version: str) -> str:
 
     writer.open("CCP_open_panel")
     writer.line("CCP_ensure_settings = yes")
+    writer.line("set_variable = { ccp_player = THIS }")
     writer.line("set_variable = { ccp_panel_open = 1 }")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
@@ -311,25 +312,30 @@ def emit_country_effects(version: str) -> str:
         writer.close()
         writer.blank()
 
+    writer.open("CCP_country_target")
+    writer.line("set_variable = { ccp_target_country = THIS }")
+    writer.line(f"set_variable = {{ ccp_status = {status.TARGET_PICKED} }}")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
     for index, action in enumerate(ACTIONS, start=1):
         writer.open(f"CCP_country_request_{action.slug}")
-        writer.line(f"ROOT = {{ set_variable = {{ ccp_pending_action = {index} }} }}")
-        writer.line("ROOT = { set_variable = { ccp_pending_country = PREV } }")
+        writer.line(f"set_variable = {{ ccp_pending_action = {index} }}")
+        writer.line("set_variable = { ccp_pending_country = THIS }")
         if action.destructive:
             writer.open("if")
             writer.open("limit")
-            writer.line("ROOT = { check_variable = { ccp_confirm_destructive = 1 } }")
+            writer.line("check_variable = { ccp_confirm_destructive = 1 }")
             writer.close()
-            writer.open("ROOT")
             writer.line("set_variable = { ccp_modal_open = 1 }")
             writer.line("CCP_mark_dirty = yes")
             writer.close()
-            writer.close()
             writer.open("else")
-            writer.line("ROOT = { CCP_country_apply = yes }")
+            writer.line("CCP_country_apply = yes")
             writer.close()
         else:
-            writer.line("ROOT = { CCP_country_apply = yes }")
+            writer.line("CCP_country_apply = yes")
         writer.close()
         writer.blank()
 
@@ -342,6 +348,7 @@ def emit_country_effects(version: str) -> str:
     writer.blank()
 
     writer.open("CCP_country_apply")
+    writer.open("var:ccp_player")
     for index, action in enumerate(ACTIONS, start=1):
         writer.open("if" if index == 1 else "else_if")
         writer.open("limit")
@@ -350,6 +357,7 @@ def emit_country_effects(version: str) -> str:
         for line in action.body:
             writer.line(line)
         writer.close()
+    writer.close()
     writer.line(f"set_variable = {{ ccp_status = {status.COUNTRY_ACTION} }}")
     writer.line("set_variable = { ccp_modal_open = 0 }")
     writer.line("CCP_country_rebuild = yes")
@@ -433,10 +441,8 @@ def emit_state_effects(version: str) -> str:
         writer.open(f"CCP_state_{action.slug}")
         for line in action.body:
             writer.line(line)
-        writer.open("ROOT")
         writer.line(f"set_variable = {{ ccp_status = {status.STATE_ACTION} }}")
         writer.line("CCP_mark_dirty = yes")
-        writer.close()
         writer.close()
         writer.blank()
 
@@ -560,7 +566,7 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line('window_name = "ccp_state_picker_window"')
     writer.blank()
     writer.open("visible")
-    writer.line("ROOT = { check_variable = { ccp_state_picker_on = 1 } }")
+    writer.line("check_variable = { ccp_state_picker_on = 1 }")
     writer.close()
     writer.blank()
     writer.open("effects")
@@ -671,6 +677,12 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("ccp_research_all_click")
     writer.line("CCP_research_grant_folder = yes")
     writer.close()
+    writer.open("ccp_research_everything_click")
+    writer.line("CCP_research_grant_everything = yes")
+    writer.close()
+    writer.open("ccp_country_entry_target_click")
+    writer.line("CCP_country_target = yes")
+    writer.close()
     writer.open("ccp_research_entry_grant_click")
     writer.line("set_variable = { ccp_research_selected = var:v }")
     writer.line("CCP_research_grant = yes")
@@ -722,6 +734,20 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.blank()
 
     writer.open("triggers")
+
+    # In Ironman the panel opens on the dashboard and goes no further: the notice
+    # is the only thing shown, and every navigation button is disabled.
+    for index in range(1, len(SECTIONS) + 1):
+        writer.open(f"ccp_nav_{index}_click_enabled")
+        writer.line("NOT = { is_ironman = yes }")
+        writer.close()
+    for widget in ("ccp_ironman_plate", "ccp_ironman_notice"):
+        writer.open(f"{widget}_visible")
+        writer.line("is_ironman = yes")
+        writer.line(f"check_variable = {{ ccp_section = {section_index('dashboard')} }}")
+        writer.line("check_variable = { ccp_panel_open = 1 }")
+        writer.close()
+
     containers = section_containers(categories, folders)
 
     # A dynamic list draws its entries regardless of the grid box that holds them,
@@ -734,16 +760,21 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         "country": (ui.country_entry_window(), True),
         "states": (ui.state_entry_window(), True),
     }
-    for slug, (window, scoped) in entry_windows.items():
+    dashboard = section_index("dashboard")
+    for leaf in containers["dashboard"].leaves():
+        if leaf.startswith("ccp_ironman"):
+            continue
+        writer.open(f"{leaf}_visible")
+        writer.line(f"check_variable = {{ ccp_section = {dashboard} }}")
+        writer.line("NOT = { is_ironman = yes }")
+        writer.close()
+
+    for slug, (window, _scoped) in entry_windows.items():
         index = section_index(slug)
         for leaf in window.leaves():
             writer.open(f"{leaf}_visible")
-            if scoped:
-                writer.line(f"ROOT = {{ check_variable = {{ ccp_section = {index} }} }}")
-                writer.line("ROOT = { check_variable = { ccp_panel_open = 1 } }")
-            else:
-                writer.line(f"check_variable = {{ ccp_section = {index} }}")
-                writer.line("check_variable = { ccp_panel_open = 1 }")
+            writer.line(f"check_variable = {{ ccp_section = {index} }}")
+            writer.line("check_variable = { ccp_panel_open = 1 }")
             writer.close()
     for index, section in enumerate(SECTIONS, start=1):
         for leaf in containers[section.slug].leaves():
@@ -884,6 +915,9 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.OVERFLOW_BLOCKED} }}", "CCP_STATUS_OVERFLOW"),
             (f"check_variable = {{ ccp_status = {status.CATEGORY_GRANTED} }}", "CCP_STATUS_CATEGORY"),
             (f"check_variable = {{ ccp_status = {status.SELECTION_FAILED} }}", "CCP_STATUS_SELECTION"),
+            (f"check_variable = {{ ccp_status = {status.STATE_GIVEN} }}", "CCP_STATUS_GIVEN"),
+            (f"check_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}", "CCP_STATUS_EVERYTHING"),
+            (f"check_variable = {{ ccp_status = {status.TARGET_PICKED} }}", "CCP_STATUS_TARGET"),
         ],
         "CCP_STATUS_IDLE",
     )

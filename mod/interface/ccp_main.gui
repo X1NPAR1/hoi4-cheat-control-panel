@@ -422,6 +422,22 @@ guiTypes = {
 			size = { width = 1500 height = 880 }
 			moveable = no
 
+			iconType = {
+				name = "ccp_ironman_plate"
+				position = { x = 274 y = 128 }
+				spriteType = "GFX_ccp_plate_action"
+			}
+
+			instantTextBoxType = {
+				name = "ccp_ironman_notice"
+				position = { x = 290 y = 144 }
+				font = "hoi_18mbs"
+				text = "CCP_IRONMAN_LOCKED"
+				maxWidth = 1170
+				maxHeight = 86
+				format = left
+			}
+
 			containerWindowType = {
 				name = "ccp_card_country"
 				position = { x = 274 y = 128 }
@@ -1821,19 +1837,30 @@ guiTypes = {
 				name = "ccp_research_all"
 				position = { x = 490 y = 710 }
 				quadTextureSprite = "GFX_ccp_button"
-				size = { x = 146 y = 30 }
+				size = { x = 168 y = 30 }
 				buttonText = "CCP_RESEARCH_ALL"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_RESEARCH_ALL_TOOLTIP"
 				clicksound = click_default
 			}
 
+			buttonType = {
+				name = "ccp_research_everything"
+				position = { x = 668 y = 710 }
+				quadTextureSprite = "GFX_ccp_button_confirm"
+				size = { x = 160 y = 30 }
+				buttonText = "CCP_RESEARCH_EVERYTHING"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_RESEARCH_EVERYTHING_TOOLTIP"
+				clicksound = click_default
+			}
+
 			instantTextBoxType = {
 				name = "ccp_research_all_help"
-				position = { x = 648 y = 716 }
+				position = { x = 490 y = 746 }
 				font = "hoi_16mbs"
 				text = "CCP_RESEARCH_ALL_HELP"
-				maxWidth = 620
+				maxWidth = 778
 				maxHeight = 18
 				format = left
 			}
@@ -1910,7 +1937,17 @@ guiTypes = {
 				font = "hoi_16mbs"
 				text = "CCP_STATE_HELP"
 				maxWidth = 1011
-				maxHeight = 36
+				maxHeight = 22
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "ccp_state_target"
+				position = { x = 274 y = 150 }
+				font = "hoi_16mbs"
+				text = "CCP_STATE_TARGET"
+				maxWidth = 1011
+				maxHeight = 18
 				format = left
 			}
 
@@ -3382,9 +3419,20 @@ guiTypes = {
 			position = { x = 12 y = 8 }
 			font = "hoi_16mbs"
 			text = "CCP_COUNTRY_ENTRY_NAME"
-			maxWidth = 805
+			maxWidth = 737
 			maxHeight = 18
 			format = left
+		}
+
+		buttonType = {
+			name = "ccp_country_entry_target"
+			position = { x = 757 y = 3 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			size = { x = 62 y = 28 }
+			buttonText = "CCP_COUNTRY_TARGET"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_COUNTRY_TARGET_TOOLTIP"
+			clicksound = click_default
 		}
 
 		buttonType = {
@@ -3460,7 +3508,7 @@ guiTypes = {
 			position = { x = 12 y = 4 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_ENTRY_NAME"
-			maxWidth = 862
+			maxWidth = 794
 			maxHeight = 18
 			format = left
 		}
@@ -3470,19 +3518,30 @@ guiTypes = {
 			position = { x = 12 y = 21 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_ENTRY_OWNER"
-			maxWidth = 862
+			maxWidth = 794
 			maxHeight = 16
 			format = left
 		}
 
 		buttonType = {
 			name = "ccp_state_entry_take"
-			position = { x = 882 y = 5 }
+			position = { x = 814 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 69 y = 28 }
 			buttonText = "CCP_STATE_TAKE"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_TAKE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_give"
+			position = { x = 889 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_small_danger"
+			size = { x = 62 y = 28 }
+			buttonText = "CCP_STATE_GIVE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_GIVE_TOOLTIP"
 			clicksound = click_default
 		}
 
@@ -3523,7 +3582,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "ccp_state_picker_window"
 		position = { x = 0 y = 0 }
-		size = { width = 332 height = 68 }
+		size = { width = 400 height = 68 }
 		moveable = no
 		clipping = no
 
@@ -3538,7 +3597,7 @@ guiTypes = {
 			position = { x = 10 y = 7 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_PICKER_TITLE"
-			maxWidth = 312
+			maxWidth = 380
 			maxHeight = 16
 			format = left
 		}
@@ -3555,8 +3614,19 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "ccp_picker_core"
+			name = "ccp_picker_give"
 			position = { x = 85 y = 30 }
+			quadTextureSprite = "GFX_ccp_button_small_danger"
+			size = { x = 62 y = 28 }
+			buttonText = "CCP_STATE_GIVE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_GIVE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_core"
+			position = { x = 153 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small"
 			size = { x = 58 y = 28 }
 			buttonText = "CCP_STATE_CORE"
@@ -3567,7 +3637,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_uncore"
-			position = { x = 149 y = 30 }
+			position = { x = 217 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_UNCORE"
@@ -3578,7 +3648,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_claim"
-			position = { x = 231 y = 30 }
+			position = { x = 299 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small"
 			size = { x = 91 y = 28 }
 			buttonText = "CCP_STATE_CLAIM"

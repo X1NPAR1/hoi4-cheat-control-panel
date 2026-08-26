@@ -119,6 +119,14 @@ def emit_research_effects(catalogue: list[Technology], version: str) -> str:
         writer.close()
         writer.blank()
 
+    writer.open("CCP_research_grant_everything")
+    for name in folders:
+        writer.line(f"CCP_research_all_{name} = yes")
+    writer.line(f"set_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
     writer.open("CCP_research_grant_folder")
     _folder_router(writer, folders, "CCP_research_all")
     writer.line(f"set_variable = {{ ccp_status = {status.FOLDER_RESEARCHED} }}")
