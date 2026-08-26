@@ -32,6 +32,12 @@ defined_text = {
 		trigger = {
 			check_variable = { ccp_section = 5 }
 		}
+		localization_key = CCP_SECTION_COUNTRY
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_section = 6 }
+		}
 		localization_key = CCP_SECTION_SETTINGS
 	}
 	text = {
@@ -82,6 +88,18 @@ defined_text = {
 			check_variable = { ccp_status = 7 }
 		}
 		localization_key = CCP_STATUS_FOLDER
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_status = 8 }
+		}
+		localization_key = CCP_STATUS_COUNTRY
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_status = 9 }
+		}
+		localization_key = CCP_STATUS_CANCELLED
 	}
 	text = {
 		localization_key = CCP_STATUS_IDLE
@@ -141,6 +159,43 @@ defined_text = {
 	}
 	text = {
 		localization_key = CCP_RES_POLITICAL_POWER
+	}
+}
+
+defined_text = {
+	name = CCP_GetPendingAction
+	text = {
+		trigger = {
+			check_variable = { ccp_pending_action = 1 }
+		}
+		localization_key = CCP_COUNTRY_ANNEX
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_pending_action = 2 }
+		}
+		localization_key = CCP_COUNTRY_PUPPET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_pending_action = 3 }
+		}
+		localization_key = CCP_COUNTRY_WAR
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_pending_action = 4 }
+		}
+		localization_key = CCP_COUNTRY_PEACE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_pending_action = 5 }
+		}
+		localization_key = CCP_COUNTRY_PLAYAS
+	}
+	text = {
+		localization_key = CCP_COUNTRY_ANNEX
 	}
 }
 

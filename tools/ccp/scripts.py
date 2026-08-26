@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
+from .countries import ACTIONS, PAGE_SIZE as COUNTRY_PAGE_SIZE
 from .resources import AMOUNT_MAX, RESOURCES
 from .sections import HOTKEYS, SECTIONS, section_id as section_index
 
@@ -55,6 +56,10 @@ def emit_core_effects(version: str) -> str:
     writer.line("set_variable = { ccp_research_page = 0 }")
     writer.line("set_variable = { ccp_research_pages_last = 0 }")
     writer.line("set_variable = { ccp_research_selected = -1 }")
+    writer.line("set_variable = { ccp_country_page = 0 }")
+    writer.line("set_variable = { ccp_country_pages_last = 0 }")
+    writer.line("set_variable = { ccp_pending_action = 0 }")
+    writer.line("set_variable = { ccp_modal_open = 0 }")
     writer.close()
     writer.close()
     writer.blank()
@@ -101,6 +106,8 @@ def emit_core_effects(version: str) -> str:
             writer.line("CCP_equipment_load_page = yes")
         if section.slug == "research":
             writer.line("CCP_research_load_page = yes")
+        if section.slug == "country":
+            writer.line("CCP_country_rebuild = yes")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -186,6 +193,124 @@ def emit_core_effects(version: str) -> str:
     return writer.text()
 
 
+def emit_country_effects(version: str) -> str:
+    writer = Writer()
+    _banner(writer, version)
+
+    writer.open("CCP_country_rebuild")
+    writer.line("clear_array = ccp_country_all")
+    writer.open("every_country")
+    writer.open("limit")
+    writer.line("exists = yes")
+    writer.line("NOT = { tag = ROOT }")
+    writer.close()
+    writer.line("ROOT = { add_to_array = { array = ccp_country_all value = PREV } }")
+    writer.close()
+    writer.line("set_variable = { ccp_country_count = ccp_country_all^num }")
+    writer.line("CCP_country_recount_pages = yes")
+    writer.line("set_variable = { ccp_country_page = 0 }")
+    writer.line("CCP_country_load_page = yes")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_country_recount_pages")
+    writer.line("set_variable = { ccp_country_pages_last = ccp_country_count }")
+    writer.line("subtract_from_variable = { ccp_country_pages_last = 1 }")
+    writer.line("clamp_variable = { var = ccp_country_pages_last min = 0 }")
+    writer.line("set_temp_variable = { ccp_page_remainder = ccp_country_pages_last }")
+    writer.line(f"modulo_temp_variable = {{ ccp_page_remainder = {COUNTRY_PAGE_SIZE} }}")
+    writer.line("subtract_from_variable = { ccp_country_pages_last = var:ccp_page_remainder }")
+    writer.line(f"divide_variable = {{ ccp_country_pages_last = {COUNTRY_PAGE_SIZE} }}")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_country_load_page")
+    writer.line("clear_array = ccp_country_page_items")
+    writer.line("set_temp_variable = { ccp_page_first = var:ccp_country_page }")
+    writer.line(f"multiply_temp_variable = {{ ccp_page_first = {COUNTRY_PAGE_SIZE} }}")
+    writer.line("set_temp_variable = { ccp_page_last = var:ccp_page_first }")
+    writer.line(f"add_to_temp_variable = {{ ccp_page_last = {COUNTRY_PAGE_SIZE - 1} }}")
+    writer.open("for_loop_effect")
+    writer.line("start = 0")
+    writer.line("end = ccp_country_count")
+    writer.line("value = ccp_slot")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_slot >= ccp_page_first }")
+    writer.line("check_variable = { ccp_slot <= ccp_page_last }")
+    writer.close()
+    writer.open("add_to_array")
+    writer.line("array = ccp_country_page_items")
+    writer.line("value = ccp_country_all^ccp_slot")
+    writer.close()
+    writer.close()
+    writer.close()
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    for name, comparison, step in (
+        ("next", "ccp_country_page < ccp_country_pages_last", "add_to_variable"),
+        ("prev", "ccp_country_page > 0", "subtract_from_variable"),
+    ):
+        writer.open(f"CCP_country_{name}_page")
+        writer.open("if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ {comparison} }}")
+        writer.close()
+        writer.line(f"{step} = {{ ccp_country_page = 1 }}")
+        writer.line("CCP_country_load_page = yes")
+        writer.close()
+        writer.close()
+        writer.blank()
+
+    for index, action in enumerate(ACTIONS, start=1):
+        writer.open(f"CCP_country_request_{action.slug}")
+        writer.line(f"ROOT = {{ set_variable = {{ ccp_pending_action = {index} }} }}")
+        writer.line("ROOT = { set_variable = { ccp_pending_country = PREV } }")
+        if action.destructive:
+            writer.open("if")
+            writer.open("limit")
+            writer.line("ROOT = { check_variable = { ccp_confirm_destructive = 1 } }")
+            writer.close()
+            writer.open("ROOT")
+            writer.line("set_variable = { ccp_modal_open = 1 }")
+            writer.line("CCP_mark_dirty = yes")
+            writer.close()
+            writer.close()
+            writer.open("else")
+            writer.line("ROOT = { CCP_country_apply = yes }")
+            writer.close()
+        else:
+            writer.line("ROOT = { CCP_country_apply = yes }")
+        writer.close()
+        writer.blank()
+
+    writer.open("CCP_country_cancel")
+    writer.line("set_variable = { ccp_modal_open = 0 }")
+    writer.line("set_variable = { ccp_pending_action = 0 }")
+    writer.line(f"set_variable = {{ ccp_status = {status.ACTION_CANCELLED} }}")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_country_apply")
+    for index, action in enumerate(ACTIONS, start=1):
+        writer.open("if" if index == 1 else "else_if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ ccp_pending_action = {index} }}")
+        writer.close()
+        for line in action.body:
+            writer.line(line)
+        writer.close()
+    writer.line(f"set_variable = {{ ccp_status = {status.COUNTRY_ACTION} }}")
+    writer.line("set_variable = { ccp_modal_open = 0 }")
+    writer.line("CCP_country_rebuild = yes")
+    writer.close()
+
+    return writer.text()
+
+
 def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -> str:
     writer = Writer()
     _banner(writer, version)
@@ -227,6 +352,27 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.line("CCP_toggle_panel = yes")
         writer.close()
         writer.close()
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    writer.open("ccp_modal")
+    writer.line("context_type = player_context")
+    writer.line('window_name = "ccp_modal_window"')
+    writer.blank()
+    writer.open("visible")
+    writer.line("check_variable = { ccp_modal_open = 1 }")
+    writer.close()
+    writer.blank()
+    writer.line("dirty = ccp_ui_revision")
+    writer.blank()
+    writer.open("effects")
+    writer.open("ccp_modal_cancel_click")
+    writer.line("CCP_country_cancel = yes")
+    writer.close()
+    writer.open("ccp_modal_confirm_click")
+    writer.line("CCP_country_apply = yes")
+    writer.close()
     writer.close()
     writer.close()
     writer.blank()
@@ -310,6 +456,16 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line("set_variable = { ccp_research_selected = var:ccp_research_entry }")
     writer.line("CCP_research_grant = yes")
     writer.close()
+    writer.open("ccp_country_prev_click")
+    writer.line("CCP_country_prev_page = yes")
+    writer.close()
+    writer.open("ccp_country_next_click")
+    writer.line("CCP_country_next_page = yes")
+    writer.close()
+    for action in ACTIONS:
+        writer.open(f"ccp_country_entry_{action.slug}_click")
+        writer.line(f"CCP_country_request_{action.slug} = yes")
+        writer.close()
     writer.close()
     writer.blank()
 
@@ -346,6 +502,12 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("ccp_research_next_click_enabled")
     writer.line("check_variable = { ccp_research_page < ccp_research_pages_last }")
     writer.close()
+    writer.open("ccp_country_prev_click_enabled")
+    writer.line("check_variable = { ccp_country_page > 0 }")
+    writer.close()
+    writer.open("ccp_country_next_click_enabled")
+    writer.line("check_variable = { ccp_country_page < ccp_country_pages_last }")
+    writer.close()
     writer.close()
     writer.blank()
 
@@ -368,6 +530,13 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line("value = ccp_research_entry")
     writer.line("index = ccp_research_entry_index")
     writer.line('entry_container = "ccp_research_entry"')
+    writer.close()
+    writer.open("ccp_country_list")
+    writer.line("array = ccp_country_page_items")
+    writer.line("value = ccp_country_entry_value")
+    writer.line("index = ccp_country_entry_index")
+    writer.line("change_scope = yes")
+    writer.line('entry_container = "ccp_country_entry"')
     writer.close()
     writer.close()
 
@@ -418,6 +587,8 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}", "CCP_STATUS_EQUIPMENT"),
             (f"check_variable = {{ ccp_status = {status.TECH_GRANTED} }}", "CCP_STATUS_TECH"),
             (f"check_variable = {{ ccp_status = {status.FOLDER_RESEARCHED} }}", "CCP_STATUS_FOLDER"),
+            (f"check_variable = {{ ccp_status = {status.COUNTRY_ACTION} }}", "CCP_STATUS_COUNTRY"),
+            (f"check_variable = {{ ccp_status = {status.ACTION_CANCELLED} }}", "CCP_STATUS_CANCELLED"),
         ],
         "CCP_STATUS_IDLE",
     )
@@ -437,6 +608,16 @@ def emit_scripted_localisation(version: str) -> str:
             for resource in RESOURCES
         ],
         RESOURCES[0].key,
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetPendingAction",
+        [
+            (f"check_variable = {{ ccp_pending_action = {index} }}", action.key)
+            for index, action in enumerate(ACTIONS, start=1)
+        ],
+        ACTIONS[0].key,
     )
 
     _defined_text(

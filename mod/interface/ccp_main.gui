@@ -127,6 +127,16 @@ guiTypes = {
 			name = "ccp_nav_5"
 			position = { x = 0 y = 228 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_COUNTRY"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_COUNTRY_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_6"
+			position = { x = 0 y = 262 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
 			buttonText = "CCP_SECTION_SETTINGS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
@@ -1666,6 +1676,63 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "ccp_section_country"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_country_help"
+				position = { x = 264 y = 122 }
+				font = "hoi_16mbs"
+				text = "CCP_COUNTRY_HELP"
+				maxWidth = 992
+				maxHeight = 18
+				format = left
+			}
+
+			gridboxType = {
+				name = "ccp_country_list"
+				position = { x = 264 y = 148 }
+				size = { width = 992 height = 544 }
+				slotsize = { width = 992 height = 34 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+				max_slots_vertical = 16
+			}
+
+			buttonType = {
+				name = "ccp_country_prev"
+				position = { x = 264 y = 700 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_PREV"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_PREV_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_country_page_label"
+				position = { x = 372 y = 705 }
+				font = "hoi_16mbs"
+				text = "CCP_COUNTRY_PAGE"
+				maxWidth = 776
+				maxHeight = 18
+				format = centre
+			}
+
+			buttonType = {
+				name = "ccp_country_next"
+				position = { x = 1160 y = 700 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_NEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
+				clicksound = click_default
+			}
+		}
+
+		containerWindowType = {
 			name = "ccp_section_settings"
 			position = { x = 0 y = 0 }
 			size = { width = 1280 height = 780 }
@@ -1876,6 +1943,140 @@ guiTypes = {
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_RESEARCH_GRANT_TOOLTIP"
 			clicksound = click_default
+		}
+	}
+
+	containerWindowType = {
+		name = "ccp_country_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 992 height = 34 }
+		moveable = no
+
+		iconType = {
+			name = "ccp_country_entry_plate"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_list_row"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_country_entry_name"
+			position = { x = 10 y = 8 }
+			font = "hoi_16mbs"
+			text = "CCP_COUNTRY_ENTRY_NAME"
+			maxWidth = 458
+			maxHeight = 18
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_country_entry_annex"
+			position = { x = 482 y = 3 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_COUNTRY_ANNEX"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_COUNTRY_ANNEX_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_country_entry_puppet"
+			position = { x = 584 y = 3 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_COUNTRY_PUPPET"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_COUNTRY_PUPPET_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_country_entry_war"
+			position = { x = 686 y = 3 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_COUNTRY_WAR"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_COUNTRY_WAR_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_country_entry_peace"
+			position = { x = 788 y = 3 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_COUNTRY_PEACE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_COUNTRY_PEACE_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_country_entry_playas"
+			position = { x = 890 y = 3 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_COUNTRY_PLAYAS"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_COUNTRY_PLAYAS_TOOLTIP"
+			clicksound = click_default
+		}
+	}
+
+	containerWindowType = {
+		name = "ccp_modal_window"
+		orientation = center
+		origo = center
+		position = { x = 0 y = 0 }
+		size = { width = 1280 height = 780 }
+		moveable = no
+
+		iconType = {
+			name = "ccp_modal_scrim"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_modal_scrim"
+		}
+
+		iconType = {
+			name = "ccp_modal_plate"
+			position = { x = 380 y = 280 }
+			spriteType = "GFX_ccp_modal"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_modal_title"
+			position = { x = 404 y = 302 }
+			font = "hoi_20b"
+			text = "CCP_MODAL_TITLE"
+			maxWidth = 472
+			maxHeight = 24
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ccp_modal_body"
+			position = { x = 404 y = 340 }
+			font = "hoi_16mbs"
+			text = "CCP_MODAL_BODY"
+			maxWidth = 472
+			maxHeight = 90
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_modal_cancel"
+			position = { x = 404 y = 446 }
+			quadTextureSprite = "GFX_ccp_button"
+			buttonText = "CCP_BUTTON_CANCEL"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_TOOLTIP_CANCEL"
+			clicksound = click_close
+		}
+
+		buttonType = {
+			name = "ccp_modal_confirm"
+			position = { x = 744 y = 446 }
+			quadTextureSprite = "GFX_ccp_button_danger"
+			buttonText = "CCP_BUTTON_CONFIRM"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_TOOLTIP_CONFIRM"
+			clicksound = click_ok
 		}
 	}
 }

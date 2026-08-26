@@ -1,0 +1,193 @@
+# GENERATED FILE - DO NOT EDIT
+# Produced by tools/generate_data.py from the installed game files.
+# Source game version: 1.19.2.0
+
+CCP_country_rebuild = {
+	clear_array = ccp_country_all
+	every_country = {
+		limit = {
+			exists = yes
+			NOT = { tag = ROOT }
+		}
+		ROOT = { add_to_array = { array = ccp_country_all value = PREV } }
+	}
+	set_variable = { ccp_country_count = ccp_country_all^num }
+	CCP_country_recount_pages = yes
+	set_variable = { ccp_country_page = 0 }
+	CCP_country_load_page = yes
+}
+
+CCP_country_recount_pages = {
+	set_variable = { ccp_country_pages_last = ccp_country_count }
+	subtract_from_variable = { ccp_country_pages_last = 1 }
+	clamp_variable = { var = ccp_country_pages_last min = 0 }
+	set_temp_variable = { ccp_page_remainder = ccp_country_pages_last }
+	modulo_temp_variable = { ccp_page_remainder = 16 }
+	subtract_from_variable = { ccp_country_pages_last = var:ccp_page_remainder }
+	divide_variable = { ccp_country_pages_last = 16 }
+}
+
+CCP_country_load_page = {
+	clear_array = ccp_country_page_items
+	set_temp_variable = { ccp_page_first = var:ccp_country_page }
+	multiply_temp_variable = { ccp_page_first = 16 }
+	set_temp_variable = { ccp_page_last = var:ccp_page_first }
+	add_to_temp_variable = { ccp_page_last = 15 }
+	for_loop_effect = {
+		start = 0
+		end = ccp_country_count
+		value = ccp_slot
+		if = {
+			limit = {
+				check_variable = { ccp_slot >= ccp_page_first }
+				check_variable = { ccp_slot <= ccp_page_last }
+			}
+			add_to_array = {
+				array = ccp_country_page_items
+				value = ccp_country_all^ccp_slot
+			}
+		}
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_country_next_page = {
+	if = {
+		limit = {
+			check_variable = { ccp_country_page < ccp_country_pages_last }
+		}
+		add_to_variable = { ccp_country_page = 1 }
+		CCP_country_load_page = yes
+	}
+}
+
+CCP_country_prev_page = {
+	if = {
+		limit = {
+			check_variable = { ccp_country_page > 0 }
+		}
+		subtract_from_variable = { ccp_country_page = 1 }
+		CCP_country_load_page = yes
+	}
+}
+
+CCP_country_request_annex = {
+	ROOT = { set_variable = { ccp_pending_action = 1 } }
+	ROOT = { set_variable = { ccp_pending_country = PREV } }
+	if = {
+		limit = {
+			ROOT = { check_variable = { ccp_confirm_destructive = 1 } }
+		}
+		ROOT = {
+			set_variable = { ccp_modal_open = 1 }
+			CCP_mark_dirty = yes
+		}
+	}
+	else = {
+		ROOT = { CCP_country_apply = yes }
+	}
+}
+
+CCP_country_request_puppet = {
+	ROOT = { set_variable = { ccp_pending_action = 2 } }
+	ROOT = { set_variable = { ccp_pending_country = PREV } }
+	if = {
+		limit = {
+			ROOT = { check_variable = { ccp_confirm_destructive = 1 } }
+		}
+		ROOT = {
+			set_variable = { ccp_modal_open = 1 }
+			CCP_mark_dirty = yes
+		}
+	}
+	else = {
+		ROOT = { CCP_country_apply = yes }
+	}
+}
+
+CCP_country_request_war = {
+	ROOT = { set_variable = { ccp_pending_action = 3 } }
+	ROOT = { set_variable = { ccp_pending_country = PREV } }
+	if = {
+		limit = {
+			ROOT = { check_variable = { ccp_confirm_destructive = 1 } }
+		}
+		ROOT = {
+			set_variable = { ccp_modal_open = 1 }
+			CCP_mark_dirty = yes
+		}
+	}
+	else = {
+		ROOT = { CCP_country_apply = yes }
+	}
+}
+
+CCP_country_request_peace = {
+	ROOT = { set_variable = { ccp_pending_action = 4 } }
+	ROOT = { set_variable = { ccp_pending_country = PREV } }
+	ROOT = { CCP_country_apply = yes }
+}
+
+CCP_country_request_playas = {
+	ROOT = { set_variable = { ccp_pending_action = 5 } }
+	ROOT = { set_variable = { ccp_pending_country = PREV } }
+	if = {
+		limit = {
+			ROOT = { check_variable = { ccp_confirm_destructive = 1 } }
+		}
+		ROOT = {
+			set_variable = { ccp_modal_open = 1 }
+			CCP_mark_dirty = yes
+		}
+	}
+	else = {
+		ROOT = { CCP_country_apply = yes }
+	}
+}
+
+CCP_country_cancel = {
+	set_variable = { ccp_modal_open = 0 }
+	set_variable = { ccp_pending_action = 0 }
+	set_variable = { ccp_status = 9 }
+	CCP_mark_dirty = yes
+}
+
+CCP_country_apply = {
+	if = {
+		limit = {
+			check_variable = { ccp_pending_action = 1 }
+		}
+		annex_country = { target = var:ccp_pending_country }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_action = 2 }
+		}
+		puppet = var:ccp_pending_country
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_action = 3 }
+		}
+		declare_war_on = {
+			target = var:ccp_pending_country
+			type = annex_everything
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_action = 4 }
+		}
+		white_peace = var:ccp_pending_country
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_action = 5 }
+		}
+		set_variable = { ccp_panel_open = 0 }
+		change_tag_from = var:ccp_pending_country
+	}
+	set_variable = { ccp_status = 8 }
+	set_variable = { ccp_modal_open = 0 }
+	CCP_country_rebuild = yes
+}

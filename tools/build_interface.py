@@ -19,7 +19,12 @@ from ccp.technology import group_by_folder
 from ccp.technology import load_catalogue as load_technologies
 from ccp.layout import emit_file
 from ccp.meta import descriptor
-from ccp.scripts import emit_core_effects, emit_scripted_gui, emit_scripted_localisation
+from ccp.scripts import (
+    emit_core_effects,
+    emit_country_effects,
+    emit_scripted_gui,
+    emit_scripted_localisation,
+)
 from ccp.languages import NATIVE, OVERLAY
 from ccp.strings import emit_localisation
 from generate_data import find_game_dir, game_version
@@ -51,6 +56,8 @@ def main() -> int:
             interface.main_window(categories, folders),
             interface.equipment_entry_window(),
             interface.research_entry_window(),
+            interface.country_entry_window(),
+            interface.modal_window(),
         ),
     )
     write(MOD / "interface" / "ccp_launcher.gui", emit_file(interface.launcher_window()))
@@ -63,6 +70,10 @@ def main() -> int:
     write(
         MOD / "common" / "scripted_effects" / "ccp_generated_core.txt",
         emit_core_effects(version),
+    )
+    write(
+        MOD / "common" / "scripted_effects" / "ccp_generated_country.txt",
+        emit_country_effects(version),
     )
     write(
         MOD / "common" / "scripted_localisation" / "ccp_generated_core_loc.txt",

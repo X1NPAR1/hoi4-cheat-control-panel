@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from . import theme as t
 from .layout import Button, Container, Grid, Icon, Text, Widget
+from .countries import ACTIONS
 from .sections import HOTKEYS, SECTIONS
 
 CONTENT_X = t.SIDEBAR_WIDTH + 24
@@ -649,6 +650,142 @@ def research_entry_window() -> Container:
     )
 
 
+COUNTRY_LIST_WIDTH = t.CONTENT_WIDTH - 48
+COUNTRY_ENTRY_HEIGHT = 34
+
+
+def _country() -> Container:
+    section = Container("ccp_section_country", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+    return section.add(
+        Text(
+            "ccp_country_help",
+            CONTENT_X,
+            BODY_TOP,
+            key="CCP_COUNTRY_HELP",
+            width=COUNTRY_LIST_WIDTH,
+            height=18,
+        ),
+        Grid(
+            "ccp_country_list",
+            CONTENT_X,
+            BODY_TOP + 26,
+            width=COUNTRY_LIST_WIDTH,
+            height=PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
+            slot_width=COUNTRY_LIST_WIDTH,
+            slot_height=COUNTRY_ENTRY_HEIGHT,
+            max_horizontal=1,
+            max_vertical=PAGE_SIZE,
+        ),
+        Button(
+            "ccp_country_prev",
+            CONTENT_X,
+            BODY_TOP + 34 + PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_PREV",
+            tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+        ),
+        Text(
+            "ccp_country_page_label",
+            CONTENT_X + t.SMALL_BUTTON_WIDTH + 12,
+            BODY_TOP + 39 + PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
+            key="CCP_COUNTRY_PAGE",
+            width=COUNTRY_LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            height=18,
+            align="centre",
+        ),
+        Button(
+            "ccp_country_next",
+            CONTENT_X + COUNTRY_LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            BODY_TOP + 34 + PAGE_SIZE * COUNTRY_ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_NEXT",
+            tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+        ),
+    )
+
+
+def country_entry_window() -> Container:
+    entry = Container(
+        "ccp_country_entry", 0, 0, width=COUNTRY_LIST_WIDTH, height=COUNTRY_ENTRY_HEIGHT
+    )
+    entry.add(
+        Icon("ccp_country_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+        Text(
+            "ccp_country_entry_name",
+            10,
+            8,
+            key="CCP_COUNTRY_ENTRY_NAME",
+            width=COUNTRY_LIST_WIDTH - len(ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6) - 24,
+            height=18,
+        ),
+    )
+    first = COUNTRY_LIST_WIDTH - len(ACTIONS) * (t.SMALL_BUTTON_WIDTH + 6)
+    for index, action in enumerate(ACTIONS):
+        entry.add(
+            Button(
+                f"ccp_country_entry_{action.slug}",
+                first + index * (t.SMALL_BUTTON_WIDTH + 6),
+                3,
+                sprite="GFX_ccp_button_danger" if action.destructive else "GFX_ccp_button_small",
+                key=action.key,
+                tooltip=f"{action.key}_TOOLTIP",
+            )
+        )
+    return entry
+
+
+def modal_window() -> Container:
+    modal_x = (t.PANEL_WIDTH - t.MODAL_WIDTH) // 2
+    modal_y = (t.PANEL_HEIGHT - t.MODAL_HEIGHT) // 2
+    window = Container(
+        "ccp_modal_window",
+        0,
+        0,
+        width=t.PANEL_WIDTH,
+        height=t.PANEL_HEIGHT,
+        orientation="center",
+        origo="center",
+    )
+    return window.add(
+        Icon("ccp_modal_scrim", 0, 0, sprite="GFX_ccp_modal_scrim"),
+        Icon("ccp_modal_plate", modal_x, modal_y, sprite="GFX_ccp_modal"),
+        Text(
+            "ccp_modal_title",
+            modal_x + 24,
+            modal_y + 22,
+            key="CCP_MODAL_TITLE",
+            width=t.MODAL_WIDTH - 48,
+            height=24,
+            font="hoi_20b",
+        ),
+        Text(
+            "ccp_modal_body",
+            modal_x + 24,
+            modal_y + 60,
+            key="CCP_MODAL_BODY",
+            width=t.MODAL_WIDTH - 48,
+            height=90,
+        ),
+        Button(
+            "ccp_modal_cancel",
+            modal_x + 24,
+            modal_y + t.MODAL_HEIGHT - 24 - t.BUTTON_HEIGHT,
+            key="CCP_BUTTON_CANCEL",
+            tooltip="CCP_TOOLTIP_CANCEL",
+            click_sound="click_close",
+        ),
+        Button(
+            "ccp_modal_confirm",
+            modal_x + t.MODAL_WIDTH - 24 - t.BUTTON_WIDTH,
+            modal_y + t.MODAL_HEIGHT - 24 - t.BUTTON_HEIGHT,
+            sprite="GFX_ccp_button_danger",
+            key="CCP_BUTTON_CONFIRM",
+            tooltip="CCP_TOOLTIP_CONFIRM",
+            click_sound="click_ok",
+        ),
+    )
+
+
 SECTION_BUILDERS = {
     "dashboard": _dashboard,
     "resources": _resources,
@@ -663,6 +800,7 @@ def section_containers(categories: list[str], folders: list[str]) -> dict[str, C
     builders = dict(SECTION_BUILDERS)
     builders["equipment"] = lambda: _equipment(categories)
     builders["research"] = lambda: _research(folders)
+    builders["country"] = _country
     return {section.slug: builders[section.slug]() for section in SECTIONS}
 
 
