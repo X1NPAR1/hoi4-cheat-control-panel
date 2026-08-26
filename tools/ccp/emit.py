@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from . import status
 from .equipment import Equipment, group_by_category, latest_per_archetype
 
 BANNER = (
@@ -48,6 +49,9 @@ def _dlc_limit(writer: Writer, dlc: str | None, body) -> None:
     writer.close()
 
 
+PAGE_SIZE = 16
+
+
 def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
     grouped = group_by_category(catalogue)
     categories = list(grouped)
@@ -59,27 +63,72 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
     writer.line(BANNER.format(version=version).rstrip())
     writer.blank()
 
-    writer.open("CCP_equipment_load_list")
-    writer.line("clear_array = ccp_equipment_list")
+    for name, items in grouped.items():
+        pages = max(1, -(-len(items) // PAGE_SIZE))
+        writer.open(f"CCP_equipment_select_{name}")
+        writer.line(f"set_variable = {{ ccp_equipment_category = {category_id[name]} }}")
+        writer.line("set_variable = { ccp_equipment_page = 0 }")
+        writer.line(f"set_variable = {{ ccp_equipment_pages_last = {pages - 1} }}")
+        writer.line("set_variable = { ccp_equipment_selected = -1 }")
+        writer.line("CCP_equipment_load_page = yes")
+        writer.close()
+        writer.blank()
+
+    writer.open("CCP_equipment_load_page")
+    writer.line("clear_array = ccp_equipment_page_items")
     _emit_category_router(writer, categories, category_id, "CCP_equipment_load")
+    writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
 
     for name, items in grouped.items():
+        pages = max(1, -(-len(items) // PAGE_SIZE))
         writer.open(f"CCP_equipment_load_{name}")
-        for item in items:
-            _dlc_limit(
-                writer,
-                item.dlc,
-                lambda item=item: writer.line(
-                    f"add_to_array = {{ array = ccp_equipment_list value = {index_of[item.key]} }}"
-                ),
-            )
+        for page in range(pages):
+            keyword = "if" if page == 0 else "else_if"
+            writer.open(keyword)
+            writer.open("limit")
+            writer.line(f"check_variable = {{ ccp_equipment_page = {page} }}")
+            writer.close()
+            for item in items[page * PAGE_SIZE : (page + 1) * PAGE_SIZE]:
+                _dlc_limit(
+                    writer,
+                    item.dlc,
+                    lambda item=item: writer.line(
+                        "add_to_array = { array = ccp_equipment_page_items "
+                        f"value = {index_of[item.key]} }}"
+                    ),
+                )
+            writer.close()
         writer.close()
         writer.blank()
 
+    writer.open("CCP_equipment_next_page")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_equipment_page < ccp_equipment_pages_last }")
+    writer.close()
+    writer.line("add_to_variable = { ccp_equipment_page = 1 }")
+    writer.line("CCP_equipment_load_page = yes")
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_equipment_prev_page")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_equipment_page > 0 }")
+    writer.close()
+    writer.line("subtract_from_variable = { ccp_equipment_page = 1 }")
+    writer.line("CCP_equipment_load_page = yes")
+    writer.close()
+    writer.close()
+    writer.blank()
+
     writer.open("CCP_equipment_grant")
     _emit_category_router(writer, categories, category_id, "CCP_equipment_grant")
+    writer.line(f"set_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}")
+    writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
 
@@ -93,7 +142,7 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
             writer.close()
             writer.line(
                 f"add_equipment_to_stockpile = {{ type = {item.key} "
-                "amount = var:ccp_equipment_amount }"
+                "amount = var:ccp_amount }"
             )
             writer.close()
         writer.close()
@@ -101,6 +150,8 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
 
     writer.open("CCP_equipment_grant_latest")
     _emit_category_router(writer, categories, category_id, "CCP_equipment_grant_latest")
+    writer.line(f"set_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}")
+    writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
 
@@ -115,7 +166,7 @@ def emit_equipment_effects(catalogue: list[Equipment], version: str) -> str:
             writer.close()
             writer.line(
                 f"add_equipment_to_stockpile = {{ type = {newest.key} "
-                "amount = var:ccp_equipment_amount }"
+                "amount = var:ccp_amount }"
             )
             writer.close()
         writer.close()
@@ -142,12 +193,22 @@ def emit_equipment_localisation(catalogue: list[Equipment], version: str) -> str
     writer.line(BANNER.format(version=version).rstrip())
     writer.blank()
 
+    for name, variable in (
+        ("CCP_GetEquipmentName", "ccp_entry"),
+        ("CCP_GetEquipmentSelectedName", "ccp_equipment_selected"),
+    ):
+        _equipment_names(writer, catalogue, name, variable)
+
+    return writer.text()
+
+
+def _equipment_names(writer: Writer, catalogue, name: str, variable: str) -> None:
     writer.open("defined_text")
-    writer.line("name = CCP_GetEquipmentName")
+    writer.line(f"name = {name}")
     for index, item in enumerate(catalogue):
         writer.open("text")
         writer.open("trigger")
-        writer.line(f"check_variable = {{ ccp_entry = {index} }}")
+        writer.line(f"check_variable = {{ {variable} = {index} }}")
         writer.close()
         writer.line(f"localization_key = {item.key}")
         writer.close()
@@ -155,8 +216,7 @@ def emit_equipment_localisation(catalogue: list[Equipment], version: str) -> str
     writer.line("localization_key = CCP_EQUIPMENT_UNKNOWN")
     writer.close()
     writer.close()
-
-    return writer.text()
+    writer.blank()
 
 
 def emit_equipment_categories_localisation(

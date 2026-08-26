@@ -314,6 +314,73 @@ TRANSLATED: dict[str, Row] = {
         "Sivil fabrikalar, askeri fabrikalar ve tersaneler.",
         "Civiele fabrieken, militaire fabrieken en scheepswerven.",
     ),
+    "CCP_EQUIPMENT_CATEGORIES": _row(
+        "CATEGORIES", "KATEGORIEN", "CATÉGORIES", "КАТЕГОРИИ", "KATEGORİLER", "CATEGORIEËN"
+    ),
+    "CCP_EQUIPMENT_CATEGORY_TOOLTIP": _row(
+        "Show the equipment in this category.",
+        "Zeigt die Ausrüstung dieser Kategorie.",
+        "Affiche l'équipement de cette catégorie.",
+        "Показать снаряжение этой категории.",
+        "Bu kategorideki teçhizatı gösterir.",
+        "Toont de uitrusting in deze categorie.",
+    ),
+    "CCP_EQUIPMENT_ADD": _row("ADD", "HINZU", "AJOUTER", "ДОБАВ", "EKLE", "TOEVOEG"),
+    "CCP_EQUIPMENT_ADD_TOOLTIP": _row(
+        "Add the custom amount of this equipment to your stockpile.",
+        "Fügt die eingestellte Menge dieser Ausrüstung dem Lager hinzu.",
+        "Ajoute au stock la quantité définie de cet équipement.",
+        "Добавляет на склад заданное количество этого снаряжения.",
+        "Bu teçhizattan belirlenen miktarı stoğunuza ekler.",
+        "Voegt het ingestelde aantal van deze uitrusting toe aan je voorraad.",
+    ),
+    "CCP_EQUIPMENT_LATEST": _row("LATEST", "NEUSTE", "RÉCENT", "НОВОЕ", "SON", "NIEUWSTE"),
+    "CCP_EQUIPMENT_LATEST_TOOLTIP": _row(
+        "Add the newest variant of this equipment line instead of this one.",
+        "Fügt statt dieser die neuste Variante dieser Ausrüstungslinie hinzu.",
+        "Ajoute la variante la plus récente de cette lignée plutôt que celle-ci.",
+        "Добавляет новейший вариант этой линейки вместо выбранного.",
+        "Bunun yerine bu teçhizat serisinin en yeni sürümünü ekler.",
+        "Voegt de nieuwste variant van deze reeks toe in plaats van deze.",
+    ),
+    "CCP_EQUIPMENT_PREV": _row("PREV", "ZURÜCK", "PRÉC", "НАЗАД", "ÖNCEKİ", "VORIGE"),
+    "CCP_EQUIPMENT_PREV_TOOLTIP": _row(
+        "Show the previous page of this category.",
+        "Zeigt die vorherige Seite dieser Kategorie.",
+        "Affiche la page précédente de cette catégorie.",
+        "Показать предыдущую страницу категории.",
+        "Bu kategorinin önceki sayfasını gösterir.",
+        "Toont de vorige pagina van deze categorie.",
+    ),
+    "CCP_EQUIPMENT_NEXT": _row("NEXT", "WEITER", "SUIV", "ДАЛЕЕ", "SONRAKİ", "VOLGENDE"),
+    "CCP_EQUIPMENT_NEXT_TOOLTIP": _row(
+        "Show the next page of this category.",
+        "Zeigt die nächste Seite dieser Kategorie.",
+        "Affiche la page suivante de cette catégorie.",
+        "Показать следующую страницу категории.",
+        "Bu kategorinin sonraki sayfasını gösterir.",
+        "Toont de volgende pagina van deze categorie.",
+    ),
+    "CCP_EQUIPMENT_PAGE": _row(
+        "Page [?ccp_equipment_page|+0] of [?ccp_equipment_pages_last|+0]",
+        "Seite [?ccp_equipment_page|+0] von [?ccp_equipment_pages_last|+0]",
+        "Page [?ccp_equipment_page|+0] sur [?ccp_equipment_pages_last|+0]",
+        "Страница [?ccp_equipment_page|+0] из [?ccp_equipment_pages_last|+0]",
+        "Sayfa [?ccp_equipment_page|+0] / [?ccp_equipment_pages_last|+0]",
+        "Pagina [?ccp_equipment_page|+0] van [?ccp_equipment_pages_last|+0]",
+    ),
+    "CCP_EQUIPMENT_UNKNOWN": _row(
+        "Unknown equipment", "Unbekannte Ausrüstung", "Équipement inconnu",
+        "Неизвестное снаряжение", "Bilinmeyen teçhizat", "Onbekende uitrusting",
+    ),
+    "CCP_STATUS_EQUIPMENT": _row(
+        "Added [?ccp_amount|0] × [CCP_GetEquipmentSelectedName].",
+        "[?ccp_amount|0] × [CCP_GetEquipmentSelectedName] hinzugefügt.",
+        "[?ccp_amount|0] × [CCP_GetEquipmentSelectedName] ajouté.",
+        "Добавлено: [?ccp_amount|0] × [CCP_GetEquipmentSelectedName].",
+        "[?ccp_amount|0] × [CCP_GetEquipmentSelectedName] eklendi.",
+        "[?ccp_amount|0] × [CCP_GetEquipmentSelectedName] toegevoegd.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",
@@ -361,6 +428,9 @@ SECTION_NAMES: dict[str, Row] = {
     "resources": _row(
         "Resources", "Ressourcen", "Ressources", "Ресурсы", "Kaynaklar", "Grondstoffen"
     ),
+    "equipment": _row(
+        "Equipment", "Ausrüstung", "Équipement", "Снаряжение", "Teçhizat", "Uitrusting"
+    ),
     "settings": _row(
         "Settings", "Einstellungen", "Paramètres", "Настройки", "Ayarlar", "Instellingen"
     ),
@@ -382,6 +452,14 @@ SECTION_TOOLTIPS: dict[str, Row] = {
         "Выдаёт политическую силу, очки командования, людские ресурсы и опыт.",
         "Siyasi güç, komuta gücü, insan gücü ve tecrübe ekleyin.",
         "Kent politieke macht, commandopunten, manschappen en ervaring toe.",
+    ),
+    "equipment": _row(
+        "Add any equipment in your installation to the stockpile.",
+        "Fügt dem Lager jede in Ihrer Installation vorhandene Ausrüstung hinzu.",
+        "Ajoute au stock n'importe quel équipement présent dans votre installation.",
+        "Добавляет на склад любое снаряжение из вашей установки.",
+        "Kurulumunuzdaki her teçhizatı stoğa ekler.",
+        "Voegt elke uitrusting uit je installatie toe aan de voorraad.",
     ),
     "settings": _row(
         "Change the hotkey and the confirmation behaviour.",

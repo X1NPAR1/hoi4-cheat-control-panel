@@ -14,6 +14,10 @@ CCP_ensure_settings = {
 		set_variable = { ccp_nav_highlight_y = 92 }
 		set_variable = { ccp_status = 0 }
 		set_variable = { ccp_amount = 1000 }
+		set_variable = { ccp_equipment_category = 1 }
+		set_variable = { ccp_equipment_page = 0 }
+		set_variable = { ccp_equipment_pages_last = 0 }
+		set_variable = { ccp_equipment_selected = -1 }
 	}
 }
 
@@ -59,9 +63,17 @@ CCP_show_resources = {
 	CCP_mark_dirty = yes
 }
 
-CCP_show_settings = {
+CCP_show_equipment = {
 	set_variable = { ccp_section = 3 }
 	set_variable = { ccp_nav_highlight_y = 160 }
+	set_variable = { ccp_status = 0 }
+	CCP_equipment_load_page = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_show_settings = {
+	set_variable = { ccp_section = 4 }
+	set_variable = { ccp_nav_highlight_y = 194 }
 	set_variable = { ccp_status = 0 }
 	CCP_mark_dirty = yes
 }

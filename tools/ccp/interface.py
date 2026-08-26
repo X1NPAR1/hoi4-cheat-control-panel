@@ -398,8 +398,122 @@ def _resources() -> Container:
     section = Container("ccp_section_resources", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
     for index, resource in enumerate(RESOURCES):
         section.add(_resource_row(index, resource))
-    section.add(*_digit_pad())
     return section
+
+
+CATEGORY_WIDTH = 200
+CATEGORY_HEIGHT = 26
+LIST_X = CONTENT_X + CATEGORY_WIDTH + 16
+LIST_WIDTH = PAD_X - LIST_X - 24
+ENTRY_HEIGHT = 32
+PAGE_SIZE = 16
+
+
+def _equipment(categories: list[str]) -> Container:
+    section = Container("ccp_section_equipment", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
+
+    section.add(
+        Text(
+            "ccp_equipment_category_heading",
+            CONTENT_X,
+            BODY_TOP,
+            key="CCP_EQUIPMENT_CATEGORIES",
+            width=CATEGORY_WIDTH,
+            height=18,
+        )
+    )
+    for index, name in enumerate(categories):
+        section.add(
+            Button(
+                f"ccp_equipment_category_{index + 1}",
+                CONTENT_X,
+                BODY_TOP + 22 + index * CATEGORY_HEIGHT,
+                sprite="GFX_ccp_sidebar_item",
+                key=f"CCP_EQCAT_{name.upper()}",
+                tooltip="CCP_EQUIPMENT_CATEGORY_TOOLTIP",
+            )
+        )
+
+    section.add(
+        Text(
+            "ccp_equipment_list_heading",
+            LIST_X,
+            BODY_TOP,
+            key="CCP_GetEquipmentCategoryName",
+            width=LIST_WIDTH,
+            height=18,
+            font="hoi_18mbs",
+        ),
+        Grid(
+            "ccp_equipment_list",
+            LIST_X,
+            BODY_TOP + 24,
+            width=LIST_WIDTH,
+            height=PAGE_SIZE * ENTRY_HEIGHT,
+            slot_width=LIST_WIDTH,
+            slot_height=ENTRY_HEIGHT,
+            max_horizontal=1,
+            max_vertical=PAGE_SIZE,
+        ),
+        Button(
+            "ccp_equipment_prev",
+            LIST_X,
+            BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_PREV",
+            tooltip="CCP_EQUIPMENT_PREV_TOOLTIP",
+        ),
+        Text(
+            "ccp_equipment_page_label",
+            LIST_X + t.SMALL_BUTTON_WIDTH + 12,
+            BODY_TOP + 37 + PAGE_SIZE * ENTRY_HEIGHT,
+            key="CCP_EQUIPMENT_PAGE",
+            width=LIST_WIDTH - 2 * (t.SMALL_BUTTON_WIDTH + 12),
+            height=18,
+            align="centre",
+        ),
+        Button(
+            "ccp_equipment_next",
+            LIST_X + LIST_WIDTH - t.SMALL_BUTTON_WIDTH,
+            BODY_TOP + 32 + PAGE_SIZE * ENTRY_HEIGHT,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_NEXT",
+            tooltip="CCP_EQUIPMENT_NEXT_TOOLTIP",
+        ),
+    )
+    return section
+
+
+def equipment_entry_window() -> Container:
+    """One row of the equipment list, instantiated per array element by the engine."""
+    entry = Container("ccp_equipment_entry", 0, 0, width=LIST_WIDTH, height=ENTRY_HEIGHT)
+    return entry.add(
+        Icon("ccp_equipment_entry_plate", 0, 0, sprite="GFX_ccp_list_row"),
+        Text(
+            "ccp_equipment_entry_name",
+            10,
+            7,
+            key="CCP_GetEquipmentName",
+            width=LIST_WIDTH - 2 * t.SMALL_BUTTON_WIDTH - 40,
+            height=18,
+        ),
+        Button(
+            "ccp_equipment_entry_latest",
+            LIST_WIDTH - 2 * t.SMALL_BUTTON_WIDTH - 12,
+            2,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_LATEST",
+            tooltip="CCP_EQUIPMENT_LATEST_TOOLTIP",
+        ),
+        Button(
+            "ccp_equipment_entry_add",
+            LIST_WIDTH - t.SMALL_BUTTON_WIDTH - 6,
+            2,
+            sprite="GFX_ccp_button_small",
+            key="CCP_EQUIPMENT_ADD",
+            tooltip="CCP_EQUIPMENT_ADD_TOOLTIP",
+        ),
+    )
 
 
 SECTION_BUILDERS = {
@@ -408,13 +522,22 @@ SECTION_BUILDERS = {
     "settings": _settings,
 }
 
+PAD_SECTIONS = ("resources", "equipment")
 
-def section_containers() -> dict[str, Container]:
+
+def section_containers(categories: list[str]) -> dict[str, Container]:
     """Each registered section, built once so layout and triggers see the same tree."""
-    return {section.slug: SECTION_BUILDERS[section.slug]() for section in SECTIONS}
+    builders = dict(SECTION_BUILDERS)
+    builders["equipment"] = lambda: _equipment(categories)
+    return {section.slug: builders[section.slug]() for section in SECTIONS}
 
 
-def main_window() -> Container:
+def pad_widgets() -> list[Widget]:
+    """The amount pad lives outside the sections because several of them share it."""
+    return _digit_pad()
+
+
+def main_window(categories: list[str]) -> Container:
     window = Container(
         "ccp_main_window",
         0,
@@ -425,7 +548,8 @@ def main_window() -> Container:
         origo="center",
     )
     window.add(*_header(), *_sidebar(), *_content_shell(), *_footer())
-    window.add(*section_containers().values())
+    window.add(*pad_widgets())
+    window.add(*section_containers(categories).values())
     return window
 
 

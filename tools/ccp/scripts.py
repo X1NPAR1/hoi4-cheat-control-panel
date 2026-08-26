@@ -8,15 +8,17 @@ cannot disagree.
 from __future__ import annotations
 
 from .emit import BANNER, Writer
-from .interface import NAV_STEP, NAV_TOP, section_containers
+from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
 from .resources import AMOUNT_MAX, RESOURCES
-from .sections import HOTKEYS, SECTIONS
+from .sections import HOTKEYS, SECTIONS, section_id as section_index
 
-STATUS_IDLE = 0
-STATUS_HOTKEY_CHANGED = 1
-STATUS_CONFIRM_ON = 2
-STATUS_CONFIRM_OFF = 3
-STATUS_GRANTED = 4
+from . import status
+
+STATUS_IDLE = status.IDLE
+STATUS_HOTKEY_CHANGED = status.HOTKEY_CHANGED
+STATUS_CONFIRM_ON = status.CONFIRM_ON
+STATUS_CONFIRM_OFF = status.CONFIRM_OFF
+STATUS_GRANTED = status.RESOURCE_GRANTED
 
 RESOURCE_ID = {resource.slug: index for index, resource in enumerate(RESOURCES, start=1)}
 
@@ -45,6 +47,10 @@ def emit_core_effects(version: str) -> str:
     writer.line(f"set_variable = {{ ccp_nav_highlight_y = {NAV_TOP} }}")
     writer.line(f"set_variable = {{ ccp_status = {STATUS_IDLE} }}")
     writer.line("set_variable = { ccp_amount = 1000 }")
+    writer.line("set_variable = { ccp_equipment_category = 1 }")
+    writer.line("set_variable = { ccp_equipment_page = 0 }")
+    writer.line("set_variable = { ccp_equipment_pages_last = 0 }")
+    writer.line("set_variable = { ccp_equipment_selected = -1 }")
     writer.close()
     writer.close()
     writer.blank()
@@ -87,6 +93,8 @@ def emit_core_effects(version: str) -> str:
         writer.line(
             f"set_variable = {{ ccp_nav_highlight_y = {NAV_TOP + (index - 1) * NAV_STEP} }}")
         writer.line(f"set_variable = {{ ccp_status = {STATUS_IDLE} }}")
+        if section.slug == "equipment":
+            writer.line("CCP_equipment_load_page = yes")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -172,7 +180,7 @@ def emit_core_effects(version: str) -> str:
     return writer.text()
 
 
-def emit_scripted_gui(version: str) -> str:
+def emit_scripted_gui(version: str, categories: list[str]) -> str:
     writer = Writer()
     _banner(writer, version)
     writer.open("scripted_gui")
@@ -261,11 +269,29 @@ def emit_scripted_gui(version: str) -> str:
     writer.open("ccp_confirm_toggle_click")
     writer.line("CCP_toggle_confirmations = yes")
     writer.close()
+    for index, name in enumerate(categories, start=1):
+        writer.open(f"ccp_equipment_category_{index}_click")
+        writer.line(f"CCP_equipment_select_{name} = yes")
+        writer.close()
+    writer.open("ccp_equipment_prev_click")
+    writer.line("CCP_equipment_prev_page = yes")
+    writer.close()
+    writer.open("ccp_equipment_next_click")
+    writer.line("CCP_equipment_next_page = yes")
+    writer.close()
+    writer.open("ccp_equipment_entry_add_click")
+    writer.line("set_variable = { ccp_equipment_selected = var:ccp_entry }")
+    writer.line("CCP_equipment_grant = yes")
+    writer.close()
+    writer.open("ccp_equipment_entry_latest_click")
+    writer.line("set_variable = { ccp_equipment_selected = var:ccp_entry }")
+    writer.line("CCP_equipment_grant_latest = yes")
+    writer.close()
     writer.close()
     writer.blank()
 
     writer.open("triggers")
-    containers = section_containers()
+    containers = section_containers(categories)
     for index, section in enumerate(SECTIONS, start=1):
         for leaf in containers[section.slug].leaves():
             writer.open(f"{leaf}_visible")
@@ -275,12 +301,38 @@ def emit_scripted_gui(version: str) -> str:
         writer.open(f"ccp_hotkey_choice_{index}_click_enabled")
         writer.line(f"NOT = {{ check_variable = {{ ccp_hotkey_id = {index} }} }}")
         writer.close()
+
+    pad_sections = [section_index(slug) for slug in PAD_SECTIONS]
+    for widget in pad_widgets():
+        writer.open(f"{widget.name}_visible")
+        writer.open("OR")
+        for index in pad_sections:
+            writer.line(f"check_variable = {{ ccp_section = {index} }}")
+        writer.close()
+        writer.close()
+
+    writer.open("ccp_equipment_prev_click_enabled")
+    writer.line("check_variable = { ccp_equipment_page > 0 }")
+    writer.close()
+    writer.open("ccp_equipment_next_click_enabled")
+    writer.line("check_variable = { ccp_equipment_page < ccp_equipment_pages_last }")
+    writer.close()
     writer.close()
     writer.blank()
 
     writer.open("properties")
     writer.open("ccp_nav_highlight")
     writer.line("y = ccp_nav_highlight_y")
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    writer.open("dynamic_lists")
+    writer.open("ccp_equipment_list")
+    writer.line("array = ccp_equipment_page_items")
+    writer.line("value = ccp_entry")
+    writer.line("index = ccp_entry_index")
+    writer.line('entry_container = "ccp_equipment_entry"')
     writer.close()
     writer.close()
 
@@ -328,6 +380,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {STATUS_CONFIRM_ON} }}", "CCP_STATUS_CONFIRM_ON"),
             (f"check_variable = {{ ccp_status = {STATUS_CONFIRM_OFF} }}", "CCP_STATUS_CONFIRM_OFF"),
             (f"check_variable = {{ ccp_status = {STATUS_GRANTED} }}", "CCP_STATUS_GRANTED"),
+            (f"check_variable = {{ ccp_status = {status.EQUIPMENT_GRANTED} }}", "CCP_STATUS_EQUIPMENT"),
         ],
         "CCP_STATUS_IDLE",
     )

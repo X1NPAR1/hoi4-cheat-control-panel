@@ -107,6 +107,16 @@ guiTypes = {
 			name = "ccp_nav_3"
 			position = { x = 0 y = 160 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
+			buttonText = "CCP_SECTION_EQUIPMENT"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_EQUIPMENT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_4"
+			position = { x = 0 y = 194 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
 			buttonText = "CCP_SECTION_SETTINGS"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_SETTINGS_TOOLTIP"
@@ -154,6 +164,162 @@ guiTypes = {
 			maxHeight = 18
 			format = right
 			orientation = upper_right
+		}
+
+		instantTextBoxType = {
+			name = "ccp_pad_label"
+			position = { x = 1072 y = 122 }
+			font = "hoi_16mbs"
+			text = "CCP_PAD_LABEL"
+			maxWidth = 184
+			maxHeight = 18
+			format = left
+		}
+
+		iconType = {
+			name = "ccp_pad_readout_plate"
+			position = { x = 1072 y = 144 }
+			spriteType = "GFX_ccp_readout"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_pad_readout"
+			position = { x = 1082 y = 153 }
+			font = "hoi_20b"
+			text = "CCP_PAD_VALUE"
+			maxWidth = 164
+			maxHeight = 22
+			format = right
+		}
+
+		buttonType = {
+			name = "ccp_pad_1"
+			position = { x = 1072 y = 192 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_1"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_2"
+			position = { x = 1136 y = 192 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_2"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_3"
+			position = { x = 1200 y = 192 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_3"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_4"
+			position = { x = 1072 y = 236 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_4"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_5"
+			position = { x = 1136 y = 236 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_5"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_6"
+			position = { x = 1200 y = 236 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_6"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_7"
+			position = { x = 1072 y = 280 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_7"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_8"
+			position = { x = 1136 y = 280 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_8"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_9"
+			position = { x = 1200 y = 280 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_9"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_0"
+			position = { x = 1072 y = 324 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_DIGIT_0"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_back"
+			position = { x = 1136 y = 324 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_BACK"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_BACK_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_pad_clear"
+			position = { x = 1200 y = 324 }
+			quadTextureSprite = "GFX_ccp_key"
+			buttonText = "CCP_PAD_CLEAR"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_PAD_CLEAR_TOOLTIP"
+			clicksound = click_close
+		}
+
+		instantTextBoxType = {
+			name = "ccp_pad_help"
+			position = { x = 1072 y = 372 }
+			font = "hoi_16mbs"
+			text = "CCP_PAD_HELP"
+			maxWidth = 184
+			maxHeight = 72
+			format = left
 		}
 
 		containerWindowType = {
@@ -993,161 +1159,292 @@ guiTypes = {
 					clicksound = click_default
 				}
 			}
+		}
+
+		containerWindowType = {
+			name = "ccp_section_equipment"
+			position = { x = 0 y = 0 }
+			size = { width = 1280 height = 780 }
+			moveable = no
 
 			instantTextBoxType = {
-				name = "ccp_pad_label"
-				position = { x = 1072 y = 122 }
+				name = "ccp_equipment_category_heading"
+				position = { x = 264 y = 122 }
 				font = "hoi_16mbs"
-				text = "CCP_PAD_LABEL"
-				maxWidth = 184
+				text = "CCP_EQUIPMENT_CATEGORIES"
+				maxWidth = 200
 				maxHeight = 18
 				format = left
 			}
 
-			iconType = {
-				name = "ccp_pad_readout_plate"
-				position = { x = 1072 y = 144 }
-				spriteType = "GFX_ccp_readout"
+			buttonType = {
+				name = "ccp_equipment_category_1"
+				position = { x = 264 y = 144 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_INFANTRY"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_2"
+				position = { x = 264 y = 170 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_SUPPORT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_3"
+				position = { x = 264 y = 196 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_ARTILLERY"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_4"
+				position = { x = 264 y = 222 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_ANTI_TANK"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_5"
+				position = { x = 264 y = 248 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_ANTI_AIR"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_6"
+				position = { x = 264 y = 274 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_MOTORIZED"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_7"
+				position = { x = 264 y = 300 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_MECHANIZED"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_8"
+				position = { x = 264 y = 326 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_ARMOR"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_9"
+				position = { x = 264 y = 352 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_RAILWAY_GUN"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_10"
+				position = { x = 264 y = 378 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_FIGHTER"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_11"
+				position = { x = 264 y = 404 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_CAS"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_12"
+				position = { x = 264 y = 430 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_NAVAL_BOMBER"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_13"
+				position = { x = 264 y = 456 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_TACTICAL_BOMBER"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_14"
+				position = { x = 264 y = 482 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_STRATEGIC_BOMBER"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_15"
+				position = { x = 264 y = 508 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_CAPITAL_SHIP"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_16"
+				position = { x = 264 y = 534 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_CARRIER"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_17"
+				position = { x = 264 y = 560 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_SCREEN_SHIP"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_18"
+				position = { x = 264 y = 586 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_SUBMARINE"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_19"
+				position = { x = 264 y = 612 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_CONVOY"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_20"
+				position = { x = 264 y = 638 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_TRAIN"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_21"
+				position = { x = 264 y = 664 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_MISSILE"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_equipment_category_22"
+				position = { x = 264 y = 690 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				buttonText = "CCP_EQCAT_SPECIAL"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
 			}
 
 			instantTextBoxType = {
-				name = "ccp_pad_readout"
-				position = { x = 1082 y = 153 }
-				font = "hoi_20b"
-				text = "CCP_PAD_VALUE"
-				maxWidth = 164
-				maxHeight = 22
-				format = right
-			}
-
-			buttonType = {
-				name = "ccp_pad_1"
-				position = { x = 1072 y = 192 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_1"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_2"
-				position = { x = 1136 y = 192 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_2"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_3"
-				position = { x = 1200 y = 192 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_3"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_4"
-				position = { x = 1072 y = 236 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_4"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_5"
-				position = { x = 1136 y = 236 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_5"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_6"
-				position = { x = 1200 y = 236 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_6"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_7"
-				position = { x = 1072 y = 280 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_7"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_8"
-				position = { x = 1136 y = 280 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_8"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_9"
-				position = { x = 1200 y = 280 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_9"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_0"
-				position = { x = 1072 y = 324 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_DIGIT_0"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_DIGIT_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_back"
-				position = { x = 1136 y = 324 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_BACK"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_BACK_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_pad_clear"
-				position = { x = 1200 y = 324 }
-				quadTextureSprite = "GFX_ccp_key"
-				buttonText = "CCP_PAD_CLEAR"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_PAD_CLEAR_TOOLTIP"
-				clicksound = click_close
-			}
-
-			instantTextBoxType = {
-				name = "ccp_pad_help"
-				position = { x = 1072 y = 372 }
-				font = "hoi_16mbs"
-				text = "CCP_PAD_HELP"
-				maxWidth = 184
-				maxHeight = 72
+				name = "ccp_equipment_list_heading"
+				position = { x = 480 y = 122 }
+				font = "hoi_18mbs"
+				text = "[CCP_GetEquipmentCategoryName]"
+				maxWidth = 568
+				maxHeight = 18
 				format = left
+			}
+
+			gridboxType = {
+				name = "ccp_equipment_list"
+				position = { x = 480 y = 146 }
+				size = { width = 568 height = 512 }
+				slotsize = { width = 568 height = 32 }
+				format = "UPPER_LEFT"
+				max_slots_horizontal = 1
+				max_slots_vertical = 16
+			}
+
+			buttonType = {
+				name = "ccp_equipment_prev"
+				position = { x = 480 y = 666 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_PREV"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_PREV_TOOLTIP"
+				clicksound = click_default
+			}
+
+			instantTextBoxType = {
+				name = "ccp_equipment_page_label"
+				position = { x = 588 y = 671 }
+				font = "hoi_16mbs"
+				text = "CCP_EQUIPMENT_PAGE"
+				maxWidth = 352
+				maxHeight = 18
+				format = centre
+			}
+
+			buttonType = {
+				name = "ccp_equipment_next"
+				position = { x = 952 y = 666 }
+				quadTextureSprite = "GFX_ccp_button_small"
+				buttonText = "CCP_EQUIPMENT_NEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
+				clicksound = click_default
 			}
 		}
 
@@ -1286,6 +1583,49 @@ guiTypes = {
 				maxHeight = 72
 				format = left
 			}
+		}
+	}
+
+	containerWindowType = {
+		name = "ccp_equipment_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 568 height = 32 }
+		moveable = no
+
+		iconType = {
+			name = "ccp_equipment_entry_plate"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ccp_list_row"
+		}
+
+		instantTextBoxType = {
+			name = "ccp_equipment_entry_name"
+			position = { x = 10 y = 7 }
+			font = "hoi_16mbs"
+			text = "[CCP_GetEquipmentName]"
+			maxWidth = 336
+			maxHeight = 18
+			format = left
+		}
+
+		buttonType = {
+			name = "ccp_equipment_entry_latest"
+			position = { x = 364 y = 2 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_EQUIPMENT_LATEST"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_EQUIPMENT_LATEST_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_equipment_entry_add"
+			position = { x = 466 y = 2 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			buttonText = "CCP_EQUIPMENT_ADD"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_EQUIPMENT_ADD_TOOLTIP"
+			clicksound = click_default
 		}
 	}
 }

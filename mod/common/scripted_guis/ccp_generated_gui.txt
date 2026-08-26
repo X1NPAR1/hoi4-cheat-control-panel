@@ -97,6 +97,9 @@ scripted_gui = {
 				CCP_show_resources = yes
 			}
 			ccp_nav_3_click = {
+				CCP_show_equipment = yes
+			}
+			ccp_nav_4_click = {
 				CCP_show_settings = yes
 			}
 			ccp_hotkey_choice_1_click = {
@@ -242,6 +245,86 @@ scripted_gui = {
 			}
 			ccp_confirm_toggle_click = {
 				CCP_toggle_confirmations = yes
+			}
+			ccp_equipment_category_1_click = {
+				CCP_equipment_select_infantry = yes
+			}
+			ccp_equipment_category_2_click = {
+				CCP_equipment_select_support = yes
+			}
+			ccp_equipment_category_3_click = {
+				CCP_equipment_select_artillery = yes
+			}
+			ccp_equipment_category_4_click = {
+				CCP_equipment_select_anti_tank = yes
+			}
+			ccp_equipment_category_5_click = {
+				CCP_equipment_select_anti_air = yes
+			}
+			ccp_equipment_category_6_click = {
+				CCP_equipment_select_motorized = yes
+			}
+			ccp_equipment_category_7_click = {
+				CCP_equipment_select_mechanized = yes
+			}
+			ccp_equipment_category_8_click = {
+				CCP_equipment_select_armor = yes
+			}
+			ccp_equipment_category_9_click = {
+				CCP_equipment_select_railway_gun = yes
+			}
+			ccp_equipment_category_10_click = {
+				CCP_equipment_select_fighter = yes
+			}
+			ccp_equipment_category_11_click = {
+				CCP_equipment_select_cas = yes
+			}
+			ccp_equipment_category_12_click = {
+				CCP_equipment_select_naval_bomber = yes
+			}
+			ccp_equipment_category_13_click = {
+				CCP_equipment_select_tactical_bomber = yes
+			}
+			ccp_equipment_category_14_click = {
+				CCP_equipment_select_strategic_bomber = yes
+			}
+			ccp_equipment_category_15_click = {
+				CCP_equipment_select_capital_ship = yes
+			}
+			ccp_equipment_category_16_click = {
+				CCP_equipment_select_carrier = yes
+			}
+			ccp_equipment_category_17_click = {
+				CCP_equipment_select_screen_ship = yes
+			}
+			ccp_equipment_category_18_click = {
+				CCP_equipment_select_submarine = yes
+			}
+			ccp_equipment_category_19_click = {
+				CCP_equipment_select_convoy = yes
+			}
+			ccp_equipment_category_20_click = {
+				CCP_equipment_select_train = yes
+			}
+			ccp_equipment_category_21_click = {
+				CCP_equipment_select_missile = yes
+			}
+			ccp_equipment_category_22_click = {
+				CCP_equipment_select_special = yes
+			}
+			ccp_equipment_prev_click = {
+				CCP_equipment_prev_page = yes
+			}
+			ccp_equipment_next_click = {
+				CCP_equipment_next_page = yes
+			}
+			ccp_equipment_entry_add_click = {
+				set_variable = { ccp_equipment_selected = var:ccp_entry }
+				CCP_equipment_grant = yes
+			}
+			ccp_equipment_entry_latest_click = {
+				set_variable = { ccp_equipment_selected = var:ccp_entry }
+				CCP_equipment_grant_latest = yes
 			}
 		}
 
@@ -471,92 +554,128 @@ scripted_gui = {
 			ccp_grant_air_experience_custom_visible = {
 				check_variable = { ccp_section = 2 }
 			}
-			ccp_pad_label_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_heading_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_readout_plate_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_1_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_readout_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_2_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_1_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_3_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_2_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_4_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_3_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_5_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_4_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_6_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_5_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_7_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_6_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_8_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_7_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_9_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_8_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_10_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_9_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_11_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_0_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_12_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_back_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_13_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_clear_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_14_visible = {
+				check_variable = { ccp_section = 3 }
 			}
-			ccp_pad_help_visible = {
-				check_variable = { ccp_section = 2 }
+			ccp_equipment_category_15_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_16_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_17_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_18_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_19_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_20_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_21_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_category_22_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_list_heading_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_list_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_prev_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_page_label_visible = {
+				check_variable = { ccp_section = 3 }
+			}
+			ccp_equipment_next_visible = {
+				check_variable = { ccp_section = 3 }
 			}
 			ccp_settings_hotkey_label_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_settings_hotkey_help_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_hotkey_choice_1_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_hotkey_choice_2_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_hotkey_choice_3_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_hotkey_choice_4_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_hotkey_choice_5_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_settings_hotkey_current_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_settings_confirm_label_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_settings_confirm_help_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_confirm_toggle_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_settings_language_label_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_settings_language_help_visible = {
-				check_variable = { ccp_section = 3 }
+				check_variable = { ccp_section = 4 }
 			}
 			ccp_hotkey_choice_1_click_enabled = {
 				NOT = { check_variable = { ccp_hotkey_id = 1 } }
@@ -573,11 +692,122 @@ scripted_gui = {
 			ccp_hotkey_choice_5_click_enabled = {
 				NOT = { check_variable = { ccp_hotkey_id = 5 } }
 			}
+			ccp_pad_label_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_readout_plate_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_readout_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_1_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_2_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_3_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_4_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_5_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_6_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_7_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_8_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_9_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_0_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_back_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_clear_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_pad_help_visible = {
+				OR = {
+					check_variable = { ccp_section = 2 }
+					check_variable = { ccp_section = 3 }
+				}
+			}
+			ccp_equipment_prev_click_enabled = {
+				check_variable = { ccp_equipment_page > 0 }
+			}
+			ccp_equipment_next_click_enabled = {
+				check_variable = { ccp_equipment_page < ccp_equipment_pages_last }
+			}
 		}
 
 		properties = {
 			ccp_nav_highlight = {
 				y = ccp_nav_highlight_y
+			}
+		}
+
+		dynamic_lists = {
+			ccp_equipment_list = {
+				array = ccp_equipment_page_items
+				value = ccp_entry
+				index = ccp_entry_index
+				entry_container = "ccp_equipment_entry"
 			}
 		}
 	}

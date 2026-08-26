@@ -31,6 +31,7 @@ class Section:
 SECTIONS: list[Section] = [
     Section("dashboard", "Dashboard", "Genel Bakış"),
     Section("resources", "Resources", "Kaynaklar"),
+    Section("equipment", "Equipment", "Teçhizat"),
     Section("settings", "Settings", "Ayarlar"),
 ]
 
