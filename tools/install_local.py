@@ -25,8 +25,10 @@ def game_data_dir() -> Path:
     return documents / "Paradox Interactive" / "Hearts of Iron IV"
 
 
-def descriptor_fields() -> dict[str, str]:
-    text = (MOD_DIR / "descriptor.mod").read_text(encoding="utf-8-sig")
+def descriptor_fields(path: Path) -> dict[str, str]:
+    if not path.is_file():
+        return {}
+    text = path.read_text(encoding="utf-8-sig")
     return {
         key: value
         for key, value in re.findall(r'^\s*(\w+)\s*=\s*"([^"]*)"', text, re.MULTILINE)
@@ -40,16 +42,26 @@ def main() -> int:
         return 2
 
     target = data_dir / "mod" / FOLDER_NAME
+    outer = data_dir / "mod" / f"{FOLDER_NAME}.mod"
+
+    # The launcher writes remote_file_id once the mod is published; it is the only
+    # link between this folder and its Workshop item. Reinstalling must not drop it,
+    # or the next upload would create a second entry instead of updating the first.
+    published = descriptor_fields(outer).get("remote_file_id") or descriptor_fields(
+        target / "descriptor.mod"
+    ).get("remote_file_id")
+
     if target.exists():
         shutil.rmtree(target)
     shutil.copytree(MOD_DIR, target)
 
-    fields = descriptor_fields()
     source = (MOD_DIR / "descriptor.mod").read_text(encoding="utf-8-sig").rstrip()
-    descriptor = f'{source}\npath="{target.as_posix()}"\n'
-    (data_dir / "mod" / f"{FOLDER_NAME}.mod").write_text(
-        descriptor, encoding="utf-8", newline="\n"
-    )
+    if published:
+        source += f'\nremote_file_id="{published}"'
+        (target / "descriptor.mod").write_text(source + "\n", encoding="utf-8", newline="\n")
+
+    fields = descriptor_fields(target / "descriptor.mod")
+    outer.write_text(f'{source}\npath="{target.as_posix()}"\n', encoding="utf-8", newline="\n")
 
     files = sum(1 for path in target.rglob("*") if path.is_file())
     size = sum(path.stat().st_size for path in target.rglob("*") if path.is_file())
