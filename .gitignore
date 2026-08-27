@@ -26,3 +26,6 @@ prompt.md
 docs/
 tests/
 dist/
+
+# The Millennium Dawn build is its own repository, rooted at millennium/
+millennium/
