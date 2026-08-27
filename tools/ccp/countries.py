@@ -29,7 +29,11 @@ ACTIONS: list[Action] = [
         ["annex_country = { target = var:ccp_pending_country }"],
         destructive=True,
     ),
-    Action("puppet", ["puppet = var:ccp_pending_country"], destructive=True),
+    Action(
+        "puppet",
+        ["var:ccp_pending_country = { var:ccp_player = { puppet = PREV } }"],
+        destructive=True,
+    ),
     Action(
         "war",
         [
@@ -40,12 +44,16 @@ ACTIONS: list[Action] = [
         ],
         destructive=True,
     ),
-    Action("peace", ["white_peace = var:ccp_pending_country"], destructive=False),
+    Action(
+        "peace",
+        ["var:ccp_pending_country = { var:ccp_player = { white_peace = PREV } }"],
+        destructive=False,
+    ),
     Action(
         "playas",
         [
             "set_variable = { ccp_panel_open = 0 }",
-            "change_tag_from = var:ccp_pending_country",
+            "var:ccp_pending_country = { var:ccp_player = { change_tag_from = PREV } }",
         ],
         destructive=True,
     ),

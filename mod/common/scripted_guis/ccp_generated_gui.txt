@@ -636,17 +636,17 @@ scripted_gui = {
 			ccp_action_cic_5000_click = {
 				CCP_action_cic_5000 = yes
 			}
+			ccp_action_threat_1_click = {
+				CCP_action_threat_1 = yes
+			}
+			ccp_action_threat_2_click = {
+				CCP_action_threat_2 = yes
+			}
 			ccp_action_threat_5_click = {
 				CCP_action_threat_5 = yes
 			}
 			ccp_action_threat_10_click = {
 				CCP_action_threat_10 = yes
-			}
-			ccp_action_threat_25_click = {
-				CCP_action_threat_25 = yes
-			}
-			ccp_action_threat_50_click = {
-				CCP_action_threat_50 = yes
 			}
 			ccp_action_legitimacy_10_click = {
 				CCP_action_legitimacy_10 = yes
@@ -970,18 +970,6 @@ scripted_gui = {
 			}
 			ccp_action_offsite_military_50_click = {
 				CCP_action_offsite_military_50 = yes
-			}
-			ccp_action_mines_10_click = {
-				CCP_action_mines_10 = yes
-			}
-			ccp_action_mines_25_click = {
-				CCP_action_mines_25 = yes
-			}
-			ccp_action_mines_50_click = {
-				CCP_action_mines_50 = yes
-			}
-			ccp_action_mines_100_click = {
-				CCP_action_mines_100 = yes
 			}
 			ccp_action_resource_oil_1_click = {
 				CCP_action_resource_oil_1 = yes
@@ -2196,16 +2184,16 @@ scripted_gui = {
 			ccp_action_threat_help_visible = {
 				check_variable = { global.ccp_section = 7 }
 			}
+			ccp_action_threat_1_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_threat_2_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
 			ccp_action_threat_5_visible = {
 				check_variable = { global.ccp_section = 7 }
 			}
 			ccp_action_threat_10_visible = {
-				check_variable = { global.ccp_section = 7 }
-			}
-			ccp_action_threat_25_visible = {
-				check_variable = { global.ccp_section = 7 }
-			}
-			ccp_action_threat_50_visible = {
 				check_variable = { global.ccp_section = 7 }
 			}
 			ccp_action_legitimacy_plate_visible = {
@@ -2683,27 +2671,6 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 9 }
 			}
 			ccp_action_offsite_military_50_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_plate_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_title_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_help_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_10_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_25_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_50_visible = {
-				check_variable = { global.ccp_section = 9 }
-			}
-			ccp_action_mines_100_visible = {
 				check_variable = { global.ccp_section = 9 }
 			}
 			ccp_stockpile_help_visible = {

@@ -89,7 +89,7 @@ Reinstalling resets the panel to English.
 
 ## Installation
 
-**Steam Workshop** — [subscribe here](https://steamcommunity.com/sharedfiles/filedetails/?id=3790658065), then enable the mod in your Paradox Launcher playset.
+**Steam Workshop** — [subscribe here](https://steamcommunity.com/sharedfiles/filedetails/?id=3790687445), then enable the mod in your Paradox Launcher playset.
 
 **From source**
 

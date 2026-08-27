@@ -257,7 +257,7 @@ CCP_country_apply = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 2 }
 			}
-			puppet = var:global.ccp_pending_country
+			var:global.ccp_pending_country = { var:global.ccp_player = { puppet = PREV } }
 		}
 		else_if = {
 			limit = {
@@ -272,14 +272,14 @@ CCP_country_apply = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 4 }
 			}
-			white_peace = var:global.ccp_pending_country
+			var:global.ccp_pending_country = { var:global.ccp_player = { white_peace = PREV } }
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 5 }
 			}
 			set_variable = { global.ccp_panel_open = 0 }
-			change_tag_from = var:global.ccp_pending_country
+			var:global.ccp_pending_country = { var:global.ccp_player = { change_tag_from = PREV } }
 		}
 	}
 	set_variable = { global.ccp_status = 8 }

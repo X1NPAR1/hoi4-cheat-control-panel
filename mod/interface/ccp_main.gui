@@ -2659,8 +2659,30 @@ guiTypes = {
 				}
 
 				buttonType = {
-					name = "ccp_action_threat_5"
+					name = "ccp_action_threat_1"
 					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_THREAT_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_THREAT_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_threat_2"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_THREAT_2"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_THREAT_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_threat_5"
+					position = { x = 140 y = 94 }
 					quadTextureSprite = "GFX_ccp_button_small"
 					size = { x = 58 y = 26 }
 					buttonText = "CCP_ACTION_THREAT_5"
@@ -2671,32 +2693,10 @@ guiTypes = {
 
 				buttonType = {
 					name = "ccp_action_threat_10"
-					position = { x = 77 y = 94 }
-					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_THREAT_10"
-					buttonFont = "hoi_16mbs"
-					pdx_tooltip = "CCP_ACTION_THREAT_TOOLTIP"
-					clicksound = click_default
-				}
-
-				buttonType = {
-					name = "ccp_action_threat_25"
-					position = { x = 140 y = 94 }
-					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_THREAT_25"
-					buttonFont = "hoi_16mbs"
-					pdx_tooltip = "CCP_ACTION_THREAT_TOOLTIP"
-					clicksound = click_default
-				}
-
-				buttonType = {
-					name = "ccp_action_threat_50"
 					position = { x = 203 y = 94 }
 					quadTextureSprite = "GFX_ccp_button_small"
 					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_THREAT_50"
+					buttonText = "CCP_ACTION_THREAT_10"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_ACTION_THREAT_TOOLTIP"
 					clicksound = click_default
@@ -4460,83 +4460,6 @@ guiTypes = {
 					buttonText = "CCP_ACTION_OFFSITE_MILITARY_50"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_ACTION_OFFSITE_MILITARY_TOOLTIP"
-					clicksound = click_default
-				}
-			}
-
-			containerWindowType = {
-				name = "ccp_action_mines"
-				position = { x = 578 y = 596 }
-				size = { width = 288 height = 130 }
-				moveable = no
-
-				iconType = {
-					name = "ccp_action_mines_plate"
-					position = { x = 0 y = 0 }
-					spriteType = "GFX_ccp_plate_action"
-				}
-
-				instantTextBoxType = {
-					name = "ccp_action_mines_title"
-					position = { x = 14 y = 9 }
-					font = "hoi_18mbs"
-					text = "CCP_ACTION_MINES"
-					maxWidth = 260
-					maxHeight = 34
-					format = left
-				}
-
-				instantTextBoxType = {
-					name = "ccp_action_mines_help"
-					position = { x = 14 y = 44 }
-					font = "hoi_16mbs"
-					text = "CCP_ACTION_MINES_HELP"
-					maxWidth = 260
-					maxHeight = 46
-					format = left
-				}
-
-				buttonType = {
-					name = "ccp_action_mines_10"
-					position = { x = 14 y = 94 }
-					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_MINES_10"
-					buttonFont = "hoi_16mbs"
-					pdx_tooltip = "CCP_ACTION_MINES_TOOLTIP"
-					clicksound = click_default
-				}
-
-				buttonType = {
-					name = "ccp_action_mines_25"
-					position = { x = 77 y = 94 }
-					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_MINES_25"
-					buttonFont = "hoi_16mbs"
-					pdx_tooltip = "CCP_ACTION_MINES_TOOLTIP"
-					clicksound = click_default
-				}
-
-				buttonType = {
-					name = "ccp_action_mines_50"
-					position = { x = 140 y = 94 }
-					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_MINES_50"
-					buttonFont = "hoi_16mbs"
-					pdx_tooltip = "CCP_ACTION_MINES_TOOLTIP"
-					clicksound = click_default
-				}
-
-				buttonType = {
-					name = "ccp_action_mines_100"
-					position = { x = 203 y = 94 }
-					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 58 y = 26 }
-					buttonText = "CCP_ACTION_MINES_100"
-					buttonFont = "hoi_16mbs"
-					pdx_tooltip = "CCP_ACTION_MINES_TOOLTIP"
 					clicksound = click_default
 				}
 			}

@@ -1,5 +1,5 @@
 name="HOI4 Cheat Control Panel"
-version="3.0.0"
+version="3.0.1"
 tags={
 	"Utilities"
 	"Gameplay"

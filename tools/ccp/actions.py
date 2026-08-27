@@ -12,7 +12,7 @@ rather than present and broken.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Callable
 
 
@@ -120,7 +120,7 @@ NATION: list[Action] = [
         "threat",
         "nation",
         lambda n: [f"add_named_threat = {{ threat = {n} name = CCP_THREAT_SOURCE }}"],
-        (5, 10, 25, 50),
+        (1, 2, 5, 10),
     ),
     Action(
         "legitimacy",
@@ -181,12 +181,6 @@ CONSTRUCTION: list[Action] = [
         "construction",
         lambda n: [f"add_offsite_building = {{ type = arms_factory level = {n} }}"],
         (5, 10, 20, 50),
-    ),
-    Action(
-        "mines",
-        "construction",
-        lambda n: _owned_limited("is_coastal = yes", f"add_mines = {n}"),
-        (10, 25, 50, 100),
     ),
 ]
 
@@ -314,7 +308,7 @@ MILITARY: list[Action] = [
     Action(
         "delete_units",
         "military",
-        lambda n: ["every_army_leader = { delete_unit = yes }"],
+        lambda n: ["delete_unit = { disband = yes }"],
         (0,),
         "ALL",
         danger=True,
@@ -350,32 +344,6 @@ COMMANDERS: list[Action] = [
     Action("logistics", "commanders", _army_leaders("add_logistics"), (1, 2, 3, 5)),
     Action("admiral_skill", "commanders", _navy_leaders("add_skill_level"), (1, 2, 3, 5)),
 ]
-
-# ---------------------------------------------------------------- research helpers
-
-RESEARCH_TOOLS: list[Action] = [
-    Action(
-        "research_speed",
-        "research_tools",
-        lambda n: [
-            f"add_timed_idea = {{ idea = ccp_research_boost days = {n} }}",
-        ],
-        (90, 180, 365, 730),
-        "{n}d",
-    ),
-    Action(
-        "doctrine_cost",
-        "research_tools",
-        lambda n: [f"add_doctrine_cost_reduction = {{ name = ccp_doctrine cost_reduction = 0.{n:02d} uses = 100 category = land_doctrine }}"],
-        (50, 75, 99),
-        "-{n}%",
-    ),
-]
-
-def _on_target(effect: str) -> Callable[[int], list[str]]:
-    """Run an effect on the country picked as TARGET in the Countries section."""
-    return lambda n: ["var:ccp_target_country = {", f"	{effect.format(n=n)}", "}"]
-
 
 # ---------------------------------------------------------------- diplomacy
 
@@ -443,14 +411,14 @@ DIPLOMACY: list[Action] = [
     Action(
         "faction_invite",
         "diplomacy",
-        lambda n: ["add_to_faction = var:ccp_target_country"],
+        lambda n: ["var:ccp_target_country = { var:ccp_player = { add_to_faction = PREV } }"],
         (1,),
         "SET",
     ),
     Action(
         "release_target",
         "diplomacy",
-        lambda n: ["release = var:ccp_target_country"],
+        lambda n: ["var:ccp_target_country = { var:ccp_player = { release = PREV } }"],
         (1,),
         "SET",
         danger=True,
@@ -459,7 +427,7 @@ DIPLOMACY: list[Action] = [
     Action(
         "free_target",
         "diplomacy",
-        lambda n: ["end_puppet = var:ccp_target_country"],
+        lambda n: ["var:ccp_target_country = { var:ccp_player = { end_puppet = PREV } }"],
         (1,),
         "SET",
         danger=True,

@@ -319,6 +319,39 @@ def check_localisation_lines(mod_dir: Path, report: Report) -> None:
                 report.error(f"{path}:{number}: malformed localisation line `{line[:70]}`")
 
 
+ASSIGNMENT = re.compile(r"^\s*([a-z_][a-z0-9_]*)\s*=", re.MULTILINE)
+
+
+def check_effect_vocabulary(mod_dir: Path, game_dir: Path | None, report: Report) -> None:
+    """Every lowercase name the scripts assign to must be one the game knows.
+
+    A misspelled or renamed effect fails silently in game: the button clicks and
+    nothing happens. Checking the names against the game's own documentation turns
+    that into a build error.
+    """
+    if game_dir is None or not game_dir.is_dir():
+        report.warn("game directory not found; effect vocabulary check skipped")
+        return
+
+    from .effect_names import known_effects
+
+    known = known_effects(game_dir)
+    if not known:
+        report.warn("effects documentation not found; vocabulary check skipped")
+        return
+
+    unknown: dict[str, Path] = {}
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = _strip_comments_and_strings(path.read_text(encoding="utf-8-sig", errors="replace"))
+        for name in ASSIGNMENT.findall(text):
+            if name.startswith("ccp_") or name in known:
+                continue
+            unknown.setdefault(name, path)
+
+    for name, path in sorted(unknown.items()):
+        report.error(f"{path}: `{name}` is not an effect the game documents")
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -326,6 +359,7 @@ ALL_CHECKS = [
     ("gui element references", lambda repo, mod, rep: check_gui_element_references(mod, rep)),
     ("effect references", lambda repo, mod, rep: check_effect_references(mod, rep)),
     ("vanilla overrides", lambda repo, mod, rep: check_no_vanilla_overrides(mod, _game_dir(), rep)),
+    ("effect vocabulary", lambda repo, mod, rep: check_effect_vocabulary(mod, _game_dir(), rep)),
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),
