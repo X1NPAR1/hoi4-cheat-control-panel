@@ -190,6 +190,21 @@ def _inherited_list(entries: dict[str, Node], key: str, field_name: str) -> list
     return []
 
 
+# add_equipment_to_stockpile refuses ships and railway guns outright: those are
+# built as units, not held in a stockpile. Listing them would give the player a
+# button the engine logs an error for and otherwise ignores.
+UNSTOCKPILEABLE_TYPES = frozenset(
+    {
+        "capital_ship",
+        "carrier",
+        "screen_ship",
+        "submarine",
+        "support_ship",
+        "railway_gun",
+    }
+)
+
+
 def load_catalogue(game_dir: Path) -> list[Equipment]:
     """Every addable equipment variant, ordered by category then year then key."""
     entries: dict[str, Node] = {}
@@ -216,6 +231,12 @@ def load_catalogue(game_dir: Path) -> list[Equipment]:
             continue
 
         archetype_key = node.get("archetype") or key
+        types = _inherited_list(entries, key, "type")
+        if UNSTOCKPILEABLE_TYPES.intersection(types):
+            continue
+        # A designer chassis is not a stockpile item; the equipment it names is.
+        if node.get("derived_variant_name"):
+            continue
 
         catalogue.append(
             Equipment(

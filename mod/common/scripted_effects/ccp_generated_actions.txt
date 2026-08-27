@@ -2370,8 +2370,8 @@ CCP_action_admiral_skill_5 = {
 }
 
 CCP_action_opinion_up_1 = {
-	var:global.ccp_target_country = {
-		add_opinion_modifier = { target = var:global.ccp_player modifier = ccp_goodwill }
+	var:ccp_target_country = {
+		add_opinion_modifier = { target = var:ccp_player modifier = ccp_goodwill }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 192 }
@@ -2380,8 +2380,8 @@ CCP_action_opinion_up_1 = {
 }
 
 CCP_action_opinion_down_1 = {
-	var:global.ccp_target_country = {
-		add_opinion_modifier = { target = var:global.ccp_player modifier = ccp_distrust }
+	var:ccp_target_country = {
+		add_opinion_modifier = { target = var:ccp_player modifier = ccp_distrust }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 193 }
@@ -2391,7 +2391,7 @@ CCP_action_opinion_down_1 = {
 
 CCP_action_intel_25 = {
 	add_intel = {
-		target = var:global.ccp_target_country
+		target = var:ccp_target_country
 		civilian_intel = 25
 		army_intel = 25
 		navy_intel = 25
@@ -2405,7 +2405,7 @@ CCP_action_intel_25 = {
 
 CCP_action_intel_50 = {
 	add_intel = {
-		target = var:global.ccp_target_country
+		target = var:ccp_target_country
 		civilian_intel = 50
 		army_intel = 50
 		navy_intel = 50
@@ -2419,7 +2419,7 @@ CCP_action_intel_50 = {
 
 CCP_action_intel_75 = {
 	add_intel = {
-		target = var:global.ccp_target_country
+		target = var:ccp_target_country
 		civilian_intel = 75
 		army_intel = 75
 		navy_intel = 75
@@ -2433,7 +2433,7 @@ CCP_action_intel_75 = {
 
 CCP_action_intel_100 = {
 	add_intel = {
-		target = var:global.ccp_target_country
+		target = var:ccp_target_country
 		civilian_intel = 100
 		army_intel = 100
 		navy_intel = 100
@@ -2446,7 +2446,7 @@ CCP_action_intel_100 = {
 }
 
 CCP_action_wargoal_1 = {
-	create_wargoal = { type = annex_everything target = var:global.ccp_target_country }
+	create_wargoal = { type = annex_everything target = var:ccp_target_country }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 198 }
 	CCP_history_record = yes
@@ -2454,7 +2454,7 @@ CCP_action_wargoal_1 = {
 }
 
 CCP_action_truce_90 = {
-	set_truce = { target = var:global.ccp_target_country days = 90 }
+	set_truce = { target = var:ccp_target_country days = 90 }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 199 }
 	CCP_history_record = yes
@@ -2462,7 +2462,7 @@ CCP_action_truce_90 = {
 }
 
 CCP_action_truce_180 = {
-	set_truce = { target = var:global.ccp_target_country days = 180 }
+	set_truce = { target = var:ccp_target_country days = 180 }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 200 }
 	CCP_history_record = yes
@@ -2470,7 +2470,7 @@ CCP_action_truce_180 = {
 }
 
 CCP_action_truce_365 = {
-	set_truce = { target = var:global.ccp_target_country days = 365 }
+	set_truce = { target = var:ccp_target_country days = 365 }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 201 }
 	CCP_history_record = yes
@@ -2478,7 +2478,7 @@ CCP_action_truce_365 = {
 }
 
 CCP_action_truce_730 = {
-	set_truce = { target = var:global.ccp_target_country days = 730 }
+	set_truce = { target = var:ccp_target_country days = 730 }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 202 }
 	CCP_history_record = yes
@@ -2494,7 +2494,7 @@ CCP_action_faction_create_1 = {
 }
 
 CCP_action_faction_invite_1 = {
-	var:global.ccp_target_country = { var:global.ccp_player = { add_to_faction = PREV } }
+	var:ccp_target_country = { var:ccp_player = { add_to_faction = PREV } }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 204 }
 	CCP_history_record = yes
@@ -2502,7 +2502,7 @@ CCP_action_faction_invite_1 = {
 }
 
 CCP_action_release_target_1 = {
-	var:global.ccp_target_country = { var:global.ccp_player = { release = PREV } }
+	var:ccp_target_country = { var:ccp_player = { release = PREV } }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 205 }
 	CCP_history_record = yes
@@ -2510,7 +2510,7 @@ CCP_action_release_target_1 = {
 }
 
 CCP_action_free_target_1 = {
-	var:global.ccp_target_country = { var:global.ccp_player = { end_puppet = PREV } }
+	var:ccp_target_country = { var:ccp_player = { end_puppet = PREV } }
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 206 }
 	CCP_history_record = yes

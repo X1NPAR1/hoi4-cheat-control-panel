@@ -70,13 +70,10 @@ spriteTypes = {
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	corneredTileSpriteType = {
+	spriteType = {
 		name = "GFX_ccp_sidebar_active"
-		size = { x = 20 y = 36 }
-		textureFile = "gfx/interface/ccp/ccp_sidebar_active.png"
-		borderSize = { x = 6 y = 6 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate.lua"
+		texturefile = "gfx/interface/ccp/ccp_sidebar_active.png"
+		noOfFrames = 1
 	}
 	corneredTileSpriteType = {
 		name = "GFX_ccp_button"

@@ -110,7 +110,7 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
     list_row = rounded((20, t.LIST_ROW_HEIGHT), t.BG_PANEL, t.BORDER_STEEL)
     sidebar_tile = rounded((20, t.SIDEBAR_ITEM_HEIGHT), t.BG_BASE, t.BG_BASE)
     sidebar_active = plate(
-        (20, t.SIDEBAR_ITEM_HEIGHT),
+        (t.SIDEBAR_WIDTH, t.SIDEBAR_ITEM_HEIGHT),
         t.BG_PANEL,
         border=t.ACCENT_BRONZE_DIM,
         accent_edge=t.ACCENT_BRONZE,
@@ -151,7 +151,6 @@ def build(out_dir: Path) -> list[tuple[str, Image.Image, int]]:
 
 STRETCHABLE = {
     "ccp_sidebar_item.png",
-    "ccp_sidebar_active.png",
     "ccp_button.png",
     "ccp_button_danger.png",
     "ccp_button_confirm.png",

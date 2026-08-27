@@ -40,7 +40,38 @@ GLOBAL_NAMES = frozenset(
     }
 )
 
-_NAME = re.compile(r"\b(?<!global\.)(ccp_[a-z0-9_]+)")
+# Scopes the panel stores. `var:name` is how script enters a stored scope, and the
+# engine rejects `var:global.name` as a malformed token, so these keep a country
+# copy alongside the global one: a trigger in a foreign scope reads `global.name`,
+# an effect in the player's scope enters `var:name`.
+SCOPE_NAMES = frozenset(
+    {
+        "ccp_player",
+        "ccp_target_country",
+        "ccp_state",
+        "ccp_pending_country",
+    }
+)
+
+_NAME = re.compile(r"\b(?<!global\.)(?<!var:)(ccp_[a-z0-9_]+)")
+
+_ASSIGN = re.compile(r"^(\s*)set_variable = \{ global\.(ccp_[a-z0-9_]+) = (.+?) \}\s*$")
+
+
+def _mirror(line: str) -> list[str]:
+    """A global scope assignment also writes the country copy that `var:` needs.
+
+    The copy goes on ROOT, the country the panel belongs to, because the click
+    that stores a scope often happens inside a list entry: writing it locally
+    there would put it on the listed country instead of the player.
+    """
+    match = _ASSIGN.match(line)
+    if match is None or match.group(2) not in SCOPE_NAMES:
+        return [line]
+    indent, name, value = match.groups()
+    if value != "THIS":
+        raise ValueError(f"a stored scope must be assigned from THIS, not {value!r}")
+    return [line, f"{indent}ROOT = {{ set_variable = {{ {name} = PREV }} }}"]
 
 
 def _swap(text: str) -> str:
@@ -61,9 +92,10 @@ def globalise_script(text: str) -> str:
         if '"' in line:
             parts = line.split('"')
             parts[::2] = [_swap(part) for part in parts[::2]]
-            out.append('"'.join(parts))
+            swapped = '"'.join(parts)
         else:
-            out.append(_swap(line))
+            swapped = _swap(line)
+        out.extend(_mirror(swapped))
     return "\n".join(out) + ("\n" if text.endswith("\n") else "")
 
 

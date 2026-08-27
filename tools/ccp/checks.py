@@ -352,6 +352,51 @@ def check_effect_vocabulary(mod_dir: Path, game_dir: Path | None, report: Report
         report.error(f"{path}: `{name}` is not an effect the game documents")
 
 
+ICON_WITH_SIZE = re.compile(r"iconType = \{(?:[^{}]|\{[^{}]*\})*?\bsize\s*=")
+SHORTHAND_COMPARE = re.compile(r"check_variable = \{[^{}]*[<>]=")
+
+
+def check_gui_property_grammar(mod_dir: Path, report: Report) -> None:
+    """`iconType` has no `size`; the parser stops at the file, not at the line.
+
+    One unsupported property discards every widget declared after it, so a whole
+    panel goes missing with a single line in error.log to explain it.
+    """
+    for path in sorted((mod_dir / "interface").glob("*.gui")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for match in ICON_WITH_SIZE.finditer(text):
+            line = text.count("\n", 0, match.end()) + 1
+            report.error(f"{path}:{line}: iconType does not accept `size`")
+
+
+def check_variable_comparisons(mod_dir: Path, report: Report) -> None:
+    """`check_variable` shorthand parses `=`, `>` and `<` only.
+
+    `>=` and `<=` are not shorthand operators: the engine reads the `>` and then
+    trips over the rest, taking the surrounding effect down with it. The long form
+    with `compare = greater_than_or_equals` is the documented way to say it.
+    """
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for match in SHORTHAND_COMPARE.finditer(text):
+            line = text.count("\n", 0, match.end()) + 1
+            report.error(f"{path}:{line}: check_variable shorthand has no `>=` or `<=`")
+
+
+def check_variable_scope_entry(mod_dir: Path, report: Report) -> None:
+    """`var:` enters a scope held in a country variable, never a global one.
+
+    The engine rejects `var:global.name` as a malformed token. A stored scope is
+    kept twice: `global.name` for triggers in foreign scopes, and a country copy
+    for `var:name` here.
+    """
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for number, line in enumerate(text.splitlines(), start=1):
+            if "var:global." in line:
+                report.error(f"{path}:{number}: `var:global.` is not a scope the engine reads")
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -360,6 +405,9 @@ ALL_CHECKS = [
     ("effect references", lambda repo, mod, rep: check_effect_references(mod, rep)),
     ("vanilla overrides", lambda repo, mod, rep: check_no_vanilla_overrides(mod, _game_dir(), rep)),
     ("effect vocabulary", lambda repo, mod, rep: check_effect_vocabulary(mod, _game_dir(), rep)),
+    ("gui property grammar", lambda repo, mod, rep: check_gui_property_grammar(mod, rep)),
+    ("variable comparisons", lambda repo, mod, rep: check_variable_comparisons(mod, rep)),
+    ("variable scope entry", lambda repo, mod, rep: check_variable_scope_entry(mod, rep)),
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),

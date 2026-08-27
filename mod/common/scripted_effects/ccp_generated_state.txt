@@ -39,8 +39,8 @@ CCP_state_load_page = {
 		value = ccp_slot
 		if = {
 			limit = {
-				check_variable = { ccp_slot >= ccp_page_first }
-				check_variable = { ccp_slot <= ccp_page_last }
+				check_variable = { var = ccp_slot value = ccp_page_first compare = greater_than_or_equals }
+				check_variable = { var = ccp_slot value = ccp_page_last compare = less_than_or_equals }
 			}
 			add_to_array = {
 				array = ccp_state_page_items
@@ -73,8 +73,9 @@ CCP_state_prev_page = {
 
 CCP_state_take = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			set_state_owner_to = PREV
 			set_state_controller_to = PREV
 		}
@@ -85,8 +86,9 @@ CCP_state_take = {
 
 CCP_state_give = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_target_country = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_target_country = {
+		var:ccp_state = {
 			set_state_owner_to = PREV
 			set_state_controller_to = PREV
 		}
@@ -97,8 +99,9 @@ CCP_state_give = {
 
 CCP_state_core = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			add_core_of = PREV
 		}
 	}
@@ -108,8 +111,9 @@ CCP_state_core = {
 
 CCP_state_uncore = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			remove_core_of = PREV
 		}
 	}
@@ -119,8 +123,9 @@ CCP_state_uncore = {
 
 CCP_state_claim = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			add_claim_by = PREV
 		}
 	}
@@ -130,8 +135,9 @@ CCP_state_claim = {
 
 CCP_state_unclaim = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			remove_claim_by = PREV
 		}
 	}
@@ -141,8 +147,9 @@ CCP_state_unclaim = {
 
 CCP_state_comply = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			add_compliance = 100
 		}
 	}
@@ -152,8 +159,9 @@ CCP_state_comply = {
 
 CCP_state_quiet = {
 	set_variable = { global.ccp_state = THIS }
-	var:global.ccp_player = {
-		var:global.ccp_state = {
+	ROOT = { set_variable = { ccp_state = PREV } }
+	var:ccp_player = {
+		var:ccp_state = {
 			add_resistance = -100
 		}
 	}

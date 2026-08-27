@@ -154,8 +154,6 @@ def _sidebar() -> list[Widget]:
             0,
             NAV_TOP,
             sprite="GFX_ccp_sidebar_active",
-            width=t.SIDEBAR_WIDTH,
-            height=t.SIDEBAR_ITEM_HEIGHT,
         ),
     ]
     for index, section in enumerate(SECTIONS):

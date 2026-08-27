@@ -693,7 +693,7 @@
  CCP_STATUS_GOODWILL_ON:0 "Elk land ziet je nu zeer gunstig."
  CCP_STATUS_GRANTED:0 "[?ccp_granted_amount|0] [CCP_GetGrantedResource] toegevoegd."
  CCP_STATUS_HOTKEY:0 "Sneltoets ingesteld op [CCP_GetHotkeyName]."
- CCP_STATUS_IDLE:0 "Cheat-bedieningspaneel 3.0.1 · Hearts of Iron IV 1.19 · singleplayer"
+ CCP_STATUS_IDLE:0 "Cheat-bedieningspaneel 3.0.2 · Hearts of Iron IV 1.19 · singleplayer"
  CCP_STATUS_OVERFLOW:0 "Manschappen zitten al tegen de opslaggrens aan. Meer toevoegen zou de waarde negatief maken, dus er is niets toegevoegd."
  CCP_STATUS_SELECTION:0 "Er was niets geselecteerd, dus er is niets toegevoegd. Kies eerst een categorie en dan een rij."
  CCP_STATUS_STATE:0 "Staat bijgewerkt."

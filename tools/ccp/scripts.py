@@ -363,8 +363,14 @@ def emit_country_effects(version: str) -> str:
     writer.line("value = ccp_slot")
     writer.open("if")
     writer.open("limit")
-    writer.line("check_variable = { ccp_slot >= ccp_page_first }")
-    writer.line("check_variable = { ccp_slot <= ccp_page_last }")
+    writer.line(
+        "check_variable = { var = ccp_slot value = ccp_page_first"
+        " compare = greater_than_or_equals }"
+    )
+    writer.line(
+        "check_variable = { var = ccp_slot value = ccp_page_last"
+        " compare = less_than_or_equals }"
+    )
     writer.close()
     writer.open("add_to_array")
     writer.line("array = ccp_country_page_items")
@@ -518,8 +524,14 @@ def emit_state_effects(version: str) -> str:
     writer.line("value = ccp_slot")
     writer.open("if")
     writer.open("limit")
-    writer.line("check_variable = { ccp_slot >= ccp_page_first }")
-    writer.line("check_variable = { ccp_slot <= ccp_page_last }")
+    writer.line(
+        "check_variable = { var = ccp_slot value = ccp_page_first"
+        " compare = greater_than_or_equals }"
+    )
+    writer.line(
+        "check_variable = { var = ccp_slot value = ccp_page_last"
+        " compare = less_than_or_equals }"
+    )
     writer.close()
     writer.open("add_to_array")
     writer.line("array = ccp_state_page_items")

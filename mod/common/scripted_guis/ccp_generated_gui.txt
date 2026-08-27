@@ -366,45 +366,30 @@ scripted_gui = {
 				CCP_equipment_select_armor = yes
 			}
 			ccp_equipment_category_9_click = {
-				CCP_equipment_select_railway_gun = yes
-			}
-			ccp_equipment_category_10_click = {
 				CCP_equipment_select_fighter = yes
 			}
-			ccp_equipment_category_11_click = {
+			ccp_equipment_category_10_click = {
 				CCP_equipment_select_cas = yes
 			}
-			ccp_equipment_category_12_click = {
+			ccp_equipment_category_11_click = {
 				CCP_equipment_select_naval_bomber = yes
 			}
-			ccp_equipment_category_13_click = {
+			ccp_equipment_category_12_click = {
 				CCP_equipment_select_tactical_bomber = yes
 			}
-			ccp_equipment_category_14_click = {
+			ccp_equipment_category_13_click = {
 				CCP_equipment_select_strategic_bomber = yes
 			}
-			ccp_equipment_category_15_click = {
-				CCP_equipment_select_capital_ship = yes
-			}
-			ccp_equipment_category_16_click = {
-				CCP_equipment_select_carrier = yes
-			}
-			ccp_equipment_category_17_click = {
-				CCP_equipment_select_screen_ship = yes
-			}
-			ccp_equipment_category_18_click = {
-				CCP_equipment_select_submarine = yes
-			}
-			ccp_equipment_category_19_click = {
+			ccp_equipment_category_14_click = {
 				CCP_equipment_select_convoy = yes
 			}
-			ccp_equipment_category_20_click = {
+			ccp_equipment_category_15_click = {
 				CCP_equipment_select_train = yes
 			}
-			ccp_equipment_category_21_click = {
+			ccp_equipment_category_16_click = {
 				CCP_equipment_select_missile = yes
 			}
-			ccp_equipment_category_22_click = {
+			ccp_equipment_category_17_click = {
 				CCP_equipment_select_special = yes
 			}
 			ccp_equipment_prev_click = {
@@ -1882,21 +1867,6 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 3 }
 			}
 			ccp_equipment_category_17_visible = {
-				check_variable = { global.ccp_section = 3 }
-			}
-			ccp_equipment_category_18_visible = {
-				check_variable = { global.ccp_section = 3 }
-			}
-			ccp_equipment_category_19_visible = {
-				check_variable = { global.ccp_section = 3 }
-			}
-			ccp_equipment_category_20_visible = {
-				check_variable = { global.ccp_section = 3 }
-			}
-			ccp_equipment_category_21_visible = {
-				check_variable = { global.ccp_section = 3 }
-			}
-			ccp_equipment_category_22_visible = {
 				check_variable = { global.ccp_section = 3 }
 			}
 			ccp_equipment_list_heading_visible = {

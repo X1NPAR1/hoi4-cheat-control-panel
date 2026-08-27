@@ -138,7 +138,6 @@ CCP_equipment_available = {
 		}
 		AND = {
 			check_variable = { v = 34 }
-			has_tech = gwtank_chassis
 		}
 		AND = {
 			check_variable = { v = 35 }
@@ -148,885 +147,447 @@ CCP_equipment_available = {
 		}
 		AND = {
 			check_variable = { v = 37 }
-			has_tech = gwtank_chassis
 		}
 		AND = {
 			check_variable = { v = 38 }
 		}
 		AND = {
 			check_variable = { v = 39 }
-		}
-		AND = {
-			check_variable = { v = 40 }
-			has_tech = gwtank_chassis
-		}
-		AND = {
-			check_variable = { v = 41 }
-		}
-		AND = {
-			check_variable = { v = 42 }
 			has_tech = amphibious_tank
 		}
 		AND = {
-			check_variable = { v = 43 }
+			check_variable = { v = 40 }
 			has_tech = basic_heavy_spaa
 		}
 		AND = {
-			check_variable = { v = 44 }
+			check_variable = { v = 41 }
 			has_tech = basic_heavy_art
 		}
 		AND = {
-			check_variable = { v = 45 }
-			has_tech = basic_heavy_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 46 }
+			check_variable = { v = 42 }
 			has_tech = basic_heavy_td
 		}
 		AND = {
-			check_variable = { v = 47 }
+			check_variable = { v = 43 }
 			has_tech = basic_heavy_tank
 		}
 		AND = {
-			check_variable = { v = 48 }
+			check_variable = { v = 44 }
 			has_tech = basic_light_spaa
 		}
 		AND = {
-			check_variable = { v = 49 }
+			check_variable = { v = 45 }
 			has_tech = basic_light_art
 		}
 		AND = {
-			check_variable = { v = 50 }
-			has_tech = basic_light_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 51 }
+			check_variable = { v = 46 }
 			has_tech = basic_light_td
 		}
 		AND = {
-			check_variable = { v = 52 }
+			check_variable = { v = 47 }
 			has_tech = basic_light_tank
 		}
 		AND = {
-			check_variable = { v = 53 }
+			check_variable = { v = 48 }
 			has_tech = improved_light_spaa
 		}
 		AND = {
-			check_variable = { v = 54 }
+			check_variable = { v = 49 }
 			has_tech = improved_light_art
 		}
 		AND = {
-			check_variable = { v = 55 }
-			has_tech = improved_light_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 56 }
+			check_variable = { v = 50 }
 			has_tech = improved_light_td
 		}
 		AND = {
-			check_variable = { v = 57 }
+			check_variable = { v = 51 }
 			has_tech = improved_light_tank
 		}
 		AND = {
-			check_variable = { v = 58 }
-			has_tech = basic_medium_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 59 }
+			check_variable = { v = 52 }
 			has_tech = amphibious_tank_2
 		}
 		AND = {
-			check_variable = { v = 60 }
+			check_variable = { v = 53 }
 		}
 		AND = {
-			check_variable = { v = 61 }
+			check_variable = { v = 54 }
 			has_tech = basic_medium_spaa
 		}
 		AND = {
-			check_variable = { v = 62 }
+			check_variable = { v = 55 }
 			has_tech = basic_medium_art
 		}
 		AND = {
-			check_variable = { v = 63 }
+			check_variable = { v = 56 }
 			has_tech = basic_medium_td
 		}
 		AND = {
-			check_variable = { v = 64 }
+			check_variable = { v = 57 }
 			has_tech = basic_medium_tank
 		}
 		AND = {
-			check_variable = { v = 65 }
-			has_tech = amphibious_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 66 }
-			has_tech = improved_heavy_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 67 }
-			has_tech = improved_medium_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 68 }
+			check_variable = { v = 58 }
 			has_tech = improved_heavy_spaa
 		}
 		AND = {
-			check_variable = { v = 69 }
+			check_variable = { v = 59 }
 			has_tech = improved_heavy_art
 		}
 		AND = {
-			check_variable = { v = 70 }
+			check_variable = { v = 60 }
 			has_tech = improved_heavy_td
 		}
 		AND = {
-			check_variable = { v = 71 }
+			check_variable = { v = 61 }
 			has_tech = improved_heavy_tank
 		}
 		AND = {
-			check_variable = { v = 72 }
+			check_variable = { v = 62 }
 			has_tech = advanced_light_spaa
 		}
 		AND = {
-			check_variable = { v = 73 }
+			check_variable = { v = 63 }
 			has_tech = advanced_light_art
 		}
 		AND = {
-			check_variable = { v = 74 }
+			check_variable = { v = 64 }
 			has_tech = advanced_light_td
 		}
 		AND = {
-			check_variable = { v = 75 }
+			check_variable = { v = 65 }
 			has_tech = advanced_light_tank
 		}
 		AND = {
-			check_variable = { v = 76 }
+			check_variable = { v = 66 }
 			has_tech = improved_medium_spaa
 		}
 		AND = {
-			check_variable = { v = 77 }
+			check_variable = { v = 67 }
 			has_tech = improved_medium_art
 		}
 		AND = {
-			check_variable = { v = 78 }
+			check_variable = { v = 68 }
 			has_tech = improved_medium_td
 		}
 		AND = {
-			check_variable = { v = 79 }
+			check_variable = { v = 69 }
 			has_tech = improved_medium_tank
 		}
 		AND = {
-			check_variable = { v = 80 }
-			has_tech = advanced_light_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 81 }
+			check_variable = { v = 70 }
 			has_tech = advanced_heavy_spaa
 		}
 		AND = {
-			check_variable = { v = 82 }
+			check_variable = { v = 71 }
 			has_tech = advanced_heavy_art
 		}
 		AND = {
-			check_variable = { v = 83 }
-			has_tech = advanced_heavy_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 84 }
+			check_variable = { v = 72 }
 			has_tech = advanced_heavy_td
 		}
 		AND = {
-			check_variable = { v = 85 }
+			check_variable = { v = 73 }
 			has_tech = advanced_heavy_tank
 		}
 		AND = {
-			check_variable = { v = 86 }
+			check_variable = { v = 74 }
 		}
 		AND = {
-			check_variable = { v = 87 }
+			check_variable = { v = 75 }
 			has_tech = advanced_medium_spaa
 		}
 		AND = {
-			check_variable = { v = 88 }
+			check_variable = { v = 76 }
 			has_tech = advanced_medium_art
 		}
 		AND = {
-			check_variable = { v = 89 }
-			has_tech = advanced_medium_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 90 }
+			check_variable = { v = 77 }
 			has_tech = advanced_medium_td
 		}
 		AND = {
-			check_variable = { v = 91 }
+			check_variable = { v = 78 }
 			has_tech = advanced_medium_tank
 		}
 		AND = {
-			check_variable = { v = 92 }
+			check_variable = { v = 79 }
 			has_tech = super_heavy_spaa
 		}
 		AND = {
-			check_variable = { v = 93 }
+			check_variable = { v = 80 }
 			has_tech = super_heavy_art
 		}
 		AND = {
-			check_variable = { v = 94 }
-			has_tech = super_heavy_tank_chassis
-		}
-		AND = {
-			check_variable = { v = 95 }
+			check_variable = { v = 81 }
 			has_tech = super_heavy_td
 		}
 		AND = {
-			check_variable = { v = 96 }
+			check_variable = { v = 82 }
 			has_tech = super_heavy_tank
+		}
+		AND = {
+			check_variable = { v = 83 }
+			has_tech = modern_spaa
+		}
+		AND = {
+			check_variable = { v = 84 }
+			has_tech = modern_art
+		}
+		AND = {
+			check_variable = { v = 85 }
+			has_tech = modern_td
+		}
+		AND = {
+			check_variable = { v = 86 }
+			has_tech = main_battle_tank
+		}
+		AND = {
+			check_variable = { v = 87 }
+			has_tech = cv_early_fighter
+		}
+		AND = {
+			check_variable = { v = 88 }
+			has_tech = early_fighter
+		}
+		AND = {
+			check_variable = { v = 89 }
+			has_tech = early_transport_plane
+		}
+		AND = {
+			check_variable = { v = 90 }
+			has_tech = cv_fighter1
+		}
+		AND = {
+			check_variable = { v = 91 }
+			has_tech = fighter1
+		}
+		AND = {
+			check_variable = { v = 92 }
+			has_tech = heavy_fighter1
+		}
+		AND = {
+			check_variable = { v = 93 }
+			has_tech = cv_fighter2
+		}
+		AND = {
+			check_variable = { v = 94 }
+			has_tech = fighter2
+		}
+		AND = {
+			check_variable = { v = 95 }
+			has_tech = heavy_fighter2
+		}
+		AND = {
+			check_variable = { v = 96 }
+			has_tech = improved_transport_plane
 		}
 		AND = {
 			check_variable = { v = 97 }
 		}
 		AND = {
 			check_variable = { v = 98 }
-			has_tech = modern_spaa
 		}
 		AND = {
 			check_variable = { v = 99 }
-			has_tech = modern_art
 		}
 		AND = {
 			check_variable = { v = 100 }
-			has_tech = modern_td
+			has_tech = cv_fighter3
 		}
 		AND = {
 			check_variable = { v = 101 }
-			has_tech = main_battle_tank
+			has_tech = fighter3
 		}
 		AND = {
 			check_variable = { v = 102 }
-			has_tech = main_battle_tank_chassis
+			has_tech = heavy_fighter3
 		}
 		AND = {
 			check_variable = { v = 103 }
-			has_tech = railway_gun
+			has_tech = rocket_engines
 		}
 		AND = {
 			check_variable = { v = 104 }
 		}
 		AND = {
 			check_variable = { v = 105 }
-			has_tech = cv_early_fighter
 		}
 		AND = {
 			check_variable = { v = 106 }
-			has_tech = iw_small_airframe
+			has_tech = modern_small_airframe
 		}
 		AND = {
 			check_variable = { v = 107 }
-			has_tech = early_fighter
-		}
-		AND = {
-			check_variable = { v = 108 }
-			has_tech = iw_small_airframe
-		}
-		AND = {
-			check_variable = { v = 109 }
-			has_tech = early_transport_plane
-		}
-		AND = {
-			check_variable = { v = 110 }
-			has_tech = cv_fighter1
-		}
-		AND = {
-			check_variable = { v = 111 }
-			has_tech = basic_small_airframe
-		}
-		AND = {
-			check_variable = { v = 112 }
-			has_tech = fighter1
-		}
-		AND = {
-			check_variable = { v = 113 }
-			has_tech = heavy_fighter1
-		}
-		AND = {
-			check_variable = { v = 114 }
-			has_tech = basic_small_airframe
-		}
-		AND = {
-			check_variable = { v = 115 }
-			has_tech = improved_small_airframe
-		}
-		AND = {
-			check_variable = { v = 116 }
-			has_tech = improved_small_airframe
-		}
-		AND = {
-			check_variable = { v = 117 }
-			has_tech = cv_fighter2
-		}
-		AND = {
-			check_variable = { v = 118 }
-			has_tech = fighter2
-		}
-		AND = {
-			check_variable = { v = 119 }
-			has_tech = heavy_fighter2
-		}
-		AND = {
-			check_variable = { v = 120 }
-			has_tech = improved_transport_plane
-		}
-		AND = {
-			check_variable = { v = 121 }
-			has_tech = advanced_small_airframe
-		}
-		AND = {
-			check_variable = { v = 122 }
-		}
-		AND = {
-			check_variable = { v = 123 }
-			has_tech = advanced_small_airframe
-		}
-		AND = {
-			check_variable = { v = 124 }
-		}
-		AND = {
-			check_variable = { v = 125 }
-		}
-		AND = {
-			check_variable = { v = 126 }
-			has_tech = cv_fighter3
-		}
-		AND = {
-			check_variable = { v = 127 }
-			has_tech = fighter3
-		}
-		AND = {
-			check_variable = { v = 128 }
-			has_tech = heavy_fighter3
-		}
-		AND = {
-			check_variable = { v = 129 }
-			has_tech = rocket_engines
-		}
-		AND = {
-			check_variable = { v = 130 }
-		}
-		AND = {
-			check_variable = { v = 131 }
-		}
-		AND = {
-			check_variable = { v = 132 }
-			has_tech = modern_small_airframe
-		}
-		AND = {
-			check_variable = { v = 133 }
 			has_tech = jet_fighter1
 		}
 		AND = {
-			check_variable = { v = 134 }
+			check_variable = { v = 108 }
 		}
 		AND = {
-			check_variable = { v = 135 }
+			check_variable = { v = 109 }
 			has_tech = improved_rocket_engines
 		}
 		AND = {
-			check_variable = { v = 136 }
-			has_tech = modern_small_airframe
-		}
-		AND = {
-			check_variable = { v = 137 }
+			check_variable = { v = 110 }
 			has_tech = advanced_rocket_engines
 		}
 		AND = {
-			check_variable = { v = 138 }
+			check_variable = { v = 111 }
 			has_tech = strategic_airlifter
 		}
 		AND = {
-			check_variable = { v = 139 }
+			check_variable = { v = 112 }
 			has_tech = jet_fighter2
 		}
 		AND = {
-			check_variable = { v = 140 }
+			check_variable = { v = 113 }
 		}
 		AND = {
-			check_variable = { v = 141 }
-			has_tech = supersonic_small_airframe
-		}
-		AND = {
-			check_variable = { v = 142 }
+			check_variable = { v = 114 }
 			has_tech = supersonic_fighter1
 		}
 		AND = {
-			check_variable = { v = 143 }
+			check_variable = { v = 115 }
 			has_tech = CAS1
 		}
 		AND = {
-			check_variable = { v = 144 }
+			check_variable = { v = 116 }
 			has_tech = cv_CAS1
 		}
 		AND = {
-			check_variable = { v = 145 }
+			check_variable = { v = 117 }
 			has_tech = CAS2
 		}
 		AND = {
-			check_variable = { v = 146 }
+			check_variable = { v = 118 }
 			has_tech = cv_CAS2
 		}
 		AND = {
-			check_variable = { v = 147 }
+			check_variable = { v = 119 }
 			has_tech = CAS3
 		}
 		AND = {
-			check_variable = { v = 148 }
+			check_variable = { v = 120 }
 			has_tech = cv_CAS3
 		}
 		AND = {
-			check_variable = { v = 149 }
+			check_variable = { v = 121 }
 			has_tech = cv_naval_bomber1
 		}
 		AND = {
-			check_variable = { v = 150 }
+			check_variable = { v = 122 }
 			has_tech = naval_bomber1
 		}
 		AND = {
-			check_variable = { v = 151 }
+			check_variable = { v = 123 }
 			has_tech = cv_naval_bomber2
 		}
 		AND = {
-			check_variable = { v = 152 }
+			check_variable = { v = 124 }
 			has_tech = naval_bomber2
 		}
 		AND = {
-			check_variable = { v = 153 }
+			check_variable = { v = 125 }
 			has_tech = cv_naval_bomber3
 		}
 		AND = {
-			check_variable = { v = 154 }
+			check_variable = { v = 126 }
 			has_tech = naval_bomber3
 		}
 		AND = {
-			check_variable = { v = 155 }
-			has_tech = iw_medium_airframe
-		}
-		AND = {
-			check_variable = { v = 156 }
+			check_variable = { v = 127 }
 			has_tech = early_bomber
 		}
 		AND = {
-			check_variable = { v = 157 }
-			has_tech = basic_medium_airframe
-		}
-		AND = {
-			check_variable = { v = 158 }
+			check_variable = { v = 128 }
 			has_tech = tactical_bomber1
 		}
 		AND = {
-			check_variable = { v = 159 }
-			has_tech = improved_medium_airframe
-		}
-		AND = {
-			check_variable = { v = 160 }
+			check_variable = { v = 129 }
 			has_tech = tactical_bomber2
 		}
 		AND = {
-			check_variable = { v = 161 }
-			has_tech = advanced_medium_airframe
-		}
-		AND = {
-			check_variable = { v = 162 }
+			check_variable = { v = 130 }
 			has_tech = tactical_bomber3
 		}
 		AND = {
-			check_variable = { v = 163 }
+			check_variable = { v = 131 }
 			has_tech = jet_tactical_bomber1
 		}
 		AND = {
-			check_variable = { v = 164 }
-			has_tech = modern_medium_airframe
-		}
-		AND = {
-			check_variable = { v = 165 }
+			check_variable = { v = 132 }
 			has_tech = jet_tactical_bomber2
 		}
 		AND = {
-			check_variable = { v = 166 }
+			check_variable = { v = 133 }
 			has_tech = iw_large_airframe
 		}
 		AND = {
-			check_variable = { v = 167 }
-			has_tech = basic_large_airframe
-		}
-		AND = {
-			check_variable = { v = 168 }
+			check_variable = { v = 134 }
 			has_tech = strategic_bomber1
 		}
 		AND = {
-			check_variable = { v = 169 }
-			has_tech = improved_large_airframe
-		}
-		AND = {
-			check_variable = { v = 170 }
+			check_variable = { v = 135 }
 			has_tech = strategic_bomber2
 		}
 		AND = {
-			check_variable = { v = 171 }
-			has_tech = advanced_large_airframe
+			check_variable = { v = 136 }
 		}
 		AND = {
-			check_variable = { v = 172 }
-		}
-		AND = {
-			check_variable = { v = 173 }
+			check_variable = { v = 137 }
 			has_tech = strategic_bomber3
 		}
 		AND = {
-			check_variable = { v = 174 }
-			has_tech = modern_large_airframe
-		}
-		AND = {
-			check_variable = { v = 175 }
+			check_variable = { v = 138 }
 			has_tech = jet_strategic_bomber1
 		}
 		AND = {
-			check_variable = { v = 176 }
-			has_tech = pre_dreadnoughts
+			check_variable = { v = 139 }
 		}
 		AND = {
-			check_variable = { v = 177 }
-			has_tech = early_battlecruiser
-		}
-		AND = {
-			check_variable = { v = 178 }
-			has_tech = early_battleship
-		}
-		AND = {
-			check_variable = { v = 179 }
-			has_tech = early_heavy_cruiser
-		}
-		AND = {
-			check_variable = { v = 180 }
-			has_tech = early_ship_hull_heavy
-		}
-		AND = {
-			check_variable = { v = 181 }
-			has_tech = heavy_battleship
-		}
-		AND = {
-			check_variable = { v = 182 }
-			has_tech = basic_battleship
-		}
-		AND = {
-			check_variable = { v = 183 }
-			has_tech = basic_ship_hull_heavy
-		}
-		AND = {
-			check_variable = { v = 184 }
-			has_tech = basic_battlecruiser
-		}
-		AND = {
-			check_variable = { v = 185 }
-			has_tech = improved_battleship
-		}
-		AND = {
-			check_variable = { v = 186 }
-			has_tech = improved_ship_hull_heavy
-		}
-		AND = {
-			check_variable = { v = 187 }
-			has_tech = ship_hull_super_heavy
-		}
-		AND = {
-			check_variable = { v = 188 }
-			has_tech = heavy_battleship2
-		}
-		AND = {
-			check_variable = { v = 189 }
-			has_tech = advanced_battleship
-		}
-		AND = {
-			check_variable = { v = 190 }
-			has_tech = advanced_ship_hull_heavy
-		}
-		AND = {
-			check_variable = { v = 191 }
-		}
-		AND = {
-			check_variable = { v = 192 }
-		}
-		AND = {
-			check_variable = { v = 193 }
-			has_tech = early_carrier
-		}
-		AND = {
-			check_variable = { v = 194 }
-			has_tech = early_ship_hull_carrier
-		}
-		AND = {
-			check_variable = { v = 195 }
-			has_tech = early_ship_hull_carrier
-		}
-		AND = {
-			check_variable = { v = 196 }
-			has_tech = basic_carrier
-		}
-		AND = {
-			check_variable = { v = 197 }
-		}
-		AND = {
-			check_variable = { v = 198 }
-			has_tech = basic_ship_hull_carrier
-		}
-		AND = {
-			check_variable = { v = 199 }
-		}
-		AND = {
-			check_variable = { v = 200 }
-			has_tech = improved_carrier
-		}
-		AND = {
-			check_variable = { v = 201 }
-			has_tech = improved_ship_hull_carrier
-		}
-		AND = {
-			check_variable = { v = 202 }
-			has_tech = advanced_carrier
-		}
-		AND = {
-			check_variable = { v = 203 }
-		}
-		AND = {
-			check_variable = { v = 204 }
-			has_tech = advanced_ship_hull_carrier
-		}
-		AND = {
-			check_variable = { v = 205 }
-		}
-		AND = {
-			check_variable = { v = 206 }
-		}
-		AND = {
-			check_variable = { v = 207 }
-		}
-		AND = {
-			check_variable = { v = 208 }
-		}
-		AND = {
-			check_variable = { v = 209 }
-			has_tech = early_destroyer
-		}
-		AND = {
-			check_variable = { v = 210 }
-			has_tech = early_light_cruiser
-		}
-		AND = {
-			check_variable = { v = 211 }
-			has_tech = early_ship_hull_cruiser
-		}
-		AND = {
-			check_variable = { v = 212 }
-			has_tech = early_ship_hull_light
-		}
-		AND = {
-			check_variable = { v = 213 }
-			has_tech = coastal_defense_ships
-		}
-		AND = {
-			check_variable = { v = 214 }
-			has_tech = panzerschiffe
-		}
-		AND = {
-			check_variable = { v = 215 }
-			has_tech = basic_destroyer
-		}
-		AND = {
-			check_variable = { v = 216 }
-			has_tech = basic_heavy_cruiser
-		}
-		AND = {
-			check_variable = { v = 217 }
-			has_tech = basic_light_cruiser
-		}
-		AND = {
-			check_variable = { v = 218 }
-		}
-		AND = {
-			check_variable = { v = 219 }
-			has_tech = sp_improved_repair_ship
-		}
-		AND = {
-			check_variable = { v = 220 }
-			has_tech = basic_ship_hull_cruiser
-		}
-		AND = {
-			check_variable = { v = 221 }
-			has_tech = basic_ship_hull_light
-		}
-		AND = {
-			check_variable = { v = 222 }
-		}
-		AND = {
-			check_variable = { v = 223 }
-			has_tech = sp_improved_support_ship
-		}
-		AND = {
-			check_variable = { v = 224 }
-			has_tech = improved_destroyer
-		}
-		AND = {
-			check_variable = { v = 225 }
-			has_tech = improved_heavy_cruiser
-		}
-		AND = {
-			check_variable = { v = 226 }
-			has_tech = improved_light_cruiser
-		}
-		AND = {
-			check_variable = { v = 227 }
-			has_tech = improved_ship_hull_cruiser
-		}
-		AND = {
-			check_variable = { v = 228 }
-			has_tech = improved_ship_hull_light
-		}
-		AND = {
-			check_variable = { v = 229 }
-			has_tech = torpedo_cruiser_mtg
-		}
-		AND = {
-			check_variable = { v = 230 }
-			has_tech = torpedo_cruiser
-		}
-		AND = {
-			check_variable = { v = 231 }
-			has_tech = advanced_destroyer
-		}
-		AND = {
-			check_variable = { v = 232 }
-			has_tech = advanced_heavy_cruiser
-		}
-		AND = {
-			check_variable = { v = 233 }
-			has_tech = advanced_light_cruiser
-		}
-		AND = {
-			check_variable = { v = 234 }
-			has_tech = advanced_ship_hull_cruiser
-		}
-		AND = {
-			check_variable = { v = 235 }
-			has_tech = advanced_ship_hull_light
-		}
-		AND = {
-			check_variable = { v = 236 }
-			has_tech = early_ship_hull_submarine
-		}
-		AND = {
-			check_variable = { v = 237 }
-			has_tech = early_submarine
-		}
-		AND = {
-			check_variable = { v = 238 }
-		}
-		AND = {
-			check_variable = { v = 239 }
-			has_tech = basic_ship_hull_submarine
-		}
-		AND = {
-			check_variable = { v = 240 }
-			has_tech = basic_submarine
-		}
-		AND = {
-			check_variable = { v = 241 }
-		}
-		AND = {
-			check_variable = { v = 242 }
-		}
-		AND = {
-			check_variable = { v = 243 }
-			has_tech = cruiser_submarines
-		}
-		AND = {
-			check_variable = { v = 244 }
-		}
-		AND = {
-			check_variable = { v = 245 }
-			has_tech = midget_submarines
-		}
-		AND = {
-			check_variable = { v = 246 }
-			has_tech = improved_ship_hull_submarine
-		}
-		AND = {
-			check_variable = { v = 247 }
-			has_tech = improved_submarine
-		}
-		AND = {
-			check_variable = { v = 248 }
-			has_tech = advanced_ship_hull_submarine
-		}
-		AND = {
-			check_variable = { v = 249 }
-			has_tech = advanced_submarine
-		}
-		AND = {
-			check_variable = { v = 250 }
-		}
-		AND = {
-			check_variable = { v = 251 }
-		}
-		AND = {
-			check_variable = { v = 252 }
-		}
-		AND = {
-			check_variable = { v = 253 }
-		}
-		AND = {
-			check_variable = { v = 254 }
-		}
-		AND = {
-			check_variable = { v = 255 }
+			check_variable = { v = 140 }
 			has_tech = mtg_landing_craft
 		}
 		AND = {
-			check_variable = { v = 256 }
+			check_variable = { v = 141 }
 			has_tech = basic_train
 		}
 		AND = {
-			check_variable = { v = 257 }
+			check_variable = { v = 142 }
 			has_tech = armored_train
 		}
 		AND = {
-			check_variable = { v = 258 }
+			check_variable = { v = 143 }
 			has_tech = wartime_train
 		}
 		AND = {
-			check_variable = { v = 259 }
+			check_variable = { v = 144 }
 		}
 		AND = {
-			check_variable = { v = 260 }
+			check_variable = { v = 145 }
 		}
 		AND = {
-			check_variable = { v = 261 }
+			check_variable = { v = 146 }
 		}
 		AND = {
-			check_variable = { v = 262 }
+			check_variable = { v = 147 }
 		}
 		AND = {
-			check_variable = { v = 263 }
+			check_variable = { v = 148 }
 		}
 		AND = {
-			check_variable = { v = 264 }
+			check_variable = { v = 149 }
 		}
 		AND = {
-			check_variable = { v = 265 }
+			check_variable = { v = 150 }
 			has_tech = scout_plane1
 		}
 		AND = {
-			check_variable = { v = 266 }
+			check_variable = { v = 151 }
 			has_tech = scout_plane2
 		}
 		AND = {
-			check_variable = { v = 267 }
+			check_variable = { v = 152 }
 			has_tech = suicide_craft
 		}
 	}

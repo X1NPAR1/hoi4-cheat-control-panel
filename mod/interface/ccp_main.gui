@@ -81,7 +81,6 @@ guiTypes = {
 			name = "ccp_nav_highlight"
 			position = { x = 0 y = 98 }
 			spriteType = "GFX_ccp_sidebar_active"
-			size = { x = 250 y = 36 }
 		}
 
 		buttonType = {
@@ -1454,7 +1453,7 @@ guiTypes = {
 				position = { x = 274 y = 358 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_RAILWAY_GUN"
+				buttonText = "CCP_EQCAT_FIGHTER"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1465,7 +1464,7 @@ guiTypes = {
 				position = { x = 274 y = 384 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_FIGHTER"
+				buttonText = "CCP_EQCAT_CAS"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1476,7 +1475,7 @@ guiTypes = {
 				position = { x = 274 y = 410 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_CAS"
+				buttonText = "CCP_EQCAT_NAVAL_BOMBER"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1487,7 +1486,7 @@ guiTypes = {
 				position = { x = 274 y = 436 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_NAVAL_BOMBER"
+				buttonText = "CCP_EQCAT_TACTICAL_BOMBER"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1498,7 +1497,7 @@ guiTypes = {
 				position = { x = 274 y = 462 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_TACTICAL_BOMBER"
+				buttonText = "CCP_EQCAT_STRATEGIC_BOMBER"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1509,7 +1508,7 @@ guiTypes = {
 				position = { x = 274 y = 488 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_STRATEGIC_BOMBER"
+				buttonText = "CCP_EQCAT_CONVOY"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1520,7 +1519,7 @@ guiTypes = {
 				position = { x = 274 y = 514 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_CAPITAL_SHIP"
+				buttonText = "CCP_EQCAT_TRAIN"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1531,7 +1530,7 @@ guiTypes = {
 				position = { x = 274 y = 540 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_CARRIER"
+				buttonText = "CCP_EQCAT_MISSILE"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1540,61 +1539,6 @@ guiTypes = {
 			buttonType = {
 				name = "ccp_equipment_category_17"
 				position = { x = 274 y = 566 }
-				quadTextureSprite = "GFX_ccp_sidebar_item"
-				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_SCREEN_SHIP"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_equipment_category_18"
-				position = { x = 274 y = 592 }
-				quadTextureSprite = "GFX_ccp_sidebar_item"
-				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_SUBMARINE"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_equipment_category_19"
-				position = { x = 274 y = 618 }
-				quadTextureSprite = "GFX_ccp_sidebar_item"
-				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_CONVOY"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_equipment_category_20"
-				position = { x = 274 y = 644 }
-				quadTextureSprite = "GFX_ccp_sidebar_item"
-				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_TRAIN"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_equipment_category_21"
-				position = { x = 274 y = 670 }
-				quadTextureSprite = "GFX_ccp_sidebar_item"
-				size = { x = 200 y = 24 }
-				buttonText = "CCP_EQCAT_MISSILE"
-				buttonFont = "hoi_16mbs"
-				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
-				clicksound = click_default
-			}
-
-			buttonType = {
-				name = "ccp_equipment_category_22"
-				position = { x = 274 y = 696 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
 				buttonText = "CCP_EQCAT_SPECIAL"
