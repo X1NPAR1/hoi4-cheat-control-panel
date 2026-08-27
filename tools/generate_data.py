@@ -16,6 +16,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ccp.emit import (
+    emit_equipment_gate,
+    emit_equipment_requirements,
     emit_category_localisation,
     emit_equipment_categories_localisation,
     emit_equipment_effects,
@@ -26,6 +28,7 @@ from ccp.equipment import group_by_category, load_catalogue
 from ccp.technology import group_by_folder
 from ccp.technology import load_catalogue as load_technologies
 from ccp.languages import NATIVE, OVERLAY
+from ccp.unlocks import equipment_unlocks
 
 from ccp.globals import globalise_localisation, globalise_script
 
@@ -76,6 +79,7 @@ def main() -> int:
     print(f"Version: {version}\n")
 
     catalogue = load_catalogue(game_dir)
+    unlocks = equipment_unlocks(game_dir)
     if not catalogue:
         raise SystemExit("No equipment was parsed. The game files may be unreadable.")
 
@@ -95,6 +99,14 @@ def main() -> int:
         emit_equipment_localisation(catalogue, version),
     )
     write(
+        REPO_ROOT / "mod" / "common" / "scripted_triggers" / "ccp_generated_equipment_gate.txt",
+        emit_equipment_gate(catalogue, unlocks, version),
+    )
+    write(
+        scripted_loc / "ccp_generated_equipment_requirements.txt",
+        emit_equipment_requirements(catalogue, unlocks, version),
+    )
+    write(
         scripted_loc / "ccp_generated_equipment_categories_loc.txt",
         emit_equipment_categories_localisation(catalogue, version),
     )
@@ -102,14 +114,14 @@ def main() -> int:
         write(
             REPO_ROOT / "mod" / "localisation" / language
             / f"ccp_generated_equipment_l_{language}.yml",
-            emit_category_localisation(catalogue, language, version),
+            emit_category_localisation(catalogue, language, version, unlocks),
         )
 
     for language in OVERLAY:
         write(
             REPO_ROOT / "extras" / "language_overlays" / language
             / "ccp_generated_equipment_l_english.yml",
-            emit_category_localisation(catalogue, language, version),
+            emit_category_localisation(catalogue, language, version, unlocks),
         )
     technologies = load_technologies(game_dir)
     if not technologies:

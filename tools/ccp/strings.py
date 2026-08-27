@@ -328,13 +328,17 @@ TRANSLATED: dict[str, Row] = {
         "Toont de uitrusting in deze categorie.",
     ),
     "CCP_EQUIPMENT_ADD": _row("ADD", "HINZU", "AJOUTER", "ДОБАВ", "EKLE", "TOEVOEG"),
+    "CCP_EQUIPMENT_READY": _row(
+        "Ready to add.", "Bereit zum Hinzufügen.", "Prêt à ajouter.",
+        "Готово к добавлению.", "Eklemeye hazır.", "Klaar om toe te voegen.",
+    ),
     "CCP_EQUIPMENT_ADD_TOOLTIP": _row(
-        "Add the custom amount of this equipment to your stockpile.",
-        "Fügt die eingestellte Menge dieser Ausrüstung dem Lager hinzu.",
-        "Ajoute au stock la quantité définie de cet équipement.",
-        "Добавляет на склад заданное количество этого снаряжения.",
-        "Bu teçhizattan belirlenen miktarı stoğunuza ekler.",
-        "Voegt het ingestelde aantal van deze uitrusting toe aan je voorraad.",
+        "Add the custom amount of this equipment to your stockpile.\n[CCP_GetEquipmentRequirement]",
+        "Fügt die eingestellte Menge dieser Ausrüstung dem Lager hinzu.\n[CCP_GetEquipmentRequirement]",
+        "Ajoute au stock la quantité définie de cet équipement.\n[CCP_GetEquipmentRequirement]",
+        "Добавляет на склад заданное количество этого снаряжения.\n[CCP_GetEquipmentRequirement]",
+        "Bu teçhizattan belirlenen miktarı stoğunuza ekler.\n[CCP_GetEquipmentRequirement]",
+        "Voegt het ingestelde aantal van deze uitrusting toe aan je voorraad.\n[CCP_GetEquipmentRequirement]",
     ),
     "CCP_EQUIPMENT_LATEST": _row("LATEST", "NEUSTE", "RÉCENT", "НОВОЕ", "SON", "NIEUWSTE"),
     "CCP_EQUIPMENT_LATEST_TOOLTIP": _row(
@@ -976,6 +980,45 @@ TRANSLATED: dict[str, Row] = {
         "Cheat Control Panel", "Cheat-Kontrollpanel", "Panneau de triche",
         "Панель управления читами", "Hile Kontrol Paneli", "Cheat-bedieningspaneel",
     ),
+    "CCP_DIPLOMACY_HELP": _row(
+        "Every button here acts on [?ccp_target_country.GetNameDefCap]. Pick a different country with TARGET in the Countries section.",
+        "Jede Schaltfläche hier wirkt auf [?ccp_target_country.GetNameDefCap]. Ein anderes Land wählen Sie mit ZIEL unter Länder.",
+        "Chaque bouton agit sur [?ccp_target_country.GetNameDefCap]. Choisissez un autre pays avec CIBLE dans la section Pays.",
+        "Все кнопки действуют на [?ccp_target_country.GetNameDefCap]. Другую страну выберите кнопкой ЦЕЛЬ в разделе Страны.",
+        "Buradaki her düğme [?ccp_target_country.GetNameDefCap] üzerinde çalışır. Başka bir ülke için Ülkeler bölümünde HEDEF seçin.",
+        "Elke knop werkt op [?ccp_target_country.GetNameDefCap]. Kies een ander land met DOEL bij Landen.",
+    ),
+    "CCP_FACTION_NAME": _row(
+        "Cheat Control Pact", "Cheat-Kontroll-Pakt", "Pacte du panneau de triche",
+        "Пакт панели читов", "Hile Kontrol Paktı", "Cheat-bedieningspact",
+    ),
+    "CCP_STATE_UNCLAIM": _row("UNCLAIM", "ANSPR. WEG", "RETIRER", "СНЯТЬ", "HAK SİL", "CLAIM WEG"),
+    "CCP_STATE_UNCLAIM_TOOLTIP": _row(
+        "Remove your claim from this state.",
+        "Entfernt Ihren Anspruch auf diesen Staat.",
+        "Retire votre revendication sur cet État.",
+        "Снимает ваше притязание на провинцию.",
+        "Bu eyalet üzerindeki hak talebinizi kaldırır.",
+        "Verwijdert jouw claim op deze staat.",
+    ),
+    "CCP_STATE_COMPLY": _row("COMPLY", "FÜGSAM", "SOUMIS", "ПОКОРН", "UYUM", "VOLGZAAM"),
+    "CCP_STATE_COMPLY_TOOLTIP": _row(
+        "Set this state's compliance to full, so occupation runs smoothly.",
+        "Setzt die Fügsamkeit dieses Staates auf das Maximum, damit die Besatzung reibungslos läuft.",
+        "Porte la soumission de cet État au maximum pour une occupation sans heurts.",
+        "Доводит покорность провинции до максимума, чтобы оккупация шла гладко.",
+        "Bu eyaletin uyumunu tam yapar; işgal sorunsuz ilerler.",
+        "Zet de volgzaamheid van deze staat op maximum voor een soepele bezetting.",
+    ),
+    "CCP_STATE_QUIET": _row("PACIFY", "BEFRIEDEN", "PACIFIER", "УСМИРИТЬ", "SUSTUR", "PACIFICEREN"),
+    "CCP_STATE_QUIET_TOOLTIP": _row(
+        "Wipe out resistance in this state.",
+        "Löscht den Widerstand in diesem Staat aus.",
+        "Élimine la résistance dans cet État.",
+        "Полностью подавляет сопротивление в провинции.",
+        "Bu eyaletteki direnişi tamamen bitirir.",
+        "Verwijdert het verzet in deze staat volledig.",
+    ),
     "CCP_PAD_LABEL": _row(
         "CUSTOM AMOUNT", "EIGENE MENGE", "MONTANT PERSONNALISÉ",
         "СВОЁ ЗНАЧЕНИЕ", "ÖZEL MİKTAR", "EIGEN AANTAL",
@@ -1052,6 +1095,9 @@ SECTION_NAMES: dict[str, Row] = {
     ),
     "commanders": _row(
         "Commanders", "Befehlshaber", "Commandants", "Командующие", "Komutanlar", "Bevelhebbers"
+    ),
+    "diplomacy": _row(
+        "Diplomacy", "Diplomatie", "Diplomatie", "Дипломатия", "Diplomasi", "Diplomatie"
     ),
     "history": _row(
         "History", "Verlauf", "Historique", "История", "Geçmiş", "Geschiedenis"
@@ -1157,6 +1203,14 @@ SECTION_TOOLTIPS: dict[str, Row] = {
         "Повышает навыки всех ваших генералов и адмиралов.",
         "Tüm generallerinizin ve amirallerinizin becerilerini artırır.",
         "Verhoogt de vaardigheden van al je generaals en admiraals.",
+    ),
+    "diplomacy": _row(
+        "Acts on the country you picked as TARGET in the Countries section.",
+        "Wirkt auf das Land, das Sie unter Länder als ZIEL gewählt haben.",
+        "Agit sur le pays choisi comme CIBLE dans la section Pays.",
+        "Действует на страну, выбранную как ЦЕЛЬ в разделе Страны.",
+        "Ülkeler bölümünde HEDEF seçtiğiniz ülke üzerinde çalışır.",
+        "Werkt op het land dat je als DOEL koos bij Landen.",
     ),
     "history": _row(
         "The last ten actions this panel applied, each repeatable.",

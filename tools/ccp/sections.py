@@ -41,6 +41,7 @@ SECTIONS: list[Section] = [
     Section("stockpile", "Resources", "Ham Madde"),
     Section("military", "Military", "Ordu"),
     Section("commanders", "Commanders", "Komutanlar"),
+    Section("diplomacy", "Diplomacy", "Diplomasi"),
     Section("history", "History", "Geçmiş"),
     Section("settings", "Settings", "Ayarlar"),
 ]

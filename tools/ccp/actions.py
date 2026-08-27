@@ -372,6 +372,101 @@ RESEARCH_TOOLS: list[Action] = [
     ),
 ]
 
+def _on_target(effect: str) -> Callable[[int], list[str]]:
+    """Run an effect on the country picked as TARGET in the Countries section."""
+    return lambda n: ["var:ccp_target_country = {", f"	{effect.format(n=n)}", "}"]
+
+
+# ---------------------------------------------------------------- diplomacy
+
+DIPLOMACY: list[Action] = [
+    Action(
+        "opinion_up",
+        "diplomacy",
+        lambda n: [
+            "var:ccp_target_country = {",
+            "	add_opinion_modifier = { target = var:ccp_player modifier = ccp_goodwill }",
+            "}",
+        ],
+        (1,),
+        "SET",
+    ),
+    Action(
+        "opinion_down",
+        "diplomacy",
+        lambda n: [
+            "var:ccp_target_country = {",
+            "	add_opinion_modifier = { target = var:ccp_player modifier = ccp_distrust }",
+            "}",
+        ],
+        (1,),
+        "SET",
+    ),
+    Action(
+        "intel",
+        "diplomacy",
+        lambda n: [
+            "add_intel = {",
+            "	target = var:ccp_target_country",
+            f"	civilian_intel = {n}",
+            f"	army_intel = {n}",
+            f"	navy_intel = {n}",
+            f"	airforce_intel = {n}",
+            "}",
+        ],
+        (25, 50, 75, 100),
+        "{n}%",
+    ),
+    Action(
+        "wargoal",
+        "diplomacy",
+        lambda n: [
+            "create_wargoal = { type = annex_everything target = var:ccp_target_country }"
+        ],
+        (1,),
+        "SET",
+    ),
+    Action(
+        "truce",
+        "diplomacy",
+        lambda n: [f"set_truce = {{ target = var:ccp_target_country days = {n} }}"],
+        (90, 180, 365, 730),
+        "{n}d",
+    ),
+    Action(
+        "faction_create",
+        "diplomacy",
+        lambda n: ["create_faction = CCP_FACTION_NAME"],
+        (1,),
+        "SET",
+    ),
+    Action(
+        "faction_invite",
+        "diplomacy",
+        lambda n: ["add_to_faction = var:ccp_target_country"],
+        (1,),
+        "SET",
+    ),
+    Action(
+        "release_target",
+        "diplomacy",
+        lambda n: ["release = var:ccp_target_country"],
+        (1,),
+        "SET",
+        danger=True,
+        confirm=True,
+    ),
+    Action(
+        "free_target",
+        "diplomacy",
+        lambda n: ["end_puppet = var:ccp_target_country"],
+        (1,),
+        "SET",
+        danger=True,
+        confirm=True,
+    ),
+]
+
 BY_SECTION: dict[str, list[Action]] = {
     "nation": NATION,
     "politics": POLITICS,
@@ -379,6 +474,7 @@ BY_SECTION: dict[str, list[Action]] = {
     "stockpile": RESOURCES_SECTION,
     "military": MILITARY,
     "commanders": COMMANDERS,
+    "diplomacy": DIPLOMACY,
 }
 
 ALL: list[Action] = [action for actions in BY_SECTION.values() for action in actions]

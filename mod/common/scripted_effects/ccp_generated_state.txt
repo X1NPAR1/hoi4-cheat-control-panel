@@ -127,3 +127,36 @@ CCP_state_claim = {
 	set_variable = { global.ccp_status = 10 }
 	CCP_mark_dirty = yes
 }
+
+CCP_state_unclaim = {
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			remove_claim_by = PREV
+		}
+	}
+	set_variable = { global.ccp_status = 10 }
+	CCP_mark_dirty = yes
+}
+
+CCP_state_comply = {
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			add_compliance = 100
+		}
+	}
+	set_variable = { global.ccp_status = 10 }
+	CCP_mark_dirty = yes
+}
+
+CCP_state_quiet = {
+	set_variable = { global.ccp_state = THIS }
+	var:global.ccp_player = {
+		var:global.ccp_state = {
+			add_resistance = -100
+		}
+	}
+	set_variable = { global.ccp_status = 10 }
+	CCP_mark_dirty = yes
+}

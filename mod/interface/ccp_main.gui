@@ -221,6 +221,17 @@ guiTypes = {
 			position = { x = 0 y = 530 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
 			size = { x = 250 y = 36 }
+			buttonText = "CCP_SECTION_DIPLOMACY"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_SECTION_DIPLOMACY_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_nav_14"
+			position = { x = 0 y = 566 }
+			quadTextureSprite = "GFX_ccp_sidebar_item"
+			size = { x = 250 y = 36 }
 			buttonText = "CCP_SECTION_HISTORY"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_SECTION_HISTORY_TOOLTIP"
@@ -228,8 +239,8 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "ccp_nav_14"
-			position = { x = 0 y = 566 }
+			name = "ccp_nav_15"
+			position = { x = 0 y = 602 }
 			quadTextureSprite = "GFX_ccp_sidebar_item"
 			size = { x = 250 y = 36 }
 			buttonText = "CCP_SECTION_SETTINGS"
@@ -6167,6 +6178,485 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "ccp_section_diplomacy"
+			position = { x = 0 y = 0 }
+			size = { width = 1500 height = 880 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "ccp_diplomacy_help"
+				position = { x = 274 y = 128 }
+				font = "hoi_16mbs"
+				text = "CCP_DIPLOMACY_HELP"
+				maxWidth = 1202
+				maxHeight = 18
+				format = left
+			}
+
+			containerWindowType = {
+				name = "ccp_action_opinion_up"
+				position = { x = 274 y = 158 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_opinion_up_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_opinion_up_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_OPINION_UP"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_opinion_up_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_OPINION_UP_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_opinion_up_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_OPINION_UP_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_OPINION_UP_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_opinion_down"
+				position = { x = 578 y = 158 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_opinion_down_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_opinion_down_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_OPINION_DOWN"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_opinion_down_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_OPINION_DOWN_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_opinion_down_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_OPINION_DOWN_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_OPINION_DOWN_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_intel"
+				position = { x = 882 y = 158 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_intel_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_intel_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_INTEL"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_intel_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_INTEL_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_intel_25"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_INTEL_25"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_INTEL_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_intel_50"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_INTEL_50"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_INTEL_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_intel_75"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_INTEL_75"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_INTEL_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_intel_100"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_INTEL_100"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_INTEL_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_wargoal"
+				position = { x = 1186 y = 158 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_wargoal_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_wargoal_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_WARGOAL"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_wargoal_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_WARGOAL_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_wargoal_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_WARGOAL_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_WARGOAL_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_truce"
+				position = { x = 274 y = 304 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_truce_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_truce_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_TRUCE"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_truce_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_TRUCE_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_truce_90"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_TRUCE_90"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_TRUCE_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_truce_180"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_TRUCE_180"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_TRUCE_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_truce_365"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_TRUCE_365"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_TRUCE_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_truce_730"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_TRUCE_730"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_TRUCE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_faction_create"
+				position = { x = 578 y = 304 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_faction_create_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_faction_create_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_FACTION_CREATE"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_faction_create_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_FACTION_CREATE_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_faction_create_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_FACTION_CREATE_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_FACTION_CREATE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_faction_invite"
+				position = { x = 882 y = 304 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_faction_invite_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_faction_invite_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_FACTION_INVITE"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_faction_invite_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_FACTION_INVITE_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_faction_invite_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_FACTION_INVITE_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_FACTION_INVITE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_release_target"
+				position = { x = 1186 y = 304 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_release_target_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_release_target_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_RELEASE_TARGET"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_release_target_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_RELEASE_TARGET_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_release_target_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small_danger"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_RELEASE_TARGET_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_RELEASE_TARGET_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_free_target"
+				position = { x = 274 y = 450 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_free_target_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_free_target_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_FREE_TARGET"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_free_target_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_FREE_TARGET_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_free_target_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small_danger"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_FREE_TARGET_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_FREE_TARGET_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+		}
+
+		containerWindowType = {
 			name = "ccp_section_history"
 			position = { x = 0 y = 0 }
 			size = { width = 1500 height = 880 }
@@ -6946,7 +7436,7 @@ guiTypes = {
 			position = { x = 12 y = 4 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_ENTRY_NAME"
-			maxWidth = 794
+			maxWidth = 511
 			maxHeight = 18
 			format = left
 		}
@@ -6956,14 +7446,14 @@ guiTypes = {
 			position = { x = 12 y = 21 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_ENTRY_OWNER"
-			maxWidth = 794
+			maxWidth = 511
 			maxHeight = 16
 			format = left
 		}
 
 		buttonType = {
 			name = "ccp_state_entry_take"
-			position = { x = 814 y = 5 }
+			position = { x = 531 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 69 y = 28 }
 			buttonText = "CCP_STATE_TAKE"
@@ -6974,7 +7464,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_give"
-			position = { x = 889 y = 5 }
+			position = { x = 606 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 62 y = 28 }
 			buttonText = "CCP_STATE_GIVE"
@@ -6985,7 +7475,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_core"
-			position = { x = 957 y = 5 }
+			position = { x = 674 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small"
 			size = { x = 58 y = 28 }
 			buttonText = "CCP_STATE_CORE"
@@ -6996,7 +7486,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_uncore"
-			position = { x = 1021 y = 5 }
+			position = { x = 738 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_UNCORE"
@@ -7007,7 +7497,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_claim"
-			position = { x = 1103 y = 5 }
+			position = { x = 820 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small"
 			size = { x = 91 y = 28 }
 			buttonText = "CCP_STATE_CLAIM"
@@ -7015,12 +7505,45 @@ guiTypes = {
 			pdx_tooltip = "CCP_STATE_CLAIM_TOOLTIP"
 			clicksound = click_default
 		}
+
+		buttonType = {
+			name = "ccp_state_entry_unclaim"
+			position = { x = 917 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_small_danger"
+			size = { x = 91 y = 28 }
+			buttonText = "CCP_STATE_UNCLAIM"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_UNCLAIM_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_comply"
+			position = { x = 1014 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			size = { x = 76 y = 28 }
+			buttonText = "CCP_STATE_COMPLY"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_COMPLY_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_state_entry_quiet"
+			position = { x = 1096 y = 5 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			size = { x = 98 y = 28 }
+			buttonText = "CCP_STATE_QUIET"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_QUIET_TOOLTIP"
+			clicksound = click_default
+		}
 	}
 
 	containerWindowType = {
 		name = "ccp_state_picker_window"
 		position = { x = 0 y = 0 }
-		size = { width = 400 height = 68 }
+		size = { width = 683 height = 68 }
 		moveable = no
 		clipping = no
 
@@ -7035,7 +7558,7 @@ guiTypes = {
 			position = { x = 10 y = 7 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_PICKER_TITLE"
-			maxWidth = 380
+			maxWidth = 663
 			maxHeight = 16
 			format = left
 		}
@@ -7092,6 +7615,39 @@ guiTypes = {
 			buttonText = "CCP_STATE_CLAIM"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_CLAIM_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_unclaim"
+			position = { x = 396 y = 30 }
+			quadTextureSprite = "GFX_ccp_button_small_danger"
+			size = { x = 91 y = 28 }
+			buttonText = "CCP_STATE_UNCLAIM"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_UNCLAIM_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_comply"
+			position = { x = 493 y = 30 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			size = { x = 76 y = 28 }
+			buttonText = "CCP_STATE_COMPLY"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_COMPLY_TOOLTIP"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "ccp_picker_quiet"
+			position = { x = 575 y = 30 }
+			quadTextureSprite = "GFX_ccp_button_small"
+			size = { x = 98 y = 28 }
+			buttonText = "CCP_STATE_QUIET"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "CCP_STATE_QUIET_TOOLTIP"
 			clicksound = click_default
 		}
 	}

@@ -228,6 +228,18 @@ CCP_generic_apply = {
 		}
 		CCP_action_delete_units_0 = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 11 }
+		}
+		CCP_action_release_target_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 12 }
+		}
+		CCP_action_free_target_1 = yes
+	}
 	set_variable = { ccp_pending_generic = 0 }
 	set_variable = { global.ccp_modal_open = 0 }
 	CCP_mark_dirty = yes

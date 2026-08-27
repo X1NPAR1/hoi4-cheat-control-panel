@@ -4,4 +4,9 @@ opinion_modifiers = {
 		value = 200
 		trade = yes
 	}
+
+	ccp_distrust = {
+		value = -200
+		trade = yes
+	}
 }

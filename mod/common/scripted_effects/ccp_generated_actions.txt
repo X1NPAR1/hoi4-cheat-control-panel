@@ -2412,3 +2412,151 @@ CCP_action_admiral_skill_5 = {
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
+
+CCP_action_opinion_up_1 = {
+	var:global.ccp_target_country = {
+		add_opinion_modifier = { target = var:global.ccp_player modifier = ccp_goodwill }
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 196 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_opinion_down_1 = {
+	var:global.ccp_target_country = {
+		add_opinion_modifier = { target = var:global.ccp_player modifier = ccp_distrust }
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 197 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_intel_25 = {
+	add_intel = {
+		target = var:global.ccp_target_country
+		civilian_intel = 25
+		army_intel = 25
+		navy_intel = 25
+		airforce_intel = 25
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 198 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_intel_50 = {
+	add_intel = {
+		target = var:global.ccp_target_country
+		civilian_intel = 50
+		army_intel = 50
+		navy_intel = 50
+		airforce_intel = 50
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 199 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_intel_75 = {
+	add_intel = {
+		target = var:global.ccp_target_country
+		civilian_intel = 75
+		army_intel = 75
+		navy_intel = 75
+		airforce_intel = 75
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 200 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_intel_100 = {
+	add_intel = {
+		target = var:global.ccp_target_country
+		civilian_intel = 100
+		army_intel = 100
+		navy_intel = 100
+		airforce_intel = 100
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 201 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_wargoal_1 = {
+	create_wargoal = { type = annex_everything target = var:global.ccp_target_country }
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 202 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_truce_90 = {
+	set_truce = { target = var:global.ccp_target_country days = 90 }
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 203 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_truce_180 = {
+	set_truce = { target = var:global.ccp_target_country days = 180 }
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 204 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_truce_365 = {
+	set_truce = { target = var:global.ccp_target_country days = 365 }
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 205 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_truce_730 = {
+	set_truce = { target = var:global.ccp_target_country days = 730 }
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 206 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_faction_create_1 = {
+	create_faction = CCP_FACTION_NAME
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 207 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_faction_invite_1 = {
+	add_to_faction = var:global.ccp_target_country
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 208 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_release_target_1 = {
+	release = var:global.ccp_target_country
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 209 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_free_target_1 = {
+	end_puppet = var:global.ccp_target_country
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 210 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}

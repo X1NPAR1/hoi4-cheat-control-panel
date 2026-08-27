@@ -42,16 +42,23 @@ is stored in your save.
 | Section | What it does |
 |---|---|
 | **Dashboard** | Live country summary: political power, command power, manpower, army/navy/air experience, stability, factories |
-| **Resources** | Grant any of those six resources, with scaled presets and a custom amount |
-| **Equipment** | Every addable equipment variant in your installation, grouped by category, sixteen to a page, with ADD and LATEST |
-| **Research** | Every technology, grouped by the research folder the game assigns it, granted one at a time or a folder at once |
-| **Countries** | Every country in the running game: annex, puppet, declare war, white peace, play as |
-| **States** | Every state: take, add core, remove core, add claim — from the list or by clicking the map |
-| **Nation** | Stability, war support, research slots, fuel |
-| **Construction** | Infrastructure, factories, dockyards, air bases, radar and anti-air, built instantly across every owned state, plus off-map factories |
+| **Resources** | Political power, command power, manpower and all three experience pools, with scaled presets and a custom amount |
+| **Equipment** | Every addable variant in your installation, by category, with a live stockpile count, ADD, LATEST, and add-the-whole-category. Items you have not researched are disabled and say which technology is missing |
+| **Research** | Every technology by research folder: one at a time, a whole category, or everything in the game |
+| **Countries** | Annex, puppet, declare war, white peace, play as, or mark a country as the target other sections act on |
+| **States** | Take, hand to your target, add and remove cores and claims, force compliance, wipe out resistance — from the list or by clicking the map |
+| **Nation** | Stability, war support, research slots, fuel, market funds, world tension, legitimacy |
+| **Politics** | Ruling party and popularity for each ideology, civil war, autonomy |
+| **Construction** | Fourteen building types at four levels each, built instantly across every owned state, plus off-map factories and naval mines |
+| **Resources (raw)** | All seven raw resources added to every state you own |
+| **Military** | Nuclear bombs, division spawning, disband everything, and the three experience pools |
 | **Commanders** | Skill, attack, defence, planning and logistics for every general and admiral |
+| **Diplomacy** | Opinion, intelligence, war goals, truces, factions, release and independence — all aimed at your target country |
 | **History** | The last ten actions the panel applied, each repeatable |
-| **Settings** | Hotkey, confirmation prompts, compatibility and language notes |
+| **Settings** | Hotkey, confirmation prompts, diplomacy rules, AI goodwill, compatibility and language notes |
+
+**Every action offers several amounts, not one.** A card carries four or five buttons —
+`+1 / +5 / +10 / +20` — so 57 actions become 195 choices.
 
 Sections appear only when they do something. Nothing in the panel is a placeholder.
 
@@ -124,6 +131,8 @@ These are engine limits, verified against the shipped game files, not oversights
 | `complete_national_focus` needs a specific focus token, and focus trees cannot be walked at runtime | There is no national focus section |
 | Doctrines are a separate system since 1.19 | `set_technology` does not reach them, so Research does not list them |
 | Only ten localisation folders exist | Turkish and Dutch ship as an overlay rather than as selectable languages |
+| `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` are console switches with no scripted equivalent | Absent. Where a native effect gives the same outcome — instant construction, diplomatic rules — the panel uses that instead |
+| Equipment display names differ per language | There is no A-Z filter: filing rows under an English initial would be wrong in the other five languages. Categories, paging and the locked-item marking cover the same need |
 
 ## How it is built
 

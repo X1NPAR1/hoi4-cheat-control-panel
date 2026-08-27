@@ -1288,4 +1288,94 @@ CCP_action_replay = {
 		}
 		CCP_action_admiral_skill_5 = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 196 }
+		}
+		CCP_action_opinion_up_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 197 }
+		}
+		CCP_action_opinion_down_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 198 }
+		}
+		CCP_action_intel_25 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 199 }
+		}
+		CCP_action_intel_50 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 200 }
+		}
+		CCP_action_intel_75 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 201 }
+		}
+		CCP_action_intel_100 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 202 }
+		}
+		CCP_action_wargoal_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 203 }
+		}
+		CCP_action_truce_90 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 204 }
+		}
+		CCP_action_truce_180 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 205 }
+		}
+		CCP_action_truce_365 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 206 }
+		}
+		CCP_action_truce_730 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 207 }
+		}
+		CCP_action_faction_create_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 208 }
+		}
+		CCP_action_faction_invite_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 209 }
+		}
+		CCP_action_release_target_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 210 }
+		}
+		CCP_action_free_target_1 = yes
+	}
 }

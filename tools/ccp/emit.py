@@ -221,6 +221,61 @@ def _emit_category_router(
         writer.close()
 
 
+def emit_equipment_gate(catalogue: list[Equipment], unlocks: dict[str, str], version: str) -> str:
+    """A trigger that only allows adding equipment the country can actually field.
+
+    The mapping comes from the technologies' own `enable_equipments`, so a row is
+    disabled exactly when the game would refuse to build the item, and the reason
+    names the technology that is missing.
+    """
+    writer = Writer()
+    writer.line(BANNER.format(version=version).rstrip())
+    writer.blank()
+
+    writer.open("CCP_equipment_available")
+    writer.open("OR")
+    for index, item in enumerate(catalogue):
+        tech = unlocks.get(item.key)
+        writer.open("AND")
+        writer.line(f"check_variable = {{ v = {index} }}")
+        if tech:
+            writer.line(f"has_tech = {tech}")
+        writer.close()
+    writer.close()
+    writer.close()
+
+    return writer.text()
+
+
+def emit_equipment_requirements(
+    catalogue: list[Equipment], unlocks: dict[str, str], version: str
+) -> str:
+    writer = Writer()
+    writer.line(BANNER.format(version=version).rstrip())
+    writer.blank()
+
+    writer.open("defined_text")
+    writer.line("name = CCP_GetEquipmentRequirement")
+    for index, item in enumerate(catalogue):
+        tech = unlocks.get(item.key)
+        writer.open("text")
+        writer.open("trigger")
+        writer.line(f"check_variable = {{ v = {index} }}")
+        if tech:
+            writer.line(f"NOT = {{ has_tech = {tech} }}")
+        else:
+            writer.line("always = no")
+        writer.close()
+        writer.line(f"localization_key = CCP_EQREQ_{index}")
+        writer.close()
+    writer.open("text")
+    writer.line("localization_key = CCP_EQUIPMENT_READY")
+    writer.close()
+    writer.close()
+
+    return writer.text()
+
+
 def emit_equipment_localisation(catalogue: list[Equipment], version: str) -> str:
     writer = Writer()
     writer.line(BANNER.format(version=version).rstrip())
@@ -320,8 +375,18 @@ LANGUAGE_INDEX = {
 }
 
 
+REQUIREMENT_TEXT = (
+    "Locked: you have not researched {tech}.",
+    "Gesperrt: {tech} ist nicht erforscht.",
+    "Verrouillé : {tech} n'est pas recherché.",
+    "Закрыто: {tech} не изучено.",
+    "Kilitli: {tech} araştırılmamış.",
+    "Vergrendeld: {tech} is niet onderzocht.",
+)
+
+
 def emit_category_localisation(
-    catalogue: list[Equipment], language: str, version: str
+    catalogue: list[Equipment], language: str, version: str, unlocks: dict[str, str]
 ) -> str:
     """A localisation file naming every equipment category present in this install."""
     index = LANGUAGE_INDEX[language]

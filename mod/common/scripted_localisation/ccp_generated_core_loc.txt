@@ -80,11 +80,17 @@ defined_text = {
 		trigger = {
 			check_variable = { global.ccp_section = 13 }
 		}
-		localization_key = CCP_SECTION_HISTORY
+		localization_key = CCP_SECTION_DIPLOMACY
 	}
 	text = {
 		trigger = {
 			check_variable = { global.ccp_section = 14 }
+		}
+		localization_key = CCP_SECTION_HISTORY
+	}
+	text = {
+		trigger = {
+			check_variable = { global.ccp_section = 15 }
 		}
 		localization_key = CCP_SECTION_SETTINGS
 	}
@@ -653,6 +659,60 @@ defined_text = {
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
 	}
 	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^0 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
+	}
+	text = {
 		localization_key = CCP_HISTORY_EMPTY
 	}
 }
@@ -1000,6 +1060,60 @@ defined_text = {
 			check_variable = { ccp_history^1 = 57 }
 		}
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^1 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
 	}
 	text = {
 		localization_key = CCP_HISTORY_EMPTY
@@ -1351,6 +1465,60 @@ defined_text = {
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
 	}
 	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^2 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
+	}
+	text = {
 		localization_key = CCP_HISTORY_EMPTY
 	}
 }
@@ -1698,6 +1866,60 @@ defined_text = {
 			check_variable = { ccp_history^3 = 57 }
 		}
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^3 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
 	}
 	text = {
 		localization_key = CCP_HISTORY_EMPTY
@@ -2049,6 +2271,60 @@ defined_text = {
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
 	}
 	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^4 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
+	}
+	text = {
 		localization_key = CCP_HISTORY_EMPTY
 	}
 }
@@ -2396,6 +2672,60 @@ defined_text = {
 			check_variable = { ccp_history^5 = 57 }
 		}
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^5 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
 	}
 	text = {
 		localization_key = CCP_HISTORY_EMPTY
@@ -2747,6 +3077,60 @@ defined_text = {
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
 	}
 	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^6 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
+	}
+	text = {
 		localization_key = CCP_HISTORY_EMPTY
 	}
 }
@@ -3094,6 +3478,60 @@ defined_text = {
 			check_variable = { ccp_history^7 = 57 }
 		}
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^7 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
 	}
 	text = {
 		localization_key = CCP_HISTORY_EMPTY
@@ -3445,6 +3883,60 @@ defined_text = {
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
 	}
 	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^8 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
+	}
+	text = {
 		localization_key = CCP_HISTORY_EMPTY
 	}
 }
@@ -3792,6 +4284,60 @@ defined_text = {
 			check_variable = { ccp_history^9 = 57 }
 		}
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 58 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 59 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 60 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 61 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 62 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 63 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 64 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 65 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_history^9 = 66 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
 	}
 	text = {
 		localization_key = CCP_HISTORY_EMPTY
@@ -4969,6 +5515,96 @@ defined_text = {
 			check_variable = { ccp_last_action = 195 }
 		}
 		localization_key = CCP_ACTION_ADMIRAL_SKILL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 196 }
+		}
+		localization_key = CCP_ACTION_OPINION_UP
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 197 }
+		}
+		localization_key = CCP_ACTION_OPINION_DOWN
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 198 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 199 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 200 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 201 }
+		}
+		localization_key = CCP_ACTION_INTEL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 202 }
+		}
+		localization_key = CCP_ACTION_WARGOAL
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 203 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 204 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 205 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 206 }
+		}
+		localization_key = CCP_ACTION_TRUCE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 207 }
+		}
+		localization_key = CCP_ACTION_FACTION_CREATE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 208 }
+		}
+		localization_key = CCP_ACTION_FACTION_INVITE
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 209 }
+		}
+		localization_key = CCP_ACTION_RELEASE_TARGET
+	}
+	text = {
+		trigger = {
+			check_variable = { ccp_last_action = 210 }
+		}
+		localization_key = CCP_ACTION_FREE_TARGET
 	}
 	text = {
 		localization_key = CCP_ACTION_STABILITY

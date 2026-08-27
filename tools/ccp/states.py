@@ -19,6 +19,7 @@ PAGE_SIZE = 14
 
 PLAYER = "var:ccp_player"
 TARGET = "var:ccp_target_country"
+STATE = "var:ccp_state"
 
 
 @dataclass(frozen=True)
@@ -49,4 +50,7 @@ ACTIONS: list[StateAction] = [
     StateAction("core", PLAYER, ["add_core_of = PREV"], destructive=False),
     StateAction("uncore", PLAYER, ["remove_core_of = PREV"], destructive=True),
     StateAction("claim", PLAYER, ["add_claim_by = PREV"], destructive=False),
+    StateAction("unclaim", PLAYER, ["remove_claim_by = PREV"], destructive=True),
+    StateAction("comply", PLAYER, ["add_compliance = 100"], destructive=False),
+    StateAction("quiet", PLAYER, ["add_resistance = -100"], destructive=False),
 ]

@@ -981,6 +981,11 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.close()
         writer.close()
 
+    for name in ("add", "latest"):
+        writer.open(f"ccp_equipment_entry_{name}_click_enabled")
+        writer.line("CCP_equipment_available = yes")
+        writer.close()
+
     writer.open("ccp_equipment_prev_click_enabled")
     writer.line("check_variable = { ccp_equipment_page > 0 }")
     writer.close()
