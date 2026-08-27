@@ -568,6 +568,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -597,6 +598,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -701,6 +703,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -715,6 +718,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -729,6 +733,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -743,6 +748,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -805,6 +811,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -819,6 +826,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -833,6 +841,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -1144,6 +1153,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -1305,6 +1315,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {
@@ -1319,6 +1330,7 @@ scripted_gui = {
 					}
 					set_variable = { global.ccp_pending_action = 0 }
 					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
 					CCP_mark_dirty = yes
 				}
 				else = {

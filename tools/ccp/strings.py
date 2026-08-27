@@ -474,7 +474,7 @@ TRANSLATED: dict[str, Row] = {
         "Sayfa [?ccp_country_page_shown|+0] / [?ccp_country_pages_shown|+0] · [?ccp_country_count|0] ülke",
         "Pagina [?ccp_country_page_shown|+0] van [?ccp_country_pages_shown|+0] · [?ccp_country_count|0] landen",
     ),
-    "CCP_COUNTRY_ANNEX": _row("ANNEX", "ANNEKT.", "ANNEXER", "АННЕКС", "İLHAK", "ANNEX"),
+    "CCP_COUNTRY_ANNEX": _row("ANNEX", "ANNEKT.", "ANNEXER", "АННЕКС", "İLHAK", "ANNEXEER"),
     "CCP_COUNTRY_ANNEX_TOOLTIP": _row(
         "Annex this country. There is no undo.",
         "Annektiert dieses Land. Es gibt kein Rückgängig.",
@@ -651,7 +651,7 @@ TRANSLATED: dict[str, Row] = {
         "Kontrolü Ülkeler bölümünden seçtiğiniz ülkeye verir; sahibi değişmez.",
         "Geeft de controle aan het land uit het onderdeel Landen; de eigenaar blijft.",
     ),
-    "CCP_STATE_CORE": _row("CORE", "KERN", "CŒUR", "ЯДРО", "CORE", "KERN"),
+    "CCP_STATE_CORE": _row("CORE", "KERN", "CŒUR", "ЯДРО", "CORE EKLE", "KERN"),
     "CCP_STATE_CORE_TOOLTIP": _row(
         "Add your core to this state.",
         "Fügt Ihr Kerngebiet zu diesem Staat hinzu.",
@@ -669,7 +669,7 @@ TRANSLATED: dict[str, Row] = {
         "Core kaydınızı kaldırır. Geri alınamaz.",
         "Verwijdert jouw kerngebied. Er is geen ongedaan maken.",
     ),
-    "CCP_STATE_CLAIM": _row("CLAIM", "ANSPRUCH", "REVENDIQ", "ПРИТЯЗ", "HAK TALEBİ", "CLAIM"),
+    "CCP_STATE_CLAIM": _row("CLAIM", "ANSPRUCH", "REVENDIQ", "ПРИТЯЗ", "HAK TALEBİ", "OPEISEN"),
     "CCP_STATE_CLAIM_TOOLTIP": _row(
         "Add your claim to this state.",
         "Erhebt Anspruch auf diesen Staat.",
@@ -974,6 +974,14 @@ TRANSLATED: dict[str, Row] = {
         "Все страны теперь относятся к вам крайне положительно.",
         "Tüm ülkeler artık size çok olumlu bakıyor.",
         "Elk land ziet je nu zeer gunstig.",
+    ),
+    "CCP_STATUS_CONFIRM_PENDING": _row(
+        "Waiting for you to confirm. Press CONFIRM in the dialog, or turn confirmations off in Settings.",
+        "Wartet auf Ihre Bestätigung. Drücken Sie BESTÄTIGEN im Dialog oder schalten Sie Bestätigungen in den Einstellungen ab.",
+        "En attente de votre confirmation. Appuyez sur CONFIRMER, ou désactivez les confirmations dans Réglages.",
+        "Ожидается подтверждение. Нажмите ПОДТВЕРДИТЬ в окне или отключите подтверждения в настройках.",
+        "Onayınız bekleniyor. Penceredeki ONAYLA düğmesine basın veya Ayarlar'dan onayları kapatın.",
+        "Wacht op je bevestiging. Druk op BEVESTIGEN, of zet bevestigingen uit bij Instellingen.",
     ),
     "CCP_STATUS_NO_TARGET": _row(
         "Pick a country in the Countries section first; this action needs a target.",
@@ -1453,3 +1461,55 @@ def emit_localisation(language: str) -> str:
     lines = [f"l_{language}:"]
     lines += [_one_line(key, row[language]) for key, row in sorted(all_strings().items())]
     return "\n".join(lines) + "\n"
+
+
+SHARED_ACROSS_LANGUAGES = frozenset(
+    {
+        # Key names are what the keyboard is labelled, not words to translate.
+        "CCP_HOTKEY_1",
+        "CCP_HOTKEY_2",
+        "CCP_HOTKEY_3",
+        "CCP_HOTKEY_4",
+        "CCP_HOTKEY_5",
+        # Durations and element names that read the same in every language here.
+        "CCP_ACTION_TRUCE_180",
+        "CCP_ACTION_TRUCE_365",
+        "CCP_ACTION_TRUCE_730",
+        "CCP_ACTION_RESOURCE_ALUMINIUM",
+        "CCP_ACTION_RESOURCE_RUBBER",
+        "CCP_ACTION_RESOURCE_TUNGSTEN",
+        "CCP_ACTION_INFRASTRUCTURE",
+        "CCP_ACTION_COLLABORATION",
+        "CCP_ACTION_PLANNING",
+        "CCP_SECTION_NATION",
+        "CCP_SECTION_CONSTRUCTION",
+        "CCP_SIDEBAR_HEADING",
+        "CCP_SETTINGS_CONFIRM",
+    }
+)
+
+
+def untranslated() -> dict[str, list[str]]:
+    """Keys whose translation is still the English text, per language.
+
+    A missing translation passes the parity check, because the key exists in every
+    file -- it just says the same thing. This is what actually catches it. Rows
+    that are correctly identical are listed above rather than tolerated silently.
+    """
+    import re as _re
+
+    rows = all_strings()
+    from .languages import ALL as LANGUAGES
+
+    languages = [name for name in LANGUAGES if name != "english"]
+    found: dict[str, list[str]] = {name: [] for name in languages}
+    for key, row in rows.items():
+        english = row["english"].strip()
+        if key in SHARED_ACROSS_LANGUAGES:
+            continue
+        if len(english) < 4 or english.startswith("[") or _re.fullmatch(r"[+\-x0-9%KM ]+", english):
+            continue
+        for name in languages:
+            if row[name].strip() == english:
+                found[name].append(key)
+    return {name: keys for name, keys in found.items() if keys}

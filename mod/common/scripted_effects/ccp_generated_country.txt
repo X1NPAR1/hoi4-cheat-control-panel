@@ -91,6 +91,7 @@ CCP_country_request_annex = {
 			check_variable = { global.ccp_confirm_destructive = 1 }
 		}
 		set_variable = { global.ccp_modal_open = 1 }
+		set_variable = { global.ccp_status = 23 }
 		CCP_mark_dirty = yes
 	}
 	else = {
@@ -107,6 +108,7 @@ CCP_country_request_puppet = {
 			check_variable = { global.ccp_confirm_destructive = 1 }
 		}
 		set_variable = { global.ccp_modal_open = 1 }
+		set_variable = { global.ccp_status = 23 }
 		CCP_mark_dirty = yes
 	}
 	else = {
@@ -123,6 +125,7 @@ CCP_country_request_war = {
 			check_variable = { global.ccp_confirm_destructive = 1 }
 		}
 		set_variable = { global.ccp_modal_open = 1 }
+		set_variable = { global.ccp_status = 23 }
 		CCP_mark_dirty = yes
 	}
 	else = {
@@ -146,6 +149,7 @@ CCP_country_request_playas = {
 			check_variable = { global.ccp_confirm_destructive = 1 }
 		}
 		set_variable = { global.ccp_modal_open = 1 }
+		set_variable = { global.ccp_status = 23 }
 		CCP_mark_dirty = yes
 	}
 	else = {
@@ -257,35 +261,36 @@ CCP_country_apply = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 1 }
 			}
-			annex_country = { target = var:ROOT.ccp_pending_country }
+			var:ROOT.ccp_pending_country = {
+				ROOT = { annex_country = { target = PREV transfer_troops = yes } }
+			}
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 2 }
 			}
-			var:ROOT.ccp_pending_country = { var:ROOT.ccp_player = { puppet = PREV } }
+			var:ROOT.ccp_pending_country = { ROOT = { puppet = PREV } }
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 3 }
 			}
-			declare_war_on = {
-				target = var:ROOT.ccp_pending_country
-				type = annex_everything
+			var:ROOT.ccp_pending_country = {
+				ROOT = { declare_war_on = { target = PREV type = annex_everything } }
 			}
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 4 }
 			}
-			var:ROOT.ccp_pending_country = { var:ROOT.ccp_player = { white_peace = PREV } }
+			var:ROOT.ccp_pending_country = { ROOT = { white_peace = PREV } }
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 5 }
 			}
 			set_variable = { global.ccp_panel_open = 0 }
-			var:ROOT.ccp_pending_country = { var:ROOT.ccp_player = { change_tag_from = PREV } }
+			var:ROOT.ccp_pending_country = { change_tag_from = ROOT }
 		}
 	}
 	set_variable = { global.ccp_status = 8 }

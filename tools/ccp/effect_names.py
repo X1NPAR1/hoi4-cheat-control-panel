@@ -54,6 +54,15 @@ GUI_AND_RULE_KEYS = frozenset(
         "can_use_kamikaze_pilots",
         "can_generate_female_aces",
         "desc",
+        # division_template fields. The block is an effect the documentation lists,
+        # but its schema is not written out there; these are the fields the game's
+        # own scripted effects use.
+        "regiments",
+        "support",
+        "is_locked",
+        "force_allow_recruiting",
+        "division_names_group",
+        "priority",
         # scripted localisation and opinion modifier schemas
         "defined_text",
         "localization_key",

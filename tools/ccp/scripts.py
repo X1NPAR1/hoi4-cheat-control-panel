@@ -416,6 +416,7 @@ def emit_country_effects(version: str) -> str:
             writer.line("check_variable = { ccp_confirm_destructive = 1 }")
             writer.close()
             writer.line("set_variable = { ccp_modal_open = 1 }")
+            writer.line(f"set_variable = {{ ccp_status = {status.CONFIRM_PENDING} }}")
             writer.line("CCP_mark_dirty = yes")
             writer.close()
             writer.open("else")
@@ -641,16 +642,20 @@ def _emit_division_templates(writer: Writer) -> None:
     `create_unit` needs a template by name and the player's own templates cannot be
     read at runtime, so the panel brings its own. They appear in the player's
     template list, which the help text says outright.
+
+    Defined on every spawn, exactly as the game's own AFG_create_puppet_army does.
+    Guarding this behind a country flag looked tidier and was the bug: a save that
+    had already set the flag never received the templates, and create_unit then
+    reported the template name as a malformed token rather than as a missing one.
+
+    `force_allow_recruiting` matters for a cheat panel: without it a template whose
+    equipment the country has never produced cannot be raised at all.
     """
     writer.open("CCP_ensure_templates")
-    writer.open("if")
-    writer.open("limit")
-    writer.line("NOT = { has_country_flag = ccp_templates_ready }")
-    writer.close()
-    writer.line("set_country_flag = ccp_templates_ready")
     for slug, (name, regiments, support) in SPAWN_TEMPLATES.items():
         writer.open("division_template")
         writer.line(f'name = "{name}"')
+        writer.line("force_allow_recruiting = yes")
         writer.open("regiments")
         # Slots are unique across the whole block, so the units are laid out in one
         # sequence rather than each type restarting at the first column.
@@ -666,20 +671,19 @@ def _emit_division_templates(writer: Writer) -> None:
         writer.close()
         writer.close()
     writer.close()
-    writer.close()
     writer.blank()
 
     for slug, (name, _regiments, _support) in SPAWN_TEMPLATES.items():
         for count in SPAWN_COUNTS:
             writer.open(f"CCP_spawn_{slug}_{count}")
-            for number in range(count):
-                writer.open("create_unit")
-                writer.line(
-                    f'division = "name = \\"CCP {slug.title()} {number + 1}\\" '
-                    f'division_template = \\"{name}\\" start_experience_factor = 0.5"'
-                )
-                writer.line("owner = PREV")
-                writer.close()
+            writer.open("create_unit")
+            writer.line(
+                f'division = "division_template = \\"{name}\\"'
+                f' start_experience_factor = 0.5 start_equipment_factor = 1"'
+            )
+            writer.line("owner = PREV")
+            writer.line(f"count = {count}")
+            writer.close()
             writer.close()
             writer.blank()
 
@@ -952,6 +956,7 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
             writer.close()
             writer.line("set_variable = { ccp_pending_action = 0 }")
             writer.line("set_variable = { ccp_modal_open = 1 }")
+            writer.line(f"set_variable = {{ ccp_status = {status.CONFIRM_PENDING} }}")
             writer.line("CCP_mark_dirty = yes")
             writer.close()
             writer.open("else")
@@ -1165,6 +1170,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}", "CCP_STATUS_EVERYTHING"),
             (f"check_variable = {{ ccp_status = {status.TARGET_PICKED} }}", "CCP_STATUS_TARGET"),
             (f"check_variable = {{ ccp_status = {status.NO_TARGET} }}", "CCP_STATUS_NO_TARGET"),
+            (f"check_variable = {{ ccp_status = {status.CONFIRM_PENDING} }}", "CCP_STATUS_CONFIRM_PENDING"),
         ],
         "CCP_STATUS_IDLE",
     )

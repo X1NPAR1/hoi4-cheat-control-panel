@@ -413,6 +413,21 @@ def check_variable_reads_name_a_scope(mod_dir: Path, report: Report) -> None:
                 report.error(f"{path}:{number}: `var:` read does not name a scope")
 
 
+def check_translations_differ(mod_dir: Path, report: Report) -> None:
+    """A translation that is still the English text is not a translation.
+
+    The parity check only proves the key exists in every file; a row copied from
+    English passes it while showing English in game. Rows that are genuinely the
+    same word in every language are listed in strings.SHARED_ACROSS_LANGUAGES, so
+    the exceptions are written down rather than tolerated.
+    """
+    from .strings import untranslated
+
+    for language, keys in sorted(untranslated().items()):
+        for key in keys:
+            report.error(f"{key}: {language} is still the English text")
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -429,6 +444,7 @@ ALL_CHECKS = [
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),
     ("localisation lines", lambda repo, mod, rep: check_localisation_lines(mod, rep)),
+    ("translations differ", lambda repo, mod, rep: check_translations_differ(mod, rep)),
     ("localisation parity", lambda repo, mod, rep: check_localisation_parity(mod, rep)),
     ("localisation coverage", lambda repo, mod, rep: check_referenced_localisation_keys(mod, rep)),
     ("workshop payload", lambda repo, mod, rep: check_payload_is_clean(repo, rep)),

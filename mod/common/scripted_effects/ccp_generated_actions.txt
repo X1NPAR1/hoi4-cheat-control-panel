@@ -3,602 +3,167 @@
 # Source game version: 1.19.2.0
 
 CCP_ensure_templates = {
-	if = {
-		limit = {
-			NOT = { has_country_flag = ccp_templates_ready }
+	division_template = {
+		name = "CCP Infantry"
+		force_allow_recruiting = yes
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 0 y = 3 }
+			infantry = { x = 0 y = 4 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+			infantry = { x = 1 y = 3 }
+			artillery_brigade = { x = 1 y = 4 }
+			artillery_brigade = { x = 2 y = 0 }
+			artillery_brigade = { x = 2 y = 1 }
 		}
-		set_country_flag = ccp_templates_ready
-		division_template = {
-			name = "CCP Infantry"
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 0 y = 3 }
-				infantry = { x = 0 y = 4 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-				infantry = { x = 1 y = 3 }
-				artillery_brigade = { x = 1 y = 4 }
-				artillery_brigade = { x = 2 y = 0 }
-				artillery_brigade = { x = 2 y = 1 }
-			}
-			support = {
-				engineer = { x = 0 y = 0 }
-				artillery = { x = 0 y = 1 }
-				recon = { x = 0 y = 2 }
-			}
+		support = {
+			engineer = { x = 0 y = 0 }
+			artillery = { x = 0 y = 1 }
+			recon = { x = 0 y = 2 }
 		}
-		division_template = {
-			name = "CCP Armor"
-			regiments = {
-				medium_armor = { x = 0 y = 0 }
-				medium_armor = { x = 0 y = 1 }
-				medium_armor = { x = 0 y = 2 }
-				medium_armor = { x = 0 y = 3 }
-				medium_armor = { x = 0 y = 4 }
-				medium_armor = { x = 1 y = 0 }
-				mechanized = { x = 1 y = 1 }
-				mechanized = { x = 1 y = 2 }
-				mechanized = { x = 1 y = 3 }
-				mechanized = { x = 1 y = 4 }
-			}
-			support = {
-				engineer = { x = 0 y = 0 }
-				maintenance_company = { x = 0 y = 1 }
-				logistics_company = { x = 0 y = 2 }
-			}
+	}
+	division_template = {
+		name = "CCP Armor"
+		force_allow_recruiting = yes
+		regiments = {
+			medium_armor = { x = 0 y = 0 }
+			medium_armor = { x = 0 y = 1 }
+			medium_armor = { x = 0 y = 2 }
+			medium_armor = { x = 0 y = 3 }
+			medium_armor = { x = 0 y = 4 }
+			medium_armor = { x = 1 y = 0 }
+			mechanized = { x = 1 y = 1 }
+			mechanized = { x = 1 y = 2 }
+			mechanized = { x = 1 y = 3 }
+			mechanized = { x = 1 y = 4 }
 		}
-		division_template = {
-			name = "CCP Motorized"
-			regiments = {
-				motorized = { x = 0 y = 0 }
-				motorized = { x = 0 y = 1 }
-				motorized = { x = 0 y = 2 }
-				motorized = { x = 0 y = 3 }
-				motorized = { x = 0 y = 4 }
-				motorized = { x = 1 y = 0 }
-				motorized = { x = 1 y = 1 }
-				motorized = { x = 1 y = 2 }
-				motorized = { x = 1 y = 3 }
-				anti_tank_brigade = { x = 1 y = 4 }
-				anti_tank_brigade = { x = 2 y = 0 }
-			}
-			support = {
-				engineer = { x = 0 y = 0 }
-				recon = { x = 0 y = 1 }
-				logistics_company = { x = 0 y = 2 }
-			}
+		support = {
+			engineer = { x = 0 y = 0 }
+			maintenance_company = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "CCP Motorized"
+		force_allow_recruiting = yes
+		regiments = {
+			motorized = { x = 0 y = 0 }
+			motorized = { x = 0 y = 1 }
+			motorized = { x = 0 y = 2 }
+			motorized = { x = 0 y = 3 }
+			motorized = { x = 0 y = 4 }
+			motorized = { x = 1 y = 0 }
+			motorized = { x = 1 y = 1 }
+			motorized = { x = 1 y = 2 }
+			motorized = { x = 1 y = 3 }
+			anti_tank_brigade = { x = 1 y = 4 }
+			anti_tank_brigade = { x = 2 y = 0 }
+		}
+		support = {
+			engineer = { x = 0 y = 0 }
+			recon = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
 		}
 	}
 }
 
 CCP_spawn_infantry_1 = {
 	create_unit = {
-		division = "name = \"CCP Infantry 1\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Infantry\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
+		count = 1
 	}
 }
 
 CCP_spawn_infantry_5 = {
 	create_unit = {
-		division = "name = \"CCP Infantry 1\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Infantry\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 2\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 3\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 4\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 5\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 5
 	}
 }
 
 CCP_spawn_infantry_10 = {
 	create_unit = {
-		division = "name = \"CCP Infantry 1\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Infantry\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 2\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 3\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 4\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 5\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 6\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 7\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 8\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 9\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 10\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 10
 	}
 }
 
 CCP_spawn_infantry_25 = {
 	create_unit = {
-		division = "name = \"CCP Infantry 1\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Infantry\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 2\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 3\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 4\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 5\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 6\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 7\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 8\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 9\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 10\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 11\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 12\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 13\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 14\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 15\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 16\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 17\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 18\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 19\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 20\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 21\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 22\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 23\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 24\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Infantry 25\" division_template = \"CCP Infantry\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 25
 	}
 }
 
 CCP_spawn_armor_1 = {
 	create_unit = {
-		division = "name = \"CCP Armor 1\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Armor\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
+		count = 1
 	}
 }
 
 CCP_spawn_armor_5 = {
 	create_unit = {
-		division = "name = \"CCP Armor 1\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Armor\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 2\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 3\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 4\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 5\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 5
 	}
 }
 
 CCP_spawn_armor_10 = {
 	create_unit = {
-		division = "name = \"CCP Armor 1\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Armor\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 2\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 3\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 4\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 5\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 6\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 7\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 8\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 9\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 10\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 10
 	}
 }
 
 CCP_spawn_armor_25 = {
 	create_unit = {
-		division = "name = \"CCP Armor 1\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Armor\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 2\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 3\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 4\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 5\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 6\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 7\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 8\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 9\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 10\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 11\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 12\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 13\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 14\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 15\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 16\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 17\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 18\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 19\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 20\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 21\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 22\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 23\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 24\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Armor 25\" division_template = \"CCP Armor\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 25
 	}
 }
 
 CCP_spawn_motorized_1 = {
 	create_unit = {
-		division = "name = \"CCP Motorized 1\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Motorized\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
+		count = 1
 	}
 }
 
 CCP_spawn_motorized_5 = {
 	create_unit = {
-		division = "name = \"CCP Motorized 1\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Motorized\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 2\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 3\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 4\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 5\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 5
 	}
 }
 
 CCP_spawn_motorized_10 = {
 	create_unit = {
-		division = "name = \"CCP Motorized 1\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Motorized\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 2\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 3\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 4\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 5\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 6\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 7\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 8\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 9\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 10\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 10
 	}
 }
 
 CCP_spawn_motorized_25 = {
 	create_unit = {
-		division = "name = \"CCP Motorized 1\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
+		division = "division_template = \"CCP Motorized\" start_experience_factor = 0.5 start_equipment_factor = 1"
 		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 2\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 3\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 4\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 5\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 6\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 7\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 8\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 9\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 10\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 11\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 12\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 13\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 14\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 15\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 16\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 17\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 18\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 19\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 20\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 21\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 22\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 23\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 24\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
-	}
-	create_unit = {
-		division = "name = \"CCP Motorized 25\" division_template = \"CCP Motorized\" start_experience_factor = 0.5"
-		owner = PREV
+		count = 25
 	}
 }
 
@@ -2549,7 +2114,7 @@ CCP_action_opinion_up_1 = {
 			has_variable = ROOT.ccp_target_country
 		}
 		var:ROOT.ccp_target_country = {
-			add_opinion_modifier = { target = var:ROOT.ccp_player modifier = ccp_goodwill }
+			add_opinion_modifier = { target = ROOT modifier = ccp_goodwill }
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 202 }
@@ -2567,7 +2132,7 @@ CCP_action_opinion_down_1 = {
 			has_variable = ROOT.ccp_target_country
 		}
 		var:ROOT.ccp_target_country = {
-			add_opinion_modifier = { target = var:ROOT.ccp_player modifier = ccp_distrust }
+			add_opinion_modifier = { target = ROOT modifier = ccp_distrust }
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 203 }
@@ -2584,12 +2149,16 @@ CCP_action_intel_25 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_intel = {
-			target = var:ROOT.ccp_target_country
-			civilian_intel = 25
-			army_intel = 25
-			navy_intel = 25
-			airforce_intel = 25
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_intel = {
+					target = PREV
+					civilian_intel = 25
+					army_intel = 25
+					navy_intel = 25
+					airforce_intel = 25
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 204 }
@@ -2606,12 +2175,16 @@ CCP_action_intel_50 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_intel = {
-			target = var:ROOT.ccp_target_country
-			civilian_intel = 50
-			army_intel = 50
-			navy_intel = 50
-			airforce_intel = 50
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_intel = {
+					target = PREV
+					civilian_intel = 50
+					army_intel = 50
+					navy_intel = 50
+					airforce_intel = 50
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 205 }
@@ -2628,12 +2201,16 @@ CCP_action_intel_75 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_intel = {
-			target = var:ROOT.ccp_target_country
-			civilian_intel = 75
-			army_intel = 75
-			navy_intel = 75
-			airforce_intel = 75
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_intel = {
+					target = PREV
+					civilian_intel = 75
+					army_intel = 75
+					navy_intel = 75
+					airforce_intel = 75
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 206 }
@@ -2650,12 +2227,16 @@ CCP_action_intel_100 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_intel = {
-			target = var:ROOT.ccp_target_country
-			civilian_intel = 100
-			army_intel = 100
-			navy_intel = 100
-			airforce_intel = 100
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_intel = {
+					target = PREV
+					civilian_intel = 100
+					army_intel = 100
+					navy_intel = 100
+					airforce_intel = 100
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 207 }
@@ -2672,7 +2253,9 @@ CCP_action_wargoal_1 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		create_wargoal = { type = annex_everything target = var:ROOT.ccp_target_country }
+		var:ROOT.ccp_target_country = {
+			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 208 }
 		CCP_history_record = yes
@@ -2688,7 +2271,9 @@ CCP_action_truce_90 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		set_truce = { target = var:ROOT.ccp_target_country days = 90 }
+		var:ROOT.ccp_target_country = {
+			ROOT = { set_truce = { target = PREV days = 90 } }
+		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 209 }
 		CCP_history_record = yes
@@ -2704,7 +2289,9 @@ CCP_action_truce_180 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		set_truce = { target = var:ROOT.ccp_target_country days = 180 }
+		var:ROOT.ccp_target_country = {
+			ROOT = { set_truce = { target = PREV days = 180 } }
+		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 210 }
 		CCP_history_record = yes
@@ -2720,7 +2307,9 @@ CCP_action_truce_365 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		set_truce = { target = var:ROOT.ccp_target_country days = 365 }
+		var:ROOT.ccp_target_country = {
+			ROOT = { set_truce = { target = PREV days = 365 } }
+		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 211 }
 		CCP_history_record = yes
@@ -2736,7 +2325,9 @@ CCP_action_truce_730 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		set_truce = { target = var:ROOT.ccp_target_country days = 730 }
+		var:ROOT.ccp_target_country = {
+			ROOT = { set_truce = { target = PREV days = 730 } }
+		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 212 }
 		CCP_history_record = yes
@@ -2760,7 +2351,7 @@ CCP_action_faction_invite_1 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		var:ROOT.ccp_target_country = { var:ROOT.ccp_player = { add_to_faction = PREV } }
+		var:ROOT.ccp_target_country = { ROOT = { add_to_faction = PREV } }
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 214 }
 		CCP_history_record = yes
@@ -2776,7 +2367,7 @@ CCP_action_release_target_1 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		var:ROOT.ccp_target_country = { var:ROOT.ccp_player = { release = PREV } }
+		var:ROOT.ccp_target_country = { ROOT = { release = PREV } }
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 215 }
 		CCP_history_record = yes
@@ -2792,7 +2383,7 @@ CCP_action_free_target_1 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		var:ROOT.ccp_target_country = { var:ROOT.ccp_player = { end_puppet = PREV } }
+		var:ROOT.ccp_target_country = { ROOT = { end_puppet = PREV } }
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 216 }
 		CCP_history_record = yes
@@ -2808,9 +2399,13 @@ CCP_action_collaboration_10 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_collaboration = {
-			target = var:ROOT.ccp_target_country
-			value = 0.10
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_collaboration = {
+					target = PREV
+					value = 0.10
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 217 }
@@ -2827,9 +2422,13 @@ CCP_action_collaboration_25 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_collaboration = {
-			target = var:ROOT.ccp_target_country
-			value = 0.25
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_collaboration = {
+					target = PREV
+					value = 0.25
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 218 }
@@ -2846,9 +2445,13 @@ CCP_action_collaboration_50 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_collaboration = {
-			target = var:ROOT.ccp_target_country
-			value = 0.50
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_collaboration = {
+					target = PREV
+					value = 0.50
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 219 }
@@ -2865,9 +2468,13 @@ CCP_action_collaboration_90 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		add_collaboration = {
-			target = var:ROOT.ccp_target_country
-			value = 0.90
+		var:ROOT.ccp_target_country = {
+			ROOT = {
+				add_collaboration = {
+					target = PREV
+					value = 0.90
+				}
+			}
 		}
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 220 }
@@ -2884,7 +2491,7 @@ CCP_action_guarantee_1 = {
 		limit = {
 			has_variable = ROOT.ccp_target_country
 		}
-		give_guarantee = var:ROOT.ccp_target_country
+		var:ROOT.ccp_target_country = { ROOT = { give_guarantee = PREV } }
 		set_variable = { global.ccp_status = 11 }
 		set_variable = { ccp_last_action = 221 }
 		CCP_history_record = yes
