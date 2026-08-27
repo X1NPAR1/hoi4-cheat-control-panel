@@ -36,19 +36,36 @@ def overlay_languages() -> list[str]:
     return sorted(path.name for path in OVERLAY_DIR.iterdir() if path.is_dir())
 
 
+def marker_path(target: Path) -> Path:
+    """Where the chosen language is recorded, beside the .mod and outside it.
+
+    Comparing the installed files against the overlay looked simpler, but the
+    overlay changes whenever a string does, so the comparison stopped matching
+    and the panel quietly went back to English -- the exact bug this is here to
+    prevent. A recorded choice survives a rebuild.
+    """
+    return target.with_name(target.name + ".ccp-language")
+
+
 def installed_overlay(target: Path) -> str | None:
     """Which overlay, if any, the copy being replaced was carrying."""
+    marker = marker_path(target)
+    if marker.is_file():
+        recorded = marker.read_text(encoding="utf-8").strip()
+        if recorded in overlay_languages():
+            return recorded
+        return None
+    # Copies installed before the marker existed are recognised by their files.
     for language in overlay_languages():
         files = sorted((OVERLAY_DIR / language).glob("*.yml"))
-        if not files:
-            continue
-        if all(
+        if files and all(
             (target / "localisation" / BASE_LANGUAGE / path.name).is_file()
-            and (target / "localisation" / BASE_LANGUAGE / path.name).read_bytes()
-            == path.read_bytes()
             for path in files
         ):
-            return language
+            first = files[0]
+            installed = target / "localisation" / BASE_LANGUAGE / first.name
+            if installed.read_bytes() == first.read_bytes():
+                return language
     return None
 
 
@@ -112,6 +129,9 @@ def main() -> int:
     overlaid = 0
     if language and language != BASE_LANGUAGE:
         overlaid = apply_overlay(target, language)
+        marker_path(target).write_text(language + chr(10), encoding="utf-8")
+    elif marker_path(target).is_file():
+        marker_path(target).unlink()
 
     source = (MOD_DIR / "descriptor.mod").read_text(encoding="utf-8-sig").rstrip()
     if published:

@@ -62,6 +62,36 @@ def _build(kind: str) -> Callable[[int], list[str]]:
     )
 
 
+def _dlc(dlc: str, lines: list[str]) -> list[str]:
+    return ["if = {", f'	limit = {{ has_dlc = "{dlc}" }}', *[f"	{line}" for line in lines], "}"]
+
+
+def _tech_bonus(category: str) -> Callable[[int], list[str]]:
+    return lambda n: [
+        "add_tech_bonus = {",
+        f"	name = ccp_{category}_bonus",
+        "	bonus = 1.0",
+        f"	uses = {n}",
+        f"	category = {category}",
+        "}",
+    ]
+
+
+def _free_doctrines(n: int) -> list[str]:
+    return [
+        line
+        for category in ("land_doctrine", "air_doctrine", "naval_doctrine")
+        for line in (
+            "add_doctrine_cost_reduction = {",
+            f"	name = ccp_{category}_free",
+            "	cost_reduction = 1.0",
+            f"	uses = {n}",
+            f"	category = {category}",
+            "}",
+        )
+    ]
+
+
 def _army_leaders(effect: str) -> Callable[[int], list[str]]:
     return lambda n: ["every_army_leader = {", f"\t{effect} = {n}", "}"]
 
@@ -131,6 +161,30 @@ NATION: list[Action] = [
 ]
 
 # ---------------------------------------------------------------- construction
+
+RESEARCH_SPEED: list[Action] = [
+    Action("research_bonus", "nation", _tech_bonus("industry"), (1, 3, 5, 10), "x{n}"),
+    # add_doctrine_cost_reduction is what reaches the doctrine trees. set_technology
+    # does not, which is why the README listed doctrines as out of reach; a full
+    # cost reduction makes the next N doctrines free instead.
+    Action("doctrines_free", "nation", _free_doctrines, (1, 5, 10, 25), "{n}"),
+    Action(
+        "occupation_harsh",
+        "nation",
+        lambda n: _dlc("La Resistance", ["set_occupation_law = military_governor_occupation"]),
+        (1,),
+        "SET",
+        danger=True,
+    ),
+    Action(
+        "occupation_soft",
+        "nation",
+        lambda n: _dlc("La Resistance", ["set_occupation_law = local_police_force_garrison"]),
+        (1,),
+        "SET",
+    ),
+]
+
 
 CONSTRUCTION: list[Action] = [
     Action("infrastructure", "construction", _build("infrastructure"), (1, 2, 3, 5)),
@@ -435,8 +489,30 @@ DIPLOMACY: list[Action] = [
     ),
 ]
 
+DIPLOMACY += [
+    Action(
+        "collaboration",
+        "diplomacy",
+        lambda n: [
+            "add_collaboration = {",
+            "	target = var:ccp_target_country",
+            f"	value = 0.{n:02d}",
+            "}",
+        ],
+        (10, 25, 50, 90),
+        "+{n}%",
+    ),
+    Action(
+        "guarantee",
+        "diplomacy",
+        lambda n: ["give_guarantee = var:ccp_target_country"],
+        (1,),
+        "SET",
+    ),
+]
+
 BY_SECTION: dict[str, list[Action]] = {
-    "nation": NATION,
+    "nation": NATION + RESEARCH_SPEED,
     "politics": POLITICS,
     "construction": CONSTRUCTION,
     "stockpile": RESOURCES_SECTION,

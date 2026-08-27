@@ -88,8 +88,17 @@ scripted_gui = {
 			ccp_picker_take_click = {
 				CCP_state_take = yes
 			}
+			ccp_picker_own_click = {
+				CCP_state_own = yes
+			}
+			ccp_picker_control_click = {
+				CCP_state_control = yes
+			}
 			ccp_picker_give_click = {
 				CCP_state_give = yes
+			}
+			ccp_picker_give_control_click = {
+				CCP_state_give_control = yes
 			}
 			ccp_picker_core_click = {
 				CCP_state_core = yes
@@ -506,8 +515,17 @@ scripted_gui = {
 			ccp_state_entry_take_click = {
 				CCP_state_take = yes
 			}
+			ccp_state_entry_own_click = {
+				CCP_state_own = yes
+			}
+			ccp_state_entry_control_click = {
+				CCP_state_control = yes
+			}
 			ccp_state_entry_give_click = {
 				CCP_state_give = yes
+			}
+			ccp_state_entry_give_control_click = {
+				CCP_state_give_control = yes
 			}
 			ccp_state_entry_core_click = {
 				CCP_state_core = yes
@@ -644,6 +662,36 @@ scripted_gui = {
 			}
 			ccp_action_legitimacy_100_click = {
 				CCP_action_legitimacy_100 = yes
+			}
+			ccp_action_research_bonus_1_click = {
+				CCP_action_research_bonus_1 = yes
+			}
+			ccp_action_research_bonus_3_click = {
+				CCP_action_research_bonus_3 = yes
+			}
+			ccp_action_research_bonus_5_click = {
+				CCP_action_research_bonus_5 = yes
+			}
+			ccp_action_research_bonus_10_click = {
+				CCP_action_research_bonus_10 = yes
+			}
+			ccp_action_doctrines_free_1_click = {
+				CCP_action_doctrines_free_1 = yes
+			}
+			ccp_action_doctrines_free_5_click = {
+				CCP_action_doctrines_free_5 = yes
+			}
+			ccp_action_doctrines_free_10_click = {
+				CCP_action_doctrines_free_10 = yes
+			}
+			ccp_action_doctrines_free_25_click = {
+				CCP_action_doctrines_free_25 = yes
+			}
+			ccp_action_occupation_harsh_1_click = {
+				CCP_action_occupation_harsh_1 = yes
+			}
+			ccp_action_occupation_soft_1_click = {
+				CCP_action_occupation_soft_1 = yes
 			}
 			ccp_action_ruling_democratic_1_click = {
 				set_variable = { ccp_pending_generic = 3 }
@@ -1277,6 +1325,21 @@ scripted_gui = {
 					CCP_action_free_target_1 = yes
 				}
 			}
+			ccp_action_collaboration_10_click = {
+				CCP_action_collaboration_10 = yes
+			}
+			ccp_action_collaboration_25_click = {
+				CCP_action_collaboration_25 = yes
+			}
+			ccp_action_collaboration_50_click = {
+				CCP_action_collaboration_50 = yes
+			}
+			ccp_action_collaboration_90_click = {
+				CCP_action_collaboration_90 = yes
+			}
+			ccp_action_guarantee_1_click = {
+				CCP_action_guarantee_1 = yes
+			}
 			ccp_history_clear_click = {
 				CCP_history_clear = yes
 			}
@@ -1556,7 +1619,19 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 6 }
 				check_variable = { global.ccp_panel_open = 1 }
 			}
+			ccp_state_entry_own_visible = {
+				check_variable = { global.ccp_section = 6 }
+				check_variable = { global.ccp_panel_open = 1 }
+			}
+			ccp_state_entry_control_visible = {
+				check_variable = { global.ccp_section = 6 }
+				check_variable = { global.ccp_panel_open = 1 }
+			}
 			ccp_state_entry_give_visible = {
+				check_variable = { global.ccp_section = 6 }
+				check_variable = { global.ccp_panel_open = 1 }
+			}
+			ccp_state_entry_give_control_visible = {
 				check_variable = { global.ccp_section = 6 }
 				check_variable = { global.ccp_panel_open = 1 }
 			}
@@ -2185,6 +2260,72 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 7 }
 			}
 			ccp_action_legitimacy_100_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_plate_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_title_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_help_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_1_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_3_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_5_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_research_bonus_10_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_plate_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_title_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_help_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_1_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_5_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_10_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_doctrines_free_25_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_harsh_plate_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_harsh_title_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_harsh_help_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_harsh_1_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_soft_plate_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_soft_title_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_soft_help_visible = {
+				check_variable = { global.ccp_section = 7 }
+			}
+			ccp_action_occupation_soft_1_visible = {
 				check_variable = { global.ccp_section = 7 }
 			}
 			ccp_politics_help_visible = {
@@ -3211,6 +3352,39 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 13 }
 			}
 			ccp_action_free_target_1_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_plate_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_title_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_help_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_10_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_25_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_50_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_collaboration_90_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_guarantee_plate_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_guarantee_title_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_guarantee_help_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_guarantee_1_visible = {
 				check_variable = { global.ccp_section = 13 }
 			}
 			ccp_history_help_visible = {

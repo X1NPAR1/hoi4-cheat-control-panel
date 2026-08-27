@@ -133,7 +133,7 @@ These are engine limits, verified against the shipped game files, not oversights
 | Equipment and technology cannot be enumerated at runtime | Their lists are derived from your game files when the mod is built |
 | No keybind remapping API | The hotkey is chosen from a fixed set rather than freely bound |
 | `complete_national_focus` needs a specific focus token, and focus trees cannot be walked at runtime | There is no national focus section |
-| Doctrines are a separate system since 1.19 | `set_technology` does not reach them, so Research does not list them |
+| Doctrines are a separate system since 1.19 | `set_technology` does not reach them, so Research does not list them; Nation grants them free instead, through `add_doctrine_cost_reduction` |
 | Only ten localisation folders exist | Turkish and Dutch ship as an overlay rather than as selectable languages |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` are console switches with no scripted equivalent | Absent. Where a native effect gives the same outcome — instant construction, diplomatic rules — the panel uses that instead |
 | Equipment display names differ per language | There is no A-Z filter: filing rows under an English initial would be wrong in the other five languages. Categories, paging and the locked-item marking cover the same need |

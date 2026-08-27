@@ -78,6 +78,54 @@ HELP_DIVISIONS: Row = (
 # ---------------------------------------------------------------- per-action titles
 
 TITLES: dict[str, Row] = {
+    "research_bonus": (
+        "Research bonus",
+        "Forschungsbonus",
+        "Bonus de recherche",
+        "Бонус исследований",
+        "Araştırma bonusu",
+        "Onderzoeksbonus",
+    ),
+    "doctrines_free": (
+        "Free doctrines",
+        "Kostenlose Doktrinen",
+        "Doctrines gratuites",
+        "Бесплатные доктрины",
+        "Ücretsiz doktrinler",
+        "Gratis doctrines",
+    ),
+    "occupation_harsh": (
+        "Military governor",
+        "Militärgouverneur",
+        "Gouverneur militaire",
+        "Военный губернатор",
+        "Askerî vali",
+        "Militair gouverneur",
+    ),
+    "occupation_soft": (
+        "Local police",
+        "Örtliche Polizei",
+        "Police locale",
+        "Местная полиция",
+        "Yerel polis",
+        "Lokale politie",
+    ),
+    "collaboration": (
+        "Collaboration",
+        "Kollaboration",
+        "Collaboration",
+        "Коллаборация",
+        "İş birliği",
+        "Collaboratie",
+    ),
+    "guarantee": (
+        "Guarantee",
+        "Garantie",
+        "Garantie",
+        "Гарантия",
+        "Garanti",
+        "Garantie",
+    ),
     # nation
     "stability": ("Stability", "Stabilität", "Stabilité", "Стабильность", "İstikrar", "Stabiliteit"),
     "stability_full": ("Stability to full", "Stabilität auf Maximum", "Stabilité au maximum", "Стабильность на максимум", "İstikrarı tam yap", "Stabiliteit naar maximum"),
@@ -155,6 +203,54 @@ IDEOLOGY_NOUNS: dict[str, Row] = {
 }
 
 HELPS: dict[str, Row] = {
+    "research_bonus": (
+        "Grants a free instant research for the next few technologies you start.",
+        "Gewährt für die nächsten Technologien jeweils eine kostenlose Sofortforschung.",
+        "Accorde une recherche instantanée gratuite pour les prochaines technologies lancées.",
+        "Даёт мгновенное бесплатное исследование для следующих начатых технологий.",
+        "Başlattığınız sonraki teknolojiler için ücretsiz anında araştırma verir.",
+        "Geeft de volgende technologieën die je start gratis en direct.",
+    ),
+    "doctrines_free": (
+        "Makes the next doctrines free in all three trees. set_technology cannot reach doctrines; a full cost reduction can.",
+        "Macht die nächsten Doktrinen in allen drei Bäumen kostenlos. set_technology erreicht Doktrinen nicht, eine volle Kostensenkung schon.",
+        "Rend gratuites les prochaines doctrines des trois arbres. set_technology n atteint pas les doctrines, une réduction totale du coût si.",
+        "Делает следующие доктрины бесплатными во всех трёх ветках. set_technology до доктрин не достаёт, полное снижение стоимости достаёт.",
+        "Üç ağacın hepsinde sonraki doktrinleri ücretsiz yapar. set_technology doktrinlere ulaşamaz, tam maliyet indirimi ulaşır.",
+        "Maakt de volgende doctrines in alle drie de bomen gratis. set_technology bereikt doctrines niet, een volledige kostenverlaging wel.",
+    ),
+    "occupation_harsh": (
+        "Sets your default occupation law to military governor. Needs La Resistance.",
+        "Setzt Ihr Standard-Besatzungsgesetz auf Militärgouverneur. Erfordert La Resistance.",
+        "Définit votre loi d occupation par défaut sur gouverneur militaire. Nécessite La Resistance.",
+        "Устанавливает закон оккупации по умолчанию: военный губернатор. Требуется La Resistance.",
+        "Varsayılan işgal yasanızı askerî valiye ayarlar. La Resistance gerekir.",
+        "Stelt je standaard bezettingswet in op militair gouverneur. Vereist La Resistance.",
+    ),
+    "occupation_soft": (
+        "Sets your default occupation law to local police force. Needs La Resistance.",
+        "Setzt Ihr Standard-Besatzungsgesetz auf örtliche Polizei. Erfordert La Resistance.",
+        "Définit votre loi d occupation par défaut sur police locale. Nécessite La Resistance.",
+        "Устанавливает закон оккупации по умолчанию: местная полиция. Требуется La Resistance.",
+        "Varsayılan işgal yasanızı yerel polise ayarlar. La Resistance gerekir.",
+        "Stelt je standaard bezettingswet in op lokale politie. Vereist La Resistance.",
+    ),
+    "collaboration": (
+        "Raises collaboration in the country picked in the Countries section.",
+        "Erhöht die Kollaboration im Land, das im Bereich Länder gewählt ist.",
+        "Augmente la collaboration dans le pays choisi dans la section Pays.",
+        "Повышает коллаборацию в стране, выбранной в разделе Страны.",
+        "Ülkeler bölümünden seçtiğiniz ülkede iş birliğini artırır.",
+        "Verhoogt de collaboratie in het land uit het onderdeel Landen.",
+    ),
+    "guarantee": (
+        "Guarantees the independence of the country picked in the Countries section.",
+        "Garantiert die Unabhängigkeit des im Bereich Länder gewählten Landes.",
+        "Garantit l indépendance du pays choisi dans la section Pays.",
+        "Гарантирует независимость страны, выбранной в разделе Страны.",
+        "Ülkeler bölümünden seçtiğiniz ülkenin bağımsızlığını garanti eder.",
+        "Garandeert de onafhankelijkheid van het land uit het onderdeel Landen.",
+    ),
     "stability": (
         "Raises national stability by the chosen amount.",
         "Erhöht die nationale Stabilität um den gewählten Wert.",

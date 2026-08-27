@@ -166,20 +166,38 @@ def known_identifiers(game_dir: Path) -> frozenset[str]:
     return frozenset(names)
 
 
+FENCE = re.compile(r"```(.*?)```", re.S)
+ARGUMENT = re.compile(r"^\s*([a-z_][a-z0-9_]*)\s*=", re.M)
+
+
+def _block_arguments(text: str) -> frozenset[str]:
+    """Names that appear on the left of an assignment inside a documented example.
+
+    `add_tech_bonus` takes `bonus`, `uses` and `category`; none of those is an
+    effect, but all three sit where an effect name would. Reading them from the
+    same examples that define the effects keeps the check honest without a
+    hand-kept list that goes stale on the next game update.
+    """
+    names: set[str] = set()
+    for example in FENCE.findall(text):
+        names.update(ARGUMENT.findall(example))
+    return frozenset(names)
+
+
 @lru_cache(maxsize=2)
 def known_effects(game_dir: Path) -> frozenset[str]:
     path = game_dir / "documentation" / "effects_documentation.md"
     if not path.is_file():
         return frozenset()
     text = path.read_text(encoding="utf-8-sig", errors="replace")
-    effects = frozenset(HEADING.findall(text))
+    effects = frozenset(HEADING.findall(text)) | _block_arguments(text)
 
     triggers_path = game_dir / "documentation" / "triggers_documentation.md"
     triggers = frozenset()
     if triggers_path.is_file():
         triggers = frozenset(
             HEADING.findall(triggers_path.read_text(encoding="utf-8-sig", errors="replace"))
-        )
+        ) | _block_arguments(triggers_path.read_text(encoding="utf-8-sig", errors="replace"))
 
     return (
         effects

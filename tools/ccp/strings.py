@@ -620,6 +620,37 @@ TRANSLATED: dict[str, Row] = {
         "Bu eyaletin sahibi ve kontrolörü olursunuz.",
         "Je wordt eigenaar en controleur van deze staat.",
     ),
+    "CCP_STATE_OWN": _row("OWN", "BESITZ", "POSSÉDER", "ВЛАДЕТЬ", "SAHİP OL", "BEZIT"),
+    "CCP_STATE_OWN_TOOLTIP": _row(
+        "Become owner of this state and leave the controller alone. This is the console setowner.",
+        "Macht Sie zum Besitzer, ohne den Kontrolleur zu ändern. Das ist das Konsolen-setowner.",
+        "Vous devenez propriétaire sans changer le contrôleur. C est le setowner de la console.",
+        "Вы становитесь владельцем, контролёр не меняется. Это консольное setowner.",
+        "Kontrolörü değiştirmeden bu eyaletin sahibi olursunuz. Konsoldaki setowner budur.",
+        "Je wordt eigenaar zonder de controleur te wijzigen. Dit is het setowner van de console.",
+    ),
+    "CCP_STATE_CONTROL": _row(
+        "CONTROL", "KONTROLLE", "CONTRÔLE", "КОНТРОЛЬ", "KONTROL", "CONTROLE"
+    ),
+    "CCP_STATE_CONTROL_TOOLTIP": _row(
+        "Take control of this state and leave the owner alone. This is the console setcontroller.",
+        "Übernimmt die Kontrolle, ohne den Besitzer zu ändern. Das ist das Konsolen-setcontroller.",
+        "Vous prenez le contrôle sans changer le propriétaire. C est le setcontroller de la console.",
+        "Вы получаете контроль, владелец не меняется. Это консольное setcontroller.",
+        "Sahibini değiştirmeden bu eyaletin kontrolünü alırsınız. Konsoldaki setcontroller budur.",
+        "Je neemt de controle over zonder de eigenaar te wijzigen. Dit is het setcontroller van de console.",
+    ),
+    "CCP_STATE_GIVE_CONTROL": _row(
+        "CEDE CTRL", "KTRL ABGEBEN", "CÉDER CTRL", "ОТДАТЬ КТРЛ", "KONTROLÜ VER", "CTRL AFSTAAN"
+    ),
+    "CCP_STATE_GIVE_CONTROL_TOOLTIP": _row(
+        "Hand control of this state to the country picked in the Countries section; the owner does not change.",
+        "Übergibt die Kontrolle an das im Bereich Länder gewählte Land; der Besitzer bleibt.",
+        "Cède le contrôle au pays choisi dans la section Pays ; le propriétaire ne change pas.",
+        "Передаёт контроль стране, выбранной в разделе Страны; владелец не меняется.",
+        "Kontrolü Ülkeler bölümünden seçtiğiniz ülkeye verir; sahibi değişmez.",
+        "Geeft de controle aan het land uit het onderdeel Landen; de eigenaar blijft.",
+    ),
     "CCP_STATE_CORE": _row("CORE", "KERN", "CŒUR", "ЯДРО", "CORE", "KERN"),
     "CCP_STATE_CORE_TOOLTIP": _row(
         "Add your core to this state.",
