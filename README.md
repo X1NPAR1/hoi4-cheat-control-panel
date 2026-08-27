@@ -85,6 +85,11 @@ Equipment and technology names are the exception: they come from the game's own
 localisation, which has no Turkish or Dutch, so those names stay in your game
 language. The panel translates everything it owns.
 
+A description of the mod in all six languages is in
+[`docs/description-6-languages.md`](docs/description-6-languages.md). The Steam
+Workshop page carries the English one only, because that field truncates at 8000
+bytes of UTF-8 and the six-language text is roughly four times that.
+
 ## Requirements
 
 - Hearts of Iron IV **1.19.x** (developed against 1.19.2)
