@@ -944,6 +944,14 @@ TRANSLATED: dict[str, Row] = {
         "Tüm ülkeler artık size çok olumlu bakıyor.",
         "Elk land ziet je nu zeer gunstig.",
     ),
+    "CCP_STATUS_NO_TARGET": _row(
+        "Pick a country in the Countries section first; this action needs a target.",
+        "Wählen Sie zuerst ein Land im Bereich Länder; diese Aktion braucht ein Ziel.",
+        "Choisissez d abord un pays dans la section Pays ; cette action exige une cible.",
+        "Сначала выберите страну в разделе Страны: этому действию нужна цель.",
+        "Önce Ülkeler bölümünden bir ülke seçin; bu eylem bir hedef ister.",
+        "Kies eerst een land in het onderdeel Landen; deze actie heeft een doel nodig.",
+    ),
     "CCP_STATUS_GOODWILL_OFF": _row(
         "Opinion boost removed.",
         "Meinungsbonus entfernt.",

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 MOD_NAME = "HOI4 Cheat Control Panel"
-MOD_VERSION = "3.0.2"
+MOD_VERSION = "3.0.3"
 SUPPORTED_VERSION = "1.19.*"
 TAGS = ("Utilities", "Gameplay")
 THUMBNAIL = "thumbnail.png"

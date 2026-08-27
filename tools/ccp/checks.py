@@ -353,6 +353,7 @@ def check_effect_vocabulary(mod_dir: Path, game_dir: Path | None, report: Report
 
 
 ICON_WITH_SIZE = re.compile(r"iconType = \{(?:[^{}]|\{[^{}]*\})*?\bsize\s*=")
+BARE_READ = re.compile(r"var:(?!ROOT\.|global\.)ccp_")
 SHORTHAND_COMPARE = re.compile(r"check_variable = \{[^{}]*[<>]=")
 
 
@@ -397,6 +398,21 @@ def check_variable_scope_entry(mod_dir: Path, report: Report) -> None:
                 report.error(f"{path}:{number}: `var:global.` is not a scope the engine reads")
 
 
+def check_variable_reads_name_a_scope(mod_dir: Path, report: Report) -> None:
+    """A `var:` read must say which scope holds the variable.
+
+    A variable belongs to the scope that set it, so a bare `var:name` reads
+    nothing once an effect has stepped into another country or a state. The block
+    it guards is then skipped with no complaint in error.log, which is the most
+    expensive failure this project has had: the button clicks and nothing happens.
+    """
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for number, line in enumerate(text.splitlines(), start=1):
+            if BARE_READ.search(line):
+                report.error(f"{path}:{number}: `var:` read does not name a scope")
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -408,6 +424,7 @@ ALL_CHECKS = [
     ("gui property grammar", lambda repo, mod, rep: check_gui_property_grammar(mod, rep)),
     ("variable comparisons", lambda repo, mod, rep: check_variable_comparisons(mod, rep)),
     ("variable scope entry", lambda repo, mod, rep: check_variable_scope_entry(mod, rep)),
+    ("variable reads", lambda repo, mod, rep: check_variable_reads_name_a_scope(mod, rep)),
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),
     ("localisation encoding", lambda repo, mod, rep: check_localisation_encoding(mod, rep)),

@@ -206,719 +206,671 @@ defined_text = {
 		trigger = {
 			check_variable = { v = 33 }
 		}
-		localization_key = heavy_tank_amphibious_chassis
+		localization_key = amphibious_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 34 }
 		}
-		localization_key = heavy_tank_flame_chassis
+		localization_key = heavy_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 35 }
 		}
-		localization_key = light_tank_amphibious_chassis
+		localization_key = heavy_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 36 }
 		}
-		localization_key = light_tank_flame_chassis
+		localization_key = heavy_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 37 }
 		}
-		localization_key = medium_tank_amphibious_chassis
+		localization_key = heavy_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 38 }
 		}
-		localization_key = medium_tank_flame_chassis
+		localization_key = light_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 39 }
 		}
-		localization_key = amphibious_tank_equipment_1
+		localization_key = light_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 40 }
 		}
-		localization_key = heavy_tank_aa_equipment_1
+		localization_key = light_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 41 }
 		}
-		localization_key = heavy_tank_artillery_equipment_1
+		localization_key = light_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 42 }
 		}
-		localization_key = heavy_tank_destroyer_equipment_1
+		localization_key = light_tank_aa_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 43 }
 		}
-		localization_key = heavy_tank_equipment_1
+		localization_key = light_tank_artillery_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 44 }
 		}
-		localization_key = light_tank_aa_equipment_1
+		localization_key = light_tank_destroyer_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 45 }
 		}
-		localization_key = light_tank_artillery_equipment_1
+		localization_key = light_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 46 }
 		}
-		localization_key = light_tank_destroyer_equipment_1
+		localization_key = amphibious_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 47 }
 		}
-		localization_key = light_tank_equipment_1
+		localization_key = armored_support_vehicle_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 48 }
 		}
-		localization_key = light_tank_aa_equipment_2
+		localization_key = medium_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 49 }
 		}
-		localization_key = light_tank_artillery_equipment_2
+		localization_key = medium_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 50 }
 		}
-		localization_key = light_tank_destroyer_equipment_2
+		localization_key = medium_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 51 }
 		}
-		localization_key = light_tank_equipment_2
+		localization_key = medium_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 52 }
 		}
-		localization_key = amphibious_tank_equipment_2
+		localization_key = heavy_tank_aa_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 53 }
 		}
-		localization_key = armored_support_vehicle_1
+		localization_key = heavy_tank_artillery_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 54 }
 		}
-		localization_key = medium_tank_aa_equipment_1
+		localization_key = heavy_tank_destroyer_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 55 }
 		}
-		localization_key = medium_tank_artillery_equipment_1
+		localization_key = heavy_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 56 }
 		}
-		localization_key = medium_tank_destroyer_equipment_1
+		localization_key = light_tank_aa_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 57 }
 		}
-		localization_key = medium_tank_equipment_1
+		localization_key = light_tank_artillery_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 58 }
 		}
-		localization_key = heavy_tank_aa_equipment_2
+		localization_key = light_tank_destroyer_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 59 }
 		}
-		localization_key = heavy_tank_artillery_equipment_2
+		localization_key = light_tank_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 60 }
 		}
-		localization_key = heavy_tank_destroyer_equipment_2
+		localization_key = medium_tank_aa_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 61 }
 		}
-		localization_key = heavy_tank_equipment_2
+		localization_key = medium_tank_artillery_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 62 }
 		}
-		localization_key = light_tank_aa_equipment_3
+		localization_key = medium_tank_destroyer_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 63 }
 		}
-		localization_key = light_tank_artillery_equipment_3
+		localization_key = medium_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 64 }
 		}
-		localization_key = light_tank_destroyer_equipment_3
+		localization_key = heavy_tank_aa_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 65 }
 		}
-		localization_key = light_tank_equipment_3
+		localization_key = heavy_tank_artillery_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 66 }
 		}
-		localization_key = medium_tank_aa_equipment_2
+		localization_key = heavy_tank_destroyer_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 67 }
 		}
-		localization_key = medium_tank_artillery_equipment_2
+		localization_key = heavy_tank_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 68 }
 		}
-		localization_key = medium_tank_destroyer_equipment_2
+		localization_key = land_cruiser_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 69 }
 		}
-		localization_key = medium_tank_equipment_2
+		localization_key = medium_tank_aa_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 70 }
 		}
-		localization_key = heavy_tank_aa_equipment_3
+		localization_key = medium_tank_artillery_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 71 }
 		}
-		localization_key = heavy_tank_artillery_equipment_3
+		localization_key = medium_tank_destroyer_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 72 }
 		}
-		localization_key = heavy_tank_destroyer_equipment_3
+		localization_key = medium_tank_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 73 }
 		}
-		localization_key = heavy_tank_equipment_3
+		localization_key = super_heavy_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 74 }
 		}
-		localization_key = land_cruiser_equipment_1
+		localization_key = super_heavy_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 75 }
 		}
-		localization_key = medium_tank_aa_equipment_3
+		localization_key = super_heavy_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 76 }
 		}
-		localization_key = medium_tank_artillery_equipment_3
+		localization_key = super_heavy_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 77 }
 		}
-		localization_key = medium_tank_destroyer_equipment_3
+		localization_key = modern_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 78 }
 		}
-		localization_key = medium_tank_equipment_3
+		localization_key = modern_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 79 }
 		}
-		localization_key = super_heavy_tank_aa_equipment_1
+		localization_key = modern_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 80 }
 		}
-		localization_key = super_heavy_tank_artillery_equipment_1
+		localization_key = modern_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 81 }
 		}
-		localization_key = super_heavy_tank_destroyer_equipment_1
+		localization_key = cv_fighter_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 82 }
 		}
-		localization_key = super_heavy_tank_equipment_1
+		localization_key = fighter_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 83 }
 		}
-		localization_key = modern_tank_aa_equipment_1
+		localization_key = transport_plane_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 84 }
 		}
-		localization_key = modern_tank_artillery_equipment_1
+		localization_key = cv_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 85 }
 		}
-		localization_key = modern_tank_destroyer_equipment_1
+		localization_key = fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 86 }
 		}
-		localization_key = modern_tank_equipment_1
+		localization_key = heavy_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 87 }
 		}
-		localization_key = cv_fighter_equipment_0
+		localization_key = cv_fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 88 }
 		}
-		localization_key = fighter_equipment_0
+		localization_key = fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 89 }
 		}
-		localization_key = transport_plane_equipment_1
+		localization_key = heavy_fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 90 }
 		}
-		localization_key = cv_fighter_equipment_1
+		localization_key = transport_plane_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 91 }
 		}
-		localization_key = fighter_equipment_1
+		localization_key = mothership_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 92 }
 		}
-		localization_key = heavy_fighter_equipment_1
+		localization_key = explosive_ammo_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 93 }
 		}
-		localization_key = cv_fighter_equipment_2
+		localization_key = ballistic_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 94 }
 		}
-		localization_key = fighter_equipment_2
+		localization_key = cv_fighter_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 95 }
 		}
-		localization_key = heavy_fighter_equipment_2
+		localization_key = fighter_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 96 }
 		}
-		localization_key = transport_plane_equipment_2
+		localization_key = heavy_fighter_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 97 }
 		}
-		localization_key = mothership_equipment_0
+		localization_key = rocket_interceptor_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 98 }
 		}
-		localization_key = explosive_ammo_equipment_1
+		localization_key = ballistic_missile_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 99 }
 		}
-		localization_key = ballistic_missile_equipment_1
+		localization_key = ballistic_missile_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 100 }
 		}
-		localization_key = cv_fighter_equipment_3
+		localization_key = cv_small_plane_airframe_4
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 101 }
 		}
-		localization_key = fighter_equipment_3
+		localization_key = jet_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 102 }
 		}
-		localization_key = heavy_fighter_equipment_3
+		localization_key = nuclear_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 103 }
 		}
-		localization_key = rocket_interceptor_equipment_1
+		localization_key = rocket_interceptor_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 104 }
 		}
-		localization_key = ballistic_missile_equipment_2
+		localization_key = rocket_interceptor_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 105 }
 		}
-		localization_key = ballistic_missile_equipment_3
+		localization_key = transport_plane_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 106 }
 		}
-		localization_key = cv_small_plane_airframe_4
+		localization_key = jet_fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 107 }
 		}
-		localization_key = jet_fighter_equipment_1
+		localization_key = nuclear_missile_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 108 }
 		}
-		localization_key = nuclear_missile_equipment_1
+		localization_key = supersonic_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 109 }
 		}
-		localization_key = rocket_interceptor_equipment_2
+		localization_key = CAS_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 110 }
 		}
-		localization_key = rocket_interceptor_equipment_3
+		localization_key = cv_CAS_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 111 }
 		}
-		localization_key = transport_plane_equipment_3
+		localization_key = CAS_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 112 }
 		}
-		localization_key = jet_fighter_equipment_2
+		localization_key = cv_CAS_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 113 }
 		}
-		localization_key = nuclear_missile_equipment_2
+		localization_key = CAS_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 114 }
 		}
-		localization_key = supersonic_fighter_equipment_1
+		localization_key = cv_CAS_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 115 }
 		}
-		localization_key = CAS_equipment_1
+		localization_key = cv_nav_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 116 }
 		}
-		localization_key = cv_CAS_equipment_1
+		localization_key = nav_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 117 }
 		}
-		localization_key = CAS_equipment_2
+		localization_key = cv_nav_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 118 }
 		}
-		localization_key = cv_CAS_equipment_2
+		localization_key = nav_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 119 }
 		}
-		localization_key = CAS_equipment_3
+		localization_key = cv_nav_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 120 }
 		}
-		localization_key = cv_CAS_equipment_3
+		localization_key = nav_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 121 }
 		}
-		localization_key = cv_nav_bomber_equipment_1
+		localization_key = tac_bomber_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 122 }
 		}
-		localization_key = nav_bomber_equipment_1
+		localization_key = tac_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 123 }
 		}
-		localization_key = cv_nav_bomber_equipment_2
+		localization_key = tac_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 124 }
 		}
-		localization_key = nav_bomber_equipment_2
+		localization_key = tac_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 125 }
 		}
-		localization_key = cv_nav_bomber_equipment_3
+		localization_key = jet_tac_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 126 }
 		}
-		localization_key = nav_bomber_equipment_3
+		localization_key = jet_tac_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 127 }
 		}
-		localization_key = tac_bomber_equipment_0
+		localization_key = large_plane_airframe_0
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 128 }
 		}
-		localization_key = tac_bomber_equipment_1
+		localization_key = strat_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 129 }
 		}
-		localization_key = tac_bomber_equipment_2
+		localization_key = strat_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 130 }
 		}
-		localization_key = tac_bomber_equipment_3
+		localization_key = strat_bomber_intercontinental_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 131 }
 		}
-		localization_key = jet_tac_bomber_equipment_1
+		localization_key = strat_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 132 }
 		}
-		localization_key = jet_tac_bomber_equipment_2
+		localization_key = jet_strat_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 133 }
 		}
-		localization_key = large_plane_airframe_0
+		localization_key = convoy_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 134 }
 		}
-		localization_key = strat_bomber_equipment_1
+		localization_key = floating_harbor_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 135 }
 		}
-		localization_key = strat_bomber_equipment_2
+		localization_key = train_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 136 }
 		}
-		localization_key = strat_bomber_intercontinental_equipment_1
+		localization_key = train_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 137 }
 		}
-		localization_key = strat_bomber_equipment_3
+		localization_key = train_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 138 }
 		}
-		localization_key = jet_strat_bomber_equipment_1
+		localization_key = guided_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 139 }
 		}
-		localization_key = convoy_1
+		localization_key = guided_missile_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 140 }
 		}
-		localization_key = floating_harbor_equipment_1
+		localization_key = sam_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 141 }
 		}
-		localization_key = train_equipment_1
+		localization_key = guided_missile_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 142 }
 		}
-		localization_key = train_equipment_3
+		localization_key = scout_plane_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 143 }
 		}
-		localization_key = train_equipment_2
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 144 }
-		}
-		localization_key = guided_missile_equipment_1
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 145 }
-		}
-		localization_key = guided_missile_equipment_2
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 146 }
-		}
-		localization_key = sam_missile_equipment_1
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 147 }
-		}
-		localization_key = guided_missile_equipment_3
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 148 }
-		}
-		localization_key = cv_small_plane_suicide_airframe
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 149 }
-		}
-		localization_key = large_plane_maritime_patrol_plane_airframe
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 150 }
-		}
-		localization_key = scout_plane_equipment_1
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 151 }
-		}
 		localization_key = scout_plane_equipment_2
 	}
 	text = {
 		trigger = {
-			check_variable = { v = 152 }
+			check_variable = { v = 144 }
 		}
 		localization_key = rocket_suicide_equipment_1
 	}
@@ -1800,54 +1752,6 @@ defined_text = {
 		localization_key = CCP_EQSTOCK_144
 	}
 	text = {
-		trigger = {
-			check_variable = { v = 145 }
-		}
-		localization_key = CCP_EQSTOCK_145
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 146 }
-		}
-		localization_key = CCP_EQSTOCK_146
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 147 }
-		}
-		localization_key = CCP_EQSTOCK_147
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 148 }
-		}
-		localization_key = CCP_EQSTOCK_148
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 149 }
-		}
-		localization_key = CCP_EQSTOCK_149
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 150 }
-		}
-		localization_key = CCP_EQSTOCK_150
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 151 }
-		}
-		localization_key = CCP_EQSTOCK_151
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 152 }
-		}
-		localization_key = CCP_EQSTOCK_152
-	}
-	text = {
 		localization_key = CCP_EQUIPMENT_UNKNOWN
 	}
 }
@@ -2056,719 +1960,671 @@ defined_text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 33 }
 		}
-		localization_key = heavy_tank_amphibious_chassis
+		localization_key = amphibious_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 34 }
 		}
-		localization_key = heavy_tank_flame_chassis
+		localization_key = heavy_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 35 }
 		}
-		localization_key = light_tank_amphibious_chassis
+		localization_key = heavy_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 36 }
 		}
-		localization_key = light_tank_flame_chassis
+		localization_key = heavy_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 37 }
 		}
-		localization_key = medium_tank_amphibious_chassis
+		localization_key = heavy_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 38 }
 		}
-		localization_key = medium_tank_flame_chassis
+		localization_key = light_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 39 }
 		}
-		localization_key = amphibious_tank_equipment_1
+		localization_key = light_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 40 }
 		}
-		localization_key = heavy_tank_aa_equipment_1
+		localization_key = light_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 41 }
 		}
-		localization_key = heavy_tank_artillery_equipment_1
+		localization_key = light_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 42 }
 		}
-		localization_key = heavy_tank_destroyer_equipment_1
+		localization_key = light_tank_aa_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 43 }
 		}
-		localization_key = heavy_tank_equipment_1
+		localization_key = light_tank_artillery_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 44 }
 		}
-		localization_key = light_tank_aa_equipment_1
+		localization_key = light_tank_destroyer_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 45 }
 		}
-		localization_key = light_tank_artillery_equipment_1
+		localization_key = light_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 46 }
 		}
-		localization_key = light_tank_destroyer_equipment_1
+		localization_key = amphibious_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 47 }
 		}
-		localization_key = light_tank_equipment_1
+		localization_key = armored_support_vehicle_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 48 }
 		}
-		localization_key = light_tank_aa_equipment_2
+		localization_key = medium_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 49 }
 		}
-		localization_key = light_tank_artillery_equipment_2
+		localization_key = medium_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 50 }
 		}
-		localization_key = light_tank_destroyer_equipment_2
+		localization_key = medium_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 51 }
 		}
-		localization_key = light_tank_equipment_2
+		localization_key = medium_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 52 }
 		}
-		localization_key = amphibious_tank_equipment_2
+		localization_key = heavy_tank_aa_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 53 }
 		}
-		localization_key = armored_support_vehicle_1
+		localization_key = heavy_tank_artillery_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 54 }
 		}
-		localization_key = medium_tank_aa_equipment_1
+		localization_key = heavy_tank_destroyer_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 55 }
 		}
-		localization_key = medium_tank_artillery_equipment_1
+		localization_key = heavy_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 56 }
 		}
-		localization_key = medium_tank_destroyer_equipment_1
+		localization_key = light_tank_aa_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 57 }
 		}
-		localization_key = medium_tank_equipment_1
+		localization_key = light_tank_artillery_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 58 }
 		}
-		localization_key = heavy_tank_aa_equipment_2
+		localization_key = light_tank_destroyer_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 59 }
 		}
-		localization_key = heavy_tank_artillery_equipment_2
+		localization_key = light_tank_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 60 }
 		}
-		localization_key = heavy_tank_destroyer_equipment_2
+		localization_key = medium_tank_aa_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 61 }
 		}
-		localization_key = heavy_tank_equipment_2
+		localization_key = medium_tank_artillery_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 62 }
 		}
-		localization_key = light_tank_aa_equipment_3
+		localization_key = medium_tank_destroyer_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 63 }
 		}
-		localization_key = light_tank_artillery_equipment_3
+		localization_key = medium_tank_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 64 }
 		}
-		localization_key = light_tank_destroyer_equipment_3
+		localization_key = heavy_tank_aa_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 65 }
 		}
-		localization_key = light_tank_equipment_3
+		localization_key = heavy_tank_artillery_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 66 }
 		}
-		localization_key = medium_tank_aa_equipment_2
+		localization_key = heavy_tank_destroyer_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 67 }
 		}
-		localization_key = medium_tank_artillery_equipment_2
+		localization_key = heavy_tank_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 68 }
 		}
-		localization_key = medium_tank_destroyer_equipment_2
+		localization_key = land_cruiser_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 69 }
 		}
-		localization_key = medium_tank_equipment_2
+		localization_key = medium_tank_aa_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 70 }
 		}
-		localization_key = heavy_tank_aa_equipment_3
+		localization_key = medium_tank_artillery_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 71 }
 		}
-		localization_key = heavy_tank_artillery_equipment_3
+		localization_key = medium_tank_destroyer_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 72 }
 		}
-		localization_key = heavy_tank_destroyer_equipment_3
+		localization_key = medium_tank_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 73 }
 		}
-		localization_key = heavy_tank_equipment_3
+		localization_key = super_heavy_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 74 }
 		}
-		localization_key = land_cruiser_equipment_1
+		localization_key = super_heavy_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 75 }
 		}
-		localization_key = medium_tank_aa_equipment_3
+		localization_key = super_heavy_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 76 }
 		}
-		localization_key = medium_tank_artillery_equipment_3
+		localization_key = super_heavy_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 77 }
 		}
-		localization_key = medium_tank_destroyer_equipment_3
+		localization_key = modern_tank_aa_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 78 }
 		}
-		localization_key = medium_tank_equipment_3
+		localization_key = modern_tank_artillery_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 79 }
 		}
-		localization_key = super_heavy_tank_aa_equipment_1
+		localization_key = modern_tank_destroyer_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 80 }
 		}
-		localization_key = super_heavy_tank_artillery_equipment_1
+		localization_key = modern_tank_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 81 }
 		}
-		localization_key = super_heavy_tank_destroyer_equipment_1
+		localization_key = cv_fighter_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 82 }
 		}
-		localization_key = super_heavy_tank_equipment_1
+		localization_key = fighter_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 83 }
 		}
-		localization_key = modern_tank_aa_equipment_1
+		localization_key = transport_plane_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 84 }
 		}
-		localization_key = modern_tank_artillery_equipment_1
+		localization_key = cv_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 85 }
 		}
-		localization_key = modern_tank_destroyer_equipment_1
+		localization_key = fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 86 }
 		}
-		localization_key = modern_tank_equipment_1
+		localization_key = heavy_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 87 }
 		}
-		localization_key = cv_fighter_equipment_0
+		localization_key = cv_fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 88 }
 		}
-		localization_key = fighter_equipment_0
+		localization_key = fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 89 }
 		}
-		localization_key = transport_plane_equipment_1
+		localization_key = heavy_fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 90 }
 		}
-		localization_key = cv_fighter_equipment_1
+		localization_key = transport_plane_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 91 }
 		}
-		localization_key = fighter_equipment_1
+		localization_key = mothership_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 92 }
 		}
-		localization_key = heavy_fighter_equipment_1
+		localization_key = explosive_ammo_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 93 }
 		}
-		localization_key = cv_fighter_equipment_2
+		localization_key = ballistic_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 94 }
 		}
-		localization_key = fighter_equipment_2
+		localization_key = cv_fighter_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 95 }
 		}
-		localization_key = heavy_fighter_equipment_2
+		localization_key = fighter_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 96 }
 		}
-		localization_key = transport_plane_equipment_2
+		localization_key = heavy_fighter_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 97 }
 		}
-		localization_key = mothership_equipment_0
+		localization_key = rocket_interceptor_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 98 }
 		}
-		localization_key = explosive_ammo_equipment_1
+		localization_key = ballistic_missile_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 99 }
 		}
-		localization_key = ballistic_missile_equipment_1
+		localization_key = ballistic_missile_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 100 }
 		}
-		localization_key = cv_fighter_equipment_3
+		localization_key = cv_small_plane_airframe_4
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 101 }
 		}
-		localization_key = fighter_equipment_3
+		localization_key = jet_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 102 }
 		}
-		localization_key = heavy_fighter_equipment_3
+		localization_key = nuclear_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 103 }
 		}
-		localization_key = rocket_interceptor_equipment_1
+		localization_key = rocket_interceptor_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 104 }
 		}
-		localization_key = ballistic_missile_equipment_2
+		localization_key = rocket_interceptor_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 105 }
 		}
-		localization_key = ballistic_missile_equipment_3
+		localization_key = transport_plane_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 106 }
 		}
-		localization_key = cv_small_plane_airframe_4
+		localization_key = jet_fighter_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 107 }
 		}
-		localization_key = jet_fighter_equipment_1
+		localization_key = nuclear_missile_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 108 }
 		}
-		localization_key = nuclear_missile_equipment_1
+		localization_key = supersonic_fighter_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 109 }
 		}
-		localization_key = rocket_interceptor_equipment_2
+		localization_key = CAS_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 110 }
 		}
-		localization_key = rocket_interceptor_equipment_3
+		localization_key = cv_CAS_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 111 }
 		}
-		localization_key = transport_plane_equipment_3
+		localization_key = CAS_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 112 }
 		}
-		localization_key = jet_fighter_equipment_2
+		localization_key = cv_CAS_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 113 }
 		}
-		localization_key = nuclear_missile_equipment_2
+		localization_key = CAS_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 114 }
 		}
-		localization_key = supersonic_fighter_equipment_1
+		localization_key = cv_CAS_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 115 }
 		}
-		localization_key = CAS_equipment_1
+		localization_key = cv_nav_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 116 }
 		}
-		localization_key = cv_CAS_equipment_1
+		localization_key = nav_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 117 }
 		}
-		localization_key = CAS_equipment_2
+		localization_key = cv_nav_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 118 }
 		}
-		localization_key = cv_CAS_equipment_2
+		localization_key = nav_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 119 }
 		}
-		localization_key = CAS_equipment_3
+		localization_key = cv_nav_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 120 }
 		}
-		localization_key = cv_CAS_equipment_3
+		localization_key = nav_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 121 }
 		}
-		localization_key = cv_nav_bomber_equipment_1
+		localization_key = tac_bomber_equipment_0
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 122 }
 		}
-		localization_key = nav_bomber_equipment_1
+		localization_key = tac_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 123 }
 		}
-		localization_key = cv_nav_bomber_equipment_2
+		localization_key = tac_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 124 }
 		}
-		localization_key = nav_bomber_equipment_2
+		localization_key = tac_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 125 }
 		}
-		localization_key = cv_nav_bomber_equipment_3
+		localization_key = jet_tac_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 126 }
 		}
-		localization_key = nav_bomber_equipment_3
+		localization_key = jet_tac_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 127 }
 		}
-		localization_key = tac_bomber_equipment_0
+		localization_key = large_plane_airframe_0
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 128 }
 		}
-		localization_key = tac_bomber_equipment_1
+		localization_key = strat_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 129 }
 		}
-		localization_key = tac_bomber_equipment_2
+		localization_key = strat_bomber_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 130 }
 		}
-		localization_key = tac_bomber_equipment_3
+		localization_key = strat_bomber_intercontinental_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 131 }
 		}
-		localization_key = jet_tac_bomber_equipment_1
+		localization_key = strat_bomber_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 132 }
 		}
-		localization_key = jet_tac_bomber_equipment_2
+		localization_key = jet_strat_bomber_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 133 }
 		}
-		localization_key = large_plane_airframe_0
+		localization_key = convoy_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 134 }
 		}
-		localization_key = strat_bomber_equipment_1
+		localization_key = floating_harbor_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 135 }
 		}
-		localization_key = strat_bomber_equipment_2
+		localization_key = train_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 136 }
 		}
-		localization_key = strat_bomber_intercontinental_equipment_1
+		localization_key = train_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 137 }
 		}
-		localization_key = strat_bomber_equipment_3
+		localization_key = train_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 138 }
 		}
-		localization_key = jet_strat_bomber_equipment_1
+		localization_key = guided_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 139 }
 		}
-		localization_key = convoy_1
+		localization_key = guided_missile_equipment_2
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 140 }
 		}
-		localization_key = floating_harbor_equipment_1
+		localization_key = sam_missile_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 141 }
 		}
-		localization_key = train_equipment_1
+		localization_key = guided_missile_equipment_3
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 142 }
 		}
-		localization_key = train_equipment_3
+		localization_key = scout_plane_equipment_1
 	}
 	text = {
 		trigger = {
 			check_variable = { ccp_equipment_selected = 143 }
 		}
-		localization_key = train_equipment_2
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 144 }
-		}
-		localization_key = guided_missile_equipment_1
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 145 }
-		}
-		localization_key = guided_missile_equipment_2
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 146 }
-		}
-		localization_key = sam_missile_equipment_1
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 147 }
-		}
-		localization_key = guided_missile_equipment_3
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 148 }
-		}
-		localization_key = cv_small_plane_suicide_airframe
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 149 }
-		}
-		localization_key = large_plane_maritime_patrol_plane_airframe
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 150 }
-		}
-		localization_key = scout_plane_equipment_1
-	}
-	text = {
-		trigger = {
-			check_variable = { ccp_equipment_selected = 151 }
-		}
 		localization_key = scout_plane_equipment_2
 	}
 	text = {
 		trigger = {
-			check_variable = { ccp_equipment_selected = 152 }
+			check_variable = { ccp_equipment_selected = 144 }
 		}
 		localization_key = rocket_suicide_equipment_1
 	}

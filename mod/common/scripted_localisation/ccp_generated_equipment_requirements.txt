@@ -238,455 +238,455 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { v = 33 }
-			always = no
+			NOT = { has_tech = amphibious_tank }
 		}
 		localization_key = CCP_EQREQ_33
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 34 }
-			always = no
+			NOT = { has_tech = basic_heavy_spaa }
 		}
 		localization_key = CCP_EQREQ_34
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 35 }
-			always = no
+			NOT = { has_tech = basic_heavy_art }
 		}
 		localization_key = CCP_EQREQ_35
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 36 }
-			always = no
+			NOT = { has_tech = basic_heavy_td }
 		}
 		localization_key = CCP_EQREQ_36
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 37 }
-			always = no
+			NOT = { has_tech = basic_heavy_tank }
 		}
 		localization_key = CCP_EQREQ_37
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 38 }
-			always = no
+			NOT = { has_tech = basic_light_spaa }
 		}
 		localization_key = CCP_EQREQ_38
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 39 }
-			NOT = { has_tech = amphibious_tank }
+			NOT = { has_tech = basic_light_art }
 		}
 		localization_key = CCP_EQREQ_39
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 40 }
-			NOT = { has_tech = basic_heavy_spaa }
+			NOT = { has_tech = basic_light_td }
 		}
 		localization_key = CCP_EQREQ_40
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 41 }
-			NOT = { has_tech = basic_heavy_art }
+			NOT = { has_tech = basic_light_tank }
 		}
 		localization_key = CCP_EQREQ_41
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 42 }
-			NOT = { has_tech = basic_heavy_td }
+			NOT = { has_tech = improved_light_spaa }
 		}
 		localization_key = CCP_EQREQ_42
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 43 }
-			NOT = { has_tech = basic_heavy_tank }
+			NOT = { has_tech = improved_light_art }
 		}
 		localization_key = CCP_EQREQ_43
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 44 }
-			NOT = { has_tech = basic_light_spaa }
+			NOT = { has_tech = improved_light_td }
 		}
 		localization_key = CCP_EQREQ_44
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 45 }
-			NOT = { has_tech = basic_light_art }
+			NOT = { has_tech = improved_light_tank }
 		}
 		localization_key = CCP_EQREQ_45
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 46 }
-			NOT = { has_tech = basic_light_td }
+			NOT = { has_tech = amphibious_tank_2 }
 		}
 		localization_key = CCP_EQREQ_46
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 47 }
-			NOT = { has_tech = basic_light_tank }
+			always = no
 		}
 		localization_key = CCP_EQREQ_47
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 48 }
-			NOT = { has_tech = improved_light_spaa }
+			NOT = { has_tech = basic_medium_spaa }
 		}
 		localization_key = CCP_EQREQ_48
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 49 }
-			NOT = { has_tech = improved_light_art }
+			NOT = { has_tech = basic_medium_art }
 		}
 		localization_key = CCP_EQREQ_49
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 50 }
-			NOT = { has_tech = improved_light_td }
+			NOT = { has_tech = basic_medium_td }
 		}
 		localization_key = CCP_EQREQ_50
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 51 }
-			NOT = { has_tech = improved_light_tank }
+			NOT = { has_tech = basic_medium_tank }
 		}
 		localization_key = CCP_EQREQ_51
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 52 }
-			NOT = { has_tech = amphibious_tank_2 }
+			NOT = { has_tech = improved_heavy_spaa }
 		}
 		localization_key = CCP_EQREQ_52
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 53 }
-			always = no
+			NOT = { has_tech = improved_heavy_art }
 		}
 		localization_key = CCP_EQREQ_53
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 54 }
-			NOT = { has_tech = basic_medium_spaa }
+			NOT = { has_tech = improved_heavy_td }
 		}
 		localization_key = CCP_EQREQ_54
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 55 }
-			NOT = { has_tech = basic_medium_art }
+			NOT = { has_tech = improved_heavy_tank }
 		}
 		localization_key = CCP_EQREQ_55
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 56 }
-			NOT = { has_tech = basic_medium_td }
+			NOT = { has_tech = advanced_light_spaa }
 		}
 		localization_key = CCP_EQREQ_56
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 57 }
-			NOT = { has_tech = basic_medium_tank }
+			NOT = { has_tech = advanced_light_art }
 		}
 		localization_key = CCP_EQREQ_57
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 58 }
-			NOT = { has_tech = improved_heavy_spaa }
+			NOT = { has_tech = advanced_light_td }
 		}
 		localization_key = CCP_EQREQ_58
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 59 }
-			NOT = { has_tech = improved_heavy_art }
+			NOT = { has_tech = advanced_light_tank }
 		}
 		localization_key = CCP_EQREQ_59
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 60 }
-			NOT = { has_tech = improved_heavy_td }
+			NOT = { has_tech = improved_medium_spaa }
 		}
 		localization_key = CCP_EQREQ_60
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 61 }
-			NOT = { has_tech = improved_heavy_tank }
+			NOT = { has_tech = improved_medium_art }
 		}
 		localization_key = CCP_EQREQ_61
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 62 }
-			NOT = { has_tech = advanced_light_spaa }
+			NOT = { has_tech = improved_medium_td }
 		}
 		localization_key = CCP_EQREQ_62
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 63 }
-			NOT = { has_tech = advanced_light_art }
+			NOT = { has_tech = improved_medium_tank }
 		}
 		localization_key = CCP_EQREQ_63
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 64 }
-			NOT = { has_tech = advanced_light_td }
+			NOT = { has_tech = advanced_heavy_spaa }
 		}
 		localization_key = CCP_EQREQ_64
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 65 }
-			NOT = { has_tech = advanced_light_tank }
+			NOT = { has_tech = advanced_heavy_art }
 		}
 		localization_key = CCP_EQREQ_65
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 66 }
-			NOT = { has_tech = improved_medium_spaa }
+			NOT = { has_tech = advanced_heavy_td }
 		}
 		localization_key = CCP_EQREQ_66
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 67 }
-			NOT = { has_tech = improved_medium_art }
+			NOT = { has_tech = advanced_heavy_tank }
 		}
 		localization_key = CCP_EQREQ_67
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 68 }
-			NOT = { has_tech = improved_medium_td }
+			always = no
 		}
 		localization_key = CCP_EQREQ_68
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 69 }
-			NOT = { has_tech = improved_medium_tank }
+			NOT = { has_tech = advanced_medium_spaa }
 		}
 		localization_key = CCP_EQREQ_69
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 70 }
-			NOT = { has_tech = advanced_heavy_spaa }
+			NOT = { has_tech = advanced_medium_art }
 		}
 		localization_key = CCP_EQREQ_70
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 71 }
-			NOT = { has_tech = advanced_heavy_art }
+			NOT = { has_tech = advanced_medium_td }
 		}
 		localization_key = CCP_EQREQ_71
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 72 }
-			NOT = { has_tech = advanced_heavy_td }
+			NOT = { has_tech = advanced_medium_tank }
 		}
 		localization_key = CCP_EQREQ_72
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 73 }
-			NOT = { has_tech = advanced_heavy_tank }
+			NOT = { has_tech = super_heavy_spaa }
 		}
 		localization_key = CCP_EQREQ_73
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 74 }
-			always = no
+			NOT = { has_tech = super_heavy_art }
 		}
 		localization_key = CCP_EQREQ_74
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 75 }
-			NOT = { has_tech = advanced_medium_spaa }
+			NOT = { has_tech = super_heavy_td }
 		}
 		localization_key = CCP_EQREQ_75
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 76 }
-			NOT = { has_tech = advanced_medium_art }
+			NOT = { has_tech = super_heavy_tank }
 		}
 		localization_key = CCP_EQREQ_76
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 77 }
-			NOT = { has_tech = advanced_medium_td }
+			NOT = { has_tech = modern_spaa }
 		}
 		localization_key = CCP_EQREQ_77
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 78 }
-			NOT = { has_tech = advanced_medium_tank }
+			NOT = { has_tech = modern_art }
 		}
 		localization_key = CCP_EQREQ_78
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 79 }
-			NOT = { has_tech = super_heavy_spaa }
+			NOT = { has_tech = modern_td }
 		}
 		localization_key = CCP_EQREQ_79
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 80 }
-			NOT = { has_tech = super_heavy_art }
+			NOT = { has_tech = main_battle_tank }
 		}
 		localization_key = CCP_EQREQ_80
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 81 }
-			NOT = { has_tech = super_heavy_td }
+			NOT = { has_tech = cv_early_fighter }
 		}
 		localization_key = CCP_EQREQ_81
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 82 }
-			NOT = { has_tech = super_heavy_tank }
+			NOT = { has_tech = early_fighter }
 		}
 		localization_key = CCP_EQREQ_82
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 83 }
-			NOT = { has_tech = modern_spaa }
+			NOT = { has_tech = early_transport_plane }
 		}
 		localization_key = CCP_EQREQ_83
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 84 }
-			NOT = { has_tech = modern_art }
+			NOT = { has_tech = cv_fighter1 }
 		}
 		localization_key = CCP_EQREQ_84
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 85 }
-			NOT = { has_tech = modern_td }
+			NOT = { has_tech = fighter1 }
 		}
 		localization_key = CCP_EQREQ_85
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 86 }
-			NOT = { has_tech = main_battle_tank }
+			NOT = { has_tech = heavy_fighter1 }
 		}
 		localization_key = CCP_EQREQ_86
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 87 }
-			NOT = { has_tech = cv_early_fighter }
+			NOT = { has_tech = cv_fighter2 }
 		}
 		localization_key = CCP_EQREQ_87
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 88 }
-			NOT = { has_tech = early_fighter }
+			NOT = { has_tech = fighter2 }
 		}
 		localization_key = CCP_EQREQ_88
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 89 }
-			NOT = { has_tech = early_transport_plane }
+			NOT = { has_tech = heavy_fighter2 }
 		}
 		localization_key = CCP_EQREQ_89
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 90 }
-			NOT = { has_tech = cv_fighter1 }
+			NOT = { has_tech = improved_transport_plane }
 		}
 		localization_key = CCP_EQREQ_90
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 91 }
-			NOT = { has_tech = fighter1 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_91
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 92 }
-			NOT = { has_tech = heavy_fighter1 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_92
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 93 }
-			NOT = { has_tech = cv_fighter2 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_93
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 94 }
-			NOT = { has_tech = fighter2 }
+			NOT = { has_tech = cv_fighter3 }
 		}
 		localization_key = CCP_EQREQ_94
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 95 }
-			NOT = { has_tech = heavy_fighter2 }
+			NOT = { has_tech = fighter3 }
 		}
 		localization_key = CCP_EQREQ_95
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 96 }
-			NOT = { has_tech = improved_transport_plane }
+			NOT = { has_tech = heavy_fighter3 }
 		}
 		localization_key = CCP_EQREQ_96
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 97 }
-			always = no
+			NOT = { has_tech = rocket_engines }
 		}
 		localization_key = CCP_EQREQ_97
 	}
@@ -707,273 +707,273 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { v = 100 }
-			NOT = { has_tech = cv_fighter3 }
+			NOT = { has_tech = modern_small_airframe }
 		}
 		localization_key = CCP_EQREQ_100
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 101 }
-			NOT = { has_tech = fighter3 }
+			NOT = { has_tech = jet_fighter1 }
 		}
 		localization_key = CCP_EQREQ_101
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 102 }
-			NOT = { has_tech = heavy_fighter3 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_102
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 103 }
-			NOT = { has_tech = rocket_engines }
+			NOT = { has_tech = improved_rocket_engines }
 		}
 		localization_key = CCP_EQREQ_103
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 104 }
-			always = no
+			NOT = { has_tech = advanced_rocket_engines }
 		}
 		localization_key = CCP_EQREQ_104
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 105 }
-			always = no
+			NOT = { has_tech = strategic_airlifter }
 		}
 		localization_key = CCP_EQREQ_105
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 106 }
-			NOT = { has_tech = modern_small_airframe }
+			NOT = { has_tech = jet_fighter2 }
 		}
 		localization_key = CCP_EQREQ_106
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 107 }
-			NOT = { has_tech = jet_fighter1 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_107
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 108 }
-			always = no
+			NOT = { has_tech = supersonic_fighter1 }
 		}
 		localization_key = CCP_EQREQ_108
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 109 }
-			NOT = { has_tech = improved_rocket_engines }
+			NOT = { has_tech = CAS1 }
 		}
 		localization_key = CCP_EQREQ_109
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 110 }
-			NOT = { has_tech = advanced_rocket_engines }
+			NOT = { has_tech = cv_CAS1 }
 		}
 		localization_key = CCP_EQREQ_110
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 111 }
-			NOT = { has_tech = strategic_airlifter }
+			NOT = { has_tech = CAS2 }
 		}
 		localization_key = CCP_EQREQ_111
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 112 }
-			NOT = { has_tech = jet_fighter2 }
+			NOT = { has_tech = cv_CAS2 }
 		}
 		localization_key = CCP_EQREQ_112
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 113 }
-			always = no
+			NOT = { has_tech = CAS3 }
 		}
 		localization_key = CCP_EQREQ_113
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 114 }
-			NOT = { has_tech = supersonic_fighter1 }
+			NOT = { has_tech = cv_CAS3 }
 		}
 		localization_key = CCP_EQREQ_114
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 115 }
-			NOT = { has_tech = CAS1 }
+			NOT = { has_tech = cv_naval_bomber1 }
 		}
 		localization_key = CCP_EQREQ_115
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 116 }
-			NOT = { has_tech = cv_CAS1 }
+			NOT = { has_tech = naval_bomber1 }
 		}
 		localization_key = CCP_EQREQ_116
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 117 }
-			NOT = { has_tech = CAS2 }
+			NOT = { has_tech = cv_naval_bomber2 }
 		}
 		localization_key = CCP_EQREQ_117
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 118 }
-			NOT = { has_tech = cv_CAS2 }
+			NOT = { has_tech = naval_bomber2 }
 		}
 		localization_key = CCP_EQREQ_118
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 119 }
-			NOT = { has_tech = CAS3 }
+			NOT = { has_tech = cv_naval_bomber3 }
 		}
 		localization_key = CCP_EQREQ_119
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 120 }
-			NOT = { has_tech = cv_CAS3 }
+			NOT = { has_tech = naval_bomber3 }
 		}
 		localization_key = CCP_EQREQ_120
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 121 }
-			NOT = { has_tech = cv_naval_bomber1 }
+			NOT = { has_tech = early_bomber }
 		}
 		localization_key = CCP_EQREQ_121
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 122 }
-			NOT = { has_tech = naval_bomber1 }
+			NOT = { has_tech = tactical_bomber1 }
 		}
 		localization_key = CCP_EQREQ_122
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 123 }
-			NOT = { has_tech = cv_naval_bomber2 }
+			NOT = { has_tech = tactical_bomber2 }
 		}
 		localization_key = CCP_EQREQ_123
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 124 }
-			NOT = { has_tech = naval_bomber2 }
+			NOT = { has_tech = tactical_bomber3 }
 		}
 		localization_key = CCP_EQREQ_124
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 125 }
-			NOT = { has_tech = cv_naval_bomber3 }
+			NOT = { has_tech = jet_tactical_bomber1 }
 		}
 		localization_key = CCP_EQREQ_125
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 126 }
-			NOT = { has_tech = naval_bomber3 }
+			NOT = { has_tech = jet_tactical_bomber2 }
 		}
 		localization_key = CCP_EQREQ_126
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 127 }
-			NOT = { has_tech = early_bomber }
+			NOT = { has_tech = iw_large_airframe }
 		}
 		localization_key = CCP_EQREQ_127
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 128 }
-			NOT = { has_tech = tactical_bomber1 }
+			NOT = { has_tech = strategic_bomber1 }
 		}
 		localization_key = CCP_EQREQ_128
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 129 }
-			NOT = { has_tech = tactical_bomber2 }
+			NOT = { has_tech = strategic_bomber2 }
 		}
 		localization_key = CCP_EQREQ_129
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 130 }
-			NOT = { has_tech = tactical_bomber3 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_130
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 131 }
-			NOT = { has_tech = jet_tactical_bomber1 }
+			NOT = { has_tech = strategic_bomber3 }
 		}
 		localization_key = CCP_EQREQ_131
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 132 }
-			NOT = { has_tech = jet_tactical_bomber2 }
+			NOT = { has_tech = jet_strategic_bomber1 }
 		}
 		localization_key = CCP_EQREQ_132
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 133 }
-			NOT = { has_tech = iw_large_airframe }
+			always = no
 		}
 		localization_key = CCP_EQREQ_133
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 134 }
-			NOT = { has_tech = strategic_bomber1 }
+			NOT = { has_tech = mtg_landing_craft }
 		}
 		localization_key = CCP_EQREQ_134
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 135 }
-			NOT = { has_tech = strategic_bomber2 }
+			NOT = { has_tech = basic_train }
 		}
 		localization_key = CCP_EQREQ_135
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 136 }
-			always = no
+			NOT = { has_tech = armored_train }
 		}
 		localization_key = CCP_EQREQ_136
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 137 }
-			NOT = { has_tech = strategic_bomber3 }
+			NOT = { has_tech = wartime_train }
 		}
 		localization_key = CCP_EQREQ_137
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 138 }
-			NOT = { has_tech = jet_strategic_bomber1 }
+			always = no
 		}
 		localization_key = CCP_EQREQ_138
 	}
@@ -987,93 +987,37 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { v = 140 }
-			NOT = { has_tech = mtg_landing_craft }
+			always = no
 		}
 		localization_key = CCP_EQREQ_140
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 141 }
-			NOT = { has_tech = basic_train }
+			always = no
 		}
 		localization_key = CCP_EQREQ_141
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 142 }
-			NOT = { has_tech = armored_train }
+			NOT = { has_tech = scout_plane1 }
 		}
 		localization_key = CCP_EQREQ_142
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 143 }
-			NOT = { has_tech = wartime_train }
+			NOT = { has_tech = scout_plane2 }
 		}
 		localization_key = CCP_EQREQ_143
 	}
 	text = {
 		trigger = {
 			check_variable = { v = 144 }
-			always = no
-		}
-		localization_key = CCP_EQREQ_144
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 145 }
-			always = no
-		}
-		localization_key = CCP_EQREQ_145
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 146 }
-			always = no
-		}
-		localization_key = CCP_EQREQ_146
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 147 }
-			always = no
-		}
-		localization_key = CCP_EQREQ_147
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 148 }
-			always = no
-		}
-		localization_key = CCP_EQREQ_148
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 149 }
-			always = no
-		}
-		localization_key = CCP_EQREQ_149
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 150 }
-			NOT = { has_tech = scout_plane1 }
-		}
-		localization_key = CCP_EQREQ_150
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 151 }
-			NOT = { has_tech = scout_plane2 }
-		}
-		localization_key = CCP_EQREQ_151
-	}
-	text = {
-		trigger = {
-			check_variable = { v = 152 }
 			NOT = { has_tech = suicide_craft }
 		}
-		localization_key = CCP_EQREQ_152
+		localization_key = CCP_EQREQ_144
 	}
 	text = {
 		localization_key = CCP_EQUIPMENT_READY

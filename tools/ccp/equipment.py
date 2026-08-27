@@ -208,7 +208,7 @@ UNSTOCKPILEABLE_TYPES = frozenset(
 def load_catalogue(game_dir: Path) -> list[Equipment]:
     """Every addable equipment variant, ordered by category then year then key."""
     entries: dict[str, Node] = {}
-    raw: list[tuple[str, Node, str | None]] = []
+    raw: list[tuple[str, Node, str | None, str]] = []
 
     for path, dlc in _equipment_files(game_dir):
         root = parse_file(path)
@@ -218,16 +218,20 @@ def load_catalogue(game_dir: Path) -> list[Equipment]:
             for entry in container.children:
                 if not entry.key or not entry.children:
                     continue
-                raw.append((entry.key, entry, dlc))
+                raw.append((entry.key, entry, dlc, container.key))
                 entries[entry.key] = entry
 
     referenced_as_archetype = {
-        node.get("archetype") for _, node, _ in raw if node.get("archetype")
+        node.get("archetype") for _, node, _, _ in raw if node.get("archetype")
     }
 
     catalogue: list[Equipment] = []
-    for key, node, dlc in raw:
+    for key, node, dlc, container in raw:
         if node.get("is_archetype") == "yes" or key in referenced_as_archetype:
+            continue
+        # Everything under duplicate_archetypes is a designer archetype: a shape
+        # the equipment designer derives variants from, never a stockpile item.
+        if container == "duplicate_archetypes":
             continue
 
         archetype_key = node.get("archetype") or key

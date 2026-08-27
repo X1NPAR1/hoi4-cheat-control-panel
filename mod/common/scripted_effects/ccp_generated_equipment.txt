@@ -406,12 +406,6 @@ CCP_equipment_load_armor = {
 			check_variable = { ccp_equipment_page = 3 }
 		}
 		add_to_array = { array = ccp_equipment_page_items value = 80 }
-		add_to_array = { array = ccp_equipment_page_items value = 81 }
-		add_to_array = { array = ccp_equipment_page_items value = 82 }
-		add_to_array = { array = ccp_equipment_page_items value = 83 }
-		add_to_array = { array = ccp_equipment_page_items value = 84 }
-		add_to_array = { array = ccp_equipment_page_items value = 85 }
-		add_to_array = { array = ccp_equipment_page_items value = 86 }
 	}
 }
 
@@ -420,6 +414,12 @@ CCP_equipment_load_fighter = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
 		}
+		add_to_array = { array = ccp_equipment_page_items value = 81 }
+		add_to_array = { array = ccp_equipment_page_items value = 82 }
+		add_to_array = { array = ccp_equipment_page_items value = 83 }
+		add_to_array = { array = ccp_equipment_page_items value = 84 }
+		add_to_array = { array = ccp_equipment_page_items value = 85 }
+		add_to_array = { array = ccp_equipment_page_items value = 86 }
 		add_to_array = { array = ccp_equipment_page_items value = 87 }
 		add_to_array = { array = ccp_equipment_page_items value = 88 }
 		add_to_array = { array = ccp_equipment_page_items value = 89 }
@@ -430,23 +430,31 @@ CCP_equipment_load_fighter = {
 		add_to_array = { array = ccp_equipment_page_items value = 94 }
 		add_to_array = { array = ccp_equipment_page_items value = 95 }
 		add_to_array = { array = ccp_equipment_page_items value = 96 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_equipment_page = 1 }
+		}
 		add_to_array = { array = ccp_equipment_page_items value = 97 }
 		add_to_array = { array = ccp_equipment_page_items value = 98 }
 		add_to_array = { array = ccp_equipment_page_items value = 99 }
 		add_to_array = { array = ccp_equipment_page_items value = 100 }
 		add_to_array = { array = ccp_equipment_page_items value = 101 }
 		add_to_array = { array = ccp_equipment_page_items value = 102 }
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_page = 1 }
-		}
 		add_to_array = { array = ccp_equipment_page_items value = 103 }
 		add_to_array = { array = ccp_equipment_page_items value = 104 }
 		add_to_array = { array = ccp_equipment_page_items value = 105 }
 		add_to_array = { array = ccp_equipment_page_items value = 106 }
 		add_to_array = { array = ccp_equipment_page_items value = 107 }
 		add_to_array = { array = ccp_equipment_page_items value = 108 }
+	}
+}
+
+CCP_equipment_load_cas = {
+	if = {
+		limit = {
+			check_variable = { ccp_equipment_page = 0 }
+		}
 		add_to_array = { array = ccp_equipment_page_items value = 109 }
 		add_to_array = { array = ccp_equipment_page_items value = 110 }
 		add_to_array = { array = ccp_equipment_page_items value = 111 }
@@ -456,7 +464,7 @@ CCP_equipment_load_fighter = {
 	}
 }
 
-CCP_equipment_load_cas = {
+CCP_equipment_load_naval_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
@@ -470,7 +478,7 @@ CCP_equipment_load_cas = {
 	}
 }
 
-CCP_equipment_load_naval_bomber = {
+CCP_equipment_load_tactical_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
@@ -484,7 +492,7 @@ CCP_equipment_load_naval_bomber = {
 	}
 }
 
-CCP_equipment_load_tactical_bomber = {
+CCP_equipment_load_strategic_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
@@ -498,27 +506,13 @@ CCP_equipment_load_tactical_bomber = {
 	}
 }
 
-CCP_equipment_load_strategic_bomber = {
+CCP_equipment_load_convoy = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
 		}
 		add_to_array = { array = ccp_equipment_page_items value = 133 }
 		add_to_array = { array = ccp_equipment_page_items value = 134 }
-		add_to_array = { array = ccp_equipment_page_items value = 135 }
-		add_to_array = { array = ccp_equipment_page_items value = 136 }
-		add_to_array = { array = ccp_equipment_page_items value = 137 }
-		add_to_array = { array = ccp_equipment_page_items value = 138 }
-	}
-}
-
-CCP_equipment_load_convoy = {
-	if = {
-		limit = {
-			check_variable = { ccp_equipment_page = 0 }
-		}
-		add_to_array = { array = ccp_equipment_page_items value = 139 }
-		add_to_array = { array = ccp_equipment_page_items value = 140 }
 	}
 }
 
@@ -527,9 +521,9 @@ CCP_equipment_load_train = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
 		}
-		add_to_array = { array = ccp_equipment_page_items value = 141 }
-		add_to_array = { array = ccp_equipment_page_items value = 142 }
-		add_to_array = { array = ccp_equipment_page_items value = 143 }
+		add_to_array = { array = ccp_equipment_page_items value = 135 }
+		add_to_array = { array = ccp_equipment_page_items value = 136 }
+		add_to_array = { array = ccp_equipment_page_items value = 137 }
 	}
 }
 
@@ -538,10 +532,10 @@ CCP_equipment_load_missile = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
 		}
-		add_to_array = { array = ccp_equipment_page_items value = 144 }
-		add_to_array = { array = ccp_equipment_page_items value = 145 }
-		add_to_array = { array = ccp_equipment_page_items value = 146 }
-		add_to_array = { array = ccp_equipment_page_items value = 147 }
+		add_to_array = { array = ccp_equipment_page_items value = 138 }
+		add_to_array = { array = ccp_equipment_page_items value = 139 }
+		add_to_array = { array = ccp_equipment_page_items value = 140 }
+		add_to_array = { array = ccp_equipment_page_items value = 141 }
 	}
 }
 
@@ -550,11 +544,9 @@ CCP_equipment_load_special = {
 		limit = {
 			check_variable = { ccp_equipment_page = 0 }
 		}
-		add_to_array = { array = ccp_equipment_page_items value = 148 }
-		add_to_array = { array = ccp_equipment_page_items value = 149 }
-		add_to_array = { array = ccp_equipment_page_items value = 150 }
-		add_to_array = { array = ccp_equipment_page_items value = 151 }
-		add_to_array = { array = ccp_equipment_page_items value = 152 }
+		add_to_array = { array = ccp_equipment_page_items value = 142 }
+		add_to_array = { array = ccp_equipment_page_items value = 143 }
+		add_to_array = { array = ccp_equipment_page_items value = 144 }
 	}
 }
 
@@ -692,7 +684,7 @@ CCP_equipment_grant_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -702,7 +694,7 @@ CCP_equipment_grant_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -712,7 +704,7 @@ CCP_equipment_grant_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -722,7 +714,7 @@ CCP_equipment_grant_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -735,7 +727,7 @@ CCP_equipment_grant_support = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -745,7 +737,7 @@ CCP_equipment_grant_support = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -755,7 +747,7 @@ CCP_equipment_grant_support = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -768,7 +760,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -778,7 +770,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -788,7 +780,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -798,7 +790,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -808,7 +800,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -818,7 +810,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -828,7 +820,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -838,7 +830,7 @@ CCP_equipment_grant_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -851,7 +843,7 @@ CCP_equipment_grant_anti_tank = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -861,7 +853,7 @@ CCP_equipment_grant_anti_tank = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -871,7 +863,7 @@ CCP_equipment_grant_anti_tank = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -884,7 +876,7 @@ CCP_equipment_grant_anti_air = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -894,7 +886,7 @@ CCP_equipment_grant_anti_air = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -904,7 +896,7 @@ CCP_equipment_grant_anti_air = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -917,7 +909,7 @@ CCP_equipment_grant_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = gw_armored_car_equipment amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = gw_armored_car_equipment amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -927,7 +919,7 @@ CCP_equipment_grant_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -937,7 +929,7 @@ CCP_equipment_grant_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorized_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorized_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -947,7 +939,7 @@ CCP_equipment_grant_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -957,7 +949,7 @@ CCP_equipment_grant_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_at_equipment amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_at_equipment amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -967,7 +959,7 @@ CCP_equipment_grant_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -980,7 +972,7 @@ CCP_equipment_grant_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -990,7 +982,7 @@ CCP_equipment_grant_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1000,7 +992,7 @@ CCP_equipment_grant_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1010,7 +1002,7 @@ CCP_equipment_grant_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mechanized_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mechanized_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1020,7 +1012,7 @@ CCP_equipment_grant_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1033,7 +1025,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = gw_tank_equipment amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = gw_tank_equipment amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1043,7 +1035,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_amphibious_chassis amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1053,7 +1045,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_flame_chassis amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1063,7 +1055,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_amphibious_chassis amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1073,7 +1065,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_flame_chassis amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1083,7 +1075,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_amphibious_chassis amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1093,7 +1085,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_flame_chassis amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1103,7 +1095,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1113,7 +1105,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1123,7 +1115,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1133,7 +1125,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_aa_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1143,7 +1135,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1153,7 +1145,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1163,7 +1155,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1173,7 +1165,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1183,7 +1175,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1193,7 +1185,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_aa_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1203,7 +1195,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1213,7 +1205,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1223,7 +1215,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1233,7 +1225,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1243,7 +1235,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1253,7 +1245,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1263,7 +1255,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1273,7 +1265,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1283,7 +1275,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1293,7 +1285,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1303,7 +1295,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1313,7 +1305,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1323,7 +1315,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1333,7 +1325,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1343,7 +1335,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1353,7 +1345,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1363,7 +1355,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1373,7 +1365,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1383,7 +1375,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1393,7 +1385,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1403,7 +1395,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1413,7 +1405,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1423,7 +1415,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1433,7 +1425,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1443,7 +1435,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1453,7 +1445,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1463,7 +1455,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1473,7 +1465,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1483,7 +1475,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1493,7 +1485,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1503,7 +1495,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1513,17 +1505,20 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-	else_if = {
+}
+
+CCP_equipment_grant_fighter = {
+	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 81 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_fighter_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1533,7 +1528,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1543,7 +1538,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1553,7 +1548,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1563,7 +1558,7 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1573,20 +1568,17 @@ CCP_equipment_grant_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-}
-
-CCP_equipment_grant_fighter = {
-	if = {
+	else_if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 87 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_fighter_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_fighter_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1596,7 +1588,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1606,7 +1598,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1616,7 +1608,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = transport_plane_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1626,7 +1618,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1636,7 +1628,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1646,7 +1638,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_fighter_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = ballistic_missile_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1656,7 +1648,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1666,7 +1658,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1676,7 +1668,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = transport_plane_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1686,7 +1678,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1696,7 +1688,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = ballistic_missile_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1706,7 +1698,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = ballistic_missile_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1716,7 +1708,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1726,7 +1718,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1736,7 +1728,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nuclear_missile_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1746,7 +1738,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1756,7 +1748,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = ballistic_missile_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1766,7 +1758,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1776,7 +1768,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_fighter_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1786,7 +1778,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1796,17 +1788,20 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nuclear_missile_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-	else_if = {
+}
+
+CCP_equipment_grant_cas = {
+	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 109 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = CAS_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1816,7 +1811,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1826,7 +1821,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = CAS_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1836,7 +1831,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_fighter_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1846,7 +1841,7 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1856,20 +1851,20 @@ CCP_equipment_grant_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_cas = {
+CCP_equipment_grant_naval_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 115 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = CAS_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1879,7 +1874,7 @@ CCP_equipment_grant_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_CAS_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1889,7 +1884,7 @@ CCP_equipment_grant_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = CAS_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1899,7 +1894,7 @@ CCP_equipment_grant_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_CAS_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1909,7 +1904,7 @@ CCP_equipment_grant_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1919,20 +1914,20 @@ CCP_equipment_grant_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_naval_bomber = {
+CCP_equipment_grant_tactical_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 121 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1942,7 +1937,7 @@ CCP_equipment_grant_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1952,7 +1947,7 @@ CCP_equipment_grant_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1962,7 +1957,7 @@ CCP_equipment_grant_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nav_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1972,7 +1967,7 @@ CCP_equipment_grant_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -1982,20 +1977,20 @@ CCP_equipment_grant_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_tactical_bomber = {
+CCP_equipment_grant_strategic_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 127 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = large_plane_airframe_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2005,7 +2000,7 @@ CCP_equipment_grant_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2015,7 +2010,7 @@ CCP_equipment_grant_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2025,7 +2020,7 @@ CCP_equipment_grant_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2035,7 +2030,7 @@ CCP_equipment_grant_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2045,20 +2040,20 @@ CCP_equipment_grant_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_strategic_bomber = {
+CCP_equipment_grant_convoy = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 133 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = large_plane_airframe_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = convoy_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2068,17 +2063,20 @@ CCP_equipment_grant_strategic_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-	else_if = {
+}
+
+CCP_equipment_grant_train = {
+	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 135 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = train_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2088,7 +2086,7 @@ CCP_equipment_grant_strategic_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = train_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2098,30 +2096,30 @@ CCP_equipment_grant_strategic_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 138 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_convoy = {
+CCP_equipment_grant_missile = {
 	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 138 }
+		}
+		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
+		hidden_effect = {
+			add_equipment_to_stockpile = { type = guided_missile_equipment_1 amount = var:ROOT.ccp_amount }
+			set_variable = { global.ccp_status = 5 }
+		}
+	}
+	else_if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 139 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = convoy_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = guided_missile_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2131,30 +2129,30 @@ CCP_equipment_grant_convoy = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-}
-
-CCP_equipment_grant_train = {
-	if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 141 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = train_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 	else_if = {
 		limit = {
+			check_variable = { ccp_equipment_selected = 141 }
+		}
+		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
+		hidden_effect = {
+			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ROOT.ccp_amount }
+			set_variable = { global.ccp_status = 5 }
+		}
+	}
+}
+
+CCP_equipment_grant_special = {
+	if = {
+		limit = {
 			check_variable = { ccp_equipment_selected = 142 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = train_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = scout_plane_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2164,103 +2162,17 @@ CCP_equipment_grant_train = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-}
-
-CCP_equipment_grant_missile = {
-	if = {
+	else_if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 144 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = guided_missile_equipment_1 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 145 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = guided_missile_equipment_2 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 146 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 147 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-}
-
-CCP_equipment_grant_special = {
-	if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 148 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_suicide_airframe amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 149 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = large_plane_maritime_patrol_plane_airframe amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 150 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = scout_plane_equipment_1 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 151 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 152 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_ADD_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2374,207 +2286,199 @@ CCP_equipment_grant_category = {
 }
 
 CCP_equipment_all_infantry = {
-	add_equipment_to_stockpile = { type = infantry_equipment_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = infantry_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = infantry_equipment_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = infantry_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = infantry_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_support = {
-	add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_artillery = {
-	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = artillery_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = rocket_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = artillery_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = rocket_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_anti_tank = {
-	add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = anti_tank_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_anti_air = {
-	add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_motorized = {
-	add_equipment_to_stockpile = { type = gw_armored_car_equipment amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = armored_car_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = motorized_equipment_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = armored_car_at_equipment amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = gw_armored_car_equipment amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = armored_car_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = motorized_equipment_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = armored_car_at_equipment amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_mechanized = {
-	add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = mechanized_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = mechanized_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_armor = {
-	add_equipment_to_stockpile = { type = gw_tank_equipment amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_amphibious_chassis amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_flame_chassis amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_amphibious_chassis amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_flame_chassis amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_amphibious_chassis amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_flame_chassis amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = amphibious_tank_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_aa_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_aa_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_artillery_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_aa_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_aa_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = gw_tank_equipment amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = amphibious_tank_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_aa_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_artillery_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_aa_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_fighter = {
-	add_equipment_to_stockpile = { type = cv_fighter_equipment_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = fighter_equipment_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_fighter_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = fighter_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_fighter_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = fighter_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_fighter_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = transport_plane_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = ballistic_missile_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_fighter_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = rocket_interceptor_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = ballistic_missile_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = jet_fighter_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = nuclear_missile_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = rocket_interceptor_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = jet_fighter_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = cv_fighter_equipment_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = fighter_equipment_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_fighter_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = fighter_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_fighter_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_fighter_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = fighter_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_fighter_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = transport_plane_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = ballistic_missile_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_fighter_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = rocket_interceptor_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = ballistic_missile_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = jet_fighter_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = nuclear_missile_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = rocket_interceptor_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = jet_fighter_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_cas = {
-	add_equipment_to_stockpile = { type = CAS_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_CAS_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = CAS_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_CAS_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = CAS_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_CAS_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = CAS_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_CAS_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_naval_bomber = {
-	add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = nav_bomber_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = nav_bomber_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = nav_bomber_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_tactical_bomber = {
-	add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_strategic_bomber = {
-	add_equipment_to_stockpile = { type = large_plane_airframe_0 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = strat_bomber_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = strat_bomber_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = large_plane_airframe_0 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = strat_bomber_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = strat_bomber_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_convoy = {
-	add_equipment_to_stockpile = { type = convoy_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = convoy_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_train = {
-	add_equipment_to_stockpile = { type = train_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = train_equipment_3 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = train_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = train_equipment_3 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_missile = {
-	add_equipment_to_stockpile = { type = guided_missile_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = guided_missile_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = guided_missile_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = guided_missile_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_all_special = {
-	add_equipment_to_stockpile = { type = cv_small_plane_suicide_airframe amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = large_plane_maritime_patrol_plane_airframe amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = scout_plane_equipment_1 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_amount }
-	add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ccp_amount }
+	add_equipment_to_stockpile = { type = scout_plane_equipment_1 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ROOT.ccp_amount }
+	add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ROOT.ccp_amount }
 }
 
 CCP_equipment_grant_latest = {
@@ -2691,7 +2595,7 @@ CCP_equipment_grant_latest_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2701,7 +2605,7 @@ CCP_equipment_grant_latest_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2711,7 +2615,7 @@ CCP_equipment_grant_latest_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2721,7 +2625,7 @@ CCP_equipment_grant_latest_infantry = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = infantry_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2734,7 +2638,7 @@ CCP_equipment_grant_latest_support = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2744,7 +2648,7 @@ CCP_equipment_grant_latest_support = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = helicopter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2754,7 +2658,7 @@ CCP_equipment_grant_latest_support = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorbike_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2767,7 +2671,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2777,7 +2681,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = self_propelled_super_heavy_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2787,7 +2691,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2797,7 +2701,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2807,7 +2711,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorized_rocket_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2817,7 +2721,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2827,7 +2731,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2837,7 +2741,7 @@ CCP_equipment_grant_latest_artillery = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_artillery_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2850,7 +2754,7 @@ CCP_equipment_grant_latest_anti_tank = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2860,7 +2764,7 @@ CCP_equipment_grant_latest_anti_tank = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2870,7 +2774,7 @@ CCP_equipment_grant_latest_anti_tank = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2883,7 +2787,7 @@ CCP_equipment_grant_latest_anti_air = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2893,7 +2797,7 @@ CCP_equipment_grant_latest_anti_air = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2903,7 +2807,7 @@ CCP_equipment_grant_latest_anti_air = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = anti_air_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2916,7 +2820,7 @@ CCP_equipment_grant_latest_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2926,7 +2830,7 @@ CCP_equipment_grant_latest_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2936,7 +2840,7 @@ CCP_equipment_grant_latest_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2946,7 +2850,7 @@ CCP_equipment_grant_latest_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2956,7 +2860,7 @@ CCP_equipment_grant_latest_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2966,7 +2870,7 @@ CCP_equipment_grant_latest_motorized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_car_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2979,7 +2883,7 @@ CCP_equipment_grant_latest_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2989,7 +2893,7 @@ CCP_equipment_grant_latest_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -2999,7 +2903,7 @@ CCP_equipment_grant_latest_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_mechanized_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3009,7 +2913,7 @@ CCP_equipment_grant_latest_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3019,7 +2923,7 @@ CCP_equipment_grant_latest_mechanized = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mechanized_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3032,7 +2936,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3042,7 +2946,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3052,7 +2956,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3062,7 +2966,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3072,7 +2976,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3082,7 +2986,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3092,7 +2996,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3102,7 +3006,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3112,7 +3016,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3122,7 +3026,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3132,7 +3036,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3142,7 +3046,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3152,7 +3056,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3162,7 +3066,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3172,7 +3076,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3182,7 +3086,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3192,7 +3096,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3202,7 +3106,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3212,7 +3116,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3222,7 +3126,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3232,7 +3136,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = amphibious_tank_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3242,7 +3146,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = armored_support_vehicle_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3252,7 +3156,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3262,7 +3166,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3272,7 +3176,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3282,7 +3186,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3292,7 +3196,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3302,7 +3206,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3312,7 +3216,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3322,7 +3226,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3332,7 +3236,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3342,7 +3246,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3352,7 +3256,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3362,7 +3266,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = light_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3372,7 +3276,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3382,7 +3286,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3392,7 +3296,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3402,7 +3306,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3412,7 +3316,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3422,7 +3326,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3432,7 +3336,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3442,7 +3346,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3452,7 +3356,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = land_cruiser_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3462,7 +3366,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_aa_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3472,7 +3376,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_artillery_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3482,7 +3386,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3492,7 +3396,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = medium_tank_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3502,7 +3406,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3512,17 +3416,20 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-	else_if = {
+}
+
+CCP_equipment_grant_latest_fighter = {
+	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 81 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3532,7 +3439,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = super_heavy_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3542,7 +3449,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_aa_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3552,7 +3459,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_artillery_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3562,7 +3469,7 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_destroyer_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3572,20 +3479,17 @@ CCP_equipment_grant_latest_armor = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = modern_tank_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-}
-
-CCP_equipment_grant_latest_fighter = {
-	if = {
+	else_if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 87 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3595,7 +3499,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3605,7 +3509,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3615,7 +3519,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3625,7 +3529,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3635,7 +3539,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3645,7 +3549,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3655,7 +3559,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3665,7 +3569,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3675,7 +3579,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3685,7 +3589,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = mothership_equipment_0 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3695,7 +3599,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = explosive_ammo_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3705,7 +3609,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3715,7 +3619,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3725,7 +3629,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3735,7 +3639,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = heavy_fighter_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3745,7 +3649,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3755,7 +3659,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3765,7 +3669,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = ballistic_missile_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3775,7 +3679,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3785,7 +3689,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3795,17 +3699,20 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-	else_if = {
+}
+
+CCP_equipment_grant_latest_cas = {
+	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 109 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3815,7 +3722,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_interceptor_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3825,7 +3732,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = transport_plane_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3835,7 +3742,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3845,7 +3752,7 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nuclear_missile_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3855,20 +3762,20 @@ CCP_equipment_grant_latest_fighter = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = supersonic_fighter_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_latest_cas = {
+CCP_equipment_grant_latest_naval_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 115 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3878,7 +3785,7 @@ CCP_equipment_grant_latest_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3888,7 +3795,7 @@ CCP_equipment_grant_latest_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3898,7 +3805,7 @@ CCP_equipment_grant_latest_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3908,7 +3815,7 @@ CCP_equipment_grant_latest_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3918,20 +3825,20 @@ CCP_equipment_grant_latest_cas = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_CAS_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_latest_naval_bomber = {
+CCP_equipment_grant_latest_tactical_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 121 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3941,7 +3848,7 @@ CCP_equipment_grant_latest_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3951,7 +3858,7 @@ CCP_equipment_grant_latest_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3961,7 +3868,7 @@ CCP_equipment_grant_latest_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3971,7 +3878,7 @@ CCP_equipment_grant_latest_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -3981,20 +3888,20 @@ CCP_equipment_grant_latest_naval_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = nav_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_latest_tactical_bomber = {
+CCP_equipment_grant_latest_strategic_bomber = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 127 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4004,7 +3911,7 @@ CCP_equipment_grant_latest_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4014,7 +3921,7 @@ CCP_equipment_grant_latest_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4024,7 +3931,7 @@ CCP_equipment_grant_latest_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4034,7 +3941,7 @@ CCP_equipment_grant_latest_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4044,20 +3951,20 @@ CCP_equipment_grant_latest_tactical_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_tac_bomber_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_latest_strategic_bomber = {
+CCP_equipment_grant_latest_convoy = {
 	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 133 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = convoy_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4067,17 +3974,20 @@ CCP_equipment_grant_latest_strategic_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-	else_if = {
+}
+
+CCP_equipment_grant_latest_train = {
+	if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 135 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4087,7 +3997,7 @@ CCP_equipment_grant_latest_strategic_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_intercontinental_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4097,30 +4007,30 @@ CCP_equipment_grant_latest_strategic_bomber = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 138 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = jet_strat_bomber_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 }
 
-CCP_equipment_grant_latest_convoy = {
+CCP_equipment_grant_latest_missile = {
 	if = {
+		limit = {
+			check_variable = { ccp_equipment_selected = 138 }
+		}
+		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
+		hidden_effect = {
+			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ROOT.ccp_amount }
+			set_variable = { global.ccp_status = 5 }
+		}
+	}
+	else_if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 139 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = convoy_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4130,30 +4040,30 @@ CCP_equipment_grant_latest_convoy = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = floating_harbor_equipment_1 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-}
-
-CCP_equipment_grant_latest_train = {
-	if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 141 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
 	else_if = {
 		limit = {
+			check_variable = { ccp_equipment_selected = 141 }
+		}
+		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
+		hidden_effect = {
+			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ROOT.ccp_amount }
+			set_variable = { global.ccp_status = 5 }
+		}
+	}
+}
+
+CCP_equipment_grant_latest_special = {
+	if = {
+		limit = {
 			check_variable = { ccp_equipment_selected = 142 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
@@ -4163,103 +4073,17 @@ CCP_equipment_grant_latest_train = {
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = train_equipment_2 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}
-}
-
-CCP_equipment_grant_latest_missile = {
-	if = {
+	else_if = {
 		limit = {
 			check_variable = { ccp_equipment_selected = 144 }
 		}
 		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
 		hidden_effect = {
-			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 145 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 146 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = sam_missile_equipment_1 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 147 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = guided_missile_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-}
-
-CCP_equipment_grant_latest_special = {
-	if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 148 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = cv_small_plane_airframe_4 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 149 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = strat_bomber_equipment_3 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 150 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 151 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = scout_plane_equipment_2 amount = var:ccp_amount }
-			set_variable = { global.ccp_status = 5 }
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { ccp_equipment_selected = 152 }
-		}
-		custom_effect_tooltip = CCP_EQUIPMENT_LATEST_TOOLTIP
-		hidden_effect = {
-			add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ccp_amount }
+			add_equipment_to_stockpile = { type = rocket_suicide_equipment_1 amount = var:ROOT.ccp_amount }
 			set_variable = { global.ccp_status = 5 }
 		}
 	}

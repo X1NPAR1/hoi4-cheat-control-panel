@@ -228,6 +228,12 @@ defined_text = {
 		localization_key = CCP_STATUS_TARGET
 	}
 	text = {
+		trigger = {
+			check_variable = { global.ccp_status = 22 }
+		}
+		localization_key = CCP_STATUS_NO_TARGET
+	}
+	text = {
 		localization_key = CCP_STATUS_IDLE
 	}
 }

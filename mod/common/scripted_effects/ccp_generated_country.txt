@@ -23,7 +23,7 @@ CCP_country_recount_pages = {
 	clamp_variable = { var = ccp_country_pages_last min = 0 }
 	set_temp_variable = { ccp_page_remainder = ccp_country_pages_last }
 	modulo_temp_variable = { ccp_page_remainder = 16 }
-	subtract_from_variable = { ccp_country_pages_last = var:ccp_page_remainder }
+	subtract_from_variable = { ccp_country_pages_last = var:ROOT.ccp_page_remainder }
 	divide_variable = { ccp_country_pages_last = 16 }
 }
 
@@ -33,9 +33,9 @@ CCP_country_load_page = {
 	add_to_variable = { ccp_country_page_shown = 1 }
 	set_variable = { ccp_country_pages_shown = ccp_country_pages_last }
 	add_to_variable = { ccp_country_pages_shown = 1 }
-	set_temp_variable = { ccp_page_first = var:ccp_country_page }
+	set_temp_variable = { ccp_page_first = var:ROOT.ccp_country_page }
 	multiply_temp_variable = { ccp_page_first = 16 }
-	set_temp_variable = { ccp_page_last = var:ccp_page_first }
+	set_temp_variable = { ccp_page_last = var:ROOT.ccp_page_first }
 	add_to_temp_variable = { ccp_page_last = 15 }
 	for_loop_effect = {
 		start = 0
@@ -252,25 +252,25 @@ CCP_generic_apply = {
 }
 
 CCP_country_apply = {
-	var:ccp_player = {
+	var:ROOT.ccp_player = {
 		if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 1 }
 			}
-			annex_country = { target = var:ccp_pending_country }
+			annex_country = { target = var:ROOT.ccp_pending_country }
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 2 }
 			}
-			var:ccp_pending_country = { var:ccp_player = { puppet = PREV } }
+			var:ROOT.ccp_pending_country = { var:ROOT.ccp_player = { puppet = PREV } }
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 3 }
 			}
 			declare_war_on = {
-				target = var:ccp_pending_country
+				target = var:ROOT.ccp_pending_country
 				type = annex_everything
 			}
 		}
@@ -278,14 +278,14 @@ CCP_country_apply = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 4 }
 			}
-			var:ccp_pending_country = { var:ccp_player = { white_peace = PREV } }
+			var:ROOT.ccp_pending_country = { var:ROOT.ccp_player = { white_peace = PREV } }
 		}
 		else_if = {
 			limit = {
 				check_variable = { global.ccp_pending_action = 5 }
 			}
 			set_variable = { global.ccp_panel_open = 0 }
-			var:ccp_pending_country = { var:ccp_player = { change_tag_from = PREV } }
+			var:ROOT.ccp_pending_country = { var:ROOT.ccp_player = { change_tag_from = PREV } }
 		}
 	}
 	set_variable = { global.ccp_status = 8 }

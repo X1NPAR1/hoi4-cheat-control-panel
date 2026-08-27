@@ -3,7 +3,7 @@
 # Source game version: 1.19.2.0
 
 CCP_history_record = {
-	add_to_array = { array = ccp_history value = var:ccp_last_action }
+	add_to_array = { array = ccp_history value = var:ROOT.ccp_last_action }
 	if = {
 		limit = {
 			check_variable = { ccp_history^num > 10 }

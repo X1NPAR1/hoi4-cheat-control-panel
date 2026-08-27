@@ -7,6 +7,8 @@ cannot disagree.
 
 from __future__ import annotations
 
+from typing import Callable
+
 from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
 from .actions import (
@@ -33,7 +35,7 @@ DIPLO_RULES = [
     "can_access_market",
     "can_create_collaboration_government",
 ]
-from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
+from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE, StateAction
 from .resources import AMOUNT_MAX, RESOURCES
 from .sections import HOTKEYS, SECTIONS, section_id as section_index
 
@@ -561,19 +563,51 @@ def emit_state_effects(version: str) -> str:
     for action in STATE_ACTIONS:
         writer.open(f"CCP_state_{action.slug}")
         writer.line("set_variable = { ccp_state = THIS }")
-        writer.open(action.actor)
-        writer.open("var:ccp_state")
-        for line in action.body:
-            writer.line(line)
-        writer.close()
-        writer.close()
+        writer.line("set_variable = { ROOT.ccp_state_id = THIS.id }")
         code = status.STATE_GIVEN if action.slug == "give" else status.STATE_ACTION
-        writer.line(f"set_variable = {{ ccp_status = {code} }}")
+
+        def body(action: StateAction = action, code: int = code) -> None:
+            writer.open(action.actor)
+            if action.in_state:
+                writer.open("var:ccp_state")
+            for line in action.body:
+                writer.line(line)
+            if action.in_state:
+                writer.close()
+            writer.close()
+            writer.line(f"set_variable = {{ ccp_status = {code} }}")
+
+        _guarded(writer, body, _needs_target([action.actor]))
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
 
     return writer.text()
+
+
+def _needs_target(lines: list[str]) -> bool:
+    """Does this body act on the country picked in the Countries section?"""
+    return any("ccp_target_country" in line for line in lines)
+
+
+def _guarded(writer: Writer, body: Callable[[], None], needs_target: bool) -> None:
+    """Run a body only once a target exists, and say so when one does not.
+
+    Without the guard the effect steps into a variable that was never set, the
+    whole block is skipped, and the button looks broken rather than unready.
+    """
+    if not needs_target:
+        body()
+        return
+    writer.open("if")
+    writer.open("limit")
+    writer.line("has_variable = ROOT.ccp_target_country")
+    writer.close()
+    body()
+    writer.close()
+    writer.open("else")
+    writer.line(f"set_variable = {{ ccp_status = {status.NO_TARGET} }}")
+    writer.close()
 
 
 def emit_action_effects(version: str) -> str:
@@ -584,11 +618,16 @@ def emit_action_effects(version: str) -> str:
 
     for index, (action, level) in enumerate(action_levels(), start=1):
         writer.open(f"CCP_action_{action.slug}_{level_id(level)}")
-        for line in action.build(level):
-            writer.line(line)
-        writer.line(f"set_variable = {{ ccp_status = {status.NATION_ACTION} }}")
-        writer.line(f"set_variable = {{ ccp_last_action = {index} }}")
-        writer.line("CCP_history_record = yes")
+        lines = action.build(level)
+
+        def body(lines: list[str] = lines, index: int = index) -> None:
+            for line in lines:
+                writer.line(line)
+            writer.line(f"set_variable = {{ ccp_status = {status.NATION_ACTION} }}")
+            writer.line(f"set_variable = {{ ccp_last_action = {index} }}")
+            writer.line("CCP_history_record = yes")
+
+        _guarded(writer, body, _needs_target(lines))
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -1125,6 +1164,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.STATE_GIVEN} }}", "CCP_STATUS_GIVEN"),
             (f"check_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}", "CCP_STATUS_EVERYTHING"),
             (f"check_variable = {{ ccp_status = {status.TARGET_PICKED} }}", "CCP_STATUS_TARGET"),
+            (f"check_variable = {{ ccp_status = {status.NO_TARGET} }}", "CCP_STATUS_NO_TARGET"),
         ],
         "CCP_STATUS_IDLE",
     )

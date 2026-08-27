@@ -53,7 +53,7 @@ SCOPE_NAMES = frozenset(
     }
 )
 
-_NAME = re.compile(r"\b(?<!global\.)(?<!var:)(ccp_[a-z0-9_]+)")
+_NAME = re.compile(r"\b(?<!global\.)(?<!var:)(?<!ROOT\.)(ccp_[a-z0-9_]+)")
 
 _ASSIGN = re.compile(r"^(\s*)set_variable = \{ global\.(ccp_[a-z0-9_]+) = (.+?) \}\s*$")
 
@@ -72,6 +72,20 @@ def _mirror(line: str) -> list[str]:
     if value != "THIS":
         raise ValueError(f"a stored scope must be assigned from THIS, not {value!r}")
     return [line, f"{indent}ROOT = {{ set_variable = {{ {name} = PREV }} }}"]
+
+
+_READ = re.compile(r"var:(?!ROOT\.)(ccp_[a-z0-9_]+)")
+
+
+def _qualify_reads(text: str) -> str:
+    """Name the scope a stored variable is read from.
+
+    A variable belongs to the scope that set it. Bare `var:name` therefore reads
+    nothing once an effect has stepped into another country or a state, and the
+    block it guards is skipped without a word in error.log. The panel keeps its
+    variables on ROOT, so every read says so.
+    """
+    return _READ.sub(lambda m: f"var:ROOT.{m.group(1)}", text)
 
 
 def _swap(text: str) -> str:
@@ -95,7 +109,7 @@ def globalise_script(text: str) -> str:
             swapped = '"'.join(parts)
         else:
             swapped = _swap(line)
-        out.extend(_mirror(swapped))
+        out.extend(_mirror(_qualify_reads(swapped)))
     return "\n".join(out) + ("\n" if text.endswith("\n") else "")
 
 

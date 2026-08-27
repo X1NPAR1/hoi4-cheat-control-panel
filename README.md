@@ -74,12 +74,16 @@ loads exactly ten localisation folders, listed in the game's own
 `extras/language_overlays/` under English keys and are applied on request:
 
 ```bash
-python tools/install_local.py
-python tools/set_panel_language.py turkish    # or: dutch
+python tools/install_local.py --language turkish    # or: dutch, english
 ```
 
-That changes the panel only; the game stays in whatever language you had.
-Reinstalling resets the panel to English.
+That changes the panel only; the game stays in whatever language you had. A later
+`install_local.py` with no `--language` keeps the overlay already in place, so
+reinstalling no longer drops the panel back to English.
+
+Equipment and technology names are the exception: they come from the game's own
+localisation, which has no Turkish or Dutch, so those names stay in your game
+language. The panel translates everything it owns.
 
 ## Requirements
 

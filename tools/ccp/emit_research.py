@@ -9,6 +9,9 @@ from .technology import Technology, group_by_folder
 PAGE_SIZE = 16
 
 
+EVERYTHING_PASSES = 3
+
+
 def _folder_router(writer: Writer, folders: list[str], prefix: str) -> None:
     for position, name in enumerate(folders):
         keyword = "if" if position == 0 else "else_if"
@@ -120,8 +123,13 @@ def emit_research_effects(catalogue: list[Technology], version: str) -> str:
         writer.blank()
 
     writer.open("CCP_research_grant_everything")
-    for name in folders:
-        writer.line(f"CCP_research_all_{name} = yes")
+    # Three passes. A technology whose prerequisite sits in a folder granted later
+    # is refused on the pass that reaches it, so one sweep leaves the deepest tiers
+    # unresearched. Each pass unlocks what the pass before it made reachable, and
+    # by the third nothing new is left; a granted technology is a no-op.
+    for _ in range(EVERYTHING_PASSES):
+        for name in folders:
+            writer.line(f"CCP_research_all_{name} = yes")
     writer.line(f"set_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
