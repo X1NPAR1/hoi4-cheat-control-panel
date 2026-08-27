@@ -9,7 +9,14 @@ from __future__ import annotations
 
 from .emit import BANNER, Writer
 from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_containers
-from .actions import ALL as COUNTRY_ACTIONS
+from .actions import (
+    ALL as COUNTRY_ACTIONS,
+    SPAWN_COUNTS,
+    SPAWN_TEMPLATES,
+    action_levels,
+    generic_id,
+    level_id,
+)
 from .countries import ACTIONS, PAGE_SIZE as COUNTRY_PAGE_SIZE
 
 # The permissive half of the diplomacy rules the engine exposes to script. This is
@@ -414,7 +421,37 @@ def emit_country_effects(version: str) -> str:
     writer.open("CCP_country_cancel")
     writer.line("set_variable = { ccp_modal_open = 0 }")
     writer.line("set_variable = { ccp_pending_action = 0 }")
+    writer.line("set_variable = { ccp_pending_generic = 0 }")
     writer.line(f"set_variable = {{ ccp_status = {status.ACTION_CANCELLED} }}")
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_confirm_apply")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_pending_action > 0 }")
+    writer.close()
+    writer.line("CCP_country_apply = yes")
+    writer.close()
+    writer.open("else")
+    writer.line("CCP_generic_apply = yes")
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    writer.open("CCP_generic_apply")
+    for action, level in action_levels():
+        if not action.confirm:
+            continue
+        writer.open("if" if generic_id(action, level) == 1 else "else_if")
+        writer.open("limit")
+        writer.line(f"check_variable = {{ ccp_pending_generic = {generic_id(action, level)} }}")
+        writer.close()
+        writer.line(f"CCP_action_{action.slug}_{level_id(level)} = yes")
+        writer.close()
+    writer.line("set_variable = { ccp_pending_generic = 0 }")
+    writer.line("set_variable = { ccp_modal_open = 0 }")
     writer.line("CCP_mark_dirty = yes")
     writer.close()
     writer.blank()
@@ -531,18 +568,69 @@ def emit_action_effects(version: str) -> str:
     writer = Writer()
     _banner(writer, version)
 
-    for action in COUNTRY_ACTIONS:
-        writer.open(f"CCP_action_{action.slug}")
-        for line in action.body:
+    _emit_division_templates(writer)
+
+    for index, (action, level) in enumerate(action_levels(), start=1):
+        writer.open(f"CCP_action_{action.slug}_{level_id(level)}")
+        for line in action.build(level):
             writer.line(line)
         writer.line(f"set_variable = {{ ccp_status = {status.NATION_ACTION} }}")
-        writer.line(f"set_variable = {{ ccp_last_action = {COUNTRY_ACTIONS.index(action) + 1} }}")
+        writer.line(f"set_variable = {{ ccp_last_action = {index} }}")
         writer.line("CCP_history_record = yes")
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
 
     return writer.text()
+
+
+def _emit_division_templates(writer: Writer) -> None:
+    """Templates the panel spawns from.
+
+    `create_unit` needs a template by name and the player's own templates cannot be
+    read at runtime, so the panel brings its own. They appear in the player's
+    template list, which the help text says outright.
+    """
+    writer.open("CCP_ensure_templates")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("NOT = { has_country_flag = ccp_templates_ready }")
+    writer.close()
+    writer.line("set_country_flag = ccp_templates_ready")
+    for slug, (name, regiments, support) in SPAWN_TEMPLATES.items():
+        writer.open("division_template")
+        writer.line(f'name = "{name}"')
+        writer.open("regiments")
+        # Slots are unique across the whole block, so the units are laid out in one
+        # sequence rather than each type restarting at the first column.
+        slot = 0
+        for unit, count in regiments:
+            for _ in range(count):
+                writer.line(f"{unit} = {{ x = {slot // 5} y = {slot % 5} }}")
+                slot += 1
+        writer.close()
+        writer.open("support")
+        for slot, unit in enumerate(support):
+            writer.line(f"{unit} = {{ x = 0 y = {slot} }}")
+        writer.close()
+        writer.close()
+    writer.close()
+    writer.close()
+    writer.blank()
+
+    for slug, (name, _regiments, _support) in SPAWN_TEMPLATES.items():
+        for count in SPAWN_COUNTS:
+            writer.open(f"CCP_spawn_{slug}_{count}")
+            for number in range(count):
+                writer.open("create_unit")
+                writer.line(
+                    f'division = "name = \\"CCP {slug.title()} {number + 1}\\" '
+                    f'division_template = \\"{name}\\" start_experience_factor = 0.5"'
+                )
+                writer.line("owner = PREV")
+                writer.close()
+            writer.close()
+            writer.blank()
 
 
 HISTORY_LENGTH = 10
@@ -582,12 +670,12 @@ def emit_history_effects(version: str) -> str:
         writer.blank()
 
     writer.open("CCP_action_replay")
-    for index, action in enumerate(COUNTRY_ACTIONS, start=1):
+    for index, (action, level) in enumerate(action_levels(), start=1):
         writer.open("if" if index == 1 else "else_if")
         writer.open("limit")
         writer.line(f"check_variable = {{ ccp_last_action = {index} }}")
         writer.close()
-        writer.line(f"CCP_action_{action.slug} = yes")
+        writer.line(f"CCP_action_{action.slug}_{level_id(level)} = yes")
         writer.close()
     writer.close()
 
@@ -671,7 +759,7 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.line("CCP_country_cancel = yes")
     writer.close()
     writer.open("ccp_modal_confirm_click")
-    writer.line("CCP_country_apply = yes")
+    writer.line("CCP_confirm_apply = yes")
     writer.close()
     writer.close()
     writer.close()
@@ -803,9 +891,23 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.open(f"ccp_state_entry_{action.slug}_click")
         writer.line(f"CCP_state_{action.slug} = yes")
         writer.close()
-    for action in COUNTRY_ACTIONS:
-        writer.open(f"ccp_action_{action.slug}_run_click")
-        writer.line(f"CCP_action_{action.slug} = yes")
+    for action, level in action_levels():
+        writer.open(f"ccp_action_{action.slug}_{level_id(level)}_click")
+        if action.confirm:
+            writer.line(f"set_variable = {{ ccp_pending_generic = {generic_id(action, level)} }}")
+            writer.open("if")
+            writer.open("limit")
+            writer.line("check_variable = { ccp_confirm_destructive = 1 }")
+            writer.close()
+            writer.line("set_variable = { ccp_pending_action = 0 }")
+            writer.line("set_variable = { ccp_modal_open = 1 }")
+            writer.line("CCP_mark_dirty = yes")
+            writer.close()
+            writer.open("else")
+            writer.line(f"CCP_action_{action.slug}_{level_id(level)} = yes")
+            writer.close()
+        else:
+            writer.line(f"CCP_action_{action.slug}_{level_id(level)} = yes")
         writer.close()
     writer.open("ccp_history_clear_click")
     writer.line("CCP_history_clear = yes")
@@ -1057,7 +1159,7 @@ def emit_scripted_localisation(version: str) -> str:
         "CCP_GetLastAction",
         [
             (f"check_variable = {{ ccp_last_action = {index} }}", action.key)
-            for index, action in enumerate(COUNTRY_ACTIONS, start=1)
+            for index, (action, _level) in enumerate(action_levels(), start=1)
         ],
         COUNTRY_ACTIONS[0].key,
     )

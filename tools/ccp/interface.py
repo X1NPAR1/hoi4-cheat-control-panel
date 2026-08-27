@@ -92,7 +92,7 @@ def right_aligned_row(
         x += width + gap
     return buttons, total
 
-from .actions import BY_SECTION as ACTION_SECTIONS
+from .actions import BY_SECTION as ACTION_SECTIONS, level_id
 from .countries import ACTIONS
 from .states import ACTIONS as STATE_ACTIONS, PAGE_SIZE as STATE_PAGE_SIZE
 from .sections import HOTKEYS, SECTIONS
@@ -1241,14 +1241,87 @@ def state_picker_window() -> Container:
     return window
 
 
-ACTION_COLUMNS = 3
+ACTION_COLUMNS = 4
 ACTION_CARD_GAP = 16
-ACTION_CARD_WIDTH = (t.CONTENT_WIDTH - 48 - 2 * ACTION_CARD_GAP) // 3
-ACTION_CARD_HEIGHT = 118
+ACTION_CARD_WIDTH = (
+    t.CONTENT_WIDTH - 48 - (ACTION_COLUMNS - 1) * ACTION_CARD_GAP
+) // ACTION_COLUMNS
+ACTION_CARD_HEIGHT = 130
+
+
+ACTION_LEVEL_HEIGHT = 26
+ACTION_LEVEL_GAP = 5
+
+
+def _action_card(action, x: int, y: int) -> Container:
+    """One action: a title, its explanation, and a button for every level it offers."""
+    card = Container(
+        f"ccp_action_{action.slug}",
+        x,
+        y,
+        width=ACTION_CARD_WIDTH,
+        height=ACTION_CARD_HEIGHT,
+    )
+    card.add(
+        Icon(
+            f"ccp_action_{action.slug}_plate",
+            0,
+            0,
+            sprite="GFX_ccp_plate_action",
+        ),
+        Text(
+            f"ccp_action_{action.slug}_title",
+            14,
+            9,
+            key=action.key,
+            width=ACTION_CARD_WIDTH - 28,
+            height=34,
+            font="hoi_18mbs",
+        ),
+        Text(
+            f"ccp_action_{action.slug}_help",
+            14,
+            44,
+            key=f"{action.key}_HELP",
+            width=ACTION_CARD_WIDTH - 28,
+            height=ACTION_CARD_HEIGHT - ACTION_LEVEL_HEIGHT - 58,
+        ),
+    )
+
+    sprite = "GFX_ccp_button_small_danger" if action.danger else "GFX_ccp_button_small"
+    widths = [
+        max(
+            t.SMALL_BUTTON_MIN_WIDTH,
+            t.text_width(action.caption(level)) + t.SMALL_BUTTON_PADDING,
+        )
+        for level in action.levels
+    ]
+    span = sum(widths) + ACTION_LEVEL_GAP * (len(widths) - 1)
+    slot = 14
+    if span > ACTION_CARD_WIDTH - 28:
+        # Too many levels to sit side by side; share the row evenly instead.
+        each = (ACTION_CARD_WIDTH - 28 - ACTION_LEVEL_GAP * (len(widths) - 1)) // len(widths)
+        widths = [each] * len(widths)
+
+    for level, width in zip(action.levels, widths):
+        card.add(
+            Button(
+                f"ccp_action_{action.slug}_{level_id(level)}",
+                slot,
+                ACTION_CARD_HEIGHT - ACTION_LEVEL_HEIGHT - 10,
+                sprite=sprite,
+                key=f"{action.key}_{level_id(level)}",
+                tooltip=f"{action.key}_TOOLTIP",
+                width=width,
+                height=ACTION_LEVEL_HEIGHT,
+            )
+        )
+        slot += width + ACTION_LEVEL_GAP
+    return card
 
 
 def _action_section(slug: str) -> Container:
-    """A grid of one-click country actions, each with its own explanation."""
+    """A grid of country actions, each offering several amounts."""
     section = Container(f"ccp_section_{slug}", 0, 0, width=t.PANEL_WIDTH, height=t.PANEL_HEIGHT)
     section.add(
         Text(
@@ -1264,42 +1337,13 @@ def _action_section(slug: str) -> Container:
     for index, action in enumerate(ACTION_SECTIONS[slug]):
         column = index % ACTION_COLUMNS
         row = index // ACTION_COLUMNS
-        x = CONTENT_X + column * (ACTION_CARD_WIDTH + ACTION_CARD_GAP)
-        y = BODY_TOP + 30 + row * (ACTION_CARD_HEIGHT + ACTION_CARD_GAP)
-        card = Container(
-            f"ccp_action_{action.slug}",
-            x,
-            y,
-            width=ACTION_CARD_WIDTH,
-            height=ACTION_CARD_HEIGHT,
+        section.add(
+            _action_card(
+                action,
+                CONTENT_X + column * (ACTION_CARD_WIDTH + ACTION_CARD_GAP),
+                BODY_TOP + 30 + row * (ACTION_CARD_HEIGHT + ACTION_CARD_GAP),
+            )
         )
-        card.add(
-            Icon(
-                f"ccp_action_{action.slug}_plate",
-                0,
-                0,
-                sprite="GFX_ccp_plate_action",
-            ),
-            Text(
-                f"ccp_action_{action.slug}_help",
-                14,
-                12,
-                key=f"{action.key}_HELP",
-                width=ACTION_CARD_WIDTH - 28,
-                height=ACTION_CARD_HEIGHT - t.BUTTON_HEIGHT - 30,
-            ),
-            Button(
-                f"ccp_action_{action.slug}_run",
-                14,
-                ACTION_CARD_HEIGHT - t.BUTTON_HEIGHT - 12,
-                sprite="GFX_ccp_button_danger" if action.danger else "GFX_ccp_button",
-                key=action.key,
-                tooltip=f"{action.key}_TOOLTIP",
-                width=min(ACTION_CARD_WIDTH - 24, button_width(action.key)),
-                height=t.BUTTON_HEIGHT,
-            ),
-        )
-        section.add(card)
     return section
 
 

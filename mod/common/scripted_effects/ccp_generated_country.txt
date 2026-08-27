@@ -150,7 +150,86 @@ CCP_country_request_playas = {
 CCP_country_cancel = {
 	set_variable = { global.ccp_modal_open = 0 }
 	set_variable = { global.ccp_pending_action = 0 }
+	set_variable = { ccp_pending_generic = 0 }
 	set_variable = { global.ccp_status = 9 }
+	CCP_mark_dirty = yes
+}
+
+CCP_confirm_apply = {
+	if = {
+		limit = {
+			check_variable = { global.ccp_pending_action > 0 }
+		}
+		CCP_country_apply = yes
+	}
+	else = {
+		CCP_generic_apply = yes
+	}
+}
+
+CCP_generic_apply = {
+	if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 1 }
+		}
+		CCP_action_stability_zero_0 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 2 }
+		}
+		CCP_action_war_support_zero_0 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 3 }
+		}
+		CCP_action_ruling_democratic_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 4 }
+		}
+		CCP_action_ruling_communism_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 5 }
+		}
+		CCP_action_ruling_fascism_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 6 }
+		}
+		CCP_action_ruling_neutrality_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 7 }
+		}
+		CCP_action_civil_war_25 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 8 }
+		}
+		CCP_action_civil_war_50 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 9 }
+		}
+		CCP_action_civil_war_75 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 10 }
+		}
+		CCP_action_delete_units_0 = yes
+	}
+	set_variable = { ccp_pending_generic = 0 }
+	set_variable = { global.ccp_modal_open = 0 }
 	CCP_mark_dirty = yes
 }
 

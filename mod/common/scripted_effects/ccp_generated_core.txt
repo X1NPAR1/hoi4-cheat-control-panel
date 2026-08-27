@@ -118,30 +118,51 @@ CCP_show_nation = {
 	CCP_mark_dirty = yes
 }
 
-CCP_show_construction = {
+CCP_show_politics = {
 	set_variable = { global.ccp_section = 8 }
 	set_variable = { ccp_nav_highlight_y = 350 }
 	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
-CCP_show_commanders = {
+CCP_show_construction = {
 	set_variable = { global.ccp_section = 9 }
 	set_variable = { ccp_nav_highlight_y = 386 }
 	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
-CCP_show_history = {
+CCP_show_stockpile = {
 	set_variable = { global.ccp_section = 10 }
 	set_variable = { ccp_nav_highlight_y = 422 }
 	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
 
-CCP_show_settings = {
+CCP_show_military = {
 	set_variable = { global.ccp_section = 11 }
 	set_variable = { ccp_nav_highlight_y = 458 }
+	set_variable = { global.ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_commanders = {
+	set_variable = { global.ccp_section = 12 }
+	set_variable = { ccp_nav_highlight_y = 494 }
+	set_variable = { global.ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_history = {
+	set_variable = { global.ccp_section = 13 }
+	set_variable = { ccp_nav_highlight_y = 530 }
+	set_variable = { global.ccp_status = 0 }
+	CCP_mark_dirty = yes
+}
+
+CCP_show_settings = {
+	set_variable = { global.ccp_section = 14 }
+	set_variable = { ccp_nav_highlight_y = 566 }
 	set_variable = { global.ccp_status = 0 }
 	CCP_mark_dirty = yes
 }
