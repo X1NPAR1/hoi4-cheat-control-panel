@@ -353,7 +353,7 @@ def check_effect_vocabulary(mod_dir: Path, game_dir: Path | None, report: Report
 
 
 ICON_WITH_SIZE = re.compile(r"iconType = \{(?:[^{}]|\{[^{}]*\})*?\bsize\s*=")
-BARE_READ = re.compile(r"var:(?!ROOT\.|global\.)ccp_")
+BARE_READ = re.compile(r"var:(?!ROOT\.|global\.)(ccp_[a-z0-9_]+)")
 SHORTHAND_COMPARE = re.compile(r"check_variable = \{[^{}]*[<>]=")
 
 
@@ -408,8 +408,12 @@ def check_variable_reads_name_a_scope(mod_dir: Path, report: Report) -> None:
     """
     for path in sorted((mod_dir / "common").rglob("*.txt")):
         text = path.read_text(encoding="utf-8-sig", errors="replace")
+        temps = set(TEMP_DECL.findall(text))
         for number, line in enumerate(text.splitlines(), start=1):
-            if BARE_READ.search(line):
+            for match in BARE_READ.finditer(line):
+                name = line[match.start() + len("var:") :].split()[0].rstrip("^.= }")
+                if name in temps:
+                    continue  # a temp lives in the effect, not in a scope
                 report.error(f"{path}:{number}: `var:` read does not name a scope")
 
 
@@ -468,6 +472,32 @@ def check_installed_copy_is_shippable(repo_root: Path, report: Report) -> None:
             )
 
 
+TEMP_DECL = re.compile(
+    r"(?:set|add_to|subtract_from|multiply|divide|modulo|clamp)_temp_variable = \{\s*(?:var = )?(ccp_[a-z0-9_]+)"
+)
+
+
+def check_temp_variables_are_unqualified(mod_dir: Path, report: Report) -> None:
+    """A temp variable must never be read as `var:ROOT.name`.
+
+    A temp belongs to the running effect, not to a country, so ROOT-qualifying it
+    reads a country variable that was never set: zero. That is not a crash and not
+    a log line, it is a list that draws nothing. It shipped once as
+    `ccp_page_last = var:ROOT.ccp_page_first`, which pinned every page's last slot
+    to 15 and left page two of Countries and States empty.
+    """
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        temps = set(TEMP_DECL.findall(text))
+        for number, line in enumerate(text.splitlines(), start=1):
+            for name in temps:
+                if f"var:ROOT.{name}" in line:
+                    report.error(
+                        f"{path}:{number}: `{name}` is a temp variable, so "
+                        f"`var:ROOT.{name}` reads nothing"
+                    )
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -479,6 +509,7 @@ ALL_CHECKS = [
     ("gui property grammar", lambda repo, mod, rep: check_gui_property_grammar(mod, rep)),
     ("variable comparisons", lambda repo, mod, rep: check_variable_comparisons(mod, rep)),
     ("variable scope entry", lambda repo, mod, rep: check_variable_scope_entry(mod, rep)),
+    ("temp variables", lambda repo, mod, rep: check_temp_variables_are_unqualified(mod, rep)),
     ("variable reads", lambda repo, mod, rep: check_variable_reads_name_a_scope(mod, rep)),
     ("generated banners", lambda repo, mod, rep: check_generated_banners(mod, rep)),
     ("placeholders", lambda repo, mod, rep: check_no_placeholders(mod, rep)),

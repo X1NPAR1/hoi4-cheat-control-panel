@@ -733,7 +733,7 @@
  CCP_STATUS_GOODWILL_ON:0 "Tous les pays vous voient désormais très favorablement."
  CCP_STATUS_GRANTED:0 "[?ccp_granted_amount|0] [CCP_GetGrantedResource] ajouté."
  CCP_STATUS_HOTKEY:0 "Raccourci défini sur [CCP_GetHotkeyName]."
- CCP_STATUS_IDLE:0 "Panneau de triche 3.1.1 · Hearts of Iron IV 1.19 · solo"
+ CCP_STATUS_IDLE:0 "Panneau de triche 3.1.2 · Hearts of Iron IV 1.19 · solo"
  CCP_STATUS_NO_TARGET:0 "Choisissez d abord un pays dans la section Pays ; cette action exige une cible."
  CCP_STATUS_OVERFLOW:0 "Les effectifs sont déjà proches de la limite que le jeu peut stocker. En ajouter rendrait la valeur négative, rien n a donc été ajouté."
  CCP_STATUS_SELECTION:0 "Rien n était sélectionné, donc rien n a été ajouté. Choisissez d abord une catégorie, puis une ligne."

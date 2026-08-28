@@ -19,7 +19,7 @@ CCP_state_recount_pages = {
 	clamp_variable = { var = ccp_state_pages_last min = 0 }
 	set_temp_variable = { ccp_page_remainder = ccp_state_pages_last }
 	modulo_temp_variable = { ccp_page_remainder = 14 }
-	subtract_from_variable = { ccp_state_pages_last = var:ROOT.ccp_page_remainder }
+	subtract_from_variable = { ccp_state_pages_last = var:ccp_page_remainder }
 	divide_variable = { ccp_state_pages_last = 14 }
 }
 
@@ -31,7 +31,7 @@ CCP_state_load_page = {
 	add_to_variable = { ccp_state_pages_shown = 1 }
 	set_temp_variable = { ccp_page_first = var:ROOT.ccp_state_page }
 	multiply_temp_variable = { ccp_page_first = 14 }
-	set_temp_variable = { ccp_page_last = var:ROOT.ccp_page_first }
+	set_temp_variable = { ccp_page_last = var:ccp_page_first }
 	add_to_temp_variable = { ccp_page_last = 13 }
 	for_loop_effect = {
 		start = 0

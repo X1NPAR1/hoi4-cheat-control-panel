@@ -77,7 +77,25 @@ def _mirror(line: str) -> list[str]:
 _READ = re.compile(r"var:(?!ROOT\.)(ccp_[a-z0-9_]+)")
 
 
-def _qualify_reads(text: str) -> str:
+TEMP_ASSIGN = re.compile(
+    r"(?:set|add_to|subtract_from|multiply|divide|modulo|clamp)_temp_variable = \{\s*(?:var = )?(ccp_[a-z0-9_]+)"
+)
+LOOP_VALUE = re.compile(r"^\s*value = (ccp_[a-z0-9_]+)\s*$", re.M)
+
+
+def _temp_names(text: str) -> set[str]:
+    """Names that live in the effect's temporary scope rather than on a country.
+
+    A temp variable belongs to the running effect, not to ROOT, so qualifying a
+    read of one with `var:ROOT.` points it at a country variable that was never
+    set -- which reads zero. That is what broke list paging: `ccp_page_last` came
+    out as 0 + 15 on every page, so page two asked for slots at once >= 16 and
+    <= 15 and drew nothing.
+    """
+    return set(TEMP_ASSIGN.findall(text)) | set(LOOP_VALUE.findall(text))
+
+
+def _qualify_reads(text: str, temps: set[str]) -> str:
     """Name the scope a stored variable is read from.
 
     A variable belongs to the scope that set it. Bare `var:name` therefore reads
@@ -85,7 +103,10 @@ def _qualify_reads(text: str) -> str:
     block it guards is skipped without a word in error.log. The panel keeps its
     variables on ROOT, so every read says so.
     """
-    return _READ.sub(lambda m: f"var:ROOT.{m.group(1)}", text)
+    return _READ.sub(
+        lambda m: m.group(0) if m.group(1) in temps else f"var:ROOT.{m.group(1)}",
+        text,
+    )
 
 
 def _swap(text: str) -> str:
@@ -101,6 +122,7 @@ def globalise_script(text: str) -> str:
     Quoted words are widget and window names, not variables, so they are copied
     through untouched.
     """
+    temps = _temp_names(text)
     out: list[str] = []
     for line in text.splitlines():
         if '"' in line:
@@ -109,7 +131,7 @@ def globalise_script(text: str) -> str:
             swapped = '"'.join(parts)
         else:
             swapped = _swap(line)
-        out.extend(_mirror(_qualify_reads(swapped)))
+        out.extend(_mirror(_qualify_reads(swapped, temps)))
     return "\n".join(out) + ("\n" if text.endswith("\n") else "")
 
 

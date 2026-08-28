@@ -324,7 +324,7 @@ CCP_pad_digit_9 = {
 CCP_pad_backspace = {
 	set_temp_variable = { ccp_pad_last = var:ROOT.ccp_amount }
 	modulo_temp_variable = { ccp_pad_last = 10 }
-	subtract_from_variable = { ccp_amount = var:ROOT.ccp_pad_last }
+	subtract_from_variable = { ccp_amount = var:ccp_pad_last }
 	divide_variable = { ccp_amount = 10 }
 	CCP_mark_dirty = yes
 }
@@ -368,10 +368,10 @@ CCP_grant_political_power_custom = {
 		min = 0
 		max = 1000000
 	}
-	add_political_power = var:ROOT.ccp_grant
+	add_political_power = var:ccp_grant
 	set_variable = { global.ccp_status = 4 }
 	set_variable = { ccp_granted_resource = 1 }
-	set_variable = { ccp_granted_amount = var:ROOT.ccp_grant }
+	set_variable = { ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
@@ -414,10 +414,10 @@ CCP_grant_command_power_custom = {
 		min = 0
 		max = 100
 	}
-	add_command_power = var:ROOT.ccp_grant
+	add_command_power = var:ccp_grant
 	set_variable = { global.ccp_status = 4 }
 	set_variable = { ccp_granted_resource = 2 }
-	set_variable = { ccp_granted_amount = var:ROOT.ccp_grant }
+	set_variable = { ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
@@ -496,10 +496,10 @@ CCP_grant_manpower_custom = {
 			min = 0
 			max = 50000000
 		}
-		add_manpower = var:ROOT.ccp_grant
+		add_manpower = var:ccp_grant
 		set_variable = { global.ccp_status = 4 }
 		set_variable = { ccp_granted_resource = 3 }
-		set_variable = { ccp_granted_amount = var:ROOT.ccp_grant }
+		set_variable = { ccp_granted_amount = var:ccp_grant }
 	}
 	else = {
 		set_variable = { global.ccp_status = 12 }
@@ -546,10 +546,10 @@ CCP_grant_army_experience_custom = {
 		min = 0
 		max = 100000
 	}
-	army_experience = var:ROOT.ccp_grant
+	army_experience = var:ccp_grant
 	set_variable = { global.ccp_status = 4 }
 	set_variable = { ccp_granted_resource = 4 }
-	set_variable = { ccp_granted_amount = var:ROOT.ccp_grant }
+	set_variable = { ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
@@ -592,10 +592,10 @@ CCP_grant_navy_experience_custom = {
 		min = 0
 		max = 100000
 	}
-	navy_experience = var:ROOT.ccp_grant
+	navy_experience = var:ccp_grant
 	set_variable = { global.ccp_status = 4 }
 	set_variable = { ccp_granted_resource = 5 }
-	set_variable = { ccp_granted_amount = var:ROOT.ccp_grant }
+	set_variable = { ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
@@ -638,10 +638,10 @@ CCP_grant_air_experience_custom = {
 		min = 0
 		max = 100000
 	}
-	air_experience = var:ROOT.ccp_grant
+	air_experience = var:ccp_grant
 	set_variable = { global.ccp_status = 4 }
 	set_variable = { ccp_granted_resource = 6 }
-	set_variable = { ccp_granted_amount = var:ROOT.ccp_grant }
+	set_variable = { ccp_granted_amount = var:ccp_grant }
 	CCP_mark_dirty = yes
 }
 
