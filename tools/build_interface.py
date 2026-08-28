@@ -28,7 +28,7 @@ from ccp.scripts import (
     emit_scripted_gui,
     emit_scripted_localisation,
 )
-from ccp.languages import NATIVE, OVERLAY
+from ccp.languages import NATIVE
 from ccp.strings import emit_localisation
 from generate_data import find_game_dir, game_version
 
@@ -36,7 +36,6 @@ from ccp.globals import globalise_localisation, globalise_script
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MOD = REPO_ROOT / "mod"
-OVERLAYS = REPO_ROOT / "extras" / "language_overlays"
 
 
 def write(path: Path, content: str) -> None:
@@ -107,12 +106,6 @@ def main() -> int:
         write(
             MOD / "localisation" / language / f"ccp_core_l_{language}.yml",
             emit_localisation(language),
-        )
-
-    for language in OVERLAY:
-        write(
-            OVERLAYS / language / f"ccp_core_l_english.yml",
-            emit_localisation(language).replace(f"l_{language}:", "l_english:", 1),
         )
 
     for language_dir in sorted((MOD / "localisation").iterdir()):

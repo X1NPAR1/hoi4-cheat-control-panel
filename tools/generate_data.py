@@ -27,7 +27,7 @@ from ccp.emit_research import emit_research_effects, emit_research_localisation
 from ccp.equipment import group_by_category, load_catalogue
 from ccp.technology import group_by_folder
 from ccp.technology import load_catalogue as load_technologies
-from ccp.languages import NATIVE, OVERLAY
+from ccp.languages import NATIVE
 from ccp.unlocks import equipment_unlocks
 
 from ccp.globals import globalise_localisation, globalise_script
@@ -117,12 +117,6 @@ def main() -> int:
             emit_category_localisation(catalogue, language, version, unlocks),
         )
 
-    for language in OVERLAY:
-        write(
-            REPO_ROOT / "extras" / "language_overlays" / language
-            / "ccp_generated_equipment_l_english.yml",
-            emit_category_localisation(catalogue, language, version, unlocks),
-        )
     technologies = load_technologies(game_dir)
     if not technologies:
         raise SystemExit("No technologies were parsed. The game files may be unreadable.")

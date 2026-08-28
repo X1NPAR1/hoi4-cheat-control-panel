@@ -77,30 +77,16 @@ Sections appear only when they do something. Nothing in the panel is a placehold
 
 ## Languages
 
-The panel ships in **English, German, French and Russian** and follows the game's
-own language setting.
+The panel ships in **English, German, French and Russian**, and follows the game's
+own language setting. Every string it owns is translated; equipment and technology
+names come from the game itself.
 
-**Turkish and Dutch are translated but cannot ship as languages.** Hearts of Iron IV
-loads exactly ten localisation folders, listed in the game's own
-`localisation/languages.yml`, and neither Turkish nor Dutch is among them — a
-`localisation/turkish/` folder is ignored by the engine. Both translations live in
-`extras/language_overlays/` under English keys and are applied on request:
-
-```bash
-python tools/install_local.py --language turkish    # or: dutch, english
-```
-
-That changes the panel only; the game stays in whatever language you had. A later
-`install_local.py` with no `--language` keeps the overlay already in place, so
-reinstalling no longer drops the panel back to English.
-
-Equipment and technology names are the exception: they come from the game's own
-localisation, which has no Turkish or Dutch, so those names stay in your game
-language. The panel translates everything it owns.
-
-This README is written in all six of those languages. The Steam Workshop page
-carries English only: that description field truncates at 8000 bytes of UTF-8,
-and six languages do not fit.
+**Turkish and Dutch were dropped in 3.1.1.** Hearts of Iron IV loads exactly ten
+localisation folders, listed in the game's own `localisation/languages.yml`, and
+neither is among them. They used to travel as an overlay written into the `english`
+folder, which worked until an upload was made while the overlay was applied: every
+English subscriber got Turkish menus. There is no way to offer those languages that
+the engine keeps separate from English, so the panel no longer offers them.
 
 ## Requirements
 
@@ -151,9 +137,9 @@ These are engine limits, verified against the shipped game files, not oversights
 | No keybind remapping API | The hotkey is chosen from a fixed set rather than freely bound |
 | `complete_national_focus` needs a specific focus token, and focus trees cannot be walked at runtime | There is no national focus section |
 | Doctrines are a separate system since 1.19 | `set_technology` does not reach them, so Research does not list them; Nation grants them free instead, through `add_doctrine_cost_reduction` |
-| Only ten localisation folders exist | Turkish and Dutch ship as an overlay rather than as selectable languages |
+| `add_equipment_to_stockpile` refuses ships and railway guns | They are built as units, so they are not listed |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` are console switches with no scripted equivalent | Absent. Where a native effect gives the same outcome — instant construction, diplomatic rules — the panel uses that instead |
-| Equipment display names differ per language | There is no A-Z filter: filing rows under an English initial would be wrong in the other five languages. Categories, paging and the locked-item marking cover the same need |
+| Equipment display names differ per language | There is no A-Z filter: filing rows under an English initial would be wrong in the other three. Categories, paging and the locked-item marking cover the same need |
 
 ## How it is built
 
@@ -250,25 +236,15 @@ Bölümler yalnızca bir iş yapıyorlarsa görünür. Panelde hiçbir şey süs
 ## Diller
 
 Panel **İngilizce, Almanca, Fransızca ve Rusça** dillerinde gelir ve oyunun kendi dil
-ayarını izler.
+ayarını izler. Panelin sahip olduğu her metin çevrilidir; teçhizat ve teknoloji adları
+oyunun kendisinden gelir.
 
-**Türkçe ve Felemenkçe çevrildi ama dil olarak gönderilemiyor.** Hearts of Iron IV tam
-olarak on yerelleştirme klasörü yükler; bunlar oyunun kendi `localisation/languages.yml`
-dosyasında listelidir ve Türkçe de Felemenkçe de aralarında değildir — bir
-`localisation/turkish/` klasörünü motor görmezden gelir. Her iki çeviri de
-`extras/language_overlays/` altında İngilizce anahtarlarla durur ve istendiğinde uygulanır:
-
-```bash
-python tools/install_local.py --language turkish    # ya da: dutch, english
-```
-
-Bu yalnızca paneli değiştirir; oyun hangi dildeyse öyle kalır. Sonradan `--language`
-vermeden çalıştırılan bir `install_local.py`, yerindeki kaplamayı korur; yani yeniden
-kurmak paneli artık İngilizceye döndürmez.
-
-Teçhizat ve teknoloji **adları** istisnadır: bunlar oyunun kendi yerelleştirmesinden gelir
-ve orada Türkçe ile Felemenkçe yoktur, dolayısıyla o adlar oyun dilinizde kalır. Panel
-kendi sahip olduğu her metni çevirir.
+**Türkçe ve Felemenkçe 3.1.1'de kaldırıldı.** Hearts of Iron IV tam olarak on
+yerelleştirme klasörü yükler — oyunun kendi `localisation/languages.yml` dosyasında
+listelidir — ve ikisi de aralarında değildir. Eskiden `english` klasörünün üzerine
+yazılan bir kaplama olarak geliyorlardı; ta ki kaplama uygulanmışken bir yükleme
+yapılana kadar: İngilizce oynayan herkese Türkçe menüler gitti. Bu dilleri motorun
+İngilizceden ayrı tutacağı bir yol yok, bu yüzden panel artık onları sunmuyor.
 
 ## Gereksinimler
 
@@ -321,9 +297,8 @@ sınırlarıdır.
 | `complete_national_focus` belirli bir odak kimliği ister, odak ağaçları da çalışma anında gezilemez | Ulusal odak bölümü yoktur |
 | Doktrinler 1.19'dan beri ayrı bir sistemdir | `set_technology` onlara ulaşmaz, bu yüzden Araştırma onları listelemez; Ulus bölümü bunun yerine `add_doctrine_cost_reduction` ile onları ücretsiz yapar |
 | `add_equipment_to_stockpile` gemileri ve demiryolu toplarını reddeder | Bunlar birlik olarak üretilir, bu yüzden listelenmezler |
-| Yalnızca on yerelleştirme klasörü vardır | Türkçe ve Felemenkçe, seçilebilir dil olarak değil, kaplama olarak gelir |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` yerel karşılığı olmayan konsol anahtarlarıdır | Yoklar. Aynı sonucu veren yerel bir efekt varsa — anında inşaat, diplomasi kuralları — panel onu kullanır |
-| Teçhizat adları dile göre değişir | A-Z filtresi yoktur: satırları İngilizce baş harfe göre sıralamak diğer beş dilde yanlış olurdu. Kategoriler, sayfalama ve kilitli öğe işareti aynı ihtiyacı karşılar |
+| Teçhizat adları dile göre değişir | A-Z filtresi yoktur: satırları İngilizce baş harfe göre sıralamak diğer üç dilde yanlış olurdu. Kategoriler, sayfalama ve kilitli öğe işareti aynı ihtiyacı karşılar |
 
 ## Nasıl derleniyor
 
@@ -421,26 +396,15 @@ Bereiche erscheinen nur, wenn sie etwas tun. Nichts im Panel ist ein Platzhalter
 ## Sprachen
 
 Das Panel erscheint auf **Englisch, Deutsch, Französisch und Russisch** und folgt der
-Spracheinstellung des Spiels.
+Spracheinstellung des Spiels. Jeder Text, der ihm gehört, ist übersetzt; Namen von
+Ausrüstung und Technologie stammen aus dem Spiel selbst.
 
-**Türkisch und Niederländisch sind übersetzt, können aber nicht als Sprachen ausgeliefert
-werden.** Hearts of Iron IV lädt genau zehn Lokalisierungsordner, aufgeführt in der
-spieleigenen `localisation/languages.yml`, und weder Türkisch noch Niederländisch ist
-darunter — einen Ordner `localisation/turkish/` ignoriert die Engine. Beide Übersetzungen
-liegen unter `extras/language_overlays/` mit englischen Schlüsseln und werden auf Wunsch
-angewandt:
-
-```bash
-python tools/install_local.py --language turkish    # oder: dutch, english
-```
-
-Das ändert nur das Panel; das Spiel bleibt in Ihrer bisherigen Sprache. Ein späteres
-`install_local.py` ohne `--language` behält das bereits vorhandene Overlay, sodass ein
-erneutes Installieren das Panel nicht mehr auf Englisch zurücksetzt.
-
-Ausrüstungs- und Technologienamen sind die Ausnahme: sie stammen aus der Lokalisierung des
-Spiels, die kein Türkisch und kein Niederländisch kennt, also bleiben diese Namen in Ihrer
-Spielsprache. Alles, was dem Panel selbst gehört, ist übersetzt.
+**Türkisch und Niederländisch sind mit 3.1.1 entfallen.** Hearts of Iron IV lädt genau
+zehn Lokalisierungsordner, aufgeführt in der spieleigenen `localisation/languages.yml`,
+und keiner von beiden ist darunter. Sie reisten früher als Overlay im `english`-Ordner
+mit -- bis ein Upload erfolgte, während das Overlay lag: Alle englischen Abonnenten
+bekamen türkische Menüs. Es gibt keinen Weg, diese Sprachen anzubieten, den die Engine
+von Englisch trennt, also bietet das Panel sie nicht mehr an.
 
 ## Voraussetzungen
 
@@ -493,9 +457,8 @@ Das sind Grenzen der Engine, geprüft an den mitgelieferten Spieldateien, keine 
 | `complete_national_focus` braucht ein konkretes Fokus-Token, und Fokusbäume sind zur Laufzeit nicht begehbar | Es gibt keinen Fokus-Bereich |
 | Doktrinen sind seit 1.19 ein eigenes System | `set_technology` erreicht sie nicht, deshalb listet Forschung sie nicht; der Bereich Nation macht sie stattdessen über `add_doctrine_cost_reduction` kostenlos |
 | `add_equipment_to_stockpile` verweigert Schiffe und Eisenbahngeschütze | Sie werden als Einheiten gebaut und daher nicht gelistet |
-| Es gibt nur zehn Lokalisierungsordner | Türkisch und Niederländisch kommen als Overlay statt als wählbare Sprachen |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` sind Konsolenschalter ohne Skript-Entsprechung | Nicht vorhanden. Wo ein nativer Effekt dasselbe bewirkt — Sofortbau, Diplomatieregeln — nutzt das Panel diesen |
-| Anzeigenamen von Ausrüstung unterscheiden sich je Sprache | Es gibt keinen A-Z-Filter: eine Einordnung nach englischem Anfangsbuchstaben wäre in den anderen fünf Sprachen falsch. Kategorien, Seiten und die Markierung gesperrter Einträge decken dasselbe Bedürfnis ab |
+| Anzeigenamen von Ausrüstung unterscheiden sich je Sprache | Es gibt keinen A-Z-Filter: eine Einordnung nach englischem Anfangsbuchstaben wäre in den anderen drei Sprachen falsch. Kategorien, Seiten und die Markierung gesperrter Einträge decken dasselbe Bedürfnis ab |
 
 ## Wie es gebaut wird
 
@@ -592,26 +555,16 @@ Une section n apparaît que si elle fait quelque chose. Rien dans le panneau n e
 
 ## Langues
 
-Le panneau existe en **anglais, allemand, français et russe** et suit le réglage de langue
-du jeu.
+Le panneau existe en **anglais, allemand, français et russe** et suit le réglage de
+langue du jeu. Chaque texte qui lui appartient est traduit ; les noms d équipement et de
+technologie viennent du jeu lui-même.
 
-**Le turc et le néerlandais sont traduits mais ne peuvent pas être livrés comme langues.**
-Hearts of Iron IV charge exactement dix dossiers de localisation, énumérés dans le fichier
-`localisation/languages.yml` du jeu, et ni le turc ni le néerlandais n y figure — un dossier
-`localisation/turkish/` est ignoré par le moteur. Les deux traductions se trouvent dans
-`extras/language_overlays/` sous des clés anglaises et s appliquent à la demande :
-
-```bash
-python tools/install_local.py --language turkish    # ou : dutch, english
-```
-
-Cela ne change que le panneau ; le jeu reste dans la langue que vous aviez. Un
-`install_local.py` ultérieur sans `--language` conserve la surcouche déjà en place, si bien
-que réinstaller ne remet plus le panneau en anglais.
-
-Les noms d équipement et de technologie font exception : ils viennent de la localisation du
-jeu, qui ne connaît ni le turc ni le néerlandais, donc ces noms restent dans la langue de
-votre jeu. Le panneau traduit tout ce qui lui appartient.
+**Le turc et le néerlandais ont été retirés en 3.1.1.** Hearts of Iron IV charge
+exactement dix dossiers de localisation, énumérés dans son `localisation/languages.yml`,
+et aucun des deux n y figure. Ils voyageaient en surcouche écrite dans le dossier
+`english` -- jusqu à un envoi effectué alors que la surcouche était en place : tous les
+abonnés anglophones ont eu des menus en turc. Aucun moyen d offrir ces langues sans que
+le moteur les confonde avec l anglais, donc le panneau ne les propose plus.
 
 ## Prérequis
 
@@ -664,9 +617,8 @@ Ce sont des limites du moteur, vérifiées sur les fichiers livrés avec le jeu,
 | `complete_national_focus` exige un focus précis, et les arbres de focus ne sont pas parcourables à l exécution | Il n y a pas de section focus national |
 | Les doctrines sont un système à part depuis 1.19 | `set_technology` ne les atteint pas, donc Recherche ne les liste pas ; Nation les rend gratuites via `add_doctrine_cost_reduction` |
 | `add_equipment_to_stockpile` refuse les navires et les canons ferroviaires | Ils se construisent comme unités, ils ne sont donc pas listés |
-| Il n existe que dix dossiers de localisation | Le turc et le néerlandais arrivent en surcouche plutôt qu en langues sélectionnables |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` sont des bascules console sans équivalent scripté | Absents. Là où un effet natif donne le même résultat — construction instantanée, règles diplomatiques — le panneau l utilise |
-| Les noms d équipement changent selon la langue | Pas de filtre A-Z : classer les lignes sous une initiale anglaise serait faux dans les cinq autres langues. Catégories, pagination et marquage des éléments verrouillés couvrent le même besoin |
+| Les noms d équipement changent selon la langue | Pas de filtre A-Z : classer les lignes sous une initiale anglaise serait faux dans les trois autres langues. Catégories, pagination et marquage des éléments verrouillés couvrent le même besoin |
 
 ## Comment c est construit
 
@@ -763,25 +715,15 @@ Cheat Control Panel превращает эти действия в настоя
 ## Языки
 
 Панель выходит на **английском, немецком, французском и русском** и следует языковой
-настройке игры.
+настройке игры. Каждая строка, которая принадлежит ей, переведена; названия техники и
+технологий берутся из самой игры.
 
-**Турецкий и нидерландский переведены, но не могут поставляться как языки.** Hearts of Iron IV
-загружает ровно десять папок локализации, перечисленных в файле игры
-`localisation/languages.yml`, и ни турецкого, ни нидерландского среди них нет — папку
-`localisation/turkish/` движок игнорирует. Оба перевода лежат в `extras/language_overlays/`
-под английскими ключами и применяются по запросу:
-
-```bash
-python tools/install_local.py --language turkish    # или: dutch, english
-```
-
-Это меняет только панель; игра остаётся на прежнем языке. Более поздний `install_local.py`
-без `--language` сохраняет уже установленный слой, поэтому переустановка больше не
-возвращает панель к английскому.
-
-Названия техники и технологий — исключение: они берутся из локализации самой игры, где нет
-ни турецкого, ни нидерландского, поэтому эти названия остаются на языке вашей игры. Всё, что
-принадлежит панели, переведено.
+**Турецкий и нидерландский убраны в 3.1.1.** Hearts of Iron IV загружает ровно десять
+папок локализации, перечисленных в его `localisation/languages.yml`, и ни одной из этих
+там нет. Раньше они шли слоем, записанным в папку `english`, — пока не была сделана
+загрузка при наложенном слое: все англоязычные подписчики получили турецкие меню.
+Способа предложить эти языки так, чтобы движок отделял их от английского, нет, поэтому
+панель их больше не предлагает.
 
 ## Требования
 
@@ -833,9 +775,8 @@ python tools/enable_local_mod.py   # зарегистрировать в наб�
 | `complete_national_focus` требует конкретный фокус, а деревья фокусов нельзя обойти во время игры | Раздела национальных фокусов нет |
 | С 1.19 доктрины — отдельная система | `set_technology` до них не достаёт, поэтому «Исследования» их не перечисляют; раздел «Государство» делает их бесплатными через `add_doctrine_cost_reduction` |
 | `add_equipment_to_stockpile` отказывает кораблям и железнодорожным орудиям | Они строятся как юниты, поэтому не перечислены |
-| Существует только десять папок локализации | Турецкий и нидерландский поставляются как слой, а не как выбираемые языки |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` — консольные переключатели без скриптового аналога | Отсутствуют. Где родной эффект даёт тот же результат — мгновенное строительство, дипломатические правила — панель использует его |
-| Отображаемые названия техники зависят от языка | Фильтра А-Я нет: раскладывать строки по английской букве было бы неверно в остальных пяти языках. Категории, страницы и пометка заблокированных позиций закрывают ту же потребность |
+| Отображаемые названия техники зависят от языка | Фильтра А-Я нет: раскладывать строки по английской букве было бы неверно в остальных трёх языках. Категории, страницы и пометка заблокированных позиций закрывают ту же потребность |
 
 ## Как это собрано
 
@@ -931,26 +872,16 @@ Een onderdeel verschijnt alleen als het iets doet. Niets in het paneel is een ti
 
 ## Talen
 
-Het paneel verschijnt in het **Engels, Duits, Frans en Russisch** en volgt de taalinstelling
-van het spel.
+Het paneel verschijnt in het **Engels, Duits, Frans en Russisch** en volgt de
+taalinstelling van het spel. Elke tekst die het zelf bezit is vertaald; namen van
+uitrusting en technologie komen uit het spel.
 
-**Turks en Nederlands zijn vertaald maar kunnen niet als taal worden meegeleverd.**
-Hearts of Iron IV laadt precies tien localisatiemappen, opgesomd in het eigen bestand
-`localisation/languages.yml`, en Turks noch Nederlands staat daarin — een map
-`localisation/turkish/` wordt door de engine genegeerd. Beide vertalingen staan in
-`extras/language_overlays/` onder Engelse sleutels en worden op verzoek toegepast:
-
-```bash
-python tools/install_local.py --language dutch    # of: turkish, english
-```
-
-Dat verandert alleen het paneel; het spel blijft in de taal die je had. Een latere
-`install_local.py` zonder `--language` behoudt de al aanwezige laag, dus opnieuw installeren
-zet het paneel niet meer terug op Engels.
-
-Namen van uitrusting en technologie zijn de uitzondering: die komen uit de localisatie van
-het spel zelf, waarin geen Turks of Nederlands zit, dus die namen blijven in jouw speltaal.
-Alles wat het paneel zelf bezit, is vertaald.
+**Turks en Nederlands zijn in 3.1.1 vervallen.** Hearts of Iron IV laadt precies tien
+localisatiemappen, opgesomd in zijn eigen `localisation/languages.yml`, en geen van
+beide staat daarin. Ze reisden mee als laag in de `english`-map -- tot er een upload
+werd gedaan terwijl die laag lag: elke Engelse abonnee kreeg Turkse menu's. Er is geen
+manier om die talen aan te bieden die de engine van het Engels scheidt, dus biedt het
+paneel ze niet meer aan.
 
 ## Vereisten
 
@@ -1002,9 +933,8 @@ Dit zijn grenzen van de engine, geverifieerd aan de meegeleverde spelbestanden, 
 | `complete_national_focus` vereist een specifieke focus, en focusbomen zijn tijdens het spel niet te doorlopen | Er is geen onderdeel nationale focus |
 | Doctrines zijn sinds 1.19 een apart systeem | `set_technology` bereikt ze niet, dus Onderzoek noemt ze niet; Natie maakt ze gratis via `add_doctrine_cost_reduction` |
 | `add_equipment_to_stockpile` weigert schepen en spoorweggeschut | Die worden als eenheden gebouwd en staan daarom niet in de lijst |
-| Er bestaan maar tien localisatiemappen | Turks en Nederlands komen als laag in plaats van als kiesbare talen |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` zijn consoleschakelaars zonder gescript equivalent | Afwezig. Waar een eigen effect hetzelfde bereikt — direct bouwen, diplomatieke regels — gebruikt het paneel dat |
-| Weergavenamen van uitrusting verschillen per taal | Er is geen A-Z-filter: rijen onder een Engelse beginletter zetten zou in de andere vijf talen fout zijn. Categorieën, paginering en de markering van vergrendelde items dekken dezelfde behoefte |
+| Weergavenamen van uitrusting verschillen per taal | Er is geen A-Z-filter: rijen onder een Engelse beginletter zetten zou in de andere drie talen fout zijn. Categorieën, paginering en de markering van vergrendelde items dekken dezelfde behoefte |
 
 ## Hoe het gebouwd wordt
 

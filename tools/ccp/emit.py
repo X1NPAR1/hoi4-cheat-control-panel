@@ -337,32 +337,32 @@ def emit_equipment_categories_localisation(
 
 
 CATEGORY_LABELS: dict[str, tuple[str, str, str, str, str, str]] = {
-    "infantry": ("Infantry Equipment", "Infanterieausrüstung", "Équipement d'infanterie", "Пехотное снаряжение", "Piyade Teçhizatı", "Infanterie-uitrusting"),
-    "support": ("Support Equipment", "Unterstützungsausrüstung", "Équipement de soutien", "Снаряжение поддержки", "Destek Teçhizatı", "Ondersteuningsuitrusting"),
-    "artillery": ("Artillery", "Artillerie", "Artillerie", "Артиллерия", "Topçu", "Artillerie"),
-    "anti_tank": ("Anti-Tank", "Panzerabwehr", "Antichar", "Противотанковые", "Tanksavar", "Antitank"),
-    "anti_air": ("Anti-Air", "Flugabwehr", "Antiaérien", "Зенитные", "Uçaksavar", "Luchtafweer"),
-    "motorized": ("Motorized & Armored Cars", "Motorisiert & Panzerwagen", "Motorisé et automitrailleuses", "Мотопехота и бронеавтомобили", "Motorize ve Zırhlı Araçlar", "Gemotoriseerd & pantserwagens"),
-    "mechanized": ("Mechanized", "Mechanisiert", "Mécanisé", "Механизированные", "Mekanize", "Gemechaniseerd"),
-    "armored_car": ("Armored Cars", "Panzerwagen", "Automitrailleuses", "Бронеавтомобили", "Zırhlı Araçlar", "Pantserwagens"),
-    "armor": ("Tanks", "Panzer", "Chars", "Танки", "Tanklar", "Tanks"),
-    "railway_gun": ("Railway Guns", "Eisenbahngeschütze", "Canons ferroviaires", "Железнодорожные орудия", "Demiryolu Topları", "Spoorweggeschut"),
-    "fighter": ("Fighters", "Jäger", "Chasseurs", "Истребители", "Avcı Uçakları", "Jagers"),
-    "cas": ("Close Air Support", "Nahunterstützung", "Appui aérien rapproché", "Штурмовики", "Yakın Hava Desteği", "Luchtsteun"),
-    "naval_bomber": ("Naval Bombers", "Marinebomber", "Bombardiers navals", "Морские бомбардировщики", "Deniz Bombardıman Uçakları", "Marinebommenwerpers"),
-    "tactical_bomber": ("Tactical Bombers", "Taktische Bomber", "Bombardiers tactiques", "Тактические бомбардировщики", "Taktik Bombardıman Uçakları", "Tactische bommenwerpers"),
-    "strategic_bomber": ("Strategic Bombers", "Strategische Bomber", "Bombardiers stratégiques", "Стратегические бомбардировщики", "Stratejik Bombardıman Uçakları", "Strategische bommenwerpers"),
-    "transport_plane": ("Transport Planes", "Transportflugzeuge", "Avions de transport", "Транспортные самолёты", "Nakliye Uçakları", "Transportvliegtuigen"),
-    "helicopter": ("Helicopters", "Hubschrauber", "Hélicoptères", "Вертолёты", "Helikopterler", "Helikopters"),
-    "capital_ship": ("Capital Ships", "Grosskampfschiffe", "Navires de ligne", "Крупные корабли", "Ana Muharebe Gemileri", "Grote schepen"),
-    "carrier": ("Carriers", "Flugzeugträger", "Porte-avions", "Авианосцы", "Uçak Gemileri", "Vliegdekschepen"),
-    "screen_ship": ("Screen Ships", "Sicherungsschiffe", "Navires d'escorte", "Корабли охранения", "Refakat Gemileri", "Escorteschepen"),
-    "submarine": ("Submarines", "U-Boote", "Sous-marins", "Подводные лодки", "Denizaltılar", "Onderzeeërs"),
-    "convoy": ("Convoys & Support Ships", "Konvois & Versorgungsschiffe", "Convois et navires de soutien", "Конвои и суда снабжения", "Konvoylar ve Destek Gemileri", "Konvooien & steunschepen"),
-    "train": ("Trains", "Züge", "Trains", "Поезда", "Trenler", "Treinen"),
-    "missile": ("Missiles", "Raketen", "Missiles", "Ракеты", "Füzeler", "Raketten"),
-    "special": ("Special Equipment", "Spezialausrüstung", "Équipement spécial", "Особое снаряжение", "Özel Teçhizat", "Speciale uitrusting"),
-    "other": ("Other", "Sonstige", "Autre", "Прочее", "Diğer", "Overig"),
+    "infantry": ("Infantry Equipment", "Infanterieausrüstung", "Équipement d'infanterie", "Пехотное снаряжение"),
+    "support": ("Support Equipment", "Unterstützungsausrüstung", "Équipement de soutien", "Снаряжение поддержки"),
+    "artillery": ("Artillery", "Artillerie", "Artillerie", "Артиллерия"),
+    "anti_tank": ("Anti-Tank", "Panzerabwehr", "Antichar", "Противотанковые"),
+    "anti_air": ("Anti-Air", "Flugabwehr", "Antiaérien", "Зенитные"),
+    "motorized": ("Motorized & Armored Cars", "Motorisiert & Panzerwagen", "Motorisé et automitrailleuses", "Мотопехота и бронеавтомобили"),
+    "mechanized": ("Mechanized", "Mechanisiert", "Mécanisé", "Механизированные"),
+    "armored_car": ("Armored Cars", "Panzerwagen", "Automitrailleuses", "Бронеавтомобили"),
+    "armor": ("Tanks", "Panzer", "Chars", "Танки"),
+    "railway_gun": ("Railway Guns", "Eisenbahngeschütze", "Canons ferroviaires", "Железнодорожные орудия"),
+    "fighter": ("Fighters", "Jäger", "Chasseurs", "Истребители"),
+    "cas": ("Close Air Support", "Nahunterstützung", "Appui aérien rapproché", "Штурмовики"),
+    "naval_bomber": ("Naval Bombers", "Marinebomber", "Bombardiers navals", "Морские бомбардировщики"),
+    "tactical_bomber": ("Tactical Bombers", "Taktische Bomber", "Bombardiers tactiques", "Тактические бомбардировщики"),
+    "strategic_bomber": ("Strategic Bombers", "Strategische Bomber", "Bombardiers stratégiques", "Стратегические бомбардировщики"),
+    "transport_plane": ("Transport Planes", "Transportflugzeuge", "Avions de transport", "Транспортные самолёты"),
+    "helicopter": ("Helicopters", "Hubschrauber", "Hélicoptères", "Вертолёты"),
+    "capital_ship": ("Capital Ships", "Grosskampfschiffe", "Navires de ligne", "Крупные корабли"),
+    "carrier": ("Carriers", "Flugzeugträger", "Porte-avions", "Авианосцы"),
+    "screen_ship": ("Screen Ships", "Sicherungsschiffe", "Navires d'escorte", "Корабли охранения"),
+    "submarine": ("Submarines", "U-Boote", "Sous-marins", "Подводные лодки"),
+    "convoy": ("Convoys & Support Ships", "Konvois & Versorgungsschiffe", "Convois et navires de soutien", "Конвои и суда снабжения"),
+    "train": ("Trains", "Züge", "Trains", "Поезда"),
+    "missile": ("Missiles", "Raketen", "Missiles", "Ракеты"),
+    "special": ("Special Equipment", "Spezialausrüstung", "Équipement spécial", "Особое снаряжение"),
+    "other": ("Other", "Sonstige", "Autre", "Прочее"),
 }
 
 LANGUAGE_INDEX = {
@@ -370,8 +370,6 @@ LANGUAGE_INDEX = {
     "german": 1,
     "french": 2,
     "russian": 3,
-    "turkish": 4,
-    "dutch": 5,
 }
 
 
@@ -379,9 +377,7 @@ REQUIREMENT_TEXT = (
     "Locked: you have not researched {tech}.",
     "Gesperrt: {tech} ist nicht erforscht.",
     "Verrouillé : {tech} n'est pas recherché.",
-    "Закрыто: {tech} не изучено.",
-    "Kilitli: {tech} araştırılmamış.",
-    "Vergrendeld: {tech} is niet onderzocht.",
+    "Закрыто: {tech} не изучено."
 )
 
 
@@ -390,9 +386,8 @@ def emit_category_localisation(
 ) -> str:
     """A localisation file naming every equipment category present in this install."""
     index = LANGUAGE_INDEX[language]
-    label_language = "english" if language in ("turkish", "dutch") else language
     lines = [
-        f"l_{label_language}:",
+        f"l_{language}:",
         f"# GENERATED FILE - DO NOT EDIT (tools/generate_data.py, game {version})",
     ]
     for name in group_by_category(catalogue):

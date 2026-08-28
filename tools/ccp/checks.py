@@ -428,6 +428,46 @@ def check_translations_differ(mod_dir: Path, report: Report) -> None:
             report.error(f"{key}: {language} is still the English text")
 
 
+def check_installed_copy_is_shippable(repo_root: Path, report: Report) -> None:
+    """The installed copy is what the launcher uploads, so it must match mod/.
+
+    Turkish and Dutch used to ship as an overlay written over
+    `localisation/english/`, because the engine has no folder for either. That was
+    correct for playing and catastrophic for publishing: an upload made while the
+    overlay was applied put Turkish text under English keys for every subscriber,
+    and the Workshop comments were people asking why the English menus were
+    Turkish. The overlay is gone now, and this makes sure nothing else drifts into
+    the copy the launcher sends.
+    """
+    import os
+
+    documents = Path(os.environ.get("USERPROFILE", Path.home())) / "Documents"
+    installed = (
+        documents
+        / "Paradox Interactive"
+        / "Hearts of Iron IV"
+        / "mod"
+        / "hoi4_cheat_control_panel"
+    )
+    if not installed.is_dir():
+        return
+
+    stale = installed.with_name(installed.name + ".ccp-language")
+    if stale.is_file():
+        report.error(
+            f"{stale} is left over from the language overlay. Delete it and run "
+            "tools/install_local.py again before publishing."
+        )
+
+    for path in sorted((repo_root / "mod" / "localisation").rglob("*.yml")):
+        other = installed / path.relative_to(repo_root / "mod")
+        if other.is_file() and other.read_bytes() != path.read_bytes():
+            report.error(
+                f"installed {path.name} differs from mod/. The launcher uploads the "
+                "installed copy, so run tools/install_local.py before publishing."
+            )
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -447,5 +487,6 @@ ALL_CHECKS = [
     ("translations differ", lambda repo, mod, rep: check_translations_differ(mod, rep)),
     ("localisation parity", lambda repo, mod, rep: check_localisation_parity(mod, rep)),
     ("localisation coverage", lambda repo, mod, rep: check_referenced_localisation_keys(mod, rep)),
+    ("installed copy", lambda repo, mod, rep: check_installed_copy_is_shippable(repo, rep)),
     ("workshop payload", lambda repo, mod, rep: check_payload_is_clean(repo, rep)),
 ]

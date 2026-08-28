@@ -1583,16 +1583,16 @@ guiTypes = {
 				position = { x = 564 y = 677 }
 				font = "hoi_16mbs"
 				text = "CCP_EQUIPMENT_PAGE"
-				maxWidth = 616
+				maxWidth = 630
 				maxHeight = 18
 				format = centre
 			}
 
 			buttonType = {
 				name = "ccp_equipment_next"
-				position = { x = 1192 y = 672 }
+				position = { x = 1206 y = 672 }
 				quadTextureSprite = "GFX_ccp_button_small"
-				size = { x = 76 y = 28 }
+				size = { x = 62 y = 28 }
 				buttonText = "CCP_EQUIPMENT_NEXT"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
@@ -1603,7 +1603,7 @@ guiTypes = {
 				name = "ccp_equipment_all"
 				position = { x = 490 y = 710 }
 				quadTextureSprite = "GFX_ccp_button"
-				size = { x = 160 y = 30 }
+				size = { x = 153 y = 30 }
 				buttonText = "CCP_EQUIPMENT_ALL"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_ALL_TOOLTIP"
@@ -1612,10 +1612,10 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ccp_equipment_all_help"
-				position = { x = 662 y = 716 }
+				position = { x = 655 y = 716 }
 				font = "hoi_16mbs"
 				text = "CCP_EQUIPMENT_ALL_HELP"
-				maxWidth = 606
+				maxWidth = 613
 				maxHeight = 18
 				format = left
 			}
@@ -1805,16 +1805,16 @@ guiTypes = {
 				position = { x = 564 y = 677 }
 				font = "hoi_16mbs"
 				text = "CCP_RESEARCH_PAGE"
-				maxWidth = 616
+				maxWidth = 630
 				maxHeight = 18
 				format = centre
 			}
 
 			buttonType = {
 				name = "ccp_research_next"
-				position = { x = 1192 y = 672 }
+				position = { x = 1206 y = 672 }
 				quadTextureSprite = "GFX_ccp_button_small"
-				size = { x = 76 y = 28 }
+				size = { x = 62 y = 28 }
 				buttonText = "CCP_EQUIPMENT_NEXT"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
@@ -1825,7 +1825,7 @@ guiTypes = {
 				name = "ccp_research_all"
 				position = { x = 490 y = 710 }
 				quadTextureSprite = "GFX_ccp_button"
-				size = { x = 168 y = 30 }
+				size = { x = 132 y = 30 }
 				buttonText = "CCP_RESEARCH_ALL"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_RESEARCH_ALL_TOOLTIP"
@@ -1834,7 +1834,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "ccp_research_everything"
-				position = { x = 668 y = 710 }
+				position = { x = 632 y = 710 }
 				quadTextureSprite = "GFX_ccp_button_confirm"
 				size = { x = 160 y = 30 }
 				buttonText = "CCP_RESEARCH_EVERYTHING"
@@ -1896,16 +1896,16 @@ guiTypes = {
 				position = { x = 348 y = 711 }
 				font = "hoi_16mbs"
 				text = "CCP_COUNTRY_PAGE"
-				maxWidth = 1040
+				maxWidth = 1054
 				maxHeight = 18
 				format = centre
 			}
 
 			buttonType = {
 				name = "ccp_country_next"
-				position = { x = 1400 y = 706 }
+				position = { x = 1414 y = 706 }
 				quadTextureSprite = "GFX_ccp_button_small"
-				size = { x = 76 y = 28 }
+				size = { x = 62 y = 28 }
 				buttonText = "CCP_EQUIPMENT_NEXT"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
@@ -1976,16 +1976,16 @@ guiTypes = {
 				position = { x = 348 y = 717 }
 				font = "hoi_16mbs"
 				text = "CCP_STATE_PAGE"
-				maxWidth = 1040
+				maxWidth = 1054
 				maxHeight = 18
 				format = centre
 			}
 
 			buttonType = {
 				name = "ccp_state_next"
-				position = { x = 1400 y = 712 }
+				position = { x = 1414 y = 712 }
 				quadTextureSprite = "GFX_ccp_button_small"
-				size = { x = 76 y = 28 }
+				size = { x = 62 y = 28 }
 				buttonText = "CCP_EQUIPMENT_NEXT"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_NEXT_TOOLTIP"
@@ -6930,16 +6930,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_1"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_1"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -6964,16 +6964,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_2"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_2"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -6998,16 +6998,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_3"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_3"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7032,16 +7032,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_4"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_4"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7066,16 +7066,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_5"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_5"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7100,16 +7100,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_6"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_6"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7134,16 +7134,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_7"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_7"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7168,16 +7168,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_8"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_8"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7202,16 +7202,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_9"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_9"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7236,16 +7236,16 @@ guiTypes = {
 					position = { x = 12 y = 7 }
 					font = "hoi_16mbs"
 					text = "CCP_HISTORY_ENTRY_10"
-					maxWidth = 1096
+					maxWidth = 1103
 					maxHeight = 18
 					format = left
 				}
 
 				buttonType = {
 					name = "ccp_history_repeat_10"
-					position = { x = 1118 y = 3 }
+					position = { x = 1125 y = 3 }
 					quadTextureSprite = "GFX_ccp_button_small"
-					size = { x = 76 y = 28 }
+					size = { x = 69 y = 28 }
 					buttonText = "CCP_HISTORY_REPEAT"
 					buttonFont = "hoi_16mbs"
 					pdx_tooltip = "CCP_HISTORY_REPEAT_TOOLTIP"
@@ -7400,7 +7400,7 @@ guiTypes = {
 				name = "ccp_diplo_rules_toggle"
 				position = { x = 274 y = 438 }
 				quadTextureSprite = "GFX_ccp_button"
-				size = { x = 217 y = 30 }
+				size = { x = 175 y = 30 }
 				buttonText = "[CCP_GetDiploRulesState]"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_SETTINGS_DIPLO_TOOLTIP"
@@ -7409,9 +7409,9 @@ guiTypes = {
 
 			buttonType = {
 				name = "ccp_ai_goodwill_toggle"
-				position = { x = 501 y = 438 }
+				position = { x = 459 y = 438 }
 				quadTextureSprite = "GFX_ccp_button"
-				size = { x = 231 y = 30 }
+				size = { x = 182 y = 30 }
 				buttonText = "[CCP_GetGoodwillState]"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_SETTINGS_GOODWILL_TOOLTIP"
@@ -7487,14 +7487,14 @@ guiTypes = {
 			position = { x = 12 y = 7 }
 			font = "hoi_16mbs"
 			text = "[CCP_GetEquipmentName]"
-			maxWidth = 495
+			maxWidth = 509
 			maxHeight = 18
 			format = left
 		}
 
 		instantTextBoxType = {
 			name = "ccp_equipment_entry_stock"
-			position = { x = 515 y = 7 }
+			position = { x = 529 y = 7 }
 			font = "hoi_16mbs"
 			text = "[CCP_GetEquipmentStock]"
 			maxWidth = 96
@@ -7505,9 +7505,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_equipment_entry_latest"
-			position = { x = 619 y = 2 }
+			position = { x = 633 y = 2 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 76 y = 28 }
+			size = { x = 62 y = 28 }
 			buttonText = "CCP_EQUIPMENT_LATEST"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_EQUIPMENT_LATEST_TOOLTIP"
@@ -7577,14 +7577,14 @@ guiTypes = {
 			position = { x = 12 y = 8 }
 			font = "hoi_16mbs"
 			text = "CCP_COUNTRY_ENTRY_NAME"
-			maxWidth = 730
+			maxWidth = 737
 			maxHeight = 18
 			format = left
 		}
 
 		buttonType = {
 			name = "ccp_country_entry_target"
-			position = { x = 750 y = 3 }
+			position = { x = 757 y = 3 }
 			quadTextureSprite = "GFX_ccp_button_small"
 			size = { x = 62 y = 28 }
 			buttonText = "CCP_COUNTRY_TARGET"
@@ -7595,9 +7595,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_country_entry_annex"
-			position = { x = 818 y = 3 }
+			position = { x = 825 y = 3 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
-			size = { x = 76 y = 28 }
+			size = { x = 69 y = 28 }
 			buttonText = "CCP_COUNTRY_ANNEX"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_COUNTRY_ANNEX_TOOLTIP"
@@ -7666,7 +7666,7 @@ guiTypes = {
 			position = { x = 12 y = 4 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_ENTRY_NAME"
-			maxWidth = 204
+			maxWidth = 273
 			maxHeight = 18
 			format = left
 		}
@@ -7676,14 +7676,14 @@ guiTypes = {
 			position = { x = 12 y = 21 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_ENTRY_OWNER"
-			maxWidth = 204
+			maxWidth = 273
 			maxHeight = 16
 			format = left
 		}
 
 		buttonType = {
 			name = "ccp_state_entry_take"
-			position = { x = 224 y = 5 }
+			position = { x = 293 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 69 y = 28 }
 			buttonText = "CCP_STATE_TAKE"
@@ -7694,7 +7694,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_own"
-			position = { x = 299 y = 5 }
+			position = { x = 368 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_OWN"
@@ -7705,7 +7705,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_control"
-			position = { x = 381 y = 5 }
+			position = { x = 450 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 83 y = 28 }
 			buttonText = "CCP_STATE_CONTROL"
@@ -7716,7 +7716,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_give"
-			position = { x = 470 y = 5 }
+			position = { x = 539 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 62 y = 28 }
 			buttonText = "CCP_STATE_GIVE"
@@ -7727,7 +7727,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_give_control"
-			position = { x = 538 y = 5 }
+			position = { x = 607 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 105 y = 28 }
 			buttonText = "CCP_STATE_GIVE_CONTROL"
@@ -7738,9 +7738,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_core"
-			position = { x = 649 y = 5 }
+			position = { x = 718 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 83 y = 28 }
+			size = { x = 58 y = 28 }
 			buttonText = "CCP_STATE_CORE"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_CORE_TOOLTIP"
@@ -7749,7 +7749,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_uncore"
-			position = { x = 738 y = 5 }
+			position = { x = 782 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_UNCORE"
@@ -7760,9 +7760,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_claim"
-			position = { x = 820 y = 5 }
+			position = { x = 864 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 91 y = 28 }
+			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_CLAIM"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_CLAIM_TOOLTIP"
@@ -7771,7 +7771,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_unclaim"
-			position = { x = 917 y = 5 }
+			position = { x = 946 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 91 y = 28 }
 			buttonText = "CCP_STATE_UNCLAIM"
@@ -7782,9 +7782,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_comply"
-			position = { x = 1014 y = 5 }
+			position = { x = 1043 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 76 y = 28 }
+			size = { x = 62 y = 28 }
 			buttonText = "CCP_STATE_COMPLY"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_COMPLY_TOOLTIP"
@@ -7793,9 +7793,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_state_entry_quiet"
-			position = { x = 1096 y = 5 }
+			position = { x = 1111 y = 5 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 98 y = 28 }
+			size = { x = 83 y = 28 }
 			buttonText = "CCP_STATE_QUIET"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_QUIET_TOOLTIP"
@@ -7806,7 +7806,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "ccp_state_picker_window"
 		position = { x = 0 y = 0 }
-		size = { width = 990 height = 68 }
+		size = { width = 921 height = 68 }
 		moveable = no
 		clipping = no
 
@@ -7821,7 +7821,7 @@ guiTypes = {
 			position = { x = 10 y = 7 }
 			font = "hoi_16mbs"
 			text = "CCP_STATE_PICKER_TITLE"
-			maxWidth = 970
+			maxWidth = 901
 			maxHeight = 16
 			format = left
 		}
@@ -7885,7 +7885,7 @@ guiTypes = {
 			name = "ccp_picker_core"
 			position = { x = 435 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 83 y = 28 }
+			size = { x = 58 y = 28 }
 			buttonText = "CCP_STATE_CORE"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_CORE_TOOLTIP"
@@ -7894,7 +7894,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_uncore"
-			position = { x = 524 y = 30 }
+			position = { x = 499 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_UNCORE"
@@ -7905,9 +7905,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_claim"
-			position = { x = 606 y = 30 }
+			position = { x = 581 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 91 y = 28 }
+			size = { x = 76 y = 28 }
 			buttonText = "CCP_STATE_CLAIM"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_CLAIM_TOOLTIP"
@@ -7916,7 +7916,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_unclaim"
-			position = { x = 703 y = 30 }
+			position = { x = 663 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small_danger"
 			size = { x = 91 y = 28 }
 			buttonText = "CCP_STATE_UNCLAIM"
@@ -7927,9 +7927,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_comply"
-			position = { x = 800 y = 30 }
+			position = { x = 760 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 76 y = 28 }
+			size = { x = 62 y = 28 }
 			buttonText = "CCP_STATE_COMPLY"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_COMPLY_TOOLTIP"
@@ -7938,9 +7938,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "ccp_picker_quiet"
-			position = { x = 882 y = 30 }
+			position = { x = 828 y = 30 }
 			quadTextureSprite = "GFX_ccp_button_small"
-			size = { x = 98 y = 28 }
+			size = { x = 83 y = 28 }
 			buttonText = "CCP_STATE_QUIET"
 			buttonFont = "hoi_16mbs"
 			pdx_tooltip = "CCP_STATE_QUIET_TOOLTIP"

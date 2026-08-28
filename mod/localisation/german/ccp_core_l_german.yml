@@ -733,7 +733,7 @@
  CCP_STATUS_GOODWILL_ON:0 "Jedes Land sieht Sie nun ausgesprochen positiv."
  CCP_STATUS_GRANTED:0 "[?ccp_granted_amount|0] [CCP_GetGrantedResource] hinzugefügt."
  CCP_STATUS_HOTKEY:0 "Taste auf [CCP_GetHotkeyName] gesetzt."
- CCP_STATUS_IDLE:0 "Cheat-Kontrollpanel 3.1.0 · Hearts of Iron IV 1.19 · Einzelspieler"
+ CCP_STATUS_IDLE:0 "Cheat-Kontrollpanel 3.1.1 · Hearts of Iron IV 1.19 · Einzelspieler"
  CCP_STATUS_NO_TARGET:0 "Wählen Sie zuerst ein Land im Bereich Länder; diese Aktion braucht ein Ziel."
  CCP_STATUS_OVERFLOW:0 "Die Rekruten sind bereits nahe am speicherbaren Maximum. Mehr würde den Wert negativ machen, daher wurde nichts hinzugefügt."
  CCP_STATUS_SELECTION:0 "Es war nichts ausgewählt, also wurde nichts hinzugefügt. Erst eine Kategorie wählen, dann eine Zeile."
