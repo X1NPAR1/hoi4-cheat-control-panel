@@ -39,7 +39,13 @@ CCP_ensure_settings = {
 }
 
 CCP_mark_dirty = {
-	var:ROOT.ccp_player = { add_to_variable = { ccp_ui_revision = 1 } }
+	ROOT = { add_to_variable = { ccp_ui_revision = 1 } }
+	if = {
+		limit = {
+			has_variable = ROOT.ccp_player
+		}
+		var:ROOT.ccp_player = { add_to_variable = { ccp_ui_revision = 1 } }
+	}
 }
 
 CCP_open_panel = {

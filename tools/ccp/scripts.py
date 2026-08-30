@@ -121,8 +121,24 @@ def emit_core_effects(version: str) -> str:
     writer.close()
     writer.blank()
 
+    # The panel refreshes when ccp_ui_revision changes on the country the GUI
+    # belongs to, and for a player_context GUI that country is ROOT. Bumping ROOT
+    # directly means the refresh no longer depends on ccp_player having been
+    # stored: if that variable were ever missing -- a save from an older build, or
+    # the moment after change_tag_from moves the player to another country -- the
+    # bump was skipped in silence and the panel froze on whichever section it had
+    # drawn last, which looks exactly like a sidebar that has stopped responding.
+    #
+    # The stored player is bumped as well, for the effects that run from the map
+    # picker, where ROOT is not the player.
     writer.open("CCP_mark_dirty")
+    writer.line("ROOT = { add_to_variable = { ccp_ui_revision = 1 } }")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("has_variable = ROOT.ccp_player")
+    writer.close()
     writer.line("var:ccp_player = { add_to_variable = { ccp_ui_revision = 1 } }")
+    writer.close()
     writer.close()
     writer.blank()
 

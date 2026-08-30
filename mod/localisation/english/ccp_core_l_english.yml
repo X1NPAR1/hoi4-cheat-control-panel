@@ -733,7 +733,7 @@
  CCP_STATUS_GOODWILL_ON:0 "Every country now views you very favourably."
  CCP_STATUS_GRANTED:0 "Granted [?ccp_granted_amount|0] [CCP_GetGrantedResource]."
  CCP_STATUS_HOTKEY:0 "Hotkey set to [CCP_GetHotkeyName]."
- CCP_STATUS_IDLE:0 "Cheat Control Panel 3.1.2 · Hearts of Iron IV 1.19 · singleplayer"
+ CCP_STATUS_IDLE:0 "Cheat Control Panel 3.1.3 · Hearts of Iron IV 1.19 · singleplayer"
  CCP_STATUS_NO_TARGET:0 "Pick a country in the Countries section first; this action needs a target."
  CCP_STATUS_OVERFLOW:0 "Manpower is already near the limit the game can store. Adding more would turn it negative, so nothing was added."
  CCP_STATUS_SELECTION:0 "Nothing was selected, so nothing was added. Pick a category first, then use a row."
