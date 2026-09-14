@@ -498,6 +498,56 @@ def check_temp_variables_are_unqualified(mod_dir: Path, report: Report) -> None:
                     )
 
 
+def _province_buildings(game_dir: Path | None) -> set[str]:
+    """Building types the game places per province: those declaring province_max."""
+    if game_dir is None:
+        return set()
+    names: set[str] = set()
+    for path in sorted((game_dir / "common" / "buildings").glob("*.txt")):
+        current = None
+        depth = 0
+        for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+            stripped = line.split("#", 1)[0]
+            match = re.match(r"^\s*([a-z_][a-z0-9_]*)\s*=\s*\{", stripped)
+            if depth == 1 and match:
+                current = match.group(1)
+            if current and depth >= 2 and re.match(r"^\s*province_max\s*=", stripped):
+                names.add(current)
+            depth += stripped.count("{") - stripped.count("}")
+    return names
+
+
+def check_province_buildings_name_provinces(mod_dir: Path, game_dir: Path | None, report: Report) -> None:
+    """A province building is only built when the effect says which provinces.
+
+    Forts, coastal forts and supply hubs are province buildings. Without a
+    `province = { ... }` block add_building_construction is refused with no line in
+    error.log, so those three Construction cards did nothing until a player said so.
+    The list of province buildings is read from the game, not written here.
+    """
+    kinds = _province_buildings(game_dir)
+    if not kinds:
+        report.warn("game buildings not found; province building check skipped")
+        return
+    for path in sorted((mod_dir / "common").rglob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for start in (m.start() for m in re.finditer(r"add_building_construction\s*=\s*\{", text)):
+            depth, end = 0, start
+            for index in range(text.index("{", start), len(text)):
+                depth += {"{": 1, "}": -1}.get(text[index], 0)
+                if depth == 0:
+                    end = index
+                    break
+            block = text[start : end + 1]
+            kind = re.search(r"type\s*=\s*([a-z_][a-z0-9_]*)", block)
+            if kind and kind.group(1) in kinds and "province" not in block:
+                line = text.count("\n", 0, start) + 1
+                report.error(
+                    f"{path}:{line}: `{kind.group(1)}` is a province building; without a "
+                    "province block the engine refuses it silently"
+                )
+
+
 ALL_CHECKS = [
     ("descriptor", lambda repo, mod, rep: check_descriptor(mod, rep)),
     ("braces", lambda repo, mod, rep: check_braces(mod, rep)),
@@ -518,6 +568,7 @@ ALL_CHECKS = [
     ("translations differ", lambda repo, mod, rep: check_translations_differ(mod, rep)),
     ("localisation parity", lambda repo, mod, rep: check_localisation_parity(mod, rep)),
     ("localisation coverage", lambda repo, mod, rep: check_referenced_localisation_keys(mod, rep)),
+    ("province buildings", lambda repo, mod, rep: check_province_buildings_name_provinces(mod, _game_dir(), rep)),
     ("installed copy", lambda repo, mod, rep: check_installed_copy_is_shippable(repo, rep)),
     ("workshop payload", lambda repo, mod, rep: check_payload_is_clean(repo, rep)),
 ]

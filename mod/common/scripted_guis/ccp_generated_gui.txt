@@ -153,7 +153,9 @@ scripted_gui = {
 
 		effects = {
 			ccp_close_click = {
-				CCP_close_panel = yes
+				set_variable = { global.ccp_panel_open = 0 }
+				set_variable = { global.ccp_modal_open = 0 }
+				add_to_variable = { ccp_ui_revision = 1 }
 			}
 			ccp_nav_1_click = {
 				CCP_show_dashboard = yes
@@ -977,6 +979,18 @@ scripted_gui = {
 			ccp_action_supply_hub_1_click = {
 				CCP_action_supply_hub_1 = yes
 			}
+			ccp_action_railway_1_click = {
+				CCP_action_railway_1 = yes
+			}
+			ccp_action_railway_2_click = {
+				CCP_action_railway_2 = yes
+			}
+			ccp_action_railway_3_click = {
+				CCP_action_railway_3 = yes
+			}
+			ccp_action_railway_5_click = {
+				CCP_action_railway_5 = yes
+			}
 			ccp_action_slots_1_click = {
 				CCP_action_slots_1 = yes
 			}
@@ -1144,6 +1158,42 @@ scripted_gui = {
 			}
 			ccp_action_divisions_motorized_25_click = {
 				CCP_action_divisions_motorized_25 = yes
+			}
+			ccp_action_state_infantry_1_click = {
+				CCP_action_state_infantry_1 = yes
+			}
+			ccp_action_state_infantry_5_click = {
+				CCP_action_state_infantry_5 = yes
+			}
+			ccp_action_state_infantry_10_click = {
+				CCP_action_state_infantry_10 = yes
+			}
+			ccp_action_state_infantry_25_click = {
+				CCP_action_state_infantry_25 = yes
+			}
+			ccp_action_state_armor_1_click = {
+				CCP_action_state_armor_1 = yes
+			}
+			ccp_action_state_armor_5_click = {
+				CCP_action_state_armor_5 = yes
+			}
+			ccp_action_state_armor_10_click = {
+				CCP_action_state_armor_10 = yes
+			}
+			ccp_action_state_armor_25_click = {
+				CCP_action_state_armor_25 = yes
+			}
+			ccp_action_state_motorized_1_click = {
+				CCP_action_state_motorized_1 = yes
+			}
+			ccp_action_state_motorized_5_click = {
+				CCP_action_state_motorized_5 = yes
+			}
+			ccp_action_state_motorized_10_click = {
+				CCP_action_state_motorized_10 = yes
+			}
+			ccp_action_state_motorized_25_click = {
+				CCP_action_state_motorized_25 = yes
 			}
 			ccp_action_delete_units_0_click = {
 				set_variable = { ccp_pending_generic = 10 }
@@ -1352,6 +1402,21 @@ scripted_gui = {
 			ccp_action_guarantee_1_click = {
 				CCP_action_guarantee_1 = yes
 			}
+			ccp_action_disband_target_0_click = {
+				set_variable = { ccp_pending_generic = 13 }
+				if = {
+					limit = {
+						check_variable = { global.ccp_confirm_destructive = 1 }
+					}
+					set_variable = { global.ccp_pending_action = 0 }
+					set_variable = { global.ccp_modal_open = 1 }
+					set_variable = { global.ccp_status = 23 }
+					CCP_mark_dirty = yes
+				}
+				else = {
+					CCP_action_disband_target_0 = yes
+				}
+			}
 			ccp_history_clear_click = {
 				CCP_history_clear = yes
 			}
@@ -1391,46 +1456,97 @@ scripted_gui = {
 			ccp_nav_1_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_1_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_2_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_2_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_nav_3_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_3_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_4_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_4_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_nav_5_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_5_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_6_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_6_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_nav_7_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_7_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_8_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_8_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_nav_9_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_9_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_10_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_10_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_nav_11_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_11_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_12_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_12_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_nav_13_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_13_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_14_click_enabled = {
 				NOT = { is_ironman = yes }
 			}
+			ccp_nav_14_visible = {
+				NOT = { is_ironman = yes }
+			}
 			ccp_nav_15_click_enabled = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_15_visible = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_sidebar_heading_visible = {
+				NOT = { is_ironman = yes }
+			}
+			ccp_nav_highlight_visible = {
 				NOT = { is_ironman = yes }
 			}
 			ccp_ironman_plate_visible = {
@@ -2733,6 +2849,27 @@ scripted_gui = {
 			ccp_action_supply_hub_1_visible = {
 				check_variable = { global.ccp_section = 9 }
 			}
+			ccp_action_railway_plate_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
+			ccp_action_railway_title_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
+			ccp_action_railway_help_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
+			ccp_action_railway_1_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
+			ccp_action_railway_2_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
+			ccp_action_railway_3_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
+			ccp_action_railway_5_visible = {
+				check_variable = { global.ccp_section = 9 }
+			}
 			ccp_action_slots_plate_visible = {
 				check_variable = { global.ccp_section = 9 }
 			}
@@ -3031,6 +3168,69 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 11 }
 			}
 			ccp_action_divisions_motorized_25_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_10_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_infantry_25_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_10_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_armor_25_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_10_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_state_motorized_25_visible = {
 				check_variable = { global.ccp_section = 11 }
 			}
 			ccp_action_delete_units_plate_visible = {
@@ -3397,6 +3597,18 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 13 }
 			}
 			ccp_action_guarantee_1_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_disband_target_plate_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_disband_target_title_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_disband_target_help_visible = {
+				check_variable = { global.ccp_section = 13 }
+			}
+			ccp_action_disband_target_0_visible = {
 				check_variable = { global.ccp_section = 13 }
 			}
 			ccp_history_help_visible = {

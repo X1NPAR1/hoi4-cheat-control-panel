@@ -64,6 +64,31 @@ HELP_DIVISIONS: Row = (
 # ---------------------------------------------------------------- per-action titles
 
 TITLES: dict[str, Row] = {
+    "railway": ("Railways", "Eisenbahnen", "Voies ferrées", "Железные дороги"),
+    "state_infantry": (
+        "Infantry in picked state",
+        "Infanterie im gewählten Staat",
+        "Infanterie dans l État choisi",
+        "Пехота в выбранной провинции",
+    ),
+    "state_armor": (
+        "Armour in picked state",
+        "Panzer im gewählten Staat",
+        "Blindés dans l État choisi",
+        "Бронетехника в выбранной провинции",
+    ),
+    "state_motorized": (
+        "Motorised in picked state",
+        "Motorisiert im gewählten Staat",
+        "Motorisés dans l État choisi",
+        "Мотопехота в выбранной провинции",
+    ),
+    "disband_target": (
+        "Delete target's army",
+        "Armee des Ziels löschen",
+        "Supprimer l armée de la cible",
+        "Уничтожить армию цели",
+    ),
     "research_bonus": (
         "Research bonus",
         "Forschungsbonus",
@@ -177,6 +202,36 @@ IDEOLOGY_NOUNS: dict[str, Row] = {
 }
 
 HELPS: dict[str, Row] = {
+    "railway": (
+        "Lays railway from your capital to every state you own, at this level.",
+        "Verlegt Eisenbahn von Ihrer Hauptstadt zu jedem Ihrer Staaten, auf dieser Stufe.",
+        "Pose une voie ferrée de votre capitale vers chacun de vos États, à ce niveau.",
+        "Прокладывает железную дорогу от столицы ко всем вашим провинциям на этом уровне.",
+    ),
+    "state_infantry": (
+        "Raised in the state you last picked in States or on the map, not in your capital.",
+        "Aufgestellt im zuletzt unter Staaten oder auf der Karte gewählten Staat, nicht in der Hauptstadt.",
+        "Levées dans l État choisi en dernier dans États ou sur la carte, pas dans la capitale.",
+        "Создаются в провинции, выбранной последней в разделе Провинции или на карте, а не в столице.",
+    ),
+    "state_armor": (
+        "Raised in the state you last picked in States or on the map, not in your capital.",
+        "Aufgestellt im zuletzt unter Staaten oder auf der Karte gewählten Staat, nicht in der Hauptstadt.",
+        "Levées dans l État choisi en dernier dans États ou sur la carte, pas dans la capitale.",
+        "Создаются в провинции, выбранной последней в разделе Провинции или на карте, а не в столице.",
+    ),
+    "state_motorized": (
+        "Raised in the state you last picked in States or on the map, not in your capital.",
+        "Aufgestellt im zuletzt unter Staaten oder auf der Karte gewählten Staat, nicht in der Hauptstadt.",
+        "Levées dans l État choisi en dernier dans États ou sur la carte, pas dans la capitale.",
+        "Создаются в провинции, выбранной последней в разделе Провинции или на карте, а не в столице.",
+    ),
+    "disband_target": (
+        "Deletes every division of the country picked in Countries. No refund. Cannot be undone.",
+        "Löscht alle Divisionen des unter Länder gewählten Landes. Keine Erstattung. Nicht umkehrbar.",
+        "Supprime toutes les divisions du pays choisi dans Pays. Sans remboursement. Irréversible.",
+        "Удаляет все дивизии страны, выбранной в разделе Страны. Без возврата. Необратимо.",
+    ),
     "research_bonus": (
         "Grants a free instant research for the next few technologies you start.",
         "Gewährt für die nächsten Technologien jeweils eine kostenlose Sofortforschung.",

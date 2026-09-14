@@ -60,16 +60,16 @@ is stored in your save.
 | **States** | Take a state, or take only its ownership or only its control; hand it or just its control to your target; add and remove cores and claims; force compliance, wipe out resistance — from the list or by clicking the map |
 | **Nation** | Stability, war support, research slots, fuel, CIC funds, world tension, legitimacy, instant research bonuses, free doctrines, default occupation law |
 | **Politics** | Ruling party and popularity for each ideology, civil war, autonomy |
-| **Construction** | Eleven building types at several levels each, built instantly across every owned state, plus shared building slots and off-map factories that cannot be bombed |
+| **Construction** | Eleven building types at several levels each, built instantly across every owned state — forts, coastal forts and supply hubs placed in the right provinces — railways from your capital to every state at four levels, shared building slots and off-map factories that cannot be bombed |
 | **Resources (raw)** | All seven raw resources added to every state you own |
-| **Military** | Nuclear bombs, division spawning, disband everything, and the three experience pools |
+| **Military** | Nuclear bombs, division spawning in your capital or in a state you picked, disband everything, and the three experience pools |
 | **Commanders** | Skill, attack, defence, planning and logistics for every general and admiral |
-| **Diplomacy** | Opinion, intelligence, war goals, truces, factions, collaboration, guarantees, release and independence — all aimed at your target country |
+| **Diplomacy** | Opinion, intelligence, war goals, truces, factions, collaboration, guarantees, release, independence and deleting the target's army — all aimed at your target country |
 | **History** | The last ten actions the panel applied, each repeatable |
 | **Settings** | Hotkey, confirmation prompts, diplomacy rules, AI goodwill, compatibility and language notes |
 
 **Every action offers several amounts, not one.** A card carries four or five buttons —
-`+1 / +5 / +10 / +20` — so **71 actions become 221 choices**, alongside 11 state actions
+`+1 / +5 / +10 / +20` — so **76 actions become 238 choices**, alongside 11 state actions
 and 5 country actions. The Equipment and Research lists add **145 equipment variants**
 and **328 technologies** read from your own installation.
 
@@ -119,6 +119,11 @@ mods at all. `enable_local_mod.py` fixes that and backs the launcher database up
   multiplayer game. The engine gives script no way to detect a multiplayer session
   (`is_ironman` exists, `is_multiplayer` does not), so the panel cannot hide those
   actions automatically and says so instead of gating on a check that never fires.
+- **Ironman.** The panel opens on a notice page and no section can be opened, because an
+  Ironman save cannot be rolled back. This is intended. Close it with CLOSE, Esc or the hotkey.
+- **Millennium Dawn and other total conversions: not compatible.** Millennium Dawn replaces
+  `common/scripted_effects`, `common/scripted_triggers` and `common/scripted_localisation`,
+  which removes every action the panel performs while its interface stays on screen.
 - **Ironman and achievements.** Running any mod disables achievements. No Ironman
   compatibility is claimed.
 - **Other mods.** No vanilla file is overridden and every identifier is namespaced.
@@ -218,16 +223,16 @@ açtığınızda harita modu değişirdi. Kısayolu panelin **Ayarlar** bölüm�
 | **Eyaletler** | Bir eyaleti tamamen alın, ya da yalnızca sahipliğini veya yalnızca kontrolünü alın; hedefinize eyaletin tamamını ya da sadece kontrolünü verin; core ve hak talebi ekleyip kaldırın; uyumu zorlayın, direnişi sıfırlayın — listeden ya da haritaya tıklayarak |
 | **Ulus** | İstikrar, savaş desteği, araştırma yuvası, yakıt, CIC fonu, dünya gerginliği, meşruiyet, anında araştırma bonusu, ücretsiz doktrinler, varsayılan işgal yasası |
 | **Siyaset** | Yönetici parti ve her ideoloji için popülerlik, iç savaş, özerklik |
-| **İnşaat** | On bir bina türü, her biri birkaç seviyede, sahip olduğunuz her eyalette anında; ayrıca paylaşımlı bina yuvaları ve bombalanamayan harita dışı fabrikalar |
+| **İnşaat** | On bir bina türü, her biri birkaç seviyede, sahip olduğunuz her eyalette anında — kaleler, kıyı kaleleri ve ikmal merkezleri doğru illere kurulur — başkentten her eyalete dört seviyede demiryolu, paylaşımlı bina yuvaları ve bombalanamayan harita dışı fabrikalar |
 | **Ham kaynaklar** | Yedi ham kaynağın tamamı, sahip olduğunuz her eyalete |
-| **Ordu** | Nükleer bomba, tümen üretimi, tüm birlikleri dağıtma ve üç tecrübe havuzu |
+| **Ordu** | Nükleer bomba, başkentte ya da seçtiğiniz eyalette tümen üretimi, tüm birlikleri dağıtma ve üç tecrübe havuzu |
 | **Komutanlar** | Her general ve amiral için beceri, saldırı, savunma, planlama ve lojistik |
-| **Diplomasi** | Görüş, istihbarat, savaş hedefi, ateşkes, hizipler, iş birliği, garanti, serbest bırakma ve bağımsızlık — hepsi hedef ülkenize yönelik |
+| **Diplomasi** | Görüş, istihbarat, savaş hedefi, ateşkes, hizipler, iş birliği, garanti, serbest bırakma, bağımsızlık ve hedefin ordusunu silme — hepsi hedef ülkenize yönelik |
 | **Geçmiş** | Panelin uyguladığı son on işlem, hepsi tekrarlanabilir |
 | **Ayarlar** | Kısayol tuşu, onay pencereleri, diplomasi kuralları, yapay zekâ iyi niyeti, uyumluluk ve dil notları |
 
 **Her eylem tek bir miktar değil, birkaç miktar sunar.** Her kartta dört ya da beş düğme
-vardır — `+1 / +5 / +10 / +20` — böylece **71 eylem 221 seçeneğe** dönüşür; ayrıca 11
+vardır — `+1 / +5 / +10 / +20` — böylece **76 eylem 238 seçeneğe** dönüşür; ayrıca 11
 eyalet eylemi ve 5 ülke eylemi vardır. Teçhizat ve Araştırma listeleri de kendi
 kurulumunuzdan okunan **145 teçhizat varyantı** ve **328 teknoloji** ekler.
 
@@ -277,6 +282,11 @@ yol açar. `enable_local_mod.py` bunu düzeltir ve önce launcher veritabanını
   senkronunu bozabilir. Motor, betiğe çok oyunculu oturumu algılamanın hiçbir yolunu vermez
   (`is_ironman` vardır, `is_multiplayer` yoktur); bu yüzden panel bu eylemleri kendiliğinden
   gizleyemez ve hiç çalışmayacak bir kontrole dayanmak yerine bunu açıkça yazar.
+- **Ironman.** Panel bir uyarı sayfasında açılır ve hiçbir bölüm açılamaz, çünkü Ironman
+  kaydı geri alınamaz. Bu bilinçli. KAPAT, Esc ya da kısayol tuşuyla kapatılır.
+- **Millennium Dawn ve diğer total conversion'lar: uyumsuz.** Millennium Dawn
+  `common/scripted_effects`, `common/scripted_triggers` ve `common/scripted_localisation`
+  dizinlerini değiştirir; arayüz ekranda kalır ama panelin yaptığı her eylem silinir.
 - **Ironman ve başarımlar.** Herhangi bir mod açıkken başarımlar kapanır. Ironman
   uyumluluğu iddia edilmez.
 - **Diğer modlar.** Hiçbir orijinal dosya değiştirilmez ve her tanımlayıcı ön eklidir.
@@ -378,16 +388,16 @@ im Spielstand gespeichert.
 | **Staaten** | Einen Staat ganz nehmen, oder nur seinen Besitz beziehungsweise nur seine Kontrolle; ihn oder nur seine Kontrolle an Ihr Ziel abgeben; Kerngebiete und Ansprüche setzen und entfernen; Kollaboration erzwingen, Widerstand tilgen — aus der Liste oder per Klick auf die Karte |
 | **Nation** | Stabilität, Kriegsunterstützung, Forschungsplätze, Treibstoff, CIC-Mittel, Weltspannung, Legitimität, sofortige Forschungsboni, kostenlose Doktrinen, Standard-Besatzungsgesetz |
 | **Politik** | Regierungspartei und Popularität je Ideologie, Bürgerkrieg, Autonomie |
-| **Bau** | Elf Gebäudearten in mehreren Stufen, sofort in jedem Ihrer Staaten, dazu gemeinsame Baufelder und Fabriken außerhalb der Karte, die nicht bombardiert werden können |
+| **Bau** | Elf Gebäudearten in mehreren Stufen, sofort in jedem Ihrer Staaten — Festungen, Küstenfestungen und Versorgungsknoten in den richtigen Provinzen — Eisenbahnen von der Hauptstadt zu jedem Staat in vier Stufen, gemeinsame Baufelder und Fabriken außerhalb der Karte, die nicht bombardiert werden können |
 | **Rohstoffe** | Alle sieben Rohstoffe in jedem Ihrer Staaten |
-| **Militär** | Atombomben, Divisionen aufstellen, alles auflösen und die drei Erfahrungsspeicher |
+| **Militär** | Atombomben, Divisionen in der Hauptstadt oder in einem gewählten Staat aufstellen, alles auflösen und die drei Erfahrungsspeicher |
 | **Kommandeure** | Fähigkeit, Angriff, Verteidigung, Planung und Logistik für jeden General und Admiral |
-| **Diplomatie** | Meinung, Aufklärung, Kriegsziele, Waffenstillstände, Fraktionen, Kollaboration, Garantien, Freilassung und Unabhängigkeit — alles auf Ihr Zielland gerichtet |
+| **Diplomatie** | Meinung, Aufklärung, Kriegsziele, Waffenstillstände, Fraktionen, Kollaboration, Garantien, Freilassung, Unabhängigkeit und das Löschen der Armee des Ziels — alles auf Ihr Zielland gerichtet |
 | **Verlauf** | Die letzten zehn Aktionen des Panels, jede wiederholbar |
 | **Einstellungen** | Tastenkürzel, Bestätigungen, Diplomatieregeln, KI-Wohlwollen, Hinweise zu Kompatibilität und Sprache |
 
 **Jede Aktion bietet mehrere Beträge, nicht einen.** Eine Karte trägt vier oder fünf
-Schaltflächen — `+1 / +5 / +10 / +20` — so werden aus **71 Aktionen 221 Möglichkeiten**,
+Schaltflächen — `+1 / +5 / +10 / +20` — so werden aus **76 Aktionen 238 Möglichkeiten**,
 dazu 11 Staaten- und 5 Länderaktionen. Ausrüstung und Forschung bringen weitere
 **145 Ausrüstungsvarianten** und **328 Technologien**, gelesen aus Ihrer eigenen Installation.
 
@@ -438,6 +448,12 @@ Playset aktiv ist — ein inaktives Playset lässt den Launcher das Spiel ganz o
   Mehrspielersitzung zu erkennen (`is_ironman` existiert, `is_multiplayer` nicht), daher kann
   das Panel diese Aktionen nicht automatisch ausblenden und sagt es stattdessen offen, statt
   sich auf eine Prüfung zu verlassen, die nie auslöst.
+- **Ironman.** Das Panel öffnet auf einer Hinweisseite und kein Bereich lässt sich öffnen, weil
+  ein Ironman-Spielstand nicht zurückzusetzen ist. Das ist beabsichtigt. Schließen mit
+  SCHLIESSEN, Esc oder der Taste.
+- **Millennium Dawn und andere Totalkonversionen: nicht kompatibel.** Millennium Dawn ersetzt
+  `common/scripted_effects`, `common/scripted_triggers` und `common/scripted_localisation`;
+  die Oberfläche bleibt sichtbar, aber jede Aktion des Panels entfällt.
 - **Ironman und Errungenschaften.** Jeder aktive Mod deaktiviert Errungenschaften. Eine
   Ironman-Kompatibilität wird nicht behauptet.
 - **Andere Mods.** Keine Originaldatei wird überschrieben und jeder Bezeichner hat ein
@@ -538,16 +554,16 @@ la touche se change en `F8`, `F11`, `F12` ou `Ctrl+F8` ; le choix est conservé 
 | **États** | Prendre un État entièrement, ou seulement sa propriété ou seulement son contrôle ; le céder, ou n en céder que le contrôle, à votre cible ; ajouter et retirer territoires nationaux et revendications ; imposer la conformité, effacer la résistance — depuis la liste ou en cliquant sur la carte |
 | **Nation** | Stabilité, soutien à la guerre, cases de recherche, carburant, fonds CIC, tension mondiale, légitimité, bonus de recherche instantanés, doctrines gratuites, loi d occupation par défaut |
 | **Politique** | Parti au pouvoir et popularité par idéologie, guerre civile, autonomie |
-| **Construction** | Onze types de bâtiments à plusieurs niveaux, construits instantanément dans chacun de vos États, plus les cases partagées et des usines hors carte que rien ne peut bombarder |
+| **Construction** | Onze types de bâtiments à plusieurs niveaux, construits instantanément dans chacun de vos États — forts, forts côtiers et nœuds de ravitaillement dans les bonnes provinces — voies ferrées de la capitale vers chaque État sur quatre niveaux, cases partagées et usines hors carte que rien ne peut bombarder |
 | **Ressources brutes** | Les sept ressources brutes dans chacun de vos États |
-| **Militaire** | Bombes nucléaires, création de divisions, dissolution générale, et les trois réserves d expérience |
+| **Militaire** | Bombes nucléaires, création de divisions dans la capitale ou dans un État choisi, dissolution générale, et les trois réserves d expérience |
 | **Commandants** | Compétence, attaque, défense, planification et logistique pour chaque général et amiral |
-| **Diplomatie** | Opinion, renseignement, casus belli, trêves, factions, collaboration, garanties, libération et indépendance — tout visant votre pays cible |
+| **Diplomatie** | Opinion, renseignement, casus belli, trêves, factions, collaboration, garanties, libération, indépendance et suppression de l armée de la cible — tout visant votre pays cible |
 | **Historique** | Les dix dernières actions appliquées par le panneau, toutes rejouables |
 | **Réglages** | Raccourci, confirmations, règles diplomatiques, bienveillance de l IA, notes de compatibilité et de langue |
 
 **Chaque action propose plusieurs montants, pas un seul.** Une carte porte quatre ou cinq
-boutons — `+1 / +5 / +10 / +20` — si bien que **71 actions deviennent 221 choix**, auxquels
+boutons — `+1 / +5 / +10 / +20` — si bien que **76 actions deviennent 238 choix**, auxquels
 s ajoutent 11 actions d État et 5 actions de pays. Les listes Équipement et Recherche
 apportent **145 variantes d équipement** et **328 technologies** lues dans votre propre installation.
 
@@ -598,6 +614,12 @@ corrige cela et sauvegarde d abord la base du launcher.
   (`is_ironman` existe, `is_multiplayer` non) : le panneau ne peut donc pas masquer ces
   actions automatiquement et le dit clairement plutôt que de s appuyer sur un test qui ne se
   déclenche jamais.
+- **Ironman.** Le panneau s ouvre sur une page d avertissement et aucune section ne s ouvre,
+  car une sauvegarde Ironman ne se rembobine pas. C est voulu. Fermez avec FERMER, Échap ou
+  le raccourci.
+- **Millennium Dawn et autres conversions totales : incompatibles.** Millennium Dawn remplace
+  `common/scripted_effects`, `common/scripted_triggers` et `common/scripted_localisation` ;
+  l interface reste affichée mais chaque action du panneau disparaît.
 - **Ironman et succès.** Tout mod actif désactive les succès. Aucune compatibilité Ironman
   n est revendiquée.
 - **Autres mods.** Aucun fichier d origine n est remplacé et chaque identifiant est préfixé.
@@ -697,16 +719,16 @@ Cheat Control Panel превращает эти действия в настоя
 | **Провинции** | Забрать провинцию целиком, либо только владение, либо только контроль; передать её или только контроль вашей цели; добавлять и снимать коренные территории и притязания; поднять согласие, убрать сопротивление — из списка или щелчком по карте |
 | **Государство** | Стабильность, поддержка войны, слоты исследований, топливо, средства CIC, мировая напряжённость, легитимность, мгновенные бонусы исследований, бесплатные доктрины, закон оккупации по умолчанию |
 | **Политика** | Правящая партия и популярность каждой идеологии, гражданская война, автономия |
-| **Строительство** | Одиннадцать типов зданий в несколько уровней, мгновенно во всех ваших провинциях, плюс общие ячейки и заводы вне карты, которые нельзя разбомбить |
+| **Строительство** | Одиннадцать типов зданий в несколько уровней, мгновенно во всех ваших провинциях — крепости, береговые крепости и узлы снабжения ставятся в нужные области — железные дороги от столицы к каждой провинции на четырёх уровнях, общие ячейки и заводы вне карты, которые нельзя разбомбить |
 | **Сырьё** | Все семь видов сырья во все ваши провинции |
-| **Армия** | Ядерные бомбы, создание дивизий, роспуск всех войск и три запаса опыта |
+| **Армия** | Ядерные бомбы, создание дивизий в столице или в выбранной провинции, роспуск всех войск и три запаса опыта |
 | **Командующие** | Навык, атака, оборона, планирование и логистика для каждого генерала и адмирала |
-| **Дипломатия** | Мнение, разведка, поводы к войне, перемирия, фракции, коллаборация, гарантии, освобождение и независимость — всё направлено на выбранную страну |
+| **Дипломатия** | Мнение, разведка, поводы к войне, перемирия, фракции, коллаборация, гарантии, освобождение, независимость и уничтожение армии цели — всё направлено на выбранную страну |
 | **История** | Последние десять действий панели, каждое можно повторить |
 | **Настройки** | Горячая клавиша, подтверждения, дипломатические правила, благосклонность ИИ, заметки о совместимости и языке |
 
 **У каждого действия несколько величин, а не одна.** На карточке четыре или пять кнопок —
-`+1 / +5 / +10 / +20` — поэтому **71 действие превращается в 221 вариант**, плюс 11 действий
+`+1 / +5 / +10 / +20` — поэтому **76 действий превращаются в 238 вариантов**, плюс 11 действий
 с провинциями и 5 со странами. Разделы «Техника» и «Исследования» добавляют
 **145 вариантов техники** и **328 технологий**, прочитанных из вашей собственной сборки.
 
@@ -756,6 +778,11 @@ python tools/enable_local_mod.py   # зарегистрировать в наб�
   сетевую игру. Движок не даёт скрипту способа определить сетевую сессию (`is_ironman` есть,
   `is_multiplayer` нет), поэтому панель не может скрыть эти действия автоматически и честно
   сообщает об этом, а не полагается на проверку, которая никогда не сработает.
+- **Ironman.** Панель открывается на странице предупреждения, и разделы не открываются, потому
+  что сохранение Ironman нельзя откатить. Так задумано. Закрыть — ЗАКРЫТЬ, Esc или клавиша.
+- **Millennium Dawn и другие тотальные конверсии: несовместимы.** Millennium Dawn заменяет
+  `common/scripted_effects`, `common/scripted_triggers` и `common/scripted_localisation`;
+  интерфейс остаётся на экране, но каждое действие панели пропадает.
 - **Ironman и достижения.** Любой включённый мод отключает достижения. Совместимость с
   Ironman не заявляется.
 - **Другие моды.** Ни один оригинальный файл не заменяется, все имена с префиксом. Тотальные
@@ -855,16 +882,16 @@ kun je de toets wijzigen naar `F8`, `F11`, `F12` of `Ctrl+F8`; de keuze staat in
 | **Staten** | Een staat helemaal nemen, of alleen het eigendom of alleen de controle; hem of enkel zijn controle aan je doelwit geven; kerngebieden en claims toevoegen en verwijderen; meegaandheid afdwingen, verzet wegvagen — uit de lijst of door op de kaart te klikken |
 | **Natie** | Stabiliteit, oorlogssteun, onderzoeksplaatsen, brandstof, CIC-middelen, wereldspanning, legitimiteit, directe onderzoeksbonussen, gratis doctrines, standaard bezettingswet |
 | **Politiek** | Regerende partij en populariteit per ideologie, burgeroorlog, autonomie |
-| **Bouw** | Elf gebouwtypes in meerdere niveaus, direct gebouwd in elke staat die je bezit, plus gedeelde bouwplekken en fabrieken buiten de kaart die niet gebombardeerd kunnen worden |
+| **Bouw** | Elf gebouwtypes in meerdere niveaus, direct gebouwd in elke staat die je bezit — forten, kustforten en bevoorradingsknooppunten in de juiste provincies — spoorwegen van de hoofdstad naar elke staat in vier niveaus, gedeelde bouwplekken en fabrieken buiten de kaart die niet gebombardeerd kunnen worden |
 | **Ruwe grondstoffen** | Alle zeven ruwe grondstoffen in elke staat die je bezit |
-| **Leger** | Kernbommen, divisies opzetten, alles ontbinden, en de drie ervaringsvoorraden |
+| **Leger** | Kernbommen, divisies opzetten in de hoofdstad of in een gekozen staat, alles ontbinden, en de drie ervaringsvoorraden |
 | **Bevelhebbers** | Vaardigheid, aanval, verdediging, planning en logistiek voor elke generaal en admiraal |
-| **Diplomatie** | Opinie, inlichtingen, oorlogsdoelen, wapenstilstanden, facties, collaboratie, garanties, vrijlating en onafhankelijkheid — alles gericht op je doelland |
+| **Diplomatie** | Opinie, inlichtingen, oorlogsdoelen, wapenstilstanden, facties, collaboratie, garanties, vrijlating, onafhankelijkheid en het leger van het doelwit wissen — alles gericht op je doelland |
 | **Geschiedenis** | De laatste tien acties van het paneel, elk herhaalbaar |
 | **Instellingen** | Sneltoets, bevestigingen, diplomatieke regels, AI-welwillendheid, opmerkingen over compatibiliteit en taal |
 
 **Elke actie biedt meerdere bedragen, niet één.** Een kaart draagt vier of vijf knoppen —
-`+1 / +5 / +10 / +20` — dus **71 acties worden 221 keuzes**, naast 11 staatacties en 5
+`+1 / +5 / +10 / +20` — dus **76 acties worden 238 keuzes**, naast 11 staatacties en 5
 landacties. De lijsten Uitrusting en Onderzoek voegen **145 uitrustingsvarianten** en
 **328 technologieën** toe, gelezen uit jouw eigen installatie.
 
@@ -914,6 +941,12 @@ actief is — een inactieve playset laat de launcher het spel zonder enige mod s
   desynchroniseren. De engine geeft script geen manier om een multiplayersessie te herkennen
   (`is_ironman` bestaat, `is_multiplayer` niet), dus het paneel kan die acties niet automatisch
   verbergen en zegt dat ronduit in plaats van te vertrouwen op een controle die nooit afgaat.
+- **Ironman.** Het paneel opent op een waarschuwingspagina en geen onderdeel gaat open, omdat
+  een Ironman-opslag niet terug te draaien is. Dat is zo bedoeld. Sluiten met SLUITEN, Esc of
+  de sneltoets.
+- **Millennium Dawn en andere totale conversies: niet compatibel.** Millennium Dawn vervangt
+  `common/scripted_effects`, `common/scripted_triggers` en `common/scripted_localisation`;
+  de interface blijft zichtbaar maar elke actie van het paneel valt weg.
 - **Ironman en prestaties.** Elke actieve mod schakelt prestaties uit. Er wordt geen
   Ironman-compatibiliteit geclaimd.
 - **Andere mods.** Geen enkel origineel bestand wordt overschreven en elke naam heeft een

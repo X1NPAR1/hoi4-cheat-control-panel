@@ -62,6 +62,57 @@ def _build(kind: str) -> Callable[[int], list[str]]:
     )
 
 
+# Forts, coastal forts and supply hubs are province buildings. Without a province
+# block the engine refuses add_building_construction without a word, which is why
+# those three cards did nothing. The province options are the game's own.
+def _build_provincial(
+    kind: str, province: str, state_limit: str | None = None
+) -> Callable[[int], list[str]]:
+    def body(n: int) -> list[str]:
+        effect = (
+            f"add_building_construction = {{ type = {kind} level = {n} "
+            f"instant_build = yes province = {{ {province} }} }}"
+        )
+        if state_limit:
+            return _owned_limited(state_limit, effect)
+        return _owned(effect)
+
+    return body
+
+
+def _railway(n: int) -> list[str]:
+    """Rail from the capital to every owned state, as the game's own SOV script does."""
+    return [
+        "capital_scope = { set_variable = { ROOT.ccp_rail_from = THIS.id } }",
+        "every_owned_state = {",
+        "\tset_variable = { ROOT.ccp_rail_to = THIS.id }",
+        "\tROOT = {",
+        "\t\tbuild_railway = {",
+        f"\t\t\tlevel = {n}",
+        "\t\t\tfallback = yes",
+        "\t\t\tstart_state = var:ROOT.ccp_rail_from",
+        "\t\t\ttarget_state = var:ROOT.ccp_rail_to",
+        "\t\t}",
+        "\t}",
+        "}",
+    ]
+
+
+def _spawn_in_state(template: str) -> Callable[[int], list[str]]:
+    """Divisions raised in the state last picked, not in the capital.
+
+    create_unit run from a state scope places the division in that state -- the
+    game's own TOA and Paraguay scripts rely on it -- and owner = PREV is the
+    country that stepped in.
+    """
+    return lambda n: [
+        "CCP_ensure_templates = yes",
+        "var:ccp_state = {",
+        f"\tCCP_spawn_{template}_{n} = yes",
+        "}",
+    ]
+
+
 def _dlc(dlc: str, lines: list[str]) -> list[str]:
     return ["if = {", f'	limit = {{ has_dlc = "{dlc}" }}', *[f"	{line}" for line in lines], "}"]
 
@@ -202,22 +253,27 @@ CONSTRUCTION: list[Action] = [
     Action("airbase", "construction", _build("air_base"), (1, 5, 10, 20)),
     Action("radar", "construction", _build("radar_station"), (1, 2, 3, 5)),
     Action("antiair", "construction", _build("anti_air_building"), (1, 2, 3, 5)),
-    Action("fort", "construction", _build("bunker"), (1, 3, 5, 10)),
+    Action(
+        "fort",
+        "construction",
+        _build_provincial("bunker", "all_provinces = yes"),
+        (1, 3, 5, 10),
+    ),
     Action(
         "coastal_fort",
         "construction",
-        lambda n: _owned_limited(
-            "is_coastal = yes",
-            f"add_building_construction = {{ type = coastal_bunker level = {n} instant_build = yes }}",
+        _build_provincial(
+            "coastal_bunker", "all_provinces = yes limit_to_coastal = yes", "is_coastal = yes"
         ),
         (1, 3, 5, 10),
     ),
     Action(
         "supply_hub",
         "construction",
-        _build("supply_node"),
+        _build_provincial("supply_node", "all_provinces = yes limit_to_victory_point = yes"),
         (1,),
     ),
+    Action("railway", "construction", _railway, (1, 2, 3, 5)),
     Action(
         "slots",
         "construction",
@@ -359,6 +415,9 @@ MILITARY: list[Action] = [
         )("motorized"),
         (1, 5, 10, 25),
     ),
+    Action("state_infantry", "military", _spawn_in_state("infantry"), (1, 5, 10, 25)),
+    Action("state_armor", "military", _spawn_in_state("armor"), (1, 5, 10, 25)),
+    Action("state_motorized", "military", _spawn_in_state("motorized"), (1, 5, 10, 25)),
     Action(
         "delete_units",
         "military",
@@ -522,6 +581,15 @@ DIPLOMACY += [
         lambda n: ["var:ccp_target_country = { ROOT = { give_guarantee = PREV } }"],
         (1,),
         "SET",
+    ),
+    Action(
+        "disband_target",
+        "diplomacy",
+        lambda n: ["var:ccp_target_country = { delete_unit = { disband = no } }"],
+        (0,),
+        "ALL",
+        danger=True,
+        confirm=True,
     ),
 ]
 

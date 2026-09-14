@@ -1124,7 +1124,7 @@ CCP_action_antiair_5 = {
 
 CCP_action_fort_1 = {
 	every_owned_state = {
-		add_building_construction = { type = bunker level = 1 instant_build = yes }
+		add_building_construction = { type = bunker level = 1 instant_build = yes province = { all_provinces = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 100 }
@@ -1134,7 +1134,7 @@ CCP_action_fort_1 = {
 
 CCP_action_fort_3 = {
 	every_owned_state = {
-		add_building_construction = { type = bunker level = 3 instant_build = yes }
+		add_building_construction = { type = bunker level = 3 instant_build = yes province = { all_provinces = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 101 }
@@ -1144,7 +1144,7 @@ CCP_action_fort_3 = {
 
 CCP_action_fort_5 = {
 	every_owned_state = {
-		add_building_construction = { type = bunker level = 5 instant_build = yes }
+		add_building_construction = { type = bunker level = 5 instant_build = yes province = { all_provinces = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 102 }
@@ -1154,7 +1154,7 @@ CCP_action_fort_5 = {
 
 CCP_action_fort_10 = {
 	every_owned_state = {
-		add_building_construction = { type = bunker level = 10 instant_build = yes }
+		add_building_construction = { type = bunker level = 10 instant_build = yes province = { all_provinces = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 103 }
@@ -1165,7 +1165,7 @@ CCP_action_fort_10 = {
 CCP_action_coastal_fort_1 = {
 	every_owned_state = {
 		limit = { is_coastal = yes }
-		add_building_construction = { type = coastal_bunker level = 1 instant_build = yes }
+		add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = { all_provinces = yes limit_to_coastal = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 104 }
@@ -1176,7 +1176,7 @@ CCP_action_coastal_fort_1 = {
 CCP_action_coastal_fort_3 = {
 	every_owned_state = {
 		limit = { is_coastal = yes }
-		add_building_construction = { type = coastal_bunker level = 3 instant_build = yes }
+		add_building_construction = { type = coastal_bunker level = 3 instant_build = yes province = { all_provinces = yes limit_to_coastal = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 105 }
@@ -1187,7 +1187,7 @@ CCP_action_coastal_fort_3 = {
 CCP_action_coastal_fort_5 = {
 	every_owned_state = {
 		limit = { is_coastal = yes }
-		add_building_construction = { type = coastal_bunker level = 5 instant_build = yes }
+		add_building_construction = { type = coastal_bunker level = 5 instant_build = yes province = { all_provinces = yes limit_to_coastal = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 106 }
@@ -1198,7 +1198,7 @@ CCP_action_coastal_fort_5 = {
 CCP_action_coastal_fort_10 = {
 	every_owned_state = {
 		limit = { is_coastal = yes }
-		add_building_construction = { type = coastal_bunker level = 10 instant_build = yes }
+		add_building_construction = { type = coastal_bunker level = 10 instant_build = yes province = { all_provinces = yes limit_to_coastal = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 107 }
@@ -1208,10 +1208,86 @@ CCP_action_coastal_fort_10 = {
 
 CCP_action_supply_hub_1 = {
 	every_owned_state = {
-		add_building_construction = { type = supply_node level = 1 instant_build = yes }
+		add_building_construction = { type = supply_node level = 1 instant_build = yes province = { all_provinces = yes limit_to_victory_point = yes } }
 	}
 	set_variable = { global.ccp_status = 11 }
 	set_variable = { ccp_last_action = 108 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_railway_1 = {
+	capital_scope = { set_variable = { ROOT.ccp_rail_from = THIS.id } }
+	every_owned_state = {
+		set_variable = { ROOT.ccp_rail_to = THIS.id }
+		ROOT = {
+			build_railway = {
+				level = 1
+				fallback = yes
+				start_state = var:ROOT.ccp_rail_from
+				target_state = var:ROOT.ccp_rail_to
+			}
+		}
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 109 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_railway_2 = {
+	capital_scope = { set_variable = { ROOT.ccp_rail_from = THIS.id } }
+	every_owned_state = {
+		set_variable = { ROOT.ccp_rail_to = THIS.id }
+		ROOT = {
+			build_railway = {
+				level = 2
+				fallback = yes
+				start_state = var:ROOT.ccp_rail_from
+				target_state = var:ROOT.ccp_rail_to
+			}
+		}
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 110 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_railway_3 = {
+	capital_scope = { set_variable = { ROOT.ccp_rail_from = THIS.id } }
+	every_owned_state = {
+		set_variable = { ROOT.ccp_rail_to = THIS.id }
+		ROOT = {
+			build_railway = {
+				level = 3
+				fallback = yes
+				start_state = var:ROOT.ccp_rail_from
+				target_state = var:ROOT.ccp_rail_to
+			}
+		}
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 111 }
+	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_railway_5 = {
+	capital_scope = { set_variable = { ROOT.ccp_rail_from = THIS.id } }
+	every_owned_state = {
+		set_variable = { ROOT.ccp_rail_to = THIS.id }
+		ROOT = {
+			build_railway = {
+				level = 5
+				fallback = yes
+				start_state = var:ROOT.ccp_rail_from
+				target_state = var:ROOT.ccp_rail_to
+			}
+		}
+	}
+	set_variable = { global.ccp_status = 11 }
+	set_variable = { ccp_last_action = 112 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1221,7 +1297,7 @@ CCP_action_slots_1 = {
 		add_extra_state_shared_building_slots = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 109 }
+	set_variable = { ccp_last_action = 113 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1231,7 +1307,7 @@ CCP_action_slots_3 = {
 		add_extra_state_shared_building_slots = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 110 }
+	set_variable = { ccp_last_action = 114 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1241,7 +1317,7 @@ CCP_action_slots_5 = {
 		add_extra_state_shared_building_slots = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 111 }
+	set_variable = { ccp_last_action = 115 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1251,7 +1327,7 @@ CCP_action_slots_10 = {
 		add_extra_state_shared_building_slots = 10
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 112 }
+	set_variable = { ccp_last_action = 116 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1259,7 +1335,7 @@ CCP_action_slots_10 = {
 CCP_action_offsite_civilian_5 = {
 	add_offsite_building = { type = industrial_complex level = 5 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 113 }
+	set_variable = { ccp_last_action = 117 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1267,7 +1343,7 @@ CCP_action_offsite_civilian_5 = {
 CCP_action_offsite_civilian_10 = {
 	add_offsite_building = { type = industrial_complex level = 10 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 114 }
+	set_variable = { ccp_last_action = 118 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1275,7 +1351,7 @@ CCP_action_offsite_civilian_10 = {
 CCP_action_offsite_civilian_20 = {
 	add_offsite_building = { type = industrial_complex level = 20 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 115 }
+	set_variable = { ccp_last_action = 119 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1283,7 +1359,7 @@ CCP_action_offsite_civilian_20 = {
 CCP_action_offsite_civilian_50 = {
 	add_offsite_building = { type = industrial_complex level = 50 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 116 }
+	set_variable = { ccp_last_action = 120 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1291,7 +1367,7 @@ CCP_action_offsite_civilian_50 = {
 CCP_action_offsite_military_5 = {
 	add_offsite_building = { type = arms_factory level = 5 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 117 }
+	set_variable = { ccp_last_action = 121 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1299,7 +1375,7 @@ CCP_action_offsite_military_5 = {
 CCP_action_offsite_military_10 = {
 	add_offsite_building = { type = arms_factory level = 10 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 118 }
+	set_variable = { ccp_last_action = 122 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1307,7 +1383,7 @@ CCP_action_offsite_military_10 = {
 CCP_action_offsite_military_20 = {
 	add_offsite_building = { type = arms_factory level = 20 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 119 }
+	set_variable = { ccp_last_action = 123 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1315,7 +1391,7 @@ CCP_action_offsite_military_20 = {
 CCP_action_offsite_military_50 = {
 	add_offsite_building = { type = arms_factory level = 50 }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 120 }
+	set_variable = { ccp_last_action = 124 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1325,7 +1401,7 @@ CCP_action_resource_oil_1 = {
 		add_resource = { type = oil amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 121 }
+	set_variable = { ccp_last_action = 125 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1335,7 +1411,7 @@ CCP_action_resource_oil_5 = {
 		add_resource = { type = oil amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 122 }
+	set_variable = { ccp_last_action = 126 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1345,7 +1421,7 @@ CCP_action_resource_oil_10 = {
 		add_resource = { type = oil amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 123 }
+	set_variable = { ccp_last_action = 127 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1355,7 +1431,7 @@ CCP_action_resource_oil_25 = {
 		add_resource = { type = oil amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 124 }
+	set_variable = { ccp_last_action = 128 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1365,7 +1441,7 @@ CCP_action_resource_aluminium_1 = {
 		add_resource = { type = aluminium amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 125 }
+	set_variable = { ccp_last_action = 129 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1375,7 +1451,7 @@ CCP_action_resource_aluminium_5 = {
 		add_resource = { type = aluminium amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 126 }
+	set_variable = { ccp_last_action = 130 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1385,7 +1461,7 @@ CCP_action_resource_aluminium_10 = {
 		add_resource = { type = aluminium amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 127 }
+	set_variable = { ccp_last_action = 131 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1395,7 +1471,7 @@ CCP_action_resource_aluminium_25 = {
 		add_resource = { type = aluminium amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 128 }
+	set_variable = { ccp_last_action = 132 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1405,7 +1481,7 @@ CCP_action_resource_rubber_1 = {
 		add_resource = { type = rubber amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 129 }
+	set_variable = { ccp_last_action = 133 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1415,7 +1491,7 @@ CCP_action_resource_rubber_5 = {
 		add_resource = { type = rubber amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 130 }
+	set_variable = { ccp_last_action = 134 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1425,7 +1501,7 @@ CCP_action_resource_rubber_10 = {
 		add_resource = { type = rubber amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 131 }
+	set_variable = { ccp_last_action = 135 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1435,7 +1511,7 @@ CCP_action_resource_rubber_25 = {
 		add_resource = { type = rubber amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 132 }
+	set_variable = { ccp_last_action = 136 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1445,7 +1521,7 @@ CCP_action_resource_tungsten_1 = {
 		add_resource = { type = tungsten amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 133 }
+	set_variable = { ccp_last_action = 137 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1455,7 +1531,7 @@ CCP_action_resource_tungsten_5 = {
 		add_resource = { type = tungsten amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 134 }
+	set_variable = { ccp_last_action = 138 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1465,7 +1541,7 @@ CCP_action_resource_tungsten_10 = {
 		add_resource = { type = tungsten amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 135 }
+	set_variable = { ccp_last_action = 139 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1475,7 +1551,7 @@ CCP_action_resource_tungsten_25 = {
 		add_resource = { type = tungsten amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 136 }
+	set_variable = { ccp_last_action = 140 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1485,7 +1561,7 @@ CCP_action_resource_steel_1 = {
 		add_resource = { type = steel amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 137 }
+	set_variable = { ccp_last_action = 141 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1495,7 +1571,7 @@ CCP_action_resource_steel_5 = {
 		add_resource = { type = steel amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 138 }
+	set_variable = { ccp_last_action = 142 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1505,7 +1581,7 @@ CCP_action_resource_steel_10 = {
 		add_resource = { type = steel amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 139 }
+	set_variable = { ccp_last_action = 143 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1515,7 +1591,7 @@ CCP_action_resource_steel_25 = {
 		add_resource = { type = steel amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 140 }
+	set_variable = { ccp_last_action = 144 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1525,7 +1601,7 @@ CCP_action_resource_chromium_1 = {
 		add_resource = { type = chromium amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 141 }
+	set_variable = { ccp_last_action = 145 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1535,7 +1611,7 @@ CCP_action_resource_chromium_5 = {
 		add_resource = { type = chromium amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 142 }
+	set_variable = { ccp_last_action = 146 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1545,7 +1621,7 @@ CCP_action_resource_chromium_10 = {
 		add_resource = { type = chromium amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 143 }
+	set_variable = { ccp_last_action = 147 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1555,7 +1631,7 @@ CCP_action_resource_chromium_25 = {
 		add_resource = { type = chromium amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 144 }
+	set_variable = { ccp_last_action = 148 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1565,7 +1641,7 @@ CCP_action_resource_coal_1 = {
 		add_resource = { type = coal amount = 1 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 145 }
+	set_variable = { ccp_last_action = 149 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1575,7 +1651,7 @@ CCP_action_resource_coal_5 = {
 		add_resource = { type = coal amount = 5 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 146 }
+	set_variable = { ccp_last_action = 150 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1585,7 +1661,7 @@ CCP_action_resource_coal_10 = {
 		add_resource = { type = coal amount = 10 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 147 }
+	set_variable = { ccp_last_action = 151 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1595,7 +1671,7 @@ CCP_action_resource_coal_25 = {
 		add_resource = { type = coal amount = 25 }
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 148 }
+	set_variable = { ccp_last_action = 152 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1603,7 +1679,7 @@ CCP_action_resource_coal_25 = {
 CCP_action_nukes_1 = {
 	add_nuclear_bombs = 1
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 149 }
+	set_variable = { ccp_last_action = 153 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1611,7 +1687,7 @@ CCP_action_nukes_1 = {
 CCP_action_nukes_5 = {
 	add_nuclear_bombs = 5
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 150 }
+	set_variable = { ccp_last_action = 154 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1619,7 +1695,7 @@ CCP_action_nukes_5 = {
 CCP_action_nukes_25 = {
 	add_nuclear_bombs = 25
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 151 }
+	set_variable = { ccp_last_action = 155 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1627,7 +1703,7 @@ CCP_action_nukes_25 = {
 CCP_action_nukes_100 = {
 	add_nuclear_bombs = 100
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 152 }
+	set_variable = { ccp_last_action = 156 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1638,7 +1714,7 @@ CCP_action_divisions_infantry_1 = {
 		CCP_spawn_infantry_1 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 153 }
+	set_variable = { ccp_last_action = 157 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1649,7 +1725,7 @@ CCP_action_divisions_infantry_5 = {
 		CCP_spawn_infantry_5 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 154 }
+	set_variable = { ccp_last_action = 158 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1660,7 +1736,7 @@ CCP_action_divisions_infantry_10 = {
 		CCP_spawn_infantry_10 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 155 }
+	set_variable = { ccp_last_action = 159 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1671,7 +1747,7 @@ CCP_action_divisions_infantry_25 = {
 		CCP_spawn_infantry_25 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 156 }
+	set_variable = { ccp_last_action = 160 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1682,7 +1758,7 @@ CCP_action_divisions_armor_1 = {
 		CCP_spawn_armor_1 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 157 }
+	set_variable = { ccp_last_action = 161 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1693,7 +1769,7 @@ CCP_action_divisions_armor_5 = {
 		CCP_spawn_armor_5 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 158 }
+	set_variable = { ccp_last_action = 162 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1704,7 +1780,7 @@ CCP_action_divisions_armor_10 = {
 		CCP_spawn_armor_10 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 159 }
+	set_variable = { ccp_last_action = 163 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1715,7 +1791,7 @@ CCP_action_divisions_armor_25 = {
 		CCP_spawn_armor_25 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 160 }
+	set_variable = { ccp_last_action = 164 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1726,7 +1802,7 @@ CCP_action_divisions_motorized_1 = {
 		CCP_spawn_motorized_1 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 161 }
+	set_variable = { ccp_last_action = 165 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1737,7 +1813,7 @@ CCP_action_divisions_motorized_5 = {
 		CCP_spawn_motorized_5 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 162 }
+	set_variable = { ccp_last_action = 166 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1748,7 +1824,7 @@ CCP_action_divisions_motorized_10 = {
 		CCP_spawn_motorized_10 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 163 }
+	set_variable = { ccp_last_action = 167 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1759,15 +1835,243 @@ CCP_action_divisions_motorized_25 = {
 		CCP_spawn_motorized_25 = yes
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 164 }
+	set_variable = { ccp_last_action = 168 }
 	CCP_history_record = yes
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_infantry_1 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_infantry_1 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 169 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_infantry_5 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_infantry_5 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 170 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_infantry_10 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_infantry_10 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 171 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_infantry_25 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_infantry_25 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 172 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_armor_1 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_armor_1 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 173 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_armor_5 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_armor_5 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 174 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_armor_10 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_armor_10 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 175 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_armor_25 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_armor_25 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 176 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_motorized_1 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_motorized_1 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 177 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_motorized_5 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_motorized_5 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 178 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_motorized_10 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_motorized_10 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 179 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_state_motorized_25 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_state }
+		}
+		set_variable = { global.ccp_status = 25 }
+	}
+	else = {
+		CCP_ensure_templates = yes
+		var:ROOT.ccp_state = {
+			CCP_spawn_motorized_25 = yes
+		}
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 180 }
+		CCP_history_record = yes
+	}
 	CCP_mark_dirty = yes
 }
 
 CCP_action_delete_units_0 = {
 	delete_unit = { disband = yes }
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 165 }
+	set_variable = { ccp_last_action = 181 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1775,7 +2079,7 @@ CCP_action_delete_units_0 = {
 CCP_action_army_xp_100 = {
 	army_experience = 100
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 166 }
+	set_variable = { ccp_last_action = 182 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1783,7 +2087,7 @@ CCP_action_army_xp_100 = {
 CCP_action_army_xp_500 = {
 	army_experience = 500
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 167 }
+	set_variable = { ccp_last_action = 183 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1791,7 +2095,7 @@ CCP_action_army_xp_500 = {
 CCP_action_army_xp_1000 = {
 	army_experience = 1000
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 168 }
+	set_variable = { ccp_last_action = 184 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1799,7 +2103,7 @@ CCP_action_army_xp_1000 = {
 CCP_action_army_xp_5000 = {
 	army_experience = 5000
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 169 }
+	set_variable = { ccp_last_action = 185 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1807,7 +2111,7 @@ CCP_action_army_xp_5000 = {
 CCP_action_navy_xp_100 = {
 	navy_experience = 100
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 170 }
+	set_variable = { ccp_last_action = 186 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1815,7 +2119,7 @@ CCP_action_navy_xp_100 = {
 CCP_action_navy_xp_500 = {
 	navy_experience = 500
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 171 }
+	set_variable = { ccp_last_action = 187 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1823,7 +2127,7 @@ CCP_action_navy_xp_500 = {
 CCP_action_navy_xp_1000 = {
 	navy_experience = 1000
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 172 }
+	set_variable = { ccp_last_action = 188 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1831,7 +2135,7 @@ CCP_action_navy_xp_1000 = {
 CCP_action_navy_xp_5000 = {
 	navy_experience = 5000
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 173 }
+	set_variable = { ccp_last_action = 189 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1839,7 +2143,7 @@ CCP_action_navy_xp_5000 = {
 CCP_action_air_xp_100 = {
 	air_experience = 100
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 174 }
+	set_variable = { ccp_last_action = 190 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1847,7 +2151,7 @@ CCP_action_air_xp_100 = {
 CCP_action_air_xp_500 = {
 	air_experience = 500
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 175 }
+	set_variable = { ccp_last_action = 191 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1855,7 +2159,7 @@ CCP_action_air_xp_500 = {
 CCP_action_air_xp_1000 = {
 	air_experience = 1000
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 176 }
+	set_variable = { ccp_last_action = 192 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1863,7 +2167,7 @@ CCP_action_air_xp_1000 = {
 CCP_action_air_xp_5000 = {
 	air_experience = 5000
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 177 }
+	set_variable = { ccp_last_action = 193 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1873,7 +2177,7 @@ CCP_action_skill_1 = {
 		add_skill_level = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 178 }
+	set_variable = { ccp_last_action = 194 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1883,7 +2187,7 @@ CCP_action_skill_2 = {
 		add_skill_level = 2
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 179 }
+	set_variable = { ccp_last_action = 195 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1893,7 +2197,7 @@ CCP_action_skill_3 = {
 		add_skill_level = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 180 }
+	set_variable = { ccp_last_action = 196 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1903,7 +2207,7 @@ CCP_action_skill_5 = {
 		add_skill_level = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 181 }
+	set_variable = { ccp_last_action = 197 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1913,7 +2217,7 @@ CCP_action_attack_1 = {
 		add_attack = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 182 }
+	set_variable = { ccp_last_action = 198 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1923,7 +2227,7 @@ CCP_action_attack_2 = {
 		add_attack = 2
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 183 }
+	set_variable = { ccp_last_action = 199 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1933,7 +2237,7 @@ CCP_action_attack_3 = {
 		add_attack = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 184 }
+	set_variable = { ccp_last_action = 200 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1943,7 +2247,7 @@ CCP_action_attack_5 = {
 		add_attack = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 185 }
+	set_variable = { ccp_last_action = 201 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1953,7 +2257,7 @@ CCP_action_defense_1 = {
 		add_defense = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 186 }
+	set_variable = { ccp_last_action = 202 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1963,7 +2267,7 @@ CCP_action_defense_2 = {
 		add_defense = 2
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 187 }
+	set_variable = { ccp_last_action = 203 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1973,7 +2277,7 @@ CCP_action_defense_3 = {
 		add_defense = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 188 }
+	set_variable = { ccp_last_action = 204 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1983,7 +2287,7 @@ CCP_action_defense_5 = {
 		add_defense = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 189 }
+	set_variable = { ccp_last_action = 205 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -1993,7 +2297,7 @@ CCP_action_planning_1 = {
 		add_planning = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 190 }
+	set_variable = { ccp_last_action = 206 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2003,7 +2307,7 @@ CCP_action_planning_2 = {
 		add_planning = 2
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 191 }
+	set_variable = { ccp_last_action = 207 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2013,7 +2317,7 @@ CCP_action_planning_3 = {
 		add_planning = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 192 }
+	set_variable = { ccp_last_action = 208 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2023,7 +2327,7 @@ CCP_action_planning_5 = {
 		add_planning = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 193 }
+	set_variable = { ccp_last_action = 209 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2033,7 +2337,7 @@ CCP_action_logistics_1 = {
 		add_logistics = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 194 }
+	set_variable = { ccp_last_action = 210 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2043,7 +2347,7 @@ CCP_action_logistics_2 = {
 		add_logistics = 2
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 195 }
+	set_variable = { ccp_last_action = 211 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2053,7 +2357,7 @@ CCP_action_logistics_3 = {
 		add_logistics = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 196 }
+	set_variable = { ccp_last_action = 212 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2063,7 +2367,7 @@ CCP_action_logistics_5 = {
 		add_logistics = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 197 }
+	set_variable = { ccp_last_action = 213 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2073,7 +2377,7 @@ CCP_action_admiral_skill_1 = {
 		add_skill_level = 1
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 198 }
+	set_variable = { ccp_last_action = 214 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2083,7 +2387,7 @@ CCP_action_admiral_skill_2 = {
 		add_skill_level = 2
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 199 }
+	set_variable = { ccp_last_action = 215 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2093,7 +2397,7 @@ CCP_action_admiral_skill_3 = {
 		add_skill_level = 3
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 200 }
+	set_variable = { ccp_last_action = 216 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2103,7 +2407,7 @@ CCP_action_admiral_skill_5 = {
 		add_skill_level = 5
 	}
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 201 }
+	set_variable = { ccp_last_action = 217 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2111,17 +2415,17 @@ CCP_action_admiral_skill_5 = {
 CCP_action_opinion_up_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			add_opinion_modifier = { target = ROOT modifier = ccp_goodwill }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 202 }
+		set_variable = { ccp_last_action = 218 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2129,17 +2433,17 @@ CCP_action_opinion_up_1 = {
 CCP_action_opinion_down_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			add_opinion_modifier = { target = ROOT modifier = ccp_distrust }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 203 }
+		set_variable = { ccp_last_action = 219 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2147,8 +2451,11 @@ CCP_action_opinion_down_1 = {
 CCP_action_intel_25 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_intel = {
@@ -2161,11 +2468,8 @@ CCP_action_intel_25 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 204 }
+		set_variable = { ccp_last_action = 220 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2173,8 +2477,11 @@ CCP_action_intel_25 = {
 CCP_action_intel_50 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_intel = {
@@ -2187,11 +2494,8 @@ CCP_action_intel_50 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 205 }
+		set_variable = { ccp_last_action = 221 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2199,8 +2503,11 @@ CCP_action_intel_50 = {
 CCP_action_intel_75 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_intel = {
@@ -2213,11 +2520,8 @@ CCP_action_intel_75 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 206 }
+		set_variable = { ccp_last_action = 222 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2225,8 +2529,11 @@ CCP_action_intel_75 = {
 CCP_action_intel_100 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_intel = {
@@ -2239,11 +2546,8 @@ CCP_action_intel_100 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 207 }
+		set_variable = { ccp_last_action = 223 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2251,17 +2555,17 @@ CCP_action_intel_100 = {
 CCP_action_wargoal_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = { create_wargoal = { type = annex_everything target = PREV } }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 208 }
+		set_variable = { ccp_last_action = 224 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2269,17 +2573,17 @@ CCP_action_wargoal_1 = {
 CCP_action_truce_90 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = { set_truce = { target = PREV days = 90 } }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 209 }
+		set_variable = { ccp_last_action = 225 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2287,17 +2591,17 @@ CCP_action_truce_90 = {
 CCP_action_truce_180 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = { set_truce = { target = PREV days = 180 } }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 210 }
+		set_variable = { ccp_last_action = 226 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2305,17 +2609,17 @@ CCP_action_truce_180 = {
 CCP_action_truce_365 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = { set_truce = { target = PREV days = 365 } }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 211 }
+		set_variable = { ccp_last_action = 227 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2323,17 +2627,17 @@ CCP_action_truce_365 = {
 CCP_action_truce_730 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = { set_truce = { target = PREV days = 730 } }
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 212 }
+		set_variable = { ccp_last_action = 228 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2341,7 +2645,7 @@ CCP_action_truce_730 = {
 CCP_action_faction_create_1 = {
 	create_faction = CCP_FACTION_NAME
 	set_variable = { global.ccp_status = 11 }
-	set_variable = { ccp_last_action = 213 }
+	set_variable = { ccp_last_action = 229 }
 	CCP_history_record = yes
 	CCP_mark_dirty = yes
 }
@@ -2349,15 +2653,15 @@ CCP_action_faction_create_1 = {
 CCP_action_faction_invite_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
-		var:ROOT.ccp_target_country = { ROOT = { add_to_faction = PREV } }
-		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 214 }
-		CCP_history_record = yes
+		set_variable = { global.ccp_status = 22 }
 	}
 	else = {
-		set_variable = { global.ccp_status = 22 }
+		var:ROOT.ccp_target_country = { ROOT = { add_to_faction = PREV } }
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 230 }
+		CCP_history_record = yes
 	}
 	CCP_mark_dirty = yes
 }
@@ -2365,15 +2669,15 @@ CCP_action_faction_invite_1 = {
 CCP_action_release_target_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
-		var:ROOT.ccp_target_country = { ROOT = { release = PREV } }
-		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 215 }
-		CCP_history_record = yes
+		set_variable = { global.ccp_status = 22 }
 	}
 	else = {
-		set_variable = { global.ccp_status = 22 }
+		var:ROOT.ccp_target_country = { ROOT = { release = PREV } }
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 231 }
+		CCP_history_record = yes
 	}
 	CCP_mark_dirty = yes
 }
@@ -2381,15 +2685,15 @@ CCP_action_release_target_1 = {
 CCP_action_free_target_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
-		var:ROOT.ccp_target_country = { ROOT = { end_puppet = PREV } }
-		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 216 }
-		CCP_history_record = yes
+		set_variable = { global.ccp_status = 22 }
 	}
 	else = {
-		set_variable = { global.ccp_status = 22 }
+		var:ROOT.ccp_target_country = { ROOT = { end_puppet = PREV } }
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 232 }
+		CCP_history_record = yes
 	}
 	CCP_mark_dirty = yes
 }
@@ -2397,8 +2701,11 @@ CCP_action_free_target_1 = {
 CCP_action_collaboration_10 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_collaboration = {
@@ -2408,11 +2715,8 @@ CCP_action_collaboration_10 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 217 }
+		set_variable = { ccp_last_action = 233 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2420,8 +2724,11 @@ CCP_action_collaboration_10 = {
 CCP_action_collaboration_25 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_collaboration = {
@@ -2431,11 +2738,8 @@ CCP_action_collaboration_25 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 218 }
+		set_variable = { ccp_last_action = 234 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2443,8 +2747,11 @@ CCP_action_collaboration_25 = {
 CCP_action_collaboration_50 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_collaboration = {
@@ -2454,11 +2761,8 @@ CCP_action_collaboration_50 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 219 }
+		set_variable = { ccp_last_action = 235 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2466,8 +2770,11 @@ CCP_action_collaboration_50 = {
 CCP_action_collaboration_90 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			ROOT = {
 				add_collaboration = {
@@ -2477,11 +2784,8 @@ CCP_action_collaboration_90 = {
 			}
 		}
 		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 220 }
+		set_variable = { ccp_last_action = 236 }
 		CCP_history_record = yes
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -2489,15 +2793,31 @@ CCP_action_collaboration_90 = {
 CCP_action_guarantee_1 = {
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
-		var:ROOT.ccp_target_country = { ROOT = { give_guarantee = PREV } }
-		set_variable = { global.ccp_status = 11 }
-		set_variable = { ccp_last_action = 221 }
-		CCP_history_record = yes
+		set_variable = { global.ccp_status = 22 }
 	}
 	else = {
+		var:ROOT.ccp_target_country = { ROOT = { give_guarantee = PREV } }
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 237 }
+		CCP_history_record = yes
+	}
+	CCP_mark_dirty = yes
+}
+
+CCP_action_disband_target_0 = {
+	if = {
+		limit = {
+			NOT = { has_variable = ROOT.ccp_target_country }
+		}
 		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
+		var:ROOT.ccp_target_country = { delete_unit = { disband = no } }
+		set_variable = { global.ccp_status = 11 }
+		set_variable = { ccp_last_action = 238 }
+		CCP_history_record = yes
 	}
 	CCP_mark_dirty = yes
 }

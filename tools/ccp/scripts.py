@@ -607,23 +607,34 @@ def _needs_target(lines: list[str]) -> bool:
     return any("ccp_target_country" in line for line in lines)
 
 
-def _guarded(writer: Writer, body: Callable[[], None], needs_target: bool) -> None:
-    """Run a body only once a target exists, and say so when one does not.
+def _needs_state(lines: list[str]) -> bool:
+    """Does this body act on the state picked in States or on the map?"""
+    return any("var:ccp_state " in line or "var:ccp_state=" in line for line in lines)
+
+
+def _guarded(writer: Writer, body: Callable[[], None], needs_target: bool, needs_state: bool = False) -> None:
+    """Run a body only once what it acts on exists, and say so when it does not.
 
     Without the guard the effect steps into a variable that was never set, the
     whole block is skipped, and the button looks broken rather than unready.
     """
-    if not needs_target:
+    requirements = []
+    if needs_target:
+        requirements.append(("ROOT.ccp_target_country", status.NO_TARGET))
+    if needs_state:
+        requirements.append(("ROOT.ccp_state", status.NO_STATE))
+    if not requirements:
         body()
         return
-    writer.open("if")
-    writer.open("limit")
-    writer.line("has_variable = ROOT.ccp_target_country")
-    writer.close()
-    body()
-    writer.close()
+    for position, (variable, code) in enumerate(requirements):
+        writer.open("if" if position == 0 else "else_if")
+        writer.open("limit")
+        writer.line(f"NOT = {{ has_variable = {variable} }}")
+        writer.close()
+        writer.line(f"set_variable = {{ ccp_status = {code} }}")
+        writer.close()
     writer.open("else")
-    writer.line(f"set_variable = {{ ccp_status = {status.NO_TARGET} }}")
+    body()
     writer.close()
 
 
@@ -644,7 +655,7 @@ def emit_action_effects(version: str) -> str:
             writer.line(f"set_variable = {{ ccp_last_action = {index} }}")
             writer.line("CCP_history_record = yes")
 
-        _guarded(writer, body, _needs_target(lines))
+        _guarded(writer, body, _needs_target(lines), _needs_state(lines))
         writer.line("CCP_mark_dirty = yes")
         writer.close()
         writer.blank()
@@ -848,8 +859,12 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.blank()
 
     writer.open("effects")
+    # Written out here rather than calling CCP_close_panel: a mod that replaces
+    # common/scripted_effects would otherwise leave a panel no one can close.
     writer.open("ccp_close_click")
-    writer.line("CCP_close_panel = yes")
+    writer.line("set_variable = { ccp_panel_open = 0 }")
+    writer.line("set_variable = { ccp_modal_open = 0 }")
+    writer.line("add_to_variable = { ccp_ui_revision = 1 }")
     writer.close()
     for index, section in enumerate(SECTIONS, start=1):
         writer.open(f"ccp_nav_{index}_click")
@@ -994,9 +1009,17 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("triggers")
 
     # In Ironman the panel opens on the dashboard and goes no further: the notice
-    # is the only thing shown, and every navigation button is disabled.
+    # is the only thing shown. The sidebar is hidden rather than greyed out, because
+    # a column of buttons that ignore every click read as a broken panel.
     for index in range(1, len(SECTIONS) + 1):
         writer.open(f"ccp_nav_{index}_click_enabled")
+        writer.line("NOT = { is_ironman = yes }")
+        writer.close()
+        writer.open(f"ccp_nav_{index}_visible")
+        writer.line("NOT = { is_ironman = yes }")
+        writer.close()
+    for widget in ("ccp_sidebar_heading", "ccp_nav_highlight"):
+        writer.open(f"{widget}_visible")
         writer.line("NOT = { is_ironman = yes }")
         writer.close()
     for widget in ("ccp_ironman_plate", "ccp_ironman_notice"):
@@ -1186,6 +1209,7 @@ def emit_scripted_localisation(version: str) -> str:
             (f"check_variable = {{ ccp_status = {status.EVERYTHING_RESEARCHED} }}", "CCP_STATUS_EVERYTHING"),
             (f"check_variable = {{ ccp_status = {status.TARGET_PICKED} }}", "CCP_STATUS_TARGET"),
             (f"check_variable = {{ ccp_status = {status.NO_TARGET} }}", "CCP_STATUS_NO_TARGET"),
+            (f"check_variable = {{ ccp_status = {status.NO_STATE} }}", "CCP_STATUS_NO_STATE"),
             (f"check_variable = {{ ccp_status = {status.CONFIRM_PENDING} }}", "CCP_STATUS_CONFIRM_PENDING"),
         ],
         "CCP_STATUS_IDLE",

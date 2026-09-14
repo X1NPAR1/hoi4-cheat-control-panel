@@ -250,6 +250,12 @@ CCP_generic_apply = {
 		}
 		CCP_action_free_target_1 = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_pending_generic = 13 }
+		}
+		CCP_action_disband_target_0 = yes
+	}
 	set_variable = { ccp_pending_generic = 0 }
 	set_variable = { global.ccp_modal_open = 0 }
 	CCP_mark_dirty = yes

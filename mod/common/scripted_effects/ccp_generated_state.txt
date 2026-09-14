@@ -110,15 +110,15 @@ CCP_state_give = {
 	set_variable = { ROOT.ccp_state_id = THIS.id }
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			transfer_state = var:ROOT.ccp_state_id
 		}
 		set_variable = { global.ccp_status = 17 }
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }
@@ -129,15 +129,15 @@ CCP_state_give_control = {
 	set_variable = { ROOT.ccp_state_id = THIS.id }
 	if = {
 		limit = {
-			has_variable = ROOT.ccp_target_country
+			NOT = { has_variable = ROOT.ccp_target_country }
 		}
+		set_variable = { global.ccp_status = 22 }
+	}
+	else = {
 		var:ROOT.ccp_target_country = {
 			set_state_controller = var:ROOT.ccp_state_id
 		}
 		set_variable = { global.ccp_status = 10 }
-	}
-	else = {
-		set_variable = { global.ccp_status = 22 }
 	}
 	CCP_mark_dirty = yes
 }

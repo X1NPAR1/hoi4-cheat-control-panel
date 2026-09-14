@@ -130,6 +130,7 @@ def _header() -> list[Widget]:
             16,
             key="CCP_BUTTON_CLOSE",
             tooltip="CCP_TOOLTIP_CLOSE",
+            shortcut="ESCAPE",
             click_sound="click_close",
             orientation="upper_right",
             width=button_width("CCP_BUTTON_CLOSE"),
@@ -276,7 +277,7 @@ def _dashboard() -> Container:
             BODY_TOP + 16,
             key="CCP_IRONMAN_LOCKED",
             width=t.CONTENT_WIDTH - 80,
-            height=86,
+            height=150,
             font="hoi_18mbs",
         ),
     )

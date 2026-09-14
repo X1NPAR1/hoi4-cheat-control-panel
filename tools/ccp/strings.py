@@ -70,10 +70,10 @@ TRANSLATED: dict[str, Row] = {
         "CUSTOM", "EIGENER", "PERSO", "СВОЁ"
     ),
     "CCP_TOOLTIP_CLOSE": _row(
-        "Close the panel. The hotkey reopens it at any time.",
-        "Schließt das Panel. Die Taste öffnet es jederzeit wieder.",
-        "Ferme le panneau. Le raccourci le rouvre à tout moment.",
-        "Закрывает панель. Горячая клавиша откроет её снова."
+        "Close the panel (Esc). The hotkey reopens it at any time.",
+        "Schließt das Panel (Esc). Die Taste öffnet es jederzeit wieder.",
+        "Ferme le panneau (Échap). Le raccourci le rouvre à tout moment.",
+        "Закрывает панель (Esc). Горячая клавиша откроет её снова."
     ),
     "CCP_TOOLTIP_LAUNCHER": _row(
         "Open the Cheat Control Panel.\\nHotkey: [CCP_GetHotkeyName] — change it in Settings.",
@@ -715,10 +715,10 @@ TRANSLATED: dict[str, Row] = {
         "Провинция передана: [?ccp_target_country.GetNameDefCap]."
     ),
     "CCP_IRONMAN_LOCKED": _row(
-        "This is an Ironman game.\n\nThe panel stays on this page: an Ironman save cannot be rolled back, and nothing here can be undone. Start a normal game to use the panel.",
-        "Dies ist eine Ironman-Partie.\n\nDas Panel bleibt auf dieser Seite: ein Ironman-Spielstand lässt sich nicht zurücksetzen, und nichts hier ist rückgängig zu machen. Starten Sie eine normale Partie, um das Panel zu nutzen.",
-        "Cette partie est en Ironman.\n\nLe panneau reste sur cette page : une sauvegarde Ironman ne peut pas revenir en arrière et rien ici n est réversible. Lancez une partie normale pour utiliser le panneau.",
-        "Это игра в режиме Ironman.\n\nПанель остаётся на этой странице: сохранение Ironman нельзя откатить, а действия панели необратимы. Начните обычную игру, чтобы пользоваться панелью."
+        "This is an Ironman game, so the panel is locked.\n\nAn Ironman save cannot be rolled back and nothing here can be undone, so no section can be opened. This is intended, not a fault. Start a normal game to use the panel.\n\nClose it with CLOSE at the top right, Esc, or your panel hotkey.",
+        "Dies ist eine Ironman-Partie, daher ist das Panel gesperrt.\n\nEin Ironman-Spielstand lässt sich nicht zurücksetzen und nichts hier ist umkehrbar, also lässt sich kein Bereich öffnen. Das ist beabsichtigt, kein Fehler. Starten Sie eine normale Partie, um das Panel zu nutzen.\n\nSchließen mit SCHLIESSEN oben rechts, Esc oder Ihrer Panel-Taste.",
+        "Cette partie est en Ironman, le panneau est donc verrouillé.\n\nUne sauvegarde Ironman ne peut pas revenir en arrière et rien ici n est réversible, donc aucune section ne s ouvre. C est voulu, pas un défaut. Lancez une partie normale pour utiliser le panneau.\n\nFermez avec FERMER en haut à droite, Échap ou votre raccourci.",
+        "Это игра в режиме Ironman, поэтому панель заблокирована.\n\nСохранение Ironman нельзя откатить, а действия панели необратимы, поэтому разделы не открываются. Так задумано, это не ошибка. Начните обычную игру, чтобы пользоваться панелью.\n\nЗакройте кнопкой ЗАКРЫТЬ справа вверху, Esc или горячей клавишей панели."
     ),
     "CCP_SETTINGS_DIPLO": _row(
         "DIPLOMACY", "DIPLOMATIE", "DIPLOMATIE", "ДИПЛОМАТИЯ"
@@ -781,6 +781,12 @@ TRANSLATED: dict[str, Row] = {
         "En attente de votre confirmation. Appuyez sur CONFIRMER, ou désactivez les confirmations dans Réglages.",
         "Ожидается подтверждение. Нажмите ПОДТВЕРДИТЬ в окне или отключите подтверждения в настройках."
     ),
+    "CCP_STATUS_NO_STATE": _row(
+        "Pick a state in the States section or on the map first; this action needs one.",
+        "Wählen Sie zuerst einen Staat unter Staaten oder auf der Karte; diese Aktion braucht einen.",
+        "Choisissez d abord un État dans la section États ou sur la carte ; cette action en exige un.",
+        "Сначала выберите провинцию в разделе Провинции или на карте: этому действию она нужна."
+    ),
     "CCP_STATUS_NO_TARGET": _row(
         "Pick a country in the Countries section first; this action needs a target.",
         "Wählen Sie zuerst ein Land im Bereich Länder; diese Aktion braucht ein Ziel.",
@@ -806,10 +812,10 @@ TRANSLATED: dict[str, Row] = {
         "Ресурсы добавляются во все ваши провинции и видны в окне торговли."
     ),
     "CCP_MILITARY_HELP": _row(
-        "Divisions are spawned in your capital from templates this mod adds to your list.",
-        "Divisionen entstehen in Ihrer Hauptstadt aus Vorlagen, die dieser Mod Ihrer Liste hinzufügt.",
-        "Les divisions apparaissent dans votre capitale à partir de modèles ajoutés par ce mod.",
-        "Дивизии появляются в столице по шаблонам, которые мод добавляет в ваш список."
+        "Divisions come from templates this mod adds to your list: in your capital, or in the state last picked under States or on the map.",
+        "Divisionen entstehen aus Vorlagen dieses Mods: in Ihrer Hauptstadt oder im zuletzt unter Staaten oder auf der Karte gewählten Staat.",
+        "Les divisions viennent de modèles ajoutés par ce mod : dans votre capitale, ou dans l État choisi en dernier dans États ou sur la carte.",
+        "Дивизии создаются по шаблонам мода: в столице или в провинции, выбранной последней в разделе Провинции или на карте."
     ),
     "CCP_THREAT_SOURCE": _row(
         "Cheat Control Panel", "Cheat-Kontrollpanel", "Panneau de triche",
@@ -871,7 +877,7 @@ TRANSLATED: dict[str, Row] = {
         "Обнуляет введённое значение."
     ),
     "CCP_PAD_HELP": _row(
-        "Hearts of Iron IV cannot read a typed value back into script, so the amount is entered here instead. Each CUSTOM button grants this amount, capped at what that resource can usefully take.",
+        "To give any amount: tap it in on these number keys, then press CUSTOM on the row you want. The game cannot read typed text back into a mod, which is why there is no input box. The amount is capped at what that resource can usefully take.",
         "Hearts of Iron IV kann einen eingetippten Wert nicht ans Skript zurückgeben, daher wird die Menge hier eingegeben. Jede EIGENER-Schaltfläche vergibt diese Menge, begrenzt auf das, was die Ressource sinnvoll aufnimmt.",
         "Hearts of Iron IV ne peut pas renvoyer une valeur saisie au script ; le montant se saisit donc ici. Chaque bouton PERSO accorde ce montant, plafonné à ce que la ressource peut réellement utiliser.",
         "Hearts of Iron IV не может вернуть набранное значение в скрипт, поэтому величина вводится здесь. Каждая кнопка СВОЁ выдаёт это количество с ограничением по ресурсу."
