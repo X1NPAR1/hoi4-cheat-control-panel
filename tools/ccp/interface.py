@@ -326,6 +326,15 @@ def _settings() -> Container:
         )
         x += width + 8
     section.add(
+        Button(
+            "ccp_launcher_pos_toggle",
+            x + 24,
+            BODY_TOP + 54,
+            key="CCP_GetLauncherState",
+            tooltip="CCP_SETTINGS_LAUNCHER_TOOLTIP",
+            width=max(button_width(k) for k in ("CCP_LAUNCHER_TOP", "CCP_LAUNCHER_CORNER", "CCP_LAUNCHER_HIDDEN")),
+            height=t.BUTTON_HEIGHT,
+        ),
         Text(
             "ccp_settings_hotkey_current",
             CONTENT_X,
@@ -1455,19 +1464,19 @@ def main_window(categories: list[str], folders: list[str]) -> Container:
     return window
 
 
-def launcher_window() -> Container:
+def launcher_window(name="ccp_launcher_window", x=8, y=160, orientation="upper_left", button="ccp_launcher") -> Container:
     window = Container(
-        "ccp_launcher_window",
-        8,
-        160,
+        name,
+        x,
+        y,
         width=46,
         height=46,
-        orientation="upper_left",
+        orientation=orientation,
         clipping=False,
     )
     return window.add(
         Button(
-            "ccp_launcher",
+            button,
             0,
             0,
             sprite="GFX_ccp_launcher_button",

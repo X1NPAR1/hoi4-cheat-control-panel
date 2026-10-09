@@ -19,4 +19,21 @@ guiTypes = {
 			clicksound = click_default
 		}
 	}
+
+	containerWindowType = {
+		name = "ccp_launcher_corner_window"
+		orientation = lower_right
+		position = { x = -56 y = -150 }
+		size = { width = 46 height = 46 }
+		moveable = no
+		clipping = no
+
+		buttonType = {
+			name = "ccp_launcher_corner"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_ccp_launcher_button"
+			pdx_tooltip = "CCP_TOOLTIP_LAUNCHER"
+			clicksound = click_default
+		}
+	}
 }

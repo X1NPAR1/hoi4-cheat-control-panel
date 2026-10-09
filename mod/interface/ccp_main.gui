@@ -7688,6 +7688,17 @@ guiTypes = {
 				clicksound = click_default
 			}
 
+			buttonType = {
+				name = "ccp_launcher_pos_toggle"
+				position = { x = 860 y = 182 }
+				quadTextureSprite = "GFX_ccp_button"
+				size = { x = 118 y = 30 }
+				buttonText = "[CCP_GetLauncherState]"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_SETTINGS_LAUNCHER_TOOLTIP"
+				clicksound = click_default
+			}
+
 			instantTextBoxType = {
 				name = "ccp_settings_hotkey_current"
 				position = { x = 274 y = 222 }

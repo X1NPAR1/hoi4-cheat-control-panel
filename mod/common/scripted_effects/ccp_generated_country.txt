@@ -1,6 +1,6 @@
 # GENERATED FILE - DO NOT EDIT
 # Produced by tools/generate_data.py from the installed game files.
-# Source game version: 1.19.2.0
+# Source game version: 1.19.3.0
 
 CCP_country_rebuild = {
 	clear_array = ccp_country_all

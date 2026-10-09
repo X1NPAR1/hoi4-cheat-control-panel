@@ -41,7 +41,7 @@ other mods rather than fighting them.
 
 ## Opening the panel
 
-Default hotkey: **`Insert`**. There is also a logo button below the top bar.
+Default hotkey: **`Insert`**. There is also a logo button below the top bar; Settings moves it to the bottom-right corner or hides it.
 
 Plain `F8` is not the default because vanilla already binds it to a map mode, so
 it would switch the map mode every time you opened the panel. You can change the
@@ -121,7 +121,8 @@ mods at all. `enable_local_mod.py` fixes that and backs the launcher database up
   actions automatically and says so instead of gating on a check that never fires.
 - **Ironman.** The panel opens on a notice page and no section can be opened, because an
   Ironman save cannot be rolled back. This is intended. Close it with CLOSE, Esc or the hotkey.
-- **Millennium Dawn and other total conversions: not compatible.** Millennium Dawn replaces
+- **Add it to a new game.** Changing the mod list of a running save can break that save, most of all in total conversions such as Old World Blues.
+- **Millennium Dawn, Old World Blues and other total conversions: not compatible.** Millennium Dawn replaces
   `common/scripted_effects`, `common/scripted_triggers` and `common/scripted_localisation`,
   which removes every action the panel performs while its interface stays on screen.
 - **Ironman and achievements.** Running any mod disables achievements. No Ironman
@@ -205,7 +206,7 @@ modlarla çakışmak yerine yan yana çalışır.
 
 ## Paneli açmak
 
-Varsayılan kısayol: **`Insert`**. Ayrıca üst çubuğun altında bir logo düğmesi vardır.
+Varsayılan kısayol: **`Insert`**. Ayrıca üst çubuğun altında bir logo düğmesi vardır; Ayarlar'dan sağ alt köşeye taşınabilir ya da gizlenebilir.
 
 Düz `F8` varsayılan değildir, çünkü oyun onu zaten bir harita moduna bağlar; paneli her
 açtığınızda harita modu değişirdi. Kısayolu panelin **Ayarlar** bölümünden `F8`, `F11`,
@@ -284,7 +285,8 @@ yol açar. `enable_local_mod.py` bunu düzeltir ve önce launcher veritabanını
   gizleyemez ve hiç çalışmayacak bir kontrole dayanmak yerine bunu açıkça yazar.
 - **Ironman.** Panel bir uyarı sayfasında açılır ve hiçbir bölüm açılamaz, çünkü Ironman
   kaydı geri alınamaz. Bu bilinçli. KAPAT, Esc ya da kısayol tuşuyla kapatılır.
-- **Millennium Dawn ve diğer total conversion'lar: uyumsuz.** Millennium Dawn
+- **Yeni oyunda etkinleştirin.** Süren bir kaydın mod listesini değiştirmek kaydı bozabilir, özellikle Old World Blues gibi total conversion'larda.
+- **Millennium Dawn, Old World Blues ve diğer total conversion'lar: uyumsuz.** Millennium Dawn
   `common/scripted_effects`, `common/scripted_triggers` ve `common/scripted_localisation`
   dizinlerini değiştirir; arayüz ekranda kalır ama panelin yaptığı her eylem silinir.
 - **Ironman ve başarımlar.** Herhangi bir mod açıkken başarımlar kapanır. Ironman
@@ -369,7 +371,7 @@ er neben anderen Mods, statt mit ihnen zu streiten.
 
 ## Das Panel öffnen
 
-Standardtaste: **`Einfg`**. Zusätzlich gibt es eine Logo-Schaltfläche unter der oberen Leiste.
+Standardtaste: **`Einfg`**. Zusätzlich gibt es eine Logo-Schaltfläche unter der oberen Leiste; in den Einstellungen lässt sie sich nach unten rechts verschieben oder ausblenden.
 
 Ein einfaches `F8` ist nicht die Vorgabe, weil das Spiel es bereits auf einen Kartenmodus
 legt; jedes Öffnen des Panels würde den Kartenmodus umschalten. In den **Einstellungen**
@@ -451,7 +453,8 @@ Playset aktiv ist — ein inaktives Playset lässt den Launcher das Spiel ganz o
 - **Ironman.** Das Panel öffnet auf einer Hinweisseite und kein Bereich lässt sich öffnen, weil
   ein Ironman-Spielstand nicht zurückzusetzen ist. Das ist beabsichtigt. Schließen mit
   SCHLIESSEN, Esc oder der Taste.
-- **Millennium Dawn und andere Totalkonversionen: nicht kompatibel.** Millennium Dawn ersetzt
+- **Nur in einem neuen Spiel aktivieren.** Die Modliste eines laufenden Spielstands zu ändern kann ihn beschädigen, vor allem bei Totalkonversionen wie Old World Blues.
+- **Millennium Dawn, Old World Blues und andere Totalkonversionen: nicht kompatibel.** Millennium Dawn ersetzt
   `common/scripted_effects`, `common/scripted_triggers` und `common/scripted_localisation`;
   die Oberfläche bleibt sichtbar, aber jede Aktion des Panels entfällt.
 - **Ironman und Errungenschaften.** Jeder aktive Mod deaktiviert Errungenschaften. Eine
@@ -536,7 +539,7 @@ qu il cohabite avec les autres mods au lieu de les gêner.
 
 ## Ouvrir le panneau
 
-Raccourci par défaut : **`Inser`**. Un bouton logo se trouve aussi sous la barre supérieure.
+Raccourci par défaut : **`Inser`**. Un bouton logo se trouve aussi sous la barre supérieure ; les Paramètres le déplacent en bas à droite ou le masquent.
 
 `F8` seul n est pas la valeur par défaut, car le jeu l attribue déjà à un mode de carte :
 chaque ouverture du panneau changerait le mode de carte. Dans les **Réglages** du panneau,
@@ -617,7 +620,8 @@ corrige cela et sauvegarde d abord la base du launcher.
 - **Ironman.** Le panneau s ouvre sur une page d avertissement et aucune section ne s ouvre,
   car une sauvegarde Ironman ne se rembobine pas. C est voulu. Fermez avec FERMER, Échap ou
   le raccourci.
-- **Millennium Dawn et autres conversions totales : incompatibles.** Millennium Dawn remplace
+- **À activer dans une nouvelle partie.** Modifier la liste des mods d'une sauvegarde en cours peut la casser, surtout avec des conversions totales comme Old World Blues.
+- **Millennium Dawn, Old World Blues et autres conversions totales : incompatibles.** Millennium Dawn remplace
   `common/scripted_effects`, `common/scripted_triggers` et `common/scripted_localisation` ;
   l interface reste affichée mais chaque action du panneau disparaît.
 - **Ironman et succès.** Tout mod actif désactive les succès. Aucune compatibilité Ironman
@@ -701,7 +705,7 @@ Cheat Control Panel превращает эти действия в настоя
 
 ## Как открыть панель
 
-Клавиша по умолчанию: **`Insert`**. Есть также кнопка с логотипом под верхней панелью.
+Клавиша по умолчанию: **`Insert`**. Есть также кнопка с логотипом под верхней панелью; в настройках её можно перенести в правый нижний угол или скрыть.
 
 Просто `F8` не выбран по умолчанию, потому что игра уже назначила его на режим карты: каждое
 открытие панели переключало бы режим карты. В **Настройках** панели клавишу можно сменить на
@@ -780,7 +784,8 @@ python tools/enable_local_mod.py   # зарегистрировать в наб�
   сообщает об этом, а не полагается на проверку, которая никогда не сработает.
 - **Ironman.** Панель открывается на странице предупреждения, и разделы не открываются, потому
   что сохранение Ironman нельзя откатить. Так задумано. Закрыть — ЗАКРЫТЬ, Esc или клавиша.
-- **Millennium Dawn и другие тотальные конверсии: несовместимы.** Millennium Dawn заменяет
+- **Включайте в новой игре.** Изменение списка модов в идущем сохранении может его сломать, особенно в тотальных конверсиях вроде Old World Blues.
+- **Millennium Dawn, Old World Blues и другие тотальные конверсии: несовместимы.** Millennium Dawn заменяет
   `common/scripted_effects`, `common/scripted_triggers` и `common/scripted_localisation`;
   интерфейс остаётся на экране, но каждое действие панели пропадает.
 - **Ironman и достижения.** Любой включённый мод отключает достижения. Совместимость с
@@ -864,7 +869,7 @@ naast andere mods draait in plaats van ermee te botsen.
 
 ## Het paneel openen
 
-Standaardtoets: **`Insert`**. Er is ook een logoknop onder de bovenbalk.
+Standaardtoets: **`Insert`**. Er is ook een logoknop onder de bovenbalk; via Instellingen gaat hij naar rechtsonder of verdwijnt hij.
 
 Alleen `F8` is niet de standaard, omdat het spel die al aan een kaartmodus koppelt: elke keer
 dat je het paneel opende zou de kaartmodus wisselen. In de **Instellingen** van het paneel
@@ -944,7 +949,8 @@ actief is — een inactieve playset laat de launcher het spel zonder enige mod s
 - **Ironman.** Het paneel opent op een waarschuwingspagina en geen onderdeel gaat open, omdat
   een Ironman-opslag niet terug te draaien is. Dat is zo bedoeld. Sluiten met SLUITEN, Esc of
   de sneltoets.
-- **Millennium Dawn en andere totale conversies: niet compatibel.** Millennium Dawn vervangt
+- **Activeer het in een nieuw spel.** De modlijst van een lopend spel wijzigen kan die save breken, vooral bij totale conversies zoals Old World Blues.
+- **Millennium Dawn, Old World Blues en andere totale conversies: niet compatibel.** Millennium Dawn vervangt
   `common/scripted_effects`, `common/scripted_triggers` en `common/scripted_localisation`;
   de interface blijft zichtbaar maar elke actie van het paneel valt weg.
 - **Ironman en prestaties.** Elke actieve mod schakelt prestaties uit. Er wordt geen

@@ -770,21 +770,25 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
     writer.open("scripted_gui")
     writer.blank()
 
-    writer.open("ccp_launcher_button")
-    writer.line("context_type = player_context")
-    writer.line('window_name = "ccp_launcher_window"')
-    writer.blank()
-    writer.open("visible")
-    writer.line("always = yes")
-    writer.close()
-    writer.blank()
-    writer.open("effects")
-    writer.open("ccp_launcher_click")
-    writer.line("CCP_toggle_panel = yes")
-    writer.close()
-    writer.close()
-    writer.close()
-    writer.blank()
+    for gui, window, button, position in (
+        ("ccp_launcher_button", "ccp_launcher_window", "ccp_launcher", 0),
+        ("ccp_launcher_corner_button", "ccp_launcher_corner_window", "ccp_launcher_corner", 1),
+    ):
+        writer.open(gui)
+        writer.line("context_type = player_context")
+        writer.line(f'window_name = "{window}"')
+        writer.blank()
+        writer.open("visible")
+        writer.line(f"check_variable = {{ ccp_launcher_pos = {position} }}")
+        writer.close()
+        writer.blank()
+        writer.open("effects")
+        writer.open(f"{button}_click")
+        writer.line("CCP_toggle_panel = yes")
+        writer.close()
+        writer.close()
+        writer.close()
+        writer.blank()
 
     writer.open("ccp_hotkey_listener")
     writer.line("context_type = player_context")
@@ -892,6 +896,18 @@ def emit_scripted_gui(version: str, categories: list[str], folders: list[str]) -
         writer.open(f"ccp_grant_{resource.slug}_custom_click")
         writer.line(f"CCP_grant_{resource.slug}_custom = yes")
         writer.close()
+    writer.open("ccp_launcher_pos_toggle_click")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("check_variable = { ccp_launcher_pos > 1 }")
+    writer.close()
+    writer.line("set_variable = { ccp_launcher_pos = 0 }")
+    writer.close()
+    writer.open("else")
+    writer.line("add_to_variable = { ccp_launcher_pos = 1 }")
+    writer.close()
+    writer.line("CCP_mark_dirty = yes")
+    writer.close()
     writer.open("ccp_confirm_toggle_click")
     writer.line("CCP_toggle_confirmations = yes")
     writer.close()
@@ -1227,6 +1243,16 @@ def emit_scripted_localisation(version: str) -> str:
         "CCP_GetGoodwillState",
         [("check_variable = { ccp_ai_goodwill = 1 }", "CCP_GOODWILL_ON")],
         "CCP_GOODWILL_OFF",
+    )
+
+    _defined_text(
+        writer,
+        "CCP_GetLauncherState",
+        [
+            ("check_variable = { ccp_launcher_pos = 1 }", "CCP_LAUNCHER_CORNER"),
+            ("check_variable = { ccp_launcher_pos = 2 }", "CCP_LAUNCHER_HIDDEN"),
+        ],
+        "CCP_LAUNCHER_TOP",
     )
 
     _defined_text(

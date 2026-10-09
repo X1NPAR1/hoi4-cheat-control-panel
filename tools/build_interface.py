@@ -70,7 +70,10 @@ def main() -> int:
             interface.modal_window(),
         ),
     )
-    write(MOD / "interface" / "ccp_launcher.gui", emit_file(interface.launcher_window()))
+    write(MOD / "interface" / "ccp_launcher.gui", emit_file(
+        interface.launcher_window(),
+        interface.launcher_window("ccp_launcher_corner_window", -56, -150, "lower_right", "ccp_launcher_corner"),
+    ))
     write(MOD / "interface" / "ccp_hotkeys.gui", emit_file(interface.hotkey_window()))
 
     write(

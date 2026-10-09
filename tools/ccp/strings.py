@@ -144,6 +144,15 @@ TRANSLATED: dict[str, Row] = {
         "Raccourci actuel : [CCP_GetHotkeyName]",
         "Текущая клавиша: [CCP_GetHotkeyName]"
     ),
+    "CCP_LAUNCHER_TOP": _row("LOGO: TOP", "LOGO: OBEN", "LOGO : HAUT", "ЛОГО: ВВЕРХУ"),
+    "CCP_LAUNCHER_CORNER": _row("LOGO: CORNER", "LOGO: ECKE", "LOGO : COIN", "ЛОГО: В УГЛУ"),
+    "CCP_LAUNCHER_HIDDEN": _row("LOGO: HIDDEN", "LOGO: AUS", "LOGO : MASQUÉ", "ЛОГО: СКРЫТ"),
+    "CCP_SETTINGS_LAUNCHER_TOOLTIP": _row(
+        "Where the logo button sits: below the top bar, in the bottom-right corner, or hidden.\\nHidden, the panel still opens with [CCP_GetHotkeyName].",
+        "Position des Logo-Knopfs: unter der oberen Leiste, unten rechts oder ausgeblendet.\\nAusgeblendet öffnet [CCP_GetHotkeyName] das Panel weiterhin.",
+        "Position du bouton logo : sous la barre du haut, en bas à droite, ou masqué.\\nMasqué, [CCP_GetHotkeyName] ouvre toujours le panneau.",
+        "Где кнопка-логотип: под верхней панелью, в правом нижнем углу или скрыта.\\nСкрытой панель по-прежнему открывается клавишей [CCP_GetHotkeyName]."
+    ),
     "CCP_SETTINGS_CONFIRM": _row(
         "CONFIRMATIONS",
         "BESTÄTIGUNGEN",
