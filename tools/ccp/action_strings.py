@@ -65,6 +65,16 @@ HELP_DIVISIONS: Row = (
 
 TITLES: dict[str, Row] = {
     "railway": ("Railways", "Eisenbahnen", "Voies ferrées", "Железные дороги"),
+    "naval_dominance": (
+        "Naval dominance in picked state",
+        "Seeherrschaft im gewählten Staat",
+        "Domination navale dans l État choisi",
+        "Господство на море в выбранной провинции",
+    ),
+    "ships_destroyer": ("Destroyers", "Zerstörer", "Destroyers", "Эсминцы"),
+    "ships_cruiser": ("Cruisers", "Kreuzer", "Croiseurs", "Крейсеры"),
+    "ships_battleship": ("Battleships", "Schlachtschiffe", "Cuirassés", "Линкоры"),
+    "ships_carrier": ("Aircraft carriers", "Flugzeugträger", "Porte-avions", "Авианосцы"),
     "state_infantry": (
         "Infantry in picked state",
         "Infanterie im gewählten Staat",
@@ -207,6 +217,36 @@ HELPS: dict[str, Row] = {
         "Verlegt Eisenbahn von Ihrer Hauptstadt zu jedem Ihrer Staaten, auf dieser Stufe.",
         "Pose une voie ferrée de votre capitale vers chacun de vos États, à ce niveau.",
         "Прокладывает железную дорогу от столицы ко всем вашим провинциям на этом уровне.",
+    ),
+    "naval_dominance": (
+        "Naval dominance comes from ships, air bases and radar near a sea region. Builds radar, an air base and, on the coast, a naval base in the state you last picked.",
+        "Seeherrschaft entsteht aus Schiffen, Flugplätzen und Radar nahe einem Seegebiet. Baut Radar, Flugplatz und an der Küste einen Hafen im zuletzt gewählten Staat.",
+        "La domination navale vient des navires, bases aériennes et radars proches d une région maritime. Construit radar, base aérienne et, sur la côte, base navale dans l État choisi en dernier.",
+        "Господство на море дают корабли, авиабазы и радары рядом с морским регионом. Строит радар, авиабазу и, на побережье, военно-морскую базу в последней выбранной провинции.",
+    ),
+    "ships_destroyer": (
+        "Added to your reserve fleet. Send them to a sea region from the navy screen to raise your naval dominance there.",
+        "Kommen in Ihre Reserveflotte. Schicken Sie sie im Marinebildschirm in ein Seegebiet, um dort Ihre Seeherrschaft zu erhöhen.",
+        "Ajoutés à votre flotte de réserve. Envoyez-les dans une région maritime depuis l écran de la marine pour y augmenter votre domination navale.",
+        "Попадают в резервный флот. Отправьте их в морской регион через экран флота, чтобы поднять там господство на море.",
+    ),
+    "ships_cruiser": (
+        "Added to your reserve fleet. Send them to a sea region from the navy screen to raise your naval dominance there.",
+        "Kommen in Ihre Reserveflotte. Schicken Sie sie im Marinebildschirm in ein Seegebiet, um dort Ihre Seeherrschaft zu erhöhen.",
+        "Ajoutés à votre flotte de réserve. Envoyez-les dans une région maritime depuis l écran de la marine pour y augmenter votre domination navale.",
+        "Попадают в резервный флот. Отправьте их в морской регион через экран флота, чтобы поднять там господство на море.",
+    ),
+    "ships_battleship": (
+        "Added to your reserve fleet. Send them to a sea region from the navy screen to raise your naval dominance there.",
+        "Kommen in Ihre Reserveflotte. Schicken Sie sie im Marinebildschirm in ein Seegebiet, um dort Ihre Seeherrschaft zu erhöhen.",
+        "Ajoutés à votre flotte de réserve. Envoyez-les dans une région maritime depuis l écran de la marine pour y augmenter votre domination navale.",
+        "Попадают в резервный флот. Отправьте их в морской регион через экран флота, чтобы поднять там господство на море.",
+    ),
+    "ships_carrier": (
+        "Added to your reserve fleet. Send them to a sea region from the navy screen to raise your naval dominance there.",
+        "Kommen in Ihre Reserveflotte. Schicken Sie sie im Marinebildschirm in ein Seegebiet, um dort Ihre Seeherrschaft zu erhöhen.",
+        "Ajoutés à votre flotte de réserve. Envoyez-les dans une région maritime depuis l écran de la marine pour y augmenter votre domination navale.",
+        "Попадают в резервный флот. Отправьте их в морской регион через экран флота, чтобы поднять там господство на море.",
     ),
     "state_infantry": (
         "Raised in the state you last picked in States or on the map, not in your capital.",

@@ -113,6 +113,44 @@ def _spawn_in_state(template: str) -> Callable[[int], list[str]]:
     ]
 
 
+def _naval_dominance(n: int) -> list[str]:
+    """Radar, air base and naval base in the picked state.
+
+    Naval dominance has no effect of its own: the game recomputes it from the
+    ships, air bases and radar around a sea region, so the panel builds those.
+    """
+    return [
+        "var:ccp_state = {",
+        f"	add_building_construction = {{ type = radar_station level = {min(n, 6)} instant_build = yes }}",
+        f"	add_building_construction = {{ type = air_base level = {n} instant_build = yes }}",
+        "	if = {",
+        "		limit = { is_coastal = yes }",
+        f"		add_building_construction = {{ type = naval_base level = {n} instant_build = yes "
+        "province = { all_provinces = yes limit_to_coastal = yes } }",
+        "	}",
+        "}",
+    ]
+
+
+def _warships(kind: str) -> Callable[[int], list[str]]:
+    """Warships into the reserve fleet, on whichever hull system the game runs."""
+
+    def body(n: int) -> list[str]:
+        mtg, legacy, name, _modules = SHIP_VARIANTS[kind]
+        return [
+            "CCP_ensure_ship_variants = yes",
+            "if = {",
+            '	limit = { has_dlc = "Man the Guns" }',
+            f'	create_ship = {{ type = {mtg} equipment_variant = "{name}" creator = ROOT amount = {n} }}',
+            "}",
+            "else = {",
+            f'	create_ship = {{ type = {legacy} equipment_variant = "{name}" creator = ROOT amount = {n} }}',
+            "}",
+        ]
+
+    return body
+
+
 def _dlc(dlc: str, lines: list[str]) -> list[str]:
     return ["if = {", f'	limit = {{ has_dlc = "{dlc}" }}', *[f"	{line}" for line in lines], "}"]
 
@@ -418,6 +456,11 @@ MILITARY: list[Action] = [
     Action("state_infantry", "military", _spawn_in_state("infantry"), (1, 5, 10, 25)),
     Action("state_armor", "military", _spawn_in_state("armor"), (1, 5, 10, 25)),
     Action("state_motorized", "military", _spawn_in_state("motorized"), (1, 5, 10, 25)),
+    Action("naval_dominance", "military", _naval_dominance, (1, 3, 5, 10)),
+    Action("ships_destroyer", "military", _warships("destroyer"), (1, 3, 5, 10)),
+    Action("ships_cruiser", "military", _warships("cruiser"), (1, 3, 5, 10)),
+    Action("ships_battleship", "military", _warships("battleship"), (1, 2, 3, 5)),
+    Action("ships_carrier", "military", _warships("carrier"), (1, 2, 3, 5)),
     Action(
         "delete_units",
         "military",
@@ -622,6 +665,66 @@ SPAWN_TEMPLATES: dict[str, tuple[str, tuple[tuple[str, int], ...], tuple[str, ..
         "CCP Motorized",
         (("motorized", 9), ("anti_tank_brigade", 2)),
         ("engineer", "recon", "logistics_company"),
+    ),
+}
+
+# Hull type with Man the Guns, hull type without it, variant name, MtG modules.
+# Modules are the first-generation fits the game's own ENG history gives each hull.
+SHIP_VARIANTS = {
+    "destroyer": (
+        "ship_hull_light_1", "destroyer_1", "CCP Destroyer",
+        (
+            ("fixed_ship_battery_slot", "ship_light_battery_1"),
+            ("fixed_ship_anti_air_slot", "empty"),
+            ("fixed_ship_fire_control_system_slot", "ship_fire_control_system_0"),
+            ("fixed_ship_radar_slot", "empty"),
+            ("fixed_ship_engine_slot", "light_ship_engine_1"),
+            ("fixed_ship_torpedo_slot", "ship_torpedo_1"),
+            ("mid_1_custom_slot", "ship_torpedo_1"),
+            ("rear_1_custom_slot", "empty"),
+        ),
+    ),
+    "cruiser": (
+        "ship_hull_cruiser_1", "light_cruiser_1", "CCP Cruiser",
+        (
+            ("fixed_ship_battery_slot", "ship_light_medium_battery_1"),
+            ("fixed_ship_fire_control_system_slot", "ship_fire_control_system_0"),
+            ("fixed_ship_radar_slot", "empty"),
+            ("fixed_ship_engine_slot", "cruiser_ship_engine_1"),
+            ("fixed_ship_armor_slot", "ship_armor_cruiser_1"),
+            ("fixed_ship_secondaries_slot", "empty"),
+            ("mid_1_custom_slot", "ship_torpedo_1"),
+            ("mid_2_custom_slot", "empty"),
+            ("rear_1_custom_slot", "empty"),
+        ),
+    ),
+    "battleship": (
+        "ship_hull_heavy_1", "battleship_1", "CCP Battleship",
+        (
+            ("fixed_ship_battery_slot", "ship_heavy_battery_1"),
+            ("fixed_ship_anti_air_slot", "ship_anti_air_1"),
+            ("fixed_ship_fire_control_system_slot", "ship_fire_control_system_0"),
+            ("fixed_ship_radar_slot", "empty"),
+            ("fixed_ship_engine_slot", "heavy_ship_engine_1"),
+            ("fixed_ship_secondaries_slot", "ship_secondaries_1"),
+            ("fixed_ship_armor_slot", "ship_armor_bb_1"),
+            ("front_1_custom_slot", "ship_heavy_battery_1"),
+            ("mid_1_custom_slot", "empty"),
+            ("mid_2_custom_slot", "empty"),
+            ("rear_1_custom_slot", "ship_heavy_battery_1"),
+        ),
+    ),
+    "carrier": (
+        "ship_hull_carrier_1", "carrier_1", "CCP Carrier",
+        (
+            ("fixed_ship_deck_slot_1", "ship_deck_space"),
+            ("fixed_ship_deck_slot_2", "ship_deck_space"),
+            ("fixed_ship_anti_air_slot", "ship_anti_air_1"),
+            ("fixed_ship_radar_slot", "empty"),
+            ("fixed_ship_engine_slot", "carrier_ship_engine_1"),
+            ("fixed_ship_secondaries_slot", "empty"),
+            ("front_1_custom_slot", "ship_deck_space"),
+        ),
     ),
 }
 

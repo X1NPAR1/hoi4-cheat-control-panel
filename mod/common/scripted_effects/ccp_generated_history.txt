@@ -1202,347 +1202,467 @@ CCP_action_replay = {
 		limit = {
 			check_variable = { ccp_last_action = 181 }
 		}
-		CCP_action_delete_units_0 = yes
+		CCP_action_naval_dominance_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 182 }
 		}
-		CCP_action_army_xp_100 = yes
+		CCP_action_naval_dominance_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 183 }
 		}
-		CCP_action_army_xp_500 = yes
+		CCP_action_naval_dominance_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 184 }
 		}
-		CCP_action_army_xp_1000 = yes
+		CCP_action_naval_dominance_10 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 185 }
 		}
-		CCP_action_army_xp_5000 = yes
+		CCP_action_ships_destroyer_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 186 }
 		}
-		CCP_action_navy_xp_100 = yes
+		CCP_action_ships_destroyer_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 187 }
 		}
-		CCP_action_navy_xp_500 = yes
+		CCP_action_ships_destroyer_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 188 }
 		}
-		CCP_action_navy_xp_1000 = yes
+		CCP_action_ships_destroyer_10 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 189 }
 		}
-		CCP_action_navy_xp_5000 = yes
+		CCP_action_ships_cruiser_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 190 }
 		}
-		CCP_action_air_xp_100 = yes
+		CCP_action_ships_cruiser_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 191 }
 		}
-		CCP_action_air_xp_500 = yes
+		CCP_action_ships_cruiser_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 192 }
 		}
-		CCP_action_air_xp_1000 = yes
+		CCP_action_ships_cruiser_10 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 193 }
 		}
-		CCP_action_air_xp_5000 = yes
+		CCP_action_ships_battleship_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 194 }
 		}
-		CCP_action_skill_1 = yes
+		CCP_action_ships_battleship_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 195 }
 		}
-		CCP_action_skill_2 = yes
+		CCP_action_ships_battleship_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 196 }
 		}
-		CCP_action_skill_3 = yes
+		CCP_action_ships_battleship_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 197 }
 		}
-		CCP_action_skill_5 = yes
+		CCP_action_ships_carrier_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 198 }
 		}
-		CCP_action_attack_1 = yes
+		CCP_action_ships_carrier_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 199 }
 		}
-		CCP_action_attack_2 = yes
+		CCP_action_ships_carrier_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 200 }
 		}
-		CCP_action_attack_3 = yes
+		CCP_action_ships_carrier_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 201 }
 		}
-		CCP_action_attack_5 = yes
+		CCP_action_delete_units_0 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 202 }
 		}
-		CCP_action_defense_1 = yes
+		CCP_action_army_xp_100 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 203 }
 		}
-		CCP_action_defense_2 = yes
+		CCP_action_army_xp_500 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 204 }
 		}
-		CCP_action_defense_3 = yes
+		CCP_action_army_xp_1000 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 205 }
 		}
-		CCP_action_defense_5 = yes
+		CCP_action_army_xp_5000 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 206 }
 		}
-		CCP_action_planning_1 = yes
+		CCP_action_navy_xp_100 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 207 }
 		}
-		CCP_action_planning_2 = yes
+		CCP_action_navy_xp_500 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 208 }
 		}
-		CCP_action_planning_3 = yes
+		CCP_action_navy_xp_1000 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 209 }
 		}
-		CCP_action_planning_5 = yes
+		CCP_action_navy_xp_5000 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 210 }
 		}
-		CCP_action_logistics_1 = yes
+		CCP_action_air_xp_100 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 211 }
 		}
-		CCP_action_logistics_2 = yes
+		CCP_action_air_xp_500 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 212 }
 		}
-		CCP_action_logistics_3 = yes
+		CCP_action_air_xp_1000 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 213 }
 		}
-		CCP_action_logistics_5 = yes
+		CCP_action_air_xp_5000 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 214 }
 		}
-		CCP_action_admiral_skill_1 = yes
+		CCP_action_skill_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 215 }
 		}
-		CCP_action_admiral_skill_2 = yes
+		CCP_action_skill_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 216 }
 		}
-		CCP_action_admiral_skill_3 = yes
+		CCP_action_skill_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 217 }
 		}
-		CCP_action_admiral_skill_5 = yes
+		CCP_action_skill_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 218 }
 		}
-		CCP_action_opinion_up_1 = yes
+		CCP_action_attack_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 219 }
 		}
-		CCP_action_opinion_down_1 = yes
+		CCP_action_attack_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 220 }
 		}
-		CCP_action_intel_25 = yes
+		CCP_action_attack_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 221 }
 		}
-		CCP_action_intel_50 = yes
+		CCP_action_attack_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 222 }
 		}
-		CCP_action_intel_75 = yes
+		CCP_action_defense_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 223 }
 		}
-		CCP_action_intel_100 = yes
+		CCP_action_defense_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 224 }
 		}
-		CCP_action_wargoal_1 = yes
+		CCP_action_defense_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 225 }
 		}
-		CCP_action_truce_90 = yes
+		CCP_action_defense_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 226 }
 		}
-		CCP_action_truce_180 = yes
+		CCP_action_planning_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 227 }
 		}
-		CCP_action_truce_365 = yes
+		CCP_action_planning_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 228 }
 		}
-		CCP_action_truce_730 = yes
+		CCP_action_planning_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 229 }
 		}
-		CCP_action_faction_create_1 = yes
+		CCP_action_planning_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 230 }
 		}
-		CCP_action_faction_invite_1 = yes
+		CCP_action_logistics_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 231 }
 		}
-		CCP_action_release_target_1 = yes
+		CCP_action_logistics_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 232 }
 		}
-		CCP_action_free_target_1 = yes
+		CCP_action_logistics_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 233 }
 		}
-		CCP_action_collaboration_10 = yes
+		CCP_action_logistics_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 234 }
 		}
-		CCP_action_collaboration_25 = yes
+		CCP_action_admiral_skill_1 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 235 }
 		}
-		CCP_action_collaboration_50 = yes
+		CCP_action_admiral_skill_2 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 236 }
 		}
-		CCP_action_collaboration_90 = yes
+		CCP_action_admiral_skill_3 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 237 }
 		}
-		CCP_action_guarantee_1 = yes
+		CCP_action_admiral_skill_5 = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { ccp_last_action = 238 }
+		}
+		CCP_action_opinion_up_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 239 }
+		}
+		CCP_action_opinion_down_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 240 }
+		}
+		CCP_action_intel_25 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 241 }
+		}
+		CCP_action_intel_50 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 242 }
+		}
+		CCP_action_intel_75 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 243 }
+		}
+		CCP_action_intel_100 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 244 }
+		}
+		CCP_action_wargoal_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 245 }
+		}
+		CCP_action_truce_90 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 246 }
+		}
+		CCP_action_truce_180 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 247 }
+		}
+		CCP_action_truce_365 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 248 }
+		}
+		CCP_action_truce_730 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 249 }
+		}
+		CCP_action_faction_create_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 250 }
+		}
+		CCP_action_faction_invite_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 251 }
+		}
+		CCP_action_release_target_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 252 }
+		}
+		CCP_action_free_target_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 253 }
+		}
+		CCP_action_collaboration_10 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 254 }
+		}
+		CCP_action_collaboration_25 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 255 }
+		}
+		CCP_action_collaboration_50 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 256 }
+		}
+		CCP_action_collaboration_90 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 257 }
+		}
+		CCP_action_guarantee_1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { ccp_last_action = 258 }
 		}
 		CCP_action_disband_target_0 = yes
 	}

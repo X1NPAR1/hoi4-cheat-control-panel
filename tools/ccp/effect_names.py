@@ -166,6 +166,13 @@ def known_identifiers(game_dir: Path) -> frozenset[str]:
                     names.add(match.group(1))
                 depth += line.count("{") - line.count("}")
 
+    # Module slot names inside create_equipment_variant, read from the hull files.
+    equipment = game_dir / "common" / "units" / "equipment"
+    if equipment.is_dir():
+        for path in equipment.glob("ship_hull_*.txt"):
+            text = path.read_text(encoding="utf-8-sig", errors="replace")
+            names |= set(re.findall(r"^	{3}([a-z0-9_]+_slot(?:_\d+)?)\s*=", text, re.MULTILINE))
+
     buildings = game_dir / "common" / "buildings"
     if buildings.is_dir():
         for path in buildings.glob("*.txt"):

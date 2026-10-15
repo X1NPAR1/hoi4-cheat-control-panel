@@ -1211,6 +1211,7 @@ SHARED_ACROSS_LANGUAGES = frozenset(
         "CCP_HOTKEY_4",
         "CCP_HOTKEY_5",
         # Durations and element names that read the same in every language here.
+        "CCP_ACTION_SHIPS_DESTROYER",
         "CCP_ACTION_TRUCE_180",
         "CCP_ACTION_TRUCE_365",
         "CCP_ACTION_TRUCE_730",

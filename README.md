@@ -62,14 +62,14 @@ is stored in your save.
 | **Politics** | Ruling party and popularity for each ideology, civil war, autonomy |
 | **Construction** | Eleven building types at several levels each, built instantly across every owned state — forts, coastal forts and supply hubs placed in the right provinces — railways from your capital to every state at four levels, shared building slots and off-map factories that cannot be bombed |
 | **Resources (raw)** | All seven raw resources added to every state you own |
-| **Military** | Nuclear bombs, division spawning in your capital or in a state you picked, disband everything, and the three experience pools |
+| **Military** | Nuclear bombs, division spawning in your capital or in a state you picked, disband everything, the three experience pools, and naval dominance: radar, air base and naval base in a picked state plus destroyers, cruisers, battleships and carriers for your reserve fleet |
 | **Commanders** | Skill, attack, defence, planning and logistics for every general and admiral |
 | **Diplomacy** | Opinion, intelligence, war goals, truces, factions, collaboration, guarantees, release, independence and deleting the target's army — all aimed at your target country |
 | **History** | The last ten actions the panel applied, each repeatable |
 | **Settings** | Hotkey, confirmation prompts, diplomacy rules, AI goodwill, compatibility and language notes |
 
 **Every action offers several amounts, not one.** A card carries four or five buttons —
-`+1 / +5 / +10 / +20` — so **76 actions become 238 choices**, alongside 11 state actions
+`+1 / +5 / +10 / +20` — so **81 actions become 258 choices**, alongside 11 state actions
 and 5 country actions. The Equipment and Research lists add **145 equipment variants**
 and **328 technologies** read from your own installation.
 
@@ -143,7 +143,7 @@ These are engine limits, verified against the shipped game files, not oversights
 | No keybind remapping API | The hotkey is chosen from a fixed set rather than freely bound |
 | `complete_national_focus` needs a specific focus token, and focus trees cannot be walked at runtime | There is no national focus section |
 | Doctrines are a separate system since 1.19 | `set_technology` does not reach them, so Research does not list them; Nation grants them free instead, through `add_doctrine_cost_reduction` |
-| `add_equipment_to_stockpile` refuses ships and railway guns | They are built as units, so they are not listed |
+| `add_equipment_to_stockpile` refuses ships and railway guns | Not in Equipment; Military adds warships straight to the reserve fleet instead |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` are console switches with no scripted equivalent | Absent. Where a native effect gives the same outcome — instant construction, diplomatic rules — the panel uses that instead |
 | Equipment display names differ per language | There is no A-Z filter: filing rows under an English initial would be wrong in the other three. Categories, paging and the locked-item marking cover the same need |
 
@@ -226,14 +226,14 @@ açtığınızda harita modu değişirdi. Kısayolu panelin **Ayarlar** bölüm�
 | **Siyaset** | Yönetici parti ve her ideoloji için popülerlik, iç savaş, özerklik |
 | **İnşaat** | On bir bina türü, her biri birkaç seviyede, sahip olduğunuz her eyalette anında — kaleler, kıyı kaleleri ve ikmal merkezleri doğru illere kurulur — başkentten her eyalete dört seviyede demiryolu, paylaşımlı bina yuvaları ve bombalanamayan harita dışı fabrikalar |
 | **Ham kaynaklar** | Yedi ham kaynağın tamamı, sahip olduğunuz her eyalete |
-| **Ordu** | Nükleer bomba, başkentte ya da seçtiğiniz eyalette tümen üretimi, tüm birlikleri dağıtma ve üç tecrübe havuzu |
+| **Ordu** | Nükleer bomba, başkentte ya da seçtiğiniz eyalette tümen üretimi, tüm birlikleri dağıtma, üç tecrübe havuzu ve deniz hâkimiyeti: seçili eyalete radar, hava üssü ve deniz üssü, yedek filoya muhrip, kruvazör, zırhlı ve uçak gemisi |
 | **Komutanlar** | Her general ve amiral için beceri, saldırı, savunma, planlama ve lojistik |
 | **Diplomasi** | Görüş, istihbarat, savaş hedefi, ateşkes, hizipler, iş birliği, garanti, serbest bırakma, bağımsızlık ve hedefin ordusunu silme — hepsi hedef ülkenize yönelik |
 | **Geçmiş** | Panelin uyguladığı son on işlem, hepsi tekrarlanabilir |
 | **Ayarlar** | Kısayol tuşu, onay pencereleri, diplomasi kuralları, yapay zekâ iyi niyeti, uyumluluk ve dil notları |
 
 **Her eylem tek bir miktar değil, birkaç miktar sunar.** Her kartta dört ya da beş düğme
-vardır — `+1 / +5 / +10 / +20` — böylece **76 eylem 238 seçeneğe** dönüşür; ayrıca 11
+vardır — `+1 / +5 / +10 / +20` — böylece **81 eylem 258 seçeneğe** dönüşür; ayrıca 11
 eyalet eylemi ve 5 ülke eylemi vardır. Teçhizat ve Araştırma listeleri de kendi
 kurulumunuzdan okunan **145 teçhizat varyantı** ve **328 teknoloji** ekler.
 
@@ -308,7 +308,7 @@ sınırlarıdır.
 | Tuş atama API'si yok | Kısayol, serbestçe bağlanmak yerine sabit bir kümeden seçilir |
 | `complete_national_focus` belirli bir odak kimliği ister, odak ağaçları da çalışma anında gezilemez | Ulusal odak bölümü yoktur |
 | Doktrinler 1.19'dan beri ayrı bir sistemdir | `set_technology` onlara ulaşmaz, bu yüzden Araştırma onları listelemez; Ulus bölümü bunun yerine `add_doctrine_cost_reduction` ile onları ücretsiz yapar |
-| `add_equipment_to_stockpile` gemileri ve demiryolu toplarını reddeder | Bunlar birlik olarak üretilir, bu yüzden listelenmezler |
+| `add_equipment_to_stockpile` gemileri ve demiryolu toplarını reddeder | Teçhizat'ta yoklar; Ordu bunun yerine savaş gemilerini doğrudan yedek filoya ekler |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` yerel karşılığı olmayan konsol anahtarlarıdır | Yoklar. Aynı sonucu veren yerel bir efekt varsa — anında inşaat, diplomasi kuralları — panel onu kullanır |
 | Teçhizat adları dile göre değişir | A-Z filtresi yoktur: satırları İngilizce baş harfe göre sıralamak diğer üç dilde yanlış olurdu. Kategoriler, sayfalama ve kilitli öğe işareti aynı ihtiyacı karşılar |
 
@@ -392,14 +392,14 @@ im Spielstand gespeichert.
 | **Politik** | Regierungspartei und Popularität je Ideologie, Bürgerkrieg, Autonomie |
 | **Bau** | Elf Gebäudearten in mehreren Stufen, sofort in jedem Ihrer Staaten — Festungen, Küstenfestungen und Versorgungsknoten in den richtigen Provinzen — Eisenbahnen von der Hauptstadt zu jedem Staat in vier Stufen, gemeinsame Baufelder und Fabriken außerhalb der Karte, die nicht bombardiert werden können |
 | **Rohstoffe** | Alle sieben Rohstoffe in jedem Ihrer Staaten |
-| **Militär** | Atombomben, Divisionen in der Hauptstadt oder in einem gewählten Staat aufstellen, alles auflösen und die drei Erfahrungsspeicher |
+| **Militär** | Atombomben, Divisionen in der Hauptstadt oder in einem gewählten Staat aufstellen, alles auflösen, die drei Erfahrungsspeicher und Seeherrschaft: Radar, Flugplatz und Hafen im gewählten Staat sowie Zerstörer, Kreuzer, Schlachtschiffe und Träger für die Reserveflotte |
 | **Kommandeure** | Fähigkeit, Angriff, Verteidigung, Planung und Logistik für jeden General und Admiral |
 | **Diplomatie** | Meinung, Aufklärung, Kriegsziele, Waffenstillstände, Fraktionen, Kollaboration, Garantien, Freilassung, Unabhängigkeit und das Löschen der Armee des Ziels — alles auf Ihr Zielland gerichtet |
 | **Verlauf** | Die letzten zehn Aktionen des Panels, jede wiederholbar |
 | **Einstellungen** | Tastenkürzel, Bestätigungen, Diplomatieregeln, KI-Wohlwollen, Hinweise zu Kompatibilität und Sprache |
 
 **Jede Aktion bietet mehrere Beträge, nicht einen.** Eine Karte trägt vier oder fünf
-Schaltflächen — `+1 / +5 / +10 / +20` — so werden aus **76 Aktionen 238 Möglichkeiten**,
+Schaltflächen — `+1 / +5 / +10 / +20` — so werden aus **81 Aktionen 258 Möglichkeiten**,
 dazu 11 Staaten- und 5 Länderaktionen. Ausrüstung und Forschung bringen weitere
 **145 Ausrüstungsvarianten** und **328 Technologien**, gelesen aus Ihrer eigenen Installation.
 
@@ -475,7 +475,7 @@ Das sind Grenzen der Engine, geprüft an den mitgelieferten Spieldateien, keine 
 | Keine API zum Neubelegen von Tasten | Das Tastenkürzel wird aus einer festen Auswahl gewählt statt frei gebunden |
 | `complete_national_focus` braucht ein konkretes Fokus-Token, und Fokusbäume sind zur Laufzeit nicht begehbar | Es gibt keinen Fokus-Bereich |
 | Doktrinen sind seit 1.19 ein eigenes System | `set_technology` erreicht sie nicht, deshalb listet Forschung sie nicht; der Bereich Nation macht sie stattdessen über `add_doctrine_cost_reduction` kostenlos |
-| `add_equipment_to_stockpile` verweigert Schiffe und Eisenbahngeschütze | Sie werden als Einheiten gebaut und daher nicht gelistet |
+| `add_equipment_to_stockpile` verweigert Schiffe und Eisenbahngeschütze | Nicht unter Ausrüstung; Militär fügt Kriegsschiffe stattdessen direkt der Reserveflotte hinzu |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` sind Konsolenschalter ohne Skript-Entsprechung | Nicht vorhanden. Wo ein nativer Effekt dasselbe bewirkt — Sofortbau, Diplomatieregeln — nutzt das Panel diesen |
 | Anzeigenamen von Ausrüstung unterscheiden sich je Sprache | Es gibt keinen A-Z-Filter: eine Einordnung nach englischem Anfangsbuchstaben wäre in den anderen drei Sprachen falsch. Kategorien, Seiten und die Markierung gesperrter Einträge decken dasselbe Bedürfnis ab |
 
@@ -559,14 +559,14 @@ la touche se change en `F8`, `F11`, `F12` ou `Ctrl+F8` ; le choix est conservé 
 | **Politique** | Parti au pouvoir et popularité par idéologie, guerre civile, autonomie |
 | **Construction** | Onze types de bâtiments à plusieurs niveaux, construits instantanément dans chacun de vos États — forts, forts côtiers et nœuds de ravitaillement dans les bonnes provinces — voies ferrées de la capitale vers chaque État sur quatre niveaux, cases partagées et usines hors carte que rien ne peut bombarder |
 | **Ressources brutes** | Les sept ressources brutes dans chacun de vos États |
-| **Militaire** | Bombes nucléaires, création de divisions dans la capitale ou dans un État choisi, dissolution générale, et les trois réserves d expérience |
+| **Militaire** | Bombes nucléaires, création de divisions dans la capitale ou dans un État choisi, dissolution générale, les trois réserves d expérience, et la domination navale : radar, base aérienne et base navale dans un État choisi, plus destroyers, croiseurs, cuirassés et porte-avions pour la flotte de réserve |
 | **Commandants** | Compétence, attaque, défense, planification et logistique pour chaque général et amiral |
 | **Diplomatie** | Opinion, renseignement, casus belli, trêves, factions, collaboration, garanties, libération, indépendance et suppression de l armée de la cible — tout visant votre pays cible |
 | **Historique** | Les dix dernières actions appliquées par le panneau, toutes rejouables |
 | **Réglages** | Raccourci, confirmations, règles diplomatiques, bienveillance de l IA, notes de compatibilité et de langue |
 
 **Chaque action propose plusieurs montants, pas un seul.** Une carte porte quatre ou cinq
-boutons — `+1 / +5 / +10 / +20` — si bien que **76 actions deviennent 238 choix**, auxquels
+boutons — `+1 / +5 / +10 / +20` — si bien que **81 actions deviennent 258 choix**, auxquels
 s ajoutent 11 actions d État et 5 actions de pays. Les listes Équipement et Recherche
 apportent **145 variantes d équipement** et **328 technologies** lues dans votre propre installation.
 
@@ -642,7 +642,7 @@ Ce sont des limites du moteur, vérifiées sur les fichiers livrés avec le jeu,
 | Pas d API de réattribution des touches | Le raccourci se choisit dans un ensemble fixe plutôt que librement |
 | `complete_national_focus` exige un focus précis, et les arbres de focus ne sont pas parcourables à l exécution | Il n y a pas de section focus national |
 | Les doctrines sont un système à part depuis 1.19 | `set_technology` ne les atteint pas, donc Recherche ne les liste pas ; Nation les rend gratuites via `add_doctrine_cost_reduction` |
-| `add_equipment_to_stockpile` refuse les navires et les canons ferroviaires | Ils se construisent comme unités, ils ne sont donc pas listés |
+| `add_equipment_to_stockpile` refuse les navires et les canons ferroviaires | Absents d Équipement ; Militaire ajoute plutôt des navires de guerre directement à la flotte de réserve |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` sont des bascules console sans équivalent scripté | Absents. Là où un effet natif donne le même résultat — construction instantanée, règles diplomatiques — le panneau l utilise |
 | Les noms d équipement changent selon la langue | Pas de filtre A-Z : classer les lignes sous une initiale anglaise serait faux dans les trois autres langues. Catégories, pagination et marquage des éléments verrouillés couvrent le même besoin |
 
@@ -725,14 +725,14 @@ Cheat Control Panel превращает эти действия в настоя
 | **Политика** | Правящая партия и популярность каждой идеологии, гражданская война, автономия |
 | **Строительство** | Одиннадцать типов зданий в несколько уровней, мгновенно во всех ваших провинциях — крепости, береговые крепости и узлы снабжения ставятся в нужные области — железные дороги от столицы к каждой провинции на четырёх уровнях, общие ячейки и заводы вне карты, которые нельзя разбомбить |
 | **Сырьё** | Все семь видов сырья во все ваши провинции |
-| **Армия** | Ядерные бомбы, создание дивизий в столице или в выбранной провинции, роспуск всех войск и три запаса опыта |
+| **Армия** | Ядерные бомбы, создание дивизий в столице или в выбранной провинции, роспуск всех войск, три запаса опыта и господство на море: радар, авиабаза и ВМБ в выбранной провинции, а также эсминцы, крейсеры, линкоры и авианосцы в резервный флот |
 | **Командующие** | Навык, атака, оборона, планирование и логистика для каждого генерала и адмирала |
 | **Дипломатия** | Мнение, разведка, поводы к войне, перемирия, фракции, коллаборация, гарантии, освобождение, независимость и уничтожение армии цели — всё направлено на выбранную страну |
 | **История** | Последние десять действий панели, каждое можно повторить |
 | **Настройки** | Горячая клавиша, подтверждения, дипломатические правила, благосклонность ИИ, заметки о совместимости и языке |
 
 **У каждого действия несколько величин, а не одна.** На карточке четыре или пять кнопок —
-`+1 / +5 / +10 / +20` — поэтому **76 действий превращаются в 238 вариантов**, плюс 11 действий
+`+1 / +5 / +10 / +20` — поэтому **81 действий превращаются в 258 вариантов**, плюс 11 действий
 с провинциями и 5 со странами. Разделы «Техника» и «Исследования» добавляют
 **145 вариантов техники** и **328 технологий**, прочитанных из вашей собственной сборки.
 
@@ -806,7 +806,7 @@ python tools/enable_local_mod.py   # зарегистрировать в наб�
 | Нет API переназначения клавиш | Клавиша выбирается из фиксированного набора, а не назначается свободно |
 | `complete_national_focus` требует конкретный фокус, а деревья фокусов нельзя обойти во время игры | Раздела национальных фокусов нет |
 | С 1.19 доктрины — отдельная система | `set_technology` до них не достаёт, поэтому «Исследования» их не перечисляют; раздел «Государство» делает их бесплатными через `add_doctrine_cost_reduction` |
-| `add_equipment_to_stockpile` отказывает кораблям и железнодорожным орудиям | Они строятся как юниты, поэтому не перечислены |
+| `add_equipment_to_stockpile` отказывает кораблям и железнодорожным орудиям | Их нет в Снаряжении; вместо этого Армия добавляет военные корабли прямо в резервный флот |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` — консольные переключатели без скриптового аналога | Отсутствуют. Где родной эффект даёт тот же результат — мгновенное строительство, дипломатические правила — панель использует его |
 | Отображаемые названия техники зависят от языка | Фильтра А-Я нет: раскладывать строки по английской букве было бы неверно в остальных трёх языках. Категории, страницы и пометка заблокированных позиций закрывают ту же потребность |
 
@@ -889,14 +889,14 @@ kun je de toets wijzigen naar `F8`, `F11`, `F12` of `Ctrl+F8`; de keuze staat in
 | **Politiek** | Regerende partij en populariteit per ideologie, burgeroorlog, autonomie |
 | **Bouw** | Elf gebouwtypes in meerdere niveaus, direct gebouwd in elke staat die je bezit — forten, kustforten en bevoorradingsknooppunten in de juiste provincies — spoorwegen van de hoofdstad naar elke staat in vier niveaus, gedeelde bouwplekken en fabrieken buiten de kaart die niet gebombardeerd kunnen worden |
 | **Ruwe grondstoffen** | Alle zeven ruwe grondstoffen in elke staat die je bezit |
-| **Leger** | Kernbommen, divisies opzetten in de hoofdstad of in een gekozen staat, alles ontbinden, en de drie ervaringsvoorraden |
+| **Leger** | Kernbommen, divisies opzetten in de hoofdstad of in een gekozen staat, alles ontbinden, de drie ervaringsvoorraden, en zeeheerschappij: radar, vliegbasis en marinebasis in een gekozen staat plus torpedobootjagers, kruisers, slagschepen en vliegdekschepen voor de reservevloot |
 | **Bevelhebbers** | Vaardigheid, aanval, verdediging, planning en logistiek voor elke generaal en admiraal |
 | **Diplomatie** | Opinie, inlichtingen, oorlogsdoelen, wapenstilstanden, facties, collaboratie, garanties, vrijlating, onafhankelijkheid en het leger van het doelwit wissen — alles gericht op je doelland |
 | **Geschiedenis** | De laatste tien acties van het paneel, elk herhaalbaar |
 | **Instellingen** | Sneltoets, bevestigingen, diplomatieke regels, AI-welwillendheid, opmerkingen over compatibiliteit en taal |
 
 **Elke actie biedt meerdere bedragen, niet één.** Een kaart draagt vier of vijf knoppen —
-`+1 / +5 / +10 / +20` — dus **76 acties worden 238 keuzes**, naast 11 staatacties en 5
+`+1 / +5 / +10 / +20` — dus **81 acties worden 258 keuzes**, naast 11 staatacties en 5
 landacties. De lijsten Uitrusting en Onderzoek voegen **145 uitrustingsvarianten** en
 **328 technologieën** toe, gelezen uit jouw eigen installatie.
 
@@ -971,7 +971,7 @@ Dit zijn grenzen van de engine, geverifieerd aan de meegeleverde spelbestanden, 
 | Geen API om toetsen opnieuw toe te wijzen | De sneltoets komt uit een vaste reeks in plaats van vrij te binden |
 | `complete_national_focus` vereist een specifieke focus, en focusbomen zijn tijdens het spel niet te doorlopen | Er is geen onderdeel nationale focus |
 | Doctrines zijn sinds 1.19 een apart systeem | `set_technology` bereikt ze niet, dus Onderzoek noemt ze niet; Natie maakt ze gratis via `add_doctrine_cost_reduction` |
-| `add_equipment_to_stockpile` weigert schepen en spoorweggeschut | Die worden als eenheden gebouwd en staan daarom niet in de lijst |
+| `add_equipment_to_stockpile` weigert schepen en spoorweggeschut | Niet bij Uitrusting; Leger voegt oorlogsschepen in plaats daarvan direct aan de reservevloot toe |
 | `instanttraining`, `fow`, `yesman`, `allowtraits`, `freefocuses` zijn consoleschakelaars zonder gescript equivalent | Afwezig. Waar een eigen effect hetzelfde bereikt — direct bouwen, diplomatieke regels — gebruikt het paneel dat |
 | Weergavenamen van uitrusting verschillen per taal | Er is geen A-Z-filter: rijen onder een Engelse beginletter zetten zou in de andere drie talen fout zijn. Categorieën, paginering en de markering van vergrendelde items dekken dezelfde behoefte |
 

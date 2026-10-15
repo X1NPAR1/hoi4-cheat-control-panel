@@ -5841,8 +5841,393 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "ccp_action_delete_units"
+				name = "ccp_action_naval_dominance"
 				position = { x = 1186 y = 304 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_naval_dominance_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_naval_dominance_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_NAVAL_DOMINANCE"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_naval_dominance_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_NAVAL_DOMINANCE_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_naval_dominance_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_NAVAL_DOMINANCE_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_NAVAL_DOMINANCE_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_naval_dominance_3"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_NAVAL_DOMINANCE_3"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_NAVAL_DOMINANCE_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_naval_dominance_5"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_NAVAL_DOMINANCE_5"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_NAVAL_DOMINANCE_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_naval_dominance_10"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_NAVAL_DOMINANCE_10"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_NAVAL_DOMINANCE_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_ships_destroyer"
+				position = { x = 274 y = 450 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_ships_destroyer_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_destroyer_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_SHIPS_DESTROYER"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_destroyer_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_SHIPS_DESTROYER_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_destroyer_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_DESTROYER_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_DESTROYER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_destroyer_3"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_DESTROYER_3"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_DESTROYER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_destroyer_5"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_DESTROYER_5"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_DESTROYER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_destroyer_10"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_DESTROYER_10"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_DESTROYER_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_ships_cruiser"
+				position = { x = 578 y = 450 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_ships_cruiser_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_cruiser_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_SHIPS_CRUISER"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_cruiser_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_SHIPS_CRUISER_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_cruiser_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CRUISER_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CRUISER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_cruiser_3"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CRUISER_3"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CRUISER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_cruiser_5"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CRUISER_5"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CRUISER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_cruiser_10"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CRUISER_10"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CRUISER_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_ships_battleship"
+				position = { x = 882 y = 450 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_ships_battleship_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_battleship_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_SHIPS_BATTLESHIP"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_battleship_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_SHIPS_BATTLESHIP_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_battleship_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_BATTLESHIP_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_BATTLESHIP_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_battleship_2"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_BATTLESHIP_2"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_BATTLESHIP_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_battleship_3"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_BATTLESHIP_3"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_BATTLESHIP_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_battleship_5"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_BATTLESHIP_5"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_BATTLESHIP_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_ships_carrier"
+				position = { x = 1186 y = 450 }
+				size = { width = 288 height = 130 }
+				moveable = no
+
+				iconType = {
+					name = "ccp_action_ships_carrier_plate"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ccp_plate_action"
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_carrier_title"
+					position = { x = 14 y = 9 }
+					font = "hoi_18mbs"
+					text = "CCP_ACTION_SHIPS_CARRIER"
+					maxWidth = 260
+					maxHeight = 34
+					format = left
+				}
+
+				instantTextBoxType = {
+					name = "ccp_action_ships_carrier_help"
+					position = { x = 14 y = 44 }
+					font = "hoi_16mbs"
+					text = "CCP_ACTION_SHIPS_CARRIER_HELP"
+					maxWidth = 260
+					maxHeight = 46
+					format = left
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_carrier_1"
+					position = { x = 14 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CARRIER_1"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CARRIER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_carrier_2"
+					position = { x = 77 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CARRIER_2"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CARRIER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_carrier_3"
+					position = { x = 140 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CARRIER_3"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CARRIER_TOOLTIP"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "ccp_action_ships_carrier_5"
+					position = { x = 203 y = 94 }
+					quadTextureSprite = "GFX_ccp_button_small"
+					size = { x = 58 y = 26 }
+					buttonText = "CCP_ACTION_SHIPS_CARRIER_5"
+					buttonFont = "hoi_16mbs"
+					pdx_tooltip = "CCP_ACTION_SHIPS_CARRIER_TOOLTIP"
+					clicksound = click_default
+				}
+			}
+
+			containerWindowType = {
+				name = "ccp_action_delete_units"
+				position = { x = 274 y = 596 }
 				size = { width = 288 height = 130 }
 				moveable = no
 
@@ -5886,7 +6271,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_army_xp"
-				position = { x = 274 y = 450 }
+				position = { x = 578 y = 596 }
 				size = { width = 288 height = 130 }
 				moveable = no
 
@@ -5963,7 +6348,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_navy_xp"
-				position = { x = 578 y = 450 }
+				position = { x = 882 y = 596 }
 				size = { width = 288 height = 130 }
 				moveable = no
 
@@ -6040,7 +6425,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "ccp_action_air_xp"
-				position = { x = 882 y = 450 }
+				position = { x = 1186 y = 596 }
 				size = { width = 288 height = 130 }
 				moveable = no
 

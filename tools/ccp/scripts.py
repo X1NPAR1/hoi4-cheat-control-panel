@@ -14,6 +14,7 @@ from .interface import NAV_STEP, NAV_TOP, PAD_SECTIONS, pad_widgets, section_con
 from .actions import (
     ALL as COUNTRY_ACTIONS,
     SPAWN_COUNTS,
+    SHIP_VARIANTS,
     SPAWN_TEMPLATES,
     action_levels,
     generic_id,
@@ -643,6 +644,7 @@ def emit_action_effects(version: str) -> str:
     _banner(writer, version)
 
     _emit_division_templates(writer)
+    _emit_ship_variants(writer)
 
     for index, (action, level) in enumerate(action_levels(), start=1):
         writer.open(f"CCP_action_{action.slug}_{level_id(level)}")
@@ -661,6 +663,46 @@ def emit_action_effects(version: str) -> str:
         writer.blank()
 
     return writer.text()
+
+
+def _emit_ship_variants(writer: Writer) -> None:
+    """Designs the warship cards launch, made once per country.
+
+    The flag carries a version so a save from an older build still gets them, and
+    the designs are obsolete so they never crowd the production list.
+    """
+    writer.open("CCP_ensure_ship_variants")
+    writer.open("if")
+    writer.open("limit")
+    writer.line("NOT = { has_country_flag = ccp_ship_variants_1 }")
+    writer.close()
+    writer.line("set_country_flag = ccp_ship_variants_1")
+    for mtg, legacy, name, modules in SHIP_VARIANTS.values():
+        writer.open("if")
+        writer.line('limit = { has_dlc = "Man the Guns" }')
+        writer.open("create_equipment_variant")
+        writer.line(f'name = "{name}"')
+        writer.line(f"type = {mtg}")
+        writer.line("parent_version = 0")
+        writer.line("allow_without_tech = yes")
+        writer.open("modules")
+        for slot, module in modules:
+            writer.line(f"{slot} = {module}")
+        writer.close()
+        writer.line("obsolete = yes")
+        writer.close()
+        writer.close()
+        writer.open("else")
+        writer.open("create_equipment_variant")
+        writer.line(f'name = "{name}"')
+        writer.line(f"type = {legacy}")
+        writer.line("allow_without_tech = yes")
+        writer.line("obsolete = yes")
+        writer.close()
+        writer.close()
+    writer.close()
+    writer.close()
+    writer.blank()
 
 
 def _emit_division_templates(writer: Writer) -> None:

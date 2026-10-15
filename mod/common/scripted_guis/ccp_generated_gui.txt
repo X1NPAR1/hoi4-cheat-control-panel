@@ -1222,6 +1222,66 @@ scripted_gui = {
 			ccp_action_state_motorized_25_click = {
 				CCP_action_state_motorized_25 = yes
 			}
+			ccp_action_naval_dominance_1_click = {
+				CCP_action_naval_dominance_1 = yes
+			}
+			ccp_action_naval_dominance_3_click = {
+				CCP_action_naval_dominance_3 = yes
+			}
+			ccp_action_naval_dominance_5_click = {
+				CCP_action_naval_dominance_5 = yes
+			}
+			ccp_action_naval_dominance_10_click = {
+				CCP_action_naval_dominance_10 = yes
+			}
+			ccp_action_ships_destroyer_1_click = {
+				CCP_action_ships_destroyer_1 = yes
+			}
+			ccp_action_ships_destroyer_3_click = {
+				CCP_action_ships_destroyer_3 = yes
+			}
+			ccp_action_ships_destroyer_5_click = {
+				CCP_action_ships_destroyer_5 = yes
+			}
+			ccp_action_ships_destroyer_10_click = {
+				CCP_action_ships_destroyer_10 = yes
+			}
+			ccp_action_ships_cruiser_1_click = {
+				CCP_action_ships_cruiser_1 = yes
+			}
+			ccp_action_ships_cruiser_3_click = {
+				CCP_action_ships_cruiser_3 = yes
+			}
+			ccp_action_ships_cruiser_5_click = {
+				CCP_action_ships_cruiser_5 = yes
+			}
+			ccp_action_ships_cruiser_10_click = {
+				CCP_action_ships_cruiser_10 = yes
+			}
+			ccp_action_ships_battleship_1_click = {
+				CCP_action_ships_battleship_1 = yes
+			}
+			ccp_action_ships_battleship_2_click = {
+				CCP_action_ships_battleship_2 = yes
+			}
+			ccp_action_ships_battleship_3_click = {
+				CCP_action_ships_battleship_3 = yes
+			}
+			ccp_action_ships_battleship_5_click = {
+				CCP_action_ships_battleship_5 = yes
+			}
+			ccp_action_ships_carrier_1_click = {
+				CCP_action_ships_carrier_1 = yes
+			}
+			ccp_action_ships_carrier_2_click = {
+				CCP_action_ships_carrier_2 = yes
+			}
+			ccp_action_ships_carrier_3_click = {
+				CCP_action_ships_carrier_3 = yes
+			}
+			ccp_action_ships_carrier_5_click = {
+				CCP_action_ships_carrier_5 = yes
+			}
 			ccp_action_delete_units_0_click = {
 				set_variable = { ccp_pending_generic = 10 }
 				if = {
@@ -3258,6 +3318,111 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 11 }
 			}
 			ccp_action_state_motorized_25_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_3_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_naval_dominance_10_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_3_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_destroyer_10_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_3_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_cruiser_10_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_2_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_3_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_battleship_5_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_plate_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_title_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_help_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_1_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_2_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_3_visible = {
+				check_variable = { global.ccp_section = 11 }
+			}
+			ccp_action_ships_carrier_5_visible = {
 				check_variable = { global.ccp_section = 11 }
 			}
 			ccp_action_delete_units_plate_visible = {
