@@ -183,7 +183,7 @@ def emit_research_localisation(catalogue: list[Technology], version: str) -> str
             writer.open("trigger")
             writer.line(f"check_variable = {{ {variable} = {index} }}")
             writer.close()
-            writer.line(f"localization_key = {item.key}")
+            writer.line(f"localization_key = {item.label}")
             writer.close()
         writer.open("text")
         writer.line("localization_key = CCP_RESEARCH_UNKNOWN")

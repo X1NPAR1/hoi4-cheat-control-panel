@@ -1720,7 +1720,7 @@ guiTypes = {
 				position = { x = 274 y = 332 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "armour_folder"
+				buttonText = "CCP_RESEARCH_SPECIAL"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1731,7 +1731,7 @@ guiTypes = {
 				position = { x = 274 y = 358 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "bba_air_techs_folder"
+				buttonText = "armour_folder"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1742,7 +1742,7 @@ guiTypes = {
 				position = { x = 274 y = 384 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "mtgnavalfolder"
+				buttonText = "bba_air_techs_folder"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1753,7 +1753,7 @@ guiTypes = {
 				position = { x = 274 y = 410 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
-				buttonText = "mtgnavalsupportfolder"
+				buttonText = "mtgnavalfolder"
 				buttonFont = "hoi_16mbs"
 				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
 				clicksound = click_default
@@ -1762,6 +1762,17 @@ guiTypes = {
 			buttonType = {
 				name = "ccp_research_category_12"
 				position = { x = 274 y = 436 }
+				quadTextureSprite = "GFX_ccp_sidebar_item"
+				size = { x = 200 y = 24 }
+				buttonText = "mtgnavalsupportfolder"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "CCP_EQUIPMENT_CATEGORY_TOOLTIP"
+				clicksound = click_default
+			}
+
+			buttonType = {
+				name = "ccp_research_category_13"
+				position = { x = 274 y = 462 }
 				quadTextureSprite = "GFX_ccp_sidebar_item"
 				size = { x = 200 y = 24 }
 				buttonText = "nsb_armour_folder"

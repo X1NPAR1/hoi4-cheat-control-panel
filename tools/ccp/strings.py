@@ -357,6 +357,9 @@ TRANSLATED: dict[str, Row] = {
         "Page [?ccp_research_page_shown|+0] sur [?ccp_research_pages_shown|+0]",
         "Страница [?ccp_research_page_shown|+0] из [?ccp_research_pages_shown|+0]"
     ),
+    "CCP_RESEARCH_SPECIAL": _row(
+        "Special", "Sonder", "Spéciales", "Особые"
+    ),
     "CCP_RESEARCH_UNKNOWN": _row(
         "Unknown technology", "Unbekannte Technologie", "Technologie inconnue",
         "Неизвестная технология"

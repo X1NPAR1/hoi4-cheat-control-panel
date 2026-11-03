@@ -1,6 +1,6 @@
 # GENERATED FILE - DO NOT EDIT
 # Produced by tools/generate_data.py from the installed game files.
-# Source game version: 1.19.3.0
+# Source game version: 1.19.4.1
 
 scripted_gui = {
 
@@ -469,18 +469,21 @@ scripted_gui = {
 				CCP_research_select_industry_folder = yes
 			}
 			ccp_research_category_8_click = {
-				CCP_research_select_armour_folder = yes
+				CCP_research_select_CCP_RESEARCH_SPECIAL = yes
 			}
 			ccp_research_category_9_click = {
-				CCP_research_select_bba_air_techs_folder = yes
+				CCP_research_select_armour_folder = yes
 			}
 			ccp_research_category_10_click = {
-				CCP_research_select_mtgnavalfolder = yes
+				CCP_research_select_bba_air_techs_folder = yes
 			}
 			ccp_research_category_11_click = {
-				CCP_research_select_mtgnavalsupportfolder = yes
+				CCP_research_select_mtgnavalfolder = yes
 			}
 			ccp_research_category_12_click = {
+				CCP_research_select_mtgnavalsupportfolder = yes
+			}
+			ccp_research_category_13_click = {
 				CCP_research_select_nsb_armour_folder = yes
 			}
 			ccp_research_prev_click = {
@@ -2217,6 +2220,9 @@ scripted_gui = {
 				check_variable = { global.ccp_section = 4 }
 			}
 			ccp_research_category_12_visible = {
+				check_variable = { global.ccp_section = 4 }
+			}
+			ccp_research_category_13_visible = {
 				check_variable = { global.ccp_section = 4 }
 			}
 			ccp_research_list_heading_visible = {

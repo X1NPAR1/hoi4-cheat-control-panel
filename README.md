@@ -55,7 +55,7 @@ is stored in your save.
 | **Dashboard** | Live country summary: political power, command power, manpower, army/navy/air experience, stability, factories |
 | **Resources** | Political power, command power, manpower and all three experience pools, with scaled presets and a custom amount |
 | **Equipment** | Every addable variant in your installation, by category, with a live stockpile count, ADD, LATEST, and add-the-whole-category. Items you have not researched are disabled and say which technology is missing |
-| **Research** | Every technology by research folder: one at a time, a whole category, or everything in the game |
+| **Research** | Every technology by research folder: one at a time, a whole category, or everything in the game. Aircraft, tank and ship designs included; technologies the game hands out through focuses and decisions sit under Special |
 | **Countries** | Annex with troop transfer, puppet, declare war, white peace, play as, or mark a country as the target other sections act on |
 | **States** | Take a state, or take only its ownership or only its control; hand it or just its control to your target; add and remove cores and claims; force compliance, wipe out resistance — from the list or by clicking the map |
 | **Nation** | Stability, war support, research slots, fuel, CIC funds, world tension, legitimacy, instant research bonuses, free doctrines, default occupation law |
@@ -71,7 +71,7 @@ is stored in your save.
 **Every action offers several amounts, not one.** A card carries four or five buttons —
 `+1 / +5 / +10 / +20` — so **81 actions become 258 choices**, alongside 11 state actions
 and 5 country actions. The Equipment and Research lists add **145 equipment variants**
-and **328 technologies** read from your own installation.
+and **508 technologies** read from your own installation.
 
 Sections appear only when they do something. Nothing in the panel is a placeholder.
 
@@ -219,7 +219,7 @@ açtığınızda harita modu değişirdi. Kısayolu panelin **Ayarlar** bölüm�
 | **Panel** | Ülkenizin canlı özeti: siyasi güç, komuta gücü, insan gücü, kara/deniz/hava tecrübesi, istikrar, fabrikalar |
 | **Kaynaklar** | Siyasi güç, komuta gücü, insan gücü ve üç tecrübe havuzu; hazır kademeler ve serbest miktar |
 | **Teçhizat** | Kurulumunuzdaki eklenebilir tüm varyantlar, kategorilere ayrılmış, canlı stok sayısıyla; EKLE, EN YENİ ve kategorinin tamamını ekle. Araştırmadığınız teçhizatın düğmesi kapalıdır ve hangi teknolojinin eksik olduğunu yazar |
-| **Araştırma** | Tüm teknolojiler, araştırma klasörlerine göre: tek tek, klasörün tamamı veya oyundaki her şey |
+| **Araştırma** | Tüm teknolojiler, araştırma klasörlerine göre: tek tek, klasörün tamamı veya oyundaki her şey. Uçak, tank ve gemi tasarımları dahil; odak ve kararlarla verilen teknolojiler Özel klasöründe |
 | **Ülkeler** | Askerleriyle birlikte ilhak, kuklalaştırma, savaş ilanı, beyaz barış, o ülke olarak oynama; ya da bir ülkeyi diğer bölümlerin üzerinde çalışacağı hedef olarak işaretleme |
 | **Eyaletler** | Bir eyaleti tamamen alın, ya da yalnızca sahipliğini veya yalnızca kontrolünü alın; hedefinize eyaletin tamamını ya da sadece kontrolünü verin; core ve hak talebi ekleyip kaldırın; uyumu zorlayın, direnişi sıfırlayın — listeden ya da haritaya tıklayarak |
 | **Ulus** | İstikrar, savaş desteği, araştırma yuvası, yakıt, CIC fonu, dünya gerginliği, meşruiyet, anında araştırma bonusu, ücretsiz doktrinler, varsayılan işgal yasası |
@@ -235,7 +235,7 @@ açtığınızda harita modu değişirdi. Kısayolu panelin **Ayarlar** bölüm�
 **Her eylem tek bir miktar değil, birkaç miktar sunar.** Her kartta dört ya da beş düğme
 vardır — `+1 / +5 / +10 / +20` — böylece **81 eylem 258 seçeneğe** dönüşür; ayrıca 11
 eyalet eylemi ve 5 ülke eylemi vardır. Teçhizat ve Araştırma listeleri de kendi
-kurulumunuzdan okunan **145 teçhizat varyantı** ve **328 teknoloji** ekler.
+kurulumunuzdan okunan **145 teçhizat varyantı** ve **508 teknoloji** ekler.
 
 Bölümler yalnızca bir iş yapıyorlarsa görünür. Panelde hiçbir şey süs değildir.
 
@@ -385,7 +385,7 @@ im Spielstand gespeichert.
 | **Übersicht** | Laufende Zusammenfassung: politische Macht, Kommandomacht, Menschenreserven, Heer-/Marine-/Lufterfahrung, Stabilität, Fabriken |
 | **Ressourcen** | Politische Macht, Kommandomacht, Menschenreserven und alle drei Erfahrungsspeicher, mit gestuften Voreinstellungen und einem freien Betrag |
 | **Ausrüstung** | Jede hinzufügbare Variante Ihrer Installation, nach Kategorie, mit Lagerbestand, HINZUFÜGEN, NEUESTE und ganze Kategorie. Nicht erforschte Ausrüstung ist deaktiviert und nennt die fehlende Technologie |
-| **Forschung** | Jede Technologie nach Forschungsordner: einzeln, eine ganze Kategorie oder alles im Spiel |
+| **Forschung** | Jede Technologie nach Forschungsordner: einzeln, eine ganze Kategorie oder alles im Spiel. Flugzeug-, Panzer- und Schiffsmodelle eingeschlossen; Technologien aus Fokussen und Entscheidungen stehen unter Sonder |
 | **Länder** | Annektieren samt Truppenübernahme, zum Marionettenstaat machen, Krieg erklären, Weißfrieden, als dieses Land weiterspielen, oder ein Land als Ziel markieren, auf das andere Bereiche wirken |
 | **Staaten** | Einen Staat ganz nehmen, oder nur seinen Besitz beziehungsweise nur seine Kontrolle; ihn oder nur seine Kontrolle an Ihr Ziel abgeben; Kerngebiete und Ansprüche setzen und entfernen; Kollaboration erzwingen, Widerstand tilgen — aus der Liste oder per Klick auf die Karte |
 | **Nation** | Stabilität, Kriegsunterstützung, Forschungsplätze, Treibstoff, CIC-Mittel, Weltspannung, Legitimität, sofortige Forschungsboni, kostenlose Doktrinen, Standard-Besatzungsgesetz |
@@ -401,7 +401,7 @@ im Spielstand gespeichert.
 **Jede Aktion bietet mehrere Beträge, nicht einen.** Eine Karte trägt vier oder fünf
 Schaltflächen — `+1 / +5 / +10 / +20` — so werden aus **81 Aktionen 258 Möglichkeiten**,
 dazu 11 Staaten- und 5 Länderaktionen. Ausrüstung und Forschung bringen weitere
-**145 Ausrüstungsvarianten** und **328 Technologien**, gelesen aus Ihrer eigenen Installation.
+**145 Ausrüstungsvarianten** und **508 Technologien**, gelesen aus Ihrer eigenen Installation.
 
 Bereiche erscheinen nur, wenn sie etwas tun. Nichts im Panel ist ein Platzhalter.
 
@@ -552,7 +552,7 @@ la touche se change en `F8`, `F11`, `F12` ou `Ctrl+F8` ; le choix est conservé 
 | **Tableau de bord** | Résumé en direct : pouvoir politique, pouvoir de commandement, main-d oeuvre, expérience terre/mer/air, stabilité, usines |
 | **Ressources** | Pouvoir politique, pouvoir de commandement, main-d oeuvre et les trois réserves d expérience, avec des paliers et un montant libre |
 | **Équipement** | Chaque variante ajoutable de votre installation, par catégorie, avec le stock en direct, AJOUTER, DERNIÈRE et toute la catégorie. Ce que vous n avez pas recherché est désactivé et indique la technologie manquante |
-| **Recherche** | Chaque technologie par dossier de recherche : à l unité, une catégorie entière, ou tout le jeu |
+| **Recherche** | Chaque technologie par dossier de recherche : à l unité, une catégorie entière, ou tout le jeu. Avions, chars et navires inclus ; les technologies données par focus et décisions sont rangées sous Spéciales |
 | **Pays** | Annexer avec transfert des troupes, vassaliser, déclarer la guerre, paix blanche, reprendre ce pays, ou marquer un pays comme cible des autres sections |
 | **États** | Prendre un État entièrement, ou seulement sa propriété ou seulement son contrôle ; le céder, ou n en céder que le contrôle, à votre cible ; ajouter et retirer territoires nationaux et revendications ; imposer la conformité, effacer la résistance — depuis la liste ou en cliquant sur la carte |
 | **Nation** | Stabilité, soutien à la guerre, cases de recherche, carburant, fonds CIC, tension mondiale, légitimité, bonus de recherche instantanés, doctrines gratuites, loi d occupation par défaut |
@@ -568,7 +568,7 @@ la touche se change en `F8`, `F11`, `F12` ou `Ctrl+F8` ; le choix est conservé 
 **Chaque action propose plusieurs montants, pas un seul.** Une carte porte quatre ou cinq
 boutons — `+1 / +5 / +10 / +20` — si bien que **81 actions deviennent 258 choix**, auxquels
 s ajoutent 11 actions d État et 5 actions de pays. Les listes Équipement et Recherche
-apportent **145 variantes d équipement** et **328 technologies** lues dans votre propre installation.
+apportent **145 variantes d équipement** et **508 technologies** lues dans votre propre installation.
 
 Une section n apparaît que si elle fait quelque chose. Rien dans le panneau n est un espace réservé.
 
@@ -718,7 +718,7 @@ Cheat Control Panel превращает эти действия в настоя
 | **Сводка** | Текущее состояние страны: политическая власть, командная власть, людские резервы, опыт армии/флота/авиации, стабильность, заводы |
 | **Ресурсы** | Политическая и командная власть, людские резервы и все три запаса опыта, с готовыми значениями и произвольной суммой |
 | **Техника** | Все добавляемые варианты вашей сборки по категориям, с текущим запасом, ДОБАВИТЬ, ПОСЛЕДНЯЯ и вся категория. Неисследованное недоступно и показывает недостающую технологию |
-| **Исследования** | Все технологии по папкам: по одной, целая категория или всё в игре |
+| **Исследования** | Все технологии по папкам: по одной, целая категория или всё в игре. Самолёты, танки и корабли включены; технологии из фокусов и решений собраны в папке «Особые» |
 | **Страны** | Аннексия с передачей войск, марионетка, объявление войны, белый мир, игра за эту страну, либо пометка страны как цели для других разделов |
 | **Провинции** | Забрать провинцию целиком, либо только владение, либо только контроль; передать её или только контроль вашей цели; добавлять и снимать коренные территории и притязания; поднять согласие, убрать сопротивление — из списка или щелчком по карте |
 | **Государство** | Стабильность, поддержка войны, слоты исследований, топливо, средства CIC, мировая напряжённость, легитимность, мгновенные бонусы исследований, бесплатные доктрины, закон оккупации по умолчанию |
@@ -734,7 +734,7 @@ Cheat Control Panel превращает эти действия в настоя
 **У каждого действия несколько величин, а не одна.** На карточке четыре или пять кнопок —
 `+1 / +5 / +10 / +20` — поэтому **81 действий превращаются в 258 вариантов**, плюс 11 действий
 с провинциями и 5 со странами. Разделы «Техника» и «Исследования» добавляют
-**145 вариантов техники** и **328 технологий**, прочитанных из вашей собственной сборки.
+**145 вариантов техники** и **508 технологий**, прочитанных из вашей собственной сборки.
 
 Раздел появляется, только если он что-то делает. В панели нет заглушек.
 
@@ -882,7 +882,7 @@ kun je de toets wijzigen naar `F8`, `F11`, `F12` of `Ctrl+F8`; de keuze staat in
 | **Overzicht** | Live samenvatting van je land: politieke macht, commandomacht, mankracht, leger-/vloot-/luchtervaring, stabiliteit, fabrieken |
 | **Grondstoffen** | Politieke macht, commandomacht, mankracht en alle drie de ervaringsvoorraden, met vaste stappen en een vrij bedrag |
 | **Uitrusting** | Elke toevoegbare variant in jouw installatie, per categorie, met live voorraad, TOEVOEGEN, NIEUWSTE en de hele categorie. Wat je niet hebt onderzocht is uitgeschakeld en noemt de ontbrekende technologie |
-| **Onderzoek** | Elke technologie per onderzoeksmap: één tegelijk, een hele categorie, of alles in het spel |
+| **Onderzoek** | Elke technologie per onderzoeksmap: één tegelijk, een hele categorie, of alles in het spel. Vliegtuigen, tanks en schepen inbegrepen; technologieën uit focussen en besluiten staan onder Speciaal |
 | **Landen** | Annexeren inclusief troepen, tot vazal maken, oorlog verklaren, witte vrede, als dat land verderspelen, of een land markeren als doelwit waar andere onderdelen op werken |
 | **Staten** | Een staat helemaal nemen, of alleen het eigendom of alleen de controle; hem of enkel zijn controle aan je doelwit geven; kerngebieden en claims toevoegen en verwijderen; meegaandheid afdwingen, verzet wegvagen — uit de lijst of door op de kaart te klikken |
 | **Natie** | Stabiliteit, oorlogssteun, onderzoeksplaatsen, brandstof, CIC-middelen, wereldspanning, legitimiteit, directe onderzoeksbonussen, gratis doctrines, standaard bezettingswet |
@@ -898,7 +898,7 @@ kun je de toets wijzigen naar `F8`, `F11`, `F12` of `Ctrl+F8`; de keuze staat in
 **Elke actie biedt meerdere bedragen, niet één.** Een kaart draagt vier of vijf knoppen —
 `+1 / +5 / +10 / +20` — dus **81 acties worden 258 keuzes**, naast 11 staatacties en 5
 landacties. De lijsten Uitrusting en Onderzoek voegen **145 uitrustingsvarianten** en
-**328 technologieën** toe, gelezen uit jouw eigen installatie.
+**508 technologieën** toe, gelezen uit jouw eigen installatie.
 
 Een onderdeel verschijnt alleen als het iets doet. Niets in het paneel is een tijdelijke knop.
 

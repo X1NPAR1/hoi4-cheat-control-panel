@@ -1,5 +1,5 @@
 ﻿l_german:
-# GENERATED FILE - DO NOT EDIT (tools/generate_data.py, game 1.19.3.0)
+# GENERATED FILE - DO NOT EDIT (tools/generate_data.py, game 1.19.4.1)
  CCP_EQCAT_INFANTRY:0 "Infanterieausrüstung"
  CCP_EQCAT_SUPPORT:0 "Unterstützungsausrüstung"
  CCP_EQCAT_ARTILLERY:0 "Artillerie"

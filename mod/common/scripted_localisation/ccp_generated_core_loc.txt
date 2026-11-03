@@ -1,6 +1,6 @@
 # GENERATED FILE - DO NOT EDIT
 # Produced by tools/generate_data.py from the installed game files.
-# Source game version: 1.19.3.0
+# Source game version: 1.19.4.1
 
 defined_text = {
 	name = CCP_GetSectionName

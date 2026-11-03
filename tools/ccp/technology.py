@@ -13,6 +13,10 @@ from pathlib import Path
 from .gameloc import english_keys
 from .paradox import Node, parse_file
 
+# Technologies outside every research tree: granted by focuses, decisions and
+# special projects. The panel files them together under one folder of its own.
+SPECIAL_FOLDER = "CCP_RESEARCH_SPECIAL"
+
 FOLDER_ORDER = [
     "infantry_folder",
     "support_folder",
@@ -26,6 +30,7 @@ FOLDER_ORDER = [
     "electronics_folder",
     "industry_folder",
     "special_projects_folder",
+    SPECIAL_FOLDER,
 ]
 
 DLC_BY_FILE = {
@@ -42,6 +47,7 @@ class Technology:
     folder: str
     year: int
     dlc: str | None = None
+    label: str = ""
 
 
 def _folder_of(node: Node) -> str | None:
@@ -51,6 +57,14 @@ def _folder_of(node: Node) -> str | None:
             if name:
                 return name
     return None
+
+
+def _listed(node: Node, block: str) -> list[str]:
+    """Tokens inside a `block = { a b c }` child."""
+    for child in node.children:
+        if child.key == block:
+            return list(child.values) + [item.key for item in child.children if item.key]
+    return []
 
 
 def _year(node: Node) -> int:
@@ -70,6 +84,10 @@ def load_catalogue(game_dir: Path) -> list[Technology]:
     if not base.is_dir():
         return catalogue
 
+    # Carrier and other sub-technologies carry no folder of their own; the game
+    # shows them inside their parent's, so they inherit it here.
+    entries: list[tuple[Node, str | None]] = []
+    parent_of: dict[str, str] = {}
     for path in sorted(base.glob("*.txt")):
         dlc = DLC_BY_FILE.get(path.name)
         root = parse_file(path)
@@ -79,16 +97,29 @@ def load_catalogue(game_dir: Path) -> list[Technology]:
             for entry in container.children:
                 if not entry.key or not entry.children or entry.key.startswith("@"):
                     continue
-                folder = _folder_of(entry)
-                if folder is None or entry.key in seen:
-                    continue
-                seen.add(entry.key)
-                catalogue.append(
-                    Technology(key=entry.key, folder=folder, year=_year(entry), dlc=dlc)
-                )
+                entries.append((entry, dlc))
+                for child in _listed(entry, "sub_technologies"):
+                    parent_of.setdefault(child, entry.key)
 
+    folder_of = {entry.key: _folder_of(entry) for entry, _ in entries}
     named = english_keys(game_dir)
-    catalogue = [item for item in catalogue if item.key in named]
+
+    for entry, dlc in entries:
+        if entry.key in seen:
+            continue
+        folder = folder_of.get(entry.key) or folder_of.get(parent_of.get(entry.key, ""))
+        folder = folder or SPECIAL_FOLDER
+        # Most aircraft, tank and ship technologies have no name of their own:
+        # the game falls back to the first equipment they unlock, and so does this.
+        label = entry.key if entry.key in named else next(
+            (item for item in _listed(entry, "enable_equipments") if item in named), None
+        )
+        if label is None:
+            continue
+        seen.add(entry.key)
+        catalogue.append(
+            Technology(key=entry.key, folder=folder, year=_year(entry), dlc=dlc, label=label)
+        )
 
     order = {name: index for index, name in enumerate(FOLDER_ORDER)}
     catalogue.sort(key=lambda item: (order.get(item.folder, len(order)), item.year, item.key))
