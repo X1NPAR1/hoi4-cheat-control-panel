@@ -27,7 +27,7 @@ from ccp.emit_research import emit_research_effects, emit_research_localisation
 from ccp.equipment import group_by_category, load_catalogue
 from ccp.technology import group_by_folder
 from ccp.technology import load_catalogue as load_technologies
-from ccp.languages import NATIVE
+from ccp.languages import SHIPPED
 from ccp.unlocks import equipment_unlocks
 
 from ccp.globals import globalise_localisation, globalise_script
@@ -110,7 +110,7 @@ def main() -> int:
         scripted_loc / "ccp_generated_equipment_categories_loc.txt",
         emit_equipment_categories_localisation(catalogue, version),
     )
-    for language in NATIVE:
+    for language in SHIPPED:
         write(
             REPO_ROOT / "mod" / "localisation" / language
             / f"ccp_generated_equipment_l_{language}.yml",

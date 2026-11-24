@@ -77,6 +77,8 @@ Sections appear only when they do something. Nothing in the panel is a placehold
 
 ## Languages
 
+Polski, Español, Português, 日本語, 中文 and 한국어 players get the panel in English. Before 3.3.2 they saw raw key names such as `CCP_CARD_AIR_XP_VALUE`, because the game prints the key instead of falling back to English.
+
 The panel ships in **English, German, French and Russian**, and follows the game's
 own language setting. Every string it owns is translated; equipment and technology
 names come from the game itself.
@@ -240,6 +242,8 @@ kurulumunuzdan okunan **145 teçhizat varyantı** ve **508 teknoloji** ekler.
 Bölümler yalnızca bir iş yapıyorlarsa görünür. Panelde hiçbir şey süs değildir.
 
 ## Diller
+
+Polski, Español, Português, 日本語, 中文 ve 한국어 oyuncuları paneli İngilizce görür. 3.3.2'den önce `CCP_CARD_AIR_XP_VALUE` gibi ham anahtar adları görüyorlardı; oyun eksik anahtarda İngilizceye dönmek yerine anahtarı basar.
 
 Panel **İngilizce, Almanca, Fransızca ve Rusça** dillerinde gelir ve oyunun kendi dil
 ayarını izler. Panelin sahip olduğu her metin çevrilidir; teçhizat ve teknoloji adları
@@ -406,6 +410,8 @@ dazu 11 Staaten- und 5 Länderaktionen. Ausrüstung und Forschung bringen weiter
 Bereiche erscheinen nur, wenn sie etwas tun. Nichts im Panel ist ein Platzhalter.
 
 ## Sprachen
+
+Spieler auf Polski, Español, Português, 日本語, 中文 und 한국어 sehen das Panel auf Englisch. Vor 3.3.2 sahen sie rohe Schlüssel wie `CCP_CARD_AIR_XP_VALUE`, weil das Spiel den Schlüssel anzeigt statt auf Englisch zurückzufallen.
 
 Das Panel erscheint auf **Englisch, Deutsch, Französisch und Russisch** und folgt der
 Spracheinstellung des Spiels. Jeder Text, der ihm gehört, ist übersetzt; Namen von
@@ -574,6 +580,8 @@ Une section n apparaît que si elle fait quelque chose. Rien dans le panneau n e
 
 ## Langues
 
+Les joueurs en Polski, Español, Português, 日本語, 中文 et 한국어 voient le panneau en anglais. Avant 3.3.2 ils voyaient des clés brutes comme `CCP_CARD_AIR_XP_VALUE`, car le jeu affiche la clé au lieu de revenir à l anglais.
+
 Le panneau existe en **anglais, allemand, français et russe** et suit le réglage de
 langue du jeu. Chaque texte qui lui appartient est traduit ; les noms d équipement et de
 technologie viennent du jeu lui-même.
@@ -740,6 +748,8 @@ Cheat Control Panel превращает эти действия в настоя
 
 ## Языки
 
+Игроки на Polski, Español, Português, 日本語, 中文 и 한국어 видят панель на английском. До 3.3.2 они видели сырые ключи вроде `CCP_CARD_AIR_XP_VALUE`, потому что игра выводит ключ, а не английский текст.
+
 Панель выходит на **английском, немецком, французском и русском** и следует языковой
 настройке игры. Каждая строка, которая принадлежит ей, переведена; названия техники и
 технологий берутся из самой игры.
@@ -903,6 +913,8 @@ landacties. De lijsten Uitrusting en Onderzoek voegen **145 uitrustingsvarianten
 Een onderdeel verschijnt alleen als het iets doet. Niets in het paneel is een tijdelijke knop.
 
 ## Talen
+
+Spelers in Polski, Español, Português, 日本語, 中文 en 한국어 zien het paneel in het Engels. Vóór 3.3.2 zagen ze ruwe sleutels zoals `CCP_CARD_AIR_XP_VALUE`, omdat het spel de sleutel toont in plaats van terug te vallen op Engels.
 
 Het paneel verschijnt in het **Engels, Duits, Frans en Russisch** en volgt de
 taalinstelling van het spel. Elke tekst die het zelf bezit is vertaald; namen van

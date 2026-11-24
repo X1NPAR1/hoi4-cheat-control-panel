@@ -385,7 +385,7 @@ def emit_category_localisation(
     catalogue: list[Equipment], language: str, version: str, unlocks: dict[str, str]
 ) -> str:
     """A localisation file naming every equipment category present in this install."""
-    index = LANGUAGE_INDEX[language]
+    index = LANGUAGE_INDEX.get(language, 0)
     lines = [
         f"l_{language}:",
         f"# GENERATED FILE - DO NOT EDIT (tools/generate_data.py, game {version})",

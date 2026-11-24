@@ -15,6 +15,13 @@ from __future__ import annotations
 
 NATIVE = ("english", "german", "french", "russian")
 
+# The other six languages the game loads get the English text under their own
+# header. The game never falls back to English for a missing key -- it prints the
+# key -- so without these files a Polish or Spanish player saw raw CCP_ names.
+FALLBACK = ("polish", "braz_por", "spanish", "japanese", "simp_chinese", "korean")
+
+SHIPPED = NATIVE + FALLBACK
+
 ALL = NATIVE
 
 DISPLAY_NAMES = {

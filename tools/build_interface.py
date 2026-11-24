@@ -28,7 +28,7 @@ from ccp.scripts import (
     emit_scripted_gui,
     emit_scripted_localisation,
 )
-from ccp.languages import NATIVE
+from ccp.languages import SHIPPED
 from ccp.strings import emit_localisation
 from generate_data import find_game_dir, game_version
 
@@ -105,14 +105,14 @@ def main() -> int:
         emit_scripted_localisation(version),
     )
 
-    for language in NATIVE:
+    for language in SHIPPED:
         write(
             MOD / "localisation" / language / f"ccp_core_l_{language}.yml",
             emit_localisation(language),
         )
 
     for language_dir in sorted((MOD / "localisation").iterdir()):
-        if language_dir.is_dir() and language_dir.name not in NATIVE:
+        if language_dir.is_dir() and language_dir.name not in SHIPPED:
             for stale in sorted(language_dir.iterdir()):
                 stale.unlink()
             language_dir.rmdir()

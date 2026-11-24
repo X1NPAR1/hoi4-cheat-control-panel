@@ -1200,8 +1200,9 @@ def _one_line(key: str, value: str) -> str:
 
 
 def emit_localisation(language: str) -> str:
+    text = language if language in ALL else "english"
     lines = [f"l_{language}:"]
-    lines += [_one_line(key, row[language]) for key, row in sorted(all_strings().items())]
+    lines += [_one_line(key, row[text]) for key, row in sorted(all_strings().items())]
     return "\n".join(lines) + "\n"
 
 
